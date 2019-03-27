@@ -49,6 +49,7 @@ $(BUILDDIRPDF)/%.pdf: $(SRCDIR)/%.md $(PP) $(PANDOC) $(LATEX_TEMPLATE) $(HIGHLIG
 	@echo "Generando $@..."
 	@./pp -import $(COMMON_PP) $< | pandoc -s -t beamer --template=$(LATEX_TEMPLATE) \
 		--toc --toc-depth=1 -N \
+		-V secnumdepth=5 \
 		--slide-level=4 \
 		-H $(PREAMBULO) \
 		--pdf-engine=xelatex \
