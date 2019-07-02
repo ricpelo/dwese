@@ -7,6 +7,8 @@ DEFINICIONES GENERALES
 !define(IMAGES)(images)
 !define(SCRIPTS)(scripts)
 !define(WIDTH)(width=!ifdef(LATEX)(60%)(80%))
+!define(DIAGRAM)(node_modules/diagrams/bin/diagrams.js)
+!define(FLOWCHART_SH)(!SCRIPTS/flowchart.sh)
 !define(UMLCOMMON)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 scale 2
@@ -84,9 +86,43 @@ MACROS DE USO GENERAL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !comment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!FLOWCHART(archivo)[(texto)][(estilo Beamer)][(estilo Latex)](definición)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(FLOWCHART)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!ifne(!5)()(!FLOWCHART5(!1)(!2)(!3)(!4)(!5))(!ifne(!4)()(!FLOWCHART4(!1)(!2)(!3)(!4))(!ifne(!3)()(!FLOWCHART3(!1)(!2)(!3))(!FLOWCHART2(!1)(!2))))
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!comment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 LAS SIGUIENTES MACROS SON AUXILIARES, NO PARA USO GENERAL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(FLOWCHART2)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!sh(!FLOWCHART_SH "!IMAGES/!1" "!2")
+!IMGP(!1)()(width=40%)(width=40%)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(FLOWCHART3)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!sh(!FLOWCHART_SH "!IMAGES/!1" "!3")
+!IMGP(!1)(!2)(width=40%)(width=40%)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(FLOWCHART4)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!sh(!FLOWCHART_SH "!IMAGES/!1" "!4")
+!IMGP(!1)(!2)(!3 width=40%)(width=40%)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(FLOWCHART5)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!sh(!FLOWCHART_SH "!IMAGES/!1" "!5")
+!IMGP(!1)(!2)(!3 width=40%)(!4 width=40%)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !define(UML2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
