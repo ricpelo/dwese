@@ -20,6 +20,15 @@ skinparam backgroundColor transparent
 MACROS DE USO GENERAL
 ~~~~~~~~~~~~~~~~~~~~~
 
+!define(ALGO)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\Begin{Shaded}
+\raggedright
+\small
+!PYALGO(!1)
+\End{Shaded}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 !define(BREAK)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !ifdef(BEAMER)
@@ -168,3 +177,13 @@ x = """!1"""
 print(x.replace('"', '\\"'))
 ~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(PYALGO)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!python3
+~~~~~~~~~~~~~~~
+x = r"""!1"""
+# x = x.replace('\\', '\\\\')
+print('| ' + x.replace("\n", "\n| "))
+~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
