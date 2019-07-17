@@ -10,8 +10,8 @@
 \usepackage{ifthen}
 \renewcommand{\multirowsetup}{\centering}
 \newcommand{\nota}[1]{\textsf{\textbf{#1}}}
-\newcommand{\TR}{\nota{TR}}
-\newcommand{\EX}{\nota{EX}}
+\newcommand{\TR}{\nota{TRA}}
+\newcommand{\EX}{\nota{EXA}}
 \newcommand{\NOTA}{\nota{NOTA}}
 \newcommand{\EV}[1]{\nota{EV\textsubscript{#1}}}
 \newcommand{\ev}[1]{%
@@ -28,6 +28,7 @@
 \setlist[description]{style=multiline}
 \usepackage{xcolor}
 \widowpenalty10000
+\usepackage{watermark}
 \end_preamble
 \options titlepage,numbers=endperiod
 \use_default_options false
@@ -456,12 +457,42 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thiswatermark{
+\backslash
+centering
+\backslash
+put(0,-400){
+\backslash
+includegraphics[width=
+\backslash
+textwidth]{php.png}}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subject
 Programación anual
 \end_layout
 
 \begin_layout Title
-Desarrollo web en entorno servidor
+
+\size giant
+Desarrollo web
+\begin_inset Newline newline
+\end_inset
+
+en entorno servidor
 \end_layout
 
 \begin_layout Author
@@ -477,7 +508,7 @@ Departamento de Informática y Comunicaciones
 \begin_inset Newline newline
 \end_inset
 
-Jefe de Departamento: Eduardo Barra Balao
+Jefe de Departamento: Ricardo Pérez López
 \end_layout
 
 \begin_layout Standard
@@ -1577,21 +1608,30 @@ Nivel de abstracción alcanzado.
 
 \begin_layout Standard
 Para que el seguimiento de dicha evaluación sea factible, el alumno deberá
- asistir a clase con regularidad y participar activamente en la misma, de
- forma que una falta sistemática supondrá la 
+ asistir con regularidad a las clases y participar activamente en las mismas,
+ de forma que una sistemática y frecuente falta de asistencia a clase supondrá
+ para el alumno la 
 \series bold
 pérdida de la evaluación continua
 \series default
  y sólo tendrá derecho a un examen final.
- Asimismo, se requiere que el alumno acceda al menos diariamente a la 
+ Asimismo, se requiere que el alumno 
 \series bold
-plataforma Ágora
+acceda al menos diariamente a la plataforma Ágora
 \series default
- y que revise diariamente su correo en el dominio 
+ y que 
+\series bold
+revise diariamente su correo en el dominio 
 \family typewriter
 @iesdonana.org
 \family default
- para informarse puntualmente de las novedades en el módulo.
+\series default
+ para informarse puntualmente de las novedades que pudieran darse en el
+ módulo, quedando claro que 
+\series bold
+es responsabilidad del alumno informarse activamente sobre las mismas
+\series default
+.
 \begin_inset Newpage clearpage
 \end_inset
 
@@ -2800,7 +2840,7 @@ TR
 
 \end_inset
 
-
+:
 \end_layout
 
 \begin_layout Standard
@@ -2826,7 +2866,7 @@ EX
 
 \end_inset
 
-
+:
 \end_layout
 
 \begin_layout Standard
