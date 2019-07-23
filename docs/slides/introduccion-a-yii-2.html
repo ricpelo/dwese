@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Ricardo Pérez López">
+  <title>Introducción a Yii 2</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="shortcut icon" type="image/png" href="/assets/icons/icon.png">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="custom.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <style type="text/css">
+      #header-right {
+          position: absolute;
+          font-size: 25%;
+          top: 0%;
+          right: 0%;
+          margin-right: 10px;
+          margin-top: 10px;
+      }
+  </style>
+</head>
+<body>
+<div id="hidden" style="display:none;">
+    <div id="header">
+        <div id="header-right"></div>
+        <div id="footer-left"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+        function updateHeader(nd) {
+            for (var n = nd; n != null; n = n.previousSibling) {
+                var cl = n.classList;
+                if (cl.contains('level1')) {
+                    var h = n.querySelector('h1');
+                } else if (cl.contains('level2')) {
+                    var h = n.querySelector('h2');
+                } else {
+                    continue;
+                }
+                var hr = document.getElementById('header-right');
+                if (h == null || Reveal.getCurrentSlide().id == 'title-slide') {
+                    hr.innerHTML = '';
+                } else {
+                    var el = document.createElement('a');
+                    var href = '#/' + n.id;
+                    el.href = href;
+                    el.innerHTML = h.innerHTML;
+                    var a = el.querySelector('a');
+                    if (a !== null) {
+                        a.href = href;
+                    }
+                    while (hr.children.length > 0) {
+                        hr.removeChild(hr.lastChild);
+                    }
+                    hr.appendChild(el);
+                }
+                hr.style.fontSize = Math.round(50 * Reveal.getScale()) + '%';
+                hr.style.fontSize = Math.max(Number.parseInt(getComputedStyle(hr).fontSize), 12) + 'px';
+                return;
+            }
+        }
+        // On Reveal.js ready event, copy header/footer <div>
+        // into each `.slide-background` <div>
+        Reveal.addEventListener('ready', function(event) {
+            var header = document.getElementById('header');
+            document.querySelector('.reveal').appendChild(header);
+            updateHeader(Reveal.getCurrentSlide());
+        });
+        Reveal.addEventListener('slidechanged', function(event) {
+            // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+            updateHeader(event.currentSlide);
+        });
+    });
+</script>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+<section id="title-slide" class="title-slide slide level1">
+  <h1 class="title">Introducción a Yii 2</h1>
+  <p class="author">Ricardo Pérez López</p>
+  <p class="date">IES Doñana, curso 2019/2020</p>
+</section>
+<section id="TOC" class="slide level2">
+<ul>
+<li><a href="#/frameworks-microframeworks-y-librerías"><span class="toc-section-number">1</span> Frameworks, microframeworks y librerías</a></li>
+<li><a href="#/patrón-modelo-vista-controlador-mvc"><span class="toc-section-number">2</span> Patrón Modelo-Vista-Controlador (MVC)</a></li>
+<li><a href="#/yii-2"><span class="toc-section-number">3</span> Yii 2</a></li>
+<li><a href="#/instalación-requisitos-y-puesta-en-marcha"><span class="toc-section-number">4</span> Instalación, requisitos y puesta en marcha</a></li>
+<li><a href="#/hola-mundo"><span class="toc-section-number">5</span> ¡Hola, mundo!</a></li>
+<li><a href="#/formularios"><span class="toc-section-number">6</span> Formularios</a></li>
+<li><a href="#/bases-de-datos"><span class="toc-section-number">7</span> Bases de datos</a></li>
+<li><a href="#/generador-de-código-gii"><span class="toc-section-number">8</span> Generador de código Gii</a></li>
+<li><a href="#/herramientas-de-desarrollo"><span class="toc-section-number">9</span> Herramientas de desarrollo</a></li>
+<li><a href="#/estilo-del-código"><span class="toc-section-number">10</span> Estilo del código</a></li>
+<li><a href="#/ejercicios"><span class="toc-section-number">11</span> Ejercicios</a></li>
+<li><a href="#/metadatos"><span class="toc-section-number">12</span> Metadatos</a></li>
+</ul>
+</section>
+</section>
+
+<section id="frameworks-microframeworks-y-librerías" class="title-slide slide level1"><h1><span class="header-section-number">1</span> Frameworks, microframeworks y librerías</h1></section>
+<section><section id="patrón-modelo-vista-controlador-mvc" class="title-slide slide level1"><h1><span class="header-section-number">2</span> Patrón Modelo-Vista-Controlador (MVC)</h1></section><section id="modelos" class="title-slide slide level2"><h2><span class="header-section-number">2.1</span> Modelos</h2></section><section id="vistas" class="title-slide slide level2"><h2><span class="header-section-number">2.2</span> Vistas</h2></section><section id="controladores" class="title-slide slide level2"><h2><span class="header-section-number">2.3</span> Controladores</h2></section><section id="rutas" class="title-slide slide level2"><h2><span class="header-section-number">2.4</span> Rutas</h2></section></section>
+<section><section id="yii-2" class="title-slide slide level1"><h1><span class="header-section-number">3</span> Yii 2</h1></section><section id="qué-es-yii" class="title-slide slide level2"><h2><span class="header-section-number">3.1</span> ¿Qué es Yii?</h2></section><section id="en-qué-es-mejor-yii" class="title-slide slide level2"><h2><span class="header-section-number">3.2</span> ¿En qué es mejor Yii?</h2></section><section id="cómo-es-yii-comparado-con-otros-frameworks" class="title-slide slide level2"><h2><span class="header-section-number">3.3</span> ¿Cómo es Yii comparado con otros frameworks?</h2></section><section id="versiones-de-yii" class="title-slide slide level2"><h2><span class="header-section-number">3.4</span> Versiones de Yii</h2></section></section>
+<section><section id="instalación-requisitos-y-puesta-en-marcha" class="title-slide slide level1"><h1><span class="header-section-number">4</span> Instalación, requisitos y puesta en marcha</h1></section><section id="requisitos-previos" class="title-slide slide level2"><h2><span class="header-section-number">4.1</span> Requisitos previos</h2></section><section id="instalación-de-yii-2" class="title-slide slide level2"><h2><span class="header-section-number">4.2</span> Instalación de Yii 2</h2></section><section id="instalación-mediante-composer" class="title-slide slide level3"><h3><span class="header-section-number">4.2.1</span> Instalación mediante Composer</h3></section><section id="plantillas-de-proyecto" class="title-slide slide level2"><h2><span class="header-section-number">4.3</span> Plantillas de proyecto</h2></section><section id="plantilla-básica-vs.-avanzada" class="title-slide slide level3"><h3><span class="header-section-number">4.3.1</span> Plantilla básica vs. avanzada</h3></section><section id="plantilla-básica-modificada" class="title-slide slide level3"><h3><span class="header-section-number">4.3.2</span> Plantilla básica modificada</h3></section></section>
+<section id="hola-mundo" class="title-slide slide level1"><h1><span class="header-section-number">5</span> ¡Hola, mundo!</h1></section>
+<section id="formularios" class="title-slide slide level1"><h1><span class="header-section-number">6</span> Formularios</h1></section>
+<section id="bases-de-datos" class="title-slide slide level1"><h1><span class="header-section-number">7</span> Bases de datos</h1></section>
+<section id="generador-de-código-gii" class="title-slide slide level1"><h1><span class="header-section-number">8</span> Generador de código Gii</h1></section>
+<section><section id="herramientas-de-desarrollo" class="title-slide slide level1"><h1><span class="header-section-number">9</span> Herramientas de desarrollo</h1></section><section id="barra-de-depuración" class="title-slide slide level2"><h2><span class="header-section-number">9.1</span> Barra de depuración</h2></section><section id="trazas-de-depuración" class="title-slide slide level2"><h2><span class="header-section-number">9.2</span> Trazas de depuración</h2></section></section>
+<section id="estilo-del-código" class="title-slide slide level1"><h1><span class="header-section-number">10</span> Estilo del código</h1></section>
+<section><section id="ejercicios" class="title-slide slide level1"><h1><span class="header-section-number">11</span> Ejercicios</h1></section><section id="definiciones-framework-microframework-librería-semejanzas-y-diferencias.-modelo-vista-y-controlador.-rutas-y-ejemplos-de-rutas." class="title-slide slide level2"><h2><span class="header-section-number">11.1</span> Definiciones: framework, microframework, librería (semejanzas y diferencias). Modelo, vista y controlador. Rutas y ejemplos de rutas.</h2></section><section id="qué-es-una-plantilla-de-proyecto-diferencias-entre-la-plantilla-básica-y-la-avanzada." class="title-slide slide level2"><h2><span class="header-section-number">11.2</span> ¿Qué es una plantilla de proyecto? Diferencias entre la plantilla básica y la avanzada.</h2></section><section id="qué-herramientas-de-desarrollo-tenemos-para-desarrollar-una-aplicación-en-yii-2-y-para-qué-sirven" class="title-slide slide level2"><h2><span class="header-section-number">11.3</span> ¿Qué herramientas de desarrollo tenemos para desarrollar una aplicación en Yii 2 y para qué sirven?</h2></section><section id="crear-un-proyecto-desde-cero-paso-a-paso." class="title-slide slide level2"><h2><span class="header-section-number">11.4</span> Crear un proyecto desde cero, paso a paso.</h2></section><section id="escribir-programas-sencillos-con-formularios-validaciones-sencillas-y-acceso-a-bases-de-datos." class="title-slide slide level2"><h2><span class="header-section-number">11.5</span> Escribir programas sencillos, con formularios, validaciones sencillas y acceso a bases de datos.</h2></section></section>
+<section><section id="metadatos" class="title-slide slide level1"><h1><span class="header-section-number">12</span> Metadatos</h1></section><section id="objetivos-de-la-unidad" class="title-slide slide level2"><h2><span class="header-section-number">12.1</span> Objetivos de la unidad</h2></section><section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2"><h2><span class="header-section-number">12.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2></section><section id="ra1" class="title-slide slide level3"><h3><span class="header-section-number">12.2.1</span> RA1</h3></section><section id="ce1.e" class="slide level4">
+<h4><span class="header-section-number">12.2.1.1</span> CE1.e</h4>
+</section><section id="ce1.g" class="slide level4">
+<h4><span class="header-section-number">12.2.1.2</span> CE1.g</h4>
+</section><section id="ra4" class="title-slide slide level3"><h3><span class="header-section-number">12.2.2</span> RA4</h3></section><section id="ce4.g" class="slide level4">
+<h4><span class="header-section-number">12.2.2.1</span> CE4.g</h4>
+</section><section id="ra5" class="title-slide slide level3"><h3><span class="header-section-number">12.2.3</span> RA5</h3></section><section id="ce5.a" class="slide level4">
+<h4><span class="header-section-number">12.2.3.1</span> CE5.a</h4>
+</section><section id="ce5.b" class="slide level4">
+<h4><span class="header-section-number">12.2.3.2</span> CE5.b</h4>
+</section><section id="ce5.c" class="slide level4">
+<h4><span class="header-section-number">12.2.3.3</span> CE5.c</h4>
+</section><section id="ce5.d" class="slide level4">
+<h4><span class="header-section-number">12.2.3.4</span> CE5.d</h4>
+</section><section id="ce5.e" class="slide level4">
+<h4><span class="header-section-number">12.2.3.5</span> CE5.e</h4>
+</section><section id="ce5.g" class="slide level4">
+<h4><span class="header-section-number">12.2.3.6</span> CE5.g</h4>
+</section><section id="ce5.h" class="slide level4">
+<h4><span class="header-section-number">12.2.3.7</span> CE5.h</h4>
+</section><section id="ra6" class="title-slide slide level3"><h3><span class="header-section-number">12.2.4</span> RA6</h3></section><section id="ce6.a" class="slide level4">
+<h4><span class="header-section-number">12.2.4.1</span> CE6.a</h4>
+</section><section id="ce6.b" class="slide level4">
+<h4><span class="header-section-number">12.2.4.2</span> CE6.b</h4>
+</section><section id="ce6.c" class="slide level4">
+<h4><span class="header-section-number">12.2.4.3</span> CE6.c</h4>
+</section><section id="ce6.d" class="slide level4">
+<h4><span class="header-section-number">12.2.4.4</span> CE6.d</h4>
+</section><section id="ce6.e" class="slide level4">
+<h4><span class="header-section-number">12.2.4.5</span> CE6.e</h4>
+</section><section id="ce6.f" class="slide level4">
+<h4><span class="header-section-number">12.2.4.6</span> CE6.f</h4>
+</section><section id="ce6.g" class="slide level4">
+<h4><span class="header-section-number">12.2.4.7</span> CE6.g</h4>
+</section><section id="ce6.h" class="slide level4">
+<h4><span class="header-section-number">12.2.4.8</span> CE6.h</h4>
+</section><section id="ra9" class="title-slide slide level3"><h3><span class="header-section-number">12.2.5</span> RA9</h3></section><section id="ce9.b" class="slide level4">
+<h4><span class="header-section-number">12.2.5.1</span> CE9.b</h4>
+</section><section id="ce9.c" class="slide level4">
+<h4><span class="header-section-number">12.2.5.2</span> CE9.c</h4>
+</section><section id="ce9.e" class="slide level4">
+<h4><span class="header-section-number">12.2.5.3</span> CE9.e</h4>
+</section><section id="ce9.f" class="slide level4">
+<h4><span class="header-section-number">12.2.5.4</span> CE9.f</h4>
+</section><section id="ce9.g" class="slide level4">
+<h4><span class="header-section-number">12.2.5.5</span> CE9.g</h4>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+        height: 1080,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/reveal.js-menu/menu.js', async: true },
+          { src: 'reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } },
+          { src: 'reveal.js/plugin/reveal-code-focus/vendor/highlight.js/highlight.pack.js' },
+          { src: 'reveal.js/plugin/reveal-code-focus/reveal-code-focus.js', async: true, callback: function() { RevealCodeFocus(); } },
+          { src: 'reveal.js/plugin/search/search.js', async: true },
+          { src: 'reveal.js/plugin/customcontrols/customcontrols.js', async: true }
+        ],
+
+        customcontrols: {
+          controls: [
+            { icon: '<i class="fa fa-question-circle"></i>',
+			  css: 'position: fixed; right: 50px; bottom: 50px; z-index: 30; font-size: 24px;',
+			  action: 'Reveal.toggleHelp(); return false;'
+			}
+          ]
+        },
+
+        menu: {
+          numbers: true,
+          hideMissingTitles: true,
+          themes: true,
+          themesPath: 'reveal.js/css/theme/'
+        }
+      });
+    </script>
+    </body>
+</html>

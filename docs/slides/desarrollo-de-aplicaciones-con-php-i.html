@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Ricardo Pérez López">
+  <title>Desarrollo de aplicaciones con PHP I</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="shortcut icon" type="image/png" href="/assets/icons/icon.png">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="custom.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <style type="text/css">
+      #header-right {
+          position: absolute;
+          font-size: 25%;
+          top: 0%;
+          right: 0%;
+          margin-right: 10px;
+          margin-top: 10px;
+      }
+  </style>
+</head>
+<body>
+<div id="hidden" style="display:none;">
+    <div id="header">
+        <div id="header-right"></div>
+        <div id="footer-left"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+        function updateHeader(nd) {
+            for (var n = nd; n != null; n = n.previousSibling) {
+                var cl = n.classList;
+                if (cl.contains('level1')) {
+                    var h = n.querySelector('h1');
+                } else if (cl.contains('level2')) {
+                    var h = n.querySelector('h2');
+                } else {
+                    continue;
+                }
+                var hr = document.getElementById('header-right');
+                if (h == null || Reveal.getCurrentSlide().id == 'title-slide') {
+                    hr.innerHTML = '';
+                } else {
+                    var el = document.createElement('a');
+                    var href = '#/' + n.id;
+                    el.href = href;
+                    el.innerHTML = h.innerHTML;
+                    var a = el.querySelector('a');
+                    if (a !== null) {
+                        a.href = href;
+                    }
+                    while (hr.children.length > 0) {
+                        hr.removeChild(hr.lastChild);
+                    }
+                    hr.appendChild(el);
+                }
+                hr.style.fontSize = Math.round(50 * Reveal.getScale()) + '%';
+                hr.style.fontSize = Math.max(Number.parseInt(getComputedStyle(hr).fontSize), 12) + 'px';
+                return;
+            }
+        }
+        // On Reveal.js ready event, copy header/footer <div>
+        // into each `.slide-background` <div>
+        Reveal.addEventListener('ready', function(event) {
+            var header = document.getElementById('header');
+            document.querySelector('.reveal').appendChild(header);
+            updateHeader(Reveal.getCurrentSlide());
+        });
+        Reveal.addEventListener('slidechanged', function(event) {
+            // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+            updateHeader(event.currentSlide);
+        });
+    });
+</script>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+<section id="title-slide" class="title-slide slide level1">
+  <h1 class="title">Desarrollo de aplicaciones con PHP I</h1>
+  <p class="author">Ricardo Pérez López</p>
+  <p class="date">IES Doñana, curso 2019/2020</p>
+</section>
+<section id="TOC" class="slide level2">
+<ul>
+<li><a href="#/sapis"><span class="toc-section-number">1</span> SAPIs</a></li>
+<li><a href="#/manejo-de-datos-de-entrada-_get-y-_post"><span class="toc-section-number">2</span> Manejo de datos de entrada: <code>$_GET</code> y <code>$_POST</code></a></li>
+<li><a href="#/funciones-auxiliares-interesantes"><span class="toc-section-number">3</span> Funciones auxiliares interesantes</a></li>
+<li><a href="#/aspectos-básicos-de-la-orientación-a-objetos"><span class="toc-section-number">4</span> Aspectos básicos de la orientación a objetos</a></li>
+<li><a href="#/excepciones"><span class="toc-section-number">5</span> Excepciones</a></li>
+<li><a href="#/depuración"><span class="toc-section-number">6</span> Depuración</a></li>
+<li><a href="#/metadatos"><span class="toc-section-number">7</span> Metadatos</a></li>
+</ul>
+</section>
+</section>
+
+<section><section id="sapis" class="title-slide slide level1"><h1><span class="header-section-number">1</span> SAPIs</h1></section><section id="cli-uso-en-línea-de-comandos" class="title-slide slide level2"><h2><span class="header-section-number">1.1</span> CLI: Uso en línea de comandos</h2></section><section id="argc-y-argv" class="title-slide slide level3"><h3><span class="header-section-number">1.1.1</span> <code>$argc</code> y <code>$argv</code></h3></section><section id="flujos-de-entradasalida" class="title-slide slide level3"><h3><span class="header-section-number">1.1.2</span> Flujos de entrada/salida</h3></section><section id="apache" class="title-slide slide level2"><h2><span class="header-section-number">1.2</span> Apache</h2></section><section id="integración-de-php-con-apache" class="title-slide slide level3"><h3><span class="header-section-number">1.2.1</span> Integración de PHP con Apache</h3></section><section id="php-como-lenguaje-embebido" class="title-slide slide level3"><h3><span class="header-section-number">1.2.2</span> PHP como lenguaje embebido</h3></section><section id="etiqueta" class="title-slide slide level3"><h3><span class="header-section-number">1.2.3</span> Etiqueta <code>&lt;?=</code></h3></section><section id="linkservidor-web-internohttpphp.netmanualesfeatures.commandline.webserver.php" class="title-slide slide level3"><h3><span class="header-section-number">1.2.4</span> [link:Servidor web interno|http://php.net/manual/es/features.commandline.webserver.php]</h3></section><section id="cgi-php-fpm-fastcgi-process-manager" class="title-slide slide level2"><h2><span class="header-section-number">1.3</span> CGI: PHP-FPM (FastCGI Process Manager)</h2></section><section id="configuración-básica-con-php.ini" class="title-slide slide level2"><h2><span class="header-section-number">1.4</span> Configuración básica con <code>php.ini</code></h2></section><section id="error_reporting-e_all" class="title-slide slide level3"><h3><span class="header-section-number">1.4.1</span> <code>error_reporting = E_ALL</code></h3></section><section id="display_errors-on" class="title-slide slide level3"><h3><span class="header-section-number">1.4.2</span> <code>display_errors = On</code></h3></section><section id="display_startup_errors-on" class="title-slide slide level3"><h3><span class="header-section-number">1.4.3</span> <code>display_startup_errors = On</code></h3></section><section id="date.timezone-utc" class="title-slide slide level3"><h3><span class="header-section-number">1.4.4</span> <code>date.timezone = 'UTC'</code></h3></section><section id="módulos-de-extensión" class="title-slide slide level2"><h2><span class="header-section-number">1.5</span> Módulos de extensión</h2></section></section>
+<section id="manejo-de-datos-de-entrada-_get-y-_post" class="title-slide slide level1"><h1><span class="header-section-number">2</span> Manejo de datos de entrada: <code>$_GET</code> y <code>$_POST</code></h1></section>
+<section><section id="funciones-auxiliares-interesantes" class="title-slide slide level1"><h1><span class="header-section-number">3</span> Funciones auxiliares interesantes</h1></section><section id="extract" class="title-slide slide level2"><h2><span class="header-section-number">3.1</span> <code>extract()</code></h2></section><section id="compact" class="title-slide slide level2"><h2><span class="header-section-number">3.2</span> <code>compact()</code></h2></section></section>
+<section><section id="aspectos-básicos-de-la-orientación-a-objetos" class="title-slide slide level1"><h1><span class="header-section-number">4</span> Aspectos básicos de la orientación a objetos</h1></section><section id="objetos" class="title-slide slide level2"><h2><span class="header-section-number">4.1</span> Objetos</h2></section><section id="new" class="title-slide slide level3"><h3><span class="header-section-number">4.1.1</span> <code>new</code></h3></section><section id="instanceof" class="title-slide slide level3"><h3><span class="header-section-number">4.1.2</span> <code>instanceof</code></h3></section><section id="referencias" class="title-slide slide level2"><h2><span class="header-section-number">4.2</span> Referencias</h2></section><section id="asignación-por-referencia" class="title-slide slide level3"><h3><span class="header-section-number">4.2.1</span> Asignación por referencia (<code>=&amp;</code>)</h3></section><section id="clonación-de-objetos" class="title-slide slide level2"><h2><span class="header-section-number">4.3</span> Clonación de objetos</h2></section><section id="comparación-de-objetos" class="title-slide slide level2"><h2><span class="header-section-number">4.4</span> Comparación de objetos</h2></section><section id="propiedades" class="title-slide slide level2"><h2><span class="header-section-number">4.5</span> Propiedades</h2></section><section id="predeterminadas" class="title-slide slide level3"><h3><span class="header-section-number">4.5.1</span> Predeterminadas</h3></section><section id="dinámicas" class="title-slide slide level3"><h3><span class="header-section-number">4.5.2</span> Dinámicas</h3></section><section id="métodos" class="title-slide slide level2"><h2><span class="header-section-number">4.6</span> Métodos</h2></section><section id="constantes" class="title-slide slide level2"><h2><span class="header-section-number">4.7</span> Constantes</h2></section><section id="operador-de-resolución-de-ámbito" class="title-slide slide level3"><h3><span class="header-section-number">4.7.1</span> Operador de resolución de ámbito (<code>::</code>)</h3></section><section id="ejemplo-manejo-de-fechas-horas-instantes-e-intervalos" class="title-slide slide level2"><h2><span class="header-section-number">4.8</span> <em>Ejemplo</em>: manejo de fechas, horas, instantes e intervalos</h2></section></section>
+<section><section id="excepciones" class="title-slide slide level1"><h1><span class="header-section-number">5</span> Excepciones</h1></section><section id="manejo-de-errores-clásico-en-php" class="title-slide slide level2"><h2><span class="header-section-number">5.1</span> Manejo de errores clásico en PHP</h2></section><section id="errores-vs.-excepciones" class="title-slide slide level2"><h2><span class="header-section-number">5.2</span> Errores vs. excepciones</h2></section><section id="la-clase-exception" class="title-slide slide level2"><h2><span class="header-section-number">5.3</span> La clase <code>Exception</code></h2></section><section id="la-clase-error" class="title-slide slide level2"><h2><span class="header-section-number">5.4</span> La clase <code>Error</code></h2></section><section id="la-clase-errorexception" class="title-slide slide level2"><h2><span class="header-section-number">5.5</span> La clase <code>ErrorException</code></h2></section><section id="estructura-de-control-try-...-catch" class="title-slide slide level2"><h2><span class="header-section-number">5.6</span> Estructura de control <code>try ... catch</code></h2></section></section>
+<section><section id="depuración" class="title-slide slide level1"><h1><span class="header-section-number">6</span> Depuración</h1></section><section id="var_dump-print_r-die" class="title-slide slide level2"><h2><span class="header-section-number">6.1</span> <code>var_dump()</code>, <code>print_r()</code>, <code>die()</code></h2></section><section id="psysh" class="title-slide slide level2"><h2><span class="header-section-number">6.2</span> PsySH</h2></section><section id="xdebug" class="title-slide slide level2"><h2><span class="header-section-number">6.3</span> Xdebug</h2></section><section id="módulo-xdebug" class="title-slide slide level3"><h3><span class="header-section-number">6.3.1</span> Módulo Xdebug</h3></section><section id="aplicación-xdebug-para-chrome" class="title-slide slide level3"><h3><span class="header-section-number">6.3.2</span> Aplicación Xdebug para Chrome</h3></section><section id="extensión-xdebug-helper-para-chrome" class="title-slide slide level3"><h3><span class="header-section-number">6.3.3</span> Extensión Xdebug Helper para Chrome</h3></section><section id="paquete-php-debug-para-atom" class="title-slide slide level3"><h3><span class="header-section-number">6.3.4</span> Paquete <code>php-debug</code> para Atom</h3></section></section>
+<section><section id="metadatos" class="title-slide slide level1"><h1><span class="header-section-number">7</span> Metadatos</h1></section><section id="objetivos-de-la-unidad" class="title-slide slide level2"><h2><span class="header-section-number">7.1</span> Objetivos de la unidad</h2></section><section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2"><h2><span class="header-section-number">7.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2></section><section id="ra1" class="title-slide slide level3"><h3><span class="header-section-number">7.2.1</span> RA1</h3></section><section id="ce1.a" class="slide level4">
+<h4><span class="header-section-number">7.2.1.1</span> CE1.a</h4>
+</section><section id="ce1.b" class="slide level4">
+<h4><span class="header-section-number">7.2.1.2</span> CE1.b</h4>
+</section><section id="ce1.d" class="slide level4">
+<h4><span class="header-section-number">7.2.1.3</span> CE1.d</h4>
+</section><section id="ce1.f" class="slide level4">
+<h4><span class="header-section-number">7.2.1.4</span> CE1.f</h4>
+</section><section id="ra2" class="title-slide slide level3"><h3><span class="header-section-number">7.2.2</span> RA2</h3></section><section id="ce2.a" class="slide level4">
+<h4><span class="header-section-number">7.2.2.1</span> CE2.a</h4>
+</section><section id="ce2.b" class="slide level4">
+<h4><span class="header-section-number">7.2.2.2</span> CE2.b</h4>
+</section><section id="ce2.c" class="slide level4">
+<h4><span class="header-section-number">7.2.2.3</span> CE2.c</h4>
+</section><section id="ce2.d" class="slide level4">
+<h4><span class="header-section-number">7.2.2.4</span> CE2.d</h4>
+</section><section id="ce2.e" class="slide level4">
+<h4><span class="header-section-number">7.2.2.5</span> CE2.e</h4>
+</section><section id="ce2.f" class="slide level4">
+<h4><span class="header-section-number">7.2.2.6</span> CE2.f</h4>
+</section><section id="ce2.g" class="slide level4">
+<h4><span class="header-section-number">7.2.2.7</span> CE2.g</h4>
+</section><section id="ce2.h" class="slide level4">
+<h4><span class="header-section-number">7.2.2.8</span> CE2.h</h4>
+</section><section id="ra3" class="title-slide slide level3"><h3><span class="header-section-number">7.2.3</span> RA3</h3></section><section id="ce3.a" class="slide level4">
+<h4><span class="header-section-number">7.2.3.1</span> CE3.a</h4>
+</section><section id="ce3.b" class="slide level4">
+<h4><span class="header-section-number">7.2.3.2</span> CE3.b</h4>
+</section><section id="ce3.c" class="slide level4">
+<h4><span class="header-section-number">7.2.3.3</span> CE3.c</h4>
+</section><section id="ce3.d" class="slide level4">
+<h4><span class="header-section-number">7.2.3.4</span> CE3.d</h4>
+</section><section id="ce3.e" class="slide level4">
+<h4><span class="header-section-number">7.2.3.5</span> CE3.e</h4>
+</section><section id="ce3.f" class="slide level4">
+<h4><span class="header-section-number">7.2.3.6</span> CE3.f</h4>
+</section><section id="ce3.g" class="slide level4">
+<h4><span class="header-section-number">7.2.3.7</span> CE3.g</h4>
+</section><section id="ra4" class="title-slide slide level3"><h3><span class="header-section-number">7.2.4</span> RA4</h3></section><section id="ce4.g" class="slide level4">
+<h4><span class="header-section-number">7.2.4.1</span> CE4.g</h4>
+</section><section id="ra5" class="title-slide slide level3"><h3><span class="header-section-number">7.2.5</span> RA5</h3></section><section id="ce5.d" class="slide level4">
+<h4><span class="header-section-number">7.2.5.1</span> CE5.d</h4>
+</section><section id="ce5.g" class="slide level4">
+<h4><span class="header-section-number">7.2.5.2</span> CE5.g</h4>
+</section><section id="ce5.h" class="slide level4">
+<h4><span class="header-section-number">7.2.5.3</span> CE5.h</h4>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+        height: 1080,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/reveal.js-menu/menu.js', async: true },
+          { src: 'reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } },
+          { src: 'reveal.js/plugin/reveal-code-focus/vendor/highlight.js/highlight.pack.js' },
+          { src: 'reveal.js/plugin/reveal-code-focus/reveal-code-focus.js', async: true, callback: function() { RevealCodeFocus(); } },
+          { src: 'reveal.js/plugin/search/search.js', async: true },
+          { src: 'reveal.js/plugin/customcontrols/customcontrols.js', async: true }
+        ],
+
+        customcontrols: {
+          controls: [
+            { icon: '<i class="fa fa-question-circle"></i>',
+			  css: 'position: fixed; right: 50px; bottom: 50px; z-index: 30; font-size: 24px;',
+			  action: 'Reveal.toggleHelp(); return false;'
+			}
+          ]
+        },
+
+        menu: {
+          numbers: true,
+          hideMissingTitles: true,
+          themes: true,
+          themesPath: 'reveal.js/css/theme/'
+        }
+      });
+    </script>
+    </body>
+</html>

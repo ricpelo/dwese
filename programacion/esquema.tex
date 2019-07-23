@@ -1,0 +1,1978 @@
+\begin{longenum}
+    \item \textbf{\textsc{Sistemas de control de versiones I}} \ev1\ (Est: 2019-09-16)
+    \begin{longenum}
+        \item Preparación del entorno de desarrollo
+        \begin{longenum}
+            \item Instalación automatizada
+            \begin{longenum}
+                \item Acciones previas
+                \begin{longenum}
+                    \item Instalar \texttt{git}
+                    \item Crear cuenta en GitHub
+                    \item Solicitar el Student Developer Pack
+                \end{longenum}
+                \item Usar https://github.com/ricpelo/conf y seguir las instrucciones del \texttt{README.md}
+            \end{longenum}
+            \item Terminal
+            \begin{longenum}
+                \item \texttt{Zsh}
+                \item Oh My Zsh
+                \item \texttt{less}
+            \end{longenum}
+            \item Navegador
+            \item Editores de texto
+            \begin{longenum}
+                \item Vim y less
+                \item Atom
+                \begin{longenum}
+                    \item Instalación
+                    \item Configuración
+                    \item Paquetes
+                \end{longenum}
+                \item Alternativa: PhpStorm
+            \end{longenum}
+            \item DokuWiki \opcional\
+            \begin{longenum}
+                \item Elaboración de documentación
+                \item La wiki como sistema de control de versiones
+                \item La wiki como herramienta colaborativa
+            \end{longenum}
+            \item Ejercicios
+            \begin{longenum}
+                \item Indica en la wiki tu nombre completo junto a tu nombre de usuario en GitHub.
+                \item Sigue el tutorial de \texttt{vimtutor} y envía el archivo resultante.
+                \item Escoge un paquete del repositorio de paquetes de Atom e indica en la wiki su nombre, su funcionamiento básico, un enlace al paquete dentro del repositorio y por qué te ha resultado interesante.
+                \item Escoge una extensión de Google Chrome e indica en la wiki su nombre, su funcionamiento básico, un enlace a la extensión y por qué te ha resultado interesante.
+                \item Indica qué editor de textos sería más apropiado usar en cada una de las situaciones siguientes:
+  - Programar en PHP.
+  - Escribir un pequeño script.
+  - Cambiar un archivo de configuración del sistema.
+  - Editar un archivo situado en otro equipo a través de la red.
+            \end{longenum}
+        \end{longenum}
+        \item Primeros pasos
+        \begin{longenum}
+            \item \texttt{config}
+            \item \texttt{git-config.sh}
+            \item \texttt{init}
+            \item \texttt{add}
+            \item \texttt{commit}
+            \begin{longenum}
+                \item Con la opción \texttt{-m}
+                \item Sin la opción \texttt{-m}
+            \end{longenum}
+            \item \texttt{checkout} (descartar cambios)
+            \item \texttt{reset}
+            \item \texttt{.gitignore}
+        \end{longenum}
+        \item Estado
+        \begin{longenum}
+            \item \texttt{status}
+            \item \texttt{log}
+            \item Alias \texttt{lg}
+            \item \texttt{show}
+            \item \texttt{diff}
+            \begin{longenum}
+                \item \texttt{git diff}
+                \item \texttt{git diff --staged}
+                \item \texttt{git diff <commit>}
+                \item \texttt{git diff inicial..final}
+            \end{longenum}
+            \item Referencias
+            \begin{longenum}
+                \item \texttt{HEAD} y \texttt{master}
+                \item \texttt{237ab45\^}
+                \item \texttt{237ab45~1}
+            \end{longenum}
+        \end{longenum}
+        \item La máquina del tiempo
+        \begin{longenum}
+            \item \texttt{checkout} (mover el \texttt{HEAD})
+            \item \texttt{revert}
+            \item \texttt{reset}
+            \item \texttt{tag}
+            \item \texttt{--amend}
+        \end{longenum}
+        \item Borrar y mover
+        \begin{longenum}
+            \item \texttt{rm}
+            \item \texttt{mv}
+        \end{longenum}
+        \item Git y los directorios
+        \item Ejercicios
+        \begin{longenum}
+            \item Sigue el tutorial de Git Immersion desde el LAB3 hasta el LAB20, comprime y envía el directorio resultante.
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \begin{longenum}
+                \item Reconocer la importancia y la necesidad de usar un sistema de control de versiones durante el desarrollo de software.
+                \item Reconocer la utilidad de un sistema de control de versiones en tareas tan diversas como documentación, copias de seguridad, colaboración, despliegue de aplicaciones, etc.
+                \item Entender la diferencia entre sistemas de control de versiones centralizados y distribuidos, y cómo estos últimos superan abiertamente a los primeros.
+                \item Reconocer a Git como un sistema de control de versiones distribuido.
+                \item Reconocer la importancia que tiene Git en el panorama actual de desarrollo de software.
+                \item Entender los conceptos de repositorio, directorio de trabajo, stage, commit, log.
+                \item Aprender el funcionamiento básico de Git en un repositorio local.
+                \item Aprender a moverse a través del tiempo por los commits de un repositorio Git.
+                \item Aprender a corregir commits creando nuevos commits.
+            \end{longenum}
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA1
+                \begin{longenum}
+                    \item CE1.e
+                    \item CE1.g
+                \end{longenum}
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Sistemas de control de versiones II}} \ev1\ (Est: 2019-09-23)
+    \begin{longenum}
+        \item Ramas locales
+        \begin{longenum}
+            \item \texttt{branch}
+            \item \texttt{merge}
+            \begin{longenum}
+                \item Estrategia \textit{fast-forward}
+                \item Estrategia \textit{recursive} o del padre múltiple
+                \item \texttt{--no-ff}
+            \end{longenum}
+            \item Resolución de conflictos
+            \item \texttt{rebase}
+            \item Ejercicios
+            \begin{longenum}
+                \item Sigue el tutorial de Git Immersion desde el LAB24 hasta el LAB35, comprime y envía el directorio resultante.
+            \end{longenum}
+        \end{longenum}
+        \item Ramas remotas
+        \begin{longenum}
+            \item Orígenes remotos
+            \begin{longenum}
+                \item Directorios locales
+                \item Servidores remotos con repositorios compartidos
+                \item \texttt{remote [add|show] origin}
+            \end{longenum}
+            \item Flujo de trabajo básico
+            \begin{longenum}
+                \item \texttt{push}
+                \begin{longenum}
+                    \item Ramas de seguimiento (\textit{tracking branch})
+                \end{longenum}
+                \item \texttt{clone}
+                \begin{longenum}
+                    \item ¿Qué significa \texttt{origin/HEAD}?
+                \end{longenum}
+                \item \texttt{fetch}
+                \item \texttt{pull}
+            \end{longenum}
+            \item Eliminar ramas remotas
+            \item Etiquetas remotas
+            \begin{longenum}
+                \item \texttt{git push origin mi\_etiqueta}
+                \item \texttt{git push --tags}
+                \item \texttt{git push --delete origin mi\_etiqueta}
+            \end{longenum}
+            \item Ejercicios
+            \begin{longenum}
+                \item Sigue el tutorial de Git Immersion desde el LAB36 hasta el LAB49, comprime y envía el directorio resultante.
+            \end{longenum}
+        \end{longenum}
+        \item GitHub
+        \begin{longenum}
+            \item El flujo de trabajo de GitHub
+            \item Pull requests
+            \begin{longenum}
+                \item Comentarios generales y comentarios en línea
+                \item Revisiones de cambios
+                \begin{longenum}
+                    \item Crear y solicitar revisiones
+                \end{longenum}
+                \item Arreglar una PR
+                \item Cerrar una PR
+                \begin{longenum}
+                    \item \texttt{git remote prune origin}
+                \end{longenum}
+            \end{longenum}
+            \item Issues
+            \item Releases
+            \item Forks
+            \item GitHub Education
+            \begin{longenum}
+                \item GitHub Classroom
+            \end{longenum}
+        \end{longenum}
+        \item Ejercicios
+        \begin{longenum}
+            \item Sigue el tutorial de Hello World e indica el repositorio resultante.
+            \item Sigue el tutorial de Meghan Nelson e indica el repositorio resultante.
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA1
+                \begin{longenum}
+                    \item CE1.e
+                    \item CE1.g
+                \end{longenum}
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Introducción a la tecnología web}} \ev1\ (Est: 2019-09-30)
+    \begin{longenum}
+        \item Introducción al desarrollo web
+        \begin{longenum}
+            \item Conceptos básicos
+            \begin{longenum}
+                \item Navegadores y servidores web
+                \item Agentes de usuario
+                \item Web estática vs. dinámica
+                \item Estructura vs. contenido
+                \item Arquitectura multinivel
+            \end{longenum}
+            \item Ejemplos de aplicaciones web
+            \begin{longenum}
+                \item Redes sociales: Facebook, Twitter…
+                \item Comercio electrónico: Amazon, eBay…
+                \item Administración electrónica…
+                \item Portales
+                \item ERP, CRM
+            \end{longenum}
+            \item Tecnologías de desarrollo de aplicaciones web
+            \begin{longenum}
+                \item .NET
+                \item Java
+                \item Ruby/Rails
+                \item Python/Django
+                \item PHP
+                \item El Kung-Fu de la Programación
+                \begin{longenum}
+                    \item Odoo
+                    \item PrestaShop
+                    \item Drupal
+                    \item WordPress
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+        \item Arquitectura cliente/servidor
+        \item HTML 5 básico (recordatorio de primer curso)
+        \item Protocolo HTTP
+        \begin{longenum}
+            \item URIs
+            \begin{longenum}
+                \item URL encoding
+            \end{longenum}
+            \item Peticiones (\textit{HTTP requests}) y respuestas (\textit{HTTP responses})
+            \item Métodos: GET, POST
+            \item Versiones
+            \begin{longenum}
+                \item HTTP/1.0
+                \item HTTP/1.1
+            \end{longenum}
+            \item Cabeceras HTTP
+            \item Códigos de estado
+            \item Experimentos
+            \begin{longenum}
+                \item \texttt{telnet} (a un servidor)
+                \item \texttt{netcat} (desde un navegador)
+                \item \texttt{curl -i -XPOST “http://…” | pygmentize -l http}
+                \item \texttt{http}
+                \item Google Chrome Developer Tools
+            \end{longenum}
+            \item Envío de datos al servidor
+            \begin{longenum}
+                \item Mediante GET
+                \item Mediante POST
+                \item Formularios HTML
+            \end{longenum}
+            \item Cookies
+        \end{longenum}
+        \item Apache básico \opcional\
+        \begin{longenum}
+            \item Instalación
+            \item Configuración básica
+            \item Sitios virtuales
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA1
+                \begin{longenum}
+                    \item CE1.a
+                    \item CE1.b
+                    \item CE1.c
+                    \item CE1.d
+                    \item CE1.e
+                    \item CE1.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Conceptos básicos de PHP I}} \ev1\ (Est: 2019-10-07)
+    \begin{longenum}
+        \item Introducción a PHP
+        \begin{longenum}
+            \item Página web de PHP
+            \item Instalación de PHP
+            \item Documentación y búsqueda de información
+        \end{longenum}
+        \item Sintaxis básica
+        \begin{longenum}
+            \item Datos e instrucciones
+            \item Sentencias y comandos
+            \begin{longenum}
+                \item Comando \texttt{echo}
+            \end{longenum}
+            \item Expresiones, operadores y funciones
+        \end{longenum}
+        \item Funcionamiento del intérprete
+        \begin{longenum}
+            \item Modos de ejecución
+            \begin{longenum}
+                \item Por lotes
+                \item Interactiva
+                \begin{longenum}
+                    \item \texttt{php -a}
+                    \item PsySH
+                \end{longenum}
+            \end{longenum}
+            \item Etiquetas \texttt{<?php} y \texttt{?>}
+            \item Modo dual de operación
+        \end{longenum}
+        \item Variables
+        \begin{longenum}
+            \item Conceptos básicos
+            \item Destrucción de variables
+            \item Operadores de asignación por valor y por referencia
+            \item Variables predefinidas
+        \end{longenum}
+        \item Tipos básicos de datos
+        \begin{longenum}
+            \item Lógicos (\texttt{bool})
+            \begin{longenum}
+                \item Operadores lógicos
+            \end{longenum}
+            \item Numéricos
+            \begin{longenum}
+                \item Enteros (\texttt{int})
+                \item Números en coma flotante (\texttt{float})
+                \item Operadores
+                \begin{longenum}
+                    \item Operadores aritméticos
+                    \item Operadores de incremento/decremento
+                \end{longenum}
+            \end{longenum}
+            \item Cadenas (\texttt{string})
+            \begin{longenum}
+                \item Operadores de cadenas
+                \begin{longenum}
+                    \item Concatenación
+                    \item Acceso y modificación por caracteres
+                    \item Operador de incremento \opcional\
+                \end{longenum}
+                \item Funciones de manejo de cadenas
+                \item Extensión \textit{mbstring}
+            \end{longenum}
+            \item Nulo (\texttt{null})
+        \end{longenum}
+        \item Manipulación de datos
+        \begin{longenum}
+            \item Precedencia de operadores
+            \item Operadores de asignación compuesta
+            \item Comprobaciones
+            \begin{longenum}
+                \item De tipos
+                \begin{longenum}
+                    \item \texttt{gettype()}
+                    \item \texttt{is\_*()}
+                \end{longenum}
+                \item De valores
+                \begin{longenum}
+                    \item \texttt{is\_numeric()}
+                    \item \texttt{ctype\_*()}
+                \end{longenum}
+            \end{longenum}
+            \item Conversiones de tipos
+            \begin{longenum}
+                \item Conversión explícita (forzado o \textit{casting}) vs. automática
+                \item Conversión a \texttt{bool}
+                \item Conversión a \texttt{int}
+                \item Conversión a \texttt{float}
+                \item Conversión de \texttt{string} a número
+                \item Conversión a \texttt{string}
+                \item Funciones de obtención de valores
+                \begin{longenum}
+                    \item \texttt{intval()}
+                    \item \texttt{floatval()}
+                    \item \texttt{strval()}
+                    \item \texttt{boolval()}
+                \end{longenum}
+                \item Funciones de formateado numérico
+                \begin{longenum}
+                    \item \texttt{number\_format()}
+                    \item \texttt{money\_format()}
+                    \begin{longenum}
+                        \item \texttt{setlocale()}
+                    \end{longenum}
+                \end{longenum}
+            \end{longenum}
+            \item Comparaciones
+            \begin{longenum}
+                \item Operadores de comparación
+                \item \texttt{==} vs. \texttt{===}
+                \item Ternario (\texttt{?:})
+                \item Fusión de \texttt{null} (\texttt{??})
+                \item Reglas de comparación de tipos
+            \end{longenum}
+        \end{longenum}
+        \item Constantes
+        \begin{longenum}
+            \item \texttt{define()} y \texttt{const}
+            \item Constantes predefinidas
+            \item \texttt{defined()}
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA2
+                \begin{longenum}
+                    \item CE2.c
+                    \item CE2.d
+                    \item CE2.e
+                    \item CE2.f
+                    \item CE2.g
+                    \item CE2.h
+                \end{longenum}
+                \item RA3
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Conceptos básicos de PHP II}} \ev1\ (Est: 2019-10-14)
+    \begin{longenum}
+        \item Flujo de control
+        \begin{longenum}
+            \item Estructuras de control
+            \begin{longenum}
+                \item Secuencia
+                \item Selección
+                \item Iteración
+                \item [link:Sintaxis alternativa|http://php.net/manual/es/control-structures.alternative-syntax.php]
+            \end{longenum}
+            \item Inclusión de scripts
+            \begin{longenum}
+                \item \texttt{include}, \texttt{require}
+                \item \texttt{include\_once}, \texttt{require\_once}
+            \end{longenum}
+        \end{longenum}
+        \item Funciones predefinidas destacadas
+        \begin{longenum}
+            \item \texttt{isset()}
+            \item \texttt{empty()}
+            \item \texttt{var\_dump()}
+        \end{longenum}
+        \item Arrays
+        \begin{longenum}
+            \item Operadores para arrays
+            \begin{longenum}
+                \item Acceso, modificación y agregación
+            \end{longenum}
+            \item Funciones de manejo de arrays
+            \begin{longenum}
+                \item Ordenación de arrays
+                \item \texttt{print\_r()}
+                \item \texttt{'+'} vs. \texttt{array\_merge()}
+                \item \texttt{isset()} vs. \texttt{array\_key\_exists()}
+            \end{longenum}
+            \item \texttt{foreach}
+            \item Conversión a \texttt{array}
+            \item \textit{Ejemplo}: \texttt{\$argv} en CLI
+        \end{longenum}
+        \item Funciones definidas por el usuario
+        \begin{longenum}
+            \item Argumentos
+            \begin{longenum}
+                \item Paso de argumentos por valor y por referencia
+                \item Argumentos por defecto
+            \end{longenum}
+            \item Ámbito de variables
+            \begin{longenum}
+                \item Ámbito simple al archivo
+                \item Variables locales
+                \item Uso de \texttt{global}
+                \item Variables superglobales
+            \end{longenum}
+            \item Declaraciones de tipos
+            \begin{longenum}
+                \item Declaraciones de tipo de argumento
+                \item Declaraciones de tipo de devolución
+                \item Tipos \textit{nullable} (\texttt{?}) y \texttt{void}
+                \item Tipificación estricta
+            \end{longenum}
+        \end{longenum}
+        \item Comentarios y documentación del código
+        \item Ejercicios
+        \begin{longenum}
+            \item ¡Hola, mundo!
+            \item Hamming
+            \item Isograma
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA2
+                \begin{longenum}
+                    \item CE2.d
+                    \item CE2.e
+                    \item CE2.g
+                \end{longenum}
+                \item RA3
+                \begin{longenum}
+                    \item CE3.a
+                    \item CE3.b
+                    \item CE3.c
+                    \item CE3.d
+                    \item CE3.g
+                \end{longenum}
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Desarrollo de aplicaciones con PHP I}} \ev1\ (Est: 2019-10-21)
+    \begin{longenum}
+        \item SAPIs
+        \begin{longenum}
+            \item CLI: Uso en línea de comandos
+            \begin{longenum}
+                \item \texttt{\$argc} y \texttt{\$argv}
+                \item Flujos de entrada/salida
+            \end{longenum}
+            \item Apache
+            \begin{longenum}
+                \item Integración de PHP con Apache
+                \item PHP como lenguaje embebido
+                \item Etiqueta \texttt{<?=}
+                \item [link:Servidor web  interno|http://php.net/manual/es/features.commandline.webserver.php]
+            \end{longenum}
+            \item CGI: PHP-FPM (FastCGI Process Manager)
+            \item Configuración básica con \texttt{php.ini}
+            \begin{longenum}
+                \item \texttt{error\_reporting = E\_ALL}
+                \item \texttt{display\_errors = On}
+                \item \texttt{display\_startup\_errors = On}
+                \item \texttt{date.timezone = 'UTC'}
+            \end{longenum}
+            \item Módulos de extensión
+        \end{longenum}
+        \item Manejo de datos de entrada: \texttt{\$\_GET} y \texttt{\$\_POST}
+        \item Funciones auxiliares interesantes
+        \begin{longenum}
+            \item \texttt{extract()}
+            \item \texttt{compact()}
+        \end{longenum}
+        \item Aspectos básicos de la orientación a objetos
+        \begin{longenum}
+            \item Objetos
+            \begin{longenum}
+                \item \texttt{new}
+                \item \texttt{instanceof}
+            \end{longenum}
+            \item Referencias
+            \begin{longenum}
+                \item Asignación por referencia (\texttt{=\&})
+            \end{longenum}
+            \item Clonación de objetos
+            \item Comparación de objetos
+            \item Propiedades
+            \begin{longenum}
+                \item Predeterminadas
+                \item Dinámicas
+            \end{longenum}
+            \item Métodos
+            \item Constantes
+            \begin{longenum}
+                \item Operador de resolución de ámbito (\texttt{::})
+            \end{longenum}
+            \item \textit{Ejemplo}: manejo de fechas, horas, instantes e intervalos
+        \end{longenum}
+        \item Excepciones
+        \begin{longenum}
+            \item Manejo de errores clásico en PHP
+            \item Errores vs. excepciones
+            \item La clase \texttt{Exception}
+            \item La clase \texttt{Error}
+            \item La clase \texttt{ErrorException}
+            \item Estructura de control \texttt{try ... catch}
+        \end{longenum}
+        \item Depuración
+        \begin{longenum}
+            \item \texttt{var\_dump()}, \texttt{print\_r()}, \texttt{die()}
+            \item PsySH
+            \item Xdebug \opcional\
+            \begin{longenum}
+                \item Módulo Xdebug
+                \item Aplicación Xdebug para Chrome
+                \item Extensión Xdebug Helper para Chrome
+                \item Paquete \texttt{php-debug} para Atom
+            \end{longenum}
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA1
+                \begin{longenum}
+                    \item CE1.a
+                    \item CE1.b
+                    \item CE1.d
+                    \item CE1.f
+                \end{longenum}
+                \item RA2
+                \begin{longenum}
+                    \item CE2.a
+                    \item CE2.b
+                    \item CE2.c
+                    \item CE2.d
+                    \item CE2.e
+                    \item CE2.f
+                    \item CE2.g
+                    \item CE2.h
+                \end{longenum}
+                \item RA3
+                \begin{longenum}
+                    \item CE3.a
+                    \item CE3.b
+                    \item CE3.c
+                    \item CE3.d
+                    \item CE3.e
+                    \item CE3.f
+                    \item CE3.g
+                \end{longenum}
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.d
+                    \item CE5.g
+                    \item CE5.h
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Persistencia de datos con PHP}} \ev1\ (Est: 2019-10-28)
+    \begin{longenum}
+        \item PDO (PHP Data Objects)
+        \begin{longenum}
+            \item Clase \texttt{PDO}
+            \begin{longenum}
+                \item \texttt{\_\_construct(string \$dsn [, string \$username [, string \$password [, array \$options ]]])}
+                \item \texttt{PDOStatement query(string \$statement)}
+                \item \texttt{int exec(string \$statement)}
+                \item \texttt{PDOStatement prepare(string \$statement [, array \$driver\_options = array() ])}
+            \end{longenum}
+            \item Clase \texttt{PDOStatement}
+            \begin{longenum}
+                \item \texttt{mixed fetch([ int \$fetch\_style ])}
+                \item \texttt{mixed fetchAll([ int \$fetch\_style ])}
+                \item \texttt{mixed fetchColumn([ int \$column\_number = 0 ])}
+                \item \texttt{bool execute ([ array \$input\_parameters ])}
+                \item \texttt{int rowCount(void)}
+            \end{longenum}
+            \item Correspondencias de tipos entre SQL y PHP
+            \item Transacciones
+            \begin{longenum}
+                \item \texttt{\$pdo->beginTransaction();}
+                \item \texttt{\$pdo->commit();}
+                \item \texttt{\$pdo->rollBack();}
+            \end{longenum}
+        \end{longenum}
+        \item Cookies
+        \begin{longenum}
+            \item \texttt{setcookie()}
+            \item Ejemplos de uso
+        \end{longenum}
+        \item Sesiones
+        \begin{longenum}
+            \item Iniciar una sesión
+            \begin{longenum}
+                \item \texttt{session\_start()}
+            \end{longenum}
+            \item Usar una sesión
+            \begin{longenum}
+                \item \texttt{\$\_SESSION}
+                \item Ejemplos de uso
+            \end{longenum}
+            \item Terminar una sesión
+            \begin{longenum}
+                \item \texttt{session\_destroy()}
+                \item \texttt{session\_name()}
+                \item \texttt{session\_id()}
+                \item \texttt{session\_get\_cookie\_params()}
+            \end{longenum}
+        \end{longenum}
+        \item Seguridad y persistencia
+        \begin{longenum}
+            \item Contraseñas
+            \begin{longenum}
+                \item https://www.md5online.org/
+                \item https://www.sha1online.org/
+                \item \texttt{password\_hash()}
+                \item \texttt{password\_verify()}
+            \end{longenum}
+            \item Inyección de código SQL
+            \item Cross-Site Request Forgery (CSRF)
+        \end{longenum}
+        \item Meta
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA2
+                \item RA3
+                \item RA4
+                \begin{longenum}
+                    \item CE4.a
+                    \item CE4.b
+                    \item CE4.c
+                    \item CE4.d
+                    \item CE4.e
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.f
+                    \item CE5.g
+                \end{longenum}
+                \item RA6
+                \begin{longenum}
+                    \item CE6.a
+                    \item CE6.b
+                    \item CE6.c
+                    \item CE6.d
+                    \item CE6.e
+                    \item CE6.f
+                    \item CE6.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA2
+                \item RA3
+                \item RA4
+                \begin{longenum}
+                    \item CE4.a
+                    \item CE4.b
+                    \item CE4.c
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.f
+                    \item CE5.g
+                    \item CE5.h
+                \end{longenum}
+                \item RA6
+                \begin{longenum}
+                    \item CE6.a
+                    \item CE6.b
+                    \item CE6.c
+                    \item CE6.e
+                    \item CE6.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Desarrollo de aplicaciones con PHP II}} \ev1\ (Est: 2019-11-04)
+    \begin{longenum}
+        \item Programación de \textit{CRUD} básico
+        \begin{longenum}
+            \item Ejemplo de aplicación: \textit{Muéveme}
+            \item Ejemplo de aplicación: \textit{FilmAffinity}
+        \end{longenum}
+        \item Post/Redirect/Get
+        \item \texttt{header()}
+        \begin{longenum}
+            \item \texttt{output\_buffering}
+        \end{longenum}
+        \item Seguridad básica
+        \begin{longenum}
+            \item Filtrar la entrada, escapar la salida
+            \item Cross-Site Scripting (XSS)
+            \begin{longenum}
+                \item No persistente
+                \item Persistente
+                \item Escapado de la salida
+                \begin{longenum}
+                    \item \texttt{htmlspecialchars()}
+                    \item HTML Purifier
+                \end{longenum}
+            \end{longenum}
+            \item Filtrado de la entrada
+            \begin{longenum}
+                \item Cómo \textit{NO} se debe hacer
+                \item Extensión Filter
+                \begin{longenum}
+                    \item \texttt{filter\_input()}, \texttt{filter\_has\_var()}, \texttt{filter\_var()}
+                    \item Filtros de validación](http://php.net/manual/es/filter.filters.validate.php) y [saneado
+                \end{longenum}
+                \item Expresiones regulares (PCRE)
+            \end{longenum}
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA1
+                \begin{longenum}
+                    \item CE1.a
+                \end{longenum}
+                \item RA4
+                \begin{longenum}
+                    \item CE4.a
+                    \item CE4.b
+                    \item CE4.c
+                    \item CE4.d
+                    \item CE4.e
+                    \item CE4.f
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.a
+                    \item CE5.b
+                    \item CE5.d
+                    \item CE5.f
+                    \item CE5.g
+                    \item CE5.h
+                \end{longenum}
+                \item RA6
+                \begin{longenum}
+                    \item CE6.a
+                    \item CE6.b
+                    \item CE6.c
+                    \item CE6.d
+                    \item CE6.e
+                    \item CE6.f
+                    \item CE6.g
+                    \item CE6.h
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Programación avanzada en PHP}} \ev1\ (Est: 2019-11-11)
+    \begin{longenum}
+        \item Diseño de aplicaciones orientadas a objetos
+        \begin{longenum}
+            \item Clases
+            \item Propiedades
+            \begin{longenum}
+                \item Predeterminadas
+                \item Dinámicas
+            \end{longenum}
+            \item Métodos
+            \begin{longenum}
+                \item Referencia \texttt{\$this}
+                \item Constructores y destructores
+            \end{longenum}
+            \item Constantes
+            \begin{longenum}
+                \item \texttt{self}
+            \end{longenum}
+            \item Herencia
+            \begin{longenum}
+                \item \texttt{parent}
+                \item Sobreescritura de métodos
+            \end{longenum}
+            \item Miembros estáticos
+            \begin{longenum}
+                \item Constantes
+                \item Métodos estáticos
+                \item Propiedades estáticas
+                \item Enlace estático en tiempo de ejecución
+            \end{longenum}
+            \item Interfaces
+            \item Traits
+            \item La clase \texttt{stdClass}
+            \begin{longenum}
+                \item Conversión de \texttt{array} a \texttt{object}
+            \end{longenum}
+        \end{longenum}
+        \item Espacios de nombres
+        \item Funciones anónimas
+        \begin{longenum}
+            \item Clausuras
+        \end{longenum}
+        \item Callables
+        \begin{longenum}
+            \item \texttt{call\_user\_func()}
+            \item \texttt{array\_map()} y \texttt{array\_reduce()}
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA2
+                \item RA3
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.g
+                    \item CE5.h
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Interoperabilidad}} \ev1\ (Est: 2019-11-18)
+    \begin{longenum}
+        \item Versionado semántico
+        \item Composer
+        \begin{longenum}
+            \item Paquetes
+            \item Packagist
+            \item Dependencias
+            \begin{longenum}
+                \item \texttt{composer.json} y \texttt{composer.lock}
+            \end{longenum}
+            \item Versiones y restricciones
+            \begin{longenum}
+                \item Versión exacta
+                \item Rango (\texttt{>}, \texttt{>=}, \texttt{<}, \texttt{<=}, \texttt{!=}, \texttt{ }, \texttt{,}, \texttt{||})
+                \item Guión (\texttt{-})
+                \item Asterisco (\texttt{*})
+                \item Tilde (\texttt{~})
+                \item Circunflejo (\texttt{\^})
+                \item Nombres de rama
+                \begin{longenum}
+                    \item \texttt{dev-master}
+                    \item \texttt{5.1.x-dev}
+                \end{longenum}
+                \item Estabilidad mínima
+                \item Comprobador online de restricciones
+            \end{longenum}
+            \item Comandos básicos
+            \begin{longenum}
+                \item \texttt{require}
+                \item \texttt{install}
+                \item \texttt{update}
+            \end{longenum}
+            \item Entornos de desarrollo y producción
+        \end{longenum}
+        \item Autocarga de clases
+        \begin{longenum}
+            \item \texttt{spl\_autoload\_register()}
+            \item PSR-4
+            \item Autoloader de Composer
+        \end{longenum}
+        \item Ejemplos
+        \begin{longenum}
+            \item \texttt{mpdf/mpdf}
+            \item \texttt{ramsey/uuid}
+            \item \texttt{doctrine/inflector}
+        \end{longenum}
+        \item Recomendaciones PSR del PHP-FIG
+        \begin{longenum}
+            \item PSR-1: Basic Coding Standard
+            \item PSR-2: Coding Style Guide
+            \item PSR-4: Autoloading Standard
+            \item PSR-5: PHPDoc Standard (borrador)
+            \item PSR-11: Extended Coding Style Guide (borrador)
+            \item PSR-19: PHPDoc tags (borrador)
+        \end{longenum}
+        \item Paquetes de Atom y herramientas externas \opcional\
+        \begin{longenum}
+            \item PHP\_CodeSniffer
+            \item PHP-CS-Fixer
+            \item Yii2-Shell
+        \end{longenum}
+        \item Ejercicios
+        \begin{longenum}
+            \item De versionado semántico
+            \item De versiones y restricciones
+            \item De uso básico de Composer
+            \item De buscar paquetes en Packagist que tengan una funcionalidad concreta y usarlos en un ejemplo
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA1
+                \begin{longenum}
+                    \item CE1.e
+                    \item CE1.g
+                \end{longenum}
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.g
+                    \item CE5.h
+                \end{longenum}
+                \item RA9
+                \begin{longenum}
+                    \item CE9.a
+                    \item CE9.b
+                    \item CE9.e
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Introducción a Yii 2}} \ev1\ (Est: 2019-11-25)
+    \begin{longenum}
+        \item Frameworks, microframeworks y librerías
+        \item Patrón Modelo-Vista-Controlador (MVC)
+        \begin{longenum}
+            \item Modelos
+            \item Vistas
+            \item Controladores
+            \item Rutas
+        \end{longenum}
+        \item Yii 2
+        \begin{longenum}
+            \item ¿Qué es Yii?
+            \item ¿En qué es mejor Yii?
+            \item ¿Cómo es Yii comparado con otros frameworks?
+            \item Versiones de Yii
+        \end{longenum}
+        \item Instalación, requisitos y puesta en marcha
+        \begin{longenum}
+            \item Requisitos previos
+            \item Instalación de Yii 2
+            \begin{longenum}
+                \item Instalación mediante Composer
+            \end{longenum}
+            \item Plantillas de proyecto
+            \begin{longenum}
+                \item Plantilla básica vs. avanzada
+                \item Plantilla básica modificada
+            \end{longenum}
+        \end{longenum}
+        \item ¡Hola, mundo!
+        \item Formularios
+        \item Bases de datos
+        \item Generador de código Gii
+        \item Herramientas de desarrollo
+        \begin{longenum}
+            \item Barra de depuración
+            \item Trazas de depuración
+        \end{longenum}
+        \item Estilo del código
+        \item Ejercicios
+        \begin{longenum}
+            \item Definiciones: framework, microframework, librería (semejanzas y diferencias). Modelo, vista y controlador. Rutas y ejemplos de rutas.
+            \item ¿Qué es una plantilla de proyecto? Diferencias entre la plantilla básica y la avanzada.
+            \item ¿Qué herramientas de desarrollo tenemos para desarrollar una aplicación en Yii 2 y para qué sirven?
+            \item Crear un proyecto desde cero, paso a paso.
+            \item Escribir programas sencillos, con formularios, validaciones sencillas y acceso a bases de datos.
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA1
+                \begin{longenum}
+                    \item CE1.e
+                    \item CE1.g
+                \end{longenum}
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.a
+                    \item CE5.b
+                    \item CE5.c
+                    \item CE5.d
+                    \item CE5.e
+                    \item CE5.g
+                    \item CE5.h
+                \end{longenum}
+                \item RA6
+                \begin{longenum}
+                    \item CE6.a
+                    \item CE6.b
+                    \item CE6.c
+                    \item CE6.d
+                    \item CE6.e
+                    \item CE6.f
+                    \item CE6.g
+                    \item CE6.h
+                \end{longenum}
+                \item RA9
+                \begin{longenum}
+                    \item CE9.b
+                    \item CE9.c
+                    \item CE9.e
+                    \item CE9.f
+                    \item CE9.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Estructura de una aplicación Yii 2}} \ev1\ (Est: 2019-12-02)
+    \begin{longenum}
+        \item A pequeña escala
+        \begin{longenum}
+            \item Componentes
+            \begin{longenum}
+                \item La clase \texttt{yii\\base\\BaseObject}
+                \begin{longenum}
+                    \item Propiedades
+                    \item Configuraciones
+                    \begin{longenum}
+                        \item Asignación masiva
+                        \item Creación de nuevas instancias
+                        \item Normas de creación de componentes
+                        \item Diferencias entre \texttt{new} y \texttt{Yii::createObject()}
+                    \end{longenum}
+                \end{longenum}
+                \item La clase \texttt{yii\\base\\Component}
+                \begin{longenum}
+                    \item Eventos
+                    \begin{longenum}
+                        \item De instancia
+                        \begin{longenum}
+                            \item Eventos de instancia
+                            \item Manejadores de eventos de instancia
+                        \end{longenum}
+                        \item De clase
+                        \begin{longenum}
+                            \item Eventos de clase
+                            \item Manejadores de eventos de clase
+                        \end{longenum}
+                    \end{longenum}
+                    \item Comportamientos
+                \end{longenum}
+            \end{longenum}
+            \item Alias
+            \item Autoloading de clases
+            \item Localizador de servicios
+            \item Contenedor de inyección de dependencias
+        \end{longenum}
+        \item A gran escala
+        \begin{longenum}
+            \item Introducción
+            \item Scripts de entrada
+            \item Aplicaciones
+            \item Componentes de aplicación
+            \item Controladores
+            \begin{longenum}
+                \item Acciones
+                \item Filtros
+            \end{longenum}
+            \item Modelos
+            \item Vistas
+            \begin{longenum}
+                \item Widgets
+            \end{longenum}
+            \item Otros componentes
+            \begin{longenum}
+                \item Módulos
+                \item Assets
+                \item Extensiones
+            \end{longenum}
+        \end{longenum}
+        \item Ejercicios
+        \begin{longenum}
+            \item ¿Qué es un componente? Características principales de los componentes. ¿Qué mejoras aporta a los objetos primitivos del lenguaje?
+            \item Diferencias entre \texttt{Component} y \texttt{BaseObject}.
+            \item ¿Qué es una configuración? ¿Cómo se usa? Ejemplos.
+            \item ¿Qué es un evento? Tipos de eventos. Diferencias entre eventos de clase y eventos de instancia.
+            \item ¿Qué es un manejador de eventos? Diferencias entre manejadores de clase y manejadores de instancia.
+            \item ¿Qué es un localizador de servicios? ¿Qué hace? ¿Por qué resulta útil? ¿Hay algún localizador de servicios en Yii 2? ¿Cómo se usa? ¿Qué servicios contiene? ¿Qué es un componente de aplicación? ¿Qué relación hay entre los servicios y los componentes de aplicación? ¿Cómo se registra un servicio en un localizador de servicios? ¿Cómo se accede luego a ese servicio?
+            \item ¿Qué es un contenedor de inyección de dependencias? ¿Para qué sirve? ¿Qué problema resuelve? ¿Hay algún contenedor de inyección de dependencias en Yii 2? ¿Cómo se usa? ¿Cómo se pueden declarar dependencias? ¿Cómo se pueden registrar dependencias? ¿Qué diferencia hay entre declarar y registrar una dependencia? ¿Cómo se resuelve una dependencia? Ejemplo práctico de uso del contenedor de inyección de dependencias de Yii 2.
+            \item ¿Qué es un script de entrada? ¿Cuántos scripts de entrada hay en una aplicación Yii 2? ¿Dónde se encuentran?
+            \item ¿Qué es el objeto Aplicación? ¿Qué es un componente de aplicación?
+            \item ¿Qué es un controlador? Diferencia entre controlador web y controlador de consola. ¿Dónde se almacenan? ¿Qué es una acción? Ejemplo de ambos tipos.
+            \item ¿Qué es un modelo? ¿Dónde se almacenan?
+            \item ¿Qué es una vista? ¿Dónde se almacenan? Ejemplo.
+            \item ¿Qué es un filtro?
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA2
+                \item RA3
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.g
+                    \item CE5.h
+                \end{longenum}
+                \item RA9
+                \begin{longenum}
+                    \item CE9.e
+                    \item CE9.f
+                    \item CE9.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Gestión de peticiones en Yii 2}} \ev2\ (Est: 2020-01-07)
+    \begin{longenum}
+        \item Introducción
+        \item Arranque (bootstrapping)
+        \item Enrutado y creación de URLs
+        \item Peticiones
+        \item Respuestas
+        \item Sesiones y cookies
+        \item Ejercicios
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.d
+                    \item CE5.f
+                    \item CE5.g
+                    \item CE5.h
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Acceso a bases de datos en Yii 2}} \ev2\ (Est: 2020-01-13)
+    \begin{longenum}
+        \item DAO
+        \begin{longenum}
+            \item \texttt{yii\\db\\Connection}
+            \item \texttt{yii\\db\\Connection::createCommand()}
+            \item Consultas SQL
+            \begin{longenum}
+                \item \texttt{queryAll()}
+                \item \texttt{queryOne()}
+                \item \texttt{queryColumn()}
+                \item \texttt{queryScalar()}
+            \end{longenum}
+            \item Sentencias no \texttt{SELECT}
+            \begin{longenum}
+                \item \texttt{execute()}
+                \item \texttt{insert()}
+                \item \texttt{update()}
+                \item \texttt{delete()}
+            \end{longenum}
+        \end{longenum}
+        \item Query Builder
+        \begin{longenum}
+            \item \texttt{yii\\db\\Query}
+            \item Creación de consultas
+            \begin{longenum}
+                \item \texttt{select()}
+                \item \texttt{from()}
+                \item Condiciones y filtrado de filas
+                \begin{longenum}
+                    \item \texttt{where()}
+                    \item Formatos de condiciones
+                    \begin{longenum}
+                        \item De cadena
+                        \item De array
+                        \item De operadores
+                    \end{longenum}
+                    \item \texttt{andWhere()}
+                    \item \texttt{orWhere()}
+                    \item \texttt{filterWhere()}
+                    \item \texttt{andFilterWhere()}
+                    \item \texttt{orFilterWhere()}
+                \end{longenum}
+                \item \texttt{orderBy()}
+                \item \texttt{groupBy()}
+                \item Condiciones y filtrado de grupos
+                \begin{longenum}
+                    \item \texttt{having()}
+                    \item \texttt{filterHaving()}
+                    \item \texttt{andFilterHaving()}
+                    \item \texttt{orFilterHaving()}
+                \end{longenum}
+                \item \texttt{limit()}
+                \item \texttt{offset()}
+                \item Combinaciones
+                \begin{longenum}
+                    \item \texttt{join()}
+                    \item \texttt{innerJoin()}
+                    \item \texttt{leftJoin()}
+                    \item \texttt{rightJoin()}
+                \end{longenum}
+                \item \texttt{union()}
+            \end{longenum}
+            \item Recogida de resultados
+            \begin{longenum}
+                \item \texttt{all()}
+                \item \texttt{one()}
+                \item \texttt{column()}
+                \item \texttt{scalar()}
+                \item \texttt{exists()}
+                \item \texttt{count()}
+                \item Funciones de grupo
+                \begin{longenum}
+                    \item \texttt{sum()}
+                    \item \texttt{average()}
+                    \item \texttt{max()}
+                    \item \texttt{min()}
+                \end{longenum}
+                \item \texttt{indexBy()}
+            \end{longenum}
+            \item Consultas por lotes
+            \begin{longenum}
+                \item \texttt{batch()}
+                \item \texttt{each()}
+            \end{longenum}
+        \end{longenum}
+        \item Active Record
+        \begin{longenum}
+            \item \texttt{findOne()}
+            \item \texttt{findAll()}
+            \item \texttt{save()}
+            \item ActiveQuery
+            \begin{longenum}
+                \item \texttt{find()}
+            \end{longenum}
+            \item Atributos sucios
+            \item Relaciones
+            \begin{longenum}
+                \item Encadenamiento de relaciones
+            \end{longenum}
+            \item \texttt{joinWith()}
+            \item Atributos virtuales
+            \begin{longenum}
+                \item Siete técnicas
+                \begin{longenum}
+                    \item Calcular a mano cuando/donde haga falta
+                    \item Usar vistas SQL
+                    \item Sobreescribir el método \texttt{find()} del modelo para que se use siempre en lugar del heredado de \texttt{ActiveRecord}
+                    \item Sobreescribir el método \texttt{afterFind()} para rellenar el atributo a mano cada vez que se hace un \texttt{find()}
+                    \item Capturar el evento \texttt{EVENT\_AFTER\_FIND} del modelo
+                    \item Usar una propiedad con \textit{getter} y \textit{setter}
+                    \item Crear un método \texttt{findEspecial()} que se usará en lugar de \texttt{find()} cuando haga falta
+                    \item La mejor opción, en la mayoría de los casos: combinar las dos anteriores
+                    \begin{longenum}
+                        \item Ejemplo
+                    \end{longenum}
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA2
+                \item RA3
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.f
+                    \item CE5.g
+                    \item CE5.h
+                \end{longenum}
+                \item RA6
+                \begin{longenum}
+                    \item CE6.a
+                    \item CE6.b
+                    \item CE6.c
+                    \item CE6.d
+                    \item CE6.e
+                    \item CE6.f
+                    \item CE6.g
+                    \item CE6.h
+                \end{longenum}
+                \item RA9
+                \begin{longenum}
+                    \item CE9.e
+                    \item CE9.f
+                    \item CE9.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Creación y validación de formularios en Yii 2}} \ev2\ (Est: 2020-01-20)
+    \begin{longenum}
+        \item Creación de formularios
+        \begin{longenum}
+            \item ActiveForm
+            \item \texttt{yii\\helpers\\Html}
+        \end{longenum}
+        \item Validación de la entrada
+        \begin{longenum}
+            \item Declaración de reglas
+            \begin{longenum}
+                \item Validadores principales
+                \item \texttt{skipOnEmpty}
+                \item \texttt{skipOnError}
+                \item Personalizar mensajes de error
+                \item Validación condicional
+                \item Filtrado (saneado) de datos
+                \item Manejo de entradas vacías
+            \end{longenum}
+            \item Validadores en línea
+            \item Validaciones en el cliente \opcional\
+        \end{longenum}
+        \item Subida de archivos
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA2
+                \item RA3
+                \begin{longenum}
+                    \item CE3.e
+                    \item CE3.f
+                \end{longenum}
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.b
+                    \item CE5.d
+                    \item CE5.h
+                \end{longenum}
+                \item RA6
+                \begin{longenum}
+                    \item CE6.f
+                    \item CE6.h
+                \end{longenum}
+                \item RA8
+                \begin{longenum}
+                    \item CE8.a
+                    \item CE8.b
+                    \item CE8.c
+                    \item CE8.d
+                    \item CE8.e
+                    \item CE8.f
+                    \item CE8.g
+                \end{longenum}
+                \item RA9
+                \begin{longenum}
+                    \item CE9.e
+                    \item CE9.f
+                    \item CE9.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Visualización de datos en Yii 2}} \ev2\ (Est: 2020-01-27)
+    \begin{longenum}
+        \item Formateado de datos
+        \begin{longenum}
+            \item \texttt{yii\\i18n\\Formatter}
+        \end{longenum}
+        \item Paginación
+        \begin{longenum}
+            \item \texttt{yii\\data\\Pagination}
+            \item Entrada
+            \begin{longenum}
+                \item \texttt{totalCount}
+                \item \texttt{pageSize}
+                \item \texttt{page}
+            \end{longenum}
+            \item Salida
+            \begin{longenum}
+                \item \texttt{limit}
+                \item \texttt{offset}
+            \end{longenum}
+            \item \texttt{yii\\widgets\\LinkPager}
+        \end{longenum}
+        \item Ordenación
+        \begin{longenum}
+            \item \texttt{yii\\data\\Sort}
+            \item Entrada
+            \begin{longenum}
+                \item \texttt{attributes}
+                \item \texttt{sort}
+            \end{longenum}
+            \item Salida
+            \begin{longenum}
+                \item \texttt{orders}
+            \end{longenum}
+            \item \texttt{yii\\data\\Sort::link()}
+        \end{longenum}
+        \item Proveedores de datos
+        \begin{longenum}
+            \item Entrada
+            \begin{longenum}
+                \item \texttt{pagination}
+                \item \texttt{sort}
+            \end{longenum}
+            \item Salida
+            \begin{longenum}
+                \item \texttt{models}
+                \item \texttt{count}
+                \item \texttt{totalCount}
+            \end{longenum}
+            \item \texttt{ActiveDataProvider}
+            \begin{longenum}
+                \item \texttt{query}
+            \end{longenum}
+            \item \texttt{SqlDataProvider}
+            \begin{longenum}
+                \item \texttt{sql}
+                \item \texttt{params}
+                \item \texttt{totalCount}
+            \end{longenum}
+            \item \texttt{ArrayDataProvider}
+            \begin{longenum}
+                \item \texttt{allModels}
+            \end{longenum}
+        \end{longenum}
+        \item Widgets de datos
+        \begin{longenum}
+            \item \texttt{DetailView}
+            \item \texttt{ListView}
+            \item \texttt{GridView}
+            \begin{longenum}
+                \item \texttt{dataProvider}
+                \item \texttt{columns}
+                \begin{longenum}
+                    \item \texttt{DataColumn}
+                    \item \texttt{SerialColumn}
+                    \item \texttt{ActionColumn}
+                \end{longenum}
+                \item Ordenación de columnas
+                \item Filtrado de datos
+                \begin{longenum}
+                    \item \texttt{yii\\grid\\GridView::\$filterModel}
+                \end{longenum}
+                \item Relaciones
+                \begin{longenum}
+                    \item Ordenación con relaciones
+                    \item Filtrado con relaciones
+                    \begin{longenum}
+                        \item \texttt{yii\\db\\ActiveRecord::getAttribute(\$name)}
+                    \end{longenum}
+                \end{longenum}
+            \end{longenum}
+            \item El problema de las fechas/horas/instantes
+            \item Otros widgets no oficiales
+            \begin{longenum}
+                \item Krajee Yii Extensions
+                \begin{longenum}
+                    \item \texttt{yii2-datecontrol}
+                    \item \texttt{yii2-number}
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+        \item Scripts de cliente
+        \item Temas \opcional\
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA2
+                \item RA3
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.b
+                    \item CE5.c
+                    \item CE5.d
+                    \item CE5.h
+                \end{longenum}
+                \item RA6
+                \begin{longenum}
+                    \item CE6.f
+                    \item CE6.h
+                \end{longenum}
+                \item RA8
+                \begin{longenum}
+                    \item CE8.a
+                    \item CE8.b
+                    \item CE8.c
+                    \item CE8.d
+                    \item CE8.e
+                    \item CE8.f
+                    \item CE8.g
+                \end{longenum}
+                \item RA9
+                \begin{longenum}
+                    \item CE9.e
+                    \item CE9.f
+                    \item CE9.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Seguridad y cacheado en Yii 2}} \ev2\ (Est: 2020-02-03)
+    \begin{longenum}
+        \item Autenticación
+        \begin{longenum}
+            \item Componente de aplicación \texttt{user}
+            \item Clase identidad e interfaz \texttt{yii\\web\\IdentityInterface}
+            \item Métodos de \textit{login} y \textit{logout}.
+        \end{longenum}
+        \item Contraseñas
+        \item Autorización
+        \item Niveles de caché
+        \begin{longenum}
+            \item Cacheado de datos
+            \item Cacheado de fragmentos
+            \item Cacheado de páginas
+            \item Cacheado HTTP
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA2
+                \item RA3
+                \item RA4
+                \begin{longenum}
+                    \item CE4.d
+                    \item CE4.e
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.e
+                    \item CE5.g
+                    \item CE5.h
+                \end{longenum}
+                \item RA6
+                \begin{longenum}
+                    \item CE6.h
+                \end{longenum}
+                \item RA8
+                \item RA9
+                \begin{longenum}
+                    \item CE9.e
+                    \item CE9.f
+                    \item CE9.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Características adicionales de Yii 2}} \ev2\ (Est: 2020-02-10)
+    \begin{longenum}
+        \item AJAX y PJAX
+        \begin{longenum}
+            \item Validaciones Ajax
+            \item PJAX \opcional\
+            \item CORS \opcional\
+        \end{longenum}
+        \item Correo electrónico
+        \item Aplicación de consola
+        \item Migraciones
+        \item Extensiones
+        \item Paquetes
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA2
+                \item RA3
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.d
+                    \item CE5.g
+                    \item CE5.h
+                \end{longenum}
+                \item RA6
+                \begin{longenum}
+                    \item CE6.h
+                \end{longenum}
+                \item RA8
+                \begin{longenum}
+                    \item CE8.a
+                    \item CE8.b
+                    \item CE8.c
+                    \item CE8.d
+                    \item CE8.e
+                    \item CE8.f
+                    \item CE8.g
+                \end{longenum}
+                \item RA9
+                \begin{longenum}
+                    \item CE9.e
+                    \item CE9.f
+                    \item CE9.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Calidad}} \ev2\ (Est: 2020-02-17)
+    \begin{longenum}
+        \item Pruebas
+        \begin{longenum}
+            \item Tipos de pruebas
+            \begin{longenum}
+                \item Unitarias
+                \item Funcionales
+                \item De aceptación
+            \end{longenum}
+            \item Herramientas
+            \begin{longenum}
+                \item PHPUnit \opcional\
+                \item Codeception
+                \begin{longenum}
+                    \item Ejecutar pruebas
+                    \item Crear pruebas en formato Cest
+                \end{longenum}
+                \item Fixtures
+                \begin{longenum}
+                    \item \texttt{./yii fixture/generate <nombre>}
+                    \item \texttt{./yii fixture/load <nombre>}
+                \end{longenum}
+            \end{longenum}
+            \item Integración continua: Travis CI
+            \item Cobertura de código \opcional\
+        \end{longenum}
+        \item Depuración
+        \begin{longenum}
+            \item \texttt{var\_dump()} mejorado
+            \item Consola integrada
+            \item Barra de depuración
+            \item Depuración con PsySH \opcional\
+        \end{longenum}
+        \item Documentación
+        \begin{longenum}
+            \item API documentation generator for Yii2
+            \item GitHub Pages
+        \end{longenum}
+        \item Mantenimiento y calidad del código
+        \begin{longenum}
+            \item CodeSniffer
+            \item CS\_Fixer
+            \item Code Climate
+        \end{longenum}
+        \item Ejercicios
+        \begin{longenum}
+            \item Escribir pruebas funcionales para Muéveme
+            \item Generar documentación para Muéveme
+            \item Usar fixtures para generar datos de prueba para Muéveme
+            \item Verificar en CodeClimate si hay archivos fuente marcados como de mala calidad
+        \end{longenum}
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA3
+                \begin{longenum}
+                    \item CE3.g
+                \end{longenum}
+                \item RA4
+                \begin{longenum}
+                    \item CE4.g
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.g
+                    \item CE5.h
+                \end{longenum}
+                \item RA6
+                \begin{longenum}
+                    \item CE6.e
+                    \item CE6.h
+                \end{longenum}
+                \item RA9
+                \begin{longenum}
+                    \item CE9.e
+                    \item CE9.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Computación en la nube}} \ev2\ (Est: 2020-02-24)
+    \begin{longenum}
+        \item Entornos de ejecución
+        \begin{longenum}
+            \item Desarrollo
+            \item Producción
+            \item Pruebas
+            \item Preproducción
+        \end{longenum}
+        \item Cloud computing vs hosting
+        \item Cloud computing vs VPS
+        \item Servicios por capas
+        \begin{longenum}
+            \item IaaS
+            \item PaaS
+            \item SaaS
+        \end{longenum}
+        \item 12 Factores
+        \item Heroku
+        \begin{longenum}
+            \item Heroku CLI
+            \item Creación y despliegue de aplicaciones
+            \item Heroku Postgres
+            \item Variables de entorno
+            \item Releases
+        \end{longenum}
+        \item Escalabilidad \opcional\
+        \item Alta disponibilidad \opcional\
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA1
+                \begin{longenum}
+                    \item CE1.a
+                    \item CE1.c
+                    \item CE1.d
+                    \item CE1.e
+                \end{longenum}
+                \item RA5
+                \begin{longenum}
+                    \item CE5.h
+                \end{longenum}
+                \item RA6
+                \begin{longenum}
+                    \item CE6.h
+                \end{longenum}
+                \item RA9
+                \begin{longenum}
+                    \item CE9.e
+                    \item CE9.f
+                    \item CE9.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Servicios web con REST en Yii 2}} \ev2\ \opcional\ (Est: 2020-03-02)
+    \begin{longenum}
+        \item Introducción
+        \item Recursos
+        \item Controladores
+        \item Enrutado
+        \item Formateo de la respuesta
+        \item Autenticación
+        \item Limitación de frecuencia de peticiones
+        \item Versionado
+        \item Gestión de errores
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA1
+                \begin{longenum}
+                    \item CE1.a
+                    \item CE1.b
+                \end{longenum}
+                \item RA2
+                \item RA3
+                \item RA7
+                \begin{longenum}
+                    \item CE7.a
+                    \item CE7.b
+                    \item CE7.c
+                    \item CE7.d
+                    \item CE7.e
+                    \item CE7.f
+                    \item CE7.g
+                \end{longenum}
+                \item RA8
+                \begin{longenum}
+                    \item CE8.b
+                    \item CE8.f
+                    \item CE8.g
+                \end{longenum}
+                \item RA9
+                \begin{longenum}
+                    \item CE9.c
+                    \item CE9.e
+                    \item CE9.f
+                    \item CE9.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Contenedores}} \ev2\ \opcional\ (Est: 2020-03-09)
+    \begin{longenum}
+        \item Vagrant
+        \begin{longenum}
+            \item PuPHPet
+        \end{longenum}
+        \item Docker
+        \begin{longenum}
+            \item Docker Hub
+            \item Dockerfiles
+            \item Docker Compose
+            \begin{longenum}
+                \item docker-compose.yml
+            \end{longenum}
+        \end{longenum}
+        \item PHPDocker
+        \item Metadatos
+        \begin{longenum}
+            \item Objetivos de la unidad
+            \item Resultados de aprendizaje y criterios de evaluación asociados
+            \begin{longenum}
+                \item RA1
+                \begin{longenum}
+                    \item CE1.a
+                    \item CE1.c
+                    \item CE1.d
+                    \item CE1.e
+                \end{longenum}
+                \item RA9
+                \begin{longenum}
+                    \item CE9.e
+                    \item CE9.f
+                    \item CE9.g
+                \end{longenum}
+            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+\end{longenum}

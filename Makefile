@@ -11,19 +11,29 @@ BUILDDIR=docs
 BUILDDIR_HTML=$(BUILDDIR)/slides
 BUILDDIR_PDF=$(BUILDDIR)/pdf
 BUILDDIR_APUNTES=$(BUILDDIR)/apuntes
-PROG_DIR=programacion
+PROGDIR=programacion
 ITHACA=beamertheme-ithaca
 ITHACA_SRC=$(AUX)/$(ITHACA)
 ITHACA_DST=$(HOME)/texmf/tex/latex/beamer
 IMAGES=images
 
-# Archivos
+# Scripts y programas
 
 PP=./pp
 PANDOC=/usr/bin/pandoc
+DIAPOSITIVAS_SH=$(SCRIPTS)/diapositivas.sh
+OPML=$(SCRIPTS)/opml.php
+
+# Archivos
+
 PROG=INF-2DAW-DWESE-C19-20
-PROG_LYX=$(PROG_DIR)/$(PROG).lyx
+PROG_LYX=$(PROGDIR)/$(PROG).lyx
 PROG_PDF=$(BUILDDIR)/assets/$(PROG).pdf
+ESQUEMA_OPML=$(PROGDIR)/esquema.opml
+ESQUEMA_TEX=$(PROGDIR)/esquema.tex
+RESUMEN_TEX=$(PROGDIR)/resumen.tex
+RACE_TEX=$(PROGDIR)/race.tex
+INDEX_LEO=index.leo
 DIAPOS=$(BUILDDIR)/diapositivas.md
 REVEAL=$(BUILDDIR_HTML)/reveal.js/js/reveal.js
 REVEAL_TEMPLATE=$(AUX)/revealjs.template
@@ -36,7 +46,6 @@ HIGHLIGHT_STYLE=$(AUX)/solarized.theme
 PHP_XML=$(AUX)/php.xml
 CONSOLE_XML=$(AUX)/console.xml
 COMMON_PP=$(AUX)/common.pp
-DIAPOSITIVAS_SH=$(SCRIPTS)/diapositivas.sh
 
 # Listas de archivos
 
@@ -49,7 +58,7 @@ APUNTES_PDF  := $(patsubst $(SRCDIR)/%,$(BUILDDIR_APUNTES)/%,$(SOURCES:.md=-apun
 
 all: $(DIAPOS) html pdf apuntes prog limpiar
 
-$(DIAPOS): $(SOURCES) $(DIAPOSITIVAS_SH)
+$(DIAPOS): $(SOURCES) $(DIAPOSITIVAS_SH) $(INDEX_LEO)
 	$(DIAPOSITIVAS_SH) > $(DIAPOS)
 
 html: $(OBJECTS_HTML)
@@ -67,12 +76,24 @@ limpiar:
 
 # Programación
 
-$(PROG_PDF): $(PROG_LYX)
+$(PROG_PDF): $(ESQUEMA_TEX) $(RESUMEN_TEX) $(RACE_TEX) $(PROG_LYX)
 	@echo "Generando $(PROG_PDF)..."
-	@lyx -E pdf2 $(PROG_DIR)/$(PROG).pdf $(PROG_LYX) >/dev/null || true
-	@[ -f "$(PROG_DIR)/$(PROG).pdf" ] && mv -f $(PROG_DIR)/$(PROG).pdf $(PROG_PDF)
+	@lyx -E pdf2 $(PROGDIR)/$(PROG).pdf $(PROG_LYX) >/dev/null || true
+	@[ -f "$(PROGDIR)/$(PROG).pdf" ] && mv -f $(PROGDIR)/$(PROG).pdf $(PROG_PDF)
+
+$(ESQUEMA_TEX): $(ESQUEMA_OPML) $(OPML)
+	$(OPML) -u$(ESQUEMA_OPML) > $(ESQUEMA_TEX)
+
+$(RESUMEN_TEX): $(ESQUEMA_OPML) $(OPML)
+	$(OPML) -u$(ESQUEMA_OPML) -eresumen > $(RESUMEN_TEX)
+
+$(RACE_TEX): $(ESQUEMA_OPML) $(OPML)
+	$(OPML) -u$(ESQUEMA_OPML) -erace > $(RACE_TEX)
 
 # Diapositivas en formato HTML
+
+$(INDEX_LEO): $(ESQUEMA_OPML) $(OPML)
+	$(OPML) -u$(ESQUEMA_OPML) -eleo -s$(SRCDIR) > $(INDEX_LEO)
 
 $(BUILDDIR_HTML)/%.html: $(SRCDIR)/%.md $(PP) $(PANDOC) $(REVEAL) $(REVEAL_TEMPLATE) $(HIGHLIGHT_STYLE) $(PHP_XML) $(CONSOLE_XML) $(HEADER_INCLUDES) $(INCLUDE_BEFORE)
 	@echo "Generando $@..."
@@ -155,3 +176,6 @@ serve:
 
 touch:
 	touch $(OBJECTS_HTML) $(OBJECTS_PDF) $(APUNTES_PDF) $(PROG_PDF)
+
+markdown:
+	scripts/opml.php -u programacion/esquema.opml -emarkdown >/dev/null

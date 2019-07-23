@@ -6,14 +6,28 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ricardo.20190222160648.1"
-expanded="ricardo.20190327184614.6,ricardo.20190327184614.83,"><vh>@auto source/conceptos-basicos-de-php-i.md</vh></v>
-<v t="ricardo.20190304095921.1"><vh>@auto source/conceptos-basicos-de-php-ii.md</vh></v>
-<v t="ricardo.20190327163751.1"><vh>@auto source/interoperabilidad.md</vh></v>
-<v t="ricardo.20190222161209.1"><vh>@auto source/introduccion-a-yii2.md</vh></v>
-<v t="ricardo.20190222161254.1"><vh>@auto source/estructura-a-pequena-escala-de-una-aplicacion-yii2.md</vh></v>
-<v t="ricardo.20190222160942.1"><vh>@auto source/estructura-a-gran-escala-de-una-aplicacion-yii2.md</vh></v>
-<v t="ricardo.20190307133722.1"><vh>@auto source/gestion-de-peticiones-en-yii2.md</vh></v>
+<v t="ricardo.20190723185525.1"><vh>@auto source/sistemas-de-control-de-versiones-i.md</vh></v>
+<v t="ricardo.20190723185525.2"><vh>@auto source/sistemas-de-control-de-versiones-ii.md</vh></v>
+<v t="ricardo.20190723185525.3"><vh>@auto source/introduccion-a-la-tecnologia-web.md</vh></v>
+<v t="ricardo.20190723185525.4"><vh>@auto source/conceptos-basicos-de-php-i.md</vh></v>
+<v t="ricardo.20190723185525.5"><vh>@auto source/conceptos-basicos-de-php-ii.md</vh></v>
+<v t="ricardo.20190723185525.6"><vh>@auto source/desarrollo-de-aplicaciones-con-php-i.md</vh></v>
+<v t="ricardo.20190723185525.7"><vh>@auto source/persistencia-de-datos-con-php.md</vh></v>
+<v t="ricardo.20190723185525.8"><vh>@auto source/desarrollo-de-aplicaciones-con-php-ii.md</vh></v>
+<v t="ricardo.20190723185525.9"><vh>@auto source/programacion-avanzada-en-php.md</vh></v>
+<v t="ricardo.20190723185525.10"><vh>@auto source/interoperabilidad.md</vh></v>
+<v t="ricardo.20190723185525.11"><vh>@auto source/introduccion-a-yii-2.md</vh></v>
+<v t="ricardo.20190723185525.12"><vh>@auto source/estructura-de-una-aplicacion-yii-2.md</vh></v>
+<v t="ricardo.20190723185525.13"><vh>@auto source/gestion-de-peticiones-en-yii-2.md</vh></v>
+<v t="ricardo.20190723185525.14"><vh>@auto source/acceso-a-bases-de-datos-en-yii-2.md</vh></v>
+<v t="ricardo.20190723185525.15"><vh>@auto source/creacion-y-validacion-de-formularios-en-yii-2.md</vh></v>
+<v t="ricardo.20190723185525.16"><vh>@auto source/visualizacion-de-datos-en-yii-2.md</vh></v>
+<v t="ricardo.20190723185525.17"><vh>@auto source/seguridad-y-cacheado-en-yii-2.md</vh></v>
+<v t="ricardo.20190723185525.18"><vh>@auto source/caracteristicas-adicionales-de-yii-2.md</vh></v>
+<v t="ricardo.20190723185525.19"><vh>@auto source/calidad.md</vh></v>
+<v t="ricardo.20190723185525.20"><vh>@auto source/computacion-en-la-nube.md</vh></v>
+<v t="ricardo.20190723185525.21"><vh>@auto source/servicios-web-con-rest-en-yii-2.md</vh></v>
+<v t="ricardo.20190723185525.22"><vh>@auto source/contenedores.md</vh></v>
 </vnodes>
 <tnodes>
 </tnodes>

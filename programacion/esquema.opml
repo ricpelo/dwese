@@ -1,0 +1,1628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>DWESE #dwese #modulos</title>
+    <dateModified>Tue, 23 Jul 2019 15:56:24 +0000</dateModified>
+    <ownerName>ricpelo</ownerName>
+  </head>
+  <body>
+    <outline text="[1] **CONTENIDOS**" tags="contenidos" progress_counter="true">
+      <outline text="**Sistemas de control de versiones I**" due="2019-09-16" due_user_ids="139389" tags="ev1" progress_counter="true">
+        <outline text="Preparación del entorno de desarrollo" progress_counter="true">
+          <outline text="Instalación automatizada" progress_counter="true">
+            <outline text="Acciones previas" progress_counter="true">
+              <outline text="Instalar `git`"/>
+              <outline text="Crear cuenta en [GitHub](https://github.com/)"/>
+              <outline text="Solicitar el [Student Developer Pack](https://education.github.com/)"/>
+            </outline>
+            <outline text="Usar https://github.com/ricpelo/conf y seguir las instrucciones del `README.md`"/>
+          </outline>
+          <outline text="Terminal" progress_counter="true">
+            <outline text="`Zsh`"/>
+            <outline text="Oh My Zsh"/>
+            <outline text="`less`"/>
+          </outline>
+          <outline text="Navegador" progress_counter="true"/>
+          <outline text="Editores de texto" progress_counter="true">
+            <outline text="Vim y less"/>
+            <outline text="[Atom](https://atom.io/)" progress_counter="true">
+              <outline text="Instalación"/>
+              <outline text="Configuración"/>
+              <outline text="Paquetes"/>
+            </outline>
+            <outline text="[Alternativa: PhpStorm](https://www.jetbrains.com/phpstorm/)"/>
+          </outline>
+          <outline text="[DokuWiki](http://wiki.iesdonana.org/)" tags="opcional" progress_counter="true">
+            <outline text="Elaboración de documentación"/>
+            <outline text="La wiki como sistema de control de versiones"/>
+            <outline text="La wiki como herramienta colaborativa"/>
+          </outline>
+          <outline text="Ejercicios" progress_counter="true">
+            <outline text="Indica en la wiki tu nombre completo junto a tu nombre de usuario en GitHub."/>
+            <outline text="Sigue el tutorial de `vimtutor` y envía el archivo resultante."/>
+            <outline text="Escoge un paquete del repositorio de paquetes de Atom e indica en la wiki su nombre, su funcionamiento básico, un enlace al paquete dentro del repositorio y por qué te ha resultado interesante."/>
+            <outline text="Escoge una extensión de Google Chrome e indica en la wiki su nombre, su funcionamiento básico, un enlace a la extensión y por qué te ha resultado interesante."/>
+            <outline text="Indica qué editor de textos sería más apropiado usar en cada una de las situaciones siguientes:&#13;&#10;  - Programar en PHP.&#13;&#10;  - Escribir un pequeño script.&#13;&#10;  - Cambiar un archivo de configuración del sistema.&#13;&#10;  - Editar un archivo situado en otro equipo a través de la red."/>
+          </outline>
+        </outline>
+        <outline text="Primeros pasos" progress_counter="true">
+          <outline text="`config`"/>
+          <outline text="`git-config.sh`"/>
+          <outline text="`init`"/>
+          <outline text="`add`"/>
+          <outline text="`commit`">
+            <outline text="Con la opción `-m`"/>
+            <outline text="Sin la opción `-m`"/>
+          </outline>
+          <outline text="`checkout` (descartar cambios)"/>
+          <outline text="`reset`"/>
+          <outline text="`.gitignore`"/>
+        </outline>
+        <outline text="Estado" progress_counter="true">
+          <outline text="`status`"/>
+          <outline text="`log`"/>
+          <outline text="[Alias `lg`](https://coderwall.com/p/euwpig/a-better-git-log)"/>
+          <outline text="`show`"/>
+          <outline text="`diff`" progress_counter="true">
+            <outline text="`git diff`"/>
+            <outline text="`git diff --staged`"/>
+            <outline text="`git diff &lt;commit&gt;`"/>
+            <outline text="`git diff inicial..final`"/>
+          </outline>
+          <outline text="Referencias" progress_counter="true">
+            <outline text="`HEAD` y `master`"/>
+            <outline text="`237ab45^`"/>
+            <outline text="`237ab45~1`"/>
+          </outline>
+        </outline>
+        <outline text="La máquina del tiempo" progress_counter="true">
+          <outline text="`checkout` (mover el `HEAD`)"/>
+          <outline text="`revert`"/>
+          <outline text="`reset`"/>
+          <outline text="`tag`"/>
+          <outline text="`--amend`"/>
+        </outline>
+        <outline text="Borrar y mover" progress_counter="true">
+          <outline text="`rm`"/>
+          <outline text="`mv`"/>
+        </outline>
+        <outline text="Git y los directorios"/>
+        <outline text="Ejercicios" progress_counter="true">
+          <outline text="Sigue el tutorial de [Git Immersion](https://esparta.github.io/gitimmersion-spanish/index.html) desde el LAB3 hasta el LAB20, comprime y envía el directorio resultante."/>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad">
+            <outline text="Reconocer la importancia y la necesidad de usar un sistema de control de versiones durante el desarrollo de software."/>
+            <outline text="Reconocer la utilidad de un sistema de control de versiones en tareas tan diversas como documentación, copias de seguridad, colaboración, despliegue de aplicaciones, etc."/>
+            <outline text="Entender la diferencia entre sistemas de control de versiones centralizados y distribuidos, y cómo estos últimos superan abiertamente a los primeros."/>
+            <outline text="Reconocer a Git como un sistema de control de versiones distribuido."/>
+            <outline text="Reconocer la importancia que tiene Git en el panorama actual de desarrollo de software."/>
+            <outline text="Entender los conceptos de repositorio, directorio de trabajo, stage, commit, log."/>
+            <outline text="Aprender el funcionamiento básico de Git en un repositorio local."/>
+            <outline text="Aprender a moverse a través del tiempo por los commits de un repositorio Git."/>
+            <outline text="Aprender a corregir commits creando nuevos commits."/>
+          </outline>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA1">
+              <outline text="CE1.e"/>
+              <outline text="CE1.g"/>
+            </outline>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Sistemas de control de versiones II**" due="2019-09-23" due_user_ids="139389" tags="ev1" progress_counter="true">
+        <outline text="Ramas locales" progress_counter="true">
+          <outline text="`branch`"/>
+          <outline text="`merge`" progress_counter="true">
+            <outline text="Estrategia *fast-forward*"/>
+            <outline text="Estrategia *recursive* o del padre múltiple"/>
+            <outline text="`--no-ff`"/>
+          </outline>
+          <outline text="Resolución de conflictos"/>
+          <outline text="`rebase`"/>
+          <outline text="Ejercicios" progress_counter="true">
+            <outline text="Sigue el tutorial de [Git Immersion](https://esparta.github.io/gitimmersion-spanish/index.html) desde el LAB24 hasta el LAB35, comprime y envía el directorio resultante."/>
+          </outline>
+        </outline>
+        <outline text="Ramas remotas" progress_counter="true">
+          <outline text="Orígenes remotos" progress_counter="true">
+            <outline text="Directorios locales"/>
+            <outline text="Servidores remotos con repositorios compartidos"/>
+            <outline text="`remote [add|show] origin`"/>
+          </outline>
+          <outline text="Flujo de trabajo básico" progress_counter="true">
+            <outline text="[link: `push`|https://git-scm.com/book/es/v1/Ramificaciones-en-Git-Ramas-Remotas#Publicando]" progress_counter="true">
+              <outline text="[link: Ramas de seguimiento (*tracking branch*)|https://git-scm.com/book/es/v1/Ramificaciones-en-Git-Ramas-Remotas#Haciendo-seguimiento-a-las-ramas]"/>
+            </outline>
+            <outline text="`clone`" progress_counter="true">
+              <outline text="[link: ¿Qué significa `origin/HEAD`?|https://stackoverflow.com/questions/354312/why-is-origin-head-shown-when-running-git-branch-r]"/>
+            </outline>
+            <outline text="`fetch`"/>
+            <outline text="`pull`"/>
+          </outline>
+          <outline text="Eliminar ramas remotas"/>
+          <outline text="Etiquetas remotas" progress_counter="true">
+            <outline text="`git push origin mi_etiqueta`"/>
+            <outline text="`git push --tags`"/>
+            <outline text="`git push --delete origin mi_etiqueta`"/>
+          </outline>
+          <outline text="Ejercicios" progress_counter="true">
+            <outline text="Sigue el tutorial de [Git Immersion](https://esparta.github.io/gitimmersion-spanish/index.html) desde el LAB36 hasta el LAB49, comprime y envía el directorio resultante."/>
+          </outline>
+        </outline>
+        <outline text="[GitHub](https://github.com/)" progress_counter="true">
+          <outline text="[link: El flujo de trabajo de GitHub|https://guides.github.com/introduction/flow/]" progress_counter="true"/>
+          <outline text="Pull requests" progress_counter="true">
+            <outline text="[link: Comentarios generales y comentarios en línea|https://help.github.com/articles/commenting-on-a-pull-request/]"/>
+            <outline text="[link: Revisiones de cambios|https://help.github.com/articles/reviewing-changes-in-pull-requests/]" progress_counter="true">
+              <outline text="[link: Crear y solicitar revisiones|https://help.github.com/articles/reviewing-proposed-changes-in-a-pull-request/]"/>
+            </outline>
+            <outline text="Arreglar una PR"/>
+            <outline text="Cerrar una PR" progress_counter="true">
+              <outline text="`git remote prune origin`"/>
+            </outline>
+          </outline>
+          <outline text="Issues"/>
+          <outline text="Releases"/>
+          <outline text="Forks"/>
+          <outline text="[GitHub Education](https://education.github.com/)" progress_counter="true">
+            <outline text="[GitHub Classroom](https://classroom.github.com/)"/>
+          </outline>
+        </outline>
+        <outline text="Ejercicios" progress_counter="true">
+          <outline text="Sigue el tutorial de [Hello World](https://guides.github.com/activities/hello-world/) e indica el repositorio resultante."/>
+          <outline text="Sigue el tutorial de [Meghan Nelson](http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners) e indica el repositorio resultante."/>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA1">
+              <outline text="CE1.e"/>
+              <outline text="CE1.g"/>
+            </outline>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Introducción a la tecnología web**" due="2019-09-30" due_user_ids="139389" tags="ev1" progress_counter="true">
+        <outline text="Introducción al desarrollo web" progress_counter="true">
+          <outline text="Conceptos básicos" progress_counter="true">
+            <outline text="Navegadores y servidores web"/>
+            <outline text="[link: Agentes de usuario|https://es.wikipedia.org/wiki/Agente_de_usuario]"/>
+            <outline text="Web estática vs. dinámica"/>
+            <outline text="Estructura vs. contenido"/>
+            <outline text="Arquitectura multinivel"/>
+          </outline>
+          <outline text="Ejemplos de aplicaciones web" progress_counter="true">
+            <outline text="Redes sociales: Facebook, Twitter…"/>
+            <outline text="Comercio electrónico: Amazon, eBay…"/>
+            <outline text="Administración electrónica…"/>
+            <outline text="Portales"/>
+            <outline text="ERP, CRM"/>
+          </outline>
+          <outline text="Tecnologías de desarrollo de aplicaciones web" progress_counter="true">
+            <outline text=".NET"/>
+            <outline text="Java"/>
+            <outline text="Ruby/Rails"/>
+            <outline text="Python/Django"/>
+            <outline text="PHP"/>
+            <outline text="El Kung-Fu de la Programación" progress_counter="true">
+              <outline text="Odoo"/>
+              <outline text="PrestaShop"/>
+              <outline text="Drupal"/>
+              <outline text="WordPress"/>
+            </outline>
+          </outline>
+        </outline>
+        <outline text="Arquitectura cliente/servidor"/>
+        <outline text="HTML 5 básico (recordatorio de primer curso)"/>
+        <outline text="[link: Protocolo HTTP|https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol]" progress_counter="true">
+          <outline text="URIs" progress_counter="true">
+            <outline text="[URL encoding](https://en.wikipedia.org/wiki/Percent-encoding)"/>
+          </outline>
+          <outline text="Peticiones (*HTTP requests*) y respuestas (*HTTP responses*)"/>
+          <outline text="Métodos: GET, POST"/>
+          <outline text="Versiones" progress_counter="true">
+            <outline text="HTTP/1.0"/>
+            <outline text="HTTP/1.1"/>
+          </outline>
+          <outline text="[Cabeceras HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)"/>
+          <outline text="[Códigos de estado](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)"/>
+          <outline text="Experimentos" progress_counter="true">
+            <outline text="`telnet` (a un servidor)"/>
+            <outline text="`netcat` (desde un navegador)"/>
+            <outline text="`curl -i -XPOST “http://…” | pygmentize -l http`"/>
+            <outline text="[link: `http`|https://httpie.org/]"/>
+            <outline text="[Google Chrome Developer Tools](http://www.emezeta.com/articulos/10-trucos-para-google-chrome-developer-tools)"/>
+          </outline>
+          <outline text="Envío de datos al servidor" progress_counter="true">
+            <outline text="Mediante GET"/>
+            <outline text="Mediante POST"/>
+            <outline text="Formularios HTML" progress_counter="true"/>
+          </outline>
+          <outline text="Cookies"/>
+        </outline>
+        <outline text="Apache básico" tags="opcional" progress_counter="true">
+          <outline text="Instalación"/>
+          <outline text="Configuración básica"/>
+          <outline text="Sitios virtuales"/>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA1">
+              <outline text="CE1.a"/>
+              <outline text="CE1.b"/>
+              <outline text="CE1.c"/>
+              <outline text="CE1.d"/>
+              <outline text="CE1.e"/>
+              <outline text="CE1.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**[link: Conceptos básicos de PHP I|https://ricpelo.github.io/libro-dwese/conceptos-basicos-de-php.html]**" due="2019-10-07" due_user_ids="139389" tags="ev1" progress_counter="true">
+        <outline text="Introducción a PHP" progress_counter="true">
+          <outline text="[link: Página web de PHP|http://php.net]"/>
+          <outline text="Instalación de PHP"/>
+          <outline text="Documentación y búsqueda de información"/>
+        </outline>
+        <outline text="[Sintaxis básica](http://php.net/manual/es/language.basic-syntax.php)" progress_counter="true">
+          <outline text="Datos e instrucciones"/>
+          <outline text="Sentencias y comandos" progress_counter="true">
+            <outline text="[link: Comando `echo`|http://php.net/manual/es/function.echo.php]"/>
+          </outline>
+          <outline text="Expresiones, operadores y funciones"/>
+        </outline>
+        <outline text="Funcionamiento del intérprete" progress_counter="true">
+          <outline text="Modos de ejecución">
+            <outline text="Por lotes"/>
+            <outline text="Interactiva" progress_counter="true">
+              <outline text="`php -a`"/>
+              <outline text="[link: PsySH|http://psysh.org/]"/>
+            </outline>
+          </outline>
+          <outline text="[link: Etiquetas `&lt;?php` y `?&gt;`|https://www.php.net/manual/es/language.basic-syntax.phpmode.php]"/>
+          <outline text="[link: Modo dual de operación|https://www.php.net/manual/es/language.basic-syntax.phpmode.php]"/>
+        </outline>
+        <outline text="[Variables](http://php.net/manual/es/language.variables.php)" progress_counter="true">
+          <outline text="[link: Conceptos básicos|http://php.net/manual/es/language.variables.basics.php]"/>
+          <outline text="[link: Destrucción de variables|http://php.net/manual/es/function.unset.php]"/>
+          <outline text="[link: Operadores de asignación por valor y por referencia|http://php.net/manual/es/language.operators.assignment.php]"/>
+          <outline text="[link: Variables predefinidas|http://php.net/manual/es/reserved.variables.php]"/>
+        </outline>
+        <outline text="[link: Tipos básicos de datos|http://php.net/manual/es/language.types.intro.php]" progress_counter="true">
+          <outline text="[link: Lógicos (`bool`)|http://php.net/manual/es/language.types.boolean.php]" progress_counter="true">
+            <outline text="[link: Operadores lógicos|http://php.net/manual/es/language.operators.logical.php]"/>
+          </outline>
+          <outline text="Numéricos" progress_counter="true">
+            <outline text="[link: Enteros (`int`)|http://php.net/manual/es/language.types.integer.php]"/>
+            <outline text="[link: Números en coma flotante (`float`)|http://php.net/manual/es/language.types.float.php]"/>
+            <outline text="Operadores" progress_counter="true">
+              <outline text="[link: Operadores aritméticos|http://php.net/manual/es/language.operators.arithmetic.php]"/>
+              <outline text="[link: Operadores de incremento/decremento|http://php.net/manual/es/language.operators.increment.php]"/>
+            </outline>
+          </outline>
+          <outline text="[link: Cadenas (`string`)|http://php.net/manual/es/language.types.string.php]" progress_counter="true">
+            <outline text="[link: Operadores de cadenas|http://php.net/manual/es/language.operators.string.php]" progress_counter="true">
+              <outline text="Concatenación"/>
+              <outline text="[link: Acceso y modificación por caracteres|http://php.net/manual/es/language.types.string.php#language.types.string.substr]"/>
+              <outline text="[link: Operador de incremento|http://php.net/manual/es/language.operators.increment.php]" tags="opcional"/>
+            </outline>
+            <outline text="[Funciones de manejo de cadenas](http://php.net/ref.strings)"/>
+            <outline text="[Extensión *mbstring*](http://php.net/manual/en/book.mbstring.php)"/>
+          </outline>
+          <outline text="[link: Nulo (`null`)|http://php.net/manual/es/language.types.null.php]"/>
+        </outline>
+        <outline text="Manipulación de datos" progress_counter="true">
+          <outline text="[link: Precedencia de operadores|http://php.net/manual/es/language.operators.precedence.php]"/>
+          <outline text="Operadores de asignación compuesta"/>
+          <outline text="Comprobaciones" progress_counter="true">
+            <outline text="De tipos" progress_counter="true">
+              <outline text="[`gettype()`](http://php.net/manual/en/function.gettype.php)"/>
+              <outline text="[`is_*()`](http://php.net/manual/es/ref.var.php)"/>
+            </outline>
+            <outline text="De valores" progress_counter="true">
+              <outline text="[`is_numeric()`](http://php.net/manual/es/function.is-numeric.php)"/>
+              <outline text="[`ctype_*()`](http://php.net/manual/es/book.ctype.php)"/>
+            </outline>
+          </outline>
+          <outline text="[link: Conversiones de tipos|http://php.net/manual/es/language.types.type-juggling.php]" progress_counter="true">
+            <outline text="[link: Conversión explícita (forzado o *casting*) vs. automática|http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting]" progress_counter="true"/>
+            <outline text="[link: Conversión a `bool`|http://php.net/manual/es/language.types.boolean.php#language.types.boolean.casting]"/>
+            <outline text="[link: Conversión a `int`|http://php.net/manual/es/language.types.integer.php#language.types.integer.casting]"/>
+            <outline text="[link: Conversión a `float`|http://php.net/manual/es/language.types.float.php#language.types.float.casting]"/>
+            <outline text="[link: Conversión de `string` a número|http://php.net/manual/es/language.types.string.php#language.types.string.conversion]"/>
+            <outline text="[link: Conversión a `string`|http://php.net/manual/es/language.types.string.php#language.types.string.casting]"/>
+            <outline text="Funciones de obtención de valores" progress_counter="true">
+              <outline text="[`intval()`](http://php.net/manual/es/function.intval.php)"/>
+              <outline text="[`floatval()`](http://php.net/manual/es/function.floatval.php)"/>
+              <outline text="[`strval()`](http://php.net/manual/es/function.strval.php)"/>
+              <outline text="[`boolval()`](http://php.net/manual/es/function.boolval.php)"/>
+            </outline>
+            <outline text="Funciones de formateado numérico" progress_counter="true">
+              <outline text="[`number_format()`](http://php.net/manual/es/function.number-format.php)"/>
+              <outline text="[`money_format()`](http://php.net/manual/es/function.money-format.php)" progress_counter="true">
+                <outline text="[`setlocale()`](http://php.net/manual/es/function.setlocale.php)"/>
+              </outline>
+            </outline>
+          </outline>
+          <outline text="Comparaciones" progress_counter="true">
+            <outline text="[Operadores de comparación](http://php.net/manual/es/language.operators.comparison.php)"/>
+            <outline text="`==` vs. `===`"/>
+            <outline text="[Ternario (`?:`)](http://php.net/manual/es/language.operators.comparison.php#language.operators.comparison.ternary)"/>
+            <outline text="[Fusión de `null` (`??`)](https://wiki.php.net/rfc/isset_ternary)"/>
+            <outline text="[Reglas de comparación de tipos](http://php.net/manual/es/types.comparisons.php)"/>
+          </outline>
+        </outline>
+        <outline text="[link: Constantes|http://php.net/manual/es/language.constants.syntax.php]" progress_counter="true">
+          <outline text="`define()` y `const`"/>
+          <outline text="[link: Constantes predefinidas|http://php.net/manual/es/language.constants.predefined.php]"/>
+          <outline text="[link: `defined()`|http://php.net/manual/es/function.defined.php]"/>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA2">
+              <outline text="CE2.c"/>
+              <outline text="CE2.d"/>
+              <outline text="CE2.e"/>
+              <outline text="CE2.f"/>
+              <outline text="CE2.g"/>
+              <outline text="CE2.h"/>
+            </outline>
+            <outline text="RA3"/>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Conceptos básicos de PHP II**" due="2019-10-14" due_user_ids="139389" tags="ev1">
+        <outline text="Flujo de control" progress_counter="true">
+          <outline text="[link: Estructuras de control|http://php.net/manual/es/language.control-structures.php]" progress_counter="true">
+            <outline text="Secuencia"/>
+            <outline text="Selección"/>
+            <outline text="Iteración"/>
+            <outline text="[link:Sintaxis alternativa|http://php.net/manual/es/control-structures.alternative-syntax.php]"/>
+          </outline>
+          <outline text="Inclusión de scripts" progress_counter="true">
+            <outline text="[`include`](http://php.net/manual/es/function.include.php), `require`"/>
+            <outline text="[`include_once`](http://php.net/manual/es/function.include-once.php), `require_once`"/>
+          </outline>
+        </outline>
+        <outline text="Funciones predefinidas destacadas" progress_counter="true">
+          <outline text="[`isset()`](http://php.net/manual/es/function.isset.php)"/>
+          <outline text="[`empty()`](http://php.net/manual/es/function.empty.php)"/>
+          <outline text="[link: `var_dump()`|http://php.net/manual/es/function.var-dump.php]"/>
+        </outline>
+        <outline text="[Arrays](http://php.net/manual/es/language.types.array.php)" progress_counter="true">
+          <outline text="[link: Operadores para arrays|http://php.net/manual/es/language.operators.array.php]" progress_counter="true">
+            <outline text="[link: Acceso, modificación y agregación|http://php.net/manual/es/language.types.array.php#language.types.array.syntax.modifying]"/>
+          </outline>
+          <outline text="[link: [Funciones de manejo de arrays](http://php.net/manual/es/book.array.php)|http://php.net/manual/es/ref.array.php]" progress_counter="true">
+            <outline text="[link: Ordenación de arrays|http://php.net/manual/es/array.sorting.php]"/>
+            <outline text="`print_r()`"/>
+            <outline text="`'+'` vs. `array_merge()`"/>
+            <outline text="[`isset()` vs. `array_key_exists()`](http://php.net/manual/es/function.array-key-exists.php#107786)"/>
+          </outline>
+          <outline text="[`foreach`](http://php.net/manual/es/control-structures.foreach.php)"/>
+          <outline text="[link: Conversión a `array`|http://php.net/manual/es/language.types.array.php#language.types.array.casting]"/>
+          <outline text="[link: *Ejemplo*: `$argv` en CLI|http://php.net/manual/es/reserved.variables.argv.php]"/>
+        </outline>
+        <outline text="[Funciones definidas por el usuario](http://php.net/manual/es/language.functions.php)" progress_counter="true">
+          <outline text="[link: Argumentos|http://php.net/manual/es/functions.arguments.php]" progress_counter="true">
+            <outline text="[link: Paso de argumentos por valor y por referencia|http://php.net/manual/es/functions.arguments.php#functions.arguments.by-reference]"/>
+            <outline text="[link: Argumentos por defecto|http://php.net/manual/es/functions.arguments.php#functions.arguments.default]"/>
+          </outline>
+          <outline text="[Ámbito de variables](http://php.net/language.variables.scope)" progress_counter="true">
+            <outline text="Ámbito simple al archivo"/>
+            <outline text="Variables locales"/>
+            <outline text="Uso de `global`"/>
+            <outline text="[Variables superglobales](http://php.net/manual/es/language.variables.superglobals.php)"/>
+          </outline>
+          <outline text="Declaraciones de tipos" progress_counter="true">
+            <outline text="[Declaraciones de tipo de argumento](http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration)"/>
+            <outline text="[Declaraciones de tipo de devolución](http://php.net/manual/es/functions.returning-values.php#functions.returning-values.type-declaration)"/>
+            <outline text="[link: Tipos *nullable* (`?`) y `void`|http://php.net/manual/es/migration71.new-features.php]"/>
+            <outline text="[link: Tipificación estricta|http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration.strict]"/>
+          </outline>
+        </outline>
+        <outline text="Comentarios y documentación del código"/>
+        <outline text="Ejercicios" progress_counter="true">
+          <outline text="[link: ¡Hola, mundo!|https://github.com/iesdonana/hola-mundo]"/>
+          <outline text="[link: Hamming|https://github.com/iesdonana/hamming]"/>
+          <outline text="[link: Isograma|https://github.com/iesdonana/isograma]"/>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA2">
+              <outline text="CE2.d"/>
+              <outline text="CE2.e"/>
+              <outline text="CE2.g"/>
+            </outline>
+            <outline text="RA3">
+              <outline text="CE3.a"/>
+              <outline text="CE3.b"/>
+              <outline text="CE3.c"/>
+              <outline text="CE3.d"/>
+              <outline text="CE3.g"/>
+            </outline>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Desarrollo de aplicaciones con PHP I**" due="2019-10-21" due_user_ids="139389" tags="ev1" progress_counter="true">
+        <outline text="[SAPIs](http://stackoverflow.com/questions/9948008/what-is-sapi-and-when-would-you-use-it)" progress_counter="true">
+          <outline text="[link: CLI: Uso en línea de comandos|http://php.net/manual/es/features.commandline.differences.php]" progress_counter="true">
+            <outline text="[link: `$argc` y `$argv`|http://php.net/manual/es/reserved.variables.argv.php]"/>
+            <outline text="[link: Flujos de entrada/salida|http://php.net/manual/es/features.commandline.io-streams.php]"/>
+          </outline>
+          <outline text="Apache" progress_counter="true">
+            <outline text="[link: Integración de PHP con Apache|https://stackoverflow.com/questions/2712825/what-is-mod-php]"/>
+            <outline text="PHP como lenguaje embebido"/>
+            <outline text="[link: Etiqueta `&lt;?=`|http://php.net/manual/es/function.echo.php]"/>
+            <outline text="[link:Servidor web  interno|http://php.net/manual/es/features.commandline.webserver.php]"/>
+          </outline>
+          <outline text="[link: CGI: PHP-FPM (FastCGI Process Manager)|http://php.net/manual/es/install.fpm.php]"/>
+          <outline text="Configuración básica con `php.ini`" progress_counter="true">
+            <outline text="`error_reporting = E_ALL`"/>
+            <outline text="`display_errors = On`"/>
+            <outline text="`display_startup_errors = On`"/>
+            <outline text="`date.timezone = 'UTC'`"/>
+          </outline>
+          <outline text="Módulos de extensión"/>
+        </outline>
+        <outline text="[Manejo de datos de entrada: `$_GET` y `$_POST`](http://php.net/manual/es/language.variables.external.php)"/>
+        <outline text="Funciones auxiliares interesantes" progress_counter="true">
+          <outline text="`extract()`"/>
+          <outline text="`compact()`"/>
+        </outline>
+        <outline text="[link: Aspectos básicos de la orientación a objetos|http://php.net/manual/es/language.oop5.php]" progress_counter="true">
+          <outline text="Objetos" progress_counter="true">
+            <outline text="`new`"/>
+            <outline text="`instanceof`"/>
+          </outline>
+          <outline text="[link: Referencias|http://php.net/manual/es/language.references.php]" progress_counter="true">
+            <outline text="Asignación por referencia (`=&amp;`)"/>
+          </outline>
+          <outline text="[link: Clonación de objetos|http://php.net/manual/es/language.oop5.cloning.php]"/>
+          <outline text="[link: Comparación de objetos|http://php.net/manual/es/language.oop5.object-comparison.php]"/>
+          <outline text="Propiedades" progress_counter="true">
+            <outline text="Predeterminadas"/>
+            <outline text="Dinámicas"/>
+          </outline>
+          <outline text="Métodos"/>
+          <outline text="Constantes" progress_counter="true">
+            <outline text="[link: Operador de resolución de ámbito (`::`)|http://php.net/manual/es/language.oop5.paamayim-nekudotayim.php]"/>
+          </outline>
+          <outline text="[*Ejemplo*: manejo de fechas, horas, instantes e intervalos](http://php.net/manual/es/book.datetime.php)"/>
+        </outline>
+        <outline text="[link: Excepciones|http://php.net/manual/es/language.exceptions.php]" progress_counter="true">
+          <outline text="Manejo de errores clásico en PHP"/>
+          <outline text="Errores vs. excepciones"/>
+          <outline text="[link: La clase `Exception`|http://php.net/manual/es/class.exception.php]"/>
+          <outline text="[link: La clase `Error`|http://php.net/manual/es/class.error.php]"/>
+          <outline text="[link: La clase `ErrorException`|http://php.net/manual/es/class.errorexception.php]"/>
+          <outline text="Estructura de control `try ... catch`"/>
+        </outline>
+        <outline text="Depuración" progress_counter="true">
+          <outline text="`var_dump()`, `print_r()`, `die()`"/>
+          <outline text="[link: PsySH|https://www.sitepoint.com/interactive-php-debugging-psysh/]"/>
+          <outline text="Xdebug" tags="opcional" progress_counter="true">
+            <outline text="Módulo [Xdebug](https://xdebug.org/)"/>
+            <outline text="[Aplicación Xdebug para Chrome](https://chrome.google.com/webstore/detail/xdebug/nhodjblplijafdpjjfhhanfmchplpfgl)"/>
+            <outline text="[Extensión Xdebug Helper para Chrome](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc)"/>
+            <outline text="Paquete [`php-debug`](https://atom.io/packages/php-debug) para Atom"/>
+          </outline>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA1">
+              <outline text="CE1.a"/>
+              <outline text="CE1.b"/>
+              <outline text="CE1.d"/>
+              <outline text="CE1.f"/>
+            </outline>
+            <outline text="RA2">
+              <outline text="CE2.a"/>
+              <outline text="CE2.b"/>
+              <outline text="CE2.c"/>
+              <outline text="CE2.d"/>
+              <outline text="CE2.e"/>
+              <outline text="CE2.f"/>
+              <outline text="CE2.g"/>
+              <outline text="CE2.h"/>
+            </outline>
+            <outline text="RA3">
+              <outline text="CE3.a"/>
+              <outline text="CE3.b"/>
+              <outline text="CE3.c"/>
+              <outline text="CE3.d"/>
+              <outline text="CE3.e"/>
+              <outline text="CE3.f"/>
+              <outline text="CE3.g"/>
+            </outline>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.d"/>
+              <outline text="CE5.g"/>
+              <outline text="CE5.h"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Persistencia de datos con PHP**" due="2019-10-28" due_user_ids="139389" tags="ev1" progress_counter="true">
+        <outline text="[link: PDO (PHP Data Objects)|http://php.net/manual/es/book.pdo.php]" progress_counter="true">
+          <outline text="[link: Clase `PDO`|http://php.net/manual/es/class.pdo.php]" progress_counter="true">
+            <outline text="[link: `__construct(string $dsn [, string $username [, string $password [, array $options ]]])`|http://php.net/manual/es/pdo.construct.php]"/>
+            <outline text="[link: `PDOStatement query(string $statement)`|http://php.net/manual/es/pdo.query.php]"/>
+            <outline text="[link: `int exec(string $statement)`|http://php.net/manual/es/pdo.exec.php]"/>
+            <outline text="[link: `PDOStatement prepare(string $statement [, array $driver_options = array() ])`|http://php.net/manual/es/pdo.prepare.php]"/>
+          </outline>
+          <outline text="[link: Clase `PDOStatement`|http://php.net/manual/es/class.pdostatement.php]" progress_counter="true">
+            <outline text="[link: `mixed fetch([ int $fetch_style ])`|http://php.net/manual/es/pdostatement.fetch.php]"/>
+            <outline text="[link: `mixed fetchAll([ int $fetch_style ])`|http://php.net/manual/es/pdostatement.fetchall.php]"/>
+            <outline text="[link: `mixed fetchColumn([ int $column_number = 0 ])`|http://php.net/manual/es/pdostatement.fetchcolumn.php]"/>
+            <outline text="[link: `bool execute ([ array $input_parameters ])`|http://php.net/manual/es/pdostatement.execute.php]"/>
+            <outline text="[link: `int rowCount(void)`|http://php.net/manual/es/pdostatement.rowcount.php]"/>
+          </outline>
+          <outline text="Correspondencias de tipos entre SQL y PHP"/>
+          <outline text="Transacciones" progress_counter="true">
+            <outline text="`$pdo-&gt;beginTransaction();`"/>
+            <outline text="`$pdo-&gt;commit();`"/>
+            <outline text="`$pdo-&gt;rollBack();`"/>
+          </outline>
+        </outline>
+        <outline text="[link: Cookies|http://php.net/manual/es/features.cookies.php]" progress_counter="true">
+          <outline text="[link: `setcookie()`|http://php.net/manual/es/function.setcookie.php]"/>
+          <outline text="Ejemplos de uso"/>
+        </outline>
+        <outline text="[link: Sesiones|http://php.net/manual/es/book.session.php]" progress_counter="true">
+          <outline text="Iniciar una sesión" progress_counter="true">
+            <outline text="[link: `session_start()`|http://php.net/manual/es/function.session-start.php]"/>
+          </outline>
+          <outline text="Usar una sesión" progress_counter="true">
+            <outline text="[link: `$_SESSION`|http://php.net/manual/es/reserved.variables.session.php]"/>
+            <outline text="Ejemplos de uso"/>
+          </outline>
+          <outline text="Terminar una sesión" progress_counter="true">
+            <outline text="[link: `session_destroy()`|http://php.net/manual/es/function.session-destroy.php]"/>
+            <outline text="`session_name()`"/>
+            <outline text="`session_id()`"/>
+            <outline text="`session_get_cookie_params()`"/>
+          </outline>
+        </outline>
+        <outline text="Seguridad y persistencia" progress_counter="true">
+          <outline text="[Contraseñas](https://phpbestpractices.org/#passwords)" progress_counter="true">
+            <outline text="https://www.md5online.org/"/>
+            <outline text="https://www.sha1online.org/"/>
+            <outline text="[link: `password_hash()`|http://php.net/manual/es/function.password-hash.php]"/>
+            <outline text="[link: `password_verify()`|http://php.net/manual/es/function.password-verify.php]"/>
+          </outline>
+          <outline text="Inyección de código SQL"/>
+          <outline text="[link: Cross-Site Request Forgery (CSRF)|https://diego.com.es/ataques-csrf-cross-site-request-forgery-en-php]"/>
+        </outline>
+        <outline text="Meta">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA2"/>
+            <outline text="RA3"/>
+            <outline text="RA4">
+              <outline text="CE4.a"/>
+              <outline text="CE4.b"/>
+              <outline text="CE4.c"/>
+              <outline text="CE4.d"/>
+              <outline text="CE4.e"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.f"/>
+              <outline text="CE5.g"/>
+            </outline>
+            <outline text="RA6">
+              <outline text="CE6.a"/>
+              <outline text="CE6.b"/>
+              <outline text="CE6.c"/>
+              <outline text="CE6.d"/>
+              <outline text="CE6.e"/>
+              <outline text="CE6.f"/>
+              <outline text="CE6.g"/>
+            </outline>
+          </outline>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA2"/>
+            <outline text="RA3"/>
+            <outline text="RA4">
+              <outline text="CE4.a"/>
+              <outline text="CE4.b"/>
+              <outline text="CE4.c"/>
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.f"/>
+              <outline text="CE5.g"/>
+              <outline text="CE5.h"/>
+            </outline>
+            <outline text="RA6">
+              <outline text="CE6.a"/>
+              <outline text="CE6.b"/>
+              <outline text="CE6.c"/>
+              <outline text="CE6.e"/>
+              <outline text="CE6.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Desarrollo de aplicaciones con PHP II**" due="2019-11-04" due_user_ids="139389" tags="ev1" progress_counter="true">
+        <outline text="Programación de *CRUD* básico" progress_counter="true">
+          <outline text="Ejemplo de aplicación: *Muéveme*"/>
+          <outline text="Ejemplo de aplicación: *FilmAffinity*"/>
+        </outline>
+        <outline text="[Post/Redirect/Get](https://en.wikipedia.org/wiki/Post/Redirect/Get)"/>
+        <outline text="[link: `header()`|http://php.net/manual/es/function.header.php]" progress_counter="true">
+          <outline text="[link: `output_buffering`|http://php.net/manual/es/outcontrol.configuration.php#ini.output-buffering]"/>
+        </outline>
+        <outline text="Seguridad básica" progress_counter="true">
+          <outline text="Filtrar la entrada, escapar la salida"/>
+          <outline text="[link: Cross-Site Scripting (XSS)|https://diego.com.es/ataques-xss-cross-site-scripting-en-php]" progress_counter="true">
+            <outline text="No persistente"/>
+            <outline text="Persistente"/>
+            <outline text="[Escapado de la salida](https://phpbestpractices.org/#sanitizing-html)" progress_counter="true">
+              <outline text="`htmlspecialchars()`"/>
+              <outline text="[HTML Purifier](http://htmlpurifier.org/)"/>
+            </outline>
+          </outline>
+          <outline text="[link: Filtrado de la entrada|http://www.phptherightway.com/#data_filtering]" progress_counter="true">
+            <outline text="Cómo *NO* se debe hacer"/>
+            <outline text="[Extensión Filter](http://php.net/manual/es/book.filter.php)" progress_counter="true">
+              <outline text="`filter_input()`, `filter_has_var()`, `filter_var()`"/>
+              <outline text="Filtros de [validación](http://php.net/manual/es/filter.filters.validate.php) y [saneado](http://php.net/manual/es/filter.filters.sanitize.php)"/>
+            </outline>
+            <outline text="[Expresiones regulares (PCRE)](http://php.net/manual/es/book.pcre.php)"/>
+          </outline>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA1">
+              <outline text="CE1.a"/>
+            </outline>
+            <outline text="RA4">
+              <outline text="CE4.a"/>
+              <outline text="CE4.b"/>
+              <outline text="CE4.c"/>
+              <outline text="CE4.d"/>
+              <outline text="CE4.e"/>
+              <outline text="CE4.f"/>
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.a"/>
+              <outline text="CE5.b"/>
+              <outline text="CE5.d"/>
+              <outline text="CE5.f"/>
+              <outline text="CE5.g"/>
+              <outline text="CE5.h"/>
+            </outline>
+            <outline text="RA6">
+              <outline text="CE6.a"/>
+              <outline text="CE6.b"/>
+              <outline text="CE6.c"/>
+              <outline text="CE6.d"/>
+              <outline text="CE6.e"/>
+              <outline text="CE6.f"/>
+              <outline text="CE6.g"/>
+              <outline text="CE6.h"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Programación avanzada en PHP**" due="2019-11-11" due_user_ids="139389" tags="ev1" progress_counter="true">
+        <outline text="[link: Diseño de aplicaciones orientadas a objetos|http://php.net/manual/es/language.oop5.php]" progress_counter="true">
+          <outline text="[link: Clases|http://php.net/manual/es/language.oop5.basic.php]"/>
+          <outline text="[link: Propiedades|http://php.net/manual/es/language.oop5.properties.php]" progress_counter="true">
+            <outline text="Predeterminadas"/>
+            <outline text="Dinámicas"/>
+          </outline>
+          <outline text="Métodos" progress_counter="true">
+            <outline text="Referencia `$this`"/>
+            <outline text="[link: Constructores y destructores|http://php.net/manual/es/language.oop5.decon.php]"/>
+          </outline>
+          <outline text="[link: Constantes|http://php.net/manual/es/language.oop5.constants.php]" progress_counter="true">
+            <outline text="`self`"/>
+          </outline>
+          <outline text="Herencia" progress_counter="true">
+            <outline text="`parent`"/>
+            <outline text="Sobreescritura de métodos"/>
+          </outline>
+          <outline text="[link: Miembros estáticos|http://php.net/manual/es/language.oop5.static.php]" progress_counter="true">
+            <outline text="Constantes"/>
+            <outline text="Métodos estáticos"/>
+            <outline text="Propiedades estáticas"/>
+            <outline text="[link: Enlace estático en tiempo de ejecución|http://php.net/manual/es/language.oop5.late-static-bindings.php]"/>
+          </outline>
+          <outline text="[link: Interfaces|http://php.net/manual/es/language.oop5.interfaces.php]"/>
+          <outline text="[link: Traits|http://php.net/manual/es/language.oop5.traits.php]"/>
+          <outline text="La clase `stdClass`" progress_counter="true">
+            <outline text="Conversión de `array` a `object`"/>
+          </outline>
+        </outline>
+        <outline text="[link: Espacios de nombres|http://php.net/manual/es/language.namespaces.php]"/>
+        <outline text="[link: Funciones anónimas|http://php.net/manual/es/functions.anonymous.php]" progress_counter="true">
+          <outline text="Clausuras"/>
+        </outline>
+        <outline text="[link: Callables|http://php.net/manual/es/language.types.callable.php]" progress_counter="true">
+          <outline text="[link: `call_user_func()`|http://php.net/manual/es/function.call-user-func.php]"/>
+          <outline text="`array_map()` y `array_reduce()`"/>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA2"/>
+            <outline text="RA3"/>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.g"/>
+              <outline text="CE5.h"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Interoperabilidad**" due="2019-11-18" due_user_ids="139389" tags="ev1" progress_counter="true">
+        <outline text="[link: Versionado semántico|https://semver.org/lang/es/]"/>
+        <outline text="[link: Composer|https://getcomposer.org/]" progress_counter="true">
+          <outline text="Paquetes"/>
+          <outline text="[Packagist](https://packagist.org/)"/>
+          <outline text="[link: Dependencias|https://getcomposer.org/doc/01-basic-usage.md#composer-json-project-setup]" progress_counter="true">
+            <outline text="`composer.json` y `composer.lock`"/>
+          </outline>
+          <outline text="[link: Versiones y restricciones|https://getcomposer.org/doc/articles/versions.md]" progress_counter="true">
+            <outline text="Versión exacta"/>
+            <outline text="Rango (`&gt;`, `&gt;=`, `&lt;`, `&lt;=`, `!=`, ` `, `,`, `||`)"/>
+            <outline text="Guión (`-`)"/>
+            <outline text="Asterisco (`*`)"/>
+            <outline text="Tilde (`~`)"/>
+            <outline text="Circunflejo (`^`)"/>
+            <outline text="Nombres de rama" progress_counter="true">
+              <outline text="`dev-master`"/>
+              <outline text="`5.1.x-dev`"/>
+            </outline>
+            <outline text="[link: Estabilidad mínima|https://getcomposer.org/doc/articles/versions.md#minimum-stability]"/>
+            <outline text="[link: Comprobador online de restricciones|https://semver.mwl.be]"/>
+          </outline>
+          <outline text="Comandos básicos" progress_counter="true">
+            <outline text="[link: `require`|https://getcomposer.org/doc/03-cli.md#require]"/>
+            <outline text="[link: `install`|https://getcomposer.org/doc/03-cli.md#install]"/>
+            <outline text="[link: `update`|https://getcomposer.org/doc/03-cli.md#update]"/>
+          </outline>
+          <outline text="Entornos de desarrollo y producción"/>
+        </outline>
+        <outline text="[Autocarga de clases](http://php.net/manual/es/language.oop5.autoload.php)" progress_counter="true">
+          <outline text="[link: `spl_autoload_register()`|http://php.net/manual/es/function.spl-autoload-register.php]"/>
+          <outline text="[link: PSR-4|http://www.php-fig.org/psr/psr-4/]"/>
+          <outline text="[link: Autoloader de Composer|https://getcomposer.org/doc/01-basic-usage.md#autoloading]"/>
+        </outline>
+        <outline text="Ejemplos" progress_counter="true">
+          <outline text="`mpdf/mpdf`"/>
+          <outline text="`ramsey/uuid`"/>
+          <outline text="`doctrine/inflector`"/>
+        </outline>
+        <outline text="Recomendaciones PSR del [PHP-FIG](http://www.php-fig.org/) (Framework Interop Group)" progress_counter="true">
+          <outline text="[link: PSR-1: Basic Coding Standard|http://www.php-fig.org/psr/psr-1/]"/>
+          <outline text="[link: PSR-2: Coding Style Guide|http://www.php-fig.org/psr/psr-2/]"/>
+          <outline text="[link: PSR-4: Autoloading Standard|http://www.php-fig.org/psr/psr-4/]"/>
+          <outline text="[link: PSR-5: PHPDoc Standard (borrador)|https://github.com/phpDocumentor/fig-standards/blob/master/proposed/phpdoc.md]"/>
+          <outline text="[link: PSR-11: Extended Coding Style Guide (borrador)|https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md]"/>
+          <outline text="[link: PSR-19: PHPDoc tags (borrador)|https://github.com/php-fig/fig-standards/blob/master/proposed/phpdoc-tags.md]"/>
+        </outline>
+        <outline text="Paquetes de Atom y herramientas externas" tags="opcional" progress_counter="true">
+          <outline text="PHP_CodeSniffer"/>
+          <outline text="PHP-CS-Fixer"/>
+          <outline text="Yii2-Shell"/>
+        </outline>
+        <outline text="Ejercicios" progress_counter="true">
+          <outline text="De versionado semántico"/>
+          <outline text="De versiones y restricciones"/>
+          <outline text="De uso básico de Composer"/>
+          <outline text="De buscar paquetes en Packagist que tengan una funcionalidad concreta y usarlos en un ejemplo"/>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA1">
+              <outline text="CE1.e"/>
+              <outline text="CE1.g"/>
+            </outline>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.g"/>
+              <outline text="CE5.h"/>
+            </outline>
+            <outline text="RA9">
+              <outline text="CE9.a"/>
+              <outline text="CE9.b"/>
+              <outline text="CE9.e"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Introducción a Yii 2**" due="2019-11-25" due_user_ids="139389" tags="ev1" progress_counter="true">
+        <outline text="[link: Frameworks, microframeworks y librerías|https://en.wikipedia.org/wiki/Software_framework]"/>
+        <outline text="Patrón Modelo-Vista-Controlador (MVC)" progress_counter="true">
+          <outline text="Modelos"/>
+          <outline text="Vistas"/>
+          <outline text="Controladores"/>
+          <outline text="Rutas"/>
+        </outline>
+        <outline text="Yii 2" progress_counter="true">
+          <outline text="[link: ¿Qué es Yii?|https://www.yiiframework.com/doc/guide/2.0/en/intro-yii]"/>
+          <outline text="¿En qué es mejor Yii?"/>
+          <outline text="¿Cómo es Yii comparado con otros frameworks?"/>
+          <outline text="Versiones de Yii"/>
+        </outline>
+        <outline text="Instalación, requisitos y puesta en marcha" progress_counter="true">
+          <outline text="Requisitos previos"/>
+          <outline text="Instalación de Yii 2" progress_counter="true">
+            <outline text="Instalación mediante Composer"/>
+          </outline>
+          <outline text="Plantillas de proyecto" progress_counter="true">
+            <outline text="Plantilla básica vs. avanzada"/>
+            <outline text="Plantilla básica modificada"/>
+          </outline>
+        </outline>
+        <outline text="[link: ¡Hola, mundo!|https://www.yiiframework.com/doc/guide/2.0/en/start-hello]"/>
+        <outline text="[link: Formularios|https://www.yiiframework.com/doc/guide/2.0/en/start-forms]"/>
+        <outline text="[link: Bases de datos|https://www.yiiframework.com/doc/guide/2.0/en/start-databases]"/>
+        <outline text="[link: Generador de código Gii|https://www.yiiframework.com/doc/guide/2.0/en/start-gii]"/>
+        <outline text="Herramientas de desarrollo" progress_counter="true">
+          <outline text="Barra de depuración"/>
+          <outline text="[link: Trazas de depuración|http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html#log-messages]"/>
+        </outline>
+        <outline text="[Estilo del código](https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md)"/>
+        <outline text="Ejercicios">
+          <outline text="Definiciones: framework, microframework, librería (semejanzas y diferencias). Modelo, vista y controlador. Rutas y ejemplos de rutas."/>
+          <outline text="¿Qué es una plantilla de proyecto? Diferencias entre la plantilla básica y la avanzada."/>
+          <outline text="¿Qué herramientas de desarrollo tenemos para desarrollar una aplicación en Yii 2 y para qué sirven?"/>
+          <outline text="Crear un proyecto desde cero, paso a paso."/>
+          <outline text="Escribir programas sencillos, con formularios, validaciones sencillas y acceso a bases de datos."/>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA1">
+              <outline text="CE1.e"/>
+              <outline text="CE1.g"/>
+            </outline>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.a"/>
+              <outline text="CE5.b"/>
+              <outline text="CE5.c"/>
+              <outline text="CE5.d"/>
+              <outline text="CE5.e"/>
+              <outline text="CE5.g"/>
+              <outline text="CE5.h"/>
+            </outline>
+            <outline text="RA6">
+              <outline text="CE6.a"/>
+              <outline text="CE6.b"/>
+              <outline text="CE6.c"/>
+              <outline text="CE6.d"/>
+              <outline text="CE6.e"/>
+              <outline text="CE6.f"/>
+              <outline text="CE6.g"/>
+              <outline text="CE6.h"/>
+            </outline>
+            <outline text="RA9">
+              <outline text="CE9.b"/>
+              <outline text="CE9.c"/>
+              <outline text="CE9.e"/>
+              <outline text="CE9.f"/>
+              <outline text="CE9.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Estructura de una aplicación Yii 2**" due="2019-12-02" due_user_ids="139389" tags="ev1" progress_counter="true">
+        <outline text="A pequeña escala" progress_counter="true">
+          <outline text="[link: Componentes|http://www.yiiframework.com/doc-2.0/guide-concept-components.html]" progress_counter="true">
+            <outline text="La clase `yii\base\BaseObject`" progress_counter="true">
+              <outline text="[link: Propiedades|http://www.yiiframework.com/doc-2.0/guide-concept-properties.html]"/>
+              <outline text="[link: Configuraciones|http://www.yiiframework.com/doc-2.0/guide-concept-configurations.html]" progress_counter="true">
+                <outline text="[link: Asignación masiva|http://www.yiiframework.com/doc-2.0/yii-baseyii.html#configure()-detail]"/>
+                <outline text="[link: Creación de nuevas instancias|http://www.yiiframework.com/doc-2.0/yii-baseyii.html#createObject()-detail]"/>
+                <outline text="Normas de creación de componentes"/>
+                <outline text="Diferencias entre `new` y `Yii::createObject()`"/>
+              </outline>
+            </outline>
+            <outline text="La clase `yii\base\Component`" progress_counter="true">
+              <outline text="Eventos" progress_counter="true">
+                <outline text="De instancia" progress_counter="true">
+                  <outline text="Eventos de instancia"/>
+                  <outline text="Manejadores de eventos de instancia"/>
+                </outline>
+                <outline text="De clase" progress_counter="true">
+                  <outline text="Eventos de clase"/>
+                  <outline text="Manejadores de eventos de clase"/>
+                </outline>
+              </outline>
+              <outline text="Comportamientos"/>
+            </outline>
+          </outline>
+          <outline text="Alias"/>
+          <outline text="Autoloading de clases"/>
+          <outline text="Localizador de servicios"/>
+          <outline text="Contenedor de inyección de dependencias"/>
+        </outline>
+        <outline text="A gran escala" progress_counter="true">
+          <outline text="[link: Introducción|https://www.yiiframework.com/doc/guide/2.0/en/structure-overview]"/>
+          <outline text="Scripts de entrada"/>
+          <outline text="Aplicaciones"/>
+          <outline text="Componentes de aplicación"/>
+          <outline text="Controladores" progress_counter="true">
+            <outline text="Acciones"/>
+            <outline text="Filtros"/>
+          </outline>
+          <outline text="Modelos"/>
+          <outline text="Vistas" progress_counter="true">
+            <outline text="Widgets"/>
+          </outline>
+          <outline text="Otros componentes" progress_counter="true">
+            <outline text="Módulos"/>
+            <outline text="Assets"/>
+            <outline text="Extensiones"/>
+          </outline>
+        </outline>
+        <outline text="Ejercicios">
+          <outline text="¿Qué es un componente? Características principales de los componentes. ¿Qué mejoras aporta a los objetos primitivos del lenguaje?"/>
+          <outline text="Diferencias entre `Component` y `BaseObject`."/>
+          <outline text="¿Qué es una configuración? ¿Cómo se usa? Ejemplos."/>
+          <outline text="¿Qué es un evento? Tipos de eventos. Diferencias entre eventos de clase y eventos de instancia."/>
+          <outline text="¿Qué es un manejador de eventos? Diferencias entre manejadores de clase y manejadores de instancia."/>
+          <outline text="¿Qué es un localizador de servicios? ¿Qué hace? ¿Por qué resulta útil? ¿Hay algún localizador de servicios en Yii 2? ¿Cómo se usa? ¿Qué servicios contiene? ¿Qué es un componente de aplicación? ¿Qué relación hay entre los servicios y los componentes de aplicación? ¿Cómo se registra un servicio en un localizador de servicios? ¿Cómo se accede luego a ese servicio?"/>
+          <outline text="¿Qué es un contenedor de inyección de dependencias? ¿Para qué sirve? ¿Qué problema resuelve? ¿Hay algún contenedor de inyección de dependencias en Yii 2? ¿Cómo se usa? ¿Cómo se pueden declarar dependencias? ¿Cómo se pueden registrar dependencias? ¿Qué diferencia hay entre declarar y registrar una dependencia? ¿Cómo se resuelve una dependencia? Ejemplo práctico de uso del contenedor de inyección de dependencias de Yii 2."/>
+          <outline text="¿Qué es un script de entrada? ¿Cuántos scripts de entrada hay en una aplicación Yii 2? ¿Dónde se encuentran?"/>
+          <outline text="¿Qué es el objeto Aplicación? ¿Qué es un componente de aplicación?"/>
+          <outline text="¿Qué es un controlador? Diferencia entre controlador web y controlador de consola. ¿Dónde se almacenan? ¿Qué es una acción? Ejemplo de ambos tipos."/>
+          <outline text="¿Qué es un modelo? ¿Dónde se almacenan?"/>
+          <outline text="¿Qué es una vista? ¿Dónde se almacenan? Ejemplo."/>
+          <outline text="¿Qué es un filtro?"/>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA2"/>
+            <outline text="RA3"/>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.g"/>
+              <outline text="CE5.h"/>
+            </outline>
+            <outline text="RA9">
+              <outline text="CE9.e"/>
+              <outline text="CE9.f"/>
+              <outline text="CE9.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="---"/>
+      <outline text="**[link: Gestión de peticiones en Yii 2|http://www.yiiframework.com/doc-2.0/guide-README.html#handling-requests]**" due="2020-01-07" due_user_ids="139389" tags="ev2" progress_counter="true">
+        <outline text="[link: Introducción|http://www.yiiframework.com/doc-2.0/guide-runtime-overview.html]"/>
+        <outline text="[link: Arranque (bootstrapping)|http://www.yiiframework.com/doc-2.0/guide-runtime-bootstrapping.html]"/>
+        <outline text="[link: Enrutado y creación de URLs|http://www.yiiframework.com/doc-2.0/guide-runtime-routing.html]"/>
+        <outline text="[link: Peticiones|http://www.yiiframework.com/doc-2.0/guide-runtime-requests.html]"/>
+        <outline text="[link: Respuestas|http://www.yiiframework.com/doc-2.0/guide-runtime-responses.html]"/>
+        <outline text="[link: Sesiones y cookies|http://www.yiiframework.com/doc-2.0/guide-runtime-sessions-cookies.html]"/>
+        <outline text="Ejercicios"/>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.d"/>
+              <outline text="CE5.f"/>
+              <outline text="CE5.g"/>
+              <outline text="CE5.h"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Acceso a bases de datos en Yii 2**" due="2020-01-13" due_user_ids="139389" tags="3d,ev2" progress_counter="true">
+        <outline text="[link: DAO|https://www.yiiframework.com/doc/guide/2.0/en/db-dao]" progress_counter="true">
+          <outline text="[link: `yii\db\Connection`|https://www.yiiframework.com/doc/api/2.0/yii-db-command]"/>
+          <outline text="[link: `yii\db\Connection::createCommand()`|https://www.yiiframework.com/doc/api/2.0/yii-db-connection#createCommand()-detail]"/>
+          <outline text="Consultas SQL" progress_counter="true">
+            <outline text="`queryAll()`"/>
+            <outline text="`queryOne()`"/>
+            <outline text="`queryColumn()`"/>
+            <outline text="`queryScalar()`"/>
+          </outline>
+          <outline text="Sentencias no `SELECT`" progress_counter="true">
+            <outline text="[link: `execute()`|https://www.yiiframework.com/doc/api/2.0/yii-db-command#execute()-detail]"/>
+            <outline text="[link: `insert()`|https://www.yiiframework.com/doc/api/2.0/yii-db-command#insert()-detail]"/>
+            <outline text="[link: `update()`|https://www.yiiframework.com/doc/api/2.0/yii-db-command#update()-detail]"/>
+            <outline text="[link: `delete()`|https://www.yiiframework.com/doc/api/2.0/yii-db-command#delete()-detail]"/>
+          </outline>
+        </outline>
+        <outline text="[link: Query Builder|https://www.yiiframework.com/doc/guide/2.0/en/db-query-builder]" progress_counter="true">
+          <outline text="[link: `yii\db\Query`|https://www.yiiframework.com/doc/api/2.0/yii-db-query]"/>
+          <outline text="Creación de consultas" progress_counter="true">
+            <outline text="[link: `select()`|https://www.yiiframework.com/doc/api/2.0/yii-db-query#select()-detail]"/>
+            <outline text="[link: `from()`|https://www.yiiframework.com/doc/api/2.0/yii-db-query#from()-detail]"/>
+            <outline text="Condiciones y filtrado de filas" progress_counter="true">
+              <outline text="[link: `where()`|https://www.yiiframework.com/doc/api/2.0/yii-db-query#where()-detail]"/>
+              <outline text="Formatos de condiciones" progress_counter="true">
+                <outline text="De cadena"/>
+                <outline text="De array"/>
+                <outline text="De operadores"/>
+              </outline>
+              <outline text="`andWhere()`"/>
+              <outline text="`orWhere()`"/>
+              <outline text="`filterWhere()`"/>
+              <outline text="`andFilterWhere()`"/>
+              <outline text="`orFilterWhere()`"/>
+            </outline>
+            <outline text="[link: `orderBy()`|https://www.yiiframework.com/doc/api/2.0/yii-db-querytrait#orderBy()-detail]"/>
+            <outline text="`groupBy()`"/>
+            <outline text="Condiciones y filtrado de grupos" progress_counter="true">
+              <outline text="`having()`"/>
+              <outline text="`filterHaving()`"/>
+              <outline text="`andFilterHaving()`"/>
+              <outline text="`orFilterHaving()`"/>
+            </outline>
+            <outline text="`limit()`"/>
+            <outline text="`offset()`"/>
+            <outline text="Combinaciones" progress_counter="true">
+              <outline text="`join()`"/>
+              <outline text="`innerJoin()`"/>
+              <outline text="`leftJoin()`"/>
+              <outline text="`rightJoin()`"/>
+            </outline>
+            <outline text="`union()`"/>
+          </outline>
+          <outline text="Recogida de resultados">
+            <outline text="`all()`"/>
+            <outline text="`one()`"/>
+            <outline text="`column()`"/>
+            <outline text="`scalar()`"/>
+            <outline text="`exists()`"/>
+            <outline text="`count()`"/>
+            <outline text="Funciones de grupo" progress_counter="true">
+              <outline text="`sum()`"/>
+              <outline text="`average()`"/>
+              <outline text="`max()`"/>
+              <outline text="`min()`"/>
+            </outline>
+            <outline text="`indexBy()`"/>
+          </outline>
+          <outline text="Consultas por lotes" progress_counter="true">
+            <outline text="`batch()`"/>
+            <outline text="`each()`"/>
+          </outline>
+        </outline>
+        <outline text="[Active Record](https://www.sitepoint.com/yii-2-0-activerecord-explained/)" progress_counter="true">
+          <outline text="[link: `findOne()`|https://www.yiiframework.com/doc/api/2.0/yii-db-baseactiverecord#findOne()-detail]"/>
+          <outline text="[link: `findAll()`|https://www.yiiframework.com/doc/api/2.0/yii-db-baseactiverecord#findAll()-detail]"/>
+          <outline text="[link: `save()`|https://www.yiiframework.com/doc/api/2.0/yii-db-baseactiverecord#save()-detail]"/>
+          <outline text="[link: ActiveQuery|https://www.yiiframework.com/doc/api/2.0/yii-db-activequery]" progress_counter="true">
+            <outline text="[link: `find()`|https://www.yiiframework.com/doc/api/2.0/yii-db-activerecordinterface#find()-detail]"/>
+          </outline>
+          <outline text="[link: Atributos sucios|https://www.yiiframework.com/doc/guide/2.0/en/db-active-record#dirty-attributes]"/>
+          <outline text="[link: Relaciones|https://www.yiiframework.com/doc/guide/2.0/en/db-active-record#relational-data]" progress_counter="true">
+            <outline text="[link: Encadenamiento de relaciones|http://www.yiiframework.com/doc-2.0/guide-db-active-record.html#multi-table-relations]"/>
+          </outline>
+          <outline text="[link: `joinWith()`|https://www.yiiframework.com/doc/guide/2.0/en/db-active-record#joining-with-relations]"/>
+          <outline text="[link: Atributos virtuales|http://www.yiiframework.com/doc-2.0/guide-db-active-record.html#selecting-extra-fields]" progress_counter="true">
+            <outline text="Siete técnicas" progress_counter="true">
+              <outline text="Calcular a mano cuando/donde haga falta"/>
+              <outline text="Usar vistas SQL"/>
+              <outline text="Sobreescribir el método `find()` del modelo para que se use siempre en lugar del heredado de `ActiveRecord`"/>
+              <outline text="Sobreescribir el método `afterFind()` para rellenar el atributo a mano cada vez que se hace un `find()`"/>
+              <outline text="Capturar el evento `EVENT_AFTER_FIND` del modelo"/>
+              <outline text="[link: Usar una propiedad con *getter* y *setter*|https://github.com/yiisoft/yii2/issues/8316#issuecomment-99863239]"/>
+              <outline text="[link: Crear un método `findEspecial()` que se usará en lugar de `find()` cuando haga falta|https://github.com/yiisoft/yii2/issues/8316#issuecomment-99867306]"/>
+              <outline text="La mejor opción, en la mayoría de los casos: combinar las dos anteriores">
+                <outline text="Ejemplo"/>
+              </outline>
+            </outline>
+          </outline>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA2"/>
+            <outline text="RA3"/>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.f"/>
+              <outline text="CE5.g"/>
+              <outline text="CE5.h"/>
+            </outline>
+            <outline text="RA6">
+              <outline text="CE6.a"/>
+              <outline text="CE6.b"/>
+              <outline text="CE6.c"/>
+              <outline text="CE6.d"/>
+              <outline text="CE6.e"/>
+              <outline text="CE6.f"/>
+              <outline text="CE6.g"/>
+              <outline text="CE6.h"/>
+            </outline>
+            <outline text="RA9">
+              <outline text="CE9.e"/>
+              <outline text="CE9.f"/>
+              <outline text="CE9.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Creación y validación de formularios en Yii 2**" due="2020-01-20" due_user_ids="139389" tags="ev2" progress_counter="true">
+        <outline text="Creación de formularios" progress_counter="true">
+          <outline text="ActiveForm"/>
+          <outline text="`yii\helpers\Html`"/>
+        </outline>
+        <outline text="[link: Validación de la entrada|https://www.yiiframework.com/doc/guide/2.0/en/input-validation]" progress_counter="true">
+          <outline text="[link: Declaración de reglas|https://www.yiiframework.com/doc/guide/2.0/en/input-validation#declaring-rules]" progress_counter="true">
+            <outline text="[link: Validadores principales|http://www.yiiframework.com/doc-2.0/guide-tutorial-core-validators.html]"/>
+            <outline text="[link: `skipOnEmpty`|https://www.yiiframework.com/doc/api/2.0/yii-validators-validator#$skipOnEmpty-detail]"/>
+            <outline text="[link: `skipOnError`|https://www.yiiframework.com/doc/api/2.0/yii-validators-validator#$skipOnError-detail]"/>
+            <outline text="[link: Personalizar mensajes de error|https://www.yiiframework.com/doc/guide/2.0/en/input-validation#customizing-error-messages]"/>
+            <outline text="[link: Validación condicional|https://www.yiiframework.com/doc/guide/2.0/en/input-validation#conditional-validation]"/>
+            <outline text="[link: Filtrado (saneado) de datos|https://www.yiiframework.com/doc/guide/2.0/en/input-validation#data-filtering]"/>
+            <outline text="[link: Manejo de entradas vacías|https://www.yiiframework.com/doc/guide/2.0/en/input-validation#handling-empty-inputs]"/>
+          </outline>
+          <outline text="[link: Validadores en línea|https://www.yiiframework.com/doc/guide/2.0/en/input-validation#inline-validators]"/>
+          <outline text="[link: Validaciones en el cliente|https://www.yiiframework.com/doc/guide/2.0/en/input-validation#client-side-validation]" tags="opcional"/>
+        </outline>
+        <outline text="[link: Subida de archivos|https://www.yiiframework.com/doc/guide/2.0/en/input-file-upload]"/>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA2"/>
+            <outline text="RA3">
+              <outline text="CE3.e"/>
+              <outline text="CE3.f"/>
+            </outline>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.b"/>
+              <outline text="CE5.d"/>
+              <outline text="CE5.h"/>
+            </outline>
+            <outline text="RA6">
+              <outline text="CE6.f"/>
+              <outline text="CE6.h"/>
+            </outline>
+            <outline text="RA8">
+              <outline text="CE8.a"/>
+              <outline text="CE8.b"/>
+              <outline text="CE8.c"/>
+              <outline text="CE8.d"/>
+              <outline text="CE8.e"/>
+              <outline text="CE8.f"/>
+              <outline text="CE8.g"/>
+            </outline>
+            <outline text="RA9">
+              <outline text="CE9.e"/>
+              <outline text="CE9.f"/>
+              <outline text="CE9.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Visualización de datos en Yii 2**" due="2020-01-27" due_user_ids="139389" tags="ev2" progress_counter="true">
+        <outline text="[link: Formateado de datos|https://www.yiiframework.com/doc/guide/2.0/en/output-formatting]" progress_counter="true">
+          <outline text="[link: `yii\i18n\Formatter`|https://www.yiiframework.com/doc/api/2.0/yii-i18n-formatter]"/>
+        </outline>
+        <outline text="[link: Paginación|https://www.yiiframework.com/doc/guide/2.0/en/output-pagination]" progress_counter="true">
+          <outline text="`yii\data\Pagination`"/>
+          <outline text="Entrada" progress_counter="true">
+            <outline text="`totalCount`"/>
+            <outline text="`pageSize`"/>
+            <outline text="`page`"/>
+          </outline>
+          <outline text="Salida" progress_counter="true">
+            <outline text="`limit`"/>
+            <outline text="`offset`"/>
+          </outline>
+          <outline text="`yii\widgets\LinkPager`"/>
+        </outline>
+        <outline text="[link: Ordenación|https://www.yiiframework.com/doc/guide/2.0/en/output-sorting]" progress_counter="true">
+          <outline text="`yii\data\Sort`"/>
+          <outline text="Entrada" progress_counter="true">
+            <outline text="`attributes`"/>
+            <outline text="`sort`"/>
+          </outline>
+          <outline text="Salida" progress_counter="true">
+            <outline text="`orders`"/>
+          </outline>
+          <outline text="`yii\data\Sort::link()`"/>
+        </outline>
+        <outline text="[link: Proveedores de datos|https://www.yiiframework.com/doc/guide/2.0/en/output-data-providers]" progress_counter="true">
+          <outline text="Entrada" progress_counter="true">
+            <outline text="`pagination`"/>
+            <outline text="`sort`"/>
+          </outline>
+          <outline text="Salida" progress_counter="true">
+            <outline text="`models`"/>
+            <outline text="`count`"/>
+            <outline text="`totalCount`"/>
+          </outline>
+          <outline text="`ActiveDataProvider`" progress_counter="true">
+            <outline text="`query`"/>
+          </outline>
+          <outline text="`SqlDataProvider`" progress_counter="true">
+            <outline text="`sql`"/>
+            <outline text="`params`"/>
+            <outline text="`totalCount`"/>
+          </outline>
+          <outline text="`ArrayDataProvider`" progress_counter="true">
+            <outline text="`allModels`"/>
+          </outline>
+        </outline>
+        <outline text="[link: Widgets de datos|https://www.yiiframework.com/doc/guide/2.0/en/output-data-widgets]" progress_counter="true">
+          <outline text="`DetailView`"/>
+          <outline text="`ListView`"/>
+          <outline text="`GridView`" progress_counter="true">
+            <outline text="`dataProvider`"/>
+            <outline text="[link: `columns`|https://www.yiiframework.com/doc/guide/2.0/en/output-data-widgets#grid-columns]" progress_counter="true">
+              <outline text="[link: `DataColumn`|https://www.yiiframework.com/doc/guide/2.0/en/output-data-widgets#data-column]"/>
+              <outline text="[link: `SerialColumn`|https://www.yiiframework.com/doc/guide/2.0/en/output-data-widgets#serial-column]"/>
+              <outline text="[link: `ActionColumn`|https://www.yiiframework.com/doc/guide/2.0/en/output-data-widgets#action-column]"/>
+            </outline>
+            <outline text="Ordenación de columnas"/>
+            <outline text="[link: Filtrado de datos|https://www.yiiframework.com/doc/guide/2.0/en/output-data-widgets#filtering-data]" progress_counter="true">
+              <outline text="[link: `yii\grid\GridView::$filterModel`|http://www.yiiframework.com/doc-2.0/yii-grid-gridview.html#$filterModel-detail]"/>
+            </outline>
+            <outline text="[link: Relaciones|http://www.yiiframework.com/doc-2.0/guide-output-data-widgets.html#working-with-model-relations]" progress_counter="true">
+              <outline text="Ordenación con relaciones"/>
+              <outline text="Filtrado con relaciones">
+                <outline text="[link: `yii\db\ActiveRecord::getAttribute($name)`|http://www.yiiframework.com/doc-2.0/yii-db-baseactiverecord.html#getAttribute()-detail]"/>
+              </outline>
+            </outline>
+          </outline>
+          <outline text="El problema de las fechas/horas/instantes"/>
+          <outline text="Otros widgets no oficiales" progress_counter="true">
+            <outline text="[link: Krajee Yii Extensions|http://demos.krajee.com/]" progress_counter="true">
+              <outline text="[link: `yii2-datecontrol`|http://demosbs3.krajee.com/datecontrol]"/>
+              <outline text="[link: `yii2-number`|http://demosbs3.krajee.com/number]"/>
+            </outline>
+          </outline>
+        </outline>
+        <outline text="[link: Scripts de cliente|http://www.yiiframework.com/doc-2.0/guide-output-client-scripts.html]"/>
+        <outline text="Temas" tags="opcional"/>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA2"/>
+            <outline text="RA3"/>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.b"/>
+              <outline text="CE5.c"/>
+              <outline text="CE5.d"/>
+              <outline text="CE5.h"/>
+            </outline>
+            <outline text="RA6">
+              <outline text="CE6.f"/>
+              <outline text="CE6.h"/>
+            </outline>
+            <outline text="RA8">
+              <outline text="CE8.a"/>
+              <outline text="CE8.b"/>
+              <outline text="CE8.c"/>
+              <outline text="CE8.d"/>
+              <outline text="CE8.e"/>
+              <outline text="CE8.f"/>
+              <outline text="CE8.g"/>
+            </outline>
+            <outline text="RA9">
+              <outline text="CE9.e"/>
+              <outline text="CE9.f"/>
+              <outline text="CE9.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Seguridad y cacheado en Yii 2**" due="2020-02-03" due_user_ids="139389" tags="ev2" progress_counter="true">
+        <outline text="[link: Autenticación|https://www.yiiframework.com/doc/guide/2.0/en/security-authentication]" progress_counter="true">
+          <outline text="Componente de aplicación `user`"/>
+          <outline text="Clase identidad e interfaz `yii\web\IdentityInterface`"/>
+          <outline text="Métodos de *login* y *logout*."/>
+        </outline>
+        <outline text="[link: Contraseñas|https://www.yiiframework.com/doc/guide/2.0/en/security-passwords]"/>
+        <outline text="Autorización"/>
+        <outline text="Niveles de caché" progress_counter="true">
+          <outline text="Cacheado de datos"/>
+          <outline text="Cacheado de fragmentos"/>
+          <outline text="Cacheado de páginas"/>
+          <outline text="Cacheado HTTP"/>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA2"/>
+            <outline text="RA3"/>
+            <outline text="RA4">
+              <outline text="CE4.d"/>
+              <outline text="CE4.e"/>
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.e"/>
+              <outline text="CE5.g"/>
+              <outline text="CE5.h"/>
+            </outline>
+            <outline text="RA6">
+              <outline text="CE6.h"/>
+            </outline>
+            <outline text="RA8"/>
+            <outline text="RA9">
+              <outline text="CE9.e"/>
+              <outline text="CE9.f"/>
+              <outline text="CE9.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Características adicionales de Yii 2**" due="2020-02-10" due_user_ids="139389" tags="ev2" progress_counter="true">
+        <outline text="AJAX y PJAX" progress_counter="true">
+          <outline text="Validaciones Ajax"/>
+          <outline text="PJAX" tags="opcional"/>
+          <outline text="[CORS](https://github.com/samdark/yii2-cookbook/blob/master/book/incoming-post.md)" tags="opcional"/>
+        </outline>
+        <outline text="[Correo electrónico](http://stackoverflow.com/questions/24995620/how-to-use-the-swiftmailer-in-yii2)"/>
+        <outline text="Aplicación de consola"/>
+        <outline text="Migraciones"/>
+        <outline text="[Extensiones](http://www.yiiframework.com/extensions/)"/>
+        <outline text="[Paquetes](https://yiigist.com/)"/>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA2"/>
+            <outline text="RA3"/>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.d"/>
+              <outline text="CE5.g"/>
+              <outline text="CE5.h"/>
+            </outline>
+            <outline text="RA6">
+              <outline text="CE6.h"/>
+            </outline>
+            <outline text="RA8">
+              <outline text="CE8.a"/>
+              <outline text="CE8.b"/>
+              <outline text="CE8.c"/>
+              <outline text="CE8.d"/>
+              <outline text="CE8.e"/>
+              <outline text="CE8.f"/>
+              <outline text="CE8.g"/>
+            </outline>
+            <outline text="RA9">
+              <outline text="CE9.e"/>
+              <outline text="CE9.f"/>
+              <outline text="CE9.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Calidad**" due="2020-02-17" due_user_ids="139389" tags="ev2" progress_counter="true">
+        <outline text="[Pruebas](https://www.gitbook.com/book/jose/testing-book/)" progress_counter="true">
+          <outline text="Tipos de pruebas">
+            <outline text="Unitarias"/>
+            <outline text="Funcionales"/>
+            <outline text="De aceptación"/>
+          </outline>
+          <outline text="Herramientas">
+            <outline text="[link: PHPUnit|https://phpunit.de/]" tags="opcional"/>
+            <outline text="[Codeception](http://codeception.com/for/yii)">
+              <outline text="Ejecutar pruebas"/>
+              <outline text="Crear pruebas en formato Cest"/>
+            </outline>
+            <outline text="[link: Fixtures|https://docs.google.com/document/d/1-41K7qqkV2W_NfAXz2Z9z_BudX5WBdbz2IAfHeqes2I/edit#heading=h.jluuxhww6rrp]">
+              <outline text="`./yii fixture/generate &lt;nombre&gt;`"/>
+              <outline text="`./yii fixture/load &lt;nombre&gt;`"/>
+            </outline>
+          </outline>
+          <outline text="Integración continua: [Travis CI](https://travis-ci.org/)"/>
+          <outline text="[link: Cobertura de código|http://codeception.com/docs/11-Codecoverage]" tags="opcional"/>
+        </outline>
+        <outline text="Depuración" progress_counter="true">
+          <outline text="[link: `var_dump()` mejorado|https://github.com/yiisoft/yii2/issues/7352#issuecomment-75024083]"/>
+          <outline text="[link: Consola integrada|https://github.com/yiisoft/yii2-shell]"/>
+          <outline text="[link: Barra de depuración|https://github.com/yiisoft/yii2-debug]"/>
+          <outline text="[link: Depuración con PsySH|https://www.sitepoint.com/interactive-php-debugging-psysh/]" tags="opcional"/>
+        </outline>
+        <outline text="Documentación" progress_counter="true">
+          <outline text="[API documentation generator for Yii2](https://github.com/yiisoft/yii2-apidoc)"/>
+          <outline text="[GitHub Pages](https://pages.github.com/)"/>
+        </outline>
+        <outline text="Mantenimiento y calidad del código" progress_counter="true">
+          <outline text="CodeSniffer"/>
+          <outline text="CS_Fixer"/>
+          <outline text="[Code Climate](https://codeclimate.com/)"/>
+        </outline>
+        <outline text="Ejercicios">
+          <outline text="Escribir pruebas funcionales para Muéveme"/>
+          <outline text="Generar documentación para Muéveme"/>
+          <outline text="Usar fixtures para generar datos de prueba para Muéveme"/>
+          <outline text="Verificar en CodeClimate si hay archivos fuente marcados como de mala calidad"/>
+        </outline>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA3">
+              <outline text="CE3.g"/>
+            </outline>
+            <outline text="RA4">
+              <outline text="CE4.g"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.g"/>
+              <outline text="CE5.h"/>
+            </outline>
+            <outline text="RA6">
+              <outline text="CE6.e"/>
+              <outline text="CE6.h"/>
+            </outline>
+            <outline text="RA9">
+              <outline text="CE9.e"/>
+              <outline text="CE9.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Computación en la nube**" due="2020-02-24" due_user_ids="139389" tags="ev2" progress_counter="true">
+        <outline text="Entornos de ejecución" progress_counter="true">
+          <outline text="Desarrollo" progress_counter="true"/>
+          <outline text="Producción" progress_counter="true"/>
+          <outline text="Pruebas" progress_counter="true"/>
+          <outline text="Preproducción" progress_counter="true"/>
+        </outline>
+        <outline text="Cloud computing vs hosting"/>
+        <outline text="Cloud computing vs VPS"/>
+        <outline text="Servicios por capas" progress_counter="true">
+          <outline text="IaaS"/>
+          <outline text="PaaS"/>
+          <outline text="SaaS"/>
+        </outline>
+        <outline text="[12 Factores](https://12factor.net/es/)"/>
+        <outline text="Heroku">
+          <outline text="[link: Heroku CLI|https://devcenter.heroku.com/articles/heroku-cli]"/>
+          <outline text="Creación y despliegue de aplicaciones"/>
+          <outline text="[link: Heroku Postgres|https://www.heroku.com/postgres]"/>
+          <outline text="Variables de entorno"/>
+          <outline text="Releases"/>
+        </outline>
+        <outline text="[Escalabilidad](https://github.com/samdark/yii2-cookbook/blob/master/book/scaling.md)" tags="opcional"/>
+        <outline text="[Alta disponibilidad](http://thehighload.com/)" tags="opcional"/>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA1">
+              <outline text="CE1.a"/>
+              <outline text="CE1.c"/>
+              <outline text="CE1.d"/>
+              <outline text="CE1.e"/>
+            </outline>
+            <outline text="RA5">
+              <outline text="CE5.h"/>
+            </outline>
+            <outline text="RA6">
+              <outline text="CE6.h"/>
+            </outline>
+            <outline text="RA9">
+              <outline text="CE9.e"/>
+              <outline text="CE9.f"/>
+              <outline text="CE9.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Servicios web con REST en Yii 2**" due="2020-03-02" due_user_ids="139389" tags="ev2,opcional" progress_counter="true">
+        <outline text="Introducción"/>
+        <outline text="Recursos"/>
+        <outline text="Controladores"/>
+        <outline text="Enrutado"/>
+        <outline text="Formateo de la respuesta"/>
+        <outline text="Autenticación"/>
+        <outline text="Limitación de frecuencia de peticiones"/>
+        <outline text="Versionado"/>
+        <outline text="Gestión de errores"/>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA1">
+              <outline text="CE1.a"/>
+              <outline text="CE1.b"/>
+            </outline>
+            <outline text="RA2"/>
+            <outline text="RA3"/>
+            <outline text="RA7">
+              <outline text="CE7.a"/>
+              <outline text="CE7.b"/>
+              <outline text="CE7.c"/>
+              <outline text="CE7.d"/>
+              <outline text="CE7.e"/>
+              <outline text="CE7.f"/>
+              <outline text="CE7.g"/>
+            </outline>
+            <outline text="RA8">
+              <outline text="CE8.b"/>
+              <outline text="CE8.f"/>
+              <outline text="CE8.g"/>
+            </outline>
+            <outline text="RA9">
+              <outline text="CE9.c"/>
+              <outline text="CE9.e"/>
+              <outline text="CE9.f"/>
+              <outline text="CE9.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+      <outline text="**Contenedores**" due="2020-03-09" due_user_ids="139389" tags="ev2,opcional" progress_counter="true">
+        <outline text="[Vagrant](https://www.vagrantup.com/)" progress_counter="true">
+          <outline text="[PuPHPet](https://puphpet.com/)"/>
+        </outline>
+        <outline text="[Docker](https://www.docker.com/)" progress_counter="true">
+          <outline text="[Docker Hub](https://hub.docker.com/)"/>
+          <outline text="[Dockerfiles](https://docs.docker.com/engine/reference/builder/)"/>
+          <outline text="[Docker Compose](https://docs.docker.com/compose/)" progress_counter="true">
+            <outline text="[docker-compose.yml](https://docs.docker.com/compose/compose-file/)"/>
+          </outline>
+        </outline>
+        <outline text="[PHPDocker](https://phpdocker.io/generator)"/>
+        <outline text="Metadatos">
+          <outline text="Objetivos de la unidad"/>
+          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
+            <outline text="RA1">
+              <outline text="CE1.a"/>
+              <outline text="CE1.c"/>
+              <outline text="CE1.d"/>
+              <outline text="CE1.e"/>
+            </outline>
+            <outline text="RA9">
+              <outline text="CE9.e"/>
+              <outline text="CE9.f"/>
+              <outline text="CE9.g"/>
+            </outline>
+          </outline>
+        </outline>
+      </outline>
+    </outline>
+  </body>
+</opml>
