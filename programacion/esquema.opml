@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Thu, 25 Jul 2019 09:33:00 +0000</dateModified>
+    <dateModified>Thu, 25 Jul 2019 10:47:39 +0000</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
@@ -457,17 +457,17 @@
       <outline text="**Persistencia de datos con PHP**" due="2019-10-28" due_user_ids="139389" tags="ce4a,ce4b,ce4c,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6e,ce6g,ev1,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
         <outline text="[link: PDO (PHP Data Objects)|http://php.net/manual/es/book.pdo.php]" progress_counter="true">
           <outline text="[link: Clase `PDO`|http://php.net/manual/es/class.pdo.php]" progress_counter="true">
-            <outline text="[link: `__construct(string $dsn [, string $username [, string $password [, array $options ]]])`|http://php.net/manual/es/pdo.construct.php]"/>
-            <outline text="[link: `PDOStatement query(string $statement)`|http://php.net/manual/es/pdo.query.php]"/>
-            <outline text="[link: `int exec(string $statement)`|http://php.net/manual/es/pdo.exec.php]"/>
-            <outline text="[link: `PDOStatement prepare(string $statement [, array $driver_options = array() ])`|http://php.net/manual/es/pdo.prepare.php]"/>
+            <outline text="[link: `__construct()`|http://php.net/manual/es/pdo.construct.php]"/>
+            <outline text="[link: `query()`|http://php.net/manual/es/pdo.query.php]"/>
+            <outline text="[link: `exec()`|http://php.net/manual/es/pdo.exec.php]"/>
+            <outline text="[link: `prepare()`|http://php.net/manual/es/pdo.prepare.php]"/>
           </outline>
           <outline text="[link: Clase `PDOStatement`|http://php.net/manual/es/class.pdostatement.php]" progress_counter="true">
-            <outline text="[link: `mixed fetch([ int $fetch_style ])`|http://php.net/manual/es/pdostatement.fetch.php]"/>
-            <outline text="[link: `mixed fetchAll([ int $fetch_style ])`|http://php.net/manual/es/pdostatement.fetchall.php]"/>
-            <outline text="[link: `mixed fetchColumn([ int $column_number = 0 ])`|http://php.net/manual/es/pdostatement.fetchcolumn.php]"/>
-            <outline text="[link: `bool execute ([ array $input_parameters ])`|http://php.net/manual/es/pdostatement.execute.php]"/>
-            <outline text="[link: `int rowCount(void)`|http://php.net/manual/es/pdostatement.rowcount.php]"/>
+            <outline text="[link: `fetch()`|http://php.net/manual/es/pdostatement.fetch.php]"/>
+            <outline text="[link: `fetchAll()`|http://php.net/manual/es/pdostatement.fetchall.php]"/>
+            <outline text="[link: `fetchColumn()`|http://php.net/manual/es/pdostatement.fetchcolumn.php]"/>
+            <outline text="[link: `execute()`|http://php.net/manual/es/pdostatement.execute.php]"/>
+            <outline text="[link: `rowCount()`|http://php.net/manual/es/pdostatement.rowcount.php]"/>
           </outline>
           <outline text="Correspondencias de tipos entre SQL y PHP"/>
           <outline text="Transacciones" progress_counter="true">
@@ -504,33 +504,6 @@
           </outline>
           <outline text="Inyección de código SQL"/>
           <outline text="[link: Cross-Site Request Forgery (CSRF)|https://diego.com.es/ataques-csrf-cross-site-request-forgery-en-php]"/>
-        </outline>
-        <outline text="Meta">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA2"/>
-            <outline text="RA3"/>
-            <outline text="RA4">
-              <outline text="CE4.a"/>
-              <outline text="CE4.b"/>
-              <outline text="CE4.c"/>
-              <outline text="CE4.d"/>
-              <outline text="CE4.e"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.f"/>
-              <outline text="CE5.g"/>
-            </outline>
-            <outline text="RA6">
-              <outline text="CE6.a"/>
-              <outline text="CE6.b"/>
-              <outline text="CE6.c"/>
-              <outline text="CE6.d"/>
-              <outline text="CE6.e"/>
-              <outline text="CE6.f"/>
-              <outline text="CE6.g"/>
-            </outline>
-          </outline>
         </outline>
       </outline>
       <outline text="**Desarrollo de aplicaciones con PHP II**" due="2019-11-04" due_user_ids="139389" tags="ce1a,ce4a,ce4b,ce4c,ce4d,ce4e,ce4f,ce4g,ce5a,ce5b,ce5d,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev1,ra1,ra4,ra5,ra6" progress_counter="true">
