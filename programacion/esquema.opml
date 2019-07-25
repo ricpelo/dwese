@@ -2,12 +2,12 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Tue, 23 Jul 2019 15:56:24 +0000</dateModified>
+    <dateModified>Thu, 25 Jul 2019 09:33:00 +0000</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
     <outline text="[1] **CONTENIDOS**" tags="contenidos" progress_counter="true">
-      <outline text="**Sistemas de control de versiones I**" due="2019-09-16" due_user_ids="139389" tags="ev1" progress_counter="true">
+      <outline text="**Sistemas de control de versiones I**" due="2019-09-16" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ev1,ra1,ra4" progress_counter="true">
         <outline text="Preparación del entorno de desarrollo" progress_counter="true">
           <outline text="Instalación automatizada" progress_counter="true">
             <outline text="Acciones previas" progress_counter="true">
@@ -102,18 +102,9 @@
             <outline text="Aprender a moverse a través del tiempo por los commits de un repositorio Git."/>
             <outline text="Aprender a corregir commits creando nuevos commits."/>
           </outline>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA1">
-              <outline text="CE1.e"/>
-              <outline text="CE1.g"/>
-            </outline>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-          </outline>
         </outline>
       </outline>
-      <outline text="**Sistemas de control de versiones II**" due="2019-09-23" due_user_ids="139389" tags="ev1" progress_counter="true">
+      <outline text="**Sistemas de control de versiones II**" due="2019-09-23" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ev1,ra1,ra4" progress_counter="true">
         <outline text="Ramas locales" progress_counter="true">
           <outline text="`branch`"/>
           <outline text="`merge`" progress_counter="true">
@@ -143,7 +134,7 @@
             <outline text="`fetch`"/>
             <outline text="`pull`"/>
           </outline>
-          <outline text="Eliminar ramas remotas"/>
+          <outline text="Eliminar ramas remotas" tags="no_impartido"/>
           <outline text="Etiquetas remotas" progress_counter="true">
             <outline text="`git push origin mi_etiqueta`"/>
             <outline text="`git push --tags`"/>
@@ -176,20 +167,8 @@
           <outline text="Sigue el tutorial de [Hello World](https://guides.github.com/activities/hello-world/) e indica el repositorio resultante."/>
           <outline text="Sigue el tutorial de [Meghan Nelson](http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners) e indica el repositorio resultante."/>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA1">
-              <outline text="CE1.e"/>
-              <outline text="CE1.g"/>
-            </outline>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Introducción a la tecnología web**" due="2019-09-30" due_user_ids="139389" tags="ev1" progress_counter="true">
+      <outline text="**Introducción a la tecnología web**" due="2019-09-30" due_user_ids="139389" tags="ce1a,ce1b,ce1c,ce1d,ce1e,ce1g,ev1,ra1" progress_counter="true">
         <outline text="Introducción al desarrollo web" progress_counter="true">
           <outline text="Conceptos básicos" progress_counter="true">
             <outline text="Navegadores y servidores web"/>
@@ -252,21 +231,8 @@
           <outline text="Configuración básica"/>
           <outline text="Sitios virtuales"/>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA1">
-              <outline text="CE1.a"/>
-              <outline text="CE1.b"/>
-              <outline text="CE1.c"/>
-              <outline text="CE1.d"/>
-              <outline text="CE1.e"/>
-              <outline text="CE1.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**[link: Conceptos básicos de PHP I|https://ricpelo.github.io/libro-dwese/conceptos-basicos-de-php.html]**" due="2019-10-07" due_user_ids="139389" tags="ev1" progress_counter="true">
+      <outline text="**[link: Conceptos básicos de PHP I|https://ricpelo.github.io/libro-dwese/conceptos-basicos-de-php.html]**" due="2019-10-07" due_user_ids="139389" tags="ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
         <outline text="Introducción a PHP" progress_counter="true">
           <outline text="[link: Página web de PHP|http://php.net]"/>
           <outline text="Instalación de PHP"/>
@@ -365,25 +331,8 @@
           <outline text="[link: Constantes predefinidas|http://php.net/manual/es/language.constants.predefined.php]"/>
           <outline text="[link: `defined()`|http://php.net/manual/es/function.defined.php]"/>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA2">
-              <outline text="CE2.c"/>
-              <outline text="CE2.d"/>
-              <outline text="CE2.e"/>
-              <outline text="CE2.f"/>
-              <outline text="CE2.g"/>
-              <outline text="CE2.h"/>
-            </outline>
-            <outline text="RA3"/>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Conceptos básicos de PHP II**" due="2019-10-14" due_user_ids="139389" tags="ev1">
+      <outline text="**Conceptos básicos de PHP II**" due="2019-10-14" due_user_ids="139389" tags="ce2d,ce2e,ce2g,ce3a,ce3b,ce3c,ce3d,ce3g,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
         <outline text="Flujo de control" progress_counter="true">
           <outline text="[link: Estructuras de control|http://php.net/manual/es/language.control-structures.php]" progress_counter="true">
             <outline text="Secuencia"/>
@@ -439,27 +388,8 @@
           <outline text="[link: Hamming|https://github.com/iesdonana/hamming]"/>
           <outline text="[link: Isograma|https://github.com/iesdonana/isograma]"/>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA2">
-              <outline text="CE2.d"/>
-              <outline text="CE2.e"/>
-              <outline text="CE2.g"/>
-            </outline>
-            <outline text="RA3">
-              <outline text="CE3.a"/>
-              <outline text="CE3.b"/>
-              <outline text="CE3.c"/>
-              <outline text="CE3.d"/>
-              <outline text="CE3.g"/>
-            </outline>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Desarrollo de aplicaciones con PHP I**" due="2019-10-21" due_user_ids="139389" tags="ev1" progress_counter="true">
+      <outline text="**Desarrollo de aplicaciones con PHP I**" due="2019-10-21" due_user_ids="139389" tags="ce1a,ce1b,ce1d,ce1f,ce2a,ce2b,ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce3a,ce3b,ce3c,ce3d,ce3e,ce3f,ce3g,ce4g,ce5d,ce5g,ce5h,ev1,ra1,ra2,ra3,ra4,ra5" progress_counter="true">
         <outline text="[SAPIs](http://stackoverflow.com/questions/9948008/what-is-sapi-and-when-would-you-use-it)" progress_counter="true">
           <outline text="[link: CLI: Uso en línea de comandos|http://php.net/manual/es/features.commandline.differences.php]" progress_counter="true">
             <outline text="[link: `$argc` y `$argv`|http://php.net/manual/es/reserved.variables.argv.php]"/>
@@ -523,46 +453,8 @@
             <outline text="Paquete [`php-debug`](https://atom.io/packages/php-debug) para Atom"/>
           </outline>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA1">
-              <outline text="CE1.a"/>
-              <outline text="CE1.b"/>
-              <outline text="CE1.d"/>
-              <outline text="CE1.f"/>
-            </outline>
-            <outline text="RA2">
-              <outline text="CE2.a"/>
-              <outline text="CE2.b"/>
-              <outline text="CE2.c"/>
-              <outline text="CE2.d"/>
-              <outline text="CE2.e"/>
-              <outline text="CE2.f"/>
-              <outline text="CE2.g"/>
-              <outline text="CE2.h"/>
-            </outline>
-            <outline text="RA3">
-              <outline text="CE3.a"/>
-              <outline text="CE3.b"/>
-              <outline text="CE3.c"/>
-              <outline text="CE3.d"/>
-              <outline text="CE3.e"/>
-              <outline text="CE3.f"/>
-              <outline text="CE3.g"/>
-            </outline>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.d"/>
-              <outline text="CE5.g"/>
-              <outline text="CE5.h"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Persistencia de datos con PHP**" due="2019-10-28" due_user_ids="139389" tags="ev1" progress_counter="true">
+      <outline text="**Persistencia de datos con PHP**" due="2019-10-28" due_user_ids="139389" tags="ce4a,ce4b,ce4c,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6e,ce6g,ev1,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
         <outline text="[link: PDO (PHP Data Objects)|http://php.net/manual/es/book.pdo.php]" progress_counter="true">
           <outline text="[link: Clase `PDO`|http://php.net/manual/es/class.pdo.php]" progress_counter="true">
             <outline text="[link: `__construct(string $dsn [, string $username [, string $password [, array $options ]]])`|http://php.net/manual/es/pdo.construct.php]"/>
@@ -640,33 +532,8 @@
             </outline>
           </outline>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA2"/>
-            <outline text="RA3"/>
-            <outline text="RA4">
-              <outline text="CE4.a"/>
-              <outline text="CE4.b"/>
-              <outline text="CE4.c"/>
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.f"/>
-              <outline text="CE5.g"/>
-              <outline text="CE5.h"/>
-            </outline>
-            <outline text="RA6">
-              <outline text="CE6.a"/>
-              <outline text="CE6.b"/>
-              <outline text="CE6.c"/>
-              <outline text="CE6.e"/>
-              <outline text="CE6.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Desarrollo de aplicaciones con PHP II**" due="2019-11-04" due_user_ids="139389" tags="ev1" progress_counter="true">
+      <outline text="**Desarrollo de aplicaciones con PHP II**" due="2019-11-04" due_user_ids="139389" tags="ce1a,ce4a,ce4b,ce4c,ce4d,ce4e,ce4f,ce4g,ce5a,ce5b,ce5d,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev1,ra1,ra4,ra5,ra6" progress_counter="true">
         <outline text="Programación de *CRUD* básico" progress_counter="true">
           <outline text="Ejemplo de aplicación: *Muéveme*"/>
           <outline text="Ejemplo de aplicación: *FilmAffinity*"/>
@@ -694,43 +561,8 @@
             <outline text="[Expresiones regulares (PCRE)](http://php.net/manual/es/book.pcre.php)"/>
           </outline>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA1">
-              <outline text="CE1.a"/>
-            </outline>
-            <outline text="RA4">
-              <outline text="CE4.a"/>
-              <outline text="CE4.b"/>
-              <outline text="CE4.c"/>
-              <outline text="CE4.d"/>
-              <outline text="CE4.e"/>
-              <outline text="CE4.f"/>
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.a"/>
-              <outline text="CE5.b"/>
-              <outline text="CE5.d"/>
-              <outline text="CE5.f"/>
-              <outline text="CE5.g"/>
-              <outline text="CE5.h"/>
-            </outline>
-            <outline text="RA6">
-              <outline text="CE6.a"/>
-              <outline text="CE6.b"/>
-              <outline text="CE6.c"/>
-              <outline text="CE6.d"/>
-              <outline text="CE6.e"/>
-              <outline text="CE6.f"/>
-              <outline text="CE6.g"/>
-              <outline text="CE6.h"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Programación avanzada en PHP**" due="2019-11-11" due_user_ids="139389" tags="ev1" progress_counter="true">
+      <outline text="**Programación avanzada en PHP**" due="2019-11-11" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ev1,ra2,ra3,ra4,ra5" progress_counter="true">
         <outline text="[link: Diseño de aplicaciones orientadas a objetos|http://php.net/manual/es/language.oop5.php]" progress_counter="true">
           <outline text="[link: Clases|http://php.net/manual/es/language.oop5.basic.php]"/>
           <outline text="[link: Propiedades|http://php.net/manual/es/language.oop5.properties.php]" progress_counter="true">
@@ -768,22 +600,8 @@
           <outline text="[link: `call_user_func()`|http://php.net/manual/es/function.call-user-func.php]"/>
           <outline text="`array_map()` y `array_reduce()`"/>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA2"/>
-            <outline text="RA3"/>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.g"/>
-              <outline text="CE5.h"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Interoperabilidad**" due="2019-11-18" due_user_ids="139389" tags="ev1" progress_counter="true">
+      <outline text="**Interoperabilidad**" due="2019-11-18" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5g,ce5h,ce9a,ce9b,ce9e,ev1,ra1,ra4,ra5,ra9" progress_counter="true">
         <outline text="[link: Versionado semántico|https://semver.org/lang/es/]"/>
         <outline text="[link: Composer|https://getcomposer.org/]" progress_counter="true">
           <outline text="Paquetes"/>
@@ -841,29 +659,8 @@
           <outline text="De uso básico de Composer"/>
           <outline text="De buscar paquetes en Packagist que tengan una funcionalidad concreta y usarlos en un ejemplo"/>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA1">
-              <outline text="CE1.e"/>
-              <outline text="CE1.g"/>
-            </outline>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.g"/>
-              <outline text="CE5.h"/>
-            </outline>
-            <outline text="RA9">
-              <outline text="CE9.a"/>
-              <outline text="CE9.b"/>
-              <outline text="CE9.e"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Introducción a Yii 2**" due="2019-11-25" due_user_ids="139389" tags="ev1" progress_counter="true">
+      <outline text="**Introducción a Yii 2**" due="2019-11-25" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5a,ce5b,ce5c,ce5d,ce5e,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ce9b,ce9c,ce9e,ce9f,ce9g,ev1,ra1,ra4,ra5,ra6,ra9" progress_counter="true">
         <outline text="[link: Frameworks, microframeworks y librerías|https://en.wikipedia.org/wiki/Software_framework]"/>
         <outline text="Patrón Modelo-Vista-Controlador (MVC)" progress_counter="true">
           <outline text="Modelos"/>
@@ -903,46 +700,8 @@
           <outline text="Crear un proyecto desde cero, paso a paso."/>
           <outline text="Escribir programas sencillos, con formularios, validaciones sencillas y acceso a bases de datos."/>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA1">
-              <outline text="CE1.e"/>
-              <outline text="CE1.g"/>
-            </outline>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.a"/>
-              <outline text="CE5.b"/>
-              <outline text="CE5.c"/>
-              <outline text="CE5.d"/>
-              <outline text="CE5.e"/>
-              <outline text="CE5.g"/>
-              <outline text="CE5.h"/>
-            </outline>
-            <outline text="RA6">
-              <outline text="CE6.a"/>
-              <outline text="CE6.b"/>
-              <outline text="CE6.c"/>
-              <outline text="CE6.d"/>
-              <outline text="CE6.e"/>
-              <outline text="CE6.f"/>
-              <outline text="CE6.g"/>
-              <outline text="CE6.h"/>
-            </outline>
-            <outline text="RA9">
-              <outline text="CE9.b"/>
-              <outline text="CE9.c"/>
-              <outline text="CE9.e"/>
-              <outline text="CE9.f"/>
-              <outline text="CE9.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Estructura de una aplicación Yii 2**" due="2019-12-02" due_user_ids="139389" tags="ev1" progress_counter="true">
+      <outline text="**Estructura de una aplicación Yii 2**" due="2019-12-02" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ce9e,ce9f,ce9g,ev1,ra2,ra3,ra4,ra5,ra9" progress_counter="true">
         <outline text="A pequeña escala" progress_counter="true">
           <outline text="[link: Componentes|http://www.yiiframework.com/doc-2.0/guide-concept-components.html]" progress_counter="true">
             <outline text="La clase `yii\base\BaseObject`" progress_counter="true">
@@ -1007,51 +766,17 @@
           <outline text="¿Qué es una vista? ¿Dónde se almacenan? Ejemplo."/>
           <outline text="¿Qué es un filtro?"/>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA2"/>
-            <outline text="RA3"/>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.g"/>
-              <outline text="CE5.h"/>
-            </outline>
-            <outline text="RA9">
-              <outline text="CE9.e"/>
-              <outline text="CE9.f"/>
-              <outline text="CE9.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
       <outline text="---"/>
-      <outline text="**[link: Gestión de peticiones en Yii 2|http://www.yiiframework.com/doc-2.0/guide-README.html#handling-requests]**" due="2020-01-07" due_user_ids="139389" tags="ev2" progress_counter="true">
+      <outline text="**[link: Gestión de peticiones en Yii 2|http://www.yiiframework.com/doc-2.0/guide-README.html#handling-requests]**" due="2020-01-07" due_user_ids="139389" tags="ce4g,ce5d,ce5f,ce5g,ce5h,ev2,ra4,ra5" progress_counter="true">
         <outline text="[link: Introducción|http://www.yiiframework.com/doc-2.0/guide-runtime-overview.html]"/>
         <outline text="[link: Arranque (bootstrapping)|http://www.yiiframework.com/doc-2.0/guide-runtime-bootstrapping.html]"/>
         <outline text="[link: Enrutado y creación de URLs|http://www.yiiframework.com/doc-2.0/guide-runtime-routing.html]"/>
         <outline text="[link: Peticiones|http://www.yiiframework.com/doc-2.0/guide-runtime-requests.html]"/>
         <outline text="[link: Respuestas|http://www.yiiframework.com/doc-2.0/guide-runtime-responses.html]"/>
         <outline text="[link: Sesiones y cookies|http://www.yiiframework.com/doc-2.0/guide-runtime-sessions-cookies.html]"/>
-        <outline text="Ejercicios"/>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.d"/>
-              <outline text="CE5.f"/>
-              <outline text="CE5.g"/>
-              <outline text="CE5.h"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Acceso a bases de datos en Yii 2**" due="2020-01-13" due_user_ids="139389" tags="3d,ev2" progress_counter="true">
+      <outline text="**Acceso a bases de datos en Yii 2**" due="2020-01-13" due_user_ids="139389" tags="3d,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ce9e,ce9f,ce9g,ev2,ra2,ra3,ra4,ra5,ra6,ra9" progress_counter="true">
         <outline text="[link: DAO|https://www.yiiframework.com/doc/guide/2.0/en/db-dao]" progress_counter="true">
           <outline text="[link: `yii\db\Connection`|https://www.yiiframework.com/doc/api/2.0/yii-db-command]"/>
           <outline text="[link: `yii\db\Connection::createCommand()`|https://www.yiiframework.com/doc/api/2.0/yii-db-connection#createCommand()-detail]"/>
@@ -1151,38 +876,8 @@
             </outline>
           </outline>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA2"/>
-            <outline text="RA3"/>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.f"/>
-              <outline text="CE5.g"/>
-              <outline text="CE5.h"/>
-            </outline>
-            <outline text="RA6">
-              <outline text="CE6.a"/>
-              <outline text="CE6.b"/>
-              <outline text="CE6.c"/>
-              <outline text="CE6.d"/>
-              <outline text="CE6.e"/>
-              <outline text="CE6.f"/>
-              <outline text="CE6.g"/>
-              <outline text="CE6.h"/>
-            </outline>
-            <outline text="RA9">
-              <outline text="CE9.e"/>
-              <outline text="CE9.f"/>
-              <outline text="CE9.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Creación y validación de formularios en Yii 2**" due="2020-01-20" due_user_ids="139389" tags="ev2" progress_counter="true">
+      <outline text="**Creación y validación de formularios en Yii 2**" due="2020-01-20" due_user_ids="139389" tags="ce3e,ce3f,ce4g,ce5b,ce5d,ce5h,ce6f,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ce9e,ce9f,ce9g,ev2,ra2,ra3,ra4,ra5,ra6,ra8,ra9" progress_counter="true">
         <outline text="Creación de formularios" progress_counter="true">
           <outline text="ActiveForm"/>
           <outline text="`yii\helpers\Html`"/>
@@ -1201,44 +896,8 @@
           <outline text="[link: Validaciones en el cliente|https://www.yiiframework.com/doc/guide/2.0/en/input-validation#client-side-validation]" tags="opcional"/>
         </outline>
         <outline text="[link: Subida de archivos|https://www.yiiframework.com/doc/guide/2.0/en/input-file-upload]"/>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA2"/>
-            <outline text="RA3">
-              <outline text="CE3.e"/>
-              <outline text="CE3.f"/>
-            </outline>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.b"/>
-              <outline text="CE5.d"/>
-              <outline text="CE5.h"/>
-            </outline>
-            <outline text="RA6">
-              <outline text="CE6.f"/>
-              <outline text="CE6.h"/>
-            </outline>
-            <outline text="RA8">
-              <outline text="CE8.a"/>
-              <outline text="CE8.b"/>
-              <outline text="CE8.c"/>
-              <outline text="CE8.d"/>
-              <outline text="CE8.e"/>
-              <outline text="CE8.f"/>
-              <outline text="CE8.g"/>
-            </outline>
-            <outline text="RA9">
-              <outline text="CE9.e"/>
-              <outline text="CE9.f"/>
-              <outline text="CE9.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Visualización de datos en Yii 2**" due="2020-01-27" due_user_ids="139389" tags="ev2" progress_counter="true">
+      <outline text="**Visualización de datos en Yii 2**" due="2020-01-27" due_user_ids="139389" tags="ce4g,ce5b,ce5c,ce5d,ce5h,ce6f,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ce9e,ce9f,ce9g,ev2,ra2,ra3,ra4,ra5,ra6,ra8,ra9" progress_counter="true">
         <outline text="[link: Formateado de datos|https://www.yiiframework.com/doc/guide/2.0/en/output-formatting]" progress_counter="true">
           <outline text="[link: `yii\i18n\Formatter`|https://www.yiiframework.com/doc/api/2.0/yii-i18n-formatter]"/>
         </outline>
@@ -1319,42 +978,8 @@
         </outline>
         <outline text="[link: Scripts de cliente|http://www.yiiframework.com/doc-2.0/guide-output-client-scripts.html]"/>
         <outline text="Temas" tags="opcional"/>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA2"/>
-            <outline text="RA3"/>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.b"/>
-              <outline text="CE5.c"/>
-              <outline text="CE5.d"/>
-              <outline text="CE5.h"/>
-            </outline>
-            <outline text="RA6">
-              <outline text="CE6.f"/>
-              <outline text="CE6.h"/>
-            </outline>
-            <outline text="RA8">
-              <outline text="CE8.a"/>
-              <outline text="CE8.b"/>
-              <outline text="CE8.c"/>
-              <outline text="CE8.d"/>
-              <outline text="CE8.e"/>
-              <outline text="CE8.f"/>
-              <outline text="CE8.g"/>
-            </outline>
-            <outline text="RA9">
-              <outline text="CE9.e"/>
-              <outline text="CE9.f"/>
-              <outline text="CE9.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Seguridad y cacheado en Yii 2**" due="2020-02-03" due_user_ids="139389" tags="ev2" progress_counter="true">
+      <outline text="**Seguridad y cacheado en Yii 2**" due="2020-02-03" due_user_ids="139389" tags="ce4d,ce4e,ce4g,ce5e,ce5g,ce5h,ce6h,ce9e,ce9f,ce9g,ev2,ra2,ra3,ra4,ra5,ra6,ra8,ra9" progress_counter="true">
         <outline text="[link: Autenticación|https://www.yiiframework.com/doc/guide/2.0/en/security-authentication]" progress_counter="true">
           <outline text="Componente de aplicación `user`"/>
           <outline text="Clase identidad e interfaz `yii\web\IdentityInterface`"/>
@@ -1368,34 +993,8 @@
           <outline text="Cacheado de páginas"/>
           <outline text="Cacheado HTTP"/>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA2"/>
-            <outline text="RA3"/>
-            <outline text="RA4">
-              <outline text="CE4.d"/>
-              <outline text="CE4.e"/>
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.e"/>
-              <outline text="CE5.g"/>
-              <outline text="CE5.h"/>
-            </outline>
-            <outline text="RA6">
-              <outline text="CE6.h"/>
-            </outline>
-            <outline text="RA8"/>
-            <outline text="RA9">
-              <outline text="CE9.e"/>
-              <outline text="CE9.f"/>
-              <outline text="CE9.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Características adicionales de Yii 2**" due="2020-02-10" due_user_ids="139389" tags="ev2" progress_counter="true">
+      <outline text="**Características adicionales de Yii 2**" due="2020-02-10" due_user_ids="139389" tags="ce4g,ce5d,ce5g,ce5h,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ce9e,ce9f,ce9g,ev2,ra2,ra3,ra4,ra5,ra6,ra8,ra9" progress_counter="true">
         <outline text="AJAX y PJAX" progress_counter="true">
           <outline text="Validaciones Ajax"/>
           <outline text="PJAX" tags="opcional"/>
@@ -1406,40 +1005,8 @@
         <outline text="Migraciones"/>
         <outline text="[Extensiones](http://www.yiiframework.com/extensions/)"/>
         <outline text="[Paquetes](https://yiigist.com/)"/>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA2"/>
-            <outline text="RA3"/>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.d"/>
-              <outline text="CE5.g"/>
-              <outline text="CE5.h"/>
-            </outline>
-            <outline text="RA6">
-              <outline text="CE6.h"/>
-            </outline>
-            <outline text="RA8">
-              <outline text="CE8.a"/>
-              <outline text="CE8.b"/>
-              <outline text="CE8.c"/>
-              <outline text="CE8.d"/>
-              <outline text="CE8.e"/>
-              <outline text="CE8.f"/>
-              <outline text="CE8.g"/>
-            </outline>
-            <outline text="RA9">
-              <outline text="CE9.e"/>
-              <outline text="CE9.f"/>
-              <outline text="CE9.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Calidad**" due="2020-02-17" due_user_ids="139389" tags="ev2" progress_counter="true">
+      <outline text="**Calidad**" due="2020-02-17" due_user_ids="139389" tags="ce3g,ce4g,ce5g,ce5h,ce6e,ce6h,ce9e,ce9g,ev2,ra3,ra4,ra5,ra6,ra9" progress_counter="true">
         <outline text="[Pruebas](https://www.gitbook.com/book/jose/testing-book/)" progress_counter="true">
           <outline text="Tipos de pruebas">
             <outline text="Unitarias"/>
@@ -1481,31 +1048,8 @@
           <outline text="Usar fixtures para generar datos de prueba para Muéveme"/>
           <outline text="Verificar en CodeClimate si hay archivos fuente marcados como de mala calidad"/>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA3">
-              <outline text="CE3.g"/>
-            </outline>
-            <outline text="RA4">
-              <outline text="CE4.g"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.g"/>
-              <outline text="CE5.h"/>
-            </outline>
-            <outline text="RA6">
-              <outline text="CE6.e"/>
-              <outline text="CE6.h"/>
-            </outline>
-            <outline text="RA9">
-              <outline text="CE9.e"/>
-              <outline text="CE9.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Computación en la nube**" due="2020-02-24" due_user_ids="139389" tags="ev2" progress_counter="true">
+      <outline text="**Computación en la nube**" due="2020-02-24" due_user_ids="139389" tags="ce1a,ce1c,ce1d,ce1e,ce5h,ce6h,ce9e,ce9f,ce9g,ev2,ra1,ra5,ra6,ra9" progress_counter="true">
         <outline text="Entornos de ejecución" progress_counter="true">
           <outline text="Desarrollo" progress_counter="true"/>
           <outline text="Producción" progress_counter="true"/>
@@ -1529,30 +1073,8 @@
         </outline>
         <outline text="[Escalabilidad](https://github.com/samdark/yii2-cookbook/blob/master/book/scaling.md)" tags="opcional"/>
         <outline text="[Alta disponibilidad](http://thehighload.com/)" tags="opcional"/>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA1">
-              <outline text="CE1.a"/>
-              <outline text="CE1.c"/>
-              <outline text="CE1.d"/>
-              <outline text="CE1.e"/>
-            </outline>
-            <outline text="RA5">
-              <outline text="CE5.h"/>
-            </outline>
-            <outline text="RA6">
-              <outline text="CE6.h"/>
-            </outline>
-            <outline text="RA9">
-              <outline text="CE9.e"/>
-              <outline text="CE9.f"/>
-              <outline text="CE9.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Servicios web con REST en Yii 2**" due="2020-03-02" due_user_ids="139389" tags="ev2,opcional" progress_counter="true">
+      <outline text="**Servicios web con REST en Yii 2**" due="2020-03-02" due_user_ids="139389" tags="ce1a,ce1b,ce7a,ce7b,ce7c,ce7d,ce7e,ce7f,ce7g,ce8b,ce8f,ce8g,ce9c,ce9e,ce9f,ce9g,ev2,opcional,ra1,ra2,ra3,ra7,ra8,ra9" progress_counter="true">
         <outline text="Introducción"/>
         <outline text="Recursos"/>
         <outline text="Controladores"/>
@@ -1562,39 +1084,8 @@
         <outline text="Limitación de frecuencia de peticiones"/>
         <outline text="Versionado"/>
         <outline text="Gestión de errores"/>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA1">
-              <outline text="CE1.a"/>
-              <outline text="CE1.b"/>
-            </outline>
-            <outline text="RA2"/>
-            <outline text="RA3"/>
-            <outline text="RA7">
-              <outline text="CE7.a"/>
-              <outline text="CE7.b"/>
-              <outline text="CE7.c"/>
-              <outline text="CE7.d"/>
-              <outline text="CE7.e"/>
-              <outline text="CE7.f"/>
-              <outline text="CE7.g"/>
-            </outline>
-            <outline text="RA8">
-              <outline text="CE8.b"/>
-              <outline text="CE8.f"/>
-              <outline text="CE8.g"/>
-            </outline>
-            <outline text="RA9">
-              <outline text="CE9.c"/>
-              <outline text="CE9.e"/>
-              <outline text="CE9.f"/>
-              <outline text="CE9.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
-      <outline text="**Contenedores**" due="2020-03-09" due_user_ids="139389" tags="ev2,opcional" progress_counter="true">
+      <outline text="**Contenedores**" due="2020-03-09" due_user_ids="139389" tags="ce1a,ce1c,ce1d,ce1e,ce9e,ce9f,ce9g,ev2,opcional,ra1,ra9" progress_counter="true">
         <outline text="[Vagrant](https://www.vagrantup.com/)" progress_counter="true">
           <outline text="[PuPHPet](https://puphpet.com/)"/>
         </outline>
@@ -1606,22 +1097,6 @@
           </outline>
         </outline>
         <outline text="[PHPDocker](https://phpdocker.io/generator)"/>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad"/>
-          <outline text="Resultados de aprendizaje y criterios de evaluación asociados">
-            <outline text="RA1">
-              <outline text="CE1.a"/>
-              <outline text="CE1.c"/>
-              <outline text="CE1.d"/>
-              <outline text="CE1.e"/>
-            </outline>
-            <outline text="RA9">
-              <outline text="CE9.e"/>
-              <outline text="CE9.f"/>
-              <outline text="CE9.g"/>
-            </outline>
-          </outline>
-        </outline>
       </outline>
     </outline>
   </body>
