@@ -15,10 +15,20 @@
   }%
 }
 
+% Centra verticalmente las columnas en la diapositiva, y añade un espacio
+% entre cada elemento de las listas no numeradas (esa separación desaparece
+% misteriosamente cuando se usan columnas, no sé por qué):
+\let\oldcolumns\columns
+\let\oldendcolumns\endcolumns
+\renewenvironment{columns}[1][]
+{\oldcolumns\setlist[itemize]{parsep=1.5ex}}
+{\oldendcolumns}
+
 % Cambia varios tamaños de tipografías:
 \setbeamersize{text margin left=4em,text margin right=4em}
 \setbeamerfont{section title}{size={\fontsize{16}{18}}}
 \setbeamerfont{title}{size={\fontsize{18}{26}}}
+\setbeamerfont{subsubsection in toc}{size=\small}
 
 % Los bloques de código se muestran enmarcados:
 \DeclareTColorBox{caja}{}
@@ -26,13 +36,21 @@
       drop fuzzy shadow,breakable,
       boxrule=0.2mm,
       colback=black!4!white,
-      before skip=0.2cm,after skip=0.2cm,
+      beforeafter skip=0.4cm,
       top=0.1cm,
       bottom=0.1cm,
       left=0.1cm,
       right=0.1cm
     }
 
+\setbeamertemplate{itemize item}[triangle]
+\setbeamerfont*{itemize item}{size=\tiny}
+\setbeamertemplate{itemize subitem}[square]
+\setbeamertemplate{itemize subsubitem}[ball]
+
 % Corrige incompatibilidad entre enumitem y beamer
 % (no salen boliches en las listas itemize):
-\setlist[itemize]{label=\usebeamerfont*{itemize item}\usebeamercolor[fg]{itemize item}\usebeamertemplate{itemize item}}
+\setlist[itemize]{label=\usebeamerfont*{itemize item}\usebeamercolor[fg]{itemize item}\small\raise.2ex\hbox{\donotcoloroutermaths$\circ$}}
+\setlist[itemize,1]{label=\usebeamerfont*{itemize item}\usebeamercolor[fg]{itemize item}\usebeamertemplate{itemize item}}
+\setlist[itemize,2]{label=\usebeamerfont*{itemize item}\usebeamercolor[fg]{itemize item}\raise.4ex\hbox{\usebeamertemplate{itemize subitem}}}
+\setlist[itemize,3]{label=\usebeamerfont*{itemize item}\usebeamercolor[fg]{itemize item}\small\raise.2ex\hbox{\donotcoloroutermaths$\bullet$}}

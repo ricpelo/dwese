@@ -42,30 +42,14 @@ span.underline {
     text-decoration: underline;
 }
 
-/* Estilo para los algoritmos */
-div.line-block {
-    /* white-space: pre-line; */
-    /* font-family: monospace; */
-    max-height: inherit;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 5px 5px 8px lightgrey;
-    background: #fdf6ed;
-    text-align: left;
-    padding: 10px;
-    width: 80%;
-    margin: auto;
-    font-size: 80%;
-}
-
 div.column {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     width: 50%;
 }
 
 div.quizArea, div.quizResults {
-    height: 590px;
+/*    height: 590px; */
     box-shadow: 5px 5px 8px lightgrey;
     border-style: solid;
     border-width: 1px;
@@ -74,6 +58,7 @@ div.quizArea, div.quizResults {
 }
 
 ol.questions {
+    display: block;
     margin-left: 40px !important;
     margin-right: 40px !important;
 }
@@ -83,6 +68,10 @@ ul.answers input[type=radio] {
     top: -4px;
     transform: scale(1.5);
     margin-right: 10px;
+}
+
+a.tryAgain {
+    float: unset;
 }
 
 .line {
@@ -98,7 +87,7 @@ ul.answers input[type=radio] {
     font-weight: bold;
 }
 
-h3 .header-section-number, h4 .header-section-number {
+h4 .header-section-number {
     display: none;
 }
 
@@ -130,4 +119,62 @@ ol ol > li:before {
 .scrollable {
     height: 800px;
     overflow-y: auto !important;
+}
+
+.reveal ul {
+    list-style-type: square;
+}
+
+.reveal ul ul {
+    list-style-type: disc;
+}
+
+.reveal ul ul ul {
+    list-style-type: circle;
+}
+
+.reveal ul ul ul ul {
+    list-style-type: square;
+}
+
+/* Estilo para cajas y algoritmos */
+.reveal .caja, div.line-block {
+    border: solid;
+    border-radius: 0.5em;
+    text-align: left;
+    padding-left: 1ex;
+    padding-right: 1ex;
+    background: white;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 11px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+/* Estilo para algoritmos */
+div.line-block {
+    font-size: 80%;
+    padding: 1ex;
+}
+
+.reveal figcaption {
+    font-size: 85%;
+}
+
+.math.display {
+    display: table;
+    margin: auto;
+    margin-top: 0.6ex;
+}
+
+.katex .mathit {
+    font-family: unset !important;
+}
+
+.centered {
+    text-align: center !important;
+}
+
+.references {
+    text-align: left;
 }

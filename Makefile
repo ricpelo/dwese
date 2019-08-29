@@ -38,15 +38,18 @@ INDEX_LEO=index.leo
 DIAPOS=$(BUILDDIR)/diapositivas.md
 REVEAL=$(BUILDDIR_HTML)/reveal.js/js/reveal.js
 REVEAL_TEMPLATE=$(AUX)/revealjs.template
-LATEX_TEMPLATE=$(AUX)/beamer.template
+BEAMER_TEMPLATE=$(AUX)/beamer.template
+LATEX_TEMPLATE=$(AUX)/latex.template
 PREAMBULO_BEAMER=$(AUX)/preambulo-beamer.tex
 PREAMBULO_LATEX=$(AUX)/preambulo-latex.tex
 HEADER_INCLUDES=$(AUX)/header-includes.html
-INCLUDE_BEFORE=$(AUX)/include-before.html
+INCLUDE_BEFORE_HTML=$(AUX)/include-before.html
+INCLUDE_BEFORE_TEX=$(AUX)/include-before.tex
 HIGHLIGHT_STYLE=$(AUX)/solarized.theme
 PHP_XML=$(AUX)/php.xml
 CONSOLE_XML=$(AUX)/console.xml
 COMMON_PP=$(AUX)/common.pp
+CITATIONS_BIB=$(SRCDIR)/citations.bib
 
 # Listas de archivos
 
@@ -71,7 +74,7 @@ apuntes: $(APUNTES_PDF)
 prog: $(PROG_PDF)
 
 limpiar:
-	@rm -f $(IMAGES)/*.dat $(IMAGES)/*.gv $(IMAGES)/*.uml
+	@rm -f $(IMAGES)/*.dat $(IMAGES)/*.gv $(IMAGES)/*.uml $(IMAGES)/*.dot
 
 # Objetivos particulares
 
@@ -96,12 +99,16 @@ $(RACE_TEX): $(ESQUEMA_OPML) $(OPML)
 $(INDEX_LEO): $(ESQUEMA_OPML) $(OPML)
 	$(OPML) -u$(ESQUEMA_OPML) -eleo -s$(SRCDIR) > $(INDEX_LEO)
 
-$(BUILDDIR_HTML)/%.html: $(SRCDIR)/%.md $(PP) $(NODE_MODULES) $(PANDOC) $(REVEAL) $(REVEAL_TEMPLATE) $(HIGHLIGHT_STYLE) $(PHP_XML) $(CONSOLE_XML) $(HEADER_INCLUDES) $(INCLUDE_BEFORE)
+$(BUILDDIR_HTML)/%.html: $(SRCDIR)/%.md $(PP) $(NODE_MODULES) $(PANDOC) $(REVEAL) $(REVEAL_TEMPLATE) $(HIGHLIGHT_STYLE) $(PHP_XML) $(CONSOLE_XML) $(HEADER_INCLUDES) $(INCLUDE_BEFORE_HTML)
 	@echo "Generando $@..."
-	@$(PP) -DHTML -DCURSO=$(CURSO) -import $(COMMON_PP) $< | pandoc -s -t revealjs \
+	@$(PP) -DHTML -DCURSO=$(CURSO) -import $(COMMON_PP) $< | \
+		pandoc -s -t revealjs \
+		--filter=pandoc-citeproc \
+		--katex \
+		--bibliography=$(CITATIONS_BIB) \
 	    --template=$(REVEAL_TEMPLATE) \
 		-H $(HEADER_INCLUDES) \
-		-B $(INCLUDE_BEFORE) \
+		-B $(INCLUDE_BEFORE_HTML) \
 		--toc --toc-depth=1 -N \
 		--slide-level=4 \
 		--highlight-style=$(HIGHLIGHT_STYLE) \
@@ -113,13 +120,15 @@ $(BUILDDIR_HTML)/%.html: $(SRCDIR)/%.md $(PP) $(NODE_MODULES) $(PANDOC) $(REVEAL
 
 # Diapositivas en formato PDF
 
-$(BUILDDIR_PDF)/%.pdf: $(SRCDIR)/%.md $(PP) $(NODE_MODULES) $(PANDOC) $(LATEX_TEMPLATE) $(HIGHLIGHT_STYLE) $(PREAMBULO_BEAMER) $(PHP_XML) $(CONSOLE_XML) | $(ITHACA)
+$(BUILDDIR_PDF)/%.pdf: $(SRCDIR)/%.md $(PP) $(NODE_MODULES) $(PANDOC) $(BEAMER_TEMPLATE) $(HIGHLIGHT_STYLE) $(PREAMBULO_BEAMER) $(PHP_XML) $(CONSOLE_XML) | $(ITHACA)
 	@echo "Generando $@..."
 	@$(PP) -DBEAMER -DCURSO=$(CURSO) -import $(COMMON_PP) $< | \
 		pandoc -s -t beamer \
-		--template=$(LATEX_TEMPLATE) \
+		--filter=pandoc-citeproc \
+		--bibliography=$(CITATIONS_BIB) \
+		--template=$(BEAMER_TEMPLATE) \
 		--toc --toc-depth=1 -N \
-		--slide-level=3 \
+		--slide-level=4 \
 		-H $(PREAMBULO_BEAMER) \
 		--pdf-engine=xelatex \
 		--highlight-style=$(HIGHLIGHT_STYLE) \
@@ -129,18 +138,23 @@ $(BUILDDIR_PDF)/%.pdf: $(SRCDIR)/%.md $(PP) $(NODE_MODULES) $(PANDOC) $(LATEX_TE
 		-V mainfont=Lato \
 		-V monofont=FiraMono \
 		-V monofontoptions=Extension=.otf,UprightFont=*-Regular,BoldFont=*-Bold,AutoFakeSlant,BoldItalicFeatures={FakeSlant},Scale=MatchLowercase,Contextuals={Alternate} \
+		-V mathspec \
 		-V fontsize=8pt -V lang=es-ES -o $@
 
 # Apuntes en formato PDF
 
-$(BUILDDIR_APUNTES)/%-apuntes.pdf: $(SRCDIR)/%.md $(PP) $(NODE_MODULES) $(PANDOC) $(LATEX_TEMPLATE) $(HIGHLIGHT_STYLE) $(PREAMBULO_LATEX) $(CONSOLE_XML) $(PHP_XML)
+$(BUILDDIR_APUNTES)/%-apuntes.pdf: $(SRCDIR)/%.md $(PP) $(NODE_MODULES) $(PANDOC) $(LATEX_TEMPLATE) $(HIGHLIGHT_STYLE) $(PREAMBULO_LATEX) $(INCLUDE_BEFORE_TEX) $(CONSOLE_XML) $(PHP_XML)
 	@echo "Generando $@..."
 	@$(PP) -DLATEX -DCURSO=$(CURSO) -import $(COMMON_PP) $< | \
 		perl -0pe "s/\n\n---\n\n/\n\n/g" | \
 		pandoc -s -t latex \
+		--filter=pandoc-citeproc \
+		--bibliography=$(CITATIONS_BIB) \
 		--template=$(LATEX_TEMPLATE) \
-		--toc --toc-depth=2 -N \
+		--toc --toc-depth=3 -N \
+		--slide-level=4 \
 		-H $(PREAMBULO_LATEX) \
+		-B $(INCLUDE_BEFORE_TEX) \
 		--pdf-engine=xelatex \
 		--highlight-style=$(HIGHLIGHT_STYLE) \
 		--syntax-definition=$(PHP_XML) \
@@ -150,6 +164,7 @@ $(BUILDDIR_APUNTES)/%-apuntes.pdf: $(SRCDIR)/%.md $(PP) $(NODE_MODULES) $(PANDOC
 		-V mainfont=Lato \
 		-V monofont=FiraMono \
 		-V monofontoptions=Extension=.otf,UprightFont=*-Regular,BoldFont=*-Bold,AutoFakeSlant,BoldItalicFeatures={FakeSlant},Scale=MatchLowercase,Contextuals={Alternate} \
+		-V mathspec \
 		-V fontsize=10pt -V lang=es-ES -o $@
 
 # Objetivos auxiliares
@@ -161,7 +176,8 @@ $(PP):
 	sudo apt install default-jre graphviz librsvg2-bin npm
 
 $(NODE_MODULES):
-	npm install
+	npm install diagrams
+	patch -p0 < $(AUX)/flowchart.js.patch
 
 $(PANDOC):
 	$(SCRIPTS)/check-pandoc.sh

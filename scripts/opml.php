@@ -168,11 +168,15 @@ class Resumen extends Esquema
 
     protected function ev($tags)
     {
+        $ret = '';
+        $regexes = ['/ev\d+/', '/opcional/'];
         $matches = [];
-        if (preg_match('/ev\d+/', $tags, $matches)) {
-            return $matches[0];
+        foreach ($regexes as $regex) {
+            if (preg_match($regex, $tags, $matches)) {
+                $ret .= ' \\' . $matches[0];
+            }
         }
-        return '';
+        return $ret;
     }
 
     protected function trad(SimpleXMLElement $elem, $nivel = 0)
@@ -186,7 +190,7 @@ class Resumen extends Esquema
             if ($text != '---') {
                 $text = $this->filtrar($text);
                 $ret .= $ud++ . '. ' . $text;
-                $ret .= ' \\' . $this->ev($attr->tags) . ' & ';
+                $ret .= $this->ev($attr->tags) . ' & ';
                 $ret .= $attr->due . ' \tabularnewline' . PHP_EOL;
                 $ret .= '\hline' . PHP_EOL;
             }
@@ -314,8 +318,8 @@ class Leo extends Resumen
     {
         $text = mb_strtolower($text);
         $text = str_replace(
-            ['á', 'é', 'í', 'ó', 'ú', 'ñ', ' ', '*'],
-            ['a', 'e', 'i', 'o', 'u', 'n', '-', ''],
+            ['á', 'é', 'í', 'ó', 'ú', 'ñ', ' ', '*', ','],
+            ['a', 'e', 'i', 'o', 'u', 'n', '-', '', ''],
             $text
         );
         return $text . '.md';
