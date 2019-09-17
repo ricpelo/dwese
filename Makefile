@@ -1,4 +1,4 @@
-.PHONY: all html pdf prog clean limpiar serve touch $(ITHACA)
+.PHONY: all html pdf prog clean limpiar serve touch markdown sobrantes $(ITHACA)
 
 CURSO=2019/2020
 
@@ -188,6 +188,8 @@ $(ITHACA):
 
 $(REVEAL):
 	git submodule update --init --recursive
+	git submodule foreach git checkout master
+	git submodule foreach git pull
 
 clean:
 	rm -rf $(OBJECTS_HTML) $(OBJECTS_PDF) $(APUNTES_PDF) $(ITHACA_DST)/$(ITHACA) $(PROG_PDF)
@@ -200,3 +202,6 @@ touch:
 
 markdown:
 	scripts/opml.php -u programacion/esquema.opml -emarkdown >/dev/null
+
+sobrantes:
+	@$(SCRIPTS)/sobrantes.sh $(IMAGES) $(SRCDIR)

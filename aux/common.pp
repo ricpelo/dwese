@@ -13,6 +13,7 @@ DEFINICIONES GENERALES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 scale 2
 skinparam backgroundColor transparent
+skinparam defaultFontName Lato
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !define(DOTCOMMON)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -25,6 +26,14 @@ skinparam backgroundColor transparent
 ~~~~~~~~~~~~~~~~~~~~~
 MACROS DE USO GENERAL
 ~~~~~~~~~~~~~~~~~~~~~
+
+!comment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Macros para hacer producciones en notación EBNF
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(NT)(!COLOR(teal)(!ifdef(HTML)(*\<!1\>*)(\textit{<!PYNT(!1)>})))
+!define(T)(**`!1`**)
 
 !comment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -88,10 +97,10 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 !define(ALGO)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \Begin{caja}
-\raggedright
-\small
-!PYALGO(!1)
-\End{caja}
+    \raggedright
+    \small
+    !PYALGO(!1)
+    \End{caja}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !define(CENTRAR)
@@ -183,9 +192,9 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \Begin{center}
 
-!ifne(!5)()(!DOT5(!1)(!2)(!3)(!4)(!5))(!ifne(!4)()(!DOT4(!1)(!2)(!3)(!4))(!ifne(!3)()(!DOT3(!1)(!2)(!3))(!DOT2(!1)(!2))))
+  !ifne(!5)()(!DOT5(!1)(!2)(!3)(!4)(!5))(!ifne(!4)()(!DOT4(!1)(!2)(!3)(!4))(!ifne(!3)()(!DOT3(!1)(!2)(!3))(!DOT2(!1)(!2))))
 
-\End{center}
+  \End{center}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !comment
@@ -272,13 +281,15 @@ print(x.replace('"', '\\"'))
 ~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+!define(PYNT)(!python3(print("!1".replace('_', '\\_'))))
+
 !define(PYALGO)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !python3
 ~~~~~~~~~~~~~~~
 x = r"""!1"""
 # x = x.replace('\\', '\\\\')
-print('| ' + x.replace("\n", "\n| "))
+print('    | ' + x.replace("\n", "\n| "))
 ~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
