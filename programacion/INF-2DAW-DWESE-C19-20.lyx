@@ -335,7 +335,8 @@ arraystretch}{1.5}%
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename image1.png
-	scale 30
+	lyxscale 10
+	scale 5
 
 \end_inset
 
@@ -376,7 +377,7 @@ PROGRAMACIÓN ANUAL
 \begin_layout Plain Layout
 
 \series bold
-MD7101
+MD8101
 \end_layout
 
 \end_inset

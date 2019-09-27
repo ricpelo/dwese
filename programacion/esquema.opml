@@ -2,12 +2,12 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Tue, 17 Sep 2019 09:53:13 +0000</dateModified>
+    <dateModified>Fri, 27 Sep 2019 10:13:18 +0000</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
     <outline text="[1] **CONTENIDOS**" tags="contenidos" progress_counter="true">
-      <outline text="**Sistemas de control de versiones I**" due="2019-09-16" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ev1,ra1,ra4" progress_counter="true">
+      <outline text="**Sistemas de control de versiones I**" due="2019-09-17" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ev1,ra1,ra4" progress_counter="true">
         <outline text="Preparación del entorno de desarrollo" progress_counter="true">
           <outline text="Instalación automatizada" progress_counter="true">
             <outline text="Acciones previas" progress_counter="true">
@@ -105,7 +105,7 @@
           </outline>
         </outline>
       </outline>
-      <outline text="**Sistemas de control de versiones II**" due="2019-09-23" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ev1,ra1,ra4" progress_counter="true">
+      <outline text="**Sistemas de control de versiones II**" due="2019-09-24" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ev1,ra1,ra4" progress_counter="true">
         <outline text="Ramas locales" progress_counter="true">
           <outline text="`branch`"/>
           <outline text="`merge`" progress_counter="true">
@@ -121,7 +121,7 @@
         </outline>
         <outline text="Ramas remotas" progress_counter="true">
           <outline text="Orígenes remotos" progress_counter="true">
-            <outline text="Directorios locales"/>
+            <outline text="Directorios locales" tags="no_impartido"/>
             <outline text="Servidores remotos con repositorios compartidos"/>
             <outline text="`remote [add|show] origin`"/>
           </outline>
@@ -169,7 +169,7 @@
           <outline text="Sigue el tutorial de [Meghan Nelson](http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners) e indica el repositorio resultante."/>
         </outline>
       </outline>
-      <outline text="**Introducción a la tecnología web**" due="2019-09-30" due_user_ids="139389" tags="ce1a,ce1b,ce1c,ce1d,ce1e,ce1g,ev1,ra1" progress_counter="true">
+      <outline text="**Introducción a la tecnología web**" due="2019-10-01" due_user_ids="139389" tags="ce1a,ce1b,ce1c,ce1d,ce1e,ce1g,ev1,ra1" progress_counter="true">
         <outline text="Introducción al desarrollo web" progress_counter="true">
           <outline text="Conceptos básicos" progress_counter="true">
             <outline text="Navegadores y servidores web"/>
@@ -233,7 +233,7 @@
           <outline text="Sitios virtuales"/>
         </outline>
       </outline>
-      <outline text="**[link: Conceptos básicos de PHP I|https://ricpelo.github.io/libro-dwese/conceptos-basicos-de-php.html]**" due="2019-10-07" due_user_ids="139389" tags="ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
+      <outline text="**[link: Conceptos básicos de PHP I|https://ricpelo.github.io/libro-dwese/conceptos-basicos-de-php.html]**" due="2019-10-08" due_user_ids="139389" tags="ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
         <outline text="Introducción a PHP" progress_counter="true">
           <outline text="[link: Página web de PHP|http://php.net]"/>
           <outline text="Instalación de PHP"/>
@@ -333,7 +333,7 @@
           <outline text="[link: `defined()`|http://php.net/manual/es/function.defined.php]"/>
         </outline>
       </outline>
-      <outline text="**Conceptos básicos de PHP II**" due="2019-10-14" due_user_ids="139389" tags="ce2d,ce2e,ce2g,ce3a,ce3b,ce3c,ce3d,ce3g,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
+      <outline text="**Conceptos básicos de PHP II**" due="2019-10-15" due_user_ids="139389" tags="ce2d,ce2e,ce2g,ce3a,ce3b,ce3c,ce3d,ce3g,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
         <outline text="Flujo de control" progress_counter="true">
           <outline text="[link: Estructuras de control|http://php.net/manual/es/language.control-structures.php]" progress_counter="true">
             <outline text="Secuencia"/>
@@ -390,7 +390,7 @@
           <outline text="[link: Isograma|https://github.com/iesdonana/isograma]"/>
         </outline>
       </outline>
-      <outline text="**Desarrollo de aplicaciones con PHP I**" due="2019-10-21" due_user_ids="139389" tags="ce1a,ce1b,ce1d,ce1f,ce2a,ce2b,ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce3a,ce3b,ce3c,ce3d,ce3e,ce3f,ce3g,ce4g,ce5d,ce5g,ce5h,ev1,ra1,ra2,ra3,ra4,ra5" progress_counter="true">
+      <outline text="**Desarrollo de aplicaciones con PHP I**" due="2019-10-22" due_user_ids="139389" tags="ce1a,ce1b,ce1d,ce1f,ce2a,ce2b,ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce3a,ce3b,ce3c,ce3d,ce3e,ce3f,ce3g,ce4g,ce5d,ce5g,ce5h,ev1,ra1,ra2,ra3,ra4,ra5" progress_counter="true">
         <outline text="[SAPIs](http://stackoverflow.com/questions/9948008/what-is-sapi-and-when-would-you-use-it)" progress_counter="true">
           <outline text="[link: CLI: Uso en línea de comandos|http://php.net/manual/es/features.commandline.differences.php]" progress_counter="true">
             <outline text="[link: `$argc` y `$argv`|http://php.net/manual/es/reserved.variables.argv.php]"/>
@@ -455,7 +455,7 @@
           </outline>
         </outline>
       </outline>
-      <outline text="**Persistencia de datos con PHP**" due="2019-10-28" due_user_ids="139389" tags="ce4a,ce4b,ce4c,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6e,ce6g,ev1,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
+      <outline text="**Persistencia de datos con PHP**" due="2019-10-29" due_user_ids="139389" tags="ce4a,ce4b,ce4c,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6e,ce6g,ev1,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
         <outline text="[link: PDO (PHP Data Objects)|http://php.net/manual/es/book.pdo.php]" progress_counter="true">
           <outline text="[link: Clase `PDO`|http://php.net/manual/es/class.pdo.php]" progress_counter="true">
             <outline text="[link: `__construct()`|http://php.net/manual/es/pdo.construct.php]"/>
@@ -507,7 +507,7 @@
           <outline text="[link: Cross-Site Request Forgery (CSRF)|https://diego.com.es/ataques-csrf-cross-site-request-forgery-en-php]"/>
         </outline>
       </outline>
-      <outline text="**Desarrollo de aplicaciones con PHP II**" due="2019-11-04" due_user_ids="139389" tags="ce1a,ce4a,ce4b,ce4c,ce4d,ce4e,ce4f,ce4g,ce5a,ce5b,ce5d,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev1,ra1,ra4,ra5,ra6" progress_counter="true">
+      <outline text="**Desarrollo de aplicaciones con PHP II**" due="2019-11-05" due_user_ids="139389" tags="ce1a,ce4a,ce4b,ce4c,ce4d,ce4e,ce4f,ce4g,ce5a,ce5b,ce5d,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev1,ra1,ra4,ra5,ra6" progress_counter="true">
         <outline text="Programación de *CRUD* básico" progress_counter="true">
           <outline text="Ejemplo de aplicación: *Muéveme*"/>
           <outline text="Ejemplo de aplicación: *FilmAffinity*"/>
@@ -536,7 +536,7 @@
           </outline>
         </outline>
       </outline>
-      <outline text="**Programación avanzada en PHP**" due="2019-11-11" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ev1,ra2,ra3,ra4,ra5" progress_counter="true">
+      <outline text="**Programación avanzada en PHP**" due="2019-11-12" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ev1,ra2,ra3,ra4,ra5" progress_counter="true">
         <outline text="[link: Diseño de aplicaciones orientadas a objetos|http://php.net/manual/es/language.oop5.php]" progress_counter="true">
           <outline text="[link: Clases|http://php.net/manual/es/language.oop5.basic.php]"/>
           <outline text="[link: Propiedades|http://php.net/manual/es/language.oop5.properties.php]" progress_counter="true">
@@ -575,7 +575,7 @@
           <outline text="`array_map()` y `array_reduce()`"/>
         </outline>
       </outline>
-      <outline text="**Interoperabilidad**" due="2019-11-18" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5g,ce5h,ce9a,ce9b,ce9e,ev1,ra1,ra4,ra5,ra9" progress_counter="true">
+      <outline text="**Interoperabilidad**" due="2019-11-19" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5g,ce5h,ce9a,ce9b,ce9e,ev1,ra1,ra4,ra5,ra9" progress_counter="true">
         <outline text="[link: Versionado semántico|https://semver.org/lang/es/]"/>
         <outline text="[link: Composer|https://getcomposer.org/]" progress_counter="true">
           <outline text="Paquetes"/>
@@ -634,7 +634,7 @@
           <outline text="De buscar paquetes en Packagist que tengan una funcionalidad concreta y usarlos en un ejemplo"/>
         </outline>
       </outline>
-      <outline text="**Introducción a Yii 2**" due="2019-11-25" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5a,ce5b,ce5c,ce5d,ce5e,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ce9b,ce9c,ce9e,ce9f,ce9g,ev1,ra1,ra4,ra5,ra6,ra9" progress_counter="true">
+      <outline text="**Introducción a Yii 2**" due="2019-11-26" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5a,ce5b,ce5c,ce5d,ce5e,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ce9b,ce9c,ce9e,ce9f,ce9g,ev1,ra1,ra4,ra5,ra6,ra9" progress_counter="true">
         <outline text="[link: Frameworks, microframeworks y librerías|https://en.wikipedia.org/wiki/Software_framework]"/>
         <outline text="Patrón Modelo-Vista-Controlador (MVC)" progress_counter="true">
           <outline text="Modelos"/>
@@ -675,7 +675,7 @@
           <outline text="Escribir programas sencillos, con formularios, validaciones sencillas y acceso a bases de datos."/>
         </outline>
       </outline>
-      <outline text="**Estructura de una aplicación Yii 2**" due="2019-12-02" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ce9e,ce9f,ce9g,ev1,ra2,ra3,ra4,ra5,ra9" progress_counter="true">
+      <outline text="**Estructura de una aplicación Yii 2**" due="2019-12-03" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ce9e,ce9f,ce9g,ev1,ra2,ra3,ra4,ra5,ra9" progress_counter="true">
         <outline text="A pequeña escala" progress_counter="true">
           <outline text="[link: Componentes|http://www.yiiframework.com/doc-2.0/guide-concept-components.html]" progress_counter="true">
             <outline text="La clase `yii\base\BaseObject`" progress_counter="true">
