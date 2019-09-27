@@ -96,11 +96,8 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 
 !define(ALGO)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\Begin{caja}
-    \raggedright
-    \small
-    !PYALGO(!1)
-    \End{caja}
+\Begin{caja}\raggedright\small
+   !PYALGO(!1)\End{caja}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !define(CENTRAR)
@@ -152,11 +149,10 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 
 !define(IMG)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\Begin{center}
-
+!CENTRAR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ![!2](!IMAGES/!1){!ifdef(LATEX)(!4)(!3) !WIDTH}
-
-\End{center}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !comment
@@ -176,11 +172,10 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 
 !define(UML)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\Begin{center}
-
+!CENTRAR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !ifne(!5)()(!UML5(!1)(!2)(!3)(!4)(!5))(!ifne(!4)()(!UML4(!1)(!2)(!3)(!4))(!ifne(!3)()(!UML3(!1)(!2)(!3))(!UML2(!1)(!2))))
-
-\End{center}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !comment
@@ -190,11 +185,10 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 
 !define(DOT)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\Begin{center}
-
+!CENTRAR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   !ifne(!5)()(!DOT5(!1)(!2)(!3)(!4)(!5))(!ifne(!4)()(!DOT4(!1)(!2)(!3)(!4))(!ifne(!3)()(!DOT3(!1)(!2)(!3))(!DOT2(!1)(!2))))
-
-  \End{center}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !comment
@@ -289,7 +283,7 @@ print(x.replace('"', '\\"'))
 ~~~~~~~~~~~~~~~
 x = r"""!1"""
 # x = x.replace('\\', '\\\\')
-print('    | ' + x.replace("\n", "\n| "))
+print(' | ' + x.replace("\n", "\n| "))
 ~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

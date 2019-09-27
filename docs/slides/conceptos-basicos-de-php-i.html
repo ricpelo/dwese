@@ -62,7 +62,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #d33682; } /* Float */
 code span.fu { color: #268bd2; } /* Function */
-code span.im { } /* Import */
+code span.im { font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #268bd2; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -96,6 +96,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       if (mathElements[i].tagName == "SPAN") { katex.render(texText.data, mathElements[i], { displayMode: mathElements[i].classList.contains("display"), throwOnError: false } );
     }}});</script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <style type="text/css">
       #header-left {
           position: absolute;
@@ -163,6 +164,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         function buscar(nd, level, hr) {
             if (!nd.classList.contains('level' + (level - 1))) {
                 for (var n = nd; n != null; n = n.previousSibling) {
+                    if (n.nodeType == Node.TEXT_NODE) {
+                        continue;
+                    }
                     var cl = n.classList;
                     if (cl.contains('level' + level)) {
                         var h = n.querySelector('h' + level);
@@ -182,11 +186,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
                         if (a !== null) {
                             a.href = href;
                         }
+                        if (hr.innerHTML != '') {
+                            hr.innerHTML = ' &mdash; ' + hr.innerHTML;
+                        }
+                        hr.insertBefore(el, hr.firstChild);
                     }
-                    if (hr.innerHTML != '') {
-                        hr.innerHTML = ' &mdash; ' + hr.innerHTML;
-                    }
-                    hr.insertBefore(el, hr.firstChild);
                     break;
                 }
             }
@@ -240,9 +244,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <strong>ecuaciones</strong><br />
         <span class="math inline">x + 0 = 0</span><br />
         <span class="math inline">x + suc(y) = suc(x+y)</span><br />
-<strong>fspec</strong></div></section><section id="página-web-de-php" class="title-slide slide level2"><h2><span class="header-section-number">1.2</span> <a href="http://php.net">Página web de PHP</a></h2><figure>
+<strong>fspec</strong></div></section><section id="página-web-de-php" class="title-slide slide level2"><h2><span class="header-section-number">1.2</span> <a href="http://php.net">Página web de PHP</a></h2><div class="centered">
+<figure>
 <img data-src="images/prueba.svg" alt="Prueba de diagrama de flujo" class="plain" style="width:40.0%" /><figcaption>Prueba de diagrama de flujo</figcaption>
-</figure></section><section id="instalación-de-php" class="title-slide slide level2"><h2><span class="header-section-number">1.3</span> Instalación de PHP</h2><div class="sourceCode" id="cb1"><pre class="sourceCode php scrollable"><code class="sourceCode php"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">&lt;?php</span></a>
+</figure>
+</div></section><section id="instalación-de-php" class="title-slide slide level2"><h2><span class="header-section-number">1.3</span> Instalación de PHP</h2><div class="sourceCode" id="cb1"><pre class="sourceCode php scrollable"><code class="sourceCode php"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">&lt;?php</span></a>
 <a class="sourceLine" id="cb1-2" title="2"></a>
 <a class="sourceLine" id="cb1-3" title="3"><span class="va">$j</span> = <span class="fu">json_decode</span><span class="ot">(</span><span class="va">$argv</span><span class="ot">[</span><span class="dv">1</span><span class="ot">],</span> <span class="kw">true</span><span class="ot">);</span></a>
 <a class="sourceLine" id="cb1-4" title="4"><span class="co">// print_r($j);</span></a>
@@ -384,7 +390,6 @@ ricpelo’s note: Si se compara un número con un string o la comparación impli
     </div>
   </div>
 
-  <script src="reveal.js/lib/js/head.min.js"></script>
   <script src="reveal.js/js/reveal.js"></script>
 
   <script>

@@ -62,7 +62,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #d33682; } /* Float */
 code span.fu { color: #268bd2; } /* Function */
-code span.im { } /* Import */
+code span.im { font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #268bd2; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -88,6 +88,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <style type="text/css">
       #header-left {
           position: absolute;
@@ -155,6 +156,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         function buscar(nd, level, hr) {
             if (!nd.classList.contains('level' + (level - 1))) {
                 for (var n = nd; n != null; n = n.previousSibling) {
+                    if (n.nodeType == Node.TEXT_NODE) {
+                        continue;
+                    }
                     var cl = n.classList;
                     if (cl.contains('level' + level)) {
                         var h = n.querySelector('h' + level);
@@ -174,11 +178,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
                         if (a !== null) {
                             a.href = href;
                         }
+                        if (hr.innerHTML != '') {
+                            hr.innerHTML = ' &mdash; ' + hr.innerHTML;
+                        }
+                        hr.insertBefore(el, hr.firstChild);
                     }
-                    if (hr.innerHTML != '') {
-                        hr.innerHTML = ' &mdash; ' + hr.innerHTML;
-                    }
-                    hr.insertBefore(el, hr.firstChild);
                     break;
                 }
             }
@@ -249,7 +253,6 @@ ricpelo’s note: No da error ni advertencia si la variable no existe.</p></sect
     </div>
   </div>
 
-  <script src="reveal.js/lib/js/head.min.js"></script>
   <script src="reveal.js/js/reveal.js"></script>
 
   <script>
