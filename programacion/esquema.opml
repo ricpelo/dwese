@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Fri, 27 Sep 2019 10:13:18 +0000</dateModified>
+    <dateModified>Wed, 09 Oct 2019 10:58:59 +0000</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
@@ -91,19 +91,6 @@
         <outline text="Ejercicios" progress_counter="true">
           <outline text="Sigue el tutorial de [Git Immersion](https://esparta.github.io/gitimmersion-spanish/index.html) desde el LAB3 hasta el LAB20, comprime y envía el directorio resultante."/>
         </outline>
-        <outline text="Metadatos">
-          <outline text="Objetivos de la unidad">
-            <outline text="Reconocer la importancia y la necesidad de usar un sistema de control de versiones durante el desarrollo de software."/>
-            <outline text="Reconocer la utilidad de un sistema de control de versiones en tareas tan diversas como documentación, copias de seguridad, colaboración, despliegue de aplicaciones, etc."/>
-            <outline text="Entender la diferencia entre sistemas de control de versiones centralizados y distribuidos, y cómo estos últimos superan abiertamente a los primeros."/>
-            <outline text="Reconocer a Git como un sistema de control de versiones distribuido."/>
-            <outline text="Reconocer la importancia que tiene Git en el panorama actual de desarrollo de software."/>
-            <outline text="Entender los conceptos de repositorio, directorio de trabajo, stage, commit, log."/>
-            <outline text="Aprender el funcionamiento básico de Git en un repositorio local."/>
-            <outline text="Aprender a moverse a través del tiempo por los commits de un repositorio Git."/>
-            <outline text="Aprender a corregir commits creando nuevos commits."/>
-          </outline>
-        </outline>
       </outline>
       <outline text="**Sistemas de control de versiones II**" due="2019-09-24" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ev1,ra1,ra4" progress_counter="true">
         <outline text="Ramas locales" progress_counter="true">
@@ -115,7 +102,7 @@
           </outline>
           <outline text="Resolución de conflictos"/>
           <outline text="`rebase`"/>
-          <outline text="Ejercicios" progress_counter="true">
+          <outline text="Ejercicios" tags="ejercicios" progress_counter="true">
             <outline text="Sigue el tutorial de [Git Immersion](https://esparta.github.io/gitimmersion-spanish/index.html) desde el LAB24 hasta el LAB35, comprime y envía el directorio resultante."/>
           </outline>
         </outline>
@@ -135,13 +122,13 @@
             <outline text="`fetch`"/>
             <outline text="`pull`"/>
           </outline>
-          <outline text="Eliminar ramas remotas" tags="no_impartido"/>
+          <outline text="Eliminar ramas remotas"/>
           <outline text="Etiquetas remotas" progress_counter="true">
             <outline text="`git push origin mi_etiqueta`"/>
             <outline text="`git push --tags`"/>
             <outline text="`git push --delete origin mi_etiqueta`"/>
           </outline>
-          <outline text="Ejercicios" progress_counter="true">
+          <outline text="Ejercicios" tags="ejercicios" progress_counter="true">
             <outline text="Sigue el tutorial de [Git Immersion](https://esparta.github.io/gitimmersion-spanish/index.html) desde el LAB36 hasta el LAB49, comprime y envía el directorio resultante."/>
           </outline>
         </outline>
@@ -164,8 +151,8 @@
             <outline text="[GitHub Classroom](https://classroom.github.com/)"/>
           </outline>
         </outline>
-        <outline text="Ejercicios" progress_counter="true">
-          <outline text="Sigue el tutorial de [Hello World](https://guides.github.com/activities/hello-world/) e indica el repositorio resultante."/>
+        <outline text="Ejercicios" tags="ejercicios" progress_counter="true">
+          <outline text="Sigue el tutorial de [Hello World](https://guides.github.com/activities/hello-world/) e indica el repositorio resultante." tags="no_impartido"/>
           <outline text="Sigue el tutorial de [Meghan Nelson](http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners) e indica el repositorio resultante."/>
         </outline>
       </outline>
@@ -216,9 +203,9 @@
           <outline text="Experimentos" progress_counter="true">
             <outline text="`telnet` (a un servidor)"/>
             <outline text="`netcat` (desde un navegador)"/>
-            <outline text="`curl -i -XPOST “http://…” | pygmentize -l http`"/>
-            <outline text="[link: `http`|https://httpie.org/]"/>
-            <outline text="[Google Chrome Developer Tools](http://www.emezeta.com/articulos/10-trucos-para-google-chrome-developer-tools)"/>
+            <outline text="`curl -i -XPOST “http://…” | pygmentize -l http`" tags="no_impartido"/>
+            <outline text="[link: `http`|https://httpie.org/]" tags="no_impartido"/>
+            <outline text="[Google Chrome Developer Tools](http://www.emezeta.com/articulos/10-trucos-para-google-chrome-developer-tools)" tags="no_impartido"/>
           </outline>
           <outline text="Envío de datos al servidor" progress_counter="true">
             <outline text="Mediante GET"/>
@@ -227,7 +214,7 @@
           </outline>
           <outline text="Cookies"/>
         </outline>
-        <outline text="Apache básico" tags="opcional" progress_counter="true">
+        <outline text="Apache básico" tags="no_impartido,opcional" progress_counter="true">
           <outline text="Instalación"/>
           <outline text="Configuración básica"/>
           <outline text="Sitios virtuales"/>
