@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Wed, 09 Oct 2019 10:58:59 +0000</dateModified>
+    <dateModified>Mon, 04 May 2020 18:49:12 +0000</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
@@ -299,7 +299,7 @@
               <outline text="[`strval()`](http://php.net/manual/es/function.strval.php)"/>
               <outline text="[`boolval()`](http://php.net/manual/es/function.boolval.php)"/>
             </outline>
-            <outline text="Funciones de formateado numérico" progress_counter="true">
+            <outline text="Funciones de formateado numérico" tags="no_impartido" progress_counter="true">
               <outline text="[`number_format()`](http://php.net/manual/es/function.number-format.php)"/>
               <outline text="[`money_format()`](http://php.net/manual/es/function.money-format.php)" progress_counter="true">
                 <outline text="[`setlocale()`](http://php.net/manual/es/function.setlocale.php)"/>
@@ -381,9 +381,9 @@
         <outline text="[SAPIs](http://stackoverflow.com/questions/9948008/what-is-sapi-and-when-would-you-use-it)" progress_counter="true">
           <outline text="[link: CLI: Uso en línea de comandos|http://php.net/manual/es/features.commandline.differences.php]" progress_counter="true">
             <outline text="[link: `$argc` y `$argv`|http://php.net/manual/es/reserved.variables.argv.php]"/>
-            <outline text="[link: Flujos de entrada/salida|http://php.net/manual/es/features.commandline.io-streams.php]"/>
+            <outline text="[link: Flujos de entrada/salida|http://php.net/manual/es/features.commandline.io-streams.php]" tags="no_impartido,opcional"/>
           </outline>
-          <outline text="Apache" progress_counter="true">
+          <outline text="Apache" tags="no_impartido,opcional" progress_counter="true">
             <outline text="[link: Integración de PHP con Apache|https://stackoverflow.com/questions/2712825/what-is-mod-php]"/>
             <outline text="PHP como lenguaje embebido"/>
             <outline text="[link: Etiqueta `&lt;?=`|http://php.net/manual/es/function.echo.php]"/>
@@ -458,7 +458,7 @@
             <outline text="[link: `rowCount()`|http://php.net/manual/es/pdostatement.rowcount.php]"/>
           </outline>
           <outline text="Correspondencias de tipos entre SQL y PHP"/>
-          <outline text="Transacciones" progress_counter="true">
+          <outline text="Transacciones" tags="no_impartido" progress_counter="true">
             <outline text="`$pdo-&gt;beginTransaction();`"/>
             <outline text="`$pdo-&gt;commit();`"/>
             <outline text="`$pdo-&gt;rollBack();`"/>
@@ -609,7 +609,7 @@
           <outline text="[link: PSR-11: Extended Coding Style Guide (borrador)|https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md]"/>
           <outline text="[link: PSR-19: PHPDoc tags (borrador)|https://github.com/php-fig/fig-standards/blob/master/proposed/phpdoc-tags.md]"/>
         </outline>
-        <outline text="Paquetes de Atom y herramientas externas" tags="opcional" progress_counter="true">
+        <outline text="Paquetes de Atom y herramientas externas" tags="no_impartido,opcional" progress_counter="true">
           <outline text="PHP_CodeSniffer"/>
           <outline text="PHP-CS-Fixer"/>
           <outline text="Yii2-Shell"/>
@@ -821,6 +821,7 @@
           <outline text="[link: Relaciones|https://www.yiiframework.com/doc/guide/2.0/en/db-active-record#relational-data]" progress_counter="true">
             <outline text="[link: Encadenamiento de relaciones|http://www.yiiframework.com/doc-2.0/guide-db-active-record.html#multi-table-relations]"/>
           </outline>
+          <outline text="[Carga ansiosa y carga perezosa](https://www.yiiframework.com/doc/guide/2.0/en/db-active-record#lazy-eager-loading)"/>
           <outline text="[link: `joinWith()`|https://www.yiiframework.com/doc/guide/2.0/en/db-active-record#joining-with-relations]"/>
           <outline text="[link: Atributos virtuales|http://www.yiiframework.com/doc-2.0/guide-db-active-record.html#selecting-extra-fields]" progress_counter="true">
             <outline text="Siete técnicas" progress_counter="true">
@@ -938,6 +939,7 @@
           </outline>
         </outline>
         <outline text="[link: Scripts de cliente|http://www.yiiframework.com/doc-2.0/guide-output-client-scripts.html]"/>
+        <outline text="[Trabajar con `ActiveForm` desde el cliente](https://github.com/samdark/yii2-cookbook/blob/master/book/forms-activeform-js.md)"/>
         <outline text="Temas" tags="opcional"/>
       </outline>
       <outline text="**Seguridad y cacheado en Yii 2**" due="2020-02-03" due_user_ids="139389" tags="ce4d,ce4e,ce4g,ce5e,ce5g,ce5h,ce6h,ce9e,ce9f,ce9g,ev2,ra2,ra3,ra4,ra5,ra6,ra8,ra9" progress_counter="true">
@@ -948,7 +950,7 @@
         </outline>
         <outline text="[link: Contraseñas|https://www.yiiframework.com/doc/guide/2.0/en/security-passwords]"/>
         <outline text="Autorización"/>
-        <outline text="Niveles de caché" progress_counter="true">
+        <outline text="Niveles de caché" tags="no_impartido" progress_counter="true">
           <outline text="Cacheado de datos"/>
           <outline text="Cacheado de fragmentos"/>
           <outline text="Cacheado de páginas"/>
@@ -957,7 +959,7 @@
       </outline>
       <outline text="**Características adicionales de Yii 2**" due="2020-02-10" due_user_ids="139389" tags="ce4g,ce5d,ce5g,ce5h,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ce9e,ce9f,ce9g,ev2,ra2,ra3,ra4,ra5,ra6,ra8,ra9" progress_counter="true">
         <outline text="AJAX y PJAX" progress_counter="true">
-          <outline text="Validaciones Ajax"/>
+          <outline text="[Validaciones Ajax](https://www.yiiframework.com/doc/guide/2.0/en/input-validation#ajax-validation)"/>
           <outline text="PJAX" tags="opcional"/>
           <outline text="[CORS](https://github.com/samdark/yii2-cookbook/blob/master/book/incoming-post.md)" tags="opcional"/>
         </outline>
@@ -988,7 +990,7 @@
           <outline text="Integración continua: [Travis CI](https://travis-ci.org/)"/>
           <outline text="[link: Cobertura de código|http://codeception.com/docs/11-Codecoverage]" tags="opcional"/>
         </outline>
-        <outline text="Depuración" progress_counter="true">
+        <outline text="Depuración" tags="no_impartido" progress_counter="true">
           <outline text="[link: `var_dump()` mejorado|https://github.com/yiisoft/yii2/issues/7352#issuecomment-75024083]"/>
           <outline text="[link: Consola integrada|https://github.com/yiisoft/yii2-shell]"/>
           <outline text="[link: Barra de depuración|https://github.com/yiisoft/yii2-debug]"/>
@@ -1024,7 +1026,7 @@
           <outline text="PaaS"/>
           <outline text="SaaS"/>
         </outline>
-        <outline text="[12 Factores](https://12factor.net/es/)"/>
+        <outline text="[12 Factores](https://12factor.net/es/)" tags="no_impartido"/>
         <outline text="Heroku">
           <outline text="[link: Heroku CLI|https://devcenter.heroku.com/articles/heroku-cli]"/>
           <outline text="Creación y despliegue de aplicaciones"/>
@@ -1032,10 +1034,10 @@
           <outline text="Variables de entorno"/>
           <outline text="Releases"/>
         </outline>
-        <outline text="[Escalabilidad](https://github.com/samdark/yii2-cookbook/blob/master/book/scaling.md)" tags="opcional"/>
-        <outline text="[Alta disponibilidad](http://thehighload.com/)" tags="opcional"/>
+        <outline text="[Escalabilidad](https://github.com/samdark/yii2-cookbook/blob/master/book/scaling.md)" tags="no_impartido,opcional"/>
+        <outline text="[Alta disponibilidad](http://thehighload.com/)" tags="no_impartido,opcional"/>
       </outline>
-      <outline text="**Servicios web con REST en Yii 2**" due="2020-03-02" due_user_ids="139389" tags="ce1a,ce1b,ce7a,ce7b,ce7c,ce7d,ce7e,ce7f,ce7g,ce8b,ce8f,ce8g,ce9c,ce9e,ce9f,ce9g,ev2,opcional,ra1,ra2,ra3,ra7,ra8,ra9" progress_counter="true">
+      <outline text="**Servicios web con REST en Yii 2**" due="2020-03-02" due_user_ids="139389" tags="ce1a,ce1b,ce7a,ce7b,ce7c,ce7d,ce7e,ce7f,ce7g,ce8b,ce8f,ce8g,ce9c,ce9e,ce9f,ce9g,ev2,ra1,ra2,ra3,ra7,ra8,ra9" progress_counter="true">
         <outline text="Introducción"/>
         <outline text="Recursos"/>
         <outline text="Controladores"/>
