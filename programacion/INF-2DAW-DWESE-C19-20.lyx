@@ -27,6 +27,7 @@
 \newcommand{\EX}{\nota{EXA}}
 \newcommand{\TE}{\nota{TEO}}
 \newcommand{\PR}{\nota{PRA}}
+\newcommand{\AC}{\nota{ACT}}
 \newcommand{\NOTA}{\nota{NOTA}}
 \newcommand{\EV}[1]{\nota{EV\textsubscript{#1}}}
 \newcommand{\ev}[1]{%
@@ -225,8 +226,8 @@ End
 \leftmargin 3cm
 \topmargin 4cm
 \rightmargin 3cm
-\headheight 0cm
-\headsep 2.5cm
+\headheight 2cm
+\headsep 1cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -336,7 +337,8 @@ arraystretch}{1.5}%
 \begin_inset Graphics
 	filename image1.png
 	lyxscale 10
-	scale 5
+	scale 4.5
+	BoundingBox 0bp 80bp 2100bp 800bp
 
 \end_inset
 
@@ -491,7 +493,7 @@ centering
 \backslash
 put(0,-400){
 \backslash
-includegraphics[width=
+includegraphics[width=1
 \backslash
 textwidth]{php.png}}}
 \end_layout
@@ -502,7 +504,7 @@ textwidth]{php.png}}}
 \end_layout
 
 \begin_layout Subject
-Programación anual
+Programación anual del módulo profesional
 \end_layout
 
 \begin_layout Title
@@ -3453,6 +3455,504 @@ Por otra parte, en el planteamiento y realización de tareas y ejercicios,
  se procurará el equilibrio en cuanto a presencia de actores de ambos géneros.
 \end_layout
 
+\begin_layout Section
+Modificaciones en el marco del COVID-19
+\end_layout
+
+\begin_layout Standard
+Como consecuencia de las medidas excepcionales aplicadas en función de las
+ resoluciones 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "resolucion-24-04-2020"
+literal "false"
+
+\end_inset
+
+ e instrucciones emitidas por la Consejería de Educación para dar respuesta
+ a la crisis sanitaria ocasionada por el COVID-19, se realizan las siguientes
+ modificaciones en la presente programación.
+\end_layout
+
+\begin_layout Subsection
+Actividades
+\end_layout
+
+\begin_layout Standard
+Durante el tercer trimestre se realizarán 
+\series bold
+actividades de refuerzo/recuperación
+\series default
+ para el alumnado que hubiera presentado dificultades de aprendizaje en
+ los dos primeros trimestres, así como para el alumnado que, no presentando
+ tales dificultades, desee mejorar su calificación en las mismas.
+\end_layout
+
+\begin_layout Subsection
+Evaluación
+\end_layout
+
+\begin_layout Subsubsection
+Recuperación de los dos primeros trimestres
+\end_layout
+
+\begin_layout Standard
+Los alumnos pendientes de evaluación positiva en alguna de las dos evaluaciones
+ deberán realizar y superar todas las 
+\series bold
+actividades de refuerzo/recuperación
+\series default
+ relativas a los trimestres correspondientes a las evaluaciones no superadas.
+\end_layout
+
+\begin_layout Subsubsection
+Calificaciones parciales
+\end_layout
+
+\begin_layout Standard
+La 
+\series bold
+calificación de cada evaluación parcial en el primer y segundo trimestres
+\series default
+ se calculará, por separado, de la siguiente forma:
+\begin_inset VSpace -2.5em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,escapeinside={||},mathescape=true,framesep=5mm,frame=topline"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if |
+\backslash
+EV| > 4.5:       # alumno aprobado que quiere subir nota
+\end_layout
+
+\begin_layout Plain Layout
+
+    |
+\backslash
+NOTA| = max(|
+\backslash
+AC|, |
+\backslash
+EV|)
+\end_layout
+
+\begin_layout Plain Layout
+
+else:               # alumno que tiene que recuperar el trimestre
+\end_layout
+
+\begin_layout Plain Layout
+
+    |
+\backslash
+NOTA| = min(|
+\backslash
+AC|, |
+\backslash
+EV|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(Cálculo de la calificación parcial en el 1.º y 2.º trimestres)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begingroup
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlist[description]{style=multiline}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AC
+\end_layout
+
+\end_inset
+
+: Media aritmética de las calificaciones de las actividades de refuerzo/recupera
+ción del trimestre, valoradas del 0 al 10.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+EV{}
+\end_layout
+
+\end_inset
+
+: Calificación obtenida con anterioridad en la evaluación parcial del trimestre
+ correspondiente.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+endgroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La evaluación parcial de cada trimestre se considerará aprobada si 
+\begin_inset Formula $\NOTA\geq4.5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Calificación final
+\end_layout
+
+\begin_layout Standard
+La 
+\series bold
+calificación final
+\series default
+ del módulo se calculará de la siguiente forma:
+\begin_inset VSpace -2.5em
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Python,escapeinside={||},mathescape=true,framesep=5mm,frame=topline"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if min(|
+\backslash
+EV1|, |
+\backslash
+EV2|) |$
+\backslash
+geq$| 4:
+\end_layout
+
+\begin_layout Plain Layout
+
+    |
+\backslash
+NOTA| = |
+\backslash
+EV1| * 0.5 + |
+\backslash
+EV2| * 0.5
+\end_layout
+
+\begin_layout Plain Layout
+
+else:
+\end_layout
+
+\begin_layout Plain Layout
+
+    |
+\backslash
+NOTA| = min(|
+\backslash
+EV1|, |
+\backslash
+EV2|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(Cálculo de la calificación final)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begingroup
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlist[description]{style=multiline}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+EV1
+\end_layout
+
+\end_inset
+
+: Calificación de la primera evaluación, calculada según se establece en
+ apartados anteriores sobre calificaciones parciales.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+EV2
+\end_layout
+
+\end_inset
+
+: Calificación de la segunda evaluación, calculada según se establece en
+ apartados anteriores sobre calificaciones parciales.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+endgroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El módulo se considerará aprobado si 
+\begin_inset Formula $\NOTA\geq4.5$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
@@ -3524,6 +4024,24 @@ s/Instruccion_Pantallas/Instruccion_basica.pdf
 \end_inset
 
 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "resolucion-24-04-2020"
+literal "false"
+
+\end_inset
+
+
+\emph on
+Resolución de 24 de abril de 2020
+\emph default
+, de la Secretaría General de Educación y Formación Profesional por la que
+ se adoptan medidas excepcionales referidas a la flexibilización de determinados
+ aspectos de las enseñanzas de formación profesional del sistema educativo
+ y de las enseñanzas de régimen especial.
 \end_layout
 
 \end_body
