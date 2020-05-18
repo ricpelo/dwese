@@ -18,10 +18,29 @@
   \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},fontsize=\footnotesize}
 \fi
 
+% Hace lo mismo con los entornos verbatim:
+\makeatletter
+\patchcmd{\@verbatim}
+  {\verbatim@font}
+  {\verbatim@font\footnotesize}
+  {}{}
+\makeatother
+
 % Activa ligaduras en verbatim:
 \makeatletter
 \def\verbatim@nolig@list{}
 \makeatother
+
+%\makeatletter
+%\let \clone@tabularcr \@tabularcr
+%\def\@tabularcr{\clone@tabularcr\hline}
+%\makeatother
+%\arrayrulewidth=0.01mm
+
+% Deja más espacio entre filas de tablas:
+%\renewcommand{\arraystretch}{2}
+\usepackage{array}
+\setlength{\extrarowheight}{0.5em}
 
 % Apaño para que Pandoc traduzca lo que hay entre \begin{...} y \end{...}:
 \newcommand{\hideFromPandoc}[1]{#1}
@@ -29,6 +48,10 @@
     \let\Begin\begin
     \let\End\end
 }
+
+% No muestra "Figura #: ":
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
 
 % Las listas se numeran estilo 1.2.3.4:
 \usepackage[shortlabels]{enumitem}
@@ -66,10 +89,21 @@ Respuesta a la \ExerciseName\ \ExerciseHeaderNB}\smallskip\par}
 
 % Para que funcione la marca ✔:
 \usepackage{newunicodechar}
-\newfontface{\libertinus}{libertinusserif-regular.otf} % a font that has ✔
+\newfontface{\libertinus}{LibertinusSerif-Regular.otf} % a font that has ✔
 \newunicodechar{✔}{%
   \begingroup
   \normalfont\libertinus ✔%
+  \endgroup
+}
+\newunicodechar{␣}{·}
+\newunicodechar{⟨}{%
+  \begingroup
+  \normalfont\libertinus ⟨%
+  \endgroup
+}
+\newunicodechar{⟩}{%
+  \begingroup
+  \normalfont\libertinus ⟩%
   \endgroup
 }
 
@@ -77,6 +111,6 @@ Respuesta a la \ExerciseName\ \ExerciseHeaderNB}\smallskip\par}
 %\usepackage{unicode-math}
 %\setmathsfont(Latin,Greek)[ItalicFont=LinBiolinum_RI.otf,
 %    BoldFont=LinBiolinum_RB.otf]{LinBiolinum_R.otf}
-\setmathsfont(Greek){xits-math.otf}
+\setmathsfont(Greek){XITSMath-Regular.otf}
 \setmathsfont(Latin,Digits){Lato}
 %\setmathfont[range=\mathit]{Lato Italic}

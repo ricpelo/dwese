@@ -140,6 +140,8 @@ $(BUILDDIR_PDF)/%.pdf: $(SRCDIR)/%.md $(PP) $(NODE_MODULES) $(PANDOC) $(BEAMER_T
 		-V monofontoptions=Extension=.otf,UprightFont=*-Regular,BoldFont=*-Bold,AutoFakeSlant,BoldItalicFeatures={FakeSlant},Scale=MatchLowercase,Contextuals={Alternate} \
 		-V mathspec \
 		-V fontsize=8pt -V lang=es-ES -o $@
+	@scripts/cpdf default $@ $@.opt.pdf
+	@mv -f $@.opt.pdf $@
 
 # Apuntes en formato PDF
 
@@ -160,7 +162,6 @@ $(BUILDDIR_APUNTES)/%-apuntes.pdf: $(SRCDIR)/%.md $(PP) $(NODE_MODULES) $(PANDOC
 		--syntax-definition=$(PHP_XML) \
 		--syntax-definition=$(CONSOLE_XML) \
 		-V margin-bottom=4cm \
-		-V subparagraph \
 		-V mainfont=Lato \
 		-V monofont=FiraMono \
 		-V monofontoptions=Extension=.otf,UprightFont=*-Regular,BoldFont=*-Bold,AutoFakeSlant,BoldItalicFeatures={FakeSlant},Scale=MatchLowercase,Contextuals={Alternate} \
@@ -172,8 +173,9 @@ $(BUILDDIR_APUNTES)/%-apuntes.pdf: $(SRCDIR)/%.md $(PP) $(NODE_MODULES) $(PANDOC
 $(PP):
 	# La última versión está en https://cdsoft.fr/pp/pp-linux-x86_64.txz
 	# pero en Ubuntu 18.04 LTS hay que usar la 2.7.3, que es la última que funciona:
-	wget -q -O - https://cdsoft.fr/pp/archives/pp-linux-x86_64-2.7.3.txz | tar x -J pp
-	sudo apt install default-jre graphviz librsvg2-bin npm
+	# wget -q -O - https://cdsoft.fr/pp/archives/pp-linux-x86_64-2.7.3.txz | tar x -J pp
+	wget -q -O - https://cdsoft.fr/pp/pp-linux-x86_64.txz | tar x -J pp
+	sudo apt install default-jre graphviz librsvg2-bin npm python3-pyprind
 
 $(NODE_MODULES):
 	npm install diagrams

@@ -17,7 +17,7 @@ skinparam defaultFontName Lato
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !define(DOTCOMMON)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  graph [rankdir = LR, size = "8!", bgcolor = "transparent", fontname = "Lato", fontsize = 14 ];
+  graph [rankdir = LR, bgcolor = "transparent", fontname = "Lato", fontsize = 14 ];
   node [shape = rectangle, fillcolor = "white", style = "filled", fontname = "Lato", fontsize = 13 ];
   edge [fontname = "Lato", fontsize = 12 ];
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -27,12 +27,18 @@ skinparam defaultFontName Lato
 MACROS DE USO GENERAL
 ~~~~~~~~~~~~~~~~~~~~~
 
+!define(SALTO)(!ifndef(LATEX)(<br>\vspace{1em}))
+!define(SALTOHTML)(!ifdef(HTML)(<br>))
+!define(SALTOLARGO)(!ifndef(LATEX)(<br>\vspace{2em}))
+!define(SALTOBEAMER)(!ifdef(BEAMER)(\vspace{1em}))
+!define(SALTOLARGOBEAMER)(!ifdef(BEAMER)(\vspace{2em}))
+
 !comment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Macros para hacer producciones en notación EBNF
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-!define(NT)(!COLOR(teal)(!ifdef(HTML)(*\<!1\>*)(\textit{<!PYNT(!1)>})))
+!define(NT)(!COLOR(teal)(!ifdef(HTML)(⟨*!1*⟩)(⟨\textit{!PYNT(!1)}⟩)))
 !define(T)(**`!1`**)
 
 !comment
@@ -48,7 +54,7 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 
 !define(ACT)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#### Actividades
+##### Actividades {-}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !define(FIN)
@@ -109,7 +115,7 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 ~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~
 ::: centered
-!1:::
+  !1:::
 ~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -149,7 +155,7 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 
 !define(IMG)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!CENTRAR
+!CENTRARFIG
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ![!2](!IMAGES/!1){!ifdef(LATEX)(!4)(!3) !WIDTH}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -172,7 +178,7 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 
 !define(UML)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!CENTRAR
+!CENTRARFIG
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !ifne(!5)()(!UML5(!1)(!2)(!3)(!4)(!5))(!ifne(!4)()(!UML4(!1)(!2)(!3)(!4))(!ifne(!3)()(!UML3(!1)(!2)(!3))(!UML2(!1)(!2))))
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -185,9 +191,9 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 
 !define(DOT)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!CENTRAR
+!CENTRARFIG
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  !ifne(!5)()(!DOT5(!1)(!2)(!3)(!4)(!5))(!ifne(!4)()(!DOT4(!1)(!2)(!3)(!4))(!ifne(!3)()(!DOT3(!1)(!2)(!3))(!DOT2(!1)(!2))))
+!ifne(!5)()(!DOT5(!1)(!2)(!3)(!4)(!5))(!ifne(!4)()(!DOT4(!1)(!2)(!3)(!4))(!ifne(!3)()(!DOT3(!1)(!2)(!3))(!DOT2(!1)(!2))))
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -205,6 +211,20 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 LAS SIGUIENTES MACROS SON AUXILIARES, NO PARA USO GENERAL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(CENTRARFIG)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!ifdef(HTML)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::: centered
+  !1:::
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\Begin{center}
+  !1
+  \End{center}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !define(FLOWCHART2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -270,12 +290,12 @@ LAS SIGUIENTES MACROS SON AUXILIARES, NO PARA USO GENERAL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !python3
 ~~~~~~~~~~~~~~~
-x = """!1"""
+x = r"""!1"""
 print(x.replace('"', '\\"'))
 ~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-!define(PYNT)(!python3(print("!1".replace('_', '\\_'))))
+!define(PYNT)(!python3(print(r"""!1""".replace('_', '\\_'))))
 
 !define(PYALGO)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

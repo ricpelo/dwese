@@ -6,28 +6,28 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ricardo.20200504184958.1"><vh>@auto source/sistemas-de-control-de-versiones-i.md</vh></v>
-<v t="ricardo.20200504184958.2"><vh>@auto source/sistemas-de-control-de-versiones-ii.md</vh></v>
-<v t="ricardo.20200504184958.3"><vh>@auto source/introduccion-a-la-tecnologia-web.md</vh></v>
-<v t="ricardo.20200504184958.4"><vh>@auto source/conceptos-basicos-de-php-i.md</vh></v>
-<v t="ricardo.20200504184958.5"><vh>@auto source/conceptos-basicos-de-php-ii.md</vh></v>
-<v t="ricardo.20200504184958.6"><vh>@auto source/desarrollo-de-aplicaciones-con-php-i.md</vh></v>
-<v t="ricardo.20200504184958.7"><vh>@auto source/persistencia-de-datos-con-php.md</vh></v>
-<v t="ricardo.20200504184958.8"><vh>@auto source/desarrollo-de-aplicaciones-con-php-ii.md</vh></v>
-<v t="ricardo.20200504184958.9"><vh>@auto source/programacion-avanzada-en-php.md</vh></v>
-<v t="ricardo.20200504184958.10"><vh>@auto source/interoperabilidad.md</vh></v>
-<v t="ricardo.20200504184958.11"><vh>@auto source/introduccion-a-yii-2.md</vh></v>
-<v t="ricardo.20200504184958.12"><vh>@auto source/estructura-de-una-aplicacion-yii-2.md</vh></v>
-<v t="ricardo.20200504184958.13"><vh>@auto source/gestion-de-peticiones-en-yii-2.md</vh></v>
-<v t="ricardo.20200504184958.14"><vh>@auto source/acceso-a-bases-de-datos-en-yii-2.md</vh></v>
-<v t="ricardo.20200504184958.15"><vh>@auto source/creacion-y-validacion-de-formularios-en-yii-2.md</vh></v>
-<v t="ricardo.20200504184958.16"><vh>@auto source/visualizacion-de-datos-en-yii-2.md</vh></v>
-<v t="ricardo.20200504184958.17"><vh>@auto source/seguridad-y-cacheado-en-yii-2.md</vh></v>
-<v t="ricardo.20200504184958.18"><vh>@auto source/caracteristicas-adicionales-de-yii-2.md</vh></v>
-<v t="ricardo.20200504184958.19"><vh>@auto source/calidad.md</vh></v>
-<v t="ricardo.20200504184958.20"><vh>@auto source/computacion-en-la-nube.md</vh></v>
-<v t="ricardo.20200504184958.21"><vh>@auto source/servicios-web-con-rest-en-yii-2.md</vh></v>
-<v t="ricardo.20200504184958.22"><vh>@auto source/contenedores.md</vh></v>
+<v t="ricardo.20200518091737.1"><vh>@auto source/sistemas-de-control-de-versiones-i.md</vh></v>
+<v t="ricardo.20200518091737.2"><vh>@auto source/sistemas-de-control-de-versiones-ii.md</vh></v>
+<v t="ricardo.20200518091737.3"><vh>@auto source/introduccion-a-la-tecnologia-web.md</vh></v>
+<v t="ricardo.20200518091737.4"><vh>@auto source/conceptos-basicos-de-php-i.md</vh></v>
+<v t="ricardo.20200518091737.5"><vh>@auto source/conceptos-basicos-de-php-ii.md</vh></v>
+<v t="ricardo.20200518091737.6"><vh>@auto source/desarrollo-de-aplicaciones-con-php-i.md</vh></v>
+<v t="ricardo.20200518091737.7"><vh>@auto source/persistencia-de-datos-con-php.md</vh></v>
+<v t="ricardo.20200518091737.8"><vh>@auto source/desarrollo-de-aplicaciones-con-php-ii.md</vh></v>
+<v t="ricardo.20200518091737.9"><vh>@auto source/programacion-avanzada-en-php.md</vh></v>
+<v t="ricardo.20200518091737.10"><vh>@auto source/interoperabilidad.md</vh></v>
+<v t="ricardo.20200518091737.11"><vh>@auto source/introduccion-a-yii-2.md</vh></v>
+<v t="ricardo.20200518091737.12"><vh>@auto source/estructura-de-una-aplicacion-yii-2.md</vh></v>
+<v t="ricardo.20200518091737.13"><vh>@auto source/gestion-de-peticiones-en-yii-2.md</vh></v>
+<v t="ricardo.20200518091737.14"><vh>@auto source/acceso-a-bases-de-datos-en-yii-2.md</vh></v>
+<v t="ricardo.20200518091737.15"><vh>@auto source/creacion-y-validacion-de-formularios-en-yii-2.md</vh></v>
+<v t="ricardo.20200518091737.16"><vh>@auto source/visualizacion-de-datos-en-yii-2.md</vh></v>
+<v t="ricardo.20200518091737.17"><vh>@auto source/seguridad-y-cacheado-en-yii-2.md</vh></v>
+<v t="ricardo.20200518091737.18"><vh>@auto source/caracteristicas-adicionales-de-yii-2.md</vh></v>
+<v t="ricardo.20200518091737.19"><vh>@auto source/calidad.md</vh></v>
+<v t="ricardo.20200518091737.20"><vh>@auto source/computacion-en-la-nube.md</vh></v>
+<v t="ricardo.20200518091737.21"><vh>@auto source/servicios-web-con-rest-en-yii-2.md</vh></v>
+<v t="ricardo.20200518091737.22"><vh>@auto source/contenedores.md</vh></v>
 </vnodes>
 <tnodes>
 </tnodes>
