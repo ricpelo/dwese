@@ -3594,211 +3594,12 @@ Recuperación de los dos primeros trimestres
 \end_layout
 
 \begin_layout Standard
-Los alumnos pendientes de evaluación positiva en alguna de las dos evaluaciones
- deberán realizar y superar todas las 
+Los alumnos pendientes de evaluación positiva en algún trimestre (o los
+ dos) deberán realizar y superar todas las 
 \series bold
 actividades de refuerzo/recuperación
 \series default
- relativas a los trimestres correspondientes a las evaluaciones no superadas.
-\end_layout
-
-\begin_layout Subsubsection
-Calificaciones parciales
-\end_layout
-
-\begin_layout Standard
-La 
-\series bold
-calificación de cada evaluación parcial en el primer y segundo trimestres
-\series default
- se calculará, por separado, de la siguiente forma:
-\begin_inset VSpace -2.5em
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "80col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Python,escapeinside={||},mathescape=true,framesep=5mm,frame=topline"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-|
-\backslash
-NOTA| = max(|
-\backslash
-AC|, |
-\backslash
-EV|)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-(Cálculo de la calificación parcial en el 1.º y 2.º trimestres)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Donde:
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "80col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begingroup
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlist[description]{style=multiline}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-AC
-\end_layout
-
-\end_inset
-
-: Media aritmética de las calificaciones de todas las actividades de refuerzo/re
-cuperación del trimestre, valoradas del 0 al 10.
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EV{}
-\end_layout
-
-\end_inset
-
-: Calificación obtenida con anterioridad en la evaluación parcial del trimestre
- correspondiente.
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-endgroup
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-La evaluación parcial de cada trimestre se considerará aprobada si 
-\begin_inset Formula $\NOTA\geq4.5$
-\end_inset
-
-.
+ propuestas.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3889,6 +3690,28 @@ EV1|, |
 EV2|)
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if |
+\backslash
+AC| > |
+\backslash
+NOTA|:
+\end_layout
+
+\begin_layout Plain Layout
+
+    |
+\backslash
+NOTA| = |
+\backslash
+AC|
+\end_layout
+
 \end_inset
 
 
@@ -3977,8 +3800,7 @@ EV1
 
 \end_inset
 
-: Calificación de la primera evaluación, calculada según se establece en
- apartados anteriores sobre calificaciones parciales.
+: Calificación obtenida con anterioridad en la primera evaluación.
 \end_layout
 
 \begin_layout Description
@@ -3994,8 +3816,24 @@ EV2
 
 \end_inset
 
-: Calificación de la segunda evaluación, calculada según se establece en
- apartados anteriores sobre calificaciones parciales.
+: Calificación obtenida con anterioridad en la segunda evaluación.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AC
+\end_layout
+
+\end_inset
+
+: Media aritmética de las calificaciones de todas las actividades de refuerzo/re
+cuperación propuestas, valoradas del 0 al 10.
 \end_layout
 
 \begin_layout Plain Layout
