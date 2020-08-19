@@ -10,7 +10,7 @@ Los materiales de las diferentes unidades didácticas se organizan de la siguien
 
 - **Apuntes**: El mismo contenido que las diapositivas anteriores en formato `PDF` pero de manera continua, formando unos apuntes al estilo tradicional. Más apropiado para imprimir en papel o como guía de estudio.
 
-Si detectas algún error o algo que corregir o mejorar en los materiales, por favor, no dudes en [abrir una incidencia en GitHub](https://github.com/ricpelo/pro/issues/new){:target="_blank"}.
+Si detectas algún error o algo que corregir o mejorar en los materiales, por favor, no dudes en [abrir una incidencia en GitHub](https://github.com/ricpelo/dwese/issues/new){:target="_blank"}.
 
 | Título | HTML | PDF | Apuntes |
 | ------ |:----:|:---:|:-------:|
