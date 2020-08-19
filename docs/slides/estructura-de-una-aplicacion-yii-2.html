@@ -8,23 +8,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="shortcut icon" type="image/png" href="/assets/icons/icon.png">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">
+  <link rel="stylesheet" href="./reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="./reveal.js/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="./reveal.js/dist/theme/solarized.css" id="theme">
   <link rel="stylesheet" href="custom.css"/>
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <style type="text/css">
       #header-left {
@@ -75,6 +70,21 @@
         el.innerHTML = title;
         document.getElementById('header-left').appendChild(el);
         document.getElementById('footer-left').innerHTML = '&copy; ' + author + ' (' + date + ')';
+
+        // Mueve un poquito el = a la derecha cuando hay que dibujar un "no-igual" con KaTeX:
+        Array.prototype.forEach.call(document.getElementsByClassName("rlap"), function (el) {
+            var e = el;
+            var i = 0;
+            while (e != null && i < 6) {
+                e = e.parentElement;
+                i++;
+            }
+            if (e != null && i == 6 && e.nextSibling != null && e.nextSibling.innerText == "=") {
+                el.style.width = "0.1em";
+            }
+            console.log(el);
+            console.log(e.nextSibling);
+        });
 
         function updateHeader(nd) {
             var hr = document.getElementById('header-right');
@@ -142,13 +152,12 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
-<section id="title-slide" class="title-slide slide level1">
+<section id="title-slide">
   <h1 class="title">Estructura de una aplicación Yii 2</h1>
   <p class="author">Ricardo Pérez López</p>
-  <p class="date">IES Doñana, curso 2019/2020</p>
+  <p class="date">IES Doñana, curso 2020/2021</p>
 </section>
-<section id="TOC" class="slide level2">
+<section id="TOC">
 <ul>
 <li><a href="#/a-pequeña-escala"><span class="toc-section-number">1</span> A pequeña escala</a></li>
 <li><a href="#/a-gran-escala"><span class="toc-section-number">2</span> A gran escala</a></li>
@@ -156,51 +165,319 @@
 <li><a href="#/metadatos"><span class="toc-section-number">4</span> Metadatos</a></li>
 </ul>
 </section>
+
+<section>
+<section id="a-pequeña-escala" class="title-slide slide level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> A pequeña escala</h1>
+
+</section>
+<section id="componentes" class="title-slide slide level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Componentes</h2>
+
+</section>
+<section id="la-clase-yiibasebaseobject" class="title-slide slide level3" data-number="1.1.1">
+<h3 data-number="1.1.1"><span class="header-section-number">1.1.1</span> La clase <code>yii\base\BaseObject</code></h3>
+
+</section>
+<section id="propiedades" class="title-slide slide level4" data-number="1.1.1.1">
+<h4 data-number="1.1.1.1"><span class="header-section-number">1.1.1.1</span> Propiedades</h4>
+
 </section>
 
-<section><section id="a-pequeña-escala" class="title-slide slide level1"><h1><span class="header-section-number">1</span> A pequeña escala</h1></section><section id="componentes" class="title-slide slide level2"><h2><span class="header-section-number">1.1</span> Componentes</h2></section><section id="la-clase-yiibasebaseobject" class="title-slide slide level3"><h3><span class="header-section-number">1.1.1</span> La clase <code>yii\base\BaseObject</code></h3></section><section id="propiedades" class="slide level4">
-<h4><span class="header-section-number">1.1.1.1</span> Propiedades</h4>
-</section><section id="configuraciones" class="slide level4">
-<h4><span class="header-section-number">1.1.1.2</span> Configuraciones</h4>
-<h5 id="asignación-masiva"><span class="header-section-number">1.1.1.2.1</span> Asignación masiva</h5>
-<h5 id="creación-de-nuevas-instancias"><span class="header-section-number">1.1.1.2.2</span> Creación de nuevas instancias</h5>
-<h5 id="normas-de-creación-de-componentes"><span class="header-section-number">1.1.1.2.3</span> Normas de creación de componentes</h5>
-<h5 id="diferencias-entre-new-y-yiicreateobject"><span class="header-section-number">1.1.1.2.4</span> Diferencias entre <code>new</code> y <code>Yii::createObject()</code></h5>
-</section><section id="la-clase-yiibasecomponent" class="title-slide slide level3"><h3><span class="header-section-number">1.1.2</span> La clase <code>yii\base\Component</code></h3></section><section id="eventos" class="slide level4">
-<h4><span class="header-section-number">1.1.2.1</span> Eventos</h4>
-<h5 id="de-instancia"><span class="header-section-number">1.1.2.1.1</span> De instancia</h5>
-<h6 id="eventos-de-instancia"><span class="header-section-number">1.1.2.1.1.1</span> Eventos de instancia</h6>
-<h6 id="manejadores-de-eventos-de-instancia"><span class="header-section-number">1.1.2.1.1.2</span> Manejadores de eventos de instancia</h6>
-<h5 id="de-clase"><span class="header-section-number">1.1.2.1.2</span> De clase</h5>
-<h6 id="eventos-de-clase"><span class="header-section-number">1.1.2.1.2.1</span> Eventos de clase</h6>
-<h6 id="manejadores-de-eventos-de-clase"><span class="header-section-number">1.1.2.1.2.2</span> Manejadores de eventos de clase</h6>
-</section><section id="comportamientos" class="slide level4">
-<h4><span class="header-section-number">1.1.2.2</span> Comportamientos</h4>
-</section><section id="alias" class="title-slide slide level2"><h2><span class="header-section-number">1.2</span> Alias</h2></section><section id="autoloading-de-clases" class="title-slide slide level2"><h2><span class="header-section-number">1.3</span> Autoloading de clases</h2></section><section id="localizador-de-servicios" class="title-slide slide level2"><h2><span class="header-section-number">1.4</span> Localizador de servicios</h2></section><section id="contenedor-de-inyección-de-dependencias" class="title-slide slide level2"><h2><span class="header-section-number">1.5</span> Contenedor de inyección de dependencias</h2></section></section>
-<section><section id="a-gran-escala" class="title-slide slide level1"><h1><span class="header-section-number">2</span> A gran escala</h1></section><section id="introducción" class="title-slide slide level2"><h2><span class="header-section-number">2.1</span> Introducción</h2></section><section id="scripts-de-entrada" class="title-slide slide level2"><h2><span class="header-section-number">2.2</span> Scripts de entrada</h2></section><section id="aplicaciones" class="title-slide slide level2"><h2><span class="header-section-number">2.3</span> Aplicaciones</h2></section><section id="componentes-de-aplicación" class="title-slide slide level2"><h2><span class="header-section-number">2.4</span> Componentes de aplicación</h2></section><section id="controladores" class="title-slide slide level2"><h2><span class="header-section-number">2.5</span> Controladores</h2></section><section id="acciones" class="title-slide slide level3"><h3><span class="header-section-number">2.5.1</span> Acciones</h3></section><section id="filtros" class="title-slide slide level3"><h3><span class="header-section-number">2.5.2</span> Filtros</h3></section><section id="modelos" class="title-slide slide level2"><h2><span class="header-section-number">2.6</span> Modelos</h2></section><section id="vistas" class="title-slide slide level2"><h2><span class="header-section-number">2.7</span> Vistas</h2></section><section id="widgets" class="title-slide slide level3"><h3><span class="header-section-number">2.7.1</span> Widgets</h3></section><section id="otros-componentes" class="title-slide slide level2"><h2><span class="header-section-number">2.8</span> Otros componentes</h2></section><section id="módulos" class="title-slide slide level3"><h3><span class="header-section-number">2.8.1</span> Módulos</h3></section><section id="assets" class="title-slide slide level3"><h3><span class="header-section-number">2.8.2</span> Assets</h3></section><section id="extensiones" class="title-slide slide level3"><h3><span class="header-section-number">2.8.3</span> Extensiones</h3></section></section>
-<section><section id="ejercicios" class="title-slide slide level1"><h1><span class="header-section-number">3</span> Ejercicios</h1></section><section id="qué-es-un-componente-características-principales-de-los-componentes.-qué-mejoras-aporta-a-los-objetos-primitivos-del-lenguaje" class="title-slide slide level2"><h2><span class="header-section-number">3.1</span> ¿Qué es un componente? Características principales de los componentes. ¿Qué mejoras aporta a los objetos primitivos del lenguaje?</h2></section><section id="diferencias-entre-component-y-baseobject." class="title-slide slide level2"><h2><span class="header-section-number">3.2</span> Diferencias entre <code>Component</code> y <code>BaseObject</code>.</h2></section><section id="qué-es-una-configuración-cómo-se-usa-ejemplos." class="title-slide slide level2"><h2><span class="header-section-number">3.3</span> ¿Qué es una configuración? ¿Cómo se usa? Ejemplos.</h2></section><section id="qué-es-un-evento-tipos-de-eventos.-diferencias-entre-eventos-de-clase-y-eventos-de-instancia." class="title-slide slide level2"><h2><span class="header-section-number">3.4</span> ¿Qué es un evento? Tipos de eventos. Diferencias entre eventos de clase y eventos de instancia.</h2></section><section id="qué-es-un-manejador-de-eventos-diferencias-entre-manejadores-de-clase-y-manejadores-de-instancia." class="title-slide slide level2"><h2><span class="header-section-number">3.5</span> ¿Qué es un manejador de eventos? Diferencias entre manejadores de clase y manejadores de instancia.</h2></section><section id="qué-es-un-localizador-de-servicios-qué-hace-por-qué-resulta-útil-hay-algún-localizador-de-servicios-en-yii-2-cómo-se-usa-qué-servicios-contiene-qué-es-un-componente-de-aplicación-qué-relación-hay-entre-los-servicios-y-los-componentes-de-aplicación-cómo-se-registra-un-servicio-en-un-localizador-de-servicios-cómo-se-accede-luego-a-ese-servicio" class="title-slide slide level2"><h2><span class="header-section-number">3.6</span> ¿Qué es un localizador de servicios? ¿Qué hace? ¿Por qué resulta útil? ¿Hay algún localizador de servicios en Yii 2? ¿Cómo se usa? ¿Qué servicios contiene? ¿Qué es un componente de aplicación? ¿Qué relación hay entre los servicios y los componentes de aplicación? ¿Cómo se registra un servicio en un localizador de servicios? ¿Cómo se accede luego a ese servicio?</h2></section><section id="qué-es-un-contenedor-de-inyección-de-dependencias-para-qué-sirve-qué-problema-resuelve-hay-algún-contenedor-de-inyección-de-dependencias-en-yii-2-cómo-se-usa-cómo-se-pueden-declarar-dependencias-cómo-se-pueden-registrar-dependencias-qué-diferencia-hay-entre-declarar-y-registrar-una-dependencia-cómo-se-resuelve-una-dependencia-ejemplo-práctico-de-uso-del-contenedor-de-inyección-de-dependencias-de-yii-2." class="title-slide slide level2"><h2><span class="header-section-number">3.7</span> ¿Qué es un contenedor de inyección de dependencias? ¿Para qué sirve? ¿Qué problema resuelve? ¿Hay algún contenedor de inyección de dependencias en Yii 2? ¿Cómo se usa? ¿Cómo se pueden declarar dependencias? ¿Cómo se pueden registrar dependencias? ¿Qué diferencia hay entre declarar y registrar una dependencia? ¿Cómo se resuelve una dependencia? Ejemplo práctico de uso del contenedor de inyección de dependencias de Yii 2.</h2></section><section id="qué-es-un-script-de-entrada-cuántos-scripts-de-entrada-hay-en-una-aplicación-yii-2-dónde-se-encuentran" class="title-slide slide level2"><h2><span class="header-section-number">3.8</span> ¿Qué es un script de entrada? ¿Cuántos scripts de entrada hay en una aplicación Yii 2? ¿Dónde se encuentran?</h2></section><section id="qué-es-el-objeto-aplicación-qué-es-un-componente-de-aplicación" class="title-slide slide level2"><h2><span class="header-section-number">3.9</span> ¿Qué es el objeto Aplicación? ¿Qué es un componente de aplicación?</h2></section><section id="qué-es-un-controlador-diferencia-entre-controlador-web-y-controlador-de-consola.-dónde-se-almacenan-qué-es-una-acción-ejemplo-de-ambos-tipos." class="title-slide slide level2"><h2><span class="header-section-number">3.10</span> ¿Qué es un controlador? Diferencia entre controlador web y controlador de consola. ¿Dónde se almacenan? ¿Qué es una acción? Ejemplo de ambos tipos.</h2></section><section id="qué-es-un-modelo-dónde-se-almacenan" class="title-slide slide level2"><h2><span class="header-section-number">3.11</span> ¿Qué es un modelo? ¿Dónde se almacenan?</h2></section><section id="qué-es-una-vista-dónde-se-almacenan-ejemplo." class="title-slide slide level2"><h2><span class="header-section-number">3.12</span> ¿Qué es una vista? ¿Dónde se almacenan? Ejemplo.</h2></section><section id="qué-es-un-filtro" class="title-slide slide level2"><h2><span class="header-section-number">3.13</span> ¿Qué es un filtro?</h2></section></section>
-<section><section id="metadatos" class="title-slide slide level1"><h1><span class="header-section-number">4</span> Metadatos</h1></section><section id="objetivos-de-la-unidad" class="title-slide slide level2"><h2><span class="header-section-number">4.1</span> Objetivos de la unidad</h2></section><section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2"><h2><span class="header-section-number">4.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2></section><section id="ra2" class="title-slide slide level3"><h3><span class="header-section-number">4.2.1</span> RA2</h3></section><section id="ra3" class="title-slide slide level3"><h3><span class="header-section-number">4.2.2</span> RA3</h3></section><section id="ra4" class="title-slide slide level3"><h3><span class="header-section-number">4.2.3</span> RA4</h3></section><section id="ce4.g" class="slide level4">
-<h4><span class="header-section-number">4.2.3.1</span> CE4.g</h4>
-</section><section id="ra5" class="title-slide slide level3"><h3><span class="header-section-number">4.2.4</span> RA5</h3></section><section id="ce5.g" class="slide level4">
-<h4><span class="header-section-number">4.2.4.1</span> CE5.g</h4>
-</section><section id="ce5.h" class="slide level4">
-<h4><span class="header-section-number">4.2.4.2</span> CE5.h</h4>
-</section><section id="ra9" class="title-slide slide level3"><h3><span class="header-section-number">4.2.5</span> RA9</h3></section><section id="ce9.e" class="slide level4">
-<h4><span class="header-section-number">4.2.5.1</span> CE9.e</h4>
-</section><section id="ce9.f" class="slide level4">
-<h4><span class="header-section-number">4.2.5.2</span> CE9.f</h4>
-</section><section id="ce9.g" class="slide level4">
-<h4><span class="header-section-number">4.2.5.3</span> CE9.g</h4>
-</section></section>
+<section id="configuraciones" class="title-slide slide level4" data-number="1.1.1.2">
+<h4 data-number="1.1.1.2"><span class="header-section-number">1.1.1.2</span> Configuraciones</h4>
+
+</section>
+<section id="asignación-masiva" class="slide level5" data-number="1.1.1.2.1">
+<h5 data-number="1.1.1.2.1"><span class="header-section-number">1.1.1.2.1</span> Asignación masiva</h5>
+</section>
+<section id="creación-de-nuevas-instancias" class="slide level5" data-number="1.1.1.2.2">
+<h5 data-number="1.1.1.2.2"><span class="header-section-number">1.1.1.2.2</span> Creación de nuevas instancias</h5>
+</section>
+<section id="normas-de-creación-de-componentes" class="slide level5" data-number="1.1.1.2.3">
+<h5 data-number="1.1.1.2.3"><span class="header-section-number">1.1.1.2.3</span> Normas de creación de componentes</h5>
+</section>
+<section id="diferencias-entre-new-y-yiicreateobject" class="slide level5" data-number="1.1.1.2.4">
+<h5 data-number="1.1.1.2.4"><span class="header-section-number">1.1.1.2.4</span> Diferencias entre <code>new</code> y <code>Yii::createObject()</code></h5>
+</section>
+
+
+<section id="la-clase-yiibasecomponent" class="title-slide slide level3" data-number="1.1.2">
+<h3 data-number="1.1.2"><span class="header-section-number">1.1.2</span> La clase <code>yii\base\Component</code></h3>
+
+</section>
+<section id="eventos" class="title-slide slide level4" data-number="1.1.2.1">
+<h4 data-number="1.1.2.1"><span class="header-section-number">1.1.2.1</span> Eventos</h4>
+
+</section>
+<section id="de-instancia" class="slide level5" data-number="1.1.2.1.1">
+<h5 data-number="1.1.2.1.1"><span class="header-section-number">1.1.2.1.1</span> De instancia</h5>
+<h6 data-number="1.1.2.1.1.1" id="eventos-de-instancia"><span class="header-section-number">1.1.2.1.1.1</span> Eventos de instancia</h6>
+<h6 data-number="1.1.2.1.1.2" id="manejadores-de-eventos-de-instancia"><span class="header-section-number">1.1.2.1.1.2</span> Manejadores de eventos de instancia</h6>
+</section>
+<section id="de-clase" class="slide level5" data-number="1.1.2.1.2">
+<h5 data-number="1.1.2.1.2"><span class="header-section-number">1.1.2.1.2</span> De clase</h5>
+<h6 data-number="1.1.2.1.2.1" id="eventos-de-clase"><span class="header-section-number">1.1.2.1.2.1</span> Eventos de clase</h6>
+<h6 data-number="1.1.2.1.2.2" id="manejadores-de-eventos-de-clase"><span class="header-section-number">1.1.2.1.2.2</span> Manejadores de eventos de clase</h6>
+</section>
+
+<section id="comportamientos" class="title-slide slide level4" data-number="1.1.2.2">
+<h4 data-number="1.1.2.2"><span class="header-section-number">1.1.2.2</span> Comportamientos</h4>
+
+</section>
+
+
+
+<section id="alias" class="title-slide slide level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span> Alias</h2>
+
+</section>
+
+<section id="autoloading-de-clases" class="title-slide slide level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span> Autoloading de clases</h2>
+
+</section>
+
+<section id="localizador-de-servicios" class="title-slide slide level2" data-number="1.4">
+<h2 data-number="1.4"><span class="header-section-number">1.4</span> Localizador de servicios</h2>
+
+</section>
+
+<section id="contenedor-de-inyección-de-dependencias" class="title-slide slide level2" data-number="1.5">
+<h2 data-number="1.5"><span class="header-section-number">1.5</span> Contenedor de inyección de dependencias</h2>
+
+</section>
+</section>
+<section>
+<section id="a-gran-escala" class="title-slide slide level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> A gran escala</h1>
+
+</section>
+<section id="introducción" class="title-slide slide level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> Introducción</h2>
+
+</section>
+
+<section id="scripts-de-entrada" class="title-slide slide level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span> Scripts de entrada</h2>
+
+</section>
+
+<section id="aplicaciones" class="title-slide slide level2" data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span> Aplicaciones</h2>
+
+</section>
+
+<section id="componentes-de-aplicación" class="title-slide slide level2" data-number="2.4">
+<h2 data-number="2.4"><span class="header-section-number">2.4</span> Componentes de aplicación</h2>
+
+</section>
+
+<section id="controladores" class="title-slide slide level2" data-number="2.5">
+<h2 data-number="2.5"><span class="header-section-number">2.5</span> Controladores</h2>
+
+</section>
+<section id="acciones" class="title-slide slide level3" data-number="2.5.1">
+<h3 data-number="2.5.1"><span class="header-section-number">2.5.1</span> Acciones</h3>
+
+</section>
+
+<section id="filtros" class="title-slide slide level3" data-number="2.5.2">
+<h3 data-number="2.5.2"><span class="header-section-number">2.5.2</span> Filtros</h3>
+
+</section>
+
+
+<section id="modelos" class="title-slide slide level2" data-number="2.6">
+<h2 data-number="2.6"><span class="header-section-number">2.6</span> Modelos</h2>
+
+</section>
+
+<section id="vistas" class="title-slide slide level2" data-number="2.7">
+<h2 data-number="2.7"><span class="header-section-number">2.7</span> Vistas</h2>
+
+</section>
+<section id="widgets" class="title-slide slide level3" data-number="2.7.1">
+<h3 data-number="2.7.1"><span class="header-section-number">2.7.1</span> Widgets</h3>
+
+</section>
+
+
+<section id="otros-componentes" class="title-slide slide level2" data-number="2.8">
+<h2 data-number="2.8"><span class="header-section-number">2.8</span> Otros componentes</h2>
+
+</section>
+<section id="módulos" class="title-slide slide level3" data-number="2.8.1">
+<h3 data-number="2.8.1"><span class="header-section-number">2.8.1</span> Módulos</h3>
+
+</section>
+
+<section id="assets" class="title-slide slide level3" data-number="2.8.2">
+<h3 data-number="2.8.2"><span class="header-section-number">2.8.2</span> Assets</h3>
+
+</section>
+
+<section id="extensiones" class="title-slide slide level3" data-number="2.8.3">
+<h3 data-number="2.8.3"><span class="header-section-number">2.8.3</span> Extensiones</h3>
+
+</section>
+
+</section>
+<section>
+<section id="ejercicios" class="title-slide slide level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Ejercicios</h1>
+
+</section>
+<section id="qué-es-un-componente-características-principales-de-los-componentes.-qué-mejoras-aporta-a-los-objetos-primitivos-del-lenguaje" class="title-slide slide level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> ¿Qué es un componente? Características principales de los componentes. ¿Qué mejoras aporta a los objetos primitivos del lenguaje?</h2>
+
+</section>
+
+<section id="diferencias-entre-component-y-baseobject." class="title-slide slide level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span> Diferencias entre <code>Component</code> y <code>BaseObject</code>.</h2>
+
+</section>
+
+<section id="qué-es-una-configuración-cómo-se-usa-ejemplos." class="title-slide slide level2" data-number="3.3">
+<h2 data-number="3.3"><span class="header-section-number">3.3</span> ¿Qué es una configuración? ¿Cómo se usa? Ejemplos.</h2>
+
+</section>
+
+<section id="qué-es-un-evento-tipos-de-eventos.-diferencias-entre-eventos-de-clase-y-eventos-de-instancia." class="title-slide slide level2" data-number="3.4">
+<h2 data-number="3.4"><span class="header-section-number">3.4</span> ¿Qué es un evento? Tipos de eventos. Diferencias entre eventos de clase y eventos de instancia.</h2>
+
+</section>
+
+<section id="qué-es-un-manejador-de-eventos-diferencias-entre-manejadores-de-clase-y-manejadores-de-instancia." class="title-slide slide level2" data-number="3.5">
+<h2 data-number="3.5"><span class="header-section-number">3.5</span> ¿Qué es un manejador de eventos? Diferencias entre manejadores de clase y manejadores de instancia.</h2>
+
+</section>
+
+<section id="qué-es-un-localizador-de-servicios-qué-hace-por-qué-resulta-útil-hay-algún-localizador-de-servicios-en-yii-2-cómo-se-usa-qué-servicios-contiene-qué-es-un-componente-de-aplicación-qué-relación-hay-entre-los-servicios-y-los-componentes-de-aplicación-cómo-se-registra-un-servicio-en-un-localizador-de-servicios-cómo-se-accede-luego-a-ese-servicio" class="title-slide slide level2" data-number="3.6">
+<h2 data-number="3.6"><span class="header-section-number">3.6</span> ¿Qué es un localizador de servicios? ¿Qué hace? ¿Por qué resulta útil? ¿Hay algún localizador de servicios en Yii 2? ¿Cómo se usa? ¿Qué servicios contiene? ¿Qué es un componente de aplicación? ¿Qué relación hay entre los servicios y los componentes de aplicación? ¿Cómo se registra un servicio en un localizador de servicios? ¿Cómo se accede luego a ese servicio?</h2>
+
+</section>
+
+<section id="qué-es-un-contenedor-de-inyección-de-dependencias-para-qué-sirve-qué-problema-resuelve-hay-algún-contenedor-de-inyección-de-dependencias-en-yii-2-cómo-se-usa-cómo-se-pueden-declarar-dependencias-cómo-se-pueden-registrar-dependencias-qué-diferencia-hay-entre-declarar-y-registrar-una-dependencia-cómo-se-resuelve-una-dependencia-ejemplo-práctico-de-uso-del-contenedor-de-inyección-de-dependencias-de-yii-2." class="title-slide slide level2" data-number="3.7">
+<h2 data-number="3.7"><span class="header-section-number">3.7</span> ¿Qué es un contenedor de inyección de dependencias? ¿Para qué sirve? ¿Qué problema resuelve? ¿Hay algún contenedor de inyección de dependencias en Yii 2? ¿Cómo se usa? ¿Cómo se pueden declarar dependencias? ¿Cómo se pueden registrar dependencias? ¿Qué diferencia hay entre declarar y registrar una dependencia? ¿Cómo se resuelve una dependencia? Ejemplo práctico de uso del contenedor de inyección de dependencias de Yii 2.</h2>
+
+</section>
+
+<section id="qué-es-un-script-de-entrada-cuántos-scripts-de-entrada-hay-en-una-aplicación-yii-2-dónde-se-encuentran" class="title-slide slide level2" data-number="3.8">
+<h2 data-number="3.8"><span class="header-section-number">3.8</span> ¿Qué es un script de entrada? ¿Cuántos scripts de entrada hay en una aplicación Yii 2? ¿Dónde se encuentran?</h2>
+
+</section>
+
+<section id="qué-es-el-objeto-aplicación-qué-es-un-componente-de-aplicación" class="title-slide slide level2" data-number="3.9">
+<h2 data-number="3.9"><span class="header-section-number">3.9</span> ¿Qué es el objeto Aplicación? ¿Qué es un componente de aplicación?</h2>
+
+</section>
+
+<section id="qué-es-un-controlador-diferencia-entre-controlador-web-y-controlador-de-consola.-dónde-se-almacenan-qué-es-una-acción-ejemplo-de-ambos-tipos." class="title-slide slide level2" data-number="3.10">
+<h2 data-number="3.10"><span class="header-section-number">3.10</span> ¿Qué es un controlador? Diferencia entre controlador web y controlador de consola. ¿Dónde se almacenan? ¿Qué es una acción? Ejemplo de ambos tipos.</h2>
+
+</section>
+
+<section id="qué-es-un-modelo-dónde-se-almacenan" class="title-slide slide level2" data-number="3.11">
+<h2 data-number="3.11"><span class="header-section-number">3.11</span> ¿Qué es un modelo? ¿Dónde se almacenan?</h2>
+
+</section>
+
+<section id="qué-es-una-vista-dónde-se-almacenan-ejemplo." class="title-slide slide level2" data-number="3.12">
+<h2 data-number="3.12"><span class="header-section-number">3.12</span> ¿Qué es una vista? ¿Dónde se almacenan? Ejemplo.</h2>
+
+</section>
+
+<section id="qué-es-un-filtro" class="title-slide slide level2" data-number="3.13">
+<h2 data-number="3.13"><span class="header-section-number">3.13</span> ¿Qué es un filtro?</h2>
+
+</section>
+</section>
+<section>
+<section id="metadatos" class="title-slide slide level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Metadatos</h1>
+
+</section>
+<section id="objetivos-de-la-unidad" class="title-slide slide level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> Objetivos de la unidad</h2>
+
+</section>
+
+<section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2>
+
+</section>
+<section id="ra2" class="title-slide slide level3" data-number="4.2.1">
+<h3 data-number="4.2.1"><span class="header-section-number">4.2.1</span> RA2</h3>
+
+</section>
+
+<section id="ra3" class="title-slide slide level3" data-number="4.2.2">
+<h3 data-number="4.2.2"><span class="header-section-number">4.2.2</span> RA3</h3>
+
+</section>
+
+<section id="ra4" class="title-slide slide level3" data-number="4.2.3">
+<h3 data-number="4.2.3"><span class="header-section-number">4.2.3</span> RA4</h3>
+
+</section>
+<section id="ce4.g" class="title-slide slide level4" data-number="4.2.3.1">
+<h4 data-number="4.2.3.1"><span class="header-section-number">4.2.3.1</span> CE4.g</h4>
+
+</section>
+
+
+<section id="ra5" class="title-slide slide level3" data-number="4.2.4">
+<h3 data-number="4.2.4"><span class="header-section-number">4.2.4</span> RA5</h3>
+
+</section>
+<section id="ce5.g" class="title-slide slide level4" data-number="4.2.4.1">
+<h4 data-number="4.2.4.1"><span class="header-section-number">4.2.4.1</span> CE5.g</h4>
+
+</section>
+
+<section id="ce5.h" class="title-slide slide level4" data-number="4.2.4.2">
+<h4 data-number="4.2.4.2"><span class="header-section-number">4.2.4.2</span> CE5.h</h4>
+
+</section>
+
+
+<section id="ra9" class="title-slide slide level3" data-number="4.2.5">
+<h3 data-number="4.2.5"><span class="header-section-number">4.2.5</span> RA9</h3>
+
+</section>
+<section id="ce9.e" class="title-slide slide level4" data-number="4.2.5.1">
+<h4 data-number="4.2.5.1"><span class="header-section-number">4.2.5.1</span> CE9.e</h4>
+
+</section>
+
+<section id="ce9.f" class="title-slide slide level4" data-number="4.2.5.2">
+<h4 data-number="4.2.5.2"><span class="header-section-number">4.2.5.2</span> CE9.f</h4>
+
+</section>
+
+<section id="ce9.g" class="title-slide slide level4" data-number="4.2.5.3">
+<h4 data-number="4.2.5.3"><span class="header-section-number">4.2.5.3</span> CE9.g</h4>
+
+</section>
+
+
+</section>
     </div>
   </div>
 
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="./reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="./reveal.js/plugin/notes/notes.js"></script>
+  <script src="./reveal.js/plugin/search/search.js"></script>
+  <script src="./reveal.js/plugin/zoom/zoom.js"></script>
+  <script src="./reveal.js/plugin/reveal.js-menu/menu.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
         // Display the page number of the current slide
         slideNumber: true,
@@ -214,34 +491,21 @@
         width: 1280,
         height: 1080,
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-menu/menu.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } },
-          { src: 'reveal.js/plugin/reveal-code-focus/vendor/highlight.js/highlight.pack.js' },
-          { src: 'reveal.js/plugin/reveal-code-focus/reveal-code-focus.js', async: true, callback: function() { RevealCodeFocus(); } },
-          { src: 'reveal.js/plugin/search/search.js', async: true },
-          { src: 'reveal.js/plugin/customcontrols/customcontrols.js', async: true }
-        ],
-
-        customcontrols: {
-          controls: [
-            { icon: '<i class="fa fa-question-circle"></i>',
-			  css: 'position: fixed; right: 50px; bottom: 50px; z-index: 30; font-size: 24px;',
-			  action: 'Reveal.toggleHelp(); return false;'
-			}
-          ]
+        menu: {
+          hideMissingTitles: true,
         },
 
-        menu: {
-          numbers: true,
-          hideMissingTitles: true,
-          themes: true,
-          themesPath: 'reveal.js/css/theme/'
-        }
+        dependencies: [
+          { src: './reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } }
+        ],
+
+        // reveal.js plugins
+        plugins: [
+          RevealMenu,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
       });
     </script>
     </body>

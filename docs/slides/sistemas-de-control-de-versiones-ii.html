@@ -8,23 +8,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="shortcut icon" type="image/png" href="/assets/icons/icon.png">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">
+  <link rel="stylesheet" href="./reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="./reveal.js/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="./reveal.js/dist/theme/solarized.css" id="theme">
   <link rel="stylesheet" href="custom.css"/>
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <style type="text/css">
       #header-left {
@@ -75,6 +70,21 @@
         el.innerHTML = title;
         document.getElementById('header-left').appendChild(el);
         document.getElementById('footer-left').innerHTML = '&copy; ' + author + ' (' + date + ')';
+
+        // Mueve un poquito el = a la derecha cuando hay que dibujar un "no-igual" con KaTeX:
+        Array.prototype.forEach.call(document.getElementsByClassName("rlap"), function (el) {
+            var e = el;
+            var i = 0;
+            while (e != null && i < 6) {
+                e = e.parentElement;
+                i++;
+            }
+            if (e != null && i == 6 && e.nextSibling != null && e.nextSibling.innerText == "=") {
+                el.style.width = "0.1em";
+            }
+            console.log(el);
+            console.log(e.nextSibling);
+        });
 
         function updateHeader(nd) {
             var hr = document.getElementById('header-right');
@@ -142,13 +152,12 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
-<section id="title-slide" class="title-slide slide level1">
+<section id="title-slide">
   <h1 class="title">Sistemas de control de versiones II</h1>
   <p class="author">Ricardo Pérez López</p>
-  <p class="date">IES Doñana, curso 2019/2020</p>
+  <p class="date">IES Doñana, curso 2020/2021</p>
 </section>
-<section id="TOC" class="slide level2">
+<section id="TOC">
 <ul>
 <li><a href="#/ramas-locales"><span class="toc-section-number">1</span> Ramas locales</a></li>
 <li><a href="#/ramas-remotas"><span class="toc-section-number">2</span> Ramas remotas</a></li>
@@ -157,36 +166,292 @@
 <li><a href="#/metadatos"><span class="toc-section-number">5</span> Metadatos</a></li>
 </ul>
 </section>
+
+<section>
+<section id="ramas-locales" class="title-slide slide level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Ramas locales</h1>
+
+</section>
+<section id="branch" class="title-slide slide level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> <code>branch</code></h2>
+
 </section>
 
-<section><section id="ramas-locales" class="title-slide slide level1"><h1><span class="header-section-number">1</span> Ramas locales</h1></section><section id="branch" class="title-slide slide level2"><h2><span class="header-section-number">1.1</span> <code>branch</code></h2></section><section id="merge" class="title-slide slide level2"><h2><span class="header-section-number">1.2</span> <code>merge</code></h2></section><section id="estrategia-fast-forward" class="title-slide slide level3"><h3><span class="header-section-number">1.2.1</span> Estrategia <em>fast-forward</em></h3></section><section id="estrategia-recursive-o-del-padre-múltiple" class="title-slide slide level3"><h3><span class="header-section-number">1.2.2</span> Estrategia <em>recursive</em> o del padre múltiple</h3></section><section id="no-ff" class="title-slide slide level3"><h3><span class="header-section-number">1.2.3</span> <code>--no-ff</code></h3></section><section id="resolución-de-conflictos" class="title-slide slide level2"><h2><span class="header-section-number">1.3</span> Resolución de conflictos</h2></section><section id="rebase" class="title-slide slide level2"><h2><span class="header-section-number">1.4</span> <code>rebase</code></h2></section><section id="ejercicios" class="title-slide slide level2"><h2><span class="header-section-number">1.5</span> Ejercicios</h2></section><section id="sigue-el-tutorial-de-git-immersion-desde-el-lab24-hasta-el-lab35-comprime-y-envía-el-directorio-resultante." class="title-slide slide level3"><h3><span class="header-section-number">1.5.1</span> Sigue el tutorial de Git Immersion desde el LAB24 hasta el LAB35, comprime y envía el directorio resultante.</h3></section></section>
-<section><section id="ramas-remotas" class="title-slide slide level1"><h1><span class="header-section-number">2</span> Ramas remotas</h1></section><section id="orígenes-remotos" class="title-slide slide level2"><h2><span class="header-section-number">2.1</span> Orígenes remotos</h2></section><section id="directorios-locales" class="title-slide slide level3"><h3><span class="header-section-number">2.1.1</span> Directorios locales</h3></section><section id="servidores-remotos-con-repositorios-compartidos" class="title-slide slide level3"><h3><span class="header-section-number">2.1.2</span> Servidores remotos con repositorios compartidos</h3></section><section id="remote-addshow-origin" class="title-slide slide level3"><h3><span class="header-section-number">2.1.3</span> <code>remote [add|show] origin</code></h3></section><section id="flujo-de-trabajo-básico" class="title-slide slide level2"><h2><span class="header-section-number">2.2</span> Flujo de trabajo básico</h2></section><section id="push" class="title-slide slide level3"><h3><span class="header-section-number">2.2.1</span> <code>push</code></h3></section><section id="ramas-de-seguimiento-tracking-branch" class="slide level4">
-<h4><span class="header-section-number">2.2.1.1</span> Ramas de seguimiento (<em>tracking branch</em>)</h4>
-</section><section id="clone" class="title-slide slide level3"><h3><span class="header-section-number">2.2.2</span> <code>clone</code></h3></section><section id="qué-significa-originhead" class="slide level4">
-<h4><span class="header-section-number">2.2.2.1</span> ¿Qué significa <code>origin/HEAD</code>?</h4>
-</section><section id="fetch" class="title-slide slide level3"><h3><span class="header-section-number">2.2.3</span> <code>fetch</code></h3></section><section id="pull" class="title-slide slide level3"><h3><span class="header-section-number">2.2.4</span> <code>pull</code></h3></section><section id="eliminar-ramas-remotas" class="title-slide slide level2"><h2><span class="header-section-number">2.3</span> Eliminar ramas remotas</h2></section><section id="etiquetas-remotas" class="title-slide slide level2"><h2><span class="header-section-number">2.4</span> Etiquetas remotas</h2></section><section id="git-push-origin-mi_etiqueta" class="title-slide slide level3"><h3><span class="header-section-number">2.4.1</span> <code>git push origin mi_etiqueta</code></h3></section><section id="git-push---tags" class="title-slide slide level3"><h3><span class="header-section-number">2.4.2</span> <code>git push --tags</code></h3></section><section id="git-push---delete-origin-mi_etiqueta" class="title-slide slide level3"><h3><span class="header-section-number">2.4.3</span> <code>git push --delete origin mi_etiqueta</code></h3></section><section id="ejercicios-1" class="title-slide slide level2"><h2><span class="header-section-number">2.5</span> Ejercicios</h2></section><section id="sigue-el-tutorial-de-git-immersion-desde-el-lab36-hasta-el-lab49-comprime-y-envía-el-directorio-resultante." class="title-slide slide level3"><h3><span class="header-section-number">2.5.1</span> Sigue el tutorial de Git Immersion desde el LAB36 hasta el LAB49, comprime y envía el directorio resultante.</h3></section></section>
-<section><section id="github" class="title-slide slide level1"><h1><span class="header-section-number">3</span> GitHub</h1></section><section id="el-flujo-de-trabajo-de-github" class="title-slide slide level2"><h2><span class="header-section-number">3.1</span> El flujo de trabajo de GitHub</h2></section><section id="pull-requests" class="title-slide slide level2"><h2><span class="header-section-number">3.2</span> Pull requests</h2></section><section id="comentarios-generales-y-comentarios-en-línea" class="title-slide slide level3"><h3><span class="header-section-number">3.2.1</span> Comentarios generales y comentarios en línea</h3></section><section id="revisiones-de-cambios" class="title-slide slide level3"><h3><span class="header-section-number">3.2.2</span> Revisiones de cambios</h3></section><section id="crear-y-solicitar-revisiones" class="slide level4">
-<h4><span class="header-section-number">3.2.2.1</span> Crear y solicitar revisiones</h4>
-</section><section id="arreglar-una-pr" class="title-slide slide level3"><h3><span class="header-section-number">3.2.3</span> Arreglar una PR</h3></section><section id="cerrar-una-pr" class="title-slide slide level3"><h3><span class="header-section-number">3.2.4</span> Cerrar una PR</h3></section><section id="git-remote-prune-origin" class="slide level4">
-<h4><span class="header-section-number">3.2.4.1</span> <code>git remote prune origin</code></h4>
-</section><section id="issues" class="title-slide slide level2"><h2><span class="header-section-number">3.3</span> Issues</h2></section><section id="releases" class="title-slide slide level2"><h2><span class="header-section-number">3.4</span> Releases</h2></section><section id="forks" class="title-slide slide level2"><h2><span class="header-section-number">3.5</span> Forks</h2></section><section id="github-education" class="title-slide slide level2"><h2><span class="header-section-number">3.6</span> GitHub Education</h2></section><section id="github-classroom" class="title-slide slide level3"><h3><span class="header-section-number">3.6.1</span> GitHub Classroom</h3></section></section>
-<section><section id="ejercicios-2" class="title-slide slide level1"><h1><span class="header-section-number">4</span> Ejercicios</h1></section><section id="sigue-el-tutorial-de-hello-world-e-indica-el-repositorio-resultante." class="title-slide slide level2"><h2><span class="header-section-number">4.1</span> Sigue el tutorial de Hello World e indica el repositorio resultante.</h2></section><section id="sigue-el-tutorial-de-meghan-nelson-e-indica-el-repositorio-resultante." class="title-slide slide level2"><h2><span class="header-section-number">4.2</span> Sigue el tutorial de Meghan Nelson e indica el repositorio resultante.</h2></section></section>
-<section><section id="metadatos" class="title-slide slide level1"><h1><span class="header-section-number">5</span> Metadatos</h1></section><section id="objetivos-de-la-unidad" class="title-slide slide level2"><h2><span class="header-section-number">5.1</span> Objetivos de la unidad</h2></section><section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2"><h2><span class="header-section-number">5.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2></section><section id="ra1" class="title-slide slide level3"><h3><span class="header-section-number">5.2.1</span> RA1</h3></section><section id="ce1.e" class="slide level4">
-<h4><span class="header-section-number">5.2.1.1</span> CE1.e</h4>
-</section><section id="ce1.g" class="slide level4">
-<h4><span class="header-section-number">5.2.1.2</span> CE1.g</h4>
-</section><section id="ra4" class="title-slide slide level3"><h3><span class="header-section-number">5.2.2</span> RA4</h3></section><section id="ce4.g" class="slide level4">
-<h4><span class="header-section-number">5.2.2.1</span> CE4.g</h4>
-</section></section>
+<section id="merge" class="title-slide slide level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span> <code>merge</code></h2>
+
+</section>
+<section id="estrategia-fast-forward" class="title-slide slide level3" data-number="1.2.1">
+<h3 data-number="1.2.1"><span class="header-section-number">1.2.1</span> Estrategia <em>fast-forward</em></h3>
+
+</section>
+
+<section id="estrategia-recursive-o-del-padre-múltiple" class="title-slide slide level3" data-number="1.2.2">
+<h3 data-number="1.2.2"><span class="header-section-number">1.2.2</span> Estrategia <em>recursive</em> o del padre múltiple</h3>
+
+</section>
+
+<section id="no-ff" class="title-slide slide level3" data-number="1.2.3">
+<h3 data-number="1.2.3"><span class="header-section-number">1.2.3</span> <code>--no-ff</code></h3>
+
+</section>
+
+
+<section id="resolución-de-conflictos" class="title-slide slide level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span> Resolución de conflictos</h2>
+
+</section>
+
+<section id="rebase" class="title-slide slide level2" data-number="1.4">
+<h2 data-number="1.4"><span class="header-section-number">1.4</span> <code>rebase</code></h2>
+
+</section>
+
+<section id="ejercicios" class="title-slide slide level2" data-number="1.5">
+<h2 data-number="1.5"><span class="header-section-number">1.5</span> Ejercicios</h2>
+
+</section>
+<section id="sigue-el-tutorial-de-git-immersion-desde-el-lab24-hasta-el-lab35-comprime-y-envía-el-directorio-resultante." class="title-slide slide level3" data-number="1.5.1">
+<h3 data-number="1.5.1"><span class="header-section-number">1.5.1</span> Sigue el tutorial de Git Immersion desde el LAB24 hasta el LAB35, comprime y envía el directorio resultante.</h3>
+
+</section>
+
+</section>
+<section>
+<section id="ramas-remotas" class="title-slide slide level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Ramas remotas</h1>
+
+</section>
+<section id="orígenes-remotos" class="title-slide slide level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> Orígenes remotos</h2>
+
+</section>
+<section id="directorios-locales" class="title-slide slide level3" data-number="2.1.1">
+<h3 data-number="2.1.1"><span class="header-section-number">2.1.1</span> Directorios locales</h3>
+
+</section>
+
+<section id="servidores-remotos-con-repositorios-compartidos" class="title-slide slide level3" data-number="2.1.2">
+<h3 data-number="2.1.2"><span class="header-section-number">2.1.2</span> Servidores remotos con repositorios compartidos</h3>
+
+</section>
+
+<section id="remote-addshow-origin" class="title-slide slide level3" data-number="2.1.3">
+<h3 data-number="2.1.3"><span class="header-section-number">2.1.3</span> <code>remote [add|show] origin</code></h3>
+
+</section>
+
+
+<section id="flujo-de-trabajo-básico" class="title-slide slide level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span> Flujo de trabajo básico</h2>
+
+</section>
+<section id="push" class="title-slide slide level3" data-number="2.2.1">
+<h3 data-number="2.2.1"><span class="header-section-number">2.2.1</span> <code>push</code></h3>
+
+</section>
+<section id="ramas-de-seguimiento-tracking-branch" class="title-slide slide level4" data-number="2.2.1.1">
+<h4 data-number="2.2.1.1"><span class="header-section-number">2.2.1.1</span> Ramas de seguimiento (<em>tracking branch</em>)</h4>
+
+</section>
+
+
+<section id="clone" class="title-slide slide level3" data-number="2.2.2">
+<h3 data-number="2.2.2"><span class="header-section-number">2.2.2</span> <code>clone</code></h3>
+
+</section>
+<section id="qué-significa-originhead" class="title-slide slide level4" data-number="2.2.2.1">
+<h4 data-number="2.2.2.1"><span class="header-section-number">2.2.2.1</span> ¿Qué significa <code>origin/HEAD</code>?</h4>
+
+</section>
+
+
+<section id="fetch" class="title-slide slide level3" data-number="2.2.3">
+<h3 data-number="2.2.3"><span class="header-section-number">2.2.3</span> <code>fetch</code></h3>
+
+</section>
+
+<section id="pull" class="title-slide slide level3" data-number="2.2.4">
+<h3 data-number="2.2.4"><span class="header-section-number">2.2.4</span> <code>pull</code></h3>
+
+</section>
+
+
+<section id="eliminar-ramas-remotas" class="title-slide slide level2" data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span> Eliminar ramas remotas</h2>
+
+</section>
+
+<section id="etiquetas-remotas" class="title-slide slide level2" data-number="2.4">
+<h2 data-number="2.4"><span class="header-section-number">2.4</span> Etiquetas remotas</h2>
+
+</section>
+<section id="git-push-origin-mi_etiqueta" class="title-slide slide level3" data-number="2.4.1">
+<h3 data-number="2.4.1"><span class="header-section-number">2.4.1</span> <code>git push origin mi_etiqueta</code></h3>
+
+</section>
+
+<section id="git-push---tags" class="title-slide slide level3" data-number="2.4.2">
+<h3 data-number="2.4.2"><span class="header-section-number">2.4.2</span> <code>git push --tags</code></h3>
+
+</section>
+
+<section id="git-push---delete-origin-mi_etiqueta" class="title-slide slide level3" data-number="2.4.3">
+<h3 data-number="2.4.3"><span class="header-section-number">2.4.3</span> <code>git push --delete origin mi_etiqueta</code></h3>
+
+</section>
+
+
+<section id="ejercicios-1" class="title-slide slide level2" data-number="2.5">
+<h2 data-number="2.5"><span class="header-section-number">2.5</span> Ejercicios</h2>
+
+</section>
+<section id="sigue-el-tutorial-de-git-immersion-desde-el-lab36-hasta-el-lab49-comprime-y-envía-el-directorio-resultante." class="title-slide slide level3" data-number="2.5.1">
+<h3 data-number="2.5.1"><span class="header-section-number">2.5.1</span> Sigue el tutorial de Git Immersion desde el LAB36 hasta el LAB49, comprime y envía el directorio resultante.</h3>
+
+</section>
+
+</section>
+<section>
+<section id="github" class="title-slide slide level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> GitHub</h1>
+
+</section>
+<section id="el-flujo-de-trabajo-de-github" class="title-slide slide level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> El flujo de trabajo de GitHub</h2>
+
+</section>
+
+<section id="pull-requests" class="title-slide slide level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span> Pull requests</h2>
+
+</section>
+<section id="comentarios-generales-y-comentarios-en-línea" class="title-slide slide level3" data-number="3.2.1">
+<h3 data-number="3.2.1"><span class="header-section-number">3.2.1</span> Comentarios generales y comentarios en línea</h3>
+
+</section>
+
+<section id="revisiones-de-cambios" class="title-slide slide level3" data-number="3.2.2">
+<h3 data-number="3.2.2"><span class="header-section-number">3.2.2</span> Revisiones de cambios</h3>
+
+</section>
+<section id="crear-y-solicitar-revisiones" class="title-slide slide level4" data-number="3.2.2.1">
+<h4 data-number="3.2.2.1"><span class="header-section-number">3.2.2.1</span> Crear y solicitar revisiones</h4>
+
+</section>
+
+
+<section id="arreglar-una-pr" class="title-slide slide level3" data-number="3.2.3">
+<h3 data-number="3.2.3"><span class="header-section-number">3.2.3</span> Arreglar una PR</h3>
+
+</section>
+
+<section id="cerrar-una-pr" class="title-slide slide level3" data-number="3.2.4">
+<h3 data-number="3.2.4"><span class="header-section-number">3.2.4</span> Cerrar una PR</h3>
+
+</section>
+<section id="git-remote-prune-origin" class="title-slide slide level4" data-number="3.2.4.1">
+<h4 data-number="3.2.4.1"><span class="header-section-number">3.2.4.1</span> <code>git remote prune origin</code></h4>
+
+</section>
+
+
+
+<section id="issues" class="title-slide slide level2" data-number="3.3">
+<h2 data-number="3.3"><span class="header-section-number">3.3</span> Issues</h2>
+
+</section>
+
+<section id="releases" class="title-slide slide level2" data-number="3.4">
+<h2 data-number="3.4"><span class="header-section-number">3.4</span> Releases</h2>
+
+</section>
+
+<section id="forks" class="title-slide slide level2" data-number="3.5">
+<h2 data-number="3.5"><span class="header-section-number">3.5</span> Forks</h2>
+
+</section>
+
+<section id="github-education" class="title-slide slide level2" data-number="3.6">
+<h2 data-number="3.6"><span class="header-section-number">3.6</span> GitHub Education</h2>
+
+</section>
+<section id="github-classroom" class="title-slide slide level3" data-number="3.6.1">
+<h3 data-number="3.6.1"><span class="header-section-number">3.6.1</span> GitHub Classroom</h3>
+
+</section>
+
+</section>
+<section>
+<section id="ejercicios-2" class="title-slide slide level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Ejercicios</h1>
+
+</section>
+<section id="sigue-el-tutorial-de-hello-world-e-indica-el-repositorio-resultante." class="title-slide slide level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> Sigue el tutorial de Hello World e indica el repositorio resultante.</h2>
+
+</section>
+
+<section id="sigue-el-tutorial-de-meghan-nelson-e-indica-el-repositorio-resultante." class="title-slide slide level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span> Sigue el tutorial de Meghan Nelson e indica el repositorio resultante.</h2>
+
+</section>
+</section>
+<section>
+<section id="metadatos" class="title-slide slide level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Metadatos</h1>
+
+</section>
+<section id="objetivos-de-la-unidad" class="title-slide slide level2" data-number="5.1">
+<h2 data-number="5.1"><span class="header-section-number">5.1</span> Objetivos de la unidad</h2>
+
+</section>
+
+<section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2" data-number="5.2">
+<h2 data-number="5.2"><span class="header-section-number">5.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2>
+
+</section>
+<section id="ra1" class="title-slide slide level3" data-number="5.2.1">
+<h3 data-number="5.2.1"><span class="header-section-number">5.2.1</span> RA1</h3>
+
+</section>
+<section id="ce1.e" class="title-slide slide level4" data-number="5.2.1.1">
+<h4 data-number="5.2.1.1"><span class="header-section-number">5.2.1.1</span> CE1.e</h4>
+
+</section>
+
+<section id="ce1.g" class="title-slide slide level4" data-number="5.2.1.2">
+<h4 data-number="5.2.1.2"><span class="header-section-number">5.2.1.2</span> CE1.g</h4>
+
+</section>
+
+
+<section id="ra4" class="title-slide slide level3" data-number="5.2.2">
+<h3 data-number="5.2.2"><span class="header-section-number">5.2.2</span> RA4</h3>
+
+</section>
+<section id="ce4.g" class="title-slide slide level4" data-number="5.2.2.1">
+<h4 data-number="5.2.2.1"><span class="header-section-number">5.2.2.1</span> CE4.g</h4>
+
+</section>
+
+
+</section>
     </div>
   </div>
 
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="./reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="./reveal.js/plugin/notes/notes.js"></script>
+  <script src="./reveal.js/plugin/search/search.js"></script>
+  <script src="./reveal.js/plugin/zoom/zoom.js"></script>
+  <script src="./reveal.js/plugin/reveal.js-menu/menu.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
         // Display the page number of the current slide
         slideNumber: true,
@@ -200,34 +465,21 @@
         width: 1280,
         height: 1080,
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-menu/menu.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } },
-          { src: 'reveal.js/plugin/reveal-code-focus/vendor/highlight.js/highlight.pack.js' },
-          { src: 'reveal.js/plugin/reveal-code-focus/reveal-code-focus.js', async: true, callback: function() { RevealCodeFocus(); } },
-          { src: 'reveal.js/plugin/search/search.js', async: true },
-          { src: 'reveal.js/plugin/customcontrols/customcontrols.js', async: true }
-        ],
-
-        customcontrols: {
-          controls: [
-            { icon: '<i class="fa fa-question-circle"></i>',
-			  css: 'position: fixed; right: 50px; bottom: 50px; z-index: 30; font-size: 24px;',
-			  action: 'Reveal.toggleHelp(); return false;'
-			}
-          ]
+        menu: {
+          hideMissingTitles: true,
         },
 
-        menu: {
-          numbers: true,
-          hideMissingTitles: true,
-          themes: true,
-          themesPath: 'reveal.js/css/theme/'
-        }
+        dependencies: [
+          { src: './reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } }
+        ],
+
+        // reveal.js plugins
+        plugins: [
+          RevealMenu,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
       });
     </script>
     </body>

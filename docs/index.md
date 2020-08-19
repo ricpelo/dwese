@@ -17,7 +17,7 @@ Módulo profesional de 2º curso
 Aula P7<br>
 [IES Doñana](http://www.iesdonana.org){:target="_blank"}<br>
 Sanlúcar de Barrameda (Cádiz)<br>
-Curso 2019/2020
+Curso 2020/2021
 
 **Profesor**: Ricardo Pérez López<br>
 **Departamento**: Informática y Comunicaciones<br>

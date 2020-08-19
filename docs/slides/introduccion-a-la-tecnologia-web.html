@@ -8,23 +8,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="shortcut icon" type="image/png" href="/assets/icons/icon.png">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">
+  <link rel="stylesheet" href="./reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="./reveal.js/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="./reveal.js/dist/theme/solarized.css" id="theme">
   <link rel="stylesheet" href="custom.css"/>
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <style type="text/css">
       #header-left {
@@ -75,6 +70,21 @@
         el.innerHTML = title;
         document.getElementById('header-left').appendChild(el);
         document.getElementById('footer-left').innerHTML = '&copy; ' + author + ' (' + date + ')';
+
+        // Mueve un poquito el = a la derecha cuando hay que dibujar un "no-igual" con KaTeX:
+        Array.prototype.forEach.call(document.getElementsByClassName("rlap"), function (el) {
+            var e = el;
+            var i = 0;
+            while (e != null && i < 6) {
+                e = e.parentElement;
+                i++;
+            }
+            if (e != null && i == 6 && e.nextSibling != null && e.nextSibling.innerText == "=") {
+                el.style.width = "0.1em";
+            }
+            console.log(el);
+            console.log(e.nextSibling);
+        });
 
         function updateHeader(nd) {
             var hr = document.getElementById('header-right');
@@ -142,13 +152,12 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
-<section id="title-slide" class="title-slide slide level1">
+<section id="title-slide">
   <h1 class="title">Introducción a la tecnología web</h1>
   <p class="author">Ricardo Pérez López</p>
-  <p class="date">IES Doñana, curso 2019/2020</p>
+  <p class="date">IES Doñana, curso 2020/2021</p>
 </section>
-<section id="TOC" class="slide level2">
+<section id="TOC">
 <ul>
 <li><a href="#/introducción-al-desarrollo-web"><span class="toc-section-number">1</span> Introducción al desarrollo web</a></li>
 <li><a href="#/arquitectura-clienteservidor"><span class="toc-section-number">2</span> Arquitectura cliente/servidor</a></li>
@@ -158,43 +167,327 @@
 <li><a href="#/metadatos"><span class="toc-section-number">6</span> Metadatos</a></li>
 </ul>
 </section>
+
+<section>
+<section id="introducción-al-desarrollo-web" class="title-slide slide level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introducción al desarrollo web</h1>
+
+</section>
+<section id="conceptos-básicos" class="title-slide slide level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Conceptos básicos</h2>
+
+</section>
+<section id="navegadores-y-servidores-web" class="title-slide slide level3" data-number="1.1.1">
+<h3 data-number="1.1.1"><span class="header-section-number">1.1.1</span> Navegadores y servidores web</h3>
+
 </section>
 
-<section><section id="introducción-al-desarrollo-web" class="title-slide slide level1"><h1><span class="header-section-number">1</span> Introducción al desarrollo web</h1></section><section id="conceptos-básicos" class="title-slide slide level2"><h2><span class="header-section-number">1.1</span> Conceptos básicos</h2></section><section id="navegadores-y-servidores-web" class="title-slide slide level3"><h3><span class="header-section-number">1.1.1</span> Navegadores y servidores web</h3></section><section id="agentes-de-usuario" class="title-slide slide level3"><h3><span class="header-section-number">1.1.2</span> Agentes de usuario</h3></section><section id="web-estática-vs.-dinámica" class="title-slide slide level3"><h3><span class="header-section-number">1.1.3</span> Web estática vs. dinámica</h3></section><section id="estructura-vs.-contenido" class="title-slide slide level3"><h3><span class="header-section-number">1.1.4</span> Estructura vs. contenido</h3></section><section id="arquitectura-multinivel" class="title-slide slide level3"><h3><span class="header-section-number">1.1.5</span> Arquitectura multinivel</h3></section><section id="ejemplos-de-aplicaciones-web" class="title-slide slide level2"><h2><span class="header-section-number">1.2</span> Ejemplos de aplicaciones web</h2></section><section id="redes-sociales-facebook-twitter" class="title-slide slide level3"><h3><span class="header-section-number">1.2.1</span> Redes sociales: Facebook, Twitter…</h3></section><section id="comercio-electrónico-amazon-ebay" class="title-slide slide level3"><h3><span class="header-section-number">1.2.2</span> Comercio electrónico: Amazon, eBay…</h3></section><section id="administración-electrónica" class="title-slide slide level3"><h3><span class="header-section-number">1.2.3</span> Administración electrónica…</h3></section><section id="portales" class="title-slide slide level3"><h3><span class="header-section-number">1.2.4</span> Portales</h3></section><section id="erp-crm" class="title-slide slide level3"><h3><span class="header-section-number">1.2.5</span> ERP, CRM</h3></section><section id="tecnologías-de-desarrollo-de-aplicaciones-web" class="title-slide slide level2"><h2><span class="header-section-number">1.3</span> Tecnologías de desarrollo de aplicaciones web</h2></section><section id="net" class="title-slide slide level3"><h3><span class="header-section-number">1.3.1</span> .NET</h3></section><section id="java" class="title-slide slide level3"><h3><span class="header-section-number">1.3.2</span> Java</h3></section><section id="rubyrails" class="title-slide slide level3"><h3><span class="header-section-number">1.3.3</span> Ruby/Rails</h3></section><section id="pythondjango" class="title-slide slide level3"><h3><span class="header-section-number">1.3.4</span> Python/Django</h3></section><section id="php" class="title-slide slide level3"><h3><span class="header-section-number">1.3.5</span> PHP</h3></section><section id="el-kung-fu-de-la-programación" class="title-slide slide level3"><h3><span class="header-section-number">1.3.6</span> El Kung-Fu de la Programación</h3></section><section id="odoo" class="slide level4">
-<h4><span class="header-section-number">1.3.6.1</span> Odoo</h4>
-</section><section id="prestashop" class="slide level4">
-<h4><span class="header-section-number">1.3.6.2</span> PrestaShop</h4>
-</section><section id="drupal" class="slide level4">
-<h4><span class="header-section-number">1.3.6.3</span> Drupal</h4>
-</section><section id="wordpress" class="slide level4">
-<h4><span class="header-section-number">1.3.6.4</span> WordPress</h4>
-</section></section>
-<section id="arquitectura-clienteservidor" class="title-slide slide level1"><h1><span class="header-section-number">2</span> Arquitectura cliente/servidor</h1></section>
-<section id="html-5-básico-recordatorio-de-primer-curso" class="title-slide slide level1"><h1><span class="header-section-number">3</span> HTML 5 básico (recordatorio de primer curso)</h1></section>
-<section><section id="protocolo-http" class="title-slide slide level1"><h1><span class="header-section-number">4</span> Protocolo HTTP</h1></section><section id="uris" class="title-slide slide level2"><h2><span class="header-section-number">4.1</span> URIs</h2></section><section id="url-encoding" class="title-slide slide level3"><h3><span class="header-section-number">4.1.1</span> URL encoding</h3></section><section id="peticiones-http-requests-y-respuestas-http-responses" class="title-slide slide level2"><h2><span class="header-section-number">4.2</span> Peticiones (<em>HTTP requests</em>) y respuestas (<em>HTTP responses</em>)</h2></section><section id="métodos-get-post" class="title-slide slide level2"><h2><span class="header-section-number">4.3</span> Métodos: GET, POST</h2></section><section id="versiones" class="title-slide slide level2"><h2><span class="header-section-number">4.4</span> Versiones</h2></section><section id="http1.0" class="title-slide slide level3"><h3><span class="header-section-number">4.4.1</span> HTTP/1.0</h3></section><section id="http1.1" class="title-slide slide level3"><h3><span class="header-section-number">4.4.2</span> HTTP/1.1</h3></section><section id="cabeceras-http" class="title-slide slide level2"><h2><span class="header-section-number">4.5</span> Cabeceras HTTP</h2></section><section id="códigos-de-estado" class="title-slide slide level2"><h2><span class="header-section-number">4.6</span> Códigos de estado</h2></section><section id="experimentos" class="title-slide slide level2"><h2><span class="header-section-number">4.7</span> Experimentos</h2></section><section id="telnet-a-un-servidor" class="title-slide slide level3"><h3><span class="header-section-number">4.7.1</span> <code>telnet</code> (a un servidor)</h3></section><section id="netcat-desde-un-navegador" class="title-slide slide level3"><h3><span class="header-section-number">4.7.2</span> <code>netcat</code> (desde un navegador)</h3></section><section id="curl--i--xpost-http-pygmentize--l-http" class="title-slide slide level3"><h3><span class="header-section-number">4.7.3</span> <code>curl -i -XPOST “http://…” | pygmentize -l http</code></h3></section><section id="http" class="title-slide slide level3"><h3><span class="header-section-number">4.7.4</span> <code>http</code></h3></section><section id="google-chrome-developer-tools" class="title-slide slide level3"><h3><span class="header-section-number">4.7.5</span> Google Chrome Developer Tools</h3></section><section id="envío-de-datos-al-servidor" class="title-slide slide level2"><h2><span class="header-section-number">4.8</span> Envío de datos al servidor</h2></section><section id="mediante-get" class="title-slide slide level3"><h3><span class="header-section-number">4.8.1</span> Mediante GET</h3></section><section id="mediante-post" class="title-slide slide level3"><h3><span class="header-section-number">4.8.2</span> Mediante POST</h3></section><section id="formularios-html" class="title-slide slide level3"><h3><span class="header-section-number">4.8.3</span> Formularios HTML</h3></section><section id="cookies" class="title-slide slide level2"><h2><span class="header-section-number">4.9</span> Cookies</h2></section></section>
-<section><section id="apache-básico" class="title-slide slide level1"><h1><span class="header-section-number">5</span> Apache básico</h1></section><section id="instalación" class="title-slide slide level2"><h2><span class="header-section-number">5.1</span> Instalación</h2></section><section id="configuración-básica" class="title-slide slide level2"><h2><span class="header-section-number">5.2</span> Configuración básica</h2></section><section id="sitios-virtuales" class="title-slide slide level2"><h2><span class="header-section-number">5.3</span> Sitios virtuales</h2></section></section>
-<section><section id="metadatos" class="title-slide slide level1"><h1><span class="header-section-number">6</span> Metadatos</h1></section><section id="objetivos-de-la-unidad" class="title-slide slide level2"><h2><span class="header-section-number">6.1</span> Objetivos de la unidad</h2></section><section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2"><h2><span class="header-section-number">6.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2></section><section id="ra1" class="title-slide slide level3"><h3><span class="header-section-number">6.2.1</span> RA1</h3></section><section id="ce1.a" class="slide level4">
-<h4><span class="header-section-number">6.2.1.1</span> CE1.a</h4>
-</section><section id="ce1.b" class="slide level4">
-<h4><span class="header-section-number">6.2.1.2</span> CE1.b</h4>
-</section><section id="ce1.c" class="slide level4">
-<h4><span class="header-section-number">6.2.1.3</span> CE1.c</h4>
-</section><section id="ce1.d" class="slide level4">
-<h4><span class="header-section-number">6.2.1.4</span> CE1.d</h4>
-</section><section id="ce1.e" class="slide level4">
-<h4><span class="header-section-number">6.2.1.5</span> CE1.e</h4>
-</section><section id="ce1.g" class="slide level4">
-<h4><span class="header-section-number">6.2.1.6</span> CE1.g</h4>
-</section></section>
+<section id="agentes-de-usuario" class="title-slide slide level3" data-number="1.1.2">
+<h3 data-number="1.1.2"><span class="header-section-number">1.1.2</span> Agentes de usuario</h3>
+
+</section>
+
+<section id="web-estática-vs.-dinámica" class="title-slide slide level3" data-number="1.1.3">
+<h3 data-number="1.1.3"><span class="header-section-number">1.1.3</span> Web estática vs. dinámica</h3>
+
+</section>
+
+<section id="estructura-vs.-contenido" class="title-slide slide level3" data-number="1.1.4">
+<h3 data-number="1.1.4"><span class="header-section-number">1.1.4</span> Estructura vs. contenido</h3>
+
+</section>
+
+<section id="arquitectura-multinivel" class="title-slide slide level3" data-number="1.1.5">
+<h3 data-number="1.1.5"><span class="header-section-number">1.1.5</span> Arquitectura multinivel</h3>
+
+</section>
+
+
+<section id="ejemplos-de-aplicaciones-web" class="title-slide slide level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span> Ejemplos de aplicaciones web</h2>
+
+</section>
+<section id="redes-sociales-facebook-twitter" class="title-slide slide level3" data-number="1.2.1">
+<h3 data-number="1.2.1"><span class="header-section-number">1.2.1</span> Redes sociales: Facebook, Twitter…</h3>
+
+</section>
+
+<section id="comercio-electrónico-amazon-ebay" class="title-slide slide level3" data-number="1.2.2">
+<h3 data-number="1.2.2"><span class="header-section-number">1.2.2</span> Comercio electrónico: Amazon, eBay…</h3>
+
+</section>
+
+<section id="administración-electrónica" class="title-slide slide level3" data-number="1.2.3">
+<h3 data-number="1.2.3"><span class="header-section-number">1.2.3</span> Administración electrónica…</h3>
+
+</section>
+
+<section id="portales" class="title-slide slide level3" data-number="1.2.4">
+<h3 data-number="1.2.4"><span class="header-section-number">1.2.4</span> Portales</h3>
+
+</section>
+
+<section id="erp-crm" class="title-slide slide level3" data-number="1.2.5">
+<h3 data-number="1.2.5"><span class="header-section-number">1.2.5</span> ERP, CRM</h3>
+
+</section>
+
+
+<section id="tecnologías-de-desarrollo-de-aplicaciones-web" class="title-slide slide level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span> Tecnologías de desarrollo de aplicaciones web</h2>
+
+</section>
+<section id="net" class="title-slide slide level3" data-number="1.3.1">
+<h3 data-number="1.3.1"><span class="header-section-number">1.3.1</span> .NET</h3>
+
+</section>
+
+<section id="java" class="title-slide slide level3" data-number="1.3.2">
+<h3 data-number="1.3.2"><span class="header-section-number">1.3.2</span> Java</h3>
+
+</section>
+
+<section id="rubyrails" class="title-slide slide level3" data-number="1.3.3">
+<h3 data-number="1.3.3"><span class="header-section-number">1.3.3</span> Ruby/Rails</h3>
+
+</section>
+
+<section id="pythondjango" class="title-slide slide level3" data-number="1.3.4">
+<h3 data-number="1.3.4"><span class="header-section-number">1.3.4</span> Python/Django</h3>
+
+</section>
+
+<section id="php" class="title-slide slide level3" data-number="1.3.5">
+<h3 data-number="1.3.5"><span class="header-section-number">1.3.5</span> PHP</h3>
+
+</section>
+
+<section id="el-kung-fu-de-la-programación" class="title-slide slide level3" data-number="1.3.6">
+<h3 data-number="1.3.6"><span class="header-section-number">1.3.6</span> El Kung-Fu de la Programación</h3>
+
+</section>
+<section id="odoo" class="title-slide slide level4" data-number="1.3.6.1">
+<h4 data-number="1.3.6.1"><span class="header-section-number">1.3.6.1</span> Odoo</h4>
+
+</section>
+
+<section id="prestashop" class="title-slide slide level4" data-number="1.3.6.2">
+<h4 data-number="1.3.6.2"><span class="header-section-number">1.3.6.2</span> PrestaShop</h4>
+
+</section>
+
+<section id="drupal" class="title-slide slide level4" data-number="1.3.6.3">
+<h4 data-number="1.3.6.3"><span class="header-section-number">1.3.6.3</span> Drupal</h4>
+
+</section>
+
+<section id="wordpress" class="title-slide slide level4" data-number="1.3.6.4">
+<h4 data-number="1.3.6.4"><span class="header-section-number">1.3.6.4</span> WordPress</h4>
+
+</section>
+
+
+</section>
+<section id="arquitectura-clienteservidor" class="title-slide slide level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Arquitectura cliente/servidor</h1>
+
+</section>
+
+<section id="html-5-básico-recordatorio-de-primer-curso" class="title-slide slide level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> HTML 5 básico (recordatorio de primer curso)</h1>
+
+</section>
+
+<section>
+<section id="protocolo-http" class="title-slide slide level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Protocolo HTTP</h1>
+
+</section>
+<section id="uris" class="title-slide slide level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> URIs</h2>
+
+</section>
+<section id="url-encoding" class="title-slide slide level3" data-number="4.1.1">
+<h3 data-number="4.1.1"><span class="header-section-number">4.1.1</span> URL encoding</h3>
+
+</section>
+
+
+<section id="peticiones-http-requests-y-respuestas-http-responses" class="title-slide slide level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span> Peticiones (<em>HTTP requests</em>) y respuestas (<em>HTTP responses</em>)</h2>
+
+</section>
+
+<section id="métodos-get-post" class="title-slide slide level2" data-number="4.3">
+<h2 data-number="4.3"><span class="header-section-number">4.3</span> Métodos: GET, POST</h2>
+
+</section>
+
+<section id="versiones" class="title-slide slide level2" data-number="4.4">
+<h2 data-number="4.4"><span class="header-section-number">4.4</span> Versiones</h2>
+
+</section>
+<section id="http1.0" class="title-slide slide level3" data-number="4.4.1">
+<h3 data-number="4.4.1"><span class="header-section-number">4.4.1</span> HTTP/1.0</h3>
+
+</section>
+
+<section id="http1.1" class="title-slide slide level3" data-number="4.4.2">
+<h3 data-number="4.4.2"><span class="header-section-number">4.4.2</span> HTTP/1.1</h3>
+
+</section>
+
+
+<section id="cabeceras-http" class="title-slide slide level2" data-number="4.5">
+<h2 data-number="4.5"><span class="header-section-number">4.5</span> Cabeceras HTTP</h2>
+
+</section>
+
+<section id="códigos-de-estado" class="title-slide slide level2" data-number="4.6">
+<h2 data-number="4.6"><span class="header-section-number">4.6</span> Códigos de estado</h2>
+
+</section>
+
+<section id="experimentos" class="title-slide slide level2" data-number="4.7">
+<h2 data-number="4.7"><span class="header-section-number">4.7</span> Experimentos</h2>
+
+</section>
+<section id="telnet-a-un-servidor" class="title-slide slide level3" data-number="4.7.1">
+<h3 data-number="4.7.1"><span class="header-section-number">4.7.1</span> <code>telnet</code> (a un servidor)</h3>
+
+</section>
+
+<section id="netcat-desde-un-navegador" class="title-slide slide level3" data-number="4.7.2">
+<h3 data-number="4.7.2"><span class="header-section-number">4.7.2</span> <code>netcat</code> (desde un navegador)</h3>
+
+</section>
+
+<section id="curl--i--xpost-http-pygmentize--l-http" class="title-slide slide level3" data-number="4.7.3">
+<h3 data-number="4.7.3"><span class="header-section-number">4.7.3</span> <code>curl -i -XPOST “http://…” | pygmentize -l http</code></h3>
+
+</section>
+
+<section id="http" class="title-slide slide level3" data-number="4.7.4">
+<h3 data-number="4.7.4"><span class="header-section-number">4.7.4</span> <code>http</code></h3>
+
+</section>
+
+<section id="google-chrome-developer-tools" class="title-slide slide level3" data-number="4.7.5">
+<h3 data-number="4.7.5"><span class="header-section-number">4.7.5</span> Google Chrome Developer Tools</h3>
+
+</section>
+
+
+<section id="envío-de-datos-al-servidor" class="title-slide slide level2" data-number="4.8">
+<h2 data-number="4.8"><span class="header-section-number">4.8</span> Envío de datos al servidor</h2>
+
+</section>
+<section id="mediante-get" class="title-slide slide level3" data-number="4.8.1">
+<h3 data-number="4.8.1"><span class="header-section-number">4.8.1</span> Mediante GET</h3>
+
+</section>
+
+<section id="mediante-post" class="title-slide slide level3" data-number="4.8.2">
+<h3 data-number="4.8.2"><span class="header-section-number">4.8.2</span> Mediante POST</h3>
+
+</section>
+
+<section id="formularios-html" class="title-slide slide level3" data-number="4.8.3">
+<h3 data-number="4.8.3"><span class="header-section-number">4.8.3</span> Formularios HTML</h3>
+
+</section>
+
+
+<section id="cookies" class="title-slide slide level2" data-number="4.9">
+<h2 data-number="4.9"><span class="header-section-number">4.9</span> Cookies</h2>
+
+</section>
+</section>
+<section>
+<section id="apache-básico" class="title-slide slide level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Apache básico</h1>
+
+</section>
+<section id="instalación" class="title-slide slide level2" data-number="5.1">
+<h2 data-number="5.1"><span class="header-section-number">5.1</span> Instalación</h2>
+
+</section>
+
+<section id="configuración-básica" class="title-slide slide level2" data-number="5.2">
+<h2 data-number="5.2"><span class="header-section-number">5.2</span> Configuración básica</h2>
+
+</section>
+
+<section id="sitios-virtuales" class="title-slide slide level2" data-number="5.3">
+<h2 data-number="5.3"><span class="header-section-number">5.3</span> Sitios virtuales</h2>
+
+</section>
+</section>
+<section>
+<section id="metadatos" class="title-slide slide level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Metadatos</h1>
+
+</section>
+<section id="objetivos-de-la-unidad" class="title-slide slide level2" data-number="6.1">
+<h2 data-number="6.1"><span class="header-section-number">6.1</span> Objetivos de la unidad</h2>
+
+</section>
+
+<section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2" data-number="6.2">
+<h2 data-number="6.2"><span class="header-section-number">6.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2>
+
+</section>
+<section id="ra1" class="title-slide slide level3" data-number="6.2.1">
+<h3 data-number="6.2.1"><span class="header-section-number">6.2.1</span> RA1</h3>
+
+</section>
+<section id="ce1.a" class="title-slide slide level4" data-number="6.2.1.1">
+<h4 data-number="6.2.1.1"><span class="header-section-number">6.2.1.1</span> CE1.a</h4>
+
+</section>
+
+<section id="ce1.b" class="title-slide slide level4" data-number="6.2.1.2">
+<h4 data-number="6.2.1.2"><span class="header-section-number">6.2.1.2</span> CE1.b</h4>
+
+</section>
+
+<section id="ce1.c" class="title-slide slide level4" data-number="6.2.1.3">
+<h4 data-number="6.2.1.3"><span class="header-section-number">6.2.1.3</span> CE1.c</h4>
+
+</section>
+
+<section id="ce1.d" class="title-slide slide level4" data-number="6.2.1.4">
+<h4 data-number="6.2.1.4"><span class="header-section-number">6.2.1.4</span> CE1.d</h4>
+
+</section>
+
+<section id="ce1.e" class="title-slide slide level4" data-number="6.2.1.5">
+<h4 data-number="6.2.1.5"><span class="header-section-number">6.2.1.5</span> CE1.e</h4>
+
+</section>
+
+<section id="ce1.g" class="title-slide slide level4" data-number="6.2.1.6">
+<h4 data-number="6.2.1.6"><span class="header-section-number">6.2.1.6</span> CE1.g</h4>
+
+</section>
+
+
+</section>
     </div>
   </div>
 
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="./reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="./reveal.js/plugin/notes/notes.js"></script>
+  <script src="./reveal.js/plugin/search/search.js"></script>
+  <script src="./reveal.js/plugin/zoom/zoom.js"></script>
+  <script src="./reveal.js/plugin/reveal.js-menu/menu.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
         // Display the page number of the current slide
         slideNumber: true,
@@ -208,34 +501,21 @@
         width: 1280,
         height: 1080,
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-menu/menu.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } },
-          { src: 'reveal.js/plugin/reveal-code-focus/vendor/highlight.js/highlight.pack.js' },
-          { src: 'reveal.js/plugin/reveal-code-focus/reveal-code-focus.js', async: true, callback: function() { RevealCodeFocus(); } },
-          { src: 'reveal.js/plugin/search/search.js', async: true },
-          { src: 'reveal.js/plugin/customcontrols/customcontrols.js', async: true }
-        ],
-
-        customcontrols: {
-          controls: [
-            { icon: '<i class="fa fa-question-circle"></i>',
-			  css: 'position: fixed; right: 50px; bottom: 50px; z-index: 30; font-size: 24px;',
-			  action: 'Reveal.toggleHelp(); return false;'
-			}
-          ]
+        menu: {
+          hideMissingTitles: true,
         },
 
-        menu: {
-          numbers: true,
-          hideMissingTitles: true,
-          themes: true,
-          themesPath: 'reveal.js/css/theme/'
-        }
+        dependencies: [
+          { src: './reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } }
+        ],
+
+        // reveal.js plugins
+        plugins: [
+          RevealMenu,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
       });
     </script>
     </body>

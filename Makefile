@@ -1,6 +1,6 @@
 .PHONY: all html pdf prog clean limpiar serve touch markdown sobrantes $(ITHACA)
 
-CURSO=2019/2020
+CURSO=2020/2021
 
 # Directorios
 
@@ -102,6 +102,7 @@ $(BUILDDIR_HTML)/%.html: $(SRCDIR)/%.md $(PP) $(PANDOC) $(REVEAL) $(REVEAL_TEMPL
 	@echo "Generando $@..."
 	@$(PP) -DHTML -DCURSO=$(CURSO) -import $(COMMON_PP) $< | \
 		pandoc -s -t revealjs \
+		-V revealjs-url=./reveal.js \
 		--filter=pandoc-citeproc \
 		--katex \
 		--bibliography=$(CITATIONS_BIB) \
@@ -127,7 +128,7 @@ $(BUILDDIR_PDF)/%.pdf: $(SRCDIR)/%.md $(PP) $(PANDOC) $(BEAMER_TEMPLATE) $(HIGHL
 		--bibliography=$(CITATIONS_BIB) \
 		--template=$(BEAMER_TEMPLATE) \
 		--toc --toc-depth=1 -N \
-		--slide-level=4 \
+		--slide-level=5 \
 		-H $(PREAMBULO_BEAMER) \
 		--pdf-engine=xelatex \
 		--highlight-style=$(HIGHLIGHT_STYLE) \
@@ -147,7 +148,7 @@ $(BUILDDIR_PDF)/%.pdf: $(SRCDIR)/%.md $(PP) $(PANDOC) $(BEAMER_TEMPLATE) $(HIGHL
 $(BUILDDIR_APUNTES)/%-apuntes.pdf: $(SRCDIR)/%.md $(PP) $(PANDOC) $(LATEX_TEMPLATE) $(HIGHLIGHT_STYLE) $(PREAMBULO_LATEX) $(INCLUDE_BEFORE_TEX) $(CONSOLE_XML) $(PHP_XML)
 	@echo "Generando $@..."
 	@$(PP) -DLATEX -DCURSO=$(CURSO) -import $(COMMON_PP) $< | \
-		perl -0pe "s/\n\n---\n\n/\n\n/g" | \
+		perl -0pe "s/\s*\n\s*\n---\n\s*\n/\n\n/g" | \
 		pandoc -s -t latex \
 		--filter=pandoc-citeproc \
 		--bibliography=$(CITATIONS_BIB) \
@@ -173,7 +174,7 @@ $(PP):
 	# La última versión está en https://cdsoft.fr/pp/pp-linux-x86_64.txz
 	# pero en Ubuntu 18.04 LTS hay que usar la 2.7.3, que es la última que funciona:
 	# wget -q -O - https://cdsoft.fr/pp/archives/pp-linux-x86_64-2.7.3.txz | tar x -J pp
-	wget -q -O - https://cdsoft.fr/pp/pp-linux-x86_64.txz | tar x -J pp
+	wget -q -O - http://cdelord.fr/pp/pp-linux-x86_64.txz | tar x -J pp
 	sudo apt install default-jre graphviz librsvg2-bin python3-pyprind
 
 $(PANDOC):

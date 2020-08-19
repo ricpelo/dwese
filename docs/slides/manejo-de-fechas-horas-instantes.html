@@ -8,86 +8,80 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="shortcut icon" type="image/png" href="/assets/icons/icon.png">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">
+  <link rel="stylesheet" href="./reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="./reveal.js/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #cb4b16; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #d33682; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #dc322f; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #93a1a1; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #268bd2; } /* DataType */
+    code span.dv { color: #d33682; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #d33682; } /* Float */
+    code span.fu { color: #268bd2; } /* Function */
+    code span.im { font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #268bd2; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #a57800; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #2aa198; } /* SpecialString */
+    code span.st { color: #2aa198; } /* String */
+    code span.va { color: #6c71c4; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #cb4b16; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #d33682; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #dc322f; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #93a1a1; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #268bd2; } /* DataType */
-code span.dv { color: #d33682; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #d33682; } /* Float */
-code span.fu { color: #268bd2; } /* Function */
-code span.im { font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #268bd2; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #a57800; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #2aa198; } /* SpecialString */
-code span.st { color: #2aa198; } /* String */
-code span.va { color: #6c71c4; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="./reveal.js/dist/theme/solarized.css" id="theme">
   <link rel="stylesheet" href="custom.css"/>
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <style type="text/css">
       #header-left {
@@ -138,6 +132,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         el.innerHTML = title;
         document.getElementById('header-left').appendChild(el);
         document.getElementById('footer-left').innerHTML = '&copy; ' + author + ' (' + date + ')';
+
+        // Mueve un poquito el = a la derecha cuando hay que dibujar un "no-igual" con KaTeX:
+        Array.prototype.forEach.call(document.getElementsByClassName("rlap"), function (el) {
+            var e = el;
+            var i = 0;
+            while (e != null && i < 6) {
+                e = e.parentElement;
+                i++;
+            }
+            if (e != null && i == 6 && e.nextSibling != null && e.nextSibling.innerText == "=") {
+                el.style.width = "0.1em";
+            }
+            console.log(el);
+            console.log(e.nextSibling);
+        });
 
         function updateHeader(nd) {
             var hr = document.getElementById('header-right');
@@ -205,13 +214,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <div class="reveal">
     <div class="slides">
 
-<section>
-<section id="title-slide" class="title-slide slide level1">
+<section id="title-slide">
   <h1 class="title">Manejo de fechas, horas, instantes e intervalos en PHP, Yii 2, PostgreSQL y Heroku</h1>
   <p class="author">Ricardo Pérez López</p>
-  <p class="date">IES Doñana, curso 2019/2020</p>
+  <p class="date">IES Doñana, curso 2020/2021</p>
 </section>
-<section id="TOC" class="slide level2">
+<section id="TOC">
 <ul>
 <li><a href="#/aspectos-esenciales"><span class="toc-section-number">1</span> Aspectos esenciales</a></li>
 <li><a href="#/configuración-inicial"><span class="toc-section-number">2</span> Configuración inicial</a></li>
@@ -220,15 +228,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#/manejo-en-postgresql"><span class="toc-section-number">5</span> Manejo en PostgreSQL</a></li>
 </ul>
 </section>
-</section>
 
-<section><section id="aspectos-esenciales" class="title-slide slide level1"><h1><span class="header-section-number">1</span> Aspectos esenciales</h1></section><section id="aspectos-esenciales-1" class="title-slide slide level2"><h2><span class="header-section-number">1.1</span> Aspectos esenciales</h2><ul>
+<section>
+<section id="aspectos-esenciales" class="title-slide slide level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Aspectos esenciales</h1>
+
+</section>
+<section id="aspectos-esenciales-1" class="title-slide slide level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Aspectos esenciales</h2>
+<ul>
 <li><p>Hay que trabajar siempre en UTC.</p></li>
 <li><p>Hay que trabajar siempre en formato ISO 8601.</p></li>
 <li><p>Sólo se convierte al formato español (y a la zona horaria que toque) justo cuando se muestre al usuario.</p></li>
-</ul></section></section>
-<section><section id="configuración-inicial" class="title-slide slide level1"><h1><span class="header-section-number">2</span> Configuración inicial</h1></section><section id="postgresql" class="title-slide slide level2"><h2><span class="header-section-number">2.1</span> PostgreSQL</h2></section></section>
-<section><section id="manejo-en-php" class="title-slide slide level1"><h1><span class="header-section-number">3</span> Manejo en PHP</h1></section><section id="manejo-en-php-1" class="title-slide slide level2"><h2><span class="header-section-number">3.1</span> Manejo en PHP</h2><p>sdflkjsdlkfjsdf.</p></section><section id="representación-de-fechas-horas-e-instantes-en-php" class="title-slide slide level2"><h2><span class="header-section-number">3.2</span> Representación de fechas, horas e instantes en PHP</h2><ul>
+</ul>
+</section>
+</section>
+<section>
+<section id="configuración-inicial" class="title-slide slide level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Configuración inicial</h1>
+
+</section>
+<section id="postgresql" class="title-slide slide level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> PostgreSQL</h2>
+
+</section>
+</section>
+<section>
+<section id="manejo-en-php" class="title-slide slide level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Manejo en PHP</h1>
+
+</section>
+<section id="manejo-en-php-1" class="title-slide slide level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> Manejo en PHP</h2>
+<p>sdflkjsdlkfjsdf.</p>
+</section>
+
+<section id="representación-de-fechas-horas-e-instantes-en-php" class="title-slide slide level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span> Representación de fechas, horas e instantes en PHP</h2>
+<ul>
 <li>Como marcas de tiempo UNIX (UNIX timestamps): número de segundos transcurridos desde el 1/1/1970 a las 00:00:00.
 <ul>
 <li>Usado por funciones date(), time(), localtime(), mktime(), cookie()</li>
@@ -239,26 +276,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Más interesante en general.</li>
 </ul></li>
-</ul></section><section id="patrones-de-formatos" class="title-slide slide level2"><h2><span class="header-section-number">3.3</span> Patrones de formatos</h2><ul>
+</ul>
+</section>
+
+<section id="patrones-de-formatos" class="title-slide slide level2" data-number="3.3">
+<h2 data-number="3.3"><span class="header-section-number">3.3</span> Patrones de formatos</h2>
+<ul>
 <li>ICU</li>
 <li>PHP</li>
 <li>jQuery UI</li>
 <li>to_char() de PostgreSQL</li>
 </ul>
-<p>http://www.yiiframework.com/doc-2.0/yii-helpers-formatconverter.html</p></section><section id="convertir-cadena-en-fechahorainstante" class="title-slide slide level2"><h2><span class="header-section-number">3.4</span> Convertir cadena en fecha/hora/instante</h2><ul>
+<p>http://www.yiiframework.com/doc-2.0/yii-helpers-formatconverter.html</p>
+</section>
+
+<section id="convertir-cadena-en-fechahorainstante" class="title-slide slide level2" data-number="3.4">
+<h2 data-number="3.4"><span class="header-section-number">3.4</span> Convertir cadena en fecha/hora/instante</h2>
+<ul>
 <li><p>DateTime::createFromFormat() no interesa, porque no entiende el español.</p></li>
 <li><p>strtotime() tampoco interesa, porque tampoco entiende el español.</p></li>
 <li><p>Lo mejor es usar la extensión Intl:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode php"><code class="sourceCode php"><a class="sourceLine" id="cb1-1" title="1"><span class="va">$fmt</span> = <span class="kw">new</span> IntlDateFormatter<span class="ot">(</span></a>
-<a class="sourceLine" id="cb1-2" title="2">    <span class="st">&#39;es-ES&#39;</span><span class="ot">,</span></a>
-<a class="sourceLine" id="cb1-3" title="3">    IntlDateFormatter::<span class="cn">LONG</span><span class="ot">,</span></a>
-<a class="sourceLine" id="cb1-4" title="4">    IntlDateFormatter::<span class="cn">LONG</span><span class="ot">,</span></a>
-<a class="sourceLine" id="cb1-5" title="5">    <span class="st">&#39;Europe/Madrid&#39;</span><span class="ot">,</span></a>
-<a class="sourceLine" id="cb1-6" title="6">    <span class="kw">null</span><span class="ot">,</span></a>
-<a class="sourceLine" id="cb1-7" title="7">    <span class="st">&#39;dd-MMMM-yyyy HH:mm:ss&#39;</span></a>
-<a class="sourceLine" id="cb1-8" title="8"><span class="ot">);</span></a>
-<a class="sourceLine" id="cb1-9" title="9"><span class="va">$fmt</span>-&gt;parse<span class="ot">(</span><span class="st">&#39;25-enero-2018 17:01:43&#39;</span><span class="ot">);</span> <span class="co">// =&gt; 1516896103</span></a></code></pre></div></li>
-</ul></section><section id="convertir-fechahorainstante-en-cadena" class="title-slide slide level2"><h2><span class="header-section-number">3.5</span> Convertir fecha/hora/instante en cadena</h2><ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="va">$fmt</span> = <span class="kw">new</span> IntlDateFormatter<span class="ot">(</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="st">&#39;es-ES&#39;</span><span class="ot">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>    IntlDateFormatter::<span class="cn">LONG</span><span class="ot">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    IntlDateFormatter::<span class="cn">LONG</span><span class="ot">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>    <span class="st">&#39;Europe/Madrid&#39;</span><span class="ot">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>    <span class="kw">null</span><span class="ot">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>    <span class="st">&#39;dd-MMMM-yyyy HH:mm:ss&#39;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a><span class="ot">);</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a><span class="va">$fmt</span>-&gt;parse<span class="ot">(</span><span class="st">&#39;25-enero-2018 17:01:43&#39;</span><span class="ot">);</span> <span class="co">// =&gt; 1516896103</span></span></code></pre></div></li>
+</ul>
+</section>
+
+<section id="convertir-fechahorainstante-en-cadena" class="title-slide slide level2" data-number="3.5">
+<h2 data-number="3.5"><span class="header-section-number">3.5</span> Convertir fecha/hora/instante en cadena</h2>
+<ul>
 <li>date() no interesa, porque lo saca en inglés.</li>
 <li>A DateTime::format() le pasa lo mismo.</li>
 <li>strftime() junto con setlocale(LC_ALL, ‘es_ES.UTF8’) funciona bien, pero:
@@ -267,20 +319,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>usa un formato raro distinto al de las demás funciones, con %: strftime(‘%d-%B-%Y %H:%M:%S’), aunque eso tampoco es que sea muy grave.</li>
 <li>tiene en cuenta la zona horaria definida con date_default_timezone_set(). Para que se vea en nuestra zona horaria, primero hay que hacer date_default_timezone_set(‘Europe/Madrid’), luego hacer el strftime() y luego volver a hacer date_default_timezone_set(‘UTC’).</li>
 </ul></li>
-</ul></section><section id="manejo-de-intervalos-en-php" class="title-slide slide level2"><h2><span class="header-section-number">3.6</span> Manejo de intervalos en PHP</h2><ul>
+</ul>
+</section>
+
+<section id="manejo-de-intervalos-en-php" class="title-slide slide level2" data-number="3.6">
+<h2 data-number="3.6"><span class="header-section-number">3.6</span> Manejo de intervalos en PHP</h2>
+<ul>
 <li>La clase DateInterval.</li>
-</ul></section></section>
-<section><section id="manejo-en-yii-2" class="title-slide slide level1"><h1><span class="header-section-number">4</span> Manejo en Yii 2</h1></section><section id="manejo-en-yii-2-1" class="title-slide slide level2"><h2><span class="header-section-number">4.1</span> Manejo en Yii 2</h2></section></section>
-<section><section id="manejo-en-postgresql" class="title-slide slide level1"><h1><span class="header-section-number">5</span> Manejo en PostgreSQL</h1></section><section id="manejo-en-postgresql-1" class="title-slide slide level2"><h2><span class="header-section-number">5.1</span> Manejo en PostgreSQL</h2></section></section>
+</ul>
+</section>
+</section>
+<section>
+<section id="manejo-en-yii-2" class="title-slide slide level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Manejo en Yii 2</h1>
+
+</section>
+<section id="manejo-en-yii-2-1" class="title-slide slide level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> Manejo en Yii 2</h2>
+
+</section>
+</section>
+<section>
+<section id="manejo-en-postgresql" class="title-slide slide level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Manejo en PostgreSQL</h1>
+
+</section>
+<section id="manejo-en-postgresql-1" class="title-slide slide level2" data-number="5.1">
+<h2 data-number="5.1"><span class="header-section-number">5.1</span> Manejo en PostgreSQL</h2>
+
+</section>
+</section>
     </div>
   </div>
 
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="./reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="./reveal.js/plugin/notes/notes.js"></script>
+  <script src="./reveal.js/plugin/search/search.js"></script>
+  <script src="./reveal.js/plugin/zoom/zoom.js"></script>
+  <script src="./reveal.js/plugin/reveal.js-menu/menu.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
         // Display the page number of the current slide
         slideNumber: true,
@@ -294,34 +377,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         width: 1280,
         height: 1080,
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-menu/menu.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } },
-          { src: 'reveal.js/plugin/reveal-code-focus/vendor/highlight.js/highlight.pack.js' },
-          { src: 'reveal.js/plugin/reveal-code-focus/reveal-code-focus.js', async: true, callback: function() { RevealCodeFocus(); } },
-          { src: 'reveal.js/plugin/search/search.js', async: true },
-          { src: 'reveal.js/plugin/customcontrols/customcontrols.js', async: true }
-        ],
-
-        customcontrols: {
-          controls: [
-            { icon: '<i class="fa fa-question-circle"></i>',
-			  css: 'position: fixed; right: 50px; bottom: 50px; z-index: 30; font-size: 24px;',
-			  action: 'Reveal.toggleHelp(); return false;'
-			}
-          ]
+        menu: {
+          hideMissingTitles: true,
         },
 
-        menu: {
-          numbers: true,
-          hideMissingTitles: true,
-          themes: true,
-          themesPath: 'reveal.js/css/theme/'
-        }
+        dependencies: [
+          { src: './reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } }
+        ],
+
+        // reveal.js plugins
+        plugins: [
+          RevealMenu,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
       });
     </script>
     </body>

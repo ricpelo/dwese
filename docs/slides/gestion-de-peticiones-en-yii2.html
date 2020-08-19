@@ -8,23 +8,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="shortcut icon" type="image/png" href="/assets/icons/icon.png">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">
+  <link rel="stylesheet" href="./reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="./reveal.js/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="./reveal.js/dist/theme/solarized.css" id="theme">
   <link rel="stylesheet" href="custom.css"/>
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <style type="text/css">
       #header-left {
@@ -75,6 +70,21 @@
         el.innerHTML = title;
         document.getElementById('header-left').appendChild(el);
         document.getElementById('footer-left').innerHTML = '&copy; ' + author + ' (' + date + ')';
+
+        // Mueve un poquito el = a la derecha cuando hay que dibujar un "no-igual" con KaTeX:
+        Array.prototype.forEach.call(document.getElementsByClassName("rlap"), function (el) {
+            var e = el;
+            var i = 0;
+            while (e != null && i < 6) {
+                e = e.parentElement;
+                i++;
+            }
+            if (e != null && i == 6 && e.nextSibling != null && e.nextSibling.innerText == "=") {
+                el.style.width = "0.1em";
+            }
+            console.log(el);
+            console.log(e.nextSibling);
+        });
 
         function updateHeader(nd) {
             var hr = document.getElementById('header-right');
@@ -142,13 +152,12 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
-<section id="title-slide" class="title-slide slide level1">
+<section id="title-slide">
   <h1 class="title">Gestión de peticiones en Yii 2</h1>
   <p class="author">Ricardo Pérez López</p>
-  <p class="date">IES Doñana, curso 2019/2020</p>
+  <p class="date">IES Doñana, curso 2020/2021</p>
 </section>
-<section id="TOC" class="slide level2">
+<section id="TOC">
 <ul>
 <li><a href="#/introducción"><span class="toc-section-number">1</span> <span>Introducción</span></a></li>
 <li><a href="#/arranque-bootstrapping"><span class="toc-section-number">2</span> <span>Arranque (bootstrapping)</span></a></li>
@@ -159,24 +168,61 @@
 <li><a href="#/ejercicios"><span class="toc-section-number">7</span> Ejercicios</a></li>
 </ul>
 </section>
+
+<section>
+<section id="introducción" class="title-slide slide level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-overview.html">Introducción</a></h1>
+
+</section>
+<section id="introducción-1" class="title-slide slide level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Introducción</h2>
+<p>Ejemplo.</p>
+</section>
+</section>
+<section id="arranque-bootstrapping" class="title-slide slide level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-bootstrapping.html">Arranque (bootstrapping)</a></h1>
+
 </section>
 
-<section><section id="introducción" class="title-slide slide level1"><h1><span class="header-section-number">1</span> <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-overview.html">Introducción</a></h1></section><section id="introducción-1" class="title-slide slide level2"><h2><span class="header-section-number">1.1</span> Introducción</h2><p>Ejemplo.</p></section></section>
-<section id="arranque-bootstrapping" class="title-slide slide level1"><h1><span class="header-section-number">2</span> <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-bootstrapping.html">Arranque (bootstrapping)</a></h1></section>
-<section id="enrutado-y-creación-de-urls" class="title-slide slide level1"><h1><span class="header-section-number">3</span> <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-routing.html">Enrutado y creación de URLs</a></h1></section>
-<section id="peticiones" class="title-slide slide level1"><h1><span class="header-section-number">4</span> <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-requests.html">Peticiones</a></h1></section>
-<section id="respuestas" class="title-slide slide level1"><h1><span class="header-section-number">5</span> <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-responses.html">Respuestas</a></h1></section>
-<section id="sesiones-y-cookies" class="title-slide slide level1"><h1><span class="header-section-number">6</span> <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-sessions-cookies.html">Sesiones y cookies</a></h1></section>
-<section id="ejercicios" class="title-slide slide level1"><h1><span class="header-section-number">7</span> Ejercicios</h1></section>
+<section id="enrutado-y-creación-de-urls" class="title-slide slide level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-routing.html">Enrutado y creación de URLs</a></h1>
+
+</section>
+
+<section id="peticiones" class="title-slide slide level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-requests.html">Peticiones</a></h1>
+
+</section>
+
+<section id="respuestas" class="title-slide slide level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-responses.html">Respuestas</a></h1>
+
+</section>
+
+<section id="sesiones-y-cookies" class="title-slide slide level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-sessions-cookies.html">Sesiones y cookies</a></h1>
+
+</section>
+
+<section id="ejercicios" class="title-slide slide level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Ejercicios</h1>
+
+</section>
     </div>
   </div>
 
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="./reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="./reveal.js/plugin/notes/notes.js"></script>
+  <script src="./reveal.js/plugin/search/search.js"></script>
+  <script src="./reveal.js/plugin/zoom/zoom.js"></script>
+  <script src="./reveal.js/plugin/reveal.js-menu/menu.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
         // Display the page number of the current slide
         slideNumber: true,
@@ -190,34 +236,21 @@
         width: 1280,
         height: 1080,
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-menu/menu.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } },
-          { src: 'reveal.js/plugin/reveal-code-focus/vendor/highlight.js/highlight.pack.js' },
-          { src: 'reveal.js/plugin/reveal-code-focus/reveal-code-focus.js', async: true, callback: function() { RevealCodeFocus(); } },
-          { src: 'reveal.js/plugin/search/search.js', async: true },
-          { src: 'reveal.js/plugin/customcontrols/customcontrols.js', async: true }
-        ],
-
-        customcontrols: {
-          controls: [
-            { icon: '<i class="fa fa-question-circle"></i>',
-			  css: 'position: fixed; right: 50px; bottom: 50px; z-index: 30; font-size: 24px;',
-			  action: 'Reveal.toggleHelp(); return false;'
-			}
-          ]
+        menu: {
+          hideMissingTitles: true,
         },
 
-        menu: {
-          numbers: true,
-          hideMissingTitles: true,
-          themes: true,
-          themesPath: 'reveal.js/css/theme/'
-        }
+        dependencies: [
+          { src: './reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } }
+        ],
+
+        // reveal.js plugins
+        plugins: [
+          RevealMenu,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
       });
     </script>
     </body>

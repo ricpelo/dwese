@@ -8,23 +8,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="shortcut icon" type="image/png" href="/assets/icons/icon.png">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">
+  <link rel="stylesheet" href="./reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="./reveal.js/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="./reveal.js/dist/theme/solarized.css" id="theme">
   <link rel="stylesheet" href="custom.css"/>
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <style type="text/css">
       #header-left {
@@ -75,6 +70,21 @@
         el.innerHTML = title;
         document.getElementById('header-left').appendChild(el);
         document.getElementById('footer-left').innerHTML = '&copy; ' + author + ' (' + date + ')';
+
+        // Mueve un poquito el = a la derecha cuando hay que dibujar un "no-igual" con KaTeX:
+        Array.prototype.forEach.call(document.getElementsByClassName("rlap"), function (el) {
+            var e = el;
+            var i = 0;
+            while (e != null && i < 6) {
+                e = e.parentElement;
+                i++;
+            }
+            if (e != null && i == 6 && e.nextSibling != null && e.nextSibling.innerText == "=") {
+                el.style.width = "0.1em";
+            }
+            console.log(el);
+            console.log(e.nextSibling);
+        });
 
         function updateHeader(nd) {
             var hr = document.getElementById('header-right');
@@ -142,13 +152,12 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
-<section id="title-slide" class="title-slide slide level1">
+<section id="title-slide">
   <h1 class="title">Acceso a bases de datos en Yii 2</h1>
   <p class="author">Ricardo Pérez López</p>
-  <p class="date">IES Doñana, curso 2019/2020</p>
+  <p class="date">IES Doñana, curso 2020/2021</p>
 </section>
-<section id="TOC" class="slide level2">
+<section id="TOC">
 <ul>
 <li><a href="#/dao"><span class="toc-section-number">1</span> DAO</a></li>
 <li><a href="#/query-builder"><span class="toc-section-number">2</span> Query Builder</a></li>
@@ -156,109 +165,539 @@
 <li><a href="#/metadatos"><span class="toc-section-number">4</span> Metadatos</a></li>
 </ul>
 </section>
+
+<section>
+<section id="dao" class="title-slide slide level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> DAO</h1>
+
+</section>
+<section id="yiidbconnection" class="title-slide slide level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> <code>yii\db\Connection</code></h2>
+
 </section>
 
-<section><section id="dao" class="title-slide slide level1"><h1><span class="header-section-number">1</span> DAO</h1></section><section id="yiidbconnection" class="title-slide slide level2"><h2><span class="header-section-number">1.1</span> <code>yii\db\Connection</code></h2></section><section id="yiidbconnectioncreatecommand" class="title-slide slide level2"><h2><span class="header-section-number">1.2</span> <code>yii\db\Connection::createCommand()</code></h2></section><section id="consultas-sql" class="title-slide slide level2"><h2><span class="header-section-number">1.3</span> Consultas SQL</h2></section><section id="queryall" class="title-slide slide level3"><h3><span class="header-section-number">1.3.1</span> <code>queryAll()</code></h3></section><section id="queryone" class="title-slide slide level3"><h3><span class="header-section-number">1.3.2</span> <code>queryOne()</code></h3></section><section id="querycolumn" class="title-slide slide level3"><h3><span class="header-section-number">1.3.3</span> <code>queryColumn()</code></h3></section><section id="queryscalar" class="title-slide slide level3"><h3><span class="header-section-number">1.3.4</span> <code>queryScalar()</code></h3></section><section id="sentencias-no-select" class="title-slide slide level2"><h2><span class="header-section-number">1.4</span> Sentencias no <code>SELECT</code></h2></section><section id="execute" class="title-slide slide level3"><h3><span class="header-section-number">1.4.1</span> <code>execute()</code></h3></section><section id="insert" class="title-slide slide level3"><h3><span class="header-section-number">1.4.2</span> <code>insert()</code></h3></section><section id="update" class="title-slide slide level3"><h3><span class="header-section-number">1.4.3</span> <code>update()</code></h3></section><section id="delete" class="title-slide slide level3"><h3><span class="header-section-number">1.4.4</span> <code>delete()</code></h3></section></section>
-<section><section id="query-builder" class="title-slide slide level1"><h1><span class="header-section-number">2</span> Query Builder</h1></section><section id="yiidbquery" class="title-slide slide level2"><h2><span class="header-section-number">2.1</span> <code>yii\db\Query</code></h2></section><section id="creación-de-consultas" class="title-slide slide level2"><h2><span class="header-section-number">2.2</span> Creación de consultas</h2></section><section id="select" class="title-slide slide level3"><h3><span class="header-section-number">2.2.1</span> <code>select()</code></h3></section><section id="from" class="title-slide slide level3"><h3><span class="header-section-number">2.2.2</span> <code>from()</code></h3></section><section id="condiciones-y-filtrado-de-filas" class="title-slide slide level3"><h3><span class="header-section-number">2.2.3</span> Condiciones y filtrado de filas</h3></section><section id="where" class="slide level4">
-<h4><span class="header-section-number">2.2.3.1</span> <code>where()</code></h4>
-</section><section id="formatos-de-condiciones" class="slide level4">
-<h4><span class="header-section-number">2.2.3.2</span> Formatos de condiciones</h4>
-<h5 id="de-cadena"><span class="header-section-number">2.2.3.2.1</span> De cadena</h5>
-<h5 id="de-array"><span class="header-section-number">2.2.3.2.2</span> De array</h5>
-<h5 id="de-operadores"><span class="header-section-number">2.2.3.2.3</span> De operadores</h5>
-</section><section id="andwhere" class="slide level4">
-<h4><span class="header-section-number">2.2.3.3</span> <code>andWhere()</code></h4>
-</section><section id="orwhere" class="slide level4">
-<h4><span class="header-section-number">2.2.3.4</span> <code>orWhere()</code></h4>
-</section><section id="filterwhere" class="slide level4">
-<h4><span class="header-section-number">2.2.3.5</span> <code>filterWhere()</code></h4>
-</section><section id="andfilterwhere" class="slide level4">
-<h4><span class="header-section-number">2.2.3.6</span> <code>andFilterWhere()</code></h4>
-</section><section id="orfilterwhere" class="slide level4">
-<h4><span class="header-section-number">2.2.3.7</span> <code>orFilterWhere()</code></h4>
-</section><section id="orderby" class="title-slide slide level3"><h3><span class="header-section-number">2.2.4</span> <code>orderBy()</code></h3></section><section id="groupby" class="title-slide slide level3"><h3><span class="header-section-number">2.2.5</span> <code>groupBy()</code></h3></section><section id="condiciones-y-filtrado-de-grupos" class="title-slide slide level3"><h3><span class="header-section-number">2.2.6</span> Condiciones y filtrado de grupos</h3></section><section id="having" class="slide level4">
-<h4><span class="header-section-number">2.2.6.1</span> <code>having()</code></h4>
-</section><section id="filterhaving" class="slide level4">
-<h4><span class="header-section-number">2.2.6.2</span> <code>filterHaving()</code></h4>
-</section><section id="andfilterhaving" class="slide level4">
-<h4><span class="header-section-number">2.2.6.3</span> <code>andFilterHaving()</code></h4>
-</section><section id="orfilterhaving" class="slide level4">
-<h4><span class="header-section-number">2.2.6.4</span> <code>orFilterHaving()</code></h4>
-</section><section id="limit" class="title-slide slide level3"><h3><span class="header-section-number">2.2.7</span> <code>limit()</code></h3></section><section id="offset" class="title-slide slide level3"><h3><span class="header-section-number">2.2.8</span> <code>offset()</code></h3></section><section id="combinaciones" class="title-slide slide level3"><h3><span class="header-section-number">2.2.9</span> Combinaciones</h3></section><section id="join" class="slide level4">
-<h4><span class="header-section-number">2.2.9.1</span> <code>join()</code></h4>
-</section><section id="innerjoin" class="slide level4">
-<h4><span class="header-section-number">2.2.9.2</span> <code>innerJoin()</code></h4>
-</section><section id="leftjoin" class="slide level4">
-<h4><span class="header-section-number">2.2.9.3</span> <code>leftJoin()</code></h4>
-</section><section id="rightjoin" class="slide level4">
-<h4><span class="header-section-number">2.2.9.4</span> <code>rightJoin()</code></h4>
-</section><section id="union" class="title-slide slide level3"><h3><span class="header-section-number">2.2.10</span> <code>union()</code></h3></section><section id="recogida-de-resultados" class="title-slide slide level2"><h2><span class="header-section-number">2.3</span> Recogida de resultados</h2></section><section id="all" class="title-slide slide level3"><h3><span class="header-section-number">2.3.1</span> <code>all()</code></h3></section><section id="one" class="title-slide slide level3"><h3><span class="header-section-number">2.3.2</span> <code>one()</code></h3></section><section id="column" class="title-slide slide level3"><h3><span class="header-section-number">2.3.3</span> <code>column()</code></h3></section><section id="scalar" class="title-slide slide level3"><h3><span class="header-section-number">2.3.4</span> <code>scalar()</code></h3></section><section id="exists" class="title-slide slide level3"><h3><span class="header-section-number">2.3.5</span> <code>exists()</code></h3></section><section id="count" class="title-slide slide level3"><h3><span class="header-section-number">2.3.6</span> <code>count()</code></h3></section><section id="funciones-de-grupo" class="title-slide slide level3"><h3><span class="header-section-number">2.3.7</span> Funciones de grupo</h3></section><section id="sum" class="slide level4">
-<h4><span class="header-section-number">2.3.7.1</span> <code>sum()</code></h4>
-</section><section id="average" class="slide level4">
-<h4><span class="header-section-number">2.3.7.2</span> <code>average()</code></h4>
-</section><section id="max" class="slide level4">
-<h4><span class="header-section-number">2.3.7.3</span> <code>max()</code></h4>
-</section><section id="min" class="slide level4">
-<h4><span class="header-section-number">2.3.7.4</span> <code>min()</code></h4>
-</section><section id="indexby" class="title-slide slide level3"><h3><span class="header-section-number">2.3.8</span> <code>indexBy()</code></h3></section><section id="consultas-por-lotes" class="title-slide slide level2"><h2><span class="header-section-number">2.4</span> Consultas por lotes</h2></section><section id="batch" class="title-slide slide level3"><h3><span class="header-section-number">2.4.1</span> <code>batch()</code></h3></section><section id="each" class="title-slide slide level3"><h3><span class="header-section-number">2.4.2</span> <code>each()</code></h3></section></section>
-<section><section id="active-record" class="title-slide slide level1"><h1><span class="header-section-number">3</span> Active Record</h1></section><section id="findone" class="title-slide slide level2"><h2><span class="header-section-number">3.1</span> <code>findOne()</code></h2></section><section id="findall" class="title-slide slide level2"><h2><span class="header-section-number">3.2</span> <code>findAll()</code></h2></section><section id="save" class="title-slide slide level2"><h2><span class="header-section-number">3.3</span> <code>save()</code></h2></section><section id="activequery" class="title-slide slide level2"><h2><span class="header-section-number">3.4</span> ActiveQuery</h2></section><section id="find" class="title-slide slide level3"><h3><span class="header-section-number">3.4.1</span> <code>find()</code></h3></section><section id="atributos-sucios" class="title-slide slide level2"><h2><span class="header-section-number">3.5</span> Atributos sucios</h2></section><section id="relaciones" class="title-slide slide level2"><h2><span class="header-section-number">3.6</span> Relaciones</h2></section><section id="encadenamiento-de-relaciones" class="title-slide slide level3"><h3><span class="header-section-number">3.6.1</span> Encadenamiento de relaciones</h3></section><section id="joinwith" class="title-slide slide level2"><h2><span class="header-section-number">3.7</span> <code>joinWith()</code></h2></section><section id="atributos-virtuales" class="title-slide slide level2"><h2><span class="header-section-number">3.8</span> Atributos virtuales</h2></section><section id="siete-técnicas" class="title-slide slide level3"><h3><span class="header-section-number">3.8.1</span> Siete técnicas</h3></section><section id="calcular-a-mano-cuandodonde-haga-falta" class="slide level4">
-<h4><span class="header-section-number">3.8.1.1</span> Calcular a mano cuando/donde haga falta</h4>
-</section><section id="usar-vistas-sql" class="slide level4">
-<h4><span class="header-section-number">3.8.1.2</span> Usar vistas SQL</h4>
-</section><section id="sobreescribir-el-método-find-del-modelo-para-que-se-use-siempre-en-lugar-del-heredado-de-activerecord" class="slide level4">
-<h4><span class="header-section-number">3.8.1.3</span> Sobreescribir el método <code>find()</code> del modelo para que se use siempre en lugar del heredado de <code>ActiveRecord</code></h4>
-</section><section id="sobreescribir-el-método-afterfind-para-rellenar-el-atributo-a-mano-cada-vez-que-se-hace-un-find" class="slide level4">
-<h4><span class="header-section-number">3.8.1.4</span> Sobreescribir el método <code>afterFind()</code> para rellenar el atributo a mano cada vez que se hace un <code>find()</code></h4>
-</section><section id="capturar-el-evento-event_after_find-del-modelo" class="slide level4">
-<h4><span class="header-section-number">3.8.1.5</span> Capturar el evento <code>EVENT_AFTER_FIND</code> del modelo</h4>
-</section><section id="usar-una-propiedad-con-getter-y-setter" class="slide level4">
-<h4><span class="header-section-number">3.8.1.6</span> Usar una propiedad con <em>getter</em> y <em>setter</em></h4>
-</section><section id="crear-un-método-findespecial-que-se-usará-en-lugar-de-find-cuando-haga-falta" class="slide level4">
-<h4><span class="header-section-number">3.8.1.7</span> Crear un método <code>findEspecial()</code> que se usará en lugar de <code>find()</code> cuando haga falta</h4>
-</section><section id="la-mejor-opción-en-la-mayoría-de-los-casos-combinar-las-dos-anteriores" class="slide level4">
-<h4><span class="header-section-number">3.8.1.8</span> La mejor opción, en la mayoría de los casos: combinar las dos anteriores</h4>
-<h5 id="ejemplo"><span class="header-section-number">3.8.1.8.1</span> Ejemplo</h5>
-</section></section>
-<section><section id="metadatos" class="title-slide slide level1"><h1><span class="header-section-number">4</span> Metadatos</h1></section><section id="objetivos-de-la-unidad" class="title-slide slide level2"><h2><span class="header-section-number">4.1</span> Objetivos de la unidad</h2></section><section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2"><h2><span class="header-section-number">4.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2></section><section id="ra2" class="title-slide slide level3"><h3><span class="header-section-number">4.2.1</span> RA2</h3></section><section id="ra3" class="title-slide slide level3"><h3><span class="header-section-number">4.2.2</span> RA3</h3></section><section id="ra4" class="title-slide slide level3"><h3><span class="header-section-number">4.2.3</span> RA4</h3></section><section id="ce4.g" class="slide level4">
-<h4><span class="header-section-number">4.2.3.1</span> CE4.g</h4>
-</section><section id="ra5" class="title-slide slide level3"><h3><span class="header-section-number">4.2.4</span> RA5</h3></section><section id="ce5.f" class="slide level4">
-<h4><span class="header-section-number">4.2.4.1</span> CE5.f</h4>
-</section><section id="ce5.g" class="slide level4">
-<h4><span class="header-section-number">4.2.4.2</span> CE5.g</h4>
-</section><section id="ce5.h" class="slide level4">
-<h4><span class="header-section-number">4.2.4.3</span> CE5.h</h4>
-</section><section id="ra6" class="title-slide slide level3"><h3><span class="header-section-number">4.2.5</span> RA6</h3></section><section id="ce6.a" class="slide level4">
-<h4><span class="header-section-number">4.2.5.1</span> CE6.a</h4>
-</section><section id="ce6.b" class="slide level4">
-<h4><span class="header-section-number">4.2.5.2</span> CE6.b</h4>
-</section><section id="ce6.c" class="slide level4">
-<h4><span class="header-section-number">4.2.5.3</span> CE6.c</h4>
-</section><section id="ce6.d" class="slide level4">
-<h4><span class="header-section-number">4.2.5.4</span> CE6.d</h4>
-</section><section id="ce6.e" class="slide level4">
-<h4><span class="header-section-number">4.2.5.5</span> CE6.e</h4>
-</section><section id="ce6.f" class="slide level4">
-<h4><span class="header-section-number">4.2.5.6</span> CE6.f</h4>
-</section><section id="ce6.g" class="slide level4">
-<h4><span class="header-section-number">4.2.5.7</span> CE6.g</h4>
-</section><section id="ce6.h" class="slide level4">
-<h4><span class="header-section-number">4.2.5.8</span> CE6.h</h4>
-</section><section id="ra9" class="title-slide slide level3"><h3><span class="header-section-number">4.2.6</span> RA9</h3></section><section id="ce9.e" class="slide level4">
-<h4><span class="header-section-number">4.2.6.1</span> CE9.e</h4>
-</section><section id="ce9.f" class="slide level4">
-<h4><span class="header-section-number">4.2.6.2</span> CE9.f</h4>
-</section><section id="ce9.g" class="slide level4">
-<h4><span class="header-section-number">4.2.6.3</span> CE9.g</h4>
-</section></section>
+<section id="yiidbconnectioncreatecommand" class="title-slide slide level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span> <code>yii\db\Connection::createCommand()</code></h2>
+
+</section>
+
+<section id="consultas-sql" class="title-slide slide level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span> Consultas SQL</h2>
+
+</section>
+<section id="queryall" class="title-slide slide level3" data-number="1.3.1">
+<h3 data-number="1.3.1"><span class="header-section-number">1.3.1</span> <code>queryAll()</code></h3>
+
+</section>
+
+<section id="queryone" class="title-slide slide level3" data-number="1.3.2">
+<h3 data-number="1.3.2"><span class="header-section-number">1.3.2</span> <code>queryOne()</code></h3>
+
+</section>
+
+<section id="querycolumn" class="title-slide slide level3" data-number="1.3.3">
+<h3 data-number="1.3.3"><span class="header-section-number">1.3.3</span> <code>queryColumn()</code></h3>
+
+</section>
+
+<section id="queryscalar" class="title-slide slide level3" data-number="1.3.4">
+<h3 data-number="1.3.4"><span class="header-section-number">1.3.4</span> <code>queryScalar()</code></h3>
+
+</section>
+
+
+<section id="sentencias-no-select" class="title-slide slide level2" data-number="1.4">
+<h2 data-number="1.4"><span class="header-section-number">1.4</span> Sentencias no <code>SELECT</code></h2>
+
+</section>
+<section id="execute" class="title-slide slide level3" data-number="1.4.1">
+<h3 data-number="1.4.1"><span class="header-section-number">1.4.1</span> <code>execute()</code></h3>
+
+</section>
+
+<section id="insert" class="title-slide slide level3" data-number="1.4.2">
+<h3 data-number="1.4.2"><span class="header-section-number">1.4.2</span> <code>insert()</code></h3>
+
+</section>
+
+<section id="update" class="title-slide slide level3" data-number="1.4.3">
+<h3 data-number="1.4.3"><span class="header-section-number">1.4.3</span> <code>update()</code></h3>
+
+</section>
+
+<section id="delete" class="title-slide slide level3" data-number="1.4.4">
+<h3 data-number="1.4.4"><span class="header-section-number">1.4.4</span> <code>delete()</code></h3>
+
+</section>
+
+</section>
+<section>
+<section id="query-builder" class="title-slide slide level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Query Builder</h1>
+
+</section>
+<section id="yiidbquery" class="title-slide slide level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> <code>yii\db\Query</code></h2>
+
+</section>
+
+<section id="creación-de-consultas" class="title-slide slide level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span> Creación de consultas</h2>
+
+</section>
+<section id="select" class="title-slide slide level3" data-number="2.2.1">
+<h3 data-number="2.2.1"><span class="header-section-number">2.2.1</span> <code>select()</code></h3>
+
+</section>
+
+<section id="from" class="title-slide slide level3" data-number="2.2.2">
+<h3 data-number="2.2.2"><span class="header-section-number">2.2.2</span> <code>from()</code></h3>
+
+</section>
+
+<section id="condiciones-y-filtrado-de-filas" class="title-slide slide level3" data-number="2.2.3">
+<h3 data-number="2.2.3"><span class="header-section-number">2.2.3</span> Condiciones y filtrado de filas</h3>
+
+</section>
+<section id="where" class="title-slide slide level4" data-number="2.2.3.1">
+<h4 data-number="2.2.3.1"><span class="header-section-number">2.2.3.1</span> <code>where()</code></h4>
+
+</section>
+
+<section id="formatos-de-condiciones" class="title-slide slide level4" data-number="2.2.3.2">
+<h4 data-number="2.2.3.2"><span class="header-section-number">2.2.3.2</span> Formatos de condiciones</h4>
+
+</section>
+<section id="de-cadena" class="slide level5" data-number="2.2.3.2.1">
+<h5 data-number="2.2.3.2.1"><span class="header-section-number">2.2.3.2.1</span> De cadena</h5>
+</section>
+<section id="de-array" class="slide level5" data-number="2.2.3.2.2">
+<h5 data-number="2.2.3.2.2"><span class="header-section-number">2.2.3.2.2</span> De array</h5>
+</section>
+<section id="de-operadores" class="slide level5" data-number="2.2.3.2.3">
+<h5 data-number="2.2.3.2.3"><span class="header-section-number">2.2.3.2.3</span> De operadores</h5>
+</section>
+
+<section id="andwhere" class="title-slide slide level4" data-number="2.2.3.3">
+<h4 data-number="2.2.3.3"><span class="header-section-number">2.2.3.3</span> <code>andWhere()</code></h4>
+
+</section>
+
+<section id="orwhere" class="title-slide slide level4" data-number="2.2.3.4">
+<h4 data-number="2.2.3.4"><span class="header-section-number">2.2.3.4</span> <code>orWhere()</code></h4>
+
+</section>
+
+<section id="filterwhere" class="title-slide slide level4" data-number="2.2.3.5">
+<h4 data-number="2.2.3.5"><span class="header-section-number">2.2.3.5</span> <code>filterWhere()</code></h4>
+
+</section>
+
+<section id="andfilterwhere" class="title-slide slide level4" data-number="2.2.3.6">
+<h4 data-number="2.2.3.6"><span class="header-section-number">2.2.3.6</span> <code>andFilterWhere()</code></h4>
+
+</section>
+
+<section id="orfilterwhere" class="title-slide slide level4" data-number="2.2.3.7">
+<h4 data-number="2.2.3.7"><span class="header-section-number">2.2.3.7</span> <code>orFilterWhere()</code></h4>
+
+</section>
+
+
+<section id="orderby" class="title-slide slide level3" data-number="2.2.4">
+<h3 data-number="2.2.4"><span class="header-section-number">2.2.4</span> <code>orderBy()</code></h3>
+
+</section>
+
+<section id="groupby" class="title-slide slide level3" data-number="2.2.5">
+<h3 data-number="2.2.5"><span class="header-section-number">2.2.5</span> <code>groupBy()</code></h3>
+
+</section>
+
+<section id="condiciones-y-filtrado-de-grupos" class="title-slide slide level3" data-number="2.2.6">
+<h3 data-number="2.2.6"><span class="header-section-number">2.2.6</span> Condiciones y filtrado de grupos</h3>
+
+</section>
+<section id="having" class="title-slide slide level4" data-number="2.2.6.1">
+<h4 data-number="2.2.6.1"><span class="header-section-number">2.2.6.1</span> <code>having()</code></h4>
+
+</section>
+
+<section id="filterhaving" class="title-slide slide level4" data-number="2.2.6.2">
+<h4 data-number="2.2.6.2"><span class="header-section-number">2.2.6.2</span> <code>filterHaving()</code></h4>
+
+</section>
+
+<section id="andfilterhaving" class="title-slide slide level4" data-number="2.2.6.3">
+<h4 data-number="2.2.6.3"><span class="header-section-number">2.2.6.3</span> <code>andFilterHaving()</code></h4>
+
+</section>
+
+<section id="orfilterhaving" class="title-slide slide level4" data-number="2.2.6.4">
+<h4 data-number="2.2.6.4"><span class="header-section-number">2.2.6.4</span> <code>orFilterHaving()</code></h4>
+
+</section>
+
+
+<section id="limit" class="title-slide slide level3" data-number="2.2.7">
+<h3 data-number="2.2.7"><span class="header-section-number">2.2.7</span> <code>limit()</code></h3>
+
+</section>
+
+<section id="offset" class="title-slide slide level3" data-number="2.2.8">
+<h3 data-number="2.2.8"><span class="header-section-number">2.2.8</span> <code>offset()</code></h3>
+
+</section>
+
+<section id="combinaciones" class="title-slide slide level3" data-number="2.2.9">
+<h3 data-number="2.2.9"><span class="header-section-number">2.2.9</span> Combinaciones</h3>
+
+</section>
+<section id="join" class="title-slide slide level4" data-number="2.2.9.1">
+<h4 data-number="2.2.9.1"><span class="header-section-number">2.2.9.1</span> <code>join()</code></h4>
+
+</section>
+
+<section id="innerjoin" class="title-slide slide level4" data-number="2.2.9.2">
+<h4 data-number="2.2.9.2"><span class="header-section-number">2.2.9.2</span> <code>innerJoin()</code></h4>
+
+</section>
+
+<section id="leftjoin" class="title-slide slide level4" data-number="2.2.9.3">
+<h4 data-number="2.2.9.3"><span class="header-section-number">2.2.9.3</span> <code>leftJoin()</code></h4>
+
+</section>
+
+<section id="rightjoin" class="title-slide slide level4" data-number="2.2.9.4">
+<h4 data-number="2.2.9.4"><span class="header-section-number">2.2.9.4</span> <code>rightJoin()</code></h4>
+
+</section>
+
+
+<section id="union" class="title-slide slide level3" data-number="2.2.10">
+<h3 data-number="2.2.10"><span class="header-section-number">2.2.10</span> <code>union()</code></h3>
+
+</section>
+
+
+<section id="recogida-de-resultados" class="title-slide slide level2" data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span> Recogida de resultados</h2>
+
+</section>
+<section id="all" class="title-slide slide level3" data-number="2.3.1">
+<h3 data-number="2.3.1"><span class="header-section-number">2.3.1</span> <code>all()</code></h3>
+
+</section>
+
+<section id="one" class="title-slide slide level3" data-number="2.3.2">
+<h3 data-number="2.3.2"><span class="header-section-number">2.3.2</span> <code>one()</code></h3>
+
+</section>
+
+<section id="column" class="title-slide slide level3" data-number="2.3.3">
+<h3 data-number="2.3.3"><span class="header-section-number">2.3.3</span> <code>column()</code></h3>
+
+</section>
+
+<section id="scalar" class="title-slide slide level3" data-number="2.3.4">
+<h3 data-number="2.3.4"><span class="header-section-number">2.3.4</span> <code>scalar()</code></h3>
+
+</section>
+
+<section id="exists" class="title-slide slide level3" data-number="2.3.5">
+<h3 data-number="2.3.5"><span class="header-section-number">2.3.5</span> <code>exists()</code></h3>
+
+</section>
+
+<section id="count" class="title-slide slide level3" data-number="2.3.6">
+<h3 data-number="2.3.6"><span class="header-section-number">2.3.6</span> <code>count()</code></h3>
+
+</section>
+
+<section id="funciones-de-grupo" class="title-slide slide level3" data-number="2.3.7">
+<h3 data-number="2.3.7"><span class="header-section-number">2.3.7</span> Funciones de grupo</h3>
+
+</section>
+<section id="sum" class="title-slide slide level4" data-number="2.3.7.1">
+<h4 data-number="2.3.7.1"><span class="header-section-number">2.3.7.1</span> <code>sum()</code></h4>
+
+</section>
+
+<section id="average" class="title-slide slide level4" data-number="2.3.7.2">
+<h4 data-number="2.3.7.2"><span class="header-section-number">2.3.7.2</span> <code>average()</code></h4>
+
+</section>
+
+<section id="max" class="title-slide slide level4" data-number="2.3.7.3">
+<h4 data-number="2.3.7.3"><span class="header-section-number">2.3.7.3</span> <code>max()</code></h4>
+
+</section>
+
+<section id="min" class="title-slide slide level4" data-number="2.3.7.4">
+<h4 data-number="2.3.7.4"><span class="header-section-number">2.3.7.4</span> <code>min()</code></h4>
+
+</section>
+
+
+<section id="indexby" class="title-slide slide level3" data-number="2.3.8">
+<h3 data-number="2.3.8"><span class="header-section-number">2.3.8</span> <code>indexBy()</code></h3>
+
+</section>
+
+
+<section id="consultas-por-lotes" class="title-slide slide level2" data-number="2.4">
+<h2 data-number="2.4"><span class="header-section-number">2.4</span> Consultas por lotes</h2>
+
+</section>
+<section id="batch" class="title-slide slide level3" data-number="2.4.1">
+<h3 data-number="2.4.1"><span class="header-section-number">2.4.1</span> <code>batch()</code></h3>
+
+</section>
+
+<section id="each" class="title-slide slide level3" data-number="2.4.2">
+<h3 data-number="2.4.2"><span class="header-section-number">2.4.2</span> <code>each()</code></h3>
+
+</section>
+
+</section>
+<section>
+<section id="active-record" class="title-slide slide level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Active Record</h1>
+
+</section>
+<section id="findone" class="title-slide slide level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> <code>findOne()</code></h2>
+
+</section>
+
+<section id="findall" class="title-slide slide level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span> <code>findAll()</code></h2>
+
+</section>
+
+<section id="save" class="title-slide slide level2" data-number="3.3">
+<h2 data-number="3.3"><span class="header-section-number">3.3</span> <code>save()</code></h2>
+
+</section>
+
+<section id="activequery" class="title-slide slide level2" data-number="3.4">
+<h2 data-number="3.4"><span class="header-section-number">3.4</span> ActiveQuery</h2>
+
+</section>
+<section id="find" class="title-slide slide level3" data-number="3.4.1">
+<h3 data-number="3.4.1"><span class="header-section-number">3.4.1</span> <code>find()</code></h3>
+
+</section>
+
+
+<section id="atributos-sucios" class="title-slide slide level2" data-number="3.5">
+<h2 data-number="3.5"><span class="header-section-number">3.5</span> Atributos sucios</h2>
+
+</section>
+
+<section id="relaciones" class="title-slide slide level2" data-number="3.6">
+<h2 data-number="3.6"><span class="header-section-number">3.6</span> Relaciones</h2>
+
+</section>
+<section id="encadenamiento-de-relaciones" class="title-slide slide level3" data-number="3.6.1">
+<h3 data-number="3.6.1"><span class="header-section-number">3.6.1</span> Encadenamiento de relaciones</h3>
+
+</section>
+
+
+<section id="joinwith" class="title-slide slide level2" data-number="3.7">
+<h2 data-number="3.7"><span class="header-section-number">3.7</span> <code>joinWith()</code></h2>
+
+</section>
+
+<section id="atributos-virtuales" class="title-slide slide level2" data-number="3.8">
+<h2 data-number="3.8"><span class="header-section-number">3.8</span> Atributos virtuales</h2>
+
+</section>
+<section id="siete-técnicas" class="title-slide slide level3" data-number="3.8.1">
+<h3 data-number="3.8.1"><span class="header-section-number">3.8.1</span> Siete técnicas</h3>
+
+</section>
+<section id="calcular-a-mano-cuandodonde-haga-falta" class="title-slide slide level4" data-number="3.8.1.1">
+<h4 data-number="3.8.1.1"><span class="header-section-number">3.8.1.1</span> Calcular a mano cuando/donde haga falta</h4>
+
+</section>
+
+<section id="usar-vistas-sql" class="title-slide slide level4" data-number="3.8.1.2">
+<h4 data-number="3.8.1.2"><span class="header-section-number">3.8.1.2</span> Usar vistas SQL</h4>
+
+</section>
+
+<section id="sobreescribir-el-método-find-del-modelo-para-que-se-use-siempre-en-lugar-del-heredado-de-activerecord" class="title-slide slide level4" data-number="3.8.1.3">
+<h4 data-number="3.8.1.3"><span class="header-section-number">3.8.1.3</span> Sobreescribir el método <code>find()</code> del modelo para que se use siempre en lugar del heredado de <code>ActiveRecord</code></h4>
+
+</section>
+
+<section id="sobreescribir-el-método-afterfind-para-rellenar-el-atributo-a-mano-cada-vez-que-se-hace-un-find" class="title-slide slide level4" data-number="3.8.1.4">
+<h4 data-number="3.8.1.4"><span class="header-section-number">3.8.1.4</span> Sobreescribir el método <code>afterFind()</code> para rellenar el atributo a mano cada vez que se hace un <code>find()</code></h4>
+
+</section>
+
+<section id="capturar-el-evento-event_after_find-del-modelo" class="title-slide slide level4" data-number="3.8.1.5">
+<h4 data-number="3.8.1.5"><span class="header-section-number">3.8.1.5</span> Capturar el evento <code>EVENT_AFTER_FIND</code> del modelo</h4>
+
+</section>
+
+<section id="usar-una-propiedad-con-getter-y-setter" class="title-slide slide level4" data-number="3.8.1.6">
+<h4 data-number="3.8.1.6"><span class="header-section-number">3.8.1.6</span> Usar una propiedad con <em>getter</em> y <em>setter</em></h4>
+
+</section>
+
+<section id="crear-un-método-findespecial-que-se-usará-en-lugar-de-find-cuando-haga-falta" class="title-slide slide level4" data-number="3.8.1.7">
+<h4 data-number="3.8.1.7"><span class="header-section-number">3.8.1.7</span> Crear un método <code>findEspecial()</code> que se usará en lugar de <code>find()</code> cuando haga falta</h4>
+
+</section>
+
+<section id="la-mejor-opción-en-la-mayoría-de-los-casos-combinar-las-dos-anteriores" class="title-slide slide level4" data-number="3.8.1.8">
+<h4 data-number="3.8.1.8"><span class="header-section-number">3.8.1.8</span> La mejor opción, en la mayoría de los casos: combinar las dos anteriores</h4>
+
+</section>
+<section id="ejemplo" class="slide level5" data-number="3.8.1.8.1">
+<h5 data-number="3.8.1.8.1"><span class="header-section-number">3.8.1.8.1</span> Ejemplo</h5>
+</section>
+
+
+</section>
+<section>
+<section id="metadatos" class="title-slide slide level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Metadatos</h1>
+
+</section>
+<section id="objetivos-de-la-unidad" class="title-slide slide level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> Objetivos de la unidad</h2>
+
+</section>
+
+<section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2>
+
+</section>
+<section id="ra2" class="title-slide slide level3" data-number="4.2.1">
+<h3 data-number="4.2.1"><span class="header-section-number">4.2.1</span> RA2</h3>
+
+</section>
+
+<section id="ra3" class="title-slide slide level3" data-number="4.2.2">
+<h3 data-number="4.2.2"><span class="header-section-number">4.2.2</span> RA3</h3>
+
+</section>
+
+<section id="ra4" class="title-slide slide level3" data-number="4.2.3">
+<h3 data-number="4.2.3"><span class="header-section-number">4.2.3</span> RA4</h3>
+
+</section>
+<section id="ce4.g" class="title-slide slide level4" data-number="4.2.3.1">
+<h4 data-number="4.2.3.1"><span class="header-section-number">4.2.3.1</span> CE4.g</h4>
+
+</section>
+
+
+<section id="ra5" class="title-slide slide level3" data-number="4.2.4">
+<h3 data-number="4.2.4"><span class="header-section-number">4.2.4</span> RA5</h3>
+
+</section>
+<section id="ce5.f" class="title-slide slide level4" data-number="4.2.4.1">
+<h4 data-number="4.2.4.1"><span class="header-section-number">4.2.4.1</span> CE5.f</h4>
+
+</section>
+
+<section id="ce5.g" class="title-slide slide level4" data-number="4.2.4.2">
+<h4 data-number="4.2.4.2"><span class="header-section-number">4.2.4.2</span> CE5.g</h4>
+
+</section>
+
+<section id="ce5.h" class="title-slide slide level4" data-number="4.2.4.3">
+<h4 data-number="4.2.4.3"><span class="header-section-number">4.2.4.3</span> CE5.h</h4>
+
+</section>
+
+
+<section id="ra6" class="title-slide slide level3" data-number="4.2.5">
+<h3 data-number="4.2.5"><span class="header-section-number">4.2.5</span> RA6</h3>
+
+</section>
+<section id="ce6.a" class="title-slide slide level4" data-number="4.2.5.1">
+<h4 data-number="4.2.5.1"><span class="header-section-number">4.2.5.1</span> CE6.a</h4>
+
+</section>
+
+<section id="ce6.b" class="title-slide slide level4" data-number="4.2.5.2">
+<h4 data-number="4.2.5.2"><span class="header-section-number">4.2.5.2</span> CE6.b</h4>
+
+</section>
+
+<section id="ce6.c" class="title-slide slide level4" data-number="4.2.5.3">
+<h4 data-number="4.2.5.3"><span class="header-section-number">4.2.5.3</span> CE6.c</h4>
+
+</section>
+
+<section id="ce6.d" class="title-slide slide level4" data-number="4.2.5.4">
+<h4 data-number="4.2.5.4"><span class="header-section-number">4.2.5.4</span> CE6.d</h4>
+
+</section>
+
+<section id="ce6.e" class="title-slide slide level4" data-number="4.2.5.5">
+<h4 data-number="4.2.5.5"><span class="header-section-number">4.2.5.5</span> CE6.e</h4>
+
+</section>
+
+<section id="ce6.f" class="title-slide slide level4" data-number="4.2.5.6">
+<h4 data-number="4.2.5.6"><span class="header-section-number">4.2.5.6</span> CE6.f</h4>
+
+</section>
+
+<section id="ce6.g" class="title-slide slide level4" data-number="4.2.5.7">
+<h4 data-number="4.2.5.7"><span class="header-section-number">4.2.5.7</span> CE6.g</h4>
+
+</section>
+
+<section id="ce6.h" class="title-slide slide level4" data-number="4.2.5.8">
+<h4 data-number="4.2.5.8"><span class="header-section-number">4.2.5.8</span> CE6.h</h4>
+
+</section>
+
+
+<section id="ra9" class="title-slide slide level3" data-number="4.2.6">
+<h3 data-number="4.2.6"><span class="header-section-number">4.2.6</span> RA9</h3>
+
+</section>
+<section id="ce9.e" class="title-slide slide level4" data-number="4.2.6.1">
+<h4 data-number="4.2.6.1"><span class="header-section-number">4.2.6.1</span> CE9.e</h4>
+
+</section>
+
+<section id="ce9.f" class="title-slide slide level4" data-number="4.2.6.2">
+<h4 data-number="4.2.6.2"><span class="header-section-number">4.2.6.2</span> CE9.f</h4>
+
+</section>
+
+<section id="ce9.g" class="title-slide slide level4" data-number="4.2.6.3">
+<h4 data-number="4.2.6.3"><span class="header-section-number">4.2.6.3</span> CE9.g</h4>
+
+</section>
+
+
+</section>
     </div>
   </div>
 
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="./reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="./reveal.js/plugin/notes/notes.js"></script>
+  <script src="./reveal.js/plugin/search/search.js"></script>
+  <script src="./reveal.js/plugin/zoom/zoom.js"></script>
+  <script src="./reveal.js/plugin/reveal.js-menu/menu.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
         // Display the page number of the current slide
         slideNumber: true,
@@ -272,34 +711,21 @@
         width: 1280,
         height: 1080,
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-menu/menu.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } },
-          { src: 'reveal.js/plugin/reveal-code-focus/vendor/highlight.js/highlight.pack.js' },
-          { src: 'reveal.js/plugin/reveal-code-focus/reveal-code-focus.js', async: true, callback: function() { RevealCodeFocus(); } },
-          { src: 'reveal.js/plugin/search/search.js', async: true },
-          { src: 'reveal.js/plugin/customcontrols/customcontrols.js', async: true }
-        ],
-
-        customcontrols: {
-          controls: [
-            { icon: '<i class="fa fa-question-circle"></i>',
-			  css: 'position: fixed; right: 50px; bottom: 50px; z-index: 30; font-size: 24px;',
-			  action: 'Reveal.toggleHelp(); return false;'
-			}
-          ]
+        menu: {
+          hideMissingTitles: true,
         },
 
-        menu: {
-          numbers: true,
-          hideMissingTitles: true,
-          themes: true,
-          themesPath: 'reveal.js/css/theme/'
-        }
+        dependencies: [
+          { src: './reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } }
+        ],
+
+        // reveal.js plugins
+        plugins: [
+          RevealMenu,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
       });
     </script>
     </body>

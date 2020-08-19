@@ -8,23 +8,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="shortcut icon" type="image/png" href="/assets/icons/icon.png">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">
+  <link rel="stylesheet" href="./reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="./reveal.js/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="./reveal.js/dist/theme/solarized.css" id="theme">
   <link rel="stylesheet" href="custom.css"/>
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <style type="text/css">
       #header-left {
@@ -75,6 +70,21 @@
         el.innerHTML = title;
         document.getElementById('header-left').appendChild(el);
         document.getElementById('footer-left').innerHTML = '&copy; ' + author + ' (' + date + ')';
+
+        // Mueve un poquito el = a la derecha cuando hay que dibujar un "no-igual" con KaTeX:
+        Array.prototype.forEach.call(document.getElementsByClassName("rlap"), function (el) {
+            var e = el;
+            var i = 0;
+            while (e != null && i < 6) {
+                e = e.parentElement;
+                i++;
+            }
+            if (e != null && i == 6 && e.nextSibling != null && e.nextSibling.innerText == "=") {
+                el.style.width = "0.1em";
+            }
+            console.log(el);
+            console.log(e.nextSibling);
+        });
 
         function updateHeader(nd) {
             var hr = document.getElementById('header-right');
@@ -142,13 +152,12 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
-<section id="title-slide" class="title-slide slide level1">
+<section id="title-slide">
   <h1 class="title">Introducción a Yii 2</h1>
   <p class="author">Ricardo Pérez López</p>
-  <p class="date">IES Doñana, curso 2019/2020</p>
+  <p class="date">IES Doñana, curso 2020/2021</p>
 </section>
-<section id="TOC" class="slide level2">
+<section id="TOC">
 <ul>
 <li><a href="#/frameworks-microframeworks-y-librerías"><span class="toc-section-number">1</span> Frameworks, microframeworks y librerías</a></li>
 <li><a href="#/patrón-modelo-vista-controlador-mvc"><span class="toc-section-number">2</span> Patrón Modelo-Vista-Controlador (MVC)</a></li>
@@ -164,75 +173,337 @@
 <li><a href="#/metadatos"><span class="toc-section-number">12</span> Metadatos</a></li>
 </ul>
 </section>
+
+<section id="frameworks-microframeworks-y-librerías" class="title-slide slide level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Frameworks, microframeworks y librerías</h1>
+
 </section>
 
-<section id="frameworks-microframeworks-y-librerías" class="title-slide slide level1"><h1><span class="header-section-number">1</span> Frameworks, microframeworks y librerías</h1></section>
-<section><section id="patrón-modelo-vista-controlador-mvc" class="title-slide slide level1"><h1><span class="header-section-number">2</span> Patrón Modelo-Vista-Controlador (MVC)</h1></section><section id="modelos" class="title-slide slide level2"><h2><span class="header-section-number">2.1</span> Modelos</h2></section><section id="vistas" class="title-slide slide level2"><h2><span class="header-section-number">2.2</span> Vistas</h2></section><section id="controladores" class="title-slide slide level2"><h2><span class="header-section-number">2.3</span> Controladores</h2></section><section id="rutas" class="title-slide slide level2"><h2><span class="header-section-number">2.4</span> Rutas</h2></section></section>
-<section><section id="yii-2" class="title-slide slide level1"><h1><span class="header-section-number">3</span> Yii 2</h1></section><section id="qué-es-yii" class="title-slide slide level2"><h2><span class="header-section-number">3.1</span> ¿Qué es Yii?</h2></section><section id="en-qué-es-mejor-yii" class="title-slide slide level2"><h2><span class="header-section-number">3.2</span> ¿En qué es mejor Yii?</h2></section><section id="cómo-es-yii-comparado-con-otros-frameworks" class="title-slide slide level2"><h2><span class="header-section-number">3.3</span> ¿Cómo es Yii comparado con otros frameworks?</h2></section><section id="versiones-de-yii" class="title-slide slide level2"><h2><span class="header-section-number">3.4</span> Versiones de Yii</h2></section></section>
-<section><section id="instalación-requisitos-y-puesta-en-marcha" class="title-slide slide level1"><h1><span class="header-section-number">4</span> Instalación, requisitos y puesta en marcha</h1></section><section id="requisitos-previos" class="title-slide slide level2"><h2><span class="header-section-number">4.1</span> Requisitos previos</h2></section><section id="instalación-de-yii-2" class="title-slide slide level2"><h2><span class="header-section-number">4.2</span> Instalación de Yii 2</h2></section><section id="instalación-mediante-composer" class="title-slide slide level3"><h3><span class="header-section-number">4.2.1</span> Instalación mediante Composer</h3></section><section id="plantillas-de-proyecto" class="title-slide slide level2"><h2><span class="header-section-number">4.3</span> Plantillas de proyecto</h2></section><section id="plantilla-básica-vs.-avanzada" class="title-slide slide level3"><h3><span class="header-section-number">4.3.1</span> Plantilla básica vs. avanzada</h3></section><section id="plantilla-básica-modificada" class="title-slide slide level3"><h3><span class="header-section-number">4.3.2</span> Plantilla básica modificada</h3></section></section>
-<section id="hola-mundo" class="title-slide slide level1"><h1><span class="header-section-number">5</span> ¡Hola, mundo!</h1></section>
-<section id="formularios" class="title-slide slide level1"><h1><span class="header-section-number">6</span> Formularios</h1></section>
-<section id="bases-de-datos" class="title-slide slide level1"><h1><span class="header-section-number">7</span> Bases de datos</h1></section>
-<section id="generador-de-código-gii" class="title-slide slide level1"><h1><span class="header-section-number">8</span> Generador de código Gii</h1></section>
-<section><section id="herramientas-de-desarrollo" class="title-slide slide level1"><h1><span class="header-section-number">9</span> Herramientas de desarrollo</h1></section><section id="barra-de-depuración" class="title-slide slide level2"><h2><span class="header-section-number">9.1</span> Barra de depuración</h2></section><section id="trazas-de-depuración" class="title-slide slide level2"><h2><span class="header-section-number">9.2</span> Trazas de depuración</h2></section></section>
-<section id="estilo-del-código" class="title-slide slide level1"><h1><span class="header-section-number">10</span> Estilo del código</h1></section>
-<section><section id="ejercicios" class="title-slide slide level1"><h1><span class="header-section-number">11</span> Ejercicios</h1></section><section id="definiciones-framework-microframework-librería-semejanzas-y-diferencias.-modelo-vista-y-controlador.-rutas-y-ejemplos-de-rutas." class="title-slide slide level2"><h2><span class="header-section-number">11.1</span> Definiciones: framework, microframework, librería (semejanzas y diferencias). Modelo, vista y controlador. Rutas y ejemplos de rutas.</h2></section><section id="qué-es-una-plantilla-de-proyecto-diferencias-entre-la-plantilla-básica-y-la-avanzada." class="title-slide slide level2"><h2><span class="header-section-number">11.2</span> ¿Qué es una plantilla de proyecto? Diferencias entre la plantilla básica y la avanzada.</h2></section><section id="qué-herramientas-de-desarrollo-tenemos-para-desarrollar-una-aplicación-en-yii-2-y-para-qué-sirven" class="title-slide slide level2"><h2><span class="header-section-number">11.3</span> ¿Qué herramientas de desarrollo tenemos para desarrollar una aplicación en Yii 2 y para qué sirven?</h2></section><section id="crear-un-proyecto-desde-cero-paso-a-paso." class="title-slide slide level2"><h2><span class="header-section-number">11.4</span> Crear un proyecto desde cero, paso a paso.</h2></section><section id="escribir-programas-sencillos-con-formularios-validaciones-sencillas-y-acceso-a-bases-de-datos." class="title-slide slide level2"><h2><span class="header-section-number">11.5</span> Escribir programas sencillos, con formularios, validaciones sencillas y acceso a bases de datos.</h2></section></section>
-<section><section id="metadatos" class="title-slide slide level1"><h1><span class="header-section-number">12</span> Metadatos</h1></section><section id="objetivos-de-la-unidad" class="title-slide slide level2"><h2><span class="header-section-number">12.1</span> Objetivos de la unidad</h2></section><section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2"><h2><span class="header-section-number">12.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2></section><section id="ra1" class="title-slide slide level3"><h3><span class="header-section-number">12.2.1</span> RA1</h3></section><section id="ce1.e" class="slide level4">
-<h4><span class="header-section-number">12.2.1.1</span> CE1.e</h4>
-</section><section id="ce1.g" class="slide level4">
-<h4><span class="header-section-number">12.2.1.2</span> CE1.g</h4>
-</section><section id="ra4" class="title-slide slide level3"><h3><span class="header-section-number">12.2.2</span> RA4</h3></section><section id="ce4.g" class="slide level4">
-<h4><span class="header-section-number">12.2.2.1</span> CE4.g</h4>
-</section><section id="ra5" class="title-slide slide level3"><h3><span class="header-section-number">12.2.3</span> RA5</h3></section><section id="ce5.a" class="slide level4">
-<h4><span class="header-section-number">12.2.3.1</span> CE5.a</h4>
-</section><section id="ce5.b" class="slide level4">
-<h4><span class="header-section-number">12.2.3.2</span> CE5.b</h4>
-</section><section id="ce5.c" class="slide level4">
-<h4><span class="header-section-number">12.2.3.3</span> CE5.c</h4>
-</section><section id="ce5.d" class="slide level4">
-<h4><span class="header-section-number">12.2.3.4</span> CE5.d</h4>
-</section><section id="ce5.e" class="slide level4">
-<h4><span class="header-section-number">12.2.3.5</span> CE5.e</h4>
-</section><section id="ce5.g" class="slide level4">
-<h4><span class="header-section-number">12.2.3.6</span> CE5.g</h4>
-</section><section id="ce5.h" class="slide level4">
-<h4><span class="header-section-number">12.2.3.7</span> CE5.h</h4>
-</section><section id="ra6" class="title-slide slide level3"><h3><span class="header-section-number">12.2.4</span> RA6</h3></section><section id="ce6.a" class="slide level4">
-<h4><span class="header-section-number">12.2.4.1</span> CE6.a</h4>
-</section><section id="ce6.b" class="slide level4">
-<h4><span class="header-section-number">12.2.4.2</span> CE6.b</h4>
-</section><section id="ce6.c" class="slide level4">
-<h4><span class="header-section-number">12.2.4.3</span> CE6.c</h4>
-</section><section id="ce6.d" class="slide level4">
-<h4><span class="header-section-number">12.2.4.4</span> CE6.d</h4>
-</section><section id="ce6.e" class="slide level4">
-<h4><span class="header-section-number">12.2.4.5</span> CE6.e</h4>
-</section><section id="ce6.f" class="slide level4">
-<h4><span class="header-section-number">12.2.4.6</span> CE6.f</h4>
-</section><section id="ce6.g" class="slide level4">
-<h4><span class="header-section-number">12.2.4.7</span> CE6.g</h4>
-</section><section id="ce6.h" class="slide level4">
-<h4><span class="header-section-number">12.2.4.8</span> CE6.h</h4>
-</section><section id="ra9" class="title-slide slide level3"><h3><span class="header-section-number">12.2.5</span> RA9</h3></section><section id="ce9.b" class="slide level4">
-<h4><span class="header-section-number">12.2.5.1</span> CE9.b</h4>
-</section><section id="ce9.c" class="slide level4">
-<h4><span class="header-section-number">12.2.5.2</span> CE9.c</h4>
-</section><section id="ce9.e" class="slide level4">
-<h4><span class="header-section-number">12.2.5.3</span> CE9.e</h4>
-</section><section id="ce9.f" class="slide level4">
-<h4><span class="header-section-number">12.2.5.4</span> CE9.f</h4>
-</section><section id="ce9.g" class="slide level4">
-<h4><span class="header-section-number">12.2.5.5</span> CE9.g</h4>
-</section></section>
+<section>
+<section id="patrón-modelo-vista-controlador-mvc" class="title-slide slide level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Patrón Modelo-Vista-Controlador (MVC)</h1>
+
+</section>
+<section id="modelos" class="title-slide slide level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> Modelos</h2>
+
+</section>
+
+<section id="vistas" class="title-slide slide level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span> Vistas</h2>
+
+</section>
+
+<section id="controladores" class="title-slide slide level2" data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span> Controladores</h2>
+
+</section>
+
+<section id="rutas" class="title-slide slide level2" data-number="2.4">
+<h2 data-number="2.4"><span class="header-section-number">2.4</span> Rutas</h2>
+
+</section>
+</section>
+<section>
+<section id="yii-2" class="title-slide slide level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Yii 2</h1>
+
+</section>
+<section id="qué-es-yii" class="title-slide slide level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> ¿Qué es Yii?</h2>
+
+</section>
+
+<section id="en-qué-es-mejor-yii" class="title-slide slide level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span> ¿En qué es mejor Yii?</h2>
+
+</section>
+
+<section id="cómo-es-yii-comparado-con-otros-frameworks" class="title-slide slide level2" data-number="3.3">
+<h2 data-number="3.3"><span class="header-section-number">3.3</span> ¿Cómo es Yii comparado con otros frameworks?</h2>
+
+</section>
+
+<section id="versiones-de-yii" class="title-slide slide level2" data-number="3.4">
+<h2 data-number="3.4"><span class="header-section-number">3.4</span> Versiones de Yii</h2>
+
+</section>
+</section>
+<section>
+<section id="instalación-requisitos-y-puesta-en-marcha" class="title-slide slide level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Instalación, requisitos y puesta en marcha</h1>
+
+</section>
+<section id="requisitos-previos" class="title-slide slide level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> Requisitos previos</h2>
+
+</section>
+
+<section id="instalación-de-yii-2" class="title-slide slide level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span> Instalación de Yii 2</h2>
+
+</section>
+<section id="instalación-mediante-composer" class="title-slide slide level3" data-number="4.2.1">
+<h3 data-number="4.2.1"><span class="header-section-number">4.2.1</span> Instalación mediante Composer</h3>
+
+</section>
+
+
+<section id="plantillas-de-proyecto" class="title-slide slide level2" data-number="4.3">
+<h2 data-number="4.3"><span class="header-section-number">4.3</span> Plantillas de proyecto</h2>
+
+</section>
+<section id="plantilla-básica-vs.-avanzada" class="title-slide slide level3" data-number="4.3.1">
+<h3 data-number="4.3.1"><span class="header-section-number">4.3.1</span> Plantilla básica vs. avanzada</h3>
+
+</section>
+
+<section id="plantilla-básica-modificada" class="title-slide slide level3" data-number="4.3.2">
+<h3 data-number="4.3.2"><span class="header-section-number">4.3.2</span> Plantilla básica modificada</h3>
+
+</section>
+
+</section>
+<section id="hola-mundo" class="title-slide slide level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> ¡Hola, mundo!</h1>
+
+</section>
+
+<section id="formularios" class="title-slide slide level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Formularios</h1>
+
+</section>
+
+<section id="bases-de-datos" class="title-slide slide level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Bases de datos</h1>
+
+</section>
+
+<section id="generador-de-código-gii" class="title-slide slide level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Generador de código Gii</h1>
+
+</section>
+
+<section>
+<section id="herramientas-de-desarrollo" class="title-slide slide level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Herramientas de desarrollo</h1>
+
+</section>
+<section id="barra-de-depuración" class="title-slide slide level2" data-number="9.1">
+<h2 data-number="9.1"><span class="header-section-number">9.1</span> Barra de depuración</h2>
+
+</section>
+
+<section id="trazas-de-depuración" class="title-slide slide level2" data-number="9.2">
+<h2 data-number="9.2"><span class="header-section-number">9.2</span> Trazas de depuración</h2>
+
+</section>
+</section>
+<section id="estilo-del-código" class="title-slide slide level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Estilo del código</h1>
+
+</section>
+
+<section>
+<section id="ejercicios" class="title-slide slide level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Ejercicios</h1>
+
+</section>
+<section id="definiciones-framework-microframework-librería-semejanzas-y-diferencias.-modelo-vista-y-controlador.-rutas-y-ejemplos-de-rutas." class="title-slide slide level2" data-number="11.1">
+<h2 data-number="11.1"><span class="header-section-number">11.1</span> Definiciones: framework, microframework, librería (semejanzas y diferencias). Modelo, vista y controlador. Rutas y ejemplos de rutas.</h2>
+
+</section>
+
+<section id="qué-es-una-plantilla-de-proyecto-diferencias-entre-la-plantilla-básica-y-la-avanzada." class="title-slide slide level2" data-number="11.2">
+<h2 data-number="11.2"><span class="header-section-number">11.2</span> ¿Qué es una plantilla de proyecto? Diferencias entre la plantilla básica y la avanzada.</h2>
+
+</section>
+
+<section id="qué-herramientas-de-desarrollo-tenemos-para-desarrollar-una-aplicación-en-yii-2-y-para-qué-sirven" class="title-slide slide level2" data-number="11.3">
+<h2 data-number="11.3"><span class="header-section-number">11.3</span> ¿Qué herramientas de desarrollo tenemos para desarrollar una aplicación en Yii 2 y para qué sirven?</h2>
+
+</section>
+
+<section id="crear-un-proyecto-desde-cero-paso-a-paso." class="title-slide slide level2" data-number="11.4">
+<h2 data-number="11.4"><span class="header-section-number">11.4</span> Crear un proyecto desde cero, paso a paso.</h2>
+
+</section>
+
+<section id="escribir-programas-sencillos-con-formularios-validaciones-sencillas-y-acceso-a-bases-de-datos." class="title-slide slide level2" data-number="11.5">
+<h2 data-number="11.5"><span class="header-section-number">11.5</span> Escribir programas sencillos, con formularios, validaciones sencillas y acceso a bases de datos.</h2>
+
+</section>
+</section>
+<section>
+<section id="metadatos" class="title-slide slide level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Metadatos</h1>
+
+</section>
+<section id="objetivos-de-la-unidad" class="title-slide slide level2" data-number="12.1">
+<h2 data-number="12.1"><span class="header-section-number">12.1</span> Objetivos de la unidad</h2>
+
+</section>
+
+<section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2" data-number="12.2">
+<h2 data-number="12.2"><span class="header-section-number">12.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2>
+
+</section>
+<section id="ra1" class="title-slide slide level3" data-number="12.2.1">
+<h3 data-number="12.2.1"><span class="header-section-number">12.2.1</span> RA1</h3>
+
+</section>
+<section id="ce1.e" class="title-slide slide level4" data-number="12.2.1.1">
+<h4 data-number="12.2.1.1"><span class="header-section-number">12.2.1.1</span> CE1.e</h4>
+
+</section>
+
+<section id="ce1.g" class="title-slide slide level4" data-number="12.2.1.2">
+<h4 data-number="12.2.1.2"><span class="header-section-number">12.2.1.2</span> CE1.g</h4>
+
+</section>
+
+
+<section id="ra4" class="title-slide slide level3" data-number="12.2.2">
+<h3 data-number="12.2.2"><span class="header-section-number">12.2.2</span> RA4</h3>
+
+</section>
+<section id="ce4.g" class="title-slide slide level4" data-number="12.2.2.1">
+<h4 data-number="12.2.2.1"><span class="header-section-number">12.2.2.1</span> CE4.g</h4>
+
+</section>
+
+
+<section id="ra5" class="title-slide slide level3" data-number="12.2.3">
+<h3 data-number="12.2.3"><span class="header-section-number">12.2.3</span> RA5</h3>
+
+</section>
+<section id="ce5.a" class="title-slide slide level4" data-number="12.2.3.1">
+<h4 data-number="12.2.3.1"><span class="header-section-number">12.2.3.1</span> CE5.a</h4>
+
+</section>
+
+<section id="ce5.b" class="title-slide slide level4" data-number="12.2.3.2">
+<h4 data-number="12.2.3.2"><span class="header-section-number">12.2.3.2</span> CE5.b</h4>
+
+</section>
+
+<section id="ce5.c" class="title-slide slide level4" data-number="12.2.3.3">
+<h4 data-number="12.2.3.3"><span class="header-section-number">12.2.3.3</span> CE5.c</h4>
+
+</section>
+
+<section id="ce5.d" class="title-slide slide level4" data-number="12.2.3.4">
+<h4 data-number="12.2.3.4"><span class="header-section-number">12.2.3.4</span> CE5.d</h4>
+
+</section>
+
+<section id="ce5.e" class="title-slide slide level4" data-number="12.2.3.5">
+<h4 data-number="12.2.3.5"><span class="header-section-number">12.2.3.5</span> CE5.e</h4>
+
+</section>
+
+<section id="ce5.g" class="title-slide slide level4" data-number="12.2.3.6">
+<h4 data-number="12.2.3.6"><span class="header-section-number">12.2.3.6</span> CE5.g</h4>
+
+</section>
+
+<section id="ce5.h" class="title-slide slide level4" data-number="12.2.3.7">
+<h4 data-number="12.2.3.7"><span class="header-section-number">12.2.3.7</span> CE5.h</h4>
+
+</section>
+
+
+<section id="ra6" class="title-slide slide level3" data-number="12.2.4">
+<h3 data-number="12.2.4"><span class="header-section-number">12.2.4</span> RA6</h3>
+
+</section>
+<section id="ce6.a" class="title-slide slide level4" data-number="12.2.4.1">
+<h4 data-number="12.2.4.1"><span class="header-section-number">12.2.4.1</span> CE6.a</h4>
+
+</section>
+
+<section id="ce6.b" class="title-slide slide level4" data-number="12.2.4.2">
+<h4 data-number="12.2.4.2"><span class="header-section-number">12.2.4.2</span> CE6.b</h4>
+
+</section>
+
+<section id="ce6.c" class="title-slide slide level4" data-number="12.2.4.3">
+<h4 data-number="12.2.4.3"><span class="header-section-number">12.2.4.3</span> CE6.c</h4>
+
+</section>
+
+<section id="ce6.d" class="title-slide slide level4" data-number="12.2.4.4">
+<h4 data-number="12.2.4.4"><span class="header-section-number">12.2.4.4</span> CE6.d</h4>
+
+</section>
+
+<section id="ce6.e" class="title-slide slide level4" data-number="12.2.4.5">
+<h4 data-number="12.2.4.5"><span class="header-section-number">12.2.4.5</span> CE6.e</h4>
+
+</section>
+
+<section id="ce6.f" class="title-slide slide level4" data-number="12.2.4.6">
+<h4 data-number="12.2.4.6"><span class="header-section-number">12.2.4.6</span> CE6.f</h4>
+
+</section>
+
+<section id="ce6.g" class="title-slide slide level4" data-number="12.2.4.7">
+<h4 data-number="12.2.4.7"><span class="header-section-number">12.2.4.7</span> CE6.g</h4>
+
+</section>
+
+<section id="ce6.h" class="title-slide slide level4" data-number="12.2.4.8">
+<h4 data-number="12.2.4.8"><span class="header-section-number">12.2.4.8</span> CE6.h</h4>
+
+</section>
+
+
+<section id="ra9" class="title-slide slide level3" data-number="12.2.5">
+<h3 data-number="12.2.5"><span class="header-section-number">12.2.5</span> RA9</h3>
+
+</section>
+<section id="ce9.b" class="title-slide slide level4" data-number="12.2.5.1">
+<h4 data-number="12.2.5.1"><span class="header-section-number">12.2.5.1</span> CE9.b</h4>
+
+</section>
+
+<section id="ce9.c" class="title-slide slide level4" data-number="12.2.5.2">
+<h4 data-number="12.2.5.2"><span class="header-section-number">12.2.5.2</span> CE9.c</h4>
+
+</section>
+
+<section id="ce9.e" class="title-slide slide level4" data-number="12.2.5.3">
+<h4 data-number="12.2.5.3"><span class="header-section-number">12.2.5.3</span> CE9.e</h4>
+
+</section>
+
+<section id="ce9.f" class="title-slide slide level4" data-number="12.2.5.4">
+<h4 data-number="12.2.5.4"><span class="header-section-number">12.2.5.4</span> CE9.f</h4>
+
+</section>
+
+<section id="ce9.g" class="title-slide slide level4" data-number="12.2.5.5">
+<h4 data-number="12.2.5.5"><span class="header-section-number">12.2.5.5</span> CE9.g</h4>
+
+</section>
+
+
+</section>
     </div>
   </div>
 
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="./reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="./reveal.js/plugin/notes/notes.js"></script>
+  <script src="./reveal.js/plugin/search/search.js"></script>
+  <script src="./reveal.js/plugin/zoom/zoom.js"></script>
+  <script src="./reveal.js/plugin/reveal.js-menu/menu.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
         // Display the page number of the current slide
         slideNumber: true,
@@ -246,34 +517,21 @@
         width: 1280,
         height: 1080,
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-menu/menu.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } },
-          { src: 'reveal.js/plugin/reveal-code-focus/vendor/highlight.js/highlight.pack.js' },
-          { src: 'reveal.js/plugin/reveal-code-focus/reveal-code-focus.js', async: true, callback: function() { RevealCodeFocus(); } },
-          { src: 'reveal.js/plugin/search/search.js', async: true },
-          { src: 'reveal.js/plugin/customcontrols/customcontrols.js', async: true }
-        ],
-
-        customcontrols: {
-          controls: [
-            { icon: '<i class="fa fa-question-circle"></i>',
-			  css: 'position: fixed; right: 50px; bottom: 50px; z-index: 30; font-size: 24px;',
-			  action: 'Reveal.toggleHelp(); return false;'
-			}
-          ]
+        menu: {
+          hideMissingTitles: true,
         },
 
-        menu: {
-          numbers: true,
-          hideMissingTitles: true,
-          themes: true,
-          themesPath: 'reveal.js/css/theme/'
-        }
+        dependencies: [
+          { src: './reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } }
+        ],
+
+        // reveal.js plugins
+        plugins: [
+          RevealMenu,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
       });
     </script>
     </body>

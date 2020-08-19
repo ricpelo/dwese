@@ -51,9 +51,21 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 !ifdef(HTML)([!2]{style="color:!1"})(\textcolor{!1}{!2})
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-!define(ACT)
+!define(SECCIONEJERCICIOS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##### Actividades {-}
+# Ejercicios {.unnumbered .unlisted}
+
+## Ejercicios {.unnumbered .unlisted}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(EJERCICIOS)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##### Ejercicios {.unnumbered .unlisted}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(EJERCICIO)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##### Ejercicio {.unnumbered .unlisted}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !define(FIN)
@@ -65,7 +77,7 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 
 !define(BIBLIOGRAFIA)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Bibliografía {-}
+# Bibliografía {.unnumbered .unlisted}
 
 !ifdef(BEAMER)(\raggedright)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -139,9 +151,9 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !ifndef(HTML)
 ~~~~~~~~~~~~~~~~~~~~
-# Respuestas a las preguntas {-}
+# Respuestas a las preguntas {.unnumbered .unlisted}
 
-#### Respuestas a las preguntas {.unnumbered .allowframebreaks}
+#### Respuestas a las preguntas {.unnumbered .unlisted .allowframebreaks}
 
 \shipoutAnswer
 ~~~~~~~~~~~~~~~~~~~~

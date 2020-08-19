@@ -8,23 +8,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="shortcut icon" type="image/png" href="/assets/icons/icon.png">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">
+  <link rel="stylesheet" href="./reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="./reveal.js/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="./reveal.js/dist/theme/solarized.css" id="theme">
   <link rel="stylesheet" href="custom.css"/>
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <style type="text/css">
       #header-left {
@@ -75,6 +70,21 @@
         el.innerHTML = title;
         document.getElementById('header-left').appendChild(el);
         document.getElementById('footer-left').innerHTML = '&copy; ' + author + ' (' + date + ')';
+
+        // Mueve un poquito el = a la derecha cuando hay que dibujar un "no-igual" con KaTeX:
+        Array.prototype.forEach.call(document.getElementsByClassName("rlap"), function (el) {
+            var e = el;
+            var i = 0;
+            while (e != null && i < 6) {
+                e = e.parentElement;
+                i++;
+            }
+            if (e != null && i == 6 && e.nextSibling != null && e.nextSibling.innerText == "=") {
+                el.style.width = "0.1em";
+            }
+            console.log(el);
+            console.log(e.nextSibling);
+        });
 
         function updateHeader(nd) {
             var hr = document.getElementById('header-right');
@@ -142,13 +152,12 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
-<section id="title-slide" class="title-slide slide level1">
+<section id="title-slide">
   <h1 class="title">Servicios web con REST en Yii 2</h1>
   <p class="author">Ricardo Pérez López</p>
-  <p class="date">IES Doñana, curso 2019/2020</p>
+  <p class="date">IES Doñana, curso 2020/2021</p>
 </section>
-<section id="TOC" class="slide level2">
+<section id="TOC">
 <ul>
 <li><a href="#/introducción"><span class="toc-section-number">1</span> Introducción</a></li>
 <li><a href="#/recursos"><span class="toc-section-number">2</span> Recursos</a></li>
@@ -162,59 +171,192 @@
 <li><a href="#/metadatos"><span class="toc-section-number">10</span> Metadatos</a></li>
 </ul>
 </section>
+
+<section id="introducción" class="title-slide slide level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introducción</h1>
+
 </section>
 
-<section id="introducción" class="title-slide slide level1"><h1><span class="header-section-number">1</span> Introducción</h1></section>
-<section id="recursos" class="title-slide slide level1"><h1><span class="header-section-number">2</span> Recursos</h1></section>
-<section id="controladores" class="title-slide slide level1"><h1><span class="header-section-number">3</span> Controladores</h1></section>
-<section id="enrutado" class="title-slide slide level1"><h1><span class="header-section-number">4</span> Enrutado</h1></section>
-<section id="formateo-de-la-respuesta" class="title-slide slide level1"><h1><span class="header-section-number">5</span> Formateo de la respuesta</h1></section>
-<section id="autenticación" class="title-slide slide level1"><h1><span class="header-section-number">6</span> Autenticación</h1></section>
-<section id="limitación-de-frecuencia-de-peticiones" class="title-slide slide level1"><h1><span class="header-section-number">7</span> Limitación de frecuencia de peticiones</h1></section>
-<section id="versionado" class="title-slide slide level1"><h1><span class="header-section-number">8</span> Versionado</h1></section>
-<section id="gestión-de-errores" class="title-slide slide level1"><h1><span class="header-section-number">9</span> Gestión de errores</h1></section>
-<section><section id="metadatos" class="title-slide slide level1"><h1><span class="header-section-number">10</span> Metadatos</h1></section><section id="objetivos-de-la-unidad" class="title-slide slide level2"><h2><span class="header-section-number">10.1</span> Objetivos de la unidad</h2></section><section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2"><h2><span class="header-section-number">10.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2></section><section id="ra1" class="title-slide slide level3"><h3><span class="header-section-number">10.2.1</span> RA1</h3></section><section id="ce1.a" class="slide level4">
-<h4><span class="header-section-number">10.2.1.1</span> CE1.a</h4>
-</section><section id="ce1.b" class="slide level4">
-<h4><span class="header-section-number">10.2.1.2</span> CE1.b</h4>
-</section><section id="ra2" class="title-slide slide level3"><h3><span class="header-section-number">10.2.2</span> RA2</h3></section><section id="ra3" class="title-slide slide level3"><h3><span class="header-section-number">10.2.3</span> RA3</h3></section><section id="ra7" class="title-slide slide level3"><h3><span class="header-section-number">10.2.4</span> RA7</h3></section><section id="ce7.a" class="slide level4">
-<h4><span class="header-section-number">10.2.4.1</span> CE7.a</h4>
-</section><section id="ce7.b" class="slide level4">
-<h4><span class="header-section-number">10.2.4.2</span> CE7.b</h4>
-</section><section id="ce7.c" class="slide level4">
-<h4><span class="header-section-number">10.2.4.3</span> CE7.c</h4>
-</section><section id="ce7.d" class="slide level4">
-<h4><span class="header-section-number">10.2.4.4</span> CE7.d</h4>
-</section><section id="ce7.e" class="slide level4">
-<h4><span class="header-section-number">10.2.4.5</span> CE7.e</h4>
-</section><section id="ce7.f" class="slide level4">
-<h4><span class="header-section-number">10.2.4.6</span> CE7.f</h4>
-</section><section id="ce7.g" class="slide level4">
-<h4><span class="header-section-number">10.2.4.7</span> CE7.g</h4>
-</section><section id="ra8" class="title-slide slide level3"><h3><span class="header-section-number">10.2.5</span> RA8</h3></section><section id="ce8.b" class="slide level4">
-<h4><span class="header-section-number">10.2.5.1</span> CE8.b</h4>
-</section><section id="ce8.f" class="slide level4">
-<h4><span class="header-section-number">10.2.5.2</span> CE8.f</h4>
-</section><section id="ce8.g" class="slide level4">
-<h4><span class="header-section-number">10.2.5.3</span> CE8.g</h4>
-</section><section id="ra9" class="title-slide slide level3"><h3><span class="header-section-number">10.2.6</span> RA9</h3></section><section id="ce9.c" class="slide level4">
-<h4><span class="header-section-number">10.2.6.1</span> CE9.c</h4>
-</section><section id="ce9.e" class="slide level4">
-<h4><span class="header-section-number">10.2.6.2</span> CE9.e</h4>
-</section><section id="ce9.f" class="slide level4">
-<h4><span class="header-section-number">10.2.6.3</span> CE9.f</h4>
-</section><section id="ce9.g" class="slide level4">
-<h4><span class="header-section-number">10.2.6.4</span> CE9.g</h4>
-</section></section>
+<section id="recursos" class="title-slide slide level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Recursos</h1>
+
+</section>
+
+<section id="controladores" class="title-slide slide level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Controladores</h1>
+
+</section>
+
+<section id="enrutado" class="title-slide slide level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Enrutado</h1>
+
+</section>
+
+<section id="formateo-de-la-respuesta" class="title-slide slide level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Formateo de la respuesta</h1>
+
+</section>
+
+<section id="autenticación" class="title-slide slide level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Autenticación</h1>
+
+</section>
+
+<section id="limitación-de-frecuencia-de-peticiones" class="title-slide slide level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Limitación de frecuencia de peticiones</h1>
+
+</section>
+
+<section id="versionado" class="title-slide slide level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Versionado</h1>
+
+</section>
+
+<section id="gestión-de-errores" class="title-slide slide level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Gestión de errores</h1>
+
+</section>
+
+<section>
+<section id="metadatos" class="title-slide slide level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Metadatos</h1>
+
+</section>
+<section id="objetivos-de-la-unidad" class="title-slide slide level2" data-number="10.1">
+<h2 data-number="10.1"><span class="header-section-number">10.1</span> Objetivos de la unidad</h2>
+
+</section>
+
+<section id="resultados-de-aprendizaje-y-criterios-de-evaluación-asociados" class="title-slide slide level2" data-number="10.2">
+<h2 data-number="10.2"><span class="header-section-number">10.2</span> Resultados de aprendizaje y criterios de evaluación asociados</h2>
+
+</section>
+<section id="ra1" class="title-slide slide level3" data-number="10.2.1">
+<h3 data-number="10.2.1"><span class="header-section-number">10.2.1</span> RA1</h3>
+
+</section>
+<section id="ce1.a" class="title-slide slide level4" data-number="10.2.1.1">
+<h4 data-number="10.2.1.1"><span class="header-section-number">10.2.1.1</span> CE1.a</h4>
+
+</section>
+
+<section id="ce1.b" class="title-slide slide level4" data-number="10.2.1.2">
+<h4 data-number="10.2.1.2"><span class="header-section-number">10.2.1.2</span> CE1.b</h4>
+
+</section>
+
+
+<section id="ra2" class="title-slide slide level3" data-number="10.2.2">
+<h3 data-number="10.2.2"><span class="header-section-number">10.2.2</span> RA2</h3>
+
+</section>
+
+<section id="ra3" class="title-slide slide level3" data-number="10.2.3">
+<h3 data-number="10.2.3"><span class="header-section-number">10.2.3</span> RA3</h3>
+
+</section>
+
+<section id="ra7" class="title-slide slide level3" data-number="10.2.4">
+<h3 data-number="10.2.4"><span class="header-section-number">10.2.4</span> RA7</h3>
+
+</section>
+<section id="ce7.a" class="title-slide slide level4" data-number="10.2.4.1">
+<h4 data-number="10.2.4.1"><span class="header-section-number">10.2.4.1</span> CE7.a</h4>
+
+</section>
+
+<section id="ce7.b" class="title-slide slide level4" data-number="10.2.4.2">
+<h4 data-number="10.2.4.2"><span class="header-section-number">10.2.4.2</span> CE7.b</h4>
+
+</section>
+
+<section id="ce7.c" class="title-slide slide level4" data-number="10.2.4.3">
+<h4 data-number="10.2.4.3"><span class="header-section-number">10.2.4.3</span> CE7.c</h4>
+
+</section>
+
+<section id="ce7.d" class="title-slide slide level4" data-number="10.2.4.4">
+<h4 data-number="10.2.4.4"><span class="header-section-number">10.2.4.4</span> CE7.d</h4>
+
+</section>
+
+<section id="ce7.e" class="title-slide slide level4" data-number="10.2.4.5">
+<h4 data-number="10.2.4.5"><span class="header-section-number">10.2.4.5</span> CE7.e</h4>
+
+</section>
+
+<section id="ce7.f" class="title-slide slide level4" data-number="10.2.4.6">
+<h4 data-number="10.2.4.6"><span class="header-section-number">10.2.4.6</span> CE7.f</h4>
+
+</section>
+
+<section id="ce7.g" class="title-slide slide level4" data-number="10.2.4.7">
+<h4 data-number="10.2.4.7"><span class="header-section-number">10.2.4.7</span> CE7.g</h4>
+
+</section>
+
+
+<section id="ra8" class="title-slide slide level3" data-number="10.2.5">
+<h3 data-number="10.2.5"><span class="header-section-number">10.2.5</span> RA8</h3>
+
+</section>
+<section id="ce8.b" class="title-slide slide level4" data-number="10.2.5.1">
+<h4 data-number="10.2.5.1"><span class="header-section-number">10.2.5.1</span> CE8.b</h4>
+
+</section>
+
+<section id="ce8.f" class="title-slide slide level4" data-number="10.2.5.2">
+<h4 data-number="10.2.5.2"><span class="header-section-number">10.2.5.2</span> CE8.f</h4>
+
+</section>
+
+<section id="ce8.g" class="title-slide slide level4" data-number="10.2.5.3">
+<h4 data-number="10.2.5.3"><span class="header-section-number">10.2.5.3</span> CE8.g</h4>
+
+</section>
+
+
+<section id="ra9" class="title-slide slide level3" data-number="10.2.6">
+<h3 data-number="10.2.6"><span class="header-section-number">10.2.6</span> RA9</h3>
+
+</section>
+<section id="ce9.c" class="title-slide slide level4" data-number="10.2.6.1">
+<h4 data-number="10.2.6.1"><span class="header-section-number">10.2.6.1</span> CE9.c</h4>
+
+</section>
+
+<section id="ce9.e" class="title-slide slide level4" data-number="10.2.6.2">
+<h4 data-number="10.2.6.2"><span class="header-section-number">10.2.6.2</span> CE9.e</h4>
+
+</section>
+
+<section id="ce9.f" class="title-slide slide level4" data-number="10.2.6.3">
+<h4 data-number="10.2.6.3"><span class="header-section-number">10.2.6.3</span> CE9.f</h4>
+
+</section>
+
+<section id="ce9.g" class="title-slide slide level4" data-number="10.2.6.4">
+<h4 data-number="10.2.6.4"><span class="header-section-number">10.2.6.4</span> CE9.g</h4>
+
+</section>
+
+
+</section>
     </div>
   </div>
 
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="./reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="./reveal.js/plugin/notes/notes.js"></script>
+  <script src="./reveal.js/plugin/search/search.js"></script>
+  <script src="./reveal.js/plugin/zoom/zoom.js"></script>
+  <script src="./reveal.js/plugin/reveal.js-menu/menu.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
         // Display the page number of the current slide
         slideNumber: true,
@@ -228,34 +370,21 @@
         width: 1280,
         height: 1080,
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-menu/menu.js', async: true },
-          { src: 'reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } },
-          { src: 'reveal.js/plugin/reveal-code-focus/vendor/highlight.js/highlight.pack.js' },
-          { src: 'reveal.js/plugin/reveal-code-focus/reveal-code-focus.js', async: true, callback: function() { RevealCodeFocus(); } },
-          { src: 'reveal.js/plugin/search/search.js', async: true },
-          { src: 'reveal.js/plugin/customcontrols/customcontrols.js', async: true }
-        ],
-
-        customcontrols: {
-          controls: [
-            { icon: '<i class="fa fa-question-circle"></i>',
-			  css: 'position: fixed; right: 50px; bottom: 50px; z-index: 30; font-size: 24px;',
-			  action: 'Reveal.toggleHelp(); return false;'
-			}
-          ]
+        menu: {
+          hideMissingTitles: true,
         },
 
-        menu: {
-          numbers: true,
-          hideMissingTitles: true,
-          themes: true,
-          themesPath: 'reveal.js/css/theme/'
-        }
+        dependencies: [
+          { src: './reveal.js/plugin/reveal.js-quiz/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, checkAnswerText: 'Comprueba la respuesta', nextQuestionText: 'Siguiente &raquo;', backButtonText: '&laquo; Anterior', tryAgainText: 'Prueba de nuevo', preventUnansweredText: 'Selecciona una respuesta', questionCountText: 'Pregunta %current de %total', skipStartButton: true}); } }
+        ],
+
+        // reveal.js plugins
+        plugins: [
+          RevealMenu,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
       });
     </script>
     </body>
