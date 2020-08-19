@@ -1,5 +1,5 @@
 ---
-title: Gestión de peticiones en Yii 2
+title: Gestión de peticiones en Yii
 author: Ricardo Pérez López
 !DATE
 ---

@@ -1,9 +1,8 @@
 ---
-title: Conceptos básicos de PHP II
+title: Conceptos básicos de PHP (II)
 author: Ricardo Pérez López
 !DATE
 ---
-
 
 # Flujo de control
 

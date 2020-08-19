@@ -1,5 +1,5 @@
 ---
-title: Creación y validación de formularios en Yii 2
+title: Creación y validación de formularios en Yii
 author: Ricardo Pérez López
 !DATE
 ---

@@ -1,5 +1,5 @@
 ---
-title: Desarrollo de aplicaciones con PHP I
+title: Desarrollo de aplicaciones con PHP (I)
 author: Ricardo Pérez López
 !DATE
 ---

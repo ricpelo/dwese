@@ -1,5 +1,5 @@
 ---
-title: Manejo de fechas, horas, instantes e intervalos en PHP, Yii 2, PostgreSQL y Heroku
+title: Manejo de fechas, horas, instantes e intervalos en PHP, Yii, PostgreSQL y Heroku
 author: Ricardo Pérez López
 !DATE
 ---

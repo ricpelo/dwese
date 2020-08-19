@@ -1,5 +1,5 @@
 ---
-title: Seguridad y cacheado en Yii 2
+title: Seguridad y cacheado en Yii
 author: Ricardo Pérez López
 !DATE
 ---

@@ -1,5 +1,5 @@
 ---
-title: Visualización de datos en Yii 2
+title: Visualización de datos en Yii
 author: Ricardo Pérez López
 !DATE
 ---

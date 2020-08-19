@@ -1,5 +1,5 @@
 ---
-title: Servicios web con REST en Yii 2
+title: Servicios web con REST en Yii
 author: Ricardo Pérez López
 !DATE
 ---

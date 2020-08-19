@@ -1,5 +1,5 @@
 ---
-title: Estructura de una aplicación Yii 2
+title: Estructura de una aplicación Yii
 author: Ricardo Pérez López
 !DATE
 ---

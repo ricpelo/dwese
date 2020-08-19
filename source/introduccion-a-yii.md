@@ -1,5 +1,5 @@
 ---
-title: Introducción a Yii 2
+title: Introducción a Yii
 author: Ricardo Pérez López
 !DATE
 ---

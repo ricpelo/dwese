@@ -1,5 +1,5 @@
 ---
-title: Estructura a gran escala de una aplicación Yii 2
+title: Estructura a gran escala de una aplicación Yii
 author: Ricardo Pérez López
 !DATE
 ---

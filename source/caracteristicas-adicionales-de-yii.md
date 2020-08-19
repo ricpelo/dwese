@@ -1,5 +1,5 @@
 ---
-title: Características adicionales de Yii 2
+title: Características adicionales de Yii
 author: Ricardo Pérez López
 !DATE
 ---

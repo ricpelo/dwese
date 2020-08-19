@@ -1,5 +1,5 @@
 ---
-title: Sistemas de control de versiones I
+title: Sistemas de control de versiones (I)
 author: Ricardo Pérez López
 !DATE
 ---
