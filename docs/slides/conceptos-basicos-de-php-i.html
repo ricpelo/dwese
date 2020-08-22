@@ -17,87 +17,9 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      {   }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #cb4b16; font-weight: bold; } /* Alert */
-    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #7d9029; } /* Attribute */
-    code span.bn { color: #d33682; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #dc322f; } /* Char */
-    code span.cn { color: #880000; } /* Constant */
-    code span.co { color: #93a1a1; font-style: italic; } /* Comment */
-    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-    code span.dt { color: #268bd2; } /* DataType */
-    code span.dv { color: #d33682; } /* DecVal */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #d33682; } /* Float */
-    code span.fu { color: #268bd2; } /* Function */
-    code span.im { font-weight: bold; } /* Import */
-    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #268bd2; font-weight: bold; } /* Keyword */
-    code span.op { color: #666666; } /* Operator */
-    code span.ot { color: #a57800; } /* Other */
-    code span.pp { color: #bc7a00; } /* Preprocessor */
-    code span.sc { color: #4070a0; } /* SpecialChar */
-    code span.ss { color: #2aa198; } /* SpecialString */
-    code span.st { color: #2aa198; } /* String */
-    code span.va { color: #6c71c4; } /* Variable */
-    code span.vs { color: #4070a0; } /* VerbatimString */
-    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="./reveal.js/dist/theme/solarized.css" id="theme">
   <link rel="stylesheet" href="custom.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
-   var mathElements = document.getElementsByClassName("math");
-   var macros = [];
-   for (var i = 0; i < mathElements.length; i++) {
-    var texText = mathElements[i].firstChild;
-    if (mathElements[i].tagName == "SPAN") {
-     katex.render(texText.data, mathElements[i], {
-      displayMode: mathElements[i].classList.contains('display'),
-      throwOnError: false,
-      macros: macros,
-      fleqn: false
-     });
-  }}});
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <style type="text/css">
       #header-left {
@@ -238,12 +160,12 @@
 <section id="TOC">
 <ul>
 <li><a href="#/introducción-a-php"><span class="toc-section-number">1</span> Introducción a PHP</a></li>
-<li><a href="#/sintaxis-básica"><span class="toc-section-number">2</span> <span>Sintaxis básica</span></a></li>
-<li><a href="#/funcionamiento-del-intérprete"><span class="toc-section-number">3</span> <span>Funcionamiento del intérprete</span></a></li>
-<li><a href="#/variables"><span class="toc-section-number">4</span> <span>Variables</span></a></li>
-<li><a href="#/tipos-básicos-de-datos"><span class="toc-section-number">5</span> <span>Tipos básicos de datos</span></a></li>
+<li><a href="#/sintaxis-básica"><span class="toc-section-number">2</span> Sintaxis básica</a></li>
+<li><a href="#/funcionamiento-del-intérprete"><span class="toc-section-number">3</span> Funcionamiento del intérprete</a></li>
+<li><a href="#/variables"><span class="toc-section-number">4</span> Variables</a></li>
+<li><a href="#/tipos-básicos-de-datos"><span class="toc-section-number">5</span> Tipos básicos de datos</a></li>
 <li><a href="#/manipulación-de-datos"><span class="toc-section-number">6</span> Manipulación de datos</a></li>
-<li><a href="#/constantes"><span class="toc-section-number">7</span> <span>Constantes</span></a></li>
+<li><a href="#/constantes"><span class="toc-section-number">7</span> Constantes</a></li>
 <li><a href="#/ejercicios"><span class="toc-section-number">8</span> Ejercicios</a></li>
 </ul>
 </section>
@@ -253,86 +175,29 @@
 <h1 data-number="1"><span class="header-section-number">1</span> Introducción a PHP</h1>
 
 </section>
-<section id="prueba" class="title-slide slide level2" data-number="1.1">
-<h2 data-number="1.1"><span class="header-section-number">1.1</span> Prueba</h2>
-<div class="line-block"><strong>espec</strong> NAT3<br />
-    <strong>generos</strong> natural<br />
-    <strong>operaciones</strong><br />
-        <span class="math inline">0</span>: <span class="math inline">\rightarrow</span> natural<br />
-        <span class="math inline">suc</span>: natural <span class="math inline">\rightarrow</span> natural<br />
-        _ <span class="math inline">+</span> _: natural <span class="math inline">\times</span> natural <span class="math inline">\rightarrow</span> natural<br />
-    <strong>var</strong><br />
-        <span class="math inline">x</span>, <span class="math inline">y</span>: natural<br />
-    <strong>ecuaciones</strong><br />
-        <span class="math inline">x + 0 = 0</span><br />
-        <span class="math inline">x + suc(y) = suc(x+y)</span><br />
-<strong>fspec</strong></div>
+<section id="página-web-de-php" class="title-slide slide level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Página web de PHP</h2>
+<p><a href="https://php.net">https:://php.net</a></p>
 </section>
 
-<section id="página-web-de-php" class="title-slide slide level2" data-number="1.2">
-<h2 data-number="1.2"><span class="header-section-number">1.2</span> <a href="http://php.net">Página web de PHP</a></h2>
-<p>!FLOWCHART(prueba.svg)(Prueba de diagrama de flujo) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ st=&gt;start: Start e=&gt;end op1=&gt;operation: My Operation sub1=&gt;subroutine: My Subroutine cond=&gt;condition: Yes or No?:&gt;http://www.google.com io=&gt;inputoutput: catch something st-&gt;op1-&gt;cond cond(yes)-&gt;io-&gt;e cond(no)-&gt;sub1(right)-&gt;op1 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+<section id="instalación-de-php" class="title-slide slide level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span> Instalación de PHP</h2>
+<p><code>~/.conf/scripts/php-install.php</code></p>
 </section>
 
-<section id="instalación-de-php" class="title-slide slide level2" data-number="1.3">
-<h2 data-number="1.3"><span class="header-section-number">1.3</span> Instalación de PHP</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode php scrollable"><code class="sourceCode php"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">&lt;?php</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="va">$j</span> = <span class="fu">json_decode</span><span class="ot">(</span><span class="va">$argv</span><span class="ot">[</span><span class="dv">1</span><span class="ot">],</span> <span class="kw">true</span><span class="ot">);</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="co">// print_r($j);</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&#39;```{=latex}&#39;</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="kw">foreach</span> <span class="ot">(</span><span class="va">$j</span><span class="ot">[</span><span class="st">&#39;questions&#39;</span><span class="ot">]</span> <span class="kw">as</span> <span class="va">$question</span><span class="ot">)</span> {</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="st">&#39;\begin{Exercise}[label={\the\value{Exercise}}]&#39;</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="va">$question</span><span class="ot">[</span><span class="st">&#39;q&#39;</span><span class="ot">]</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="st">&#39;(Para ver la respuesta pulsa aquí:~\ref{\ExerciseLabel-Answer})&#39;</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="st">&#39;\end{Exercise}&#39;</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="st">&#39;\begin{Answer}[ref=\ExerciseLabel]&#39;</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="st">&#39;\begin{itemize}&#39;</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>    <span class="kw">foreach</span> <span class="ot">(</span><span class="va">$question</span><span class="ot">[</span><span class="st">&#39;a&#39;</span><span class="ot">]</span> <span class="kw">as</span> <span class="va">$ans</span><span class="ot">)</span> {</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>        <span class="kw">if</span> <span class="ot">(</span><span class="va">$ans</span><span class="ot">[</span><span class="st">&#39;correct&#39;</span><span class="ot">])</span> {</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>            <span class="kw">echo</span> <span class="st">&#39;\item &#39;</span> . <span class="va">$ans</span><span class="ot">[</span><span class="st">&#39;option&#39;</span><span class="ot">]</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>        }</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a>    }</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="st">&#39;\end{itemize}&#39;</span><span class="ot">;</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="va">$question</span><span class="ot">[</span><span class="st">&#39;correct&#39;</span><span class="ot">]</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>    <span class="kw">echo</span> <span class="st">&#39;\end{Answer}&#39;</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a>}</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&#39;```&#39;</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a>&lt;<span class="ot">?</span>php</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true"></a><span class="co">//$f = file_get_contents(&#39;juan&#39;);</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true"></a><span class="va">$j</span> = <span class="fu">json_decode</span><span class="ot">(</span><span class="va">$argv</span><span class="ot">[</span><span class="dv">1</span><span class="ot">],</span> <span class="kw">true</span><span class="ot">);</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true"></a><span class="co">// print_r($j);</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&#39;```{=html}&#39;</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&#39;&lt;script data-quiz&gt;&#39;</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true"></a><span class="kw">foreach</span> <span class="ot">(</span><span class="va">$j</span><span class="ot">[</span><span class="st">&#39;questions&#39;</span><span class="ot">]</span> <span class="kw">as</span> &amp;<span class="va">$question</span><span class="ot">)</span> {</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true"></a>    <span class="va">$question</span><span class="ot">[</span><span class="st">&#39;correct&#39;</span><span class="ot">]</span> = <span class="st">&#39;&lt;p&gt;&lt;span&gt;¡Eso es!&lt;/span&gt;&#39;</span> . <span class="va">$question</span><span class="ot">[</span><span class="st">&#39;correct&#39;</span><span class="ot">]</span> . <span class="st">&#39;&lt;/p&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true"></a>    <span class="va">$question</span><span class="ot">[</span><span class="st">&#39;incorrect&#39;</span><span class="ot">]</span> = <span class="st">&#39;&lt;p&gt;&lt;span&gt;Mmmm... no.&lt;/span&gt;&#39;</span> . <span class="va">$question</span><span class="ot">[</span><span class="st">&#39;incorrect&#39;</span><span class="ot">]</span> . <span class="st">&#39;&lt;/p&gt;&#39;</span><span class="ot">;</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true"></a>}</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&#39;quiz = &#39;</span> . <span class="fu">json_encode</span><span class="ot">(</span><span class="va">$j</span><span class="ot">,</span> <span class="cn">JSON_UNESCAPED_SLASHES</span><span class="ot">);</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&#39;&lt;/script&gt;&#39;</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true"></a><span class="kw">echo</span> <span class="st">&#39;```&#39;</span> . <span class="cn">PHP_EOL</span><span class="ot">;</span></span></code></pre></div>
-</section>
-
-<section id="documentación-y-búsqueda-de-información" class="title-slide slide level2" data-number="1.4">
-<h2 data-number="1.4"><span class="header-section-number">1.4</span> Documentación y búsqueda de información</h2>
-
+<section id="documentación-y-búsqueda-de-información" class="title-slide slide level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span> Documentación y búsqueda de información</h2>
+<p><a href="https://www.php.net/manual/es">https://www.php.net/manual/es</a></p>
 </section>
 </section>
 <section>
 <section id="sintaxis-básica" class="title-slide slide level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> <a href="http://php.net/manual/es/language.basic-syntax.php">Sintaxis básica</a></h1>
-
+<h1 data-number="2"><span class="header-section-number">2</span> Sintaxis básica</h1>
+<p><a href="http://php.net/manual/es/language.basic-syntax.php">http://php.net/manual/es/language.basic-syntax.php</a></p>
 </section>
 <section id="datos-e-instrucciones" class="title-slide slide level2" data-number="2.1">
 <h2 data-number="2.1"><span class="header-section-number">2.1</span> Datos e instrucciones</h2>
-<script data-quiz>
-quiz = {"info":{"name":"","main":""},"questions":[{"q":"What number is the letter A in the English alphabet?","a":[{"option":"8","correct":false},{"option":"14","correct":false},{"option":"1","correct":true},{"option":"23","correct":false}],"correct":"<p><span>\u00a1Eso es!</span>The letter A is the first letter in the alphabet!</p>","incorrect":"<p><span>Mmmm... no.</span>It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>"}]}</script>
+
 </section>
 
 <section id="sentencias-y-comandos" class="title-slide slide level2" data-number="2.2">
@@ -340,20 +205,20 @@ quiz = {"info":{"name":"","main":""},"questions":[{"q":"What number is the lette
 
 </section>
 <section id="comando-echo" class="title-slide slide level3" data-number="2.2.1">
-<h3 data-number="2.2.1"><span class="header-section-number">2.2.1</span> <a href="http://php.net/manual/es/function.echo.php">Comando <code>echo</code></a></h3>
-
+<h3 data-number="2.2.1"><span class="header-section-number">2.2.1</span> Comando <code>echo</code></h3>
+<p><a href="http://php.net/manual/es/function.echo.php">http://php.net/manual/es/function.echo.php</a></p>
 </section>
 
 
 <section id="expresiones-operadores-y-funciones" class="title-slide slide level2" data-number="2.3">
 <h2 data-number="2.3"><span class="header-section-number">2.3</span> Expresiones, operadores y funciones</h2>
-<p>ricpelo’s note: <em>Ejemplos</em>: aritmética, <code>cos()</code>, <code>max()</code><br />
-ricpelo’s note: <a href="http://php.net/manual/es/function.print.php#85310"><code>print()</code> <em>no</em> es una función. Cuidado.</a></p>
+<p>ricpelo’s note: <em>Ejemplos</em>: aritmética, <code>cos()</code>, <code>max()</code></p>
+<p>ricpelo’s note: <a href="http://php.net/manual/es/function.print.php#85310"><code>print()</code> <em>no</em> es una función. Cuidado.</a></p>
 </section>
 </section>
 <section>
 <section id="funcionamiento-del-intérprete" class="title-slide slide level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> <a href="http://php.net/manual/es/language.basic-syntax.phpmode.php">Funcionamiento del intérprete</a></h1>
+<h1 data-number="3"><span class="header-section-number">3</span> Funcionamiento del intérprete</h1>
 
 </section>
 <section id="ejecución" class="title-slide slide level2" data-number="3.1">
@@ -375,139 +240,159 @@ ricpelo’s note: <a href="http://php.net/manual/es/function.print.php#85310"><c
 </section>
 
 <section id="psysh" class="title-slide slide level4" data-number="3.1.2.2">
-<h4 data-number="3.1.2.2"><span class="header-section-number">3.1.2.2</span> <a href="http://psysh.org/">PsySH</a></h4>
-
+<h4 data-number="3.1.2.2"><span class="header-section-number">3.1.2.2</span> PsySH</h4>
+<p><a href="http://psysh.org">http://psysh.org</a></p>
 </section>
 
 
 
 <section id="etiquetas-php-y" class="title-slide slide level2" data-number="3.2">
 <h2 data-number="3.2"><span class="header-section-number">3.2</span> Etiquetas <code>&lt;?php</code> y <code>?&gt;</code></h2>
-
+<p><a href="https://www.php.net/manual/es/language.basic-syntax.phptags.php">https://www.php.net/manual/es/language.basic-syntax.phptags.php</a></p>
 </section>
 
 <section id="modo-dual-de-operación" class="title-slide slide level2" data-number="3.3">
 <h2 data-number="3.3"><span class="header-section-number">3.3</span> Modo dual de operación</h2>
+<p><a href="http://php.net/manual/es/language.basic-syntax.phpmode.php">http://php.net/manual/es/language.basic-syntax.phpmode.php</a></p>
 <p>ricpelo’s note: Se llaman <em>modo HTML</em> y <em>modo PHP</em>.</p>
 </section>
 </section>
 <section>
 <section id="variables" class="title-slide slide level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> <a href="http://php.net/manual/es/language.variables.php">Variables</a></h1>
+<h1 data-number="4"><span class="header-section-number">4</span> Variables</h1>
 
 </section>
 <section id="conceptos-básicos" class="title-slide slide level2" data-number="4.1">
-<h2 data-number="4.1"><span class="header-section-number">4.1</span> <a href="http://php.net/manual/es/language.variables.basics.php">Conceptos básicos</a></h2>
-
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> Conceptos básicos</h2>
+<p><a href="%5Bhttp://php.net/manual/es/language.variables.basics.php">http://php.net/manual/es/language.variables.basics.php</a></p>
 </section>
 
 <section id="destrucción-de-variables" class="title-slide slide level2" data-number="4.2">
-<h2 data-number="4.2"><span class="header-section-number">4.2</span> <a href="http://php.net/manual/es/function.unset.php">Destrucción de variables</a></h2>
-
+<h2 data-number="4.2"><span class="header-section-number">4.2</span> Destrucción de variables</h2>
+<p><a href="http://php.net/manual/es/function.unset.php">http://php.net/manual/es/function.unset.php</a></p>
 </section>
 
 <section id="operadores-de-asignación-por-valor-y-por-referencia" class="title-slide slide level2" data-number="4.3">
-<h2 data-number="4.3"><span class="header-section-number">4.3</span> <a href="http://php.net/manual/es/language.operators.assignment.php">Operadores de asignación por valor y por referencia</a></h2>
+<h2 data-number="4.3"><span class="header-section-number">4.3</span> Operadores de asignación por valor y por referencia</h2>
+<p><a href="http://php.net/manual/es/language.operators.assignment.php">http://php.net/manual/es/language.operators.assignment.php</a></p>
 <p>ricpelo’s note: <a href="http://php.net/manual/es/language.references.whatdo.php">En <code>$b =&amp; $a;</code>, <code>$b</code> <strong>NO</strong> está apuntando a <code>$a</code> o viceversa. Ambos apuntan al mismo lugar.</a></p>
 </section>
 
 <section id="variables-predefinidas" class="title-slide slide level2" data-number="4.4">
-<h2 data-number="4.4"><span class="header-section-number">4.4</span> <a href="http://php.net/manual/es/reserved.variables.php">Variables predefinidas</a></h2>
+<h2 data-number="4.4"><span class="header-section-number">4.4</span> Variables predefinidas</h2>
+<p><a href="http://php.net/manual/es/reserved.variables.php">http://php.net/manual/es/reserved.variables.php</a></p>
 <p>ricpelo’s note: <code>$_ENV</code> no funciona en la instalación actual (ver <code>variables_order</code> en <code>php.ini</code>. Habría que usar <code>get_env()</code>.</p>
 </section>
 </section>
 <section>
 <section id="tipos-básicos-de-datos" class="title-slide slide level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> <a href="http://php.net/manual/es/language.types.intro.php">Tipos básicos de datos</a></h1>
+<h1 data-number="5"><span class="header-section-number">5</span> Tipos básicos de datos</h1>
 
 </section>
-<section id="lógicos-bool" class="title-slide slide level2" data-number="5.1">
-<h2 data-number="5.1"><span class="header-section-number">5.1</span> <a href="http://php.net/manual/es/language.types.boolean.php">Lógicos (<code>bool</code>)</a></h2>
+<section id="introducción" class="title-slide slide level2" data-number="5.1">
+<h2 data-number="5.1"><span class="header-section-number">5.1</span> Introducción</h2>
+<p><a href="http://php.net/manual/es/language.types.intro.php">http://php.net/manual/es/language.types.intro.php</a></p>
+</section>
+
+<section id="lógicos-bool" class="title-slide slide level2" data-number="5.2">
+<h2 data-number="5.2"><span class="header-section-number">5.2</span> Lógicos (<code>bool</code>)</h2>
+<p><a href="http://php.net/manual/es/language.types.boolean.php">http://php.net/manual/es/language.types.boolean.php</a></p>
 <p>ricpelo’s note: <a href="https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#51-types">Se escriben en minúscula: <code>false</code> y <code>true</code>.</a><br />
 ricpelo’s note: <code>boolean</code> es sinónimo de <code>bool</code>, pero debería usarse <code>bool</code>.</p>
 </section>
-<section id="operadores-lógicos" class="title-slide slide level3" data-number="5.1.1">
-<h3 data-number="5.1.1"><span class="header-section-number">5.1.1</span> <a href="http://php.net/manual/es/language.operators.logical.php">Operadores lógicos</a></h3>
-<p>ricpelo’s note: <em>Cuidado</em>:<br />
-- <code>false and (true &amp;&amp; print('hola'))</code> no imprime nada y devuelve <code>false</code>, por lo que <strong>el código va en cortocircuito y se evalúa de izquierda a derecha</strong> incluso aunque el <code>&amp;&amp;</code> y los paréntesis tengan más prioridad que el <code>and</code>.<br />
-- Otra forma de verlo es comprobar que <code>print('uno') and (1 + print('dos'))</code> escribe <code>unodos</code> (y devuelve <code>true</code>), por lo que la evaluación de los operandos del <code>and</code> se hace de izquierda a derecha aunque el <code>+</code> tenga más prioridad (y encima vaya entre paréntesis).<br />
-- En el <a href="http://php.net/manual/es/language.operators.precedence.php">manual de PHP</a> se dice que: <em>“La precedencia y asociatividad de los operadores solamente determinan cómo se agrupan las expresiones, no especifican un orden de evaluación. PHP no especifica (en general) el orden en que se evalúa una expresión y se debería evitar el código que se asume un orden específico de evaluación, ya que el comportamiento puede cambiar entre versiones de PHP o dependiendo de código circundante.”</em><br />
-- <a href="https://stackoverflow.com/questions/46861563/false-and-true-printhi">Pregunta que hice al respecto en StackOverflow</a>.</p>
+<section id="operadores-lógicos" class="title-slide slide level3" data-number="5.2.1">
+<h3 data-number="5.2.1"><span class="header-section-number">5.2.1</span> Operadores lógicos</h3>
+<p><a href="http://php.net/manual/es/language.operators.logical.php">http://php.net/manual/es/language.operators.logical.php</a></p>
+<p>ricpelo’s note: <em>Cuidado</em>:</p>
+<ul>
+<li><p><code>false and (true &amp;&amp; print('hola'))</code> no imprime nada y devuelve <code>false</code>, por lo que <strong>el código va en cortocircuito y se evalúa de izquierda a derecha</strong> incluso aunque el <code>&amp;&amp;</code> y los paréntesis tengan más prioridad que el <code>and</code>.</p></li>
+<li><p>Otra forma de verlo es comprobar que <code>print('uno') and (1 + print('dos'))</code> escribe <code>unodos</code> (y devuelve <code>true</code>), por lo que la evaluación de los operandos del <code>and</code> se hace de izquierda a derecha aunque el <code>+</code> tenga más prioridad (y encima vaya entre paréntesis).</p></li>
+<li><p>En el <a href="http://php.net/manual/es/language.operators.precedence.php">manual de PHP</a> se dice que: <em>“La precedencia y asociatividad de los operadores solamente determinan cómo se agrupan las expresiones, no especifican un orden de evaluación. PHP no especifica (en general) el orden en que se evalúa una expresión y se debería evitar el código que se asume un orden específico de evaluación, ya que el comportamiento puede cambiar entre versiones de PHP o dependiendo de código circundante.”</em></p></li>
+<li><p><a href="https://stackoverflow.com/questions/46861563/false-and-true-printhi">Pregunta que hice al respecto en StackOverflow</a>.</p></li>
+</ul>
 </section>
 
 
-<section id="numéricos" class="title-slide slide level2" data-number="5.2">
-<h2 data-number="5.2"><span class="header-section-number">5.2</span> Numéricos</h2>
+<section id="numéricos" class="title-slide slide level2" data-number="5.3">
+<h2 data-number="5.3"><span class="header-section-number">5.3</span> Numéricos</h2>
 
 </section>
-<section id="enteros-int" class="title-slide slide level3" data-number="5.2.1">
-<h3 data-number="5.2.1"><span class="header-section-number">5.2.1</span> <a href="http://php.net/manual/es/language.types.integer.php">Enteros (<code>int</code>)</a></h3>
+<section id="enteros-int" class="title-slide slide level3" data-number="5.3.1">
+<h3 data-number="5.3.1"><span class="header-section-number">5.3.1</span> Enteros (<code>int</code>)</h3>
+<p><a href="http://php.net/manual/es/language.types.integer.php">http://php.net/manual/es/language.types.integer.php</a></p>
 <p>ricpelo’s note: <code>integer</code> es sinónimo de <code>int</code>, pero debería usarse <code>int</code>.</p>
 </section>
 
-<section id="números-en-coma-flotante-float" class="title-slide slide level3" data-number="5.2.2">
-<h3 data-number="5.2.2"><span class="header-section-number">5.2.2</span> <a href="http://php.net/manual/es/language.types.float.php">Números en coma flotante (<code>float</code>)</a></h3>
+<section id="números-en-coma-flotante-float" class="title-slide slide level3" data-number="5.3.2">
+<h3 data-number="5.3.2"><span class="header-section-number">5.3.2</span> Números en coma flotante (<code>float</code>)</h3>
+<p><a href="http://php.net/manual/es/language.types.float.php">http://php.net/manual/es/language.types.float.php</a></p>
 <p>ricpelo’s note: <code>double</code> es sinónimo de <code>float</code>, pero debería usarse <code>float</code>.</p>
 </section>
 
-<section id="operadores" class="title-slide slide level3" data-number="5.2.3">
-<h3 data-number="5.2.3"><span class="header-section-number">5.2.3</span> Operadores</h3>
+<section id="operadores" class="title-slide slide level3" data-number="5.3.3">
+<h3 data-number="5.3.3"><span class="header-section-number">5.3.3</span> Operadores</h3>
 
 </section>
-<section id="operadores-aritméticos" class="title-slide slide level4" data-number="5.2.3.1">
-<h4 data-number="5.2.3.1"><span class="header-section-number">5.2.3.1</span> <a href="http://php.net/manual/es/language.operators.arithmetic.php">Operadores aritméticos</a></h4>
-
+<section id="operadores-aritméticos" class="title-slide slide level4" data-number="5.3.3.1">
+<h4 data-number="5.3.3.1"><span class="header-section-number">5.3.3.1</span> Operadores aritméticos</h4>
+<p><a href="http://php.net/manual/es/language.operators.arithmetic.php">http://php.net/manual/es/language.operators.arithmetic.php</a></p>
 </section>
 
-<section id="operadores-de-incrementodecremento" class="title-slide slide level4" data-number="5.2.3.2">
-<h4 data-number="5.2.3.2"><span class="header-section-number">5.2.3.2</span> <a href="http://php.net/manual/es/language.operators.increment.php">Operadores de incremento/decremento</a></h4>
-
+<section id="operadores-de-incrementodecremento" class="title-slide slide level4" data-number="5.3.3.2">
+<h4 data-number="5.3.3.2"><span class="header-section-number">5.3.3.2</span> Operadores de incremento/decremento</h4>
+<p><a href="http://php.net/manual/es/language.operators.increment.php">http://php.net/manual/es/language.operators.increment.php</a></p>
 </section>
 
 
 
-<section id="cadenas-string" class="title-slide slide level2" data-number="5.3">
-<h2 data-number="5.3"><span class="header-section-number">5.3</span> <a href="http://php.net/manual/es/language.types.string.php">Cadenas (<code>string</code>)</a></h2>
+<section id="cadenas-string" class="title-slide slide level2" data-number="5.4">
+<h2 data-number="5.4"><span class="header-section-number">5.4</span> Cadenas (<code>string</code>)</h2>
+<p><a href="http://php.net/manual/es/language.types.string.php">http://php.net/manual/es/language.types.string.php</a></p>
 <p>ricpelo’s note: <a href="https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#variable-substitution">Se usa <code>{$var}</code> y no <code>${var}</code></a></p>
 </section>
-<section id="operadores-de-cadenas" class="title-slide slide level3" data-number="5.3.1">
-<h3 data-number="5.3.1"><span class="header-section-number">5.3.1</span> <a href="http://php.net/manual/es/language.operators.string.php">Operadores de cadenas</a></h3>
+<section id="operadores-de-cadenas" class="title-slide slide level3" data-number="5.4.1">
+<h3 data-number="5.4.1"><span class="header-section-number">5.4.1</span> Operadores de cadenas</h3>
+<p><a href="http://php.net/manual/es/language.operators.string.php">http://php.net/manual/es/language.operators.string.php</a></p>
+</section>
+<section id="concatenación" class="title-slide slide level4" data-number="5.4.1.1">
+<h4 data-number="5.4.1.1"><span class="header-section-number">5.4.1.1</span> Concatenación</h4>
 
 </section>
-<section id="concatenación" class="title-slide slide level4" data-number="5.3.1.1">
-<h4 data-number="5.3.1.1"><span class="header-section-number">5.3.1.1</span> Concatenación</h4>
 
-</section>
-
-<section id="acceso-y-modificación-por-caracteres" class="title-slide slide level4" data-number="5.3.1.2">
-<h4 data-number="5.3.1.2"><span class="header-section-number">5.3.1.2</span> <a href="http://php.net/manual/es/language.types.string.php#language.types.string.substr">Acceso y modificación por caracteres</a></h4>
+<section id="acceso-y-modificación-por-caracteres" class="title-slide slide level4" data-number="5.4.1.2">
+<h4 data-number="5.4.1.2"><span class="header-section-number">5.4.1.2</span> Acceso y modificación por caracteres</h4>
+<p><a href="http://php.net/manual/es/language.types.string.php#language.types.string.substr">http://php.net/manual/es/language.types.string.php#language.types.string.substr</a></p>
 <p>ricpelo’s note: - <code>echo $a[3]</code><br />
 - <code>$a[3] = 'x';</code></p>
 </section>
 
-<section id="operador-de-incremento-opcional" class="title-slide slide level4" data-number="5.3.1.3">
-<h4 data-number="5.3.1.3"><span class="header-section-number">5.3.1.3</span> <a href="http://php.net/manual/es/language.operators.increment.php">Operador de incremento</a> #opcional</h4>
-
+<section id="operador-de-incremento" class="title-slide slide level4" data-number="5.4.1.3">
+<h4 data-number="5.4.1.3"><span class="header-section-number">5.4.1.3</span> Operador de incremento</h4>
+<p><a href="http://php.net/manual/es/language.operators.increment.php">http://php.net/manual/es/language.operators.increment.php</a></p>
 </section>
 
 
-<section id="funciones-de-manejo-de-cadenas" class="title-slide slide level3" data-number="5.3.2">
-<h3 data-number="5.3.2"><span class="header-section-number">5.3.2</span> <a href="http://php.net/ref.strings">Funciones de manejo de cadenas</a></h3>
-
+<section id="funciones-de-manejo-de-cadenas" class="title-slide slide level3" data-number="5.4.2">
+<h3 data-number="5.4.2"><span class="header-section-number">5.4.2</span> Funciones de manejo de cadenas</h3>
+<p><a href="http://php.net/ref.strings">http://php.net/ref.strings</a></p>
 </section>
 
-<section id="extensión-mbstring" class="title-slide slide level3" data-number="5.3.3">
-<h3 data-number="5.3.3"><span class="header-section-number">5.3.3</span> <a href="http://php.net/manual/en/book.mbstring.php">Extensión <em>mbstring</em></a></h3>
-<p>ricpelo’s note: - <code>$a[3]</code> equivale a <code>mb_substr($a, 3, 1)</code><br />
-- <code>$a[3] = 'x';</code> no tiene equivalencia directa. Se podría hacer:<br />
-<code>$a = mb_substr($a, 2, 1) . 'x' . mb_substr($a, 4);</code></p>
+<section id="extensión-mbstring" class="title-slide slide level3" data-number="5.4.3">
+<h3 data-number="5.4.3"><span class="header-section-number">5.4.3</span> Extensión <em>mbstring</em></h3>
+<p><a href="http://php.net/manual/en/book.mbstring.php">http://php.net/manual/en/book.mbstring.php</a></p>
+<p>ricpelo’s note: - <code>$a[3]</code> equivale a <code>mb_substr($a, 3, 1)</code></p>
+<ul>
+<li><code>$a[3] = 'x';</code> no tiene equivalencia directa. Se podría hacer:<br />
+<code>$a = mb_substr($a, 2, 1) . 'x' . mb_substr($a, 4);</code></li>
+</ul>
 </section>
 
 
-<section id="nulo-null" class="title-slide slide level2" data-number="5.4">
-<h2 data-number="5.4"><span class="header-section-number">5.4</span> <a href="http://php.net/manual/es/language.types.null.php">Nulo (<code>null</code>)</a></h2>
-<p>ricpelo’s note: <a href="https://phpbestpractices.org/#checking-for-null"><code>is_null()</code> vs. <code>=== null</code></a><br />
-ricpelo’s note: <a href="https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#51-types">El tipo <code>null</code> y el valor <code>null</code> se escriben en minúscula.</a></p>
+<section id="nulo-null" class="title-slide slide level2" data-number="5.5">
+<h2 data-number="5.5"><span class="header-section-number">5.5</span> Nulo (<code>null</code>)</h2>
+<p><a href="http://php.net/manual/es/language.types.null.php">http://php.net/manual/es/language.types.null.php</a></p>
+<p>ricpelo’s note: <a href="https://phpbestpractices.org/#checking-for-null"><code>is_null()</code> vs. <code>=== null</code></a></p>
+<p>ricpelo’s note: <a href="https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#51-types">El tipo <code>null</code> y el valor <code>null</code> se escriben en minúscula.</a></p>
 </section>
 </section>
 <section>
@@ -516,8 +401,8 @@ ricpelo’s note: <a href="https://github.com/yiisoft/yii2/blob/master/docs/inte
 
 </section>
 <section id="precedencia-de-operadores" class="title-slide slide level2" data-number="6.1">
-<h2 data-number="6.1"><span class="header-section-number">6.1</span> <a href="http://php.net/manual/es/language.operators.precedence.php">Precedencia de operadores</a></h2>
-
+<h2 data-number="6.1"><span class="header-section-number">6.1</span> Precedencia de operadores</h2>
+<p><a href="http://php.net/manual/es/language.operators.precedence.php">http://php.net/manual/es/language.operators.precedence.php</a></p>
 </section>
 
 <section id="operadores-de-asignación-compuesta" class="title-slide slide level2" data-number="6.2">
@@ -534,12 +419,13 @@ ricpelo’s note: <a href="https://github.com/yiisoft/yii2/blob/master/docs/inte
 
 </section>
 <section id="gettype" class="title-slide slide level4" data-number="6.3.1.1">
-<h4 data-number="6.3.1.1"><span class="header-section-number">6.3.1.1</span> <a href="http://php.net/manual/en/function.gettype.php"><code>gettype()</code></a></h4>
-
+<h4 data-number="6.3.1.1"><span class="header-section-number">6.3.1.1</span> <code>gettype()</code></h4>
+<p><a href="http://php.net/manual/en/function.gettype.php">http://php.net/manual/en/function.gettype.php</a></p>
 </section>
 
 <section id="is_" class="title-slide slide level4" data-number="6.3.1.2">
-<h4 data-number="6.3.1.2"><span class="header-section-number">6.3.1.2</span> <a href="http://php.net/manual/es/ref.var.php"><code>is_*()</code></a></h4>
+<h4 data-number="6.3.1.2"><span class="header-section-number">6.3.1.2</span> <code>is_*()</code></h4>
+<p><a href="http://php.net/manual/es/ref.var.php">http://php.net/manual/es/ref.var.php</a></p>
 <p>ricpelo’s note: Poco útiles en formularios, ya que sólo se reciben <code>string</code>s.</p>
 </section>
 
@@ -549,54 +435,58 @@ ricpelo’s note: <a href="https://github.com/yiisoft/yii2/blob/master/docs/inte
 
 </section>
 <section id="is_numeric" class="title-slide slide level4" data-number="6.3.2.1">
-<h4 data-number="6.3.2.1"><span class="header-section-number">6.3.2.1</span> <a href="http://php.net/manual/es/function.is-numeric.php"><code>is_numeric()</code></a></h4>
-
+<h4 data-number="6.3.2.1"><span class="header-section-number">6.3.2.1</span> <code>is_numeric()</code></h4>
+<p><a href="http://php.net/manual/es/function.is-numeric.php">http://php.net/manual/es/function.is-numeric.php</a></p>
 </section>
 
 <section id="ctype_" class="title-slide slide level4" data-number="6.3.2.2">
-<h4 data-number="6.3.2.2"><span class="header-section-number">6.3.2.2</span> <a href="http://php.net/manual/es/book.ctype.php"><code>ctype_*()</code></a></h4>
-
+<h4 data-number="6.3.2.2"><span class="header-section-number">6.3.2.2</span> <code>ctype_*()</code></h4>
+<p><a href="http://php.net/manual/es/book.ctype.php">http://php.net/manual/es/book.ctype.php</a></p>
 </section>
 
 
 
 <section id="conversiones-de-tipos" class="title-slide slide level2" data-number="6.4">
-<h2 data-number="6.4"><span class="header-section-number">6.4</span> <a href="http://php.net/manual/es/language.types.type-juggling.php">Conversiones de tipos</a></h2>
-
+<h2 data-number="6.4"><span class="header-section-number">6.4</span> Conversiones de tipos</h2>
+<p><a href="http://php.net/manual/es/language.types.type-juggling.php">http://php.net/manual/es/language.types.type-juggling.php</a></p>
 </section>
-<section id="conversión-explícita-forzado-o-casting-vs.-automática" class="title-slide slide level3" data-number="6.4.1">
-<h3 data-number="6.4.1"><span class="header-section-number">6.4.1</span> <a href="http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting">Conversión explícita (forzado o <em>casting</em>) vs. automática</a></h3>
+<section id="conversión-explícita-casting-vs.-implícita-automática" class="title-slide slide level3" data-number="6.4.1">
+<h3 data-number="6.4.1"><span class="header-section-number">6.4.1</span> Conversión explícita (<em>casting</em>) vs. implícita (automática)</h3>
+<p><a href="http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting">http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting</a></p>
 <p>ricpelo’s note: Conversión de cadena a número</p>
 </section>
 
 <section id="conversión-a-bool" class="title-slide slide level3" data-number="6.4.2">
-<h3 data-number="6.4.2"><span class="header-section-number">6.4.2</span> <a href="http://php.net/manual/es/language.types.boolean.php#language.types.boolean.casting">Conversión a <code>bool</code></a></h3>
-
+<h3 data-number="6.4.2"><span class="header-section-number">6.4.2</span> Conversión a <code>bool</code></h3>
+<p><a href="http://php.net/manual/es/language.types.boolean.php#language.types.boolean.casting">http://php.net/manual/es/language.types.boolean.php#language.types.boolean.casting</a></p>
 </section>
 
 <section id="conversión-a-int" class="title-slide slide level3" data-number="6.4.3">
-<h3 data-number="6.4.3"><span class="header-section-number">6.4.3</span> <a href="http://php.net/manual/es/language.types.integer.php#language.types.integer.casting">Conversión a <code>int</code></a></h3>
-
+<h3 data-number="6.4.3"><span class="header-section-number">6.4.3</span> Conversión a <code>int</code></h3>
+<p><a href="http://php.net/manual/es/language.types.integer.php#language.types.integer.casting">http://php.net/manual/es/language.types.integer.php#language.types.integer.casting</a></p>
 </section>
 
 <section id="conversión-a-float" class="title-slide slide level3" data-number="6.4.4">
-<h3 data-number="6.4.4"><span class="header-section-number">6.4.4</span> <a href="http://php.net/manual/es/language.types.float.php#language.types.float.casting">Conversión a <code>float</code></a></h3>
-
+<h3 data-number="6.4.4"><span class="header-section-number">6.4.4</span> Conversión a <code>float</code></h3>
+<p><a href="http://php.net/manual/es/language.types.float.php#language.types.float.casting">http://php.net/manual/es/language.types.float.php#language.types.float.casting</a></p>
 </section>
 
 <section id="conversión-de-string-a-número" class="title-slide slide level3" data-number="6.4.5">
-<h3 data-number="6.4.5"><span class="header-section-number">6.4.5</span> <a href="http://php.net/manual/es/language.types.string.php#language.types.string.conversion">Conversión de <code>string</code> a número</a></h3>
+<h3 data-number="6.4.5"><span class="header-section-number">6.4.5</span> Conversión de <code>string</code> a número</h3>
+<p><a href="http://php.net/manual/es/language.types.string.php#language.types.string.conversion">http://php.net/manual/es/language.types.string.php#language.types.string.conversion</a></p>
 <p>ricpelo’s note: <strong>¡Cuidado!</strong>:</p>
-<p>La documentación dice que <code>$x = 1 + "pepe"</code> o <code>$x = 1 + "10 pepe"</code> funciona, pero dependiendo del valor de <code>error_reporting</code> en <code>php.ini</code>, puede dar un <strong>PHP Warning: A non-numeric value encountered</strong> o un <strong>PHP Warning: A non well formed numeric value encountered</strong>, respectivamente.<br />
-- Si <code>error_reporting = E_ALL</code>, dará el mensaje de advertencia.<br />
-Además, en PsySH no funcionará, es decir, que <code>$x</code> no se asignará al valor. En <code>php -a</code> sí funcionará (aunque da el mismo mensaje de advertencia).<br />
-- Si <code>error_reporting = E_ALL &amp; ~E_NOTICE</code>, no lo dará.<br />
-Además, funcionará tanto en PsySH como en <code>php -a</code>.</p>
+<p>La documentación dice que <code>$x = 1 + "pepe"</code> o <code>$x = 1 + "10 pepe"</code> funciona, pero dependiendo del valor de <code>error_reporting</code> en <code>php.ini</code>, puede dar un <strong>PHP Warning: A non-numeric value encountered</strong> o un <strong>PHP Warning: A non well formed numeric value encountered</strong>, respectivamente.</p>
+<ul>
+<li><p>Si <code>error_reporting = E_ALL</code>, dará el mensaje de advertencia.<br />
+Además, en PsySH no funcionará, es decir, que <code>$x</code> no se asignará al valor. En <code>php -a</code> sí funcionará (aunque da el mismo mensaje de advertencia).</p></li>
+<li><p>Si <code>error_reporting = E_ALL &amp; ~E_NOTICE</code>, no lo dará.<br />
+Además, funcionará tanto en PsySH como en <code>php -a</code>.</p></li>
+</ul>
 </section>
 
 <section id="conversión-a-string" class="title-slide slide level3" data-number="6.4.6">
-<h3 data-number="6.4.6"><span class="header-section-number">6.4.6</span> <a href="http://php.net/manual/es/language.types.string.php#language.types.string.casting">Conversión a <code>string</code></a></h3>
-
+<h3 data-number="6.4.6"><span class="header-section-number">6.4.6</span> Conversión a <code>string</code></h3>
+<p><a href="http://php.net/manual/es/language.types.string.php#language.types.string.casting">http://php.net/manual/es/language.types.string.php#language.types.string.casting</a></p>
 </section>
 
 <section id="funciones-de-obtención-de-valores" class="title-slide slide level3" data-number="6.4.7">
@@ -604,23 +494,23 @@ Además, funcionará tanto en PsySH como en <code>php -a</code>.</p>
 <p>ricpelo’s note: Hacen más o menos lo mismo que los <em>casting</em> pero con funciones en lugar de con operadores. Puede ser interesante porque las funciones se pueden guardar, usar con <em>map</em>, <em>reduce</em>, etc.</p>
 </section>
 <section id="intval" class="title-slide slide level4" data-number="6.4.7.1">
-<h4 data-number="6.4.7.1"><span class="header-section-number">6.4.7.1</span> <a href="http://php.net/manual/es/function.intval.php"><code>intval()</code></a></h4>
-
+<h4 data-number="6.4.7.1"><span class="header-section-number">6.4.7.1</span> <code>intval()</code></h4>
+<p><a href="http://php.net/manual/es/function.intval.php">http://php.net/manual/es/function.intval.php</a></p>
 </section>
 
 <section id="floatval" class="title-slide slide level4" data-number="6.4.7.2">
-<h4 data-number="6.4.7.2"><span class="header-section-number">6.4.7.2</span> <a href="http://php.net/manual/es/function.floatval.php"><code>floatval()</code></a></h4>
-
+<h4 data-number="6.4.7.2"><span class="header-section-number">6.4.7.2</span> <code>floatval()</code></h4>
+<p><a href="http://php.net/manual/es/function.floatval.php">http://php.net/manual/es/function.floatval.php</a></p>
 </section>
 
 <section id="strval" class="title-slide slide level4" data-number="6.4.7.3">
-<h4 data-number="6.4.7.3"><span class="header-section-number">6.4.7.3</span> <a href="http://php.net/manual/es/function.strval.php"><code>strval()</code></a></h4>
-
+<h4 data-number="6.4.7.3"><span class="header-section-number">6.4.7.3</span> <code>strval()</code></h4>
+<p><a href="http://php.net/manual/es/function.strval.php">http://php.net/manual/es/function.strval.php</a></p>
 </section>
 
 <section id="boolval" class="title-slide slide level4" data-number="6.4.7.4">
-<h4 data-number="6.4.7.4"><span class="header-section-number">6.4.7.4</span> <a href="http://php.net/manual/es/function.boolval.php"><code>boolval()</code></a></h4>
-
+<h4 data-number="6.4.7.4"><span class="header-section-number">6.4.7.4</span> <code>boolval()</code></h4>
+<p><a href="http://php.net/manual/es/function.boolval.php">http://php.net/manual/es/function.boolval.php</a></p>
 </section>
 
 
@@ -629,12 +519,13 @@ Además, funcionará tanto en PsySH como en <code>php -a</code>.</p>
 
 </section>
 <section id="number_format" class="title-slide slide level4" data-number="6.4.8.1">
-<h4 data-number="6.4.8.1"><span class="header-section-number">6.4.8.1</span> <a href="http://php.net/manual/es/function.number-format.php"><code>number_format()</code></a></h4>
-
+<h4 data-number="6.4.8.1"><span class="header-section-number">6.4.8.1</span> <code>number_format()</code></h4>
+<p><a href="http://php.net/manual/es/function.number-format.php">http://php.net/manual/es/function.number-format.php</a></p>
 </section>
 
 <section id="money_format" class="title-slide slide level4" data-number="6.4.8.2">
-<h4 data-number="6.4.8.2"><span class="header-section-number">6.4.8.2</span> <a href="http://php.net/manual/es/function.money-format.php"><code>money_format()</code></a></h4>
+<h4 data-number="6.4.8.2"><span class="header-section-number">6.4.8.2</span> <code>money_format()</code></h4>
+<p><a href="http://php.net/manual/es/function.money-format.php">http://php.net/manual/es/function.money-format.php</a></p>
 <p><a href="http://php.net/manual/es/function.setlocale.php"><code>setlocale()</code></a></p>
 <p>ricpelo’s note: <code>setlocale(LC_ALL, 'es_ES.UTF-8'); // Hay que poner el *locale* completo, con la codificación y todo (.UTF-8)</code></p>
 </section>
@@ -646,9 +537,10 @@ Además, funcionará tanto en PsySH como en <code>php -a</code>.</p>
 
 </section>
 <section id="operadores-de-comparación" class="title-slide slide level3" data-number="6.5.1">
-<h3 data-number="6.5.1"><span class="header-section-number">6.5.1</span> <a href="http://php.net/manual/es/language.operators.comparison.php">Operadores de comparación</a></h3>
-<p>ricpelo’s note: <code>"250" &lt; "27"</code> devuelve <code>false</code><br />
-ricpelo’s note: Si se compara un número con un string o la comparación implica strings numéricos, entonces cada string es convertido en un número y la comparación realizada numéricamente.</p>
+<h3 data-number="6.5.1"><span class="header-section-number">6.5.1</span> Operadores de comparación</h3>
+<p><a href="http://php.net/manual/es/language.operators.comparison.php">http://php.net/manual/es/language.operators.comparison.php</a></p>
+<p>ricpelo’s note: <code>"250" &lt; "27"</code> devuelve <code>false</code></p>
+<p>ricpelo’s note: Si se compara un número con un string o la comparación implica strings numéricos, entonces cada string es convertido en un número y la comparación realizada numéricamente.</p>
 </section>
 
 <section id="vs." class="title-slide slide level3" data-number="6.5.2">
@@ -657,44 +549,53 @@ ricpelo’s note: Si se compara un número con un string o la comparación impli
 </section>
 
 <section id="ternario" class="title-slide slide level3" data-number="6.5.3">
-<h3 data-number="6.5.3"><span class="header-section-number">6.5.3</span> <a href="http://php.net/manual/es/language.operators.comparison.php#language.operators.comparison.ternary">Ternario (<code>?:</code>)</a></h3>
-
+<h3 data-number="6.5.3"><span class="header-section-number">6.5.3</span> Ternario (<code>?:</code>)</h3>
+<p><a href="http://php.net/manual/es/language.operators.comparison.php#language.operators.comparison.ternary">http://php.net/manual/es/language.operators.comparison.php#language.operators.comparison.ternary</a></p>
 </section>
 
 <section id="fusión-de-null" class="title-slide slide level3" data-number="6.5.4">
-<h3 data-number="6.5.4"><span class="header-section-number">6.5.4</span> <a href="https://wiki.php.net/rfc/isset_ternary">Fusión de <code>null</code> (<code>??</code>)</a></h3>
+<h3 data-number="6.5.4"><span class="header-section-number">6.5.4</span> Fusión de <code>null</code> (<code>??</code>)</h3>
+<p><a href="https://wiki.php.net/rfc/isset_ternary">https://wiki.php.net/rfc/isset_ternary</a></p>
 <p>ricpelo’s note: Equivalente al <code>COALESCE()</code> de SQL.</p>
 </section>
 
 <section id="reglas-de-comparación-de-tipos" class="title-slide slide level3" data-number="6.5.5">
-<h3 data-number="6.5.5"><span class="header-section-number">6.5.5</span> <a href="http://php.net/manual/es/types.comparisons.php">Reglas de comparación de tipos</a></h3>
-
+<h3 data-number="6.5.5"><span class="header-section-number">6.5.5</span> Reglas de comparación de tipos</h3>
+<p><a href="http://php.net/manual/es/types.comparisons.php">http://php.net/manual/es/types.comparisons.php</a></p>
 </section>
 
 </section>
 <section>
 <section id="constantes" class="title-slide slide level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> <a href="http://php.net/manual/es/language.constants.syntax.php">Constantes</a></h1>
-<p>ricpelo’s note: Diferencias entre constantes y variables:<br />
-- Las constantes no llevan el signo dólar (<code>$</code>) como prefijo.<br />
-- Antes de PHP 5.3, las constantes solo podían ser definidas usando la función <code>define()</code> y no por simple asignación.<br />
-- Las constantes pueden ser definidas y accedidas desde cualquier sitio sin importar las reglas de acceso de variables.<br />
-- Las constantes no pueden ser redefinidas o eliminadas una vez se han definido.<br />
-- Las constantes podrían evaluarse como valores escalares. A partir de PHP 5.6 es posible definir una constante de array con la palabra reservada <code>const</code>, y, a partir de PHP 7, las constantes de array también se pueden definir con <code>define()</code>. Se pueden utilizar arrays en expresiones escalares constantes (por ejemplo, <code>const FOO = array(1,2,3)[0];</code>), aunque el resultado final debe ser un valor de un tipo permitido.</p>
-</section>
-<section id="define-y-const" class="title-slide slide level2" data-number="7.1">
-<h2 data-number="7.1"><span class="header-section-number">7.1</span> <code>define()</code> y <code>const</code></h2>
+<h1 data-number="7"><span class="header-section-number">7</span> Constantes</h1>
 
 </section>
+<section id="introducción-1" class="title-slide slide level2" data-number="7.1">
+<h2 data-number="7.1"><span class="header-section-number">7.1</span> Introducción</h2>
+<p><a href="http://php.net/manual/es/language.constants.syntax.php">http://php.net/manual/es/language.constants.syntax.php</a></p>
+<p>ricpelo’s note: Diferencias entre constantes y variables:</p>
+<ul>
+<li><p>Las constantes no llevan el signo dólar (<code>$</code>) como prefijo.</p></li>
+<li><p>Antes de PHP 5.3, las constantes solo podían ser definidas usando la función <code>define()</code> y no por simple asignación.</p></li>
+<li><p>Las constantes pueden ser definidas y accedidas desde cualquier sitio sin importar las reglas de acceso de variables.</p></li>
+<li><p>Las constantes no pueden ser redefinidas o eliminadas una vez se han definido.</p></li>
+<li><p>Las constantes podrían evaluarse como valores escalares. A partir de PHP 5.6 es posible definir una constante de array con la palabra reservada <code>const</code>, y, a partir de PHP 7, las constantes de array también se pueden definir con <code>define()</code>. Se pueden utilizar arrays en expresiones escalares constantes (por ejemplo, <code>const FOO = array(1,2,3)[0];</code>), aunque el resultado final debe ser un valor de un tipo permitido.</p></li>
+</ul>
+</section>
 
-<section id="constantes-predefinidas" class="title-slide slide level2" data-number="7.2">
-<h2 data-number="7.2"><span class="header-section-number">7.2</span> <a href="http://php.net/manual/es/language.constants.predefined.php">Constantes predefinidas</a></h2>
+<section id="define-y-const" class="title-slide slide level2" data-number="7.2">
+<h2 data-number="7.2"><span class="header-section-number">7.2</span> <code>define()</code> y <code>const</code></h2>
 
 </section>
 
-<section id="defined" class="title-slide slide level2" data-number="7.3">
-<h2 data-number="7.3"><span class="header-section-number">7.3</span> <a href="http://php.net/manual/es/function.defined.php"><code>defined()</code></a></h2>
+<section id="constantes-predefinidas" class="title-slide slide level2" data-number="7.3">
+<h2 data-number="7.3"><span class="header-section-number">7.3</span> Constantes predefinidas</h2>
+<p><a href="http://php.net/manual/es/language.constants.predefined.php">http://php.net/manual/es/language.constants.predefined.php</a></p>
+</section>
 
+<section id="defined" class="title-slide slide level2" data-number="7.4">
+<h2 data-number="7.4"><span class="header-section-number">7.4</span> <code>defined()</code></h2>
+<p><a href="http://php.net/manual/es/function.defined.php">http://php.net/manual/es/function.defined.php</a></p>
 </section>
 </section>
 <section>
@@ -736,13 +637,10 @@ ricpelo’s note: Si se compara un número con un string o la comparación impli
 <li><p>Define con tus propias palabras el significado de <em>asociatividad</em> y de <em>prioridad</em>. ¿Por qué la expresión <code>1 == 1 == 1</code> es incorrecta pero <code>1 &lt;= 1 == 1</code> es correcta (y cuál es su valor, por cierto)?</p></li>
 </ol>
 </section>
-
-<section id="problemas" class="title-slide slide level2" data-number="8.2">
-<h2 data-number="8.2"><span class="header-section-number">8.2</span> Problemas</h2>
-<ol>
-<li>Escribir un programa en PHP que…</li>
-</ol>
 </section>
+<section id="bibliografía" class="title-slide slide level1 unnumbered unlisted">
+<h1 class="unnumbered unlisted">Bibliografía</h1>
+
 </section>
     </div>
   </div>
