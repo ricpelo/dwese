@@ -223,8 +223,8 @@
 <ul>
 <li><a href="#/flujo-de-control"><span class="toc-section-number">1</span> Flujo de control</a></li>
 <li><a href="#/funciones-predefinidas-destacadas"><span class="toc-section-number">2</span> Funciones predefinidas destacadas</a></li>
-<li><a href="#/arrays"><span class="toc-section-number">3</span> <span>Arrays</span></a></li>
-<li><a href="#/funciones-definidas-por-el-usuario"><span class="toc-section-number">4</span> <span>Funciones definidas por el usuario</span></a></li>
+<li><a href="#/arrays"><span class="toc-section-number">3</span> Arrays</a></li>
+<li><a href="#/funciones-definidas-por-el-usuario"><span class="toc-section-number">4</span> Funciones definidas por el usuario</a></li>
 <li><a href="#/comentarios-y-documentación-del-código"><span class="toc-section-number">5</span> Comentarios y documentación del código</a></li>
 <li><a href="#/ejercicios"><span class="toc-section-number">6</span> Ejercicios</a></li>
 </ul>
@@ -236,11 +236,12 @@
 
 </section>
 <section id="estructuras-de-control" class="title-slide slide level2" data-number="1.1">
-<h2 data-number="1.1"><span class="header-section-number">1.1</span> <a href="http://php.net/manual/es/language.control-structures.php">Estructuras de control</a></h2>
-
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Estructuras de control</h2>
+<p><a href="http://php.net/manual/es/language.control-structures.php">http://php.net/manual/es/language.control-structures.php</a></p>
 </section>
 <section id="sintaxis-alternativa" class="title-slide slide level3" data-number="1.1.1">
-<h3 data-number="1.1.1"><span class="header-section-number">1.1.1</span> <a href="http://php.net/manual/es/control-structures.alternative-syntax.php">Sintaxis alternativa</a></h3>
+<h3 data-number="1.1.1"><span class="header-section-number">1.1.1</span> Sintaxis alternativa</h3>
+<p><a href="http://php.net/manual/es/control-structures.alternative-syntax.php">http://php.net/manual/es/control-structures.alternative-syntax.php</a></p>
 <p>ricpelo’s note: El <code>do { ... } while (...);</code> <strong>no</strong> tiene sintaxis alternativa.</p>
 </section>
 
@@ -250,7 +251,8 @@
 
 </section>
 <section id="include-require" class="title-slide slide level3" data-number="1.2.1">
-<h3 data-number="1.2.1"><span class="header-section-number">1.2.1</span> <a href="http://php.net/manual/es/function.include.php"><code>include</code></a>, <code>require</code></h3>
+<h3 data-number="1.2.1"><span class="header-section-number">1.2.1</span> <code>include</code>, <code>require</code></h3>
+<p><a href="http://php.net/manual/es/function.include.php">http://php.net/manual/es/function.include.php</a></p>
 <p>ricpelo’s note: - El nombre del archivo debe aparecer con su extensión. No vale hacer <code>require 'pepe';</code>.<br />
 - Cuando un archivo es incluido, el intérprete abandona el modo PHP e ingresa al modo HTML al comienzo del archivo objetivo y se reanuda de nuevo al final.<br />
 - Si el archivo incluido tiene un <code>return ...;</code>, el <code>include</code> o el <code>require</code> que lo incluya devolverá el valor devuelto por el <code>return</code>.<br />
@@ -259,8 +261,8 @@
 </section>
 
 <section id="include_once-require_once" class="title-slide slide level3" data-number="1.2.2">
-<h3 data-number="1.2.2"><span class="header-section-number">1.2.2</span> <a href="http://php.net/manual/es/function.include-once.php"><code>include_once</code></a>, <code>require_once</code></h3>
-
+<h3 data-number="1.2.2"><span class="header-section-number">1.2.2</span> <code>include_once</code>, <code>require_once</code></h3>
+<p><a href="http://php.net/manual/es/function.include-once.php">http://php.net/manual/es/function.include-once.php</a></p>
 </section>
 
 </section>
@@ -270,13 +272,15 @@
 
 </section>
 <section id="isset" class="title-slide slide level2" data-number="2.1">
-<h2 data-number="2.1"><span class="header-section-number">2.1</span> <a href="http://php.net/manual/es/function.isset.php"><code>isset()</code></a></h2>
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> <code>isset()</code></h2>
+<p><a href="http://php.net/manual/es/function.isset.php">http://php.net/manual/es/function.isset.php</a></p>
 <p>ricpelo’s note: Cuidado si la variable contiene <code>null</code>.<br />
 ricpelo’s note: No da error ni advertencia si la variable no existe.</p>
 </section>
 
 <section id="empty" class="title-slide slide level2" data-number="2.2">
-<h2 data-number="2.2"><span class="header-section-number">2.2</span> <a href="http://php.net/manual/es/function.empty.php"><code>empty()</code></a></h2>
+<h2 data-number="2.2"><span class="header-section-number">2.2</span> <code>empty()</code></h2>
+<p><a href="http://php.net/manual/es/function.empty.php">http://php.net/manual/es/function.empty.php</a></p>
 <p>ricpelo’s note: Para evitar el problema de <code>empty("0") === true</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">function</span> is_blank<span class="ot">(</span><span class="va">$value</span><span class="ot">)</span> {  </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="kw">return</span> <span class="kw">empty</span><span class="ot">(</span><span class="va">$value</span><span class="ot">)</span> &amp;&amp; !<span class="fu">is_numeric</span><span class="ot">(</span><span class="va">$value</span><span class="ot">);</span>  </span>
@@ -285,32 +289,34 @@ ricpelo’s note: No da error ni advertencia si la variable no existe.</p>
 </section>
 
 <section id="var_dump" class="title-slide slide level2" data-number="2.3">
-<h2 data-number="2.3"><span class="header-section-number">2.3</span> <a href="http://php.net/manual/es/function.var-dump.php"><code>var_dump()</code></a></h2>
-
+<h2 data-number="2.3"><span class="header-section-number">2.3</span> <code>var_dump()</code></h2>
+<p><a href="http://php.net/manual/es/function.var-dump.php">http://php.net/manual/es/function.var-dump.php</a></p>
 </section>
 </section>
 <section>
 <section id="arrays" class="title-slide slide level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> <a href="http://php.net/manual/es/language.types.array.php">Arrays</a></h1>
+<h1 data-number="3"><span class="header-section-number">3</span> Arrays</h1>
+<p><a href="http://php.net/manual/es/language.types.array.php">http://php.net/manual/es/language.types.array.php</a></p>
 <p>ricpelo’s note: Las claves pueden ser enteros o cadenas.</p>
 </section>
 <section id="operadores-para-arrays" class="title-slide slide level2" data-number="3.1">
-<h2 data-number="3.1"><span class="header-section-number">3.1</span> <a href="http://php.net/manual/es/language.operators.array.php">Operadores para arrays</a></h2>
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> Operadores para arrays</h2>
+<p><a href="http://php.net/manual/es/language.operators.array.php">http://php.net/manual/es/language.operators.array.php</a></p>
 <p>ricpelo’s note: <strong>Comparaciones</strong>: Un <code>array</code> con menos elementos es menor. De otra forma, compara valor por valor.</p>
 </section>
 <section id="acceso-modificación-y-agregación" class="title-slide slide level3" data-number="3.1.1">
-<h3 data-number="3.1.1"><span class="header-section-number">3.1.1</span> <a href="http://php.net/manual/es/language.types.array.php#language.types.array.syntax.modifying">Acceso, modificación y agregación</a></h3>
-
+<h3 data-number="3.1.1"><span class="header-section-number">3.1.1</span> Acceso, modificación y agregación</h3>
+<p><a href="http://php.net/manual/es/language.types.array.php#language.types.array.syntax.modifying">http://php.net/manual/es/language.types.array.php#language.types.array.syntax.modifying</a></p>
 </section>
 
 
-<section id="funciones-de-manejo-de-arrayshttpphp.netmanualesbook.array.php" class="title-slide slide level2" data-number="3.2">
-<h2 data-number="3.2"><span class="header-section-number">3.2</span> <a href="http://php.net/manual/es/ref.array.php">[Funciones de manejo de arrays](http://php.net/manual/es/book.array.php)</a></h2>
-
+<section id="funciones-de-manejo-de-arrays" class="title-slide slide level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span> Funciones de manejo de arrays</h2>
+<p><a href="http://php.net/manual/es/book.array.php">http://php.net/manual/es/book.array.php</a></p>
 </section>
 <section id="ordenación-de-arrays" class="title-slide slide level3" data-number="3.2.1">
-<h3 data-number="3.2.1"><span class="header-section-number">3.2.1</span> <a href="http://php.net/manual/es/array.sorting.php">Ordenación de arrays</a></h3>
-
+<h3 data-number="3.2.1"><span class="header-section-number">3.2.1</span> Ordenación de arrays</h3>
+<p><a href="http://php.net/manual/es/array.sorting.php">http://php.net/manual/es/array.sorting.php</a></p>
 </section>
 
 <section id="print_r" class="title-slide slide level3" data-number="3.2.2">
@@ -324,49 +330,50 @@ ricpelo’s note: No da error ni advertencia si la variable no existe.</p>
 </section>
 
 <section id="isset-vs.-array_key_exists" class="title-slide slide level3" data-number="3.2.4">
-<h3 data-number="3.2.4"><span class="header-section-number">3.2.4</span> <a href="http://php.net/manual/es/function.array-key-exists.php#107786"><code>isset()</code> vs. <code>array_key_exists()</code></a></h3>
-
+<h3 data-number="3.2.4"><span class="header-section-number">3.2.4</span> <code>isset()</code> vs. <code>array_key_exists()</code></h3>
+<p><a href="http://php.net/manual/es/function.array-key-exists.php#107786">http://php.net/manual/es/function.array-key-exists.php#107786</a></p>
 </section>
 
 
 <section id="foreach" class="title-slide slide level2" data-number="3.3">
-<h2 data-number="3.3"><span class="header-section-number">3.3</span> <a href="http://php.net/manual/es/control-structures.foreach.php"><code>foreach</code></a></h2>
-
+<h2 data-number="3.3"><span class="header-section-number">3.3</span> <code>foreach</code></h2>
+<p><a href="http://php.net/manual/es/control-structures.foreach.php">http://php.net/manual/es/control-structures.foreach.php</a></p>
 </section>
 
 <section id="conversión-a-array" class="title-slide slide level2" data-number="3.4">
-<h2 data-number="3.4"><span class="header-section-number">3.4</span> <a href="http://php.net/manual/es/language.types.array.php#language.types.array.casting">Conversión a <code>array</code></a></h2>
-
+<h2 data-number="3.4"><span class="header-section-number">3.4</span> Conversión a <code>array</code></h2>
+<p><a href="http://php.net/manual/es/language.types.array.php#language.types.array.casting">http://php.net/manual/es/language.types.array.php#language.types.array.casting</a></p>
 </section>
 
 <section id="ejemplo-argv-en-cli" class="title-slide slide level2" data-number="3.5">
-<h2 data-number="3.5"><span class="header-section-number">3.5</span> <a href="http://php.net/manual/es/reserved.variables.argv.php"><em>Ejemplo</em>: <code>$argv</code> en CLI</a></h2>
-
+<h2 data-number="3.5"><span class="header-section-number">3.5</span> <em>Ejemplo</em>: <code>$argv</code> en CLI</h2>
+<p><a href="http://php.net/manual/es/reserved.variables.argv.php">http://php.net/manual/es/reserved.variables.argv.php</a></p>
 </section>
 </section>
 <section>
 <section id="funciones-definidas-por-el-usuario" class="title-slide slide level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> <a href="http://php.net/manual/es/language.functions.php">Funciones definidas por el usuario</a></h1>
-
+<h1 data-number="4"><span class="header-section-number">4</span> Funciones definidas por el usuario</h1>
+<p><a href="http://php.net/manual/es/language.functions.php">http://php.net/manual/es/language.functions.php</a></p>
 </section>
 <section id="argumentos" class="title-slide slide level2" data-number="4.1">
-<h2 data-number="4.1"><span class="header-section-number">4.1</span> <a href="http://php.net/manual/es/functions.arguments.php">Argumentos</a></h2>
-
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> Argumentos</h2>
+<p><a href="http://php.net/manual/es/functions.arguments.php">http://php.net/manual/es/functions.arguments.php</a></p>
 </section>
 <section id="paso-de-argumentos-por-valor-y-por-referencia" class="title-slide slide level3" data-number="4.1.1">
-<h3 data-number="4.1.1"><span class="header-section-number">4.1.1</span> <a href="http://php.net/manual/es/functions.arguments.php#functions.arguments.by-reference">Paso de argumentos por valor y por referencia</a></h3>
-
+<h3 data-number="4.1.1"><span class="header-section-number">4.1.1</span> Paso de argumentos por valor y por referencia</h3>
+<p><a href="http://php.net/manual/es/functions.arguments.php#functions.arguments.by-reference">http://php.net/manual/es/functions.arguments.php#functions.arguments.by-reference</a></p>
 </section>
 
 <section id="argumentos-por-defecto" class="title-slide slide level3" data-number="4.1.2">
-<h3 data-number="4.1.2"><span class="header-section-number">4.1.2</span> <a href="http://php.net/manual/es/functions.arguments.php#functions.arguments.default">Argumentos por defecto</a></h3>
+<h3 data-number="4.1.2"><span class="header-section-number">4.1.2</span> Argumentos por defecto</h3>
+<p><a href="http://php.net/manual/es/functions.arguments.php#functions.arguments.default">http://php.net/manual/es/functions.arguments.php#functions.arguments.default</a></p>
 <p>ricpelo’s note: <code>php   function prueba($opciones = []) {       extract($opciones);       // ...   }</code></p>
 </section>
 
 
 <section id="ámbito-de-variables" class="title-slide slide level2" data-number="4.2">
-<h2 data-number="4.2"><span class="header-section-number">4.2</span> <a href="http://php.net/language.variables.scope">Ámbito de variables</a></h2>
-
+<h2 data-number="4.2"><span class="header-section-number">4.2</span> Ámbito de variables</h2>
+<p><a href="http://php.net/language.variables.scope">http://php.net/language.variables.scope</a></p>
 </section>
 <section id="ámbito-simple-al-archivo" class="title-slide slide level3" data-number="4.2.1">
 <h3 data-number="4.2.1"><span class="header-section-number">4.2.1</span> Ámbito simple al archivo</h3>
@@ -384,8 +391,8 @@ ricpelo’s note: No da error ni advertencia si la variable no existe.</p>
 </section>
 
 <section id="variables-superglobales" class="title-slide slide level3" data-number="4.2.4">
-<h3 data-number="4.2.4"><span class="header-section-number">4.2.4</span> <a href="http://php.net/manual/es/language.variables.superglobals.php">Variables superglobales</a></h3>
-
+<h3 data-number="4.2.4"><span class="header-section-number">4.2.4</span> Variables superglobales</h3>
+<p><a href="http://php.net/manual/es/language.variables.superglobals.php">http://php.net/manual/es/language.variables.superglobals.php</a></p>
 </section>
 
 
@@ -394,41 +401,43 @@ ricpelo’s note: No da error ni advertencia si la variable no existe.</p>
 <p>ricpelo’s note: <strong>NO</strong> se hacen conversiones implícitas a <code>array</code>, ni en argumentos ni en devolución.</p>
 </section>
 <section id="declaraciones-de-tipo-de-argumento" class="title-slide slide level3" data-number="4.3.1">
-<h3 data-number="4.3.1"><span class="header-section-number">4.3.1</span> <a href="http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration">Declaraciones de tipo de argumento</a></h3>
-
+<h3 data-number="4.3.1"><span class="header-section-number">4.3.1</span> Declaraciones de tipo de argumento</h3>
+<p><a href="http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration">http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration</a></p>
 </section>
 
 <section id="declaraciones-de-tipo-de-devolución" class="title-slide slide level3" data-number="4.3.2">
-<h3 data-number="4.3.2"><span class="header-section-number">4.3.2</span> <a href="http://php.net/manual/es/functions.returning-values.php#functions.returning-values.type-declaration">Declaraciones de tipo de devolución</a></h3>
-
+<h3 data-number="4.3.2"><span class="header-section-number">4.3.2</span> Declaraciones de tipo de devolución</h3>
+<p><a href="http://php.net/manual/es/functions.returning-values.php#functions.returning-values.type-declaration">http://php.net/manual/es/functions.returning-values.php#functions.returning-values.type-declaration</a></p>
 </section>
 
 <section id="tipos-nullable-y-void" class="title-slide slide level3" data-number="4.3.3">
-<h3 data-number="4.3.3"><span class="header-section-number">4.3.3</span> <a href="http://php.net/manual/es/migration71.new-features.php">Tipos <em>nullable</em> (<code>?</code>) y <code>void</code></a></h3>
+<h3 data-number="4.3.3"><span class="header-section-number">4.3.3</span> Tipos <em>nullable</em> (<code>?</code>) y <code>void</code></h3>
+<p><a href="http://php.net/manual/es/migration71.new-features.php">http://php.net/manual/es/migration71.new-features.php</a></p>
 <p>ricpelo’s note: Una función de tipo <code>void</code> realmente devuelve <code>null</code>.</p>
 </section>
 
 <section id="tipificación-estricta" class="title-slide slide level3" data-number="4.3.4">
-<h3 data-number="4.3.4"><span class="header-section-number">4.3.4</span> <a href="http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration.strict">Tipificación estricta</a></h3>
+<h3 data-number="4.3.4"><span class="header-section-number">4.3.4</span> Tipificación estricta</h3>
+<p><a href="http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration.strict">http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration.strict</a></p>
 <p>ricpelo’s note: El <code>declare(strict_types=1);</code> se pone en el archivo que hace la llamada, no en el que define la función.</p>
 </section>
 
 </section>
 <section id="comentarios-y-documentación-del-código" class="title-slide slide level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Comentarios y documentación del código</h1>
-<p>ricpelo’s note: ```coffeescript<br />
-# ~/.atom/snippets.cson<br />
-‘.text.html.php’:<br />
-‘Comentario de archivo’:<br />
-‘prefix’: ‘com’<br />
-‘body’: """<br />
-/**<br />
-* <span class="citation" data-cites="author">(<span class="citeproc-not-found" data-reference-id="author"><strong>???</strong></span>)</span> Ricardo Pérez López<br />
-* <span class="citation" data-cites="copyright">(<span class="citeproc-not-found" data-reference-id="copyright"><strong>???</strong></span>)</span> Copyright (c) 2017 Ricardo Pérez López<br />
-* <span class="citation" data-cites="license">(<span class="citeproc-not-found" data-reference-id="license"><strong>???</strong></span>)</span> https://www.gnu.org/licenses/gpl.txt<br />
-*/</p>
-<pre><code>    &quot;&quot;&quot;  </code></pre>
-<p>```</p>
+<p>ricpelo’s note:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode coffeescript"><code class="sourceCode coffee"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co"># ~/.atom/snippets.cson  </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="st">&#39;.text.html.php&#39;</span><span class="kw">:</span>  </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>    <span class="st">&#39;Comentario de archivo&#39;</span><span class="kw">:</span>  </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>      <span class="st">&#39;prefix&#39;</span><span class="kw">:</span> <span class="st">&#39;com&#39;</span>  </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>      <span class="st">&#39;body&#39;</span><span class="kw">:</span> <span class="st">&quot;&quot;&quot;  </span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="st">        /**  </span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="st">         * @author Ricardo Pérez López  </span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="st">         * @copyright Copyright (c) 2017 Ricardo Pérez López  </span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a><span class="st">         * @license https://www.gnu.org/licenses/gpl.txt  </span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a><span class="st">         */  </span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a><span class="st">  </span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a><span class="st">        &quot;&quot;&quot;</span>  </span></code></pre></div>
 </section>
 
 <section>
@@ -437,19 +446,23 @@ ricpelo’s note: No da error ni advertencia si la variable no existe.</p>
 
 </section>
 <section id="hola-mundo" class="title-slide slide level2" data-number="6.1">
-<h2 data-number="6.1"><span class="header-section-number">6.1</span> <a href="https://github.com/iesdonana/hola-mundo">¡Hola, mundo!</a></h2>
-
+<h2 data-number="6.1"><span class="header-section-number">6.1</span> ¡Hola, mundo!</h2>
+<p><a href="https://github.com/iesdonana/hola-mundo">https://github.com/iesdonana/hola-mundo</a></p>
 </section>
 
 <section id="hamming" class="title-slide slide level2" data-number="6.2">
-<h2 data-number="6.2"><span class="header-section-number">6.2</span> <a href="https://github.com/iesdonana/hamming">Hamming</a></h2>
-
+<h2 data-number="6.2"><span class="header-section-number">6.2</span> Hamming</h2>
+<p><a href="https://github.com/iesdonana/hamming">https://github.com/iesdonana/hamming</a></p>
 </section>
 
 <section id="isograma" class="title-slide slide level2" data-number="6.3">
-<h2 data-number="6.3"><span class="header-section-number">6.3</span> <a href="https://github.com/iesdonana/isograma">Isograma</a></h2>
-
+<h2 data-number="6.3"><span class="header-section-number">6.3</span> Isograma</h2>
+<p><a href="https://github.com/iesdonana/isograma">https://github.com/iesdonana/isograma</a></p>
 </section>
+</section>
+<section id="bibliografía" class="title-slide slide level1 unnumbered unlisted">
+<h1 class="unnumbered unlisted">Bibliografía</h1>
+
 </section>
     </div>
   </div>
