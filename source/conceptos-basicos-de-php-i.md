@@ -58,7 +58,11 @@ ricpelo's note: [`print()` *no* es una función. Cuidado.](http://php.net/manual
 
 [http://php.net/manual/es/language.basic-syntax.phpmode.php](http://php.net/manual/es/language.basic-syntax.phpmode.php)
 
+::: notes
+
 ricpelo's note: Se llaman *modo HTML* y *modo PHP*.  
+
+:::
 
 # Variables
 
@@ -74,13 +78,21 @@ ricpelo's note: Se llaman *modo HTML* y *modo PHP*.
 
 [http://php.net/manual/es/language.operators.assignment.php](http://php.net/manual/es/language.operators.assignment.php)
 
+::: notes
+
 ricpelo's note: [En `$b =& $a;`, `$b` **NO** está apuntando a `$a` o viceversa. Ambos apuntan al mismo lugar.](http://php.net/manual/es/language.references.whatdo.php)  
+
+:::
 
 ## Variables predefinidas
 
 [http://php.net/manual/es/reserved.variables.php](http://php.net/manual/es/reserved.variables.php)
 
+::: notes
+
 ricpelo's note: `$_ENV` no funciona en la instalación actual (ver `variables_order` en `php.ini`. Habría que usar `get_env()`.  
+
+:::
 
 # Tipos básicos de datos
 
@@ -92,12 +104,18 @@ ricpelo's note: `$_ENV` no funciona en la instalación actual (ver `variables_or
 
 [http://php.net/manual/es/language.types.boolean.php](http://php.net/manual/es/language.types.boolean.php)
 
+::: notes
+
 ricpelo's note: [Se escriben en minúscula: `false` y `true`.](https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#51-types)  
 ricpelo's note: `boolean` es sinónimo de `bool`, pero debería usarse `bool`.  
+
+:::
 
 ### Operadores lógicos
 
 [http://php.net/manual/es/language.operators.logical.php](http://php.net/manual/es/language.operators.logical.php)
+
+::: notes
 
 ricpelo's note: *Cuidado*:  
 
@@ -109,19 +127,29 @@ ricpelo's note: *Cuidado*:
 
 - [Pregunta que hice al respecto en StackOverflow](https://stackoverflow.com/questions/46861563/false-and-true-printhi).  
 
+:::
+
 ## Numéricos
 
 ### Enteros (`int`)
 
 [http://php.net/manual/es/language.types.integer.php](http://php.net/manual/es/language.types.integer.php)
 
+::: notes
+
 ricpelo's note: `integer` es sinónimo de `int`, pero debería usarse `int`.  
+
+:::
 
 ### Números en coma flotante (`float`)
 
 [http://php.net/manual/es/language.types.float.php](http://php.net/manual/es/language.types.float.php)
 
+::: notes
+
 ricpelo's note: `double` es sinónimo de `float`, pero debería usarse `float`.  
+
+:::
 
 ### Operadores
 
@@ -137,7 +165,11 @@ ricpelo's note: `double` es sinónimo de `float`, pero debería usarse `float`.
 
 [http://php.net/manual/es/language.types.string.php](http://php.net/manual/es/language.types.string.php)
 
+::: notes
+
 ricpelo's note: [Se usa `{$var}` y no `${var}`](https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#variable-substitution)  
+
+:::
 
 ### Operadores de cadenas
 
@@ -149,8 +181,12 @@ ricpelo's note: [Se usa `{$var}` y no `${var}`](https://github.com/yiisoft/yii2/
 
 [http://php.net/manual/es/language.types.string.php#language.types.string.substr](http://php.net/manual/es/language.types.string.php#language.types.string.substr)
 
+::: notes
+
 ricpelo's note: - `echo $a[3]`  
 - `$a[3] = 'x';`  
+
+:::
 
 #### Operador de incremento
 
@@ -164,18 +200,26 @@ ricpelo's note: - `echo $a[3]`
 
 [http://php.net/manual/en/book.mbstring.php](http://php.net/manual/en/book.mbstring.php)
 
+::: notes
+
 ricpelo's note: - `$a[3]` equivale a `mb_substr($a, 3, 1)`  
 
 - `$a[3] = 'x';` no tiene equivalencia directa. Se podría hacer:  
     `$a = mb_substr($a, 2, 1) . 'x' . mb_substr($a, 4);`  
 
+:::
+
 ## Nulo (`null`)
 
 [http://php.net/manual/es/language.types.null.php](http://php.net/manual/es/language.types.null.php)
 
+::: notes
+
 ricpelo's note: [`is_null()` vs. `=== null`](https://phpbestpractices.org/#checking-for-null)  
 
 ricpelo's note: [El tipo `null` y el valor `null` se escriben en minúscula.](https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#51-types)  
+
+:::
 
 # Manipulación de datos
 
@@ -185,7 +229,11 @@ ricpelo's note: [El tipo `null` y el valor `null` se escriben en minúscula.](ht
 
 ## Operadores de asignación compuesta
 
+::: notes
+
 ricpelo's note: `$x `&nbsp;*\<op\>*`= $y`  
+
+:::
 
 ## Comprobaciones
 
@@ -199,7 +247,11 @@ ricpelo's note: `$x `&nbsp;*\<op\>*`= $y`
 
 [http://php.net/manual/es/ref.var.php](http://php.net/manual/es/ref.var.php)
 
+::: notes
+
 ricpelo's note: Poco útiles en formularios, ya que sólo se reciben `string`s.  
+
+:::
 
 ### De valores
 
@@ -219,7 +271,11 @@ ricpelo's note: Poco útiles en formularios, ya que sólo se reciben `string`s.
 
 [http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting](http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting)
 
+::: notes
+
 ricpelo's note: Conversión de cadena a número  
+
+:::
 
 ### Conversión a `bool`
 
@@ -237,6 +293,8 @@ ricpelo's note: Conversión de cadena a número
 
 [http://php.net/manual/es/language.types.string.php#language.types.string.conversion](http://php.net/manual/es/language.types.string.php#language.types.string.conversion)
 
+::: notes
+
 ricpelo's note: **¡Cuidado!**:  
   
 La documentación dice que `$x = 1 + "pepe"` o `$x = 1 + "10 pepe"` funciona, pero dependiendo del valor de `error_reporting` en `php.ini`, puede dar un **PHP Warning:  A non-numeric value encountered** o un **PHP Warning: A non well formed numeric value encountered**, respectivamente.  
@@ -247,13 +305,19 @@ La documentación dice que `$x = 1 + "pepe"` o `$x = 1 + "10 pepe"` funciona, pe
 - Si `error_reporting = E_ALL & ~E_NOTICE`, no lo dará.  
   Además, funcionará tanto en PsySH como en `php -a`.  
 
+:::
+
 ### Conversión a `string`
 
 [http://php.net/manual/es/language.types.string.php#language.types.string.casting](http://php.net/manual/es/language.types.string.php#language.types.string.casting)
 
 ### Funciones de obtención de valores
 
+::: notes
+
 ricpelo's note: Hacen más o menos lo mismo que los *casting* pero con funciones en lugar de con operadores. Puede ser interesante porque las funciones se pueden guardar, usar con *map*, *reduce*, etc.  
+
+:::
 
 #### `intval()`
 
@@ -283,7 +347,11 @@ ricpelo's note: Hacen más o menos lo mismo que los *casting* pero con funciones
 
 [`setlocale()`](http://php.net/manual/es/function.setlocale.php)
 
+::: notes
+
 ricpelo's note: `setlocale(LC_ALL, 'es_ES.UTF-8'); // Hay que poner el *locale* completo, con la codificación y todo (.UTF-8)`  
+
+:::
 
 ## Comparaciones
 
@@ -291,9 +359,13 @@ ricpelo's note: `setlocale(LC_ALL, 'es_ES.UTF-8'); // Hay que poner el *locale* 
 
 [http://php.net/manual/es/language.operators.comparison.php](http://php.net/manual/es/language.operators.comparison.php)
 
+::: notes
+
 ricpelo's note: `"250" < "27"` devuelve `false`  
 
 ricpelo's note: Si se compara un número con un string o la comparación implica strings numéricos, entonces cada string es convertido en un número y la comparación realizada numéricamente.  
+
+:::
 
 ### `==` vs. `===`
 
@@ -305,7 +377,11 @@ ricpelo's note: Si se compara un número con un string o la comparación implica
 
 [https://wiki.php.net/rfc/isset_ternary](https://wiki.php.net/rfc/isset_ternary)
 
+::: notes
+
 ricpelo's note: Equivalente al `COALESCE()` de SQL.  
+
+:::
 
 ### Reglas de comparación de tipos
 
@@ -316,6 +392,8 @@ ricpelo's note: Equivalente al `COALESCE()` de SQL.
 ## Introducción
 
 [http://php.net/manual/es/language.constants.syntax.php](http://php.net/manual/es/language.constants.syntax.php)
+
+::: notes
 
 ricpelo's note: Diferencias entre constantes y variables:  
 
@@ -328,6 +406,8 @@ ricpelo's note: Diferencias entre constantes y variables:
 - Las constantes no pueden ser redefinidas o eliminadas una vez se han definido.  
 
 - Las constantes podrían evaluarse como valores escalares. A partir de PHP 5.6 es posible definir una constante de array con la palabra reservada `const`, y, a partir de PHP 7, las constantes de array también se pueden definir con `define()`. Se pueden utilizar arrays en expresiones escalares constantes (por ejemplo, `const FOO = array(1,2,3)[0];`), aunque el resultado final debe ser un valor de un tipo permitido.  
+
+:::
 
 ## `define()` y `const`
 

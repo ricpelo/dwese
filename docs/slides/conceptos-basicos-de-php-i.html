@@ -254,7 +254,9 @@
 <section id="modo-dual-de-operación" class="title-slide slide level2" data-number="3.3">
 <h2 data-number="3.3"><span class="header-section-number">3.3</span> Modo dual de operación</h2>
 <p><a href="http://php.net/manual/es/language.basic-syntax.phpmode.php">http://php.net/manual/es/language.basic-syntax.phpmode.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: Se llaman <em>modo HTML</em> y <em>modo PHP</em>.</p>
+</aside>
 </section>
 </section>
 <section>
@@ -275,13 +277,17 @@
 <section id="operadores-de-asignación-por-valor-y-por-referencia" class="title-slide slide level2" data-number="4.3">
 <h2 data-number="4.3"><span class="header-section-number">4.3</span> Operadores de asignación por valor y por referencia</h2>
 <p><a href="http://php.net/manual/es/language.operators.assignment.php">http://php.net/manual/es/language.operators.assignment.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: <a href="http://php.net/manual/es/language.references.whatdo.php">En <code>$b =&amp; $a;</code>, <code>$b</code> <strong>NO</strong> está apuntando a <code>$a</code> o viceversa. Ambos apuntan al mismo lugar.</a></p>
+</aside>
 </section>
 
 <section id="variables-predefinidas" class="title-slide slide level2" data-number="4.4">
 <h2 data-number="4.4"><span class="header-section-number">4.4</span> Variables predefinidas</h2>
 <p><a href="http://php.net/manual/es/reserved.variables.php">http://php.net/manual/es/reserved.variables.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: <code>$_ENV</code> no funciona en la instalación actual (ver <code>variables_order</code> en <code>php.ini</code>. Habría que usar <code>get_env()</code>.</p>
+</aside>
 </section>
 </section>
 <section>
@@ -297,12 +303,15 @@
 <section id="lógicos-bool" class="title-slide slide level2" data-number="5.2">
 <h2 data-number="5.2"><span class="header-section-number">5.2</span> Lógicos (<code>bool</code>)</h2>
 <p><a href="http://php.net/manual/es/language.types.boolean.php">http://php.net/manual/es/language.types.boolean.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: <a href="https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#51-types">Se escriben en minúscula: <code>false</code> y <code>true</code>.</a><br />
 ricpelo’s note: <code>boolean</code> es sinónimo de <code>bool</code>, pero debería usarse <code>bool</code>.</p>
+</aside>
 </section>
 <section id="operadores-lógicos" class="title-slide slide level3" data-number="5.2.1">
 <h3 data-number="5.2.1"><span class="header-section-number">5.2.1</span> Operadores lógicos</h3>
 <p><a href="http://php.net/manual/es/language.operators.logical.php">http://php.net/manual/es/language.operators.logical.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: <em>Cuidado</em>:</p>
 <ul>
 <li><p><code>false and (true &amp;&amp; print('hola'))</code> no imprime nada y devuelve <code>false</code>, por lo que <strong>el código va en cortocircuito y se evalúa de izquierda a derecha</strong> incluso aunque el <code>&amp;&amp;</code> y los paréntesis tengan más prioridad que el <code>and</code>.</p></li>
@@ -310,6 +319,7 @@ ricpelo’s note: <code>boolean</code> es sinónimo de <code>bool</code>, pero d
 <li><p>En el <a href="http://php.net/manual/es/language.operators.precedence.php">manual de PHP</a> se dice que: <em>“La precedencia y asociatividad de los operadores solamente determinan cómo se agrupan las expresiones, no especifican un orden de evaluación. PHP no especifica (en general) el orden en que se evalúa una expresión y se debería evitar el código que se asume un orden específico de evaluación, ya que el comportamiento puede cambiar entre versiones de PHP o dependiendo de código circundante.”</em></p></li>
 <li><p><a href="https://stackoverflow.com/questions/46861563/false-and-true-printhi">Pregunta que hice al respecto en StackOverflow</a>.</p></li>
 </ul>
+</aside>
 </section>
 
 
@@ -320,13 +330,17 @@ ricpelo’s note: <code>boolean</code> es sinónimo de <code>bool</code>, pero d
 <section id="enteros-int" class="title-slide slide level3" data-number="5.3.1">
 <h3 data-number="5.3.1"><span class="header-section-number">5.3.1</span> Enteros (<code>int</code>)</h3>
 <p><a href="http://php.net/manual/es/language.types.integer.php">http://php.net/manual/es/language.types.integer.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: <code>integer</code> es sinónimo de <code>int</code>, pero debería usarse <code>int</code>.</p>
+</aside>
 </section>
 
 <section id="números-en-coma-flotante-float" class="title-slide slide level3" data-number="5.3.2">
 <h3 data-number="5.3.2"><span class="header-section-number">5.3.2</span> Números en coma flotante (<code>float</code>)</h3>
 <p><a href="http://php.net/manual/es/language.types.float.php">http://php.net/manual/es/language.types.float.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: <code>double</code> es sinónimo de <code>float</code>, pero debería usarse <code>float</code>.</p>
+</aside>
 </section>
 
 <section id="operadores" class="title-slide slide level3" data-number="5.3.3">
@@ -348,7 +362,9 @@ ricpelo’s note: <code>boolean</code> es sinónimo de <code>bool</code>, pero d
 <section id="cadenas-string" class="title-slide slide level2" data-number="5.4">
 <h2 data-number="5.4"><span class="header-section-number">5.4</span> Cadenas (<code>string</code>)</h2>
 <p><a href="http://php.net/manual/es/language.types.string.php">http://php.net/manual/es/language.types.string.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: <a href="https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#variable-substitution">Se usa <code>{$var}</code> y no <code>${var}</code></a></p>
+</aside>
 </section>
 <section id="operadores-de-cadenas" class="title-slide slide level3" data-number="5.4.1">
 <h3 data-number="5.4.1"><span class="header-section-number">5.4.1</span> Operadores de cadenas</h3>
@@ -362,8 +378,10 @@ ricpelo’s note: <code>boolean</code> es sinónimo de <code>bool</code>, pero d
 <section id="acceso-y-modificación-por-caracteres" class="title-slide slide level4" data-number="5.4.1.2">
 <h4 data-number="5.4.1.2"><span class="header-section-number">5.4.1.2</span> Acceso y modificación por caracteres</h4>
 <p><a href="http://php.net/manual/es/language.types.string.php#language.types.string.substr">http://php.net/manual/es/language.types.string.php#language.types.string.substr</a></p>
+<aside class="notes">
 <p>ricpelo’s note: - <code>echo $a[3]</code><br />
 - <code>$a[3] = 'x';</code></p>
+</aside>
 </section>
 
 <section id="operador-de-incremento" class="title-slide slide level4" data-number="5.4.1.3">
@@ -380,19 +398,23 @@ ricpelo’s note: <code>boolean</code> es sinónimo de <code>bool</code>, pero d
 <section id="extensión-mbstring" class="title-slide slide level3" data-number="5.4.3">
 <h3 data-number="5.4.3"><span class="header-section-number">5.4.3</span> Extensión <em>mbstring</em></h3>
 <p><a href="http://php.net/manual/en/book.mbstring.php">http://php.net/manual/en/book.mbstring.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: - <code>$a[3]</code> equivale a <code>mb_substr($a, 3, 1)</code></p>
 <ul>
 <li><code>$a[3] = 'x';</code> no tiene equivalencia directa. Se podría hacer:<br />
 <code>$a = mb_substr($a, 2, 1) . 'x' . mb_substr($a, 4);</code></li>
 </ul>
+</aside>
 </section>
 
 
 <section id="nulo-null" class="title-slide slide level2" data-number="5.5">
 <h2 data-number="5.5"><span class="header-section-number">5.5</span> Nulo (<code>null</code>)</h2>
 <p><a href="http://php.net/manual/es/language.types.null.php">http://php.net/manual/es/language.types.null.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: <a href="https://phpbestpractices.org/#checking-for-null"><code>is_null()</code> vs. <code>=== null</code></a></p>
 <p>ricpelo’s note: <a href="https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#51-types">El tipo <code>null</code> y el valor <code>null</code> se escriben en minúscula.</a></p>
+</aside>
 </section>
 </section>
 <section>
@@ -407,7 +429,9 @@ ricpelo’s note: <code>boolean</code> es sinónimo de <code>bool</code>, pero d
 
 <section id="operadores-de-asignación-compuesta" class="title-slide slide level2" data-number="6.2">
 <h2 data-number="6.2"><span class="header-section-number">6.2</span> Operadores de asignación compuesta</h2>
+<aside class="notes">
 <p>ricpelo’s note: <code>$x</code> <em>&lt;op&gt;</em><code>= $y</code></p>
+</aside>
 </section>
 
 <section id="comprobaciones" class="title-slide slide level2" data-number="6.3">
@@ -426,7 +450,9 @@ ricpelo’s note: <code>boolean</code> es sinónimo de <code>bool</code>, pero d
 <section id="is_" class="title-slide slide level4" data-number="6.3.1.2">
 <h4 data-number="6.3.1.2"><span class="header-section-number">6.3.1.2</span> <code>is_*()</code></h4>
 <p><a href="http://php.net/manual/es/ref.var.php">http://php.net/manual/es/ref.var.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: Poco útiles en formularios, ya que sólo se reciben <code>string</code>s.</p>
+</aside>
 </section>
 
 
@@ -453,7 +479,9 @@ ricpelo’s note: <code>boolean</code> es sinónimo de <code>bool</code>, pero d
 <section id="conversión-explícita-casting-vs.-implícita-automática" class="title-slide slide level3" data-number="6.4.1">
 <h3 data-number="6.4.1"><span class="header-section-number">6.4.1</span> Conversión explícita (<em>casting</em>) vs. implícita (automática)</h3>
 <p><a href="http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting">http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting</a></p>
+<aside class="notes">
 <p>ricpelo’s note: Conversión de cadena a número</p>
+</aside>
 </section>
 
 <section id="conversión-a-bool" class="title-slide slide level3" data-number="6.4.2">
@@ -474,6 +502,7 @@ ricpelo’s note: <code>boolean</code> es sinónimo de <code>bool</code>, pero d
 <section id="conversión-de-string-a-número" class="title-slide slide level3" data-number="6.4.5">
 <h3 data-number="6.4.5"><span class="header-section-number">6.4.5</span> Conversión de <code>string</code> a número</h3>
 <p><a href="http://php.net/manual/es/language.types.string.php#language.types.string.conversion">http://php.net/manual/es/language.types.string.php#language.types.string.conversion</a></p>
+<aside class="notes">
 <p>ricpelo’s note: <strong>¡Cuidado!</strong>:</p>
 <p>La documentación dice que <code>$x = 1 + "pepe"</code> o <code>$x = 1 + "10 pepe"</code> funciona, pero dependiendo del valor de <code>error_reporting</code> en <code>php.ini</code>, puede dar un <strong>PHP Warning: A non-numeric value encountered</strong> o un <strong>PHP Warning: A non well formed numeric value encountered</strong>, respectivamente.</p>
 <ul>
@@ -482,6 +511,7 @@ Además, en PsySH no funcionará, es decir, que <code>$x</code> no se asignará 
 <li><p>Si <code>error_reporting = E_ALL &amp; ~E_NOTICE</code>, no lo dará.<br />
 Además, funcionará tanto en PsySH como en <code>php -a</code>.</p></li>
 </ul>
+</aside>
 </section>
 
 <section id="conversión-a-string" class="title-slide slide level3" data-number="6.4.6">
@@ -491,7 +521,9 @@ Además, funcionará tanto en PsySH como en <code>php -a</code>.</p></li>
 
 <section id="funciones-de-obtención-de-valores" class="title-slide slide level3" data-number="6.4.7">
 <h3 data-number="6.4.7"><span class="header-section-number">6.4.7</span> Funciones de obtención de valores</h3>
+<aside class="notes">
 <p>ricpelo’s note: Hacen más o menos lo mismo que los <em>casting</em> pero con funciones en lugar de con operadores. Puede ser interesante porque las funciones se pueden guardar, usar con <em>map</em>, <em>reduce</em>, etc.</p>
+</aside>
 </section>
 <section id="intval" class="title-slide slide level4" data-number="6.4.7.1">
 <h4 data-number="6.4.7.1"><span class="header-section-number">6.4.7.1</span> <code>intval()</code></h4>
@@ -527,7 +559,9 @@ Además, funcionará tanto en PsySH como en <code>php -a</code>.</p></li>
 <h4 data-number="6.4.8.2"><span class="header-section-number">6.4.8.2</span> <code>money_format()</code></h4>
 <p><a href="http://php.net/manual/es/function.money-format.php">http://php.net/manual/es/function.money-format.php</a></p>
 <p><a href="http://php.net/manual/es/function.setlocale.php"><code>setlocale()</code></a></p>
+<aside class="notes">
 <p>ricpelo’s note: <code>setlocale(LC_ALL, 'es_ES.UTF-8'); // Hay que poner el *locale* completo, con la codificación y todo (.UTF-8)</code></p>
+</aside>
 </section>
 
 
@@ -539,8 +573,10 @@ Además, funcionará tanto en PsySH como en <code>php -a</code>.</p></li>
 <section id="operadores-de-comparación" class="title-slide slide level3" data-number="6.5.1">
 <h3 data-number="6.5.1"><span class="header-section-number">6.5.1</span> Operadores de comparación</h3>
 <p><a href="http://php.net/manual/es/language.operators.comparison.php">http://php.net/manual/es/language.operators.comparison.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: <code>"250" &lt; "27"</code> devuelve <code>false</code></p>
 <p>ricpelo’s note: Si se compara un número con un string o la comparación implica strings numéricos, entonces cada string es convertido en un número y la comparación realizada numéricamente.</p>
+</aside>
 </section>
 
 <section id="vs." class="title-slide slide level3" data-number="6.5.2">
@@ -556,7 +592,9 @@ Además, funcionará tanto en PsySH como en <code>php -a</code>.</p></li>
 <section id="fusión-de-null" class="title-slide slide level3" data-number="6.5.4">
 <h3 data-number="6.5.4"><span class="header-section-number">6.5.4</span> Fusión de <code>null</code> (<code>??</code>)</h3>
 <p><a href="https://wiki.php.net/rfc/isset_ternary">https://wiki.php.net/rfc/isset_ternary</a></p>
+<aside class="notes">
 <p>ricpelo’s note: Equivalente al <code>COALESCE()</code> de SQL.</p>
+</aside>
 </section>
 
 <section id="reglas-de-comparación-de-tipos" class="title-slide slide level3" data-number="6.5.5">
@@ -573,6 +611,7 @@ Además, funcionará tanto en PsySH como en <code>php -a</code>.</p></li>
 <section id="introducción-1" class="title-slide slide level2" data-number="7.1">
 <h2 data-number="7.1"><span class="header-section-number">7.1</span> Introducción</h2>
 <p><a href="http://php.net/manual/es/language.constants.syntax.php">http://php.net/manual/es/language.constants.syntax.php</a></p>
+<aside class="notes">
 <p>ricpelo’s note: Diferencias entre constantes y variables:</p>
 <ul>
 <li><p>Las constantes no llevan el signo dólar (<code>$</code>) como prefijo.</p></li>
@@ -581,6 +620,7 @@ Además, funcionará tanto en PsySH como en <code>php -a</code>.</p></li>
 <li><p>Las constantes no pueden ser redefinidas o eliminadas una vez se han definido.</p></li>
 <li><p>Las constantes podrían evaluarse como valores escalares. A partir de PHP 5.6 es posible definir una constante de array con la palabra reservada <code>const</code>, y, a partir de PHP 7, las constantes de array también se pueden definir con <code>define()</code>. Se pueden utilizar arrays en expresiones escalares constantes (por ejemplo, <code>const FOO = array(1,2,3)[0];</code>), aunque el resultado final debe ser un valor de un tipo permitido.</p></li>
 </ul>
+</aside>
 </section>
 
 <section id="define-y-const" class="title-slide slide level2" data-number="7.2">

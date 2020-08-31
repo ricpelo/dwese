@@ -14,7 +14,11 @@ author: Ricardo Pérez López
 
 [http://php.net/manual/es/control-structures.alternative-syntax.php](http://php.net/manual/es/control-structures.alternative-syntax.php)
 
+::: notes
+
 ricpelo's note: El `do { ... } while (...);` **no** tiene sintaxis alternativa.  
+
+:::
 
 ## Inclusión de scripts
 
@@ -22,11 +26,15 @@ ricpelo's note: El `do { ... } while (...);` **no** tiene sintaxis alternativa.
 
 [http://php.net/manual/es/function.include.php](http://php.net/manual/es/function.include.php)
 
+::: notes
+
 ricpelo's note: - El nombre del archivo debe aparecer con su extensión. No vale hacer `require 'pepe';`.  
 - Cuando un archivo es incluido, el intérprete abandona el modo PHP e ingresa al modo HTML al comienzo del archivo objetivo y se reanuda de nuevo al final.  
 - Si el archivo incluido tiene un `return ...;`, el `include` o el `require` que lo incluya devolverá el valor devuelto por el `return`.  
 - Si no se usa una ruta, se busca primero en el `include_path` **antes** que en el directorio del propio script que hace el `include`. Por eso es mejor usar `require './pepe.php'` que `require 'pepe.php'`.  
 - Puede ser útil usar la constante `__DIR__`.  
+
+:::
 
 ### `include_once`, `require_once`
 
@@ -45,6 +53,8 @@ ricpelo's note: No da error ni advertencia si la variable no existe.
 
 [http://php.net/manual/es/function.empty.php](http://php.net/manual/es/function.empty.php)
 
+::: notes
+
 ricpelo's note: Para evitar el problema de `empty("0") === true`:  
 ```php  
 function is_blank($value) {  
@@ -52,6 +62,8 @@ function is_blank($value) {
 }  
 ```  
 ricpelo's note: No da error ni advertencia si la variable no existe.  
+
+:::
 
 ## `var_dump()`
 
@@ -61,13 +73,21 @@ ricpelo's note: No da error ni advertencia si la variable no existe.
 
 [http://php.net/manual/es/language.types.array.php](http://php.net/manual/es/language.types.array.php)
 
+::: notes
+
 ricpelo's note: Las claves pueden ser enteros o cadenas.  
+
+:::
 
 ## Operadores para arrays
 
 [http://php.net/manual/es/language.operators.array.php](http://php.net/manual/es/language.operators.array.php)
 
+::: notes
+
 ricpelo's note: **Comparaciones**: Un `array` con menos elementos es menor. De otra forma, compara valor por valor.  
+
+:::
 
 ### Acceso, modificación y agregación
 
@@ -117,12 +137,16 @@ ricpelo's note: **Comparaciones**: Un `array` con menos elementos es menor. De o
 
 [http://php.net/manual/es/functions.arguments.php#functions.arguments.default](http://php.net/manual/es/functions.arguments.php#functions.arguments.default)
 
+::: notes
+
 ricpelo's note: ```php  
 function prueba($opciones = []) {  
     extract($opciones);  
     // ...  
 }  
 ```  
+
+:::
 
 ## Ámbito de variables
 
@@ -134,7 +158,11 @@ function prueba($opciones = []) {
 
 ### Uso de `global`
 
+::: notes
+
 ricpelo's note: Usar `global $x;` cuando `$x` no existe hace que `$x` empiece a existir y valga `null`.  
+
+:::
 
 ### Variables superglobales
 
@@ -142,7 +170,11 @@ ricpelo's note: Usar `global $x;` cuando `$x` no existe hace que `$x` empiece a 
 
 ## Declaraciones de tipos
 
+::: notes
+
 ricpelo's note: **NO** se hacen conversiones implícitas a `array`, ni en argumentos ni en devolución.  
+
+:::
 
 ### Declaraciones de tipo de argumento
 
@@ -156,19 +188,30 @@ ricpelo's note: **NO** se hacen conversiones implícitas a `array`, ni en argume
 
 [http://php.net/manual/es/migration71.new-features.php](http://php.net/manual/es/migration71.new-features.php)
 
+::: notes
+
 ricpelo's note: Una función de tipo `void` realmente devuelve `null`.  
+
+:::
 
 ### Tipificación estricta
 
 [http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration.strict](http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration.strict)
 
+::: notes
+
 ricpelo's note: El `declare(strict_types=1);` se pone en el archivo que hace la llamada, no en el que define la función.  
 
+:::
+
 # Comentarios y documentación del código
+
+::: notes
 
 ricpelo's note:
 
 ```coffeescript
+
 # ~/.atom/snippets.cson  
 '.text.html.php':  
     'Comentario de archivo':  
@@ -182,6 +225,8 @@ ricpelo's note:
   
         """  
 ```  
+
+:::
 
 # Ejercicios
 
