@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <opml version="2.0">
   <head>
-    <title>DWESE 20/21</title>
-    <dateModified>Wed, 19 Aug 2020 11:03:54 +0000</dateModified>
+    <title>DWESE #dwese #modulos</title>
+    <dateModified>Sun, 13 Sep 2020 10:09:47 +0000</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
     <outline text="[1] **CONTENIDOS**" status="open" _status="indeterminate" tags="contenidos" progress_counter="true">
-      <outline text="**Introducción a la tecnología web**" status="open" _status="indeterminate" due="2020-09-15" due_user_ids="139389" tags="ce1a,ce1b,ce1c,ce1d,ce1e,ce1g,ev1,ra1" progress_counter="true">
+      <outline text="**Introducción a la tecnología web**" status="open" _status="indeterminate" due="2020-09-21" due_user_ids="139389" tags="ce1a,ce1b,ce1c,ce1d,ce1e,ce1g,ev1,ra1" progress_counter="true">
         <outline text="Introducción al desarrollo web" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Conceptos básicos" status="open" _status="indeterminate" progress_counter="true">
             <outline text="Navegadores y servidores web" status="open" _status="indeterminate"/>
@@ -71,7 +71,7 @@
           <outline text="Sitios virtuales" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**[link: Conceptos básicos de PHP (I)|https://ricpelo.github.io/libro-dwese/conceptos-basicos-de-php.html]**" status="open" _status="indeterminate" due="2020-09-22" due_user_ids="139389" tags="ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
+      <outline text="**[link: Conceptos básicos de PHP (I)|https://ricpelo.github.io/libro-dwese/conceptos-basicos-de-php.html]**" status="open" _status="indeterminate" due="2020-09-28" due_user_ids="139389" tags="ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
         <outline text="Introducción a PHP" status="open" _status="indeterminate" progress_counter="true">
           <outline text="[link: Página web de PHP|http://php.net]" status="open" _status="indeterminate"/>
           <outline text="Instalación de PHP" status="open" _status="indeterminate"/>
@@ -138,7 +138,7 @@
             </outline>
           </outline>
           <outline text="[link: Conversiones de tipos|http://php.net/manual/es/language.types.type-juggling.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: Conversión explícita (forzado o *casting*) vs. automática|http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting]" status="open" _status="indeterminate" progress_counter="true"/>
+            <outline text="[link: Conversión explícita (*casting*) vs. implícita (automática)|http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting]" status="open" _status="indeterminate"/>
             <outline text="[link: Conversión a `bool`|http://php.net/manual/es/language.types.boolean.php#language.types.boolean.casting]" status="open" _status="indeterminate"/>
             <outline text="[link: Conversión a `int`|http://php.net/manual/es/language.types.integer.php#language.types.integer.casting]" status="open" _status="indeterminate"/>
             <outline text="[link: Conversión a `float`|http://php.net/manual/es/language.types.float.php#language.types.float.casting]" status="open" _status="indeterminate"/>
@@ -171,7 +171,7 @@
           <outline text="[link: `defined()`|http://php.net/manual/es/function.defined.php]" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Conceptos básicos de PHP (II)**" status="open" _status="indeterminate" due="2020-09-29" due_user_ids="139389" tags="ce2d,ce2e,ce2g,ce3a,ce3b,ce3c,ce3d,ce3g,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
+      <outline text="**Conceptos básicos de PHP (II)**" status="open" _status="indeterminate" due="2020-10-05" due_user_ids="139389" tags="ce2d,ce2e,ce2g,ce3a,ce3b,ce3c,ce3d,ce3g,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
         <outline text="Flujo de control" status="open" _status="indeterminate" progress_counter="true">
           <outline text="[link: Estructuras de control|http://php.net/manual/es/language.control-structures.php]" status="open" _status="indeterminate" progress_counter="true">
             <outline text="Secuencia" status="open" _status="indeterminate"/>
@@ -228,7 +228,7 @@
           <outline text="[link: Isograma|https://github.com/iesdonana/isograma]" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Desarrollo de aplicaciones con PHP (I)**" status="open" _status="indeterminate" due="2020-10-06" due_user_ids="139389" tags="ce1a,ce1b,ce1d,ce1f,ce2a,ce2b,ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce3a,ce3b,ce3c,ce3d,ce3e,ce3f,ce3g,ce4g,ce5d,ce5g,ce5h,ev1,ra1,ra2,ra3,ra4,ra5" progress_counter="true">
+      <outline text="**Desarrollo de aplicaciones con PHP (I)**" status="open" _status="indeterminate" due="2020-10-12" due_user_ids="139389" tags="ce1a,ce1b,ce1d,ce1f,ce2a,ce2b,ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce3a,ce3b,ce3c,ce3d,ce3e,ce3f,ce3g,ce4g,ce5d,ce5g,ce5h,ev1,ra1,ra2,ra3,ra4,ra5" progress_counter="true">
         <outline text="[SAPIs](http://stackoverflow.com/questions/9948008/what-is-sapi-and-when-would-you-use-it)" status="open" _status="indeterminate" progress_counter="true">
           <outline text="[link: CLI: Uso en línea de comandos|http://php.net/manual/es/features.commandline.differences.php]" status="open" _status="indeterminate" progress_counter="true">
             <outline text="[link: `$argc` y `$argv`|http://php.net/manual/es/reserved.variables.argv.php]" status="open" _status="indeterminate"/>
@@ -293,7 +293,7 @@
           </outline>
         </outline>
       </outline>
-      <outline text="**Persistencia de datos con PHP**" status="open" _status="indeterminate" due="2020-10-13" due_user_ids="139389" tags="ce4a,ce4b,ce4c,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6e,ce6g,ev1,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
+      <outline text="**Persistencia de datos con PHP**" status="open" _status="indeterminate" due="2020-10-19" due_user_ids="139389" tags="ce4a,ce4b,ce4c,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6e,ce6g,ev1,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
         <outline text="[link: PDO (PHP Data Objects)|http://php.net/manual/es/book.pdo.php]" status="open" _status="indeterminate" progress_counter="true">
           <outline text="[link: Clase `PDO`|http://php.net/manual/es/class.pdo.php]" status="open" _status="indeterminate" progress_counter="true">
             <outline text="[link: `__construct()`|http://php.net/manual/es/pdo.construct.php]" status="open" _status="indeterminate"/>
@@ -345,7 +345,7 @@
           <outline text="[link: Cross-Site Request Forgery (CSRF)|https://diego.com.es/ataques-csrf-cross-site-request-forgery-en-php]" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Desarrollo de aplicaciones con PHP (II)**" status="open" _status="indeterminate" due="2020-10-20" due_user_ids="139389" tags="ce1a,ce4a,ce4b,ce4c,ce4d,ce4e,ce4f,ce4g,ce5a,ce5b,ce5d,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev1,ra1,ra4,ra5,ra6" progress_counter="true">
+      <outline text="**Desarrollo de aplicaciones con PHP (II)**" status="open" _status="indeterminate" due="2020-10-26" due_user_ids="139389" tags="ce1a,ce4a,ce4b,ce4c,ce4d,ce4e,ce4f,ce4g,ce5a,ce5b,ce5d,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev1,ra1,ra4,ra5,ra6" progress_counter="true">
         <outline text="Programación de *CRUD* básico" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Ejemplo de aplicación: *Muéveme*" status="open" _status="indeterminate"/>
           <outline text="Ejemplo de aplicación: *FilmAffinity*" status="open" _status="indeterminate"/>
@@ -374,7 +374,7 @@
           </outline>
         </outline>
       </outline>
-      <outline text="**Programación avanzada en PHP**" status="open" _status="indeterminate" due="2020-10-27" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ev1,ra2,ra3,ra4,ra5" progress_counter="true">
+      <outline text="**Programación avanzada en PHP**" status="open" _status="indeterminate" due="2020-11-02" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ev1,ra2,ra3,ra4,ra5" progress_counter="true">
         <outline text="[link: Diseño de aplicaciones orientadas a objetos|http://php.net/manual/es/language.oop5.php]" status="open" _status="indeterminate" progress_counter="true">
           <outline text="[link: Clases|http://php.net/manual/es/language.oop5.basic.php]" status="open" _status="indeterminate"/>
           <outline text="[link: Propiedades|http://php.net/manual/es/language.oop5.properties.php]" status="open" _status="indeterminate" progress_counter="true">
@@ -413,7 +413,7 @@
           <outline text="`array_map()` y `array_reduce()`" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Interoperabilidad**" status="open" _status="indeterminate" due="2020-11-03" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5g,ce5h,ce9a,ce9b,ce9e,ev1,ra1,ra4,ra5,ra9" progress_counter="true">
+      <outline text="**Interoperabilidad**" status="open" _status="indeterminate" due="2020-11-09" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5g,ce5h,ce9a,ce9b,ce9e,ev1,ra1,ra4,ra5,ra9" progress_counter="true">
         <outline text="[link: Versionado semántico|https://semver.org/lang/es/]" status="open" _status="indeterminate"/>
         <outline text="[link: Composer|https://getcomposer.org/]" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Paquetes" status="open" _status="indeterminate"/>
@@ -472,7 +472,7 @@
           <outline text="De buscar paquetes en Packagist que tengan una funcionalidad concreta y usarlos en un ejemplo" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Introducción a Yii**" status="open" _status="indeterminate" due="2020-11-10" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5a,ce5b,ce5c,ce5d,ce5e,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ce9b,ce9c,ce9e,ce9f,ce9g,ev1,ra1,ra4,ra5,ra6,ra9" progress_counter="true">
+      <outline text="**Introducción a Yii**" status="open" _status="indeterminate" due="2020-11-16" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5a,ce5b,ce5c,ce5d,ce5e,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ce9b,ce9c,ce9e,ce9f,ce9g,ev1,ra1,ra4,ra5,ra6,ra9" progress_counter="true">
         <outline text="[link: Frameworks, microframeworks y librerías|https://en.wikipedia.org/wiki/Software_framework]" status="open" _status="indeterminate"/>
         <outline text="Patrón Modelo-Vista-Controlador (MVC)" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Modelos" status="open" _status="indeterminate"/>
@@ -513,7 +513,7 @@
           <outline text="Escribir programas sencillos, con formularios, validaciones sencillas y acceso a bases de datos." status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Estructura de una aplicación Yii**" status="open" _status="indeterminate" due="2020-11-17" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ce9e,ce9f,ce9g,ev1,ra2,ra3,ra4,ra5,ra9" progress_counter="true">
+      <outline text="**Estructura de una aplicación Yii**" status="open" _status="indeterminate" due="2020-11-23" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ce9e,ce9f,ce9g,ev1,ra2,ra3,ra4,ra5,ra9" progress_counter="true">
         <outline text="A pequeña escala" status="open" _status="indeterminate" progress_counter="true">
           <outline text="[link: Componentes|http://www.yiiframework.com/doc-2.0/guide-concept-components.html]" status="open" _status="indeterminate" progress_counter="true">
             <outline text="La clase `yii\base\BaseObject`" status="open" _status="indeterminate" progress_counter="true">
@@ -913,7 +913,7 @@
         <outline text="[PHPDocker](https://phpdocker.io/generator)" status="open" _status="indeterminate"/>
       </outline>
       <outline text="---" status="open" _status="indeterminate"/>
-      <outline text="**Sistemas de control de versiones (I)**" status="invalid" _status="none" due="2021-03-23" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ev1,ra1,ra4" progress_counter="true">
+      <outline text="**Sistemas de control de versiones (I)**" status="invalid" _status="none" due="2021-03-23" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ev2,ra1,ra4" progress_counter="true">
         <outline text="Preparación del entorno de desarrollo" status="invalid" _status="none" progress_counter="true">
           <outline text="Instalación automatizada" status="invalid" _status="none" progress_counter="true">
             <outline text="Acciones previas" status="invalid" _status="none" progress_counter="true">
@@ -998,7 +998,7 @@
           <outline text="Sigue el tutorial de [Git Immersion](https://esparta.github.io/gitimmersion-spanish/index.html) desde el LAB3 hasta el LAB20, comprime y envía el directorio resultante." status="invalid" _status="none"/>
         </outline>
       </outline>
-      <outline text="**Sistemas de control de versiones (II)**" status="invalid" _status="none" due="2021-03-30" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ev1,ra1,ra4" progress_counter="true">
+      <outline text="**Sistemas de control de versiones (II)**" status="invalid" _status="none" due="2021-03-30" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ev2,ra1,ra4" progress_counter="true">
         <outline text="Ramas locales" status="invalid" _status="none" progress_counter="true">
           <outline text="`branch`" status="invalid" _status="none"/>
           <outline text="`merge`" status="invalid" _status="none" progress_counter="true">
