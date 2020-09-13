@@ -6,6 +6,8 @@ author: Ricardo Pérez López
 
 # Introducción al desarrollo web
 
+[Diapositivas](https://docs.google.com/presentation/d/1pyIsjtvJMNG4cqztMgrc33y6svatb89EbEPS7QlLcE8/edit?usp=sharing){target=\_blank}
+
 ## Conceptos básicos
 
 ### Navegadores y servidores web
@@ -57,6 +59,10 @@ author: Ricardo Pérez López
 # HTML 5 básico (recordatorio de primer curso)
 
 # Protocolo HTTP
+
+[Vídeo](https://www.youtube.com/watch?v=l6oF_RpBf64){target=\_blank}
+
+[Diapositivas](https://docs.google.com/presentation/d/1KFVfr2Ua65zqE3YFyBauB6tsjFmxH0kmhZfTKReVw_c/edit?usp=sharing){target=\_blank}
 
 ## URIs
 
