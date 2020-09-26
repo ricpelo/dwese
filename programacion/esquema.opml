@@ -2,80 +2,87 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Sun, 13 Sep 2020 10:09:47 +0000</dateModified>
+    <dateModified>Sat, 26 Sep 2020 15:13:39 +0000</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
     <outline text="[1] **CONTENIDOS**" status="open" _status="indeterminate" tags="contenidos" progress_counter="true">
-      <outline text="**Introducción a la tecnología web**" status="open" _status="indeterminate" due="2020-09-21" due_user_ids="139389" tags="ce1a,ce1b,ce1c,ce1d,ce1e,ce1g,ev1,ra1" progress_counter="true">
-        <outline text="Introducción al desarrollo web" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Conceptos básicos" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="Navegadores y servidores web" status="open" _status="indeterminate"/>
-            <outline text="[link: Agentes de usuario|https://es.wikipedia.org/wiki/Agente_de_usuario]" status="open" _status="indeterminate"/>
-            <outline text="Web estática vs. dinámica" status="open" _status="indeterminate"/>
-            <outline text="Estructura vs. contenido" status="open" _status="indeterminate"/>
-            <outline text="Arquitectura multinivel" status="open" _status="indeterminate"/>
+      <outline text="**Introducción a la tecnología web**" status="closed" _status="checked" due="2020-09-21" due_user_ids="139389" tags="ce1a,ce1b,ce1c,ce1d,ce1e,ce1g,ev1,ra1" progress_counter="true">
+        <outline text="Introducción al desarrollo web" status="closed" _status="checked" progress_counter="true">
+          <outline text="Conceptos básicos" status="closed" _status="checked" progress_counter="true">
+            <outline text="Navegadores y servidores web" status="closed" _status="checked"/>
+            <outline text="[link: Agentes de usuario|https://es.wikipedia.org/wiki/Agente_de_usuario]" status="closed" _status="checked"/>
+            <outline text="Web estática vs. dinámica" status="closed" _status="checked"/>
+            <outline text="Estructura vs. contenido" status="closed" _status="checked"/>
+            <outline text="Arquitectura multinivel" status="closed" _status="checked"/>
           </outline>
-          <outline text="Ejemplos de aplicaciones web" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="Redes sociales: Facebook, Twitter…" status="open" _status="indeterminate"/>
-            <outline text="Comercio electrónico: Amazon, eBay…" status="open" _status="indeterminate"/>
-            <outline text="Administración electrónica…" status="open" _status="indeterminate"/>
-            <outline text="Portales" status="open" _status="indeterminate"/>
-            <outline text="ERP, CRM" status="open" _status="indeterminate"/>
+          <outline text="Ejemplos de aplicaciones web" status="closed" _status="checked" progress_counter="true">
+            <outline text="Redes sociales: Facebook, Twitter…" status="closed" _status="checked"/>
+            <outline text="Comercio electrónico: Amazon, eBay…" status="closed" _status="checked"/>
+            <outline text="Administración electrónica…" status="closed" _status="checked"/>
+            <outline text="Portales" status="closed" _status="checked"/>
+            <outline text="ERP, CRM" status="closed" _status="checked"/>
           </outline>
-          <outline text="Tecnologías de desarrollo de aplicaciones web" status="open" _status="indeterminate" progress_counter="true">
-            <outline text=".NET" status="open" _status="indeterminate"/>
-            <outline text="Java" status="open" _status="indeterminate"/>
-            <outline text="Ruby/Rails" status="open" _status="indeterminate"/>
-            <outline text="Python/Django" status="open" _status="indeterminate"/>
-            <outline text="PHP" status="open" _status="indeterminate"/>
-            <outline text="El Kung-Fu de la Programación" status="open" _status="indeterminate" progress_counter="true">
-              <outline text="Odoo" status="open" _status="indeterminate"/>
-              <outline text="PrestaShop" status="open" _status="indeterminate"/>
-              <outline text="Drupal" status="open" _status="indeterminate"/>
-              <outline text="WordPress" status="open" _status="indeterminate"/>
+          <outline text="Tecnologías de desarrollo de aplicaciones web" status="closed" _status="checked" progress_counter="true">
+            <outline text=".NET" status="closed" _status="checked"/>
+            <outline text="Java" status="closed" _status="checked"/>
+            <outline text="Ruby/Rails" status="closed" _status="checked"/>
+            <outline text="Python/Django" status="closed" _status="checked"/>
+            <outline text="PHP" status="closed" _status="checked"/>
+            <outline text="El Kung-Fu de la Programación" status="closed" _status="checked" progress_counter="true">
+              <outline text="Odoo" status="closed" _status="checked"/>
+              <outline text="PrestaShop" status="closed" _status="checked"/>
+              <outline text="Drupal" status="closed" _status="checked"/>
+              <outline text="WordPress" status="closed" _status="checked"/>
             </outline>
           </outline>
         </outline>
-        <outline text="Arquitectura cliente/servidor" status="open" _status="indeterminate"/>
-        <outline text="HTML 5 básico (recordatorio de primer curso)" status="open" _status="indeterminate"/>
-        <outline text="[link: Protocolo HTTP|https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol]" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="URIs" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[URL encoding](https://en.wikipedia.org/wiki/Percent-encoding)" status="open" _status="indeterminate"/>
+        <outline text="Arquitectura cliente/servidor" status="closed" _status="checked"/>
+        <outline text="HTML 5 básico (recordatorio de primer curso)" status="closed" _status="checked"/>
+        <outline text="[link: Protocolo HTTP|https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol]" status="closed" _status="checked" progress_counter="true">
+          <outline text="URIs" status="closed" _status="checked" progress_counter="true">
+            <outline text="[URL encoding](https://en.wikipedia.org/wiki/Percent-encoding)" status="closed" _status="checked"/>
           </outline>
-          <outline text="Peticiones (*HTTP requests*) y respuestas (*HTTP responses*)" status="open" _status="indeterminate"/>
-          <outline text="Métodos: GET, POST" status="open" _status="indeterminate"/>
-          <outline text="Versiones" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="HTTP/1.0" status="open" _status="indeterminate"/>
-            <outline text="HTTP/1.1" status="open" _status="indeterminate"/>
+          <outline text="Peticiones (*HTTP requests*) y respuestas (*HTTP responses*)" status="closed" _status="checked"/>
+          <outline text="Métodos: GET, POST" status="closed" _status="checked"/>
+          <outline text="Versiones" status="invalid" _status="none" tags="no_impartido" progress_counter="true">
+            <outline text="HTTP/1.0" status="invalid" _status="none"/>
+            <outline text="HTTP/1.1" status="invalid" _status="none"/>
           </outline>
-          <outline text="[Cabeceras HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)" status="open" _status="indeterminate"/>
-          <outline text="[Códigos de estado](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)" status="open" _status="indeterminate"/>
-          <outline text="Experimentos" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="`telnet` (a un servidor)" status="open" _status="indeterminate"/>
-            <outline text="`netcat` (desde un navegador)" status="open" _status="indeterminate"/>
-            <outline text="`curl -i -XPOST “http://…” | pygmentize -l http`" status="open" _status="indeterminate" tags="no_impartido"/>
-            <outline text="[link: `http`|https://httpie.org/]" status="open" _status="indeterminate" tags="no_impartido"/>
-            <outline text="[Google Chrome Developer Tools](http://www.emezeta.com/articulos/10-trucos-para-google-chrome-developer-tools)" status="open" _status="indeterminate" tags="no_impartido"/>
+          <outline text="[Cabeceras HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)" status="closed" _status="checked"/>
+          <outline text="[Códigos de estado](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)" status="closed" _status="checked"/>
+          <outline text="Experimentos" status="closed" _status="checked" progress_counter="true">
+            <outline text="`telnet` (a un servidor)" status="closed" _status="checked"/>
+            <outline text="`netcat` (desde un navegador)" status="closed" _status="checked"/>
+            <outline text="`curl -i -XPOST “http://…” | pygmentize -l http`" status="invalid" _status="none" tags="no_impartido"/>
+            <outline text="[link: `http`|https://httpie.org/]" status="invalid" _status="none" tags="no_impartido"/>
+            <outline text="[Google Chrome Developer Tools](http://www.emezeta.com/articulos/10-trucos-para-google-chrome-developer-tools)" status="invalid" _status="none" tags="no_impartido"/>
           </outline>
-          <outline text="Envío de datos al servidor" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="Mediante GET" status="open" _status="indeterminate"/>
-            <outline text="Mediante POST" status="open" _status="indeterminate"/>
-            <outline text="Formularios HTML" status="open" _status="indeterminate" progress_counter="true"/>
+          <outline text="Envío de datos al servidor" status="closed" _status="checked" progress_counter="true">
+            <outline text="Mediante GET" status="closed" _status="checked"/>
+            <outline text="Mediante POST" status="closed" _status="checked"/>
+            <outline text="Formularios HTML" status="closed" _status="checked" progress_counter="true"/>
           </outline>
-          <outline text="Cookies" status="open" _status="indeterminate"/>
+          <outline text="Cookies" status="closed" _status="checked"/>
         </outline>
-        <outline text="Apache básico" status="open" _status="indeterminate" tags="no_impartido,opcional" progress_counter="true">
-          <outline text="Instalación" status="open" _status="indeterminate"/>
-          <outline text="Configuración básica" status="open" _status="indeterminate"/>
-          <outline text="Sitios virtuales" status="open" _status="indeterminate"/>
+        <outline text="Apache básico" status="invalid" _status="none" tags="no_impartido,opcional" progress_counter="true">
+          <outline text="Instalación" status="invalid" _status="none"/>
+          <outline text="Configuración básica" status="invalid" _status="none"/>
+          <outline text="Sitios virtuales" status="invalid" _status="none"/>
         </outline>
       </outline>
       <outline text="**[link: Conceptos básicos de PHP (I)|https://ricpelo.github.io/libro-dwese/conceptos-basicos-de-php.html]**" status="open" _status="indeterminate" due="2020-09-28" due_user_ids="139389" tags="ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
-        <outline text="Introducción a PHP" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: Página web de PHP|http://php.net]" status="open" _status="indeterminate"/>
-          <outline text="Instalación de PHP" status="open" _status="indeterminate"/>
-          <outline text="Documentación y búsqueda de información" status="open" _status="indeterminate"/>
+        <outline text="Introducción a PHP" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: Página web de PHP|http://php.net]" status="closed" _status="checked"/>
+          <outline text="Instalación de PHP" status="closed" _status="checked"/>
+          <outline text="Documentación y búsqueda de información" status="closed" _status="checked"/>
+          <outline text="Modos de ejecución" status="closed" _status="checked">
+            <outline text="Por lotes" status="closed" _status="checked"/>
+            <outline text="Interactiva" status="closed" _status="checked" progress_counter="true">
+              <outline text="`php -a`" status="closed" _status="checked"/>
+              <outline text="[link: PsySH|http://psysh.org/]" status="closed" _status="checked"/>
+            </outline>
+          </outline>
         </outline>
         <outline text="[Sintaxis básica](http://php.net/manual/es/language.basic-syntax.php)" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Datos e instrucciones" status="open" _status="indeterminate"/>
@@ -85,13 +92,6 @@
           <outline text="Expresiones, operadores y funciones" status="open" _status="indeterminate"/>
         </outline>
         <outline text="Funcionamiento del intérprete" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Modos de ejecución" status="open" _status="indeterminate">
-            <outline text="Por lotes" status="open" _status="indeterminate"/>
-            <outline text="Interactiva" status="open" _status="indeterminate" progress_counter="true">
-              <outline text="`php -a`" status="open" _status="indeterminate"/>
-              <outline text="[link: PsySH|http://psysh.org/]" status="open" _status="indeterminate"/>
-            </outline>
-          </outline>
           <outline text="[link: Etiquetas `&lt;?php` y `?&gt;`|https://www.php.net/manual/es/language.basic-syntax.phpmode.php]" status="open" _status="indeterminate"/>
           <outline text="[link: Modo dual de operación|https://www.php.net/manual/es/language.basic-syntax.phpmode.php]" status="open" _status="indeterminate"/>
         </outline>

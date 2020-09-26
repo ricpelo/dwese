@@ -6,26 +6,26 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ricardo.20200913101026.1"><vh>@auto source/introduccion-a-la-tecnologia-web.md</vh></v>
-<v t="ricardo.20200913101026.2"><vh>@auto source/conceptos-basicos-de-php-i.md</vh></v>
-<v t="ricardo.20200913101026.3"><vh>@auto source/conceptos-basicos-de-php-ii.md</vh></v>
-<v t="ricardo.20200913101026.4"><vh>@auto source/desarrollo-de-aplicaciones-con-php-i.md</vh></v>
-<v t="ricardo.20200913101026.5"><vh>@auto source/persistencia-de-datos-con-php.md</vh></v>
-<v t="ricardo.20200913101026.6"><vh>@auto source/desarrollo-de-aplicaciones-con-php-ii.md</vh></v>
-<v t="ricardo.20200913101026.7"><vh>@auto source/programacion-avanzada-en-php.md</vh></v>
-<v t="ricardo.20200913101026.8"><vh>@auto source/interoperabilidad.md</vh></v>
-<v t="ricardo.20200913101026.9"><vh>@auto source/introduccion-a-yii.md</vh></v>
-<v t="ricardo.20200913101026.10"><vh>@auto source/estructura-de-una-aplicacion-yii.md</vh></v>
-<v t="ricardo.20200913101026.11"><vh>@auto source/gestion-de-peticiones-en-yii.md</vh></v>
-<v t="ricardo.20200913101026.12"><vh>@auto source/acceso-a-bases-de-datos-en-yii.md</vh></v>
-<v t="ricardo.20200913101026.13"><vh>@auto source/creacion-y-validacion-de-formularios-en-yii.md</vh></v>
-<v t="ricardo.20200913101026.14"><vh>@auto source/visualizacion-de-datos-en-yii.md</vh></v>
-<v t="ricardo.20200913101026.15"><vh>@auto source/seguridad-y-cacheado-en-yii.md</vh></v>
-<v t="ricardo.20200913101026.16"><vh>@auto source/caracteristicas-adicionales-de-yii.md</vh></v>
-<v t="ricardo.20200913101026.17"><vh>@auto source/calidad.md</vh></v>
-<v t="ricardo.20200913101026.18"><vh>@auto source/computacion-en-la-nube.md</vh></v>
-<v t="ricardo.20200913101026.19"><vh>@auto source/servicios-web-con-rest-en-yii.md</vh></v>
-<v t="ricardo.20200913101026.20"><vh>@auto source/contenedores.md</vh></v>
+<v t="ricardo.20200926151408.1"><vh>@auto source/introduccion-a-la-tecnologia-web.md</vh></v>
+<v t="ricardo.20200926151408.2"><vh>@auto source/conceptos-basicos-de-php-i.md</vh></v>
+<v t="ricardo.20200926151408.3"><vh>@auto source/conceptos-basicos-de-php-ii.md</vh></v>
+<v t="ricardo.20200926151408.4"><vh>@auto source/desarrollo-de-aplicaciones-con-php-i.md</vh></v>
+<v t="ricardo.20200926151408.5"><vh>@auto source/persistencia-de-datos-con-php.md</vh></v>
+<v t="ricardo.20200926151408.6"><vh>@auto source/desarrollo-de-aplicaciones-con-php-ii.md</vh></v>
+<v t="ricardo.20200926151408.7"><vh>@auto source/programacion-avanzada-en-php.md</vh></v>
+<v t="ricardo.20200926151408.8"><vh>@auto source/interoperabilidad.md</vh></v>
+<v t="ricardo.20200926151408.9"><vh>@auto source/introduccion-a-yii.md</vh></v>
+<v t="ricardo.20200926151408.10"><vh>@auto source/estructura-de-una-aplicacion-yii.md</vh></v>
+<v t="ricardo.20200926151408.11"><vh>@auto source/gestion-de-peticiones-en-yii.md</vh></v>
+<v t="ricardo.20200926151408.12"><vh>@auto source/acceso-a-bases-de-datos-en-yii.md</vh></v>
+<v t="ricardo.20200926151408.13"><vh>@auto source/creacion-y-validacion-de-formularios-en-yii.md</vh></v>
+<v t="ricardo.20200926151408.14"><vh>@auto source/visualizacion-de-datos-en-yii.md</vh></v>
+<v t="ricardo.20200926151408.15"><vh>@auto source/seguridad-y-cacheado-en-yii.md</vh></v>
+<v t="ricardo.20200926151408.16"><vh>@auto source/caracteristicas-adicionales-de-yii.md</vh></v>
+<v t="ricardo.20200926151408.17"><vh>@auto source/calidad.md</vh></v>
+<v t="ricardo.20200926151408.18"><vh>@auto source/computacion-en-la-nube.md</vh></v>
+<v t="ricardo.20200926151408.19"><vh>@auto source/servicios-web-con-rest-en-yii.md</vh></v>
+<v t="ricardo.20200926151408.20"><vh>@auto source/contenedores.md</vh></v>
 </vnodes>
 <tnodes>
 </tnodes>
