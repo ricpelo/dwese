@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Sat, 26 Sep 2020 15:13:39 +0000</dateModified>
+    <dateModified>Mon, 28 Sep 2020 07:19:33 +0000</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
@@ -45,18 +45,18 @@
           </outline>
           <outline text="Peticiones (*HTTP requests*) y respuestas (*HTTP responses*)" status="closed" _status="checked"/>
           <outline text="Métodos: GET, POST" status="closed" _status="checked"/>
-          <outline text="Versiones" status="invalid" _status="none" tags="no_impartido" progress_counter="true">
-            <outline text="HTTP/1.0" status="invalid" _status="none"/>
-            <outline text="HTTP/1.1" status="invalid" _status="none"/>
+          <outline text="Versiones" status="closed" _status="checked" tags="no_impartido" progress_counter="true">
+            <outline text="HTTP/1.0" status="closed" _status="checked"/>
+            <outline text="HTTP/1.1" status="closed" _status="checked"/>
           </outline>
           <outline text="[Cabeceras HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)" status="closed" _status="checked"/>
           <outline text="[Códigos de estado](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)" status="closed" _status="checked"/>
           <outline text="Experimentos" status="closed" _status="checked" progress_counter="true">
             <outline text="`telnet` (a un servidor)" status="closed" _status="checked"/>
             <outline text="`netcat` (desde un navegador)" status="closed" _status="checked"/>
-            <outline text="`curl -i -XPOST “http://…” | pygmentize -l http`" status="invalid" _status="none" tags="no_impartido"/>
-            <outline text="[link: `http`|https://httpie.org/]" status="invalid" _status="none" tags="no_impartido"/>
-            <outline text="[Google Chrome Developer Tools](http://www.emezeta.com/articulos/10-trucos-para-google-chrome-developer-tools)" status="invalid" _status="none" tags="no_impartido"/>
+            <outline text="`curl -i -XPOST “http://…” | pygmentize -l http`" status="closed" _status="checked" tags="no_impartido"/>
+            <outline text="[link: `http`|https://httpie.org/]" status="closed" _status="checked" tags="no_impartido"/>
+            <outline text="[Google Chrome Developer Tools](http://www.emezeta.com/articulos/10-trucos-para-google-chrome-developer-tools)" status="closed" _status="checked" tags="no_impartido"/>
           </outline>
           <outline text="Envío de datos al servidor" status="closed" _status="checked" progress_counter="true">
             <outline text="Mediante GET" status="closed" _status="checked"/>
@@ -65,10 +65,10 @@
           </outline>
           <outline text="Cookies" status="closed" _status="checked"/>
         </outline>
-        <outline text="Apache básico" status="invalid" _status="none" tags="no_impartido,opcional" progress_counter="true">
-          <outline text="Instalación" status="invalid" _status="none"/>
-          <outline text="Configuración básica" status="invalid" _status="none"/>
-          <outline text="Sitios virtuales" status="invalid" _status="none"/>
+        <outline text="Apache básico" status="closed" _status="checked" tags="no_impartido,opcional" progress_counter="true">
+          <outline text="Instalación" status="closed" _status="checked"/>
+          <outline text="Configuración básica" status="closed" _status="checked"/>
+          <outline text="Sitios virtuales" status="closed" _status="checked"/>
         </outline>
       </outline>
       <outline text="**[link: Conceptos básicos de PHP (I)|https://ricpelo.github.io/libro-dwese/conceptos-basicos-de-php.html]**" status="open" _status="indeterminate" due="2020-09-28" due_user_ids="139389" tags="ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
