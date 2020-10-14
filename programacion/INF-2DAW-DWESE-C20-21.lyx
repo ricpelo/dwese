@@ -2374,7 +2374,9 @@ Calificación final
 \end_layout
 
 \begin_layout Standard
-La calificación final del módulo se calculará de la siguiente forma:
+Para superar el módulo será necesario obtener una calificación mínima en
+ cada evaluación parcial, según se establece en el siguiente algoritmo,
+ donde se determina cómo se calcula la calificación final del módulo:
 \begin_inset VSpace -2.5em
 \end_inset
 
@@ -2736,7 +2738,9 @@ Esquema detalle
 \end_layout
 
 \begin_layout Standard
-Cuando un resultado de aprendizaje no lleva asociado ningún criterio de
+El título de cada unidad va etiquetado con los resultados de aprendizaje
+ y los criterios de evaluación relacionados con dicha unidad.
+ Cuando un resultado de aprendizaje no lleva asociado ningún criterio de
  evaluación, significa que dicho resultado de aprendizaje se trabaja en
  la unidad didáctica pero no es el elemento fundamental de evaluación.
 \begin_inset VSpace defskip
@@ -2985,20 +2989,20 @@ Online
 \begin_layout Itemize
 Plataforma 
 \series bold
-Ágora
+Moodle Centros
 \series default
 
 \begin_inset Flex Enlace
 status open
 
 \begin_layout Plain Layout
-http://agora.iesdonana.org
+https://educacionadistancia.juntadeandalucia.es/centros/cadiz
 \end_layout
 
 \end_inset
 
- para el seguimiento general del módulo, incluyendo distribución de material
- y entrega de ejercicios y exámenes.
+ de la Junta de Andalucía para el seguimiento general del módulo, incluyendo
+ distribución de material y entrega de ejercicios y exámenes.
 \end_layout
 
 \begin_layout Itemize
@@ -3046,24 +3050,6 @@ https://education.github.com/pack
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-
-\series bold
-Dokuwiki
-\series default
-
-\begin_inset Flex Enlace
-status open
-
-\begin_layout Plain Layout
-http://wiki.iesdonana.org
-\end_layout
-
-\end_inset
-
- como herramienta de documentación colaborativa.
-\end_layout
-
 \begin_layout Subsection
 Bibliografía
 \end_layout
@@ -3522,347 +3508,6 @@ https://twitter.com/RAEinforma/status/1111565711653113856
 \begin_layout Standard
 Por otra parte, en el planteamiento y realización de tareas y ejercicios,
  se procurará el equilibrio en cuanto a presencia de actores de ambos géneros.
-\end_layout
-
-\begin_layout Section
-Modificaciones en el marco del COVID-19
-\end_layout
-
-\begin_layout Standard
-Como consecuencia de las medidas excepcionales aplicadas en función de las
- resoluciones 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "instrucciones-23-04-2020"
-literal "false"
-
-\end_inset
-
- e instrucciones emitidas por la Consejería de Educación para dar respuesta
- a la crisis sanitaria ocasionada por el COVID-19, se realizan las siguientes
- modificaciones en la presente programación.
-\end_layout
-
-\begin_layout Subsection
-Metodología
-\end_layout
-
-\begin_layout Standard
-Debido a la imposibilidad de asistencia presencial a clase, el desarrollo
- del resto del curso pasa a realizarse íntegramente a distancia a través
- de Internet.
- El modo de trabajo se basará en la publicación, a través de la plataforma
- Ágora, del material necesario que el alumno tendrá que trabajar, incluyendo
- las diferentes actividades a realizar.
- Cuando sea necesario y el alumno así lo requiera, se propondrá la realización
- de audioconferencias con el objeto de resolver dudas y trabajar en directo
- los puntos de mayor dificultad, para lo cual se usarán herramientas como
- Discord, Google Meet o similar.
- El resto del tiempo se podrán resolver dudas y comunicarse con el profesor
- mediante correo electrónico corporativo, plataforma Ágora, Discord o Google
- Meet.
-\end_layout
-
-\begin_layout Subsection
-Actividades
-\end_layout
-
-\begin_layout Standard
-Durante el tercer trimestre se realizarán 
-\series bold
-actividades de refuerzo/recuperación
-\series default
- para el alumnado que hubiera presentado dificultades de aprendizaje en
- los dos primeros trimestres, así como para el alumnado que, no presentando
- tales dificultades, desee mejorar su calificación final.
-\end_layout
-
-\begin_layout Standard
-La evaluación de cualquiera de los trabajos, actividades, ejercicios y pruebas
- evaluativas podrá requerir, a criterio y discreción del profesor del módulo,
- la defensa de los mismos en una entrevista individual con el alumno para
- garantizar la autoría y la adquisición adecuada de las competencias correspondi
-entes.
-\end_layout
-
-\begin_layout Subsection
-Evaluación
-\end_layout
-
-\begin_layout Subsubsection
-Recuperación de los dos primeros trimestres
-\end_layout
-
-\begin_layout Standard
-Los alumnos pendientes de evaluación positiva en algún trimestre (o los
- dos) deberán realizar y superar todas las 
-\series bold
-actividades de refuerzo/recuperación
-\series default
- propuestas.
-\end_layout
-
-\begin_layout Subsubsection
-Calificación final
-\end_layout
-
-\begin_layout Standard
-La 
-\series bold
-calificación final
-\series default
- del módulo se calculará de la siguiente forma:
-\begin_inset VSpace -2.5em
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "80col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Python,escapeinside={||},mathescape=true,framesep=5mm,frame=topline"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-if min(|
-\backslash
-EV1|, |
-\backslash
-EV2|) |$
-\backslash
-geq$| 4:
-\end_layout
-
-\begin_layout Plain Layout
-
-    |
-\backslash
-NOTA| = |
-\backslash
-EV1| * 0.5 + |
-\backslash
-EV2| * 0.5
-\end_layout
-
-\begin_layout Plain Layout
-
-else:
-\end_layout
-
-\begin_layout Plain Layout
-
-    |
-\backslash
-NOTA| = min(|
-\backslash
-EV1|, |
-\backslash
-EV2|)
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-if |
-\backslash
-AC| > |
-\backslash
-NOTA|:
-\end_layout
-
-\begin_layout Plain Layout
-
-    |
-\backslash
-NOTA| = |
-\backslash
-AC|
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-(Cálculo de la calificación final)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Donde:
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "80col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begingroup
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlist[description]{style=multiline}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EV1
-\end_layout
-
-\end_inset
-
-: Calificación obtenida con anterioridad en la primera evaluación.
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EV2
-\end_layout
-
-\end_inset
-
-: Calificación obtenida con anterioridad en la segunda evaluación.
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-AC
-\end_layout
-
-\end_inset
-
-: Media aritmética de las calificaciones de todas las actividades de refuerzo/re
-cuperación propuestas, valoradas del 0 al 10.
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-endgroup
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El módulo se considerará aprobado si 
-\begin_inset Formula $\NOTA\geq4.5$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Bibliography

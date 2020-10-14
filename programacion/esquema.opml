@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Mon, 28 Sep 2020 07:19:33 +0000</dateModified>
+    <dateModified>Wed, 14 Oct 2020 07:58:33 +0000</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
@@ -71,7 +71,7 @@
           <outline text="Sitios virtuales" status="closed" _status="checked"/>
         </outline>
       </outline>
-      <outline text="**[link: Conceptos básicos de PHP (I)|https://ricpelo.github.io/libro-dwese/conceptos-basicos-de-php.html]**" status="open" _status="indeterminate" due="2020-09-28" due_user_ids="139389" tags="ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
+      <outline text="**[link: Conceptos básicos de PHP (I)|https://ricpelo.github.io/libro-dwese/conceptos-basicos-de-php.html]**" status="closed" _status="checked" due="2020-09-28" due_user_ids="139389" tags="ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
         <outline text="Introducción a PHP" status="closed" _status="checked" progress_counter="true">
           <outline text="[link: Página web de PHP|http://php.net]" status="closed" _status="checked"/>
           <outline text="Instalación de PHP" status="closed" _status="checked"/>
@@ -84,161 +84,163 @@
             </outline>
           </outline>
         </outline>
-        <outline text="[Sintaxis básica](http://php.net/manual/es/language.basic-syntax.php)" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Datos e instrucciones" status="open" _status="indeterminate"/>
-          <outline text="Sentencias y comandos" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: Comando `echo`|http://php.net/manual/es/function.echo.php]" status="open" _status="indeterminate"/>
+        <outline text="[Sintaxis básica](http://php.net/manual/es/language.basic-syntax.php)" status="closed" _status="checked" progress_counter="true">
+          <outline text="Datos e instrucciones" status="closed" _status="checked"/>
+          <outline text="Sentencias y comandos" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: Comando `echo`|http://php.net/manual/es/function.echo.php]" status="closed" _status="checked"/>
           </outline>
-          <outline text="Expresiones, operadores y funciones" status="open" _status="indeterminate"/>
+          <outline text="Expresiones, operadores y funciones" status="closed" _status="checked"/>
         </outline>
-        <outline text="Funcionamiento del intérprete" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: Etiquetas `&lt;?php` y `?&gt;`|https://www.php.net/manual/es/language.basic-syntax.phpmode.php]" status="open" _status="indeterminate"/>
-          <outline text="[link: Modo dual de operación|https://www.php.net/manual/es/language.basic-syntax.phpmode.php]" status="open" _status="indeterminate"/>
+        <outline text="Funcionamiento del intérprete" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: Etiquetas `&lt;?php` y `?&gt;`|https://www.php.net/manual/es/language.basic-syntax.phpmode.php]" status="closed" _status="checked"/>
+          <outline text="[link: Modo dual de operación|https://www.php.net/manual/es/language.basic-syntax.phpmode.php]" status="closed" _status="checked"/>
+          <outline text="Comentarios" status="closed" _status="checked"/>
         </outline>
-        <outline text="[Variables](http://php.net/manual/es/language.variables.php)" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: Conceptos básicos|http://php.net/manual/es/language.variables.basics.php]" status="open" _status="indeterminate"/>
-          <outline text="[link: Destrucción de variables|http://php.net/manual/es/function.unset.php]" status="open" _status="indeterminate"/>
-          <outline text="[link: Operadores de asignación por valor y por referencia|http://php.net/manual/es/language.operators.assignment.php]" status="open" _status="indeterminate"/>
-          <outline text="[link: Variables predefinidas|http://php.net/manual/es/reserved.variables.php]" status="open" _status="indeterminate"/>
+        <outline text="[Variables](http://php.net/manual/es/language.variables.php)" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: Conceptos básicos|http://php.net/manual/es/language.variables.basics.php]" status="closed" _status="checked"/>
+          <outline text="[link: Destrucción de variables|http://php.net/manual/es/function.unset.php]" status="closed" _status="checked"/>
+          <outline text="Asignación compuesta" status="closed" _status="checked"/>
+          <outline text="[link: Operadores de asignación por valor y por referencia|http://php.net/manual/es/language.operators.assignment.php]" status="closed" _status="checked"/>
+          <outline text="[link: Variables predefinidas|http://php.net/manual/es/reserved.variables.php]" status="closed" _status="checked"/>
         </outline>
-        <outline text="[link: Tipos básicos de datos|http://php.net/manual/es/language.types.intro.php]" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: Lógicos (`bool`)|http://php.net/manual/es/language.types.boolean.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: Operadores lógicos|http://php.net/manual/es/language.operators.logical.php]" status="open" _status="indeterminate"/>
+        <outline text="[link: Tipos básicos de datos|http://php.net/manual/es/language.types.intro.php]" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: Lógicos (`bool`)|http://php.net/manual/es/language.types.boolean.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: Operadores lógicos|http://php.net/manual/es/language.operators.logical.php]" status="closed" _status="checked"/>
           </outline>
-          <outline text="Numéricos" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: Enteros (`int`)|http://php.net/manual/es/language.types.integer.php]" status="open" _status="indeterminate"/>
-            <outline text="[link: Números en coma flotante (`float`)|http://php.net/manual/es/language.types.float.php]" status="open" _status="indeterminate"/>
-            <outline text="Operadores" status="open" _status="indeterminate" progress_counter="true">
-              <outline text="[link: Operadores aritméticos|http://php.net/manual/es/language.operators.arithmetic.php]" status="open" _status="indeterminate"/>
-              <outline text="[link: Operadores de incremento/decremento|http://php.net/manual/es/language.operators.increment.php]" status="open" _status="indeterminate"/>
+          <outline text="Numéricos" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: Enteros (`int`)|http://php.net/manual/es/language.types.integer.php]" status="closed" _status="checked"/>
+            <outline text="[link: Números en coma flotante (`float`)|http://php.net/manual/es/language.types.float.php]" status="closed" _status="checked"/>
+            <outline text="Operadores" status="closed" _status="checked" progress_counter="true">
+              <outline text="[link: Operadores aritméticos|http://php.net/manual/es/language.operators.arithmetic.php]" status="closed" _status="checked"/>
+              <outline text="[link: Operadores de incremento/decremento|http://php.net/manual/es/language.operators.increment.php]" status="closed" _status="checked"/>
             </outline>
           </outline>
-          <outline text="[link: Cadenas (`string`)|http://php.net/manual/es/language.types.string.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: Operadores de cadenas|http://php.net/manual/es/language.operators.string.php]" status="open" _status="indeterminate" progress_counter="true">
-              <outline text="Concatenación" status="open" _status="indeterminate"/>
-              <outline text="[link: Acceso y modificación por caracteres|http://php.net/manual/es/language.types.string.php#language.types.string.substr]" status="open" _status="indeterminate"/>
-              <outline text="[link: Operador de incremento|http://php.net/manual/es/language.operators.increment.php]" status="open" _status="indeterminate" tags="opcional"/>
+          <outline text="[link: Cadenas (`string`)|http://php.net/manual/es/language.types.string.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: Operadores de cadenas|http://php.net/manual/es/language.operators.string.php]" status="closed" _status="checked" progress_counter="true">
+              <outline text="Concatenación" status="closed" _status="checked"/>
+              <outline text="[link: Acceso y modificación por caracteres|http://php.net/manual/es/language.types.string.php#language.types.string.substr]" status="closed" _status="checked"/>
+              <outline text="[link: Operador de incremento|http://php.net/manual/es/language.operators.increment.php]" status="closed" _status="checked" tags="opcional"/>
             </outline>
-            <outline text="[Funciones de manejo de cadenas](http://php.net/ref.strings)" status="open" _status="indeterminate"/>
-            <outline text="[Extensión *mbstring*](http://php.net/manual/en/book.mbstring.php)" status="open" _status="indeterminate"/>
+            <outline text="[Funciones de manejo de cadenas](http://php.net/ref.strings)" status="closed" _status="checked"/>
+            <outline text="[Extensión *mbstring*](http://php.net/manual/en/book.mbstring.php)" status="closed" _status="checked"/>
           </outline>
-          <outline text="[link: Nulo (`null`)|http://php.net/manual/es/language.types.null.php]" status="open" _status="indeterminate"/>
+          <outline text="[link: Nulo (`null`)|http://php.net/manual/es/language.types.null.php]" status="closed" _status="checked"/>
         </outline>
-        <outline text="Manipulación de datos" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: Precedencia de operadores|http://php.net/manual/es/language.operators.precedence.php]" status="open" _status="indeterminate"/>
-          <outline text="Operadores de asignación compuesta" status="open" _status="indeterminate"/>
-          <outline text="Comprobaciones" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="De tipos" status="open" _status="indeterminate" progress_counter="true">
-              <outline text="[`gettype()`](http://php.net/manual/en/function.gettype.php)" status="open" _status="indeterminate"/>
-              <outline text="[`is_*()`](http://php.net/manual/es/ref.var.php)" status="open" _status="indeterminate"/>
+        <outline text="Manipulación de datos" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: Precedencia de operadores|http://php.net/manual/es/language.operators.precedence.php]" status="closed" _status="checked"/>
+          <outline text="Operadores de asignación compuesta" status="closed" _status="checked"/>
+          <outline text="Comprobaciones" status="closed" _status="checked" progress_counter="true">
+            <outline text="De tipos" status="closed" _status="checked" progress_counter="true">
+              <outline text="[`gettype()`](http://php.net/manual/en/function.gettype.php)" status="closed" _status="checked"/>
+              <outline text="[`is_*()`](http://php.net/manual/es/ref.var.php)" status="closed" _status="checked"/>
             </outline>
-            <outline text="De valores" status="open" _status="indeterminate" progress_counter="true">
-              <outline text="[`is_numeric()`](http://php.net/manual/es/function.is-numeric.php)" status="open" _status="indeterminate"/>
-              <outline text="[`ctype_*()`](http://php.net/manual/es/book.ctype.php)" status="open" _status="indeterminate"/>
+            <outline text="De valores" status="closed" _status="checked" progress_counter="true">
+              <outline text="[`is_numeric()`](http://php.net/manual/es/function.is-numeric.php)" status="closed" _status="checked"/>
+              <outline text="[`ctype_*()`](http://php.net/manual/es/book.ctype.php)" status="closed" _status="checked"/>
             </outline>
           </outline>
-          <outline text="[link: Conversiones de tipos|http://php.net/manual/es/language.types.type-juggling.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: Conversión explícita (*casting*) vs. implícita (automática)|http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting]" status="open" _status="indeterminate"/>
-            <outline text="[link: Conversión a `bool`|http://php.net/manual/es/language.types.boolean.php#language.types.boolean.casting]" status="open" _status="indeterminate"/>
-            <outline text="[link: Conversión a `int`|http://php.net/manual/es/language.types.integer.php#language.types.integer.casting]" status="open" _status="indeterminate"/>
-            <outline text="[link: Conversión a `float`|http://php.net/manual/es/language.types.float.php#language.types.float.casting]" status="open" _status="indeterminate"/>
-            <outline text="[link: Conversión de `string` a número|http://php.net/manual/es/language.types.string.php#language.types.string.conversion]" status="open" _status="indeterminate"/>
-            <outline text="[link: Conversión a `string`|http://php.net/manual/es/language.types.string.php#language.types.string.casting]" status="open" _status="indeterminate"/>
-            <outline text="Funciones de obtención de valores" status="open" _status="indeterminate" progress_counter="true">
-              <outline text="[`intval()`](http://php.net/manual/es/function.intval.php)" status="open" _status="indeterminate"/>
-              <outline text="[`floatval()`](http://php.net/manual/es/function.floatval.php)" status="open" _status="indeterminate"/>
-              <outline text="[`strval()`](http://php.net/manual/es/function.strval.php)" status="open" _status="indeterminate"/>
-              <outline text="[`boolval()`](http://php.net/manual/es/function.boolval.php)" status="open" _status="indeterminate"/>
+          <outline text="[link: Conversiones de tipos|http://php.net/manual/es/language.types.type-juggling.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: Conversión explícita (*casting*) vs. implícita (automática)|http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting]" status="closed" _status="checked"/>
+            <outline text="[link: Conversión a `bool`|http://php.net/manual/es/language.types.boolean.php#language.types.boolean.casting]" status="closed" _status="checked"/>
+            <outline text="[link: Conversión a `int`|http://php.net/manual/es/language.types.integer.php#language.types.integer.casting]" status="closed" _status="checked"/>
+            <outline text="[link: Conversión a `float`|http://php.net/manual/es/language.types.float.php#language.types.float.casting]" status="closed" _status="checked"/>
+            <outline text="[link: Conversión de `string` a número|http://php.net/manual/es/language.types.string.php#language.types.string.conversion]" status="closed" _status="checked"/>
+            <outline text="[Conversión a `string`](https://www.php.net/manual/es/language.types.string.php#language.types.string.casting)" status="closed" _status="checked"/>
+            <outline text="Funciones de obtención de valores" status="closed" _status="checked" progress_counter="true">
+              <outline text="[`intval()`](http://php.net/manual/es/function.intval.php)" status="closed" _status="checked"/>
+              <outline text="[`floatval()`](http://php.net/manual/es/function.floatval.php)" status="closed" _status="checked"/>
+              <outline text="[`strval()`](http://php.net/manual/es/function.strval.php)" status="closed" _status="checked"/>
+              <outline text="[`boolval()`](http://php.net/manual/es/function.boolval.php)" status="closed" _status="checked"/>
             </outline>
-            <outline text="Funciones de formateado numérico" status="open" _status="indeterminate" tags="no_impartido" progress_counter="true">
-              <outline text="[`number_format()`](http://php.net/manual/es/function.number-format.php)" status="open" _status="indeterminate"/>
-              <outline text="[`money_format()`](http://php.net/manual/es/function.money-format.php)" status="open" _status="indeterminate" progress_counter="true">
-                <outline text="[`setlocale()`](http://php.net/manual/es/function.setlocale.php)" status="open" _status="indeterminate"/>
+            <outline text="Funciones de formateado numérico" status="closed" _status="checked" progress_counter="true">
+              <outline text="[`number_format()`](http://php.net/manual/es/function.number-format.php)" status="closed" _status="checked"/>
+              <outline text="[`money_format()`](http://php.net/manual/es/function.money-format.php)" status="closed" _status="checked" progress_counter="true">
+                <outline text="[`setlocale()`](http://php.net/manual/es/function.setlocale.php)" status="closed" _status="checked"/>
               </outline>
             </outline>
           </outline>
-          <outline text="Comparaciones" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[Operadores de comparación](http://php.net/manual/es/language.operators.comparison.php)" status="open" _status="indeterminate"/>
-            <outline text="`==` vs. `===`" status="open" _status="indeterminate"/>
-            <outline text="[Ternario (`?:`)](http://php.net/manual/es/language.operators.comparison.php#language.operators.comparison.ternary)" status="open" _status="indeterminate"/>
-            <outline text="[Fusión de `null` (`??`)](https://wiki.php.net/rfc/isset_ternary)" status="open" _status="indeterminate"/>
-            <outline text="[Reglas de comparación de tipos](http://php.net/manual/es/types.comparisons.php)" status="open" _status="indeterminate"/>
+          <outline text="Comparaciones" status="closed" _status="checked" progress_counter="true">
+            <outline text="[Operadores de comparación](http://php.net/manual/es/language.operators.comparison.php)" status="closed" _status="checked"/>
+            <outline text="`==` vs. `===`" status="closed" _status="checked"/>
+            <outline text="[Ternario (`?:`)](http://php.net/manual/es/language.operators.comparison.php#language.operators.comparison.ternary)" status="closed" _status="checked"/>
+            <outline text="[Fusión de `null` (`??`)](https://wiki.php.net/rfc/isset_ternary)" status="closed" _status="checked"/>
+            <outline text="[Reglas de comparación de tipos](http://php.net/manual/es/types.comparisons.php)" status="closed" _status="checked"/>
           </outline>
         </outline>
-        <outline text="[link: Constantes|http://php.net/manual/es/language.constants.syntax.php]" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="`define()` y `const`" status="open" _status="indeterminate"/>
-          <outline text="[link: Constantes predefinidas|http://php.net/manual/es/language.constants.predefined.php]" status="open" _status="indeterminate"/>
-          <outline text="[link: `defined()`|http://php.net/manual/es/function.defined.php]" status="open" _status="indeterminate"/>
+        <outline text="[link: Constantes|http://php.net/manual/es/language.constants.syntax.php]" status="closed" _status="checked" progress_counter="true">
+          <outline text="`define()` y `const`" status="closed" _status="checked"/>
+          <outline text="[link: Constantes predefinidas|http://php.net/manual/es/language.constants.predefined.php]" status="closed" _status="checked"/>
+          <outline text="[link: `defined()`|http://php.net/manual/es/function.defined.php]" status="closed" _status="checked"/>
         </outline>
       </outline>
-      <outline text="**Conceptos básicos de PHP (II)**" status="open" _status="indeterminate" due="2020-10-05" due_user_ids="139389" tags="ce2d,ce2e,ce2g,ce3a,ce3b,ce3c,ce3d,ce3g,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
-        <outline text="Flujo de control" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: Estructuras de control|http://php.net/manual/es/language.control-structures.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="Secuencia" status="open" _status="indeterminate"/>
-            <outline text="Selección" status="open" _status="indeterminate"/>
-            <outline text="Iteración" status="open" _status="indeterminate"/>
-            <outline text="[link:Sintaxis alternativa|http://php.net/manual/es/control-structures.alternative-syntax.php]" status="open" _status="indeterminate"/>
+      <outline text="**Conceptos básicos de PHP (II)**" status="closed" _status="checked" due="2020-10-05" due_user_ids="139389" tags="ce2d,ce2e,ce2g,ce3a,ce3b,ce3c,ce3d,ce3g,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
+        <outline text="Flujo de control" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: Estructuras de control|http://php.net/manual/es/language.control-structures.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="Secuencia" status="closed" _status="checked"/>
+            <outline text="Selección" status="closed" _status="checked"/>
+            <outline text="Iteración" status="closed" _status="checked"/>
+            <outline text="[link:Sintaxis alternativa|http://php.net/manual/es/control-structures.alternative-syntax.php]" status="closed" _status="checked"/>
           </outline>
-          <outline text="Inclusión de scripts" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[`include`](http://php.net/manual/es/function.include.php), `require`" status="open" _status="indeterminate"/>
-            <outline text="[`include_once`](http://php.net/manual/es/function.include-once.php), `require_once`" status="open" _status="indeterminate"/>
-          </outline>
-        </outline>
-        <outline text="Funciones predefinidas destacadas" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[`isset()`](http://php.net/manual/es/function.isset.php)" status="open" _status="indeterminate"/>
-          <outline text="[`empty()`](http://php.net/manual/es/function.empty.php)" status="open" _status="indeterminate"/>
-          <outline text="[link: `var_dump()`|http://php.net/manual/es/function.var-dump.php]" status="open" _status="indeterminate"/>
-        </outline>
-        <outline text="[Arrays](http://php.net/manual/es/language.types.array.php)" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: Operadores para arrays|http://php.net/manual/es/language.operators.array.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: Acceso, modificación y agregación|http://php.net/manual/es/language.types.array.php#language.types.array.syntax.modifying]" status="open" _status="indeterminate"/>
-          </outline>
-          <outline text="[link: [Funciones de manejo de arrays](http://php.net/manual/es/book.array.php)|http://php.net/manual/es/ref.array.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: Ordenación de arrays|http://php.net/manual/es/array.sorting.php]" status="open" _status="indeterminate"/>
-            <outline text="`print_r()`" status="open" _status="indeterminate"/>
-            <outline text="`'+'` vs. `array_merge()`" status="open" _status="indeterminate"/>
-            <outline text="[`isset()` vs. `array_key_exists()`](http://php.net/manual/es/function.array-key-exists.php#107786)" status="open" _status="indeterminate"/>
-          </outline>
-          <outline text="[`foreach`](http://php.net/manual/es/control-structures.foreach.php)" status="open" _status="indeterminate"/>
-          <outline text="[link: Conversión a `array`|http://php.net/manual/es/language.types.array.php#language.types.array.casting]" status="open" _status="indeterminate"/>
-          <outline text="[link: *Ejemplo*: `$argv` en CLI|http://php.net/manual/es/reserved.variables.argv.php]" status="open" _status="indeterminate"/>
-        </outline>
-        <outline text="[Funciones definidas por el usuario](http://php.net/manual/es/language.functions.php)" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: Argumentos|http://php.net/manual/es/functions.arguments.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: Paso de argumentos por valor y por referencia|http://php.net/manual/es/functions.arguments.php#functions.arguments.by-reference]" status="open" _status="indeterminate"/>
-            <outline text="[link: Argumentos por defecto|http://php.net/manual/es/functions.arguments.php#functions.arguments.default]" status="open" _status="indeterminate"/>
-          </outline>
-          <outline text="[Ámbito de variables](http://php.net/language.variables.scope)" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="Ámbito simple al archivo" status="open" _status="indeterminate"/>
-            <outline text="Variables locales" status="open" _status="indeterminate"/>
-            <outline text="Uso de `global`" status="open" _status="indeterminate"/>
-            <outline text="[Variables superglobales](http://php.net/manual/es/language.variables.superglobals.php)" status="open" _status="indeterminate"/>
-          </outline>
-          <outline text="Declaraciones de tipos" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[Declaraciones de tipo de argumento](http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration)" status="open" _status="indeterminate"/>
-            <outline text="[Declaraciones de tipo de devolución](http://php.net/manual/es/functions.returning-values.php#functions.returning-values.type-declaration)" status="open" _status="indeterminate"/>
-            <outline text="[link: Tipos *nullable* (`?`) y `void`|http://php.net/manual/es/migration71.new-features.php]" status="open" _status="indeterminate"/>
-            <outline text="[link: Tipificación estricta|http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration.strict]" status="open" _status="indeterminate"/>
+          <outline text="Inclusión de scripts" status="closed" _status="checked" progress_counter="true">
+            <outline text="[`include`](http://php.net/manual/es/function.include.php), `require`" status="closed" _status="checked"/>
+            <outline text="[`include_once`](http://php.net/manual/es/function.include-once.php), `require_once`" status="closed" _status="checked"/>
           </outline>
         </outline>
-        <outline text="Comentarios y documentación del código" status="open" _status="indeterminate"/>
-        <outline text="Ejercicios" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: ¡Hola, mundo!|https://github.com/iesdonana/hola-mundo]" status="open" _status="indeterminate"/>
-          <outline text="[link: Hamming|https://github.com/iesdonana/hamming]" status="open" _status="indeterminate"/>
-          <outline text="[link: Isograma|https://github.com/iesdonana/isograma]" status="open" _status="indeterminate"/>
+        <outline text="Funciones predefinidas destacadas" status="closed" _status="checked" progress_counter="true">
+          <outline text="[`isset()`](http://php.net/manual/es/function.isset.php)" status="closed" _status="checked"/>
+          <outline text="[`empty()`](http://php.net/manual/es/function.empty.php)" status="closed" _status="checked"/>
+          <outline text="[link: `var_dump()`|http://php.net/manual/es/function.var-dump.php]" status="closed" _status="checked"/>
+        </outline>
+        <outline text="[Arrays](http://php.net/manual/es/language.types.array.php)" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: Operadores para arrays|http://php.net/manual/es/language.operators.array.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: Acceso, modificación y agregación|http://php.net/manual/es/language.types.array.php#language.types.array.syntax.modifying]" status="closed" _status="checked"/>
+          </outline>
+          <outline text="[link: [Funciones de manejo de arrays](http://php.net/manual/es/book.array.php)|http://php.net/manual/es/ref.array.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: Ordenación de arrays|http://php.net/manual/es/array.sorting.php]" status="closed" _status="checked"/>
+            <outline text="`print_r()`" status="closed" _status="checked"/>
+            <outline text="`'+'` vs. `array_merge()`" status="closed" _status="checked"/>
+            <outline text="[`isset()` vs. `array_key_exists()`](http://php.net/manual/es/function.array-key-exists.php#107786)" status="closed" _status="checked"/>
+          </outline>
+          <outline text="[`foreach`](http://php.net/manual/es/control-structures.foreach.php)" status="closed" _status="checked"/>
+          <outline text="[link: Conversión a `array`|http://php.net/manual/es/language.types.array.php#language.types.array.casting]" status="closed" _status="checked" tags="no_impartido"/>
+          <outline text="[link: *Ejemplo*: `$argv` en CLI|http://php.net/manual/es/reserved.variables.argv.php]" status="closed" _status="checked"/>
+        </outline>
+        <outline text="[Funciones definidas por el usuario](http://php.net/manual/es/language.functions.php)" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: Argumentos|http://php.net/manual/es/functions.arguments.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: Paso de argumentos por valor y por referencia|http://php.net/manual/es/functions.arguments.php#functions.arguments.by-reference]" status="closed" _status="checked"/>
+            <outline text="[link: Argumentos por defecto|http://php.net/manual/es/functions.arguments.php#functions.arguments.default]" status="closed" _status="checked"/>
+          </outline>
+          <outline text="[Ámbito de variables](http://php.net/language.variables.scope)" status="closed" _status="checked" progress_counter="true">
+            <outline text="Ámbito simple al archivo" status="closed" _status="checked"/>
+            <outline text="Variables locales" status="closed" _status="checked"/>
+            <outline text="Uso de `global`" status="closed" _status="checked"/>
+            <outline text="[Variables superglobales](http://php.net/manual/es/language.variables.superglobals.php)" status="closed" _status="checked"/>
+          </outline>
+          <outline text="Declaraciones de tipos" status="closed" _status="checked" progress_counter="true">
+            <outline text="[Declaraciones de tipo de argumento](http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration)" status="closed" _status="checked"/>
+            <outline text="[Declaraciones de tipo de devolución](http://php.net/manual/es/functions.returning-values.php#functions.returning-values.type-declaration)" status="closed" _status="checked"/>
+            <outline text="[link: Tipos *nullable* (`?`) y `void`|http://php.net/manual/es/migration71.new-features.php]" status="closed" _status="checked"/>
+            <outline text="[link: Tipificación estricta|http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration.strict]" status="closed" _status="checked"/>
+          </outline>
+        </outline>
+        <outline text="Comentarios y documentación del código" status="closed" _status="checked"/>
+        <outline text="Ejercicios" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: ¡Hola, mundo!|https://github.com/iesdonana/hola-mundo]" status="closed" _status="checked" tags="no_impartido"/>
+          <outline text="[link: Hamming|https://github.com/iesdonana/hamming]" status="closed" _status="checked"/>
+          <outline text="[link: Isograma|https://github.com/iesdonana/isograma]" status="closed" _status="checked"/>
         </outline>
       </outline>
       <outline text="**Desarrollo de aplicaciones con PHP (I)**" status="open" _status="indeterminate" due="2020-10-12" due_user_ids="139389" tags="ce1a,ce1b,ce1d,ce1f,ce2a,ce2b,ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce3a,ce3b,ce3c,ce3d,ce3e,ce3f,ce3g,ce4g,ce5d,ce5g,ce5h,ev1,ra1,ra2,ra3,ra4,ra5" progress_counter="true">
         <outline text="[SAPIs](http://stackoverflow.com/questions/9948008/what-is-sapi-and-when-would-you-use-it)" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: CLI: Uso en línea de comandos|http://php.net/manual/es/features.commandline.differences.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: `$argc` y `$argv`|http://php.net/manual/es/reserved.variables.argv.php]" status="open" _status="indeterminate"/>
-            <outline text="[link: Flujos de entrada/salida|http://php.net/manual/es/features.commandline.io-streams.php]" status="open" _status="indeterminate" tags="no_impartido,opcional"/>
+          <outline text="[link: CLI: Uso en línea de comandos|http://php.net/manual/es/features.commandline.differences.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: `$argc` y `$argv`|http://php.net/manual/es/reserved.variables.argv.php]" status="closed" _status="checked"/>
+            <outline text="[link: Flujos de entrada/salida|http://php.net/manual/es/features.commandline.io-streams.php]" status="closed" _status="checked" tags="no_impartido,opcional"/>
           </outline>
-          <outline text="Apache" status="open" _status="indeterminate" tags="no_impartido,opcional" progress_counter="true">
-            <outline text="[link: Integración de PHP con Apache|https://stackoverflow.com/questions/2712825/what-is-mod-php]" status="open" _status="indeterminate"/>
+          <outline text="Apache" status="open" _status="indeterminate" tags="opcional" progress_counter="true">
+            <outline text="[link: Integración de PHP con Apache|https://stackoverflow.com/questions/2712825/what-is-mod-php]" status="open" _status="indeterminate" tags="no_impartido"/>
             <outline text="PHP como lenguaje embebido" status="open" _status="indeterminate"/>
             <outline text="[link: Etiqueta `&lt;?=`|http://php.net/manual/es/function.echo.php]" status="open" _status="indeterminate"/>
-            <outline text="[link:Servidor web  interno|http://php.net/manual/es/features.commandline.webserver.php]" status="open" _status="indeterminate"/>
+            <outline text="[link:Servidor web  interno|http://php.net/manual/es/features.commandline.webserver.php]" status="closed" _status="checked"/>
           </outline>
           <outline text="[link: CGI: PHP-FPM (FastCGI Process Manager)|http://php.net/manual/es/install.fpm.php]" status="open" _status="indeterminate"/>
           <outline text="Configuración básica con `php.ini`" status="open" _status="indeterminate" progress_counter="true">
