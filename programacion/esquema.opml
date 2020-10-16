@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Wed, 14 Oct 2020 07:58:33 +0000</dateModified>
+    <dateModified>Fri, 16 Oct 2020 07:59:58 +0000</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
@@ -231,25 +231,25 @@
         </outline>
       </outline>
       <outline text="**Desarrollo de aplicaciones con PHP (I)**" status="open" _status="indeterminate" due="2020-10-12" due_user_ids="139389" tags="ce1a,ce1b,ce1d,ce1f,ce2a,ce2b,ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce3a,ce3b,ce3c,ce3d,ce3e,ce3f,ce3g,ce4g,ce5d,ce5g,ce5h,ev1,ra1,ra2,ra3,ra4,ra5" progress_counter="true">
-        <outline text="[SAPIs](http://stackoverflow.com/questions/9948008/what-is-sapi-and-when-would-you-use-it)" status="open" _status="indeterminate" progress_counter="true">
+        <outline text="[SAPIs](http://stackoverflow.com/questions/9948008/what-is-sapi-and-when-would-you-use-it)" status="closed" _status="checked" progress_counter="true">
           <outline text="[link: CLI: Uso en línea de comandos|http://php.net/manual/es/features.commandline.differences.php]" status="closed" _status="checked" progress_counter="true">
             <outline text="[link: `$argc` y `$argv`|http://php.net/manual/es/reserved.variables.argv.php]" status="closed" _status="checked"/>
             <outline text="[link: Flujos de entrada/salida|http://php.net/manual/es/features.commandline.io-streams.php]" status="closed" _status="checked" tags="no_impartido,opcional"/>
           </outline>
-          <outline text="Apache" status="open" _status="indeterminate" tags="opcional" progress_counter="true">
-            <outline text="[link: Integración de PHP con Apache|https://stackoverflow.com/questions/2712825/what-is-mod-php]" status="open" _status="indeterminate" tags="no_impartido"/>
-            <outline text="PHP como lenguaje embebido" status="open" _status="indeterminate"/>
-            <outline text="[link: Etiqueta `&lt;?=`|http://php.net/manual/es/function.echo.php]" status="open" _status="indeterminate"/>
+          <outline text="Apache" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: Integración de PHP con Apache|https://stackoverflow.com/questions/2712825/what-is-mod-php]" status="closed" _status="checked" tags="no_impartido,opcional"/>
+            <outline text="PHP como lenguaje embebido" status="closed" _status="checked"/>
+            <outline text="[link: Etiqueta `&lt;?=`|http://php.net/manual/es/function.echo.php]" status="closed" _status="checked"/>
             <outline text="[link:Servidor web  interno|http://php.net/manual/es/features.commandline.webserver.php]" status="closed" _status="checked"/>
           </outline>
-          <outline text="[link: CGI: PHP-FPM (FastCGI Process Manager)|http://php.net/manual/es/install.fpm.php]" status="open" _status="indeterminate"/>
-          <outline text="Configuración básica con `php.ini`" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="`error_reporting = E_ALL`" status="open" _status="indeterminate"/>
-            <outline text="`display_errors = On`" status="open" _status="indeterminate"/>
-            <outline text="`display_startup_errors = On`" status="open" _status="indeterminate"/>
-            <outline text="`date.timezone = 'UTC'`" status="open" _status="indeterminate"/>
+          <outline text="[link: CGI: PHP-FPM (FastCGI Process Manager)|http://php.net/manual/es/install.fpm.php]" status="closed" _status="checked" tags="no_impartido,opcional"/>
+          <outline text="Configuración básica con `php.ini`" status="closed" _status="checked" progress_counter="true">
+            <outline text="`error_reporting = E_ALL`" status="closed" _status="checked"/>
+            <outline text="`display_errors = On`" status="closed" _status="checked"/>
+            <outline text="`display_startup_errors = On`" status="closed" _status="checked"/>
+            <outline text="`date.timezone = 'UTC'`" status="closed" _status="checked"/>
           </outline>
-          <outline text="Módulos de extensión" status="open" _status="indeterminate"/>
+          <outline text="Módulos de extensión" status="closed" _status="checked"/>
         </outline>
         <outline text="[Manejo de datos de entrada: `$_GET` y `$_POST`](http://php.net/manual/es/language.variables.external.php)" status="open" _status="indeterminate"/>
         <outline text="Funciones auxiliares interesantes" status="open" _status="indeterminate" progress_counter="true">
