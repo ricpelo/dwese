@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Wed, 28 Oct 2020 09:31:48 +0000</dateModified>
+    <dateModified>Thu, 29 Oct 2020 22:35:49 +0000</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
@@ -311,6 +311,9 @@
             <outline text="[link: `rowCount()`|http://php.net/manual/es/pdostatement.rowcount.php]" status="closed" _status="checked"/>
           </outline>
           <outline text="Correspondencias de tipos entre SQL y PHP" status="closed" _status="checked"/>
+          <outline text="Manejo de errores en PDO" status="closed" _status="checked">
+            <outline text="[`PDO::errorInfo()`](https://www.php.net/manual/es/pdo.errorinfo.php)" status="closed" _status="checked"/>
+          </outline>
           <outline text="Transacciones" status="closed" _status="checked" tags="no_impartido" progress_counter="true">
             <outline text="`$pdo-&gt;beginTransaction();`" status="closed" _status="checked"/>
             <outline text="`$pdo-&gt;commit();`" status="closed" _status="checked"/>
@@ -674,20 +677,19 @@
           <outline text="[link: Relaciones|https://www.yiiframework.com/doc/guide/2.0/en/db-active-record#relational-data]" status="open" _status="indeterminate" progress_counter="true">
             <outline text="[link: Encadenamiento de relaciones|http://www.yiiframework.com/doc-2.0/guide-db-active-record.html#multi-table-relations]" status="open" _status="indeterminate"/>
           </outline>
-          <outline text="[Carga ansiosa y carga perezosa](https://www.yiiframework.com/doc/guide/2.0/en/db-active-record#lazy-eager-loading)" status="open" _status="indeterminate"/>
+          <outline text="[Carga impaciente y carga perezosa](https://www.yiiframework.com/doc/guide/2.0/en/db-active-record#lazy-eager-loading)" status="open" _status="indeterminate"/>
           <outline text="[link: `joinWith()`|https://www.yiiframework.com/doc/guide/2.0/en/db-active-record#joining-with-relations]" status="open" _status="indeterminate"/>
           <outline text="[link: Atributos virtuales|http://www.yiiframework.com/doc-2.0/guide-db-active-record.html#selecting-extra-fields]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="Siete técnicas" status="open" _status="indeterminate" progress_counter="true">
-              <outline text="Calcular a mano cuando/donde haga falta" status="open" _status="indeterminate"/>
-              <outline text="Usar vistas SQL" status="open" _status="indeterminate"/>
-              <outline text="Sobreescribir el método `find()` del modelo para que se use siempre en lugar del heredado de `ActiveRecord`" status="open" _status="indeterminate"/>
-              <outline text="Sobreescribir el método `afterFind()` para rellenar el atributo a mano cada vez que se hace un `find()`" status="open" _status="indeterminate"/>
-              <outline text="Capturar el evento `EVENT_AFTER_FIND` del modelo" status="open" _status="indeterminate"/>
-              <outline text="[link: Usar una propiedad con *getter* y *setter*|https://github.com/yiisoft/yii2/issues/8316#issuecomment-99863239]" status="open" _status="indeterminate"/>
-              <outline text="[link: Crear un método `findEspecial()` que se usará en lugar de `find()` cuando haga falta|https://github.com/yiisoft/yii2/issues/8316#issuecomment-99867306]" status="open" _status="indeterminate"/>
-              <outline text="La mejor opción, en la mayoría de los casos: combinar las dos anteriores" status="open" _status="indeterminate">
-                <outline text="Ejemplo" status="open" _status="indeterminate"/>
-              </outline>
+            <outline text="Técnicas" status="open" _status="indeterminate" progress_counter="true"/>
+            <outline text="Calcular a mano cuando/donde haga falta" status="invalid" _status="none"/>
+            <outline text="Usar vistas SQL" status="invalid" _status="none"/>
+            <outline text="Sobreescribir el método `find()` del modelo para que se use siempre en lugar del heredado de `ActiveRecord`" status="invalid" _status="none"/>
+            <outline text="Sobreescribir el método `afterFind()` para rellenar el atributo a mano cada vez que se hace un `find()`" status="invalid" _status="none"/>
+            <outline text="Capturar el evento `EVENT_AFTER_FIND` del modelo" status="invalid" _status="none"/>
+            <outline text="[link: Usar una propiedad con *getter* y *setter*|https://github.com/yiisoft/yii2/issues/8316#issuecomment-99863239]" status="invalid" _status="none"/>
+            <outline text="[link: Crear un método `findEspecial()` que se usará en lugar de `find()` cuando haga falta|https://github.com/yiisoft/yii2/issues/8316#issuecomment-99867306]" status="invalid" _status="none"/>
+            <outline text="La mejor opción, en la mayoría de los casos: combinar las dos anteriores" status="invalid" _status="none">
+              <outline text="Ejemplo" status="invalid" _status="none"/>
             </outline>
           </outline>
         </outline>

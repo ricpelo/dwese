@@ -364,6 +364,10 @@
                 \item \texttt{rowCount()}
             \end{longenum}
             \item Correspondencias de tipos entre SQL y PHP
+            \item Manejo de errores en PDO
+            \begin{longenum}
+                \item \texttt{PDO::errorInfo()}
+            \end{longenum}
             \item Transacciones 
             \begin{longenum}
                 \item \texttt{\$pdo->beginTransaction();}
@@ -771,24 +775,11 @@
             \begin{longenum}
                 \item Encadenamiento de relaciones
             \end{longenum}
-            \item Carga ansiosa y carga perezosa
+            \item Carga impaciente y carga perezosa
             \item \texttt{joinWith()}
             \item Atributos virtuales
             \begin{longenum}
-                \item Siete técnicas
-                \begin{longenum}
-                    \item Calcular a mano cuando/donde haga falta
-                    \item Usar vistas SQL
-                    \item Sobreescribir el método \texttt{find()} del modelo para que se use siempre en lugar del heredado de \texttt{ActiveRecord}
-                    \item Sobreescribir el método \texttt{afterFind()} para rellenar el atributo a mano cada vez que se hace un \texttt{find()}
-                    \item Capturar el evento \texttt{EVENT\_AFTER\_FIND} del modelo
-                    \item Usar una propiedad con \textit{getter} y \textit{setter}
-                    \item Crear un método \texttt{findEspecial()} que se usará en lugar de \texttt{find()} cuando haga falta
-                    \item La mejor opción, en la mayoría de los casos: combinar las dos anteriores
-                    \begin{longenum}
-                        \item Ejemplo
-                    \end{longenum}
-                \end{longenum}
+                \item Técnicas
             \end{longenum}
         \end{longenum}
     \end{longenum}

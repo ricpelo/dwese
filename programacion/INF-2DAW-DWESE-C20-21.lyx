@@ -3652,21 +3652,5 @@ s/Instruccion_Pantallas/Instruccion_basica.pdf
 
 \end_layout
 
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "instrucciones-23-04-2020"
-literal "false"
-
-\end_inset
-
-
-\emph on
-Instrucciones de 23 de abril de 2020
-\emph default
-, de la Viceconsejería de Educación y Deporte, relativas a las medidas educativa
-s a adoptar en el tercer trimestre del curso 2019/2020.
-\end_layout
-
 \end_body
 \end_document
