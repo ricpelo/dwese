@@ -1982,7 +1982,7 @@ status open
 
 \begin_layout Plain Layout
 
-if (mínimo(|
+if (min(|
 \backslash
 TR|, |
 \backslash
@@ -2011,7 +2011,7 @@ EX| * 0.7;
 
     |
 \backslash
-NOTA| = mínimo(|
+NOTA| = min(|
 \backslash
 TR|, |
 \backslash
@@ -2374,9 +2374,10 @@ Calificación final
 \end_layout
 
 \begin_layout Standard
-Para superar el módulo será necesario obtener una calificación mínima en
- cada evaluación parcial, según se establece en el siguiente algoritmo,
- donde se determina cómo se calcula la calificación final del módulo:
+Para superar el módulo mediante evaluación continua será necesario obtener
+ una calificación mínima en cada evaluación parcial, según se establece
+ en el siguiente algoritmo, donde se determina cómo se calcula la calificación
+ final del módulo:
 \begin_inset VSpace -2.5em
 \end_inset
 
@@ -2419,7 +2420,7 @@ status open
 
 \begin_layout Plain Layout
 
-if (mínimo(|
+if (min(|
 \backslash
 EV1|, |
 \backslash
@@ -2448,7 +2449,7 @@ EV2| * 0.5;
 
     |
 \backslash
-NOTA| = mínimo(|
+NOTA| = min(|
 \backslash
 EV1|, |
 \backslash
@@ -2469,6 +2470,12 @@ EV2|);
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:calificacion-final"
+
+\end_inset
+
 (Cálculo de la calificación final)
 \end_layout
 
@@ -2606,16 +2613,66 @@ EX
 \end_layout
 
 \begin_layout Standard
-Al final de cada evaluación, o a comienzos de la evaluación siguiente, se
- llevará a cabo una prueba de recuperación para aquellos alumnos que tengan
- algún contenido pendiente en esa evaluación.
- Al final del curso se hará una prueba final de recuperación para aquellos
- alumnos que tengan pendientes contenidos de alguna evaluación, debiendo
- presentarse únicamente a aquellas partes que tengan pendientes.
+Para los alumnos que tengan contenidos pendientes de evaluación positiva
+ en la primera evaluación, se llevará a cabo una prueba de recuperación
+ a comienzos de la segunda evaluación.
+ Asimismo, para los alumnos que tengan contenidos pendientes de evaluación
+ positiva en la segunda evaluación, se llevará a cabo una prueba de recuperación
+ a finales de la misma.
  La evaluación de tales pruebas de recuperación podrá requerir, a criterio
  y discreción del profesor del módulo, la defensa de las mismas en una entrevist
 a individual con el alumno para garantizar la autoría y la adquisición adecuada
  de las competencias correspondientes.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Prueba-final"
+
+\end_inset
+
+Prueba final
+\end_layout
+
+\begin_layout Standard
+La normativa vigente establece la existencia de un examen o prueba a final
+ de curso (usualmente en junio) para aquellos alumnos que no hayan podido
+ superar el módulo mediante el procedimiento habitual de evaluación continua
+ ni siquiera mediante los instrumentos de recuperación indicados anteriormente.
+ Por tanto, todo alumno que tenga pendiente la superación del módulo deberá
+ presentarse a la prueba final.
+ Asimismo, todo alumno que ya haya superado el módulo mediante evaluación
+ continua, también podrá, si así lo desea, presentarse a la prueba final
+ para intentar mejorar su calificación, corriendo el riesgo de acabar con
+ menor calificación que antes.
+\end_layout
+
+\begin_layout Standard
+Asimismo, y según establece la misma normativa, esta prueba final permite
+ al alumnado la superación del módulo incluso en el caso de no haber asistido
+ con regularidad a clase a lo largo del curso.
+ Es, por tanto, el único instrumento que posibilita el que un alumno que
+ cuente con un número de faltas de asistencia superior al permitido (y que,
+ por consiguiente, haya perdido el derecho a la evaluación continua) pueda
+ demostrar la consecución de los objetivos del módulo y, en consecuencia,
+ su superación.
+\end_layout
+
+\begin_layout Standard
+La prueba final podrá versar sobre cualesquiera de los contenidos del módulo
+ y abarcará, por tanto, todo el curso.
+\end_layout
+
+\begin_layout Standard
+La calificación final del módulo para un alumno que se presente a la prueba
+ final (estando obligado o no a hacerlo), será directamente la calificación
+ obtenida en la prueba final.
+\end_layout
+
+\begin_layout Standard
+El alumno que, debiendo presentarse a la prueba final, no lo haga, será
+ calificado como «No evaluado» (NE).
 \end_layout
 
 \begin_layout Subsubsection
