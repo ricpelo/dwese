@@ -522,7 +522,7 @@ Ricardo Pérez López
 \end_layout
 
 \begin_layout Date
-Curso 2020/2021
+Curso 2021/2022
 \end_layout
 
 \begin_layout Publishers
@@ -2075,6 +2075,29 @@ framecolor "black"
 backgroundcolor "none"
 status open
 
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begingroup
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlist[description]{style=multiline,labelwidth=1.2cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 \begin_inset ERT
 status open
@@ -2107,6 +2130,38 @@ EX
 
 : Calificación del examen correspondiente a ese trimestre, valorada del
  0 al 10.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NOTA
+\end_layout
+
+\end_inset
+
+: Calificación de la evaluación parcial, valorada del 0 al 10.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+endgroup
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2519,6 +2574,29 @@ framecolor "black"
 backgroundcolor "none"
 status open
 
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begingroup
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlist[description]{style=multiline,labelwidth=1.2cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 \begin_inset ERT
 status open
@@ -2549,6 +2627,38 @@ EV2
 \end_inset
 
 : Calificación de la segunda evaluación.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+NOTA
+\end_layout
+
+\end_inset
+
+: Calificación final, valorada del 0 al 10.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+endgroup
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
