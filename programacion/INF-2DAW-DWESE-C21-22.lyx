@@ -1606,1242 +1606,6 @@ endgroup
 \end_layout
 
 \begin_layout Section
-Instrumentos y procedimientos de evaluación y calificación
-\end_layout
-
-\begin_layout Standard
-La evaluación tendrá como finalidad determinar el nivel de competencia de
- los alumnos y la consecución de los objetivos.
- Se desarrollará de forma continua, y atenderá a los siguientes aspectos:
-\end_layout
-
-\begin_layout Itemize
-Aprendizaje autónomo, viendo la capacidad del alumno para interiorizar,
- gestionar y participar en los procesos de aprendizaje propios.
-\end_layout
-
-\begin_layout Itemize
-Comprensión del lenguaje común.
-\end_layout
-
-\begin_layout Itemize
-Adquisición de conceptos básicos del módulo profesional que permiten al
- alumno incluirlos como un elemento más de su realidad profesional.
-\end_layout
-
-\begin_layout Itemize
-Participación y trabajo en grupo, viendo la capacidad que tiene este de
- escuchar y debatir las diferentes soluciones de un problema.
-\end_layout
-
-\begin_layout Itemize
-Nivel de abstracción alcanzado.
-\end_layout
-
-\begin_layout Standard
-Para que el seguimiento de dicha evaluación sea factible, el alumno deberá
- asistir con regularidad a las clases y participar activamente en las mismas,
- de forma que una sistemática y frecuente falta de asistencia a clase supondrá
- para el alumno la 
-\series bold
-pérdida de la evaluación continua
-\series default
- y sólo tendrá derecho a un examen final.
- Asimismo, se requiere que el alumno 
-\series bold
-acceda al menos diariamente a las plataformas iPasen y Moodle Centros
-\series default
- y que 
-\series bold
-revise diariamente su correo en el dominio 
-\family typewriter
-@iesdonana.org
-\family default
-\series default
- para informarse puntualmente de las novedades que pudieran darse en el
- módulo, quedando claro que 
-\series bold
-es responsabilidad del alumno informarse activamente sobre las mismas
-\series default
-.
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Valoración general de los contenidos
-\end_layout
-
-\begin_layout Standard
-Los contenidos se ponderarán en base a los siguientes porcentajes:
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="2">
-<features tabularvalignment="middle">
-<column alignment="left" valignment="top" width="0pt">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Trabajos, actividades y ejercicios (casa, clase, grupo) 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-(
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TR
-\end_layout
-
-\end_inset
-
-)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-30%
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Pruebas evaluativas 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-(
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EX
-\end_layout
-
-\end_inset
-
-)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-70%
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Si, por algún motivo, no se pudiera evaluar uno de los dos apartados anteriores
- (
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TR
-\backslash
-
-\end_layout
-
-\end_inset
-
- o 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EX
-\end_layout
-
-\end_inset
-
-), el otro apartado restante soportaría el 100% de la carga evaluativa,
- de forma que la calificación final resultaría únicamente de dicho apartado.
-\end_layout
-
-\begin_layout Standard
-La evaluación de cualquiera de los trabajos, actividades, ejercicios y pruebas
- evaluativas podrá requerir, a criterio y discreción del profesor del módulo,
- la defensa de los mismos en una entrevista individual con el alumno para
- garantizar la autoría y la adquisición adecuada de las competencias correspondi
-entes.
-\end_layout
-
-\begin_layout Subsection
-Calificación
-\end_layout
-
-\begin_layout Standard
-Se llevarán a cabo trabajos, actividades y/o ejercicios (apartado 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TR
-\end_layout
-
-\end_inset
-
-) versados sobre los contenidos trabajados en una unidad didáctica o bloque
- de unidades didácticas conceptualmente relacionadas.
- (Esto significa, en consecuencia, que no es obligatoria la realización
- de trabajos, actividades y/o ejercicios en cada unidad didáctica, sino
- que a tales efectos se pueden agrupar varias unidades didácticas.)
-\end_layout
-
-\begin_layout Standard
-Dentro de este grupo podrá incluirse alguna prueba (tipo test o de respuestas
- cortas) a responder de forma individual sobre conocimientos teóricos de
- determinados aspectos básicos asociados a unidades (o conjunto de unidades)
- didácticas concretas.
-\end_layout
-
-\begin_layout Standard
-Asimismo, se realizará un examen al final de cada evaluación parcial (apartado
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EX
-\end_layout
-
-\end_inset
-
-), coincidiendo aproximadamente con el final del trimestre correspondiente.
- Debido al carácter de evaluación continua del módulo, así como del hecho
- de que cada contenido trabajado se asienta sobre los anteriores, no es
- posible evaluar el segundo trimestre por separado del primero, por lo que
- los exámenes evaluarán todos los contenidos trabajados hasta el momento
- desde el comienzo del curso, de forma que:
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-En la primera evaluación
-\series default
-, el examen evaluará los contenidos trabajados en el primer trimestre.
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-En la segunda evaluación
-\series default
-, el examen evaluará los contenidos trabajados en el segundo trimestre pero
- pudiendo incluir aspectos del primer trimestre.
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Calificaciones parciales
-\end_layout
-
-\begin_layout Standard
-La 
-\series bold
-calificación de cada evaluación parcial
-\series default
- (primer y segundo trimestres por separado) se calculará de la siguiente
- forma:
-\begin_inset VSpace -2.5em
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "80col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=PHP,startinline,escapeinside={||},mathescape=true,framesep=5mm,frame=topline"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-if (min(|
-\backslash
-TR|, |
-\backslash
-EX|) |$
-\backslash
-geq$| 4) {
-\end_layout
-
-\begin_layout Plain Layout
-
-    |
-\backslash
-NOTA| = |
-\backslash
-TR| * 0.3 + |
-\backslash
-EX| * 0.7;
-\end_layout
-
-\begin_layout Plain Layout
-
-} else {
-\end_layout
-
-\begin_layout Plain Layout
-
-    |
-\backslash
-NOTA| = min(|
-\backslash
-TR|, |
-\backslash
-EX|);
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-(Cálculo de la calificación parcial)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Donde:
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "80col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begingroup
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlist[description]{style=multiline,labelwidth=1.2cm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TR
-\end_layout
-
-\end_inset
-
-: Media aritmética de las calificaciones de los trabajos realizados en ese
- trimestre, valorados del 0 al 10.
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EX
-\end_layout
-
-\end_inset
-
-: Calificación del examen correspondiente a ese trimestre, valorada del
- 0 al 10.
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-NOTA
-\end_layout
-
-\end_inset
-
-: Calificación de la evaluación parcial, valorada del 0 al 10.
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-endgroup
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-La evaluación parcial se considera aprobada si 
-\begin_inset Formula $\NOTA\geq4.5$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Si durante el trimestre en cuestión no se realizaran trabajos, actividades
- y/o ejercicios (apartado 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TR
-\end_layout
-
-\end_inset
-
-) dignos de calificación, entonces los porcentajes se redistribuirán de
- forma que la calificación de la evaluación parcial correspondiente resultará
- ser la nota del examen (apartado 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EX
-\end_layout
-
-\end_inset
-
-), por lo que quedará simplemente de la siguiente forma:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\NOTA=\EX
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Asimismo, si durante el trimestre en cuestión no se realizaran exámenes
- (apartado 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EX
-\end_layout
-
-\end_inset
-
-), entonces los porcentajes se redistribuirán de forma que la calificación
- de la evaluación parcial correspondiente resultará ser la nota de los trabajos,
- actividades y/o ejercicios (apartado 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TR
-\end_layout
-
-\end_inset
-
-), por lo que quedará simplemente de la siguiente forma:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\NOTA=\TR
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Las 
-\series bold
-faltas de ortografía
-\series default
- en los exámenes serán 
-\series bold
-penalizadas
-\series default
- según acuerdo del Departamento, de la siguiente forma:
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="3">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Número de faltas
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Evaluación 1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Evaluación 2
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $<5$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $-0,25$
-\end_inset
-
- puntos
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $-0,50$
-\end_inset
-
- puntos
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\geq5$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $-0,50$
-\end_inset
-
- puntos
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $-1,00$
-\end_inset
-
- puntos
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-enlargethispage{
-\backslash
-baselineskip}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-En ningún caso este criterio podrá ser motivo de que el alumno no supere
- la prueba escrita.
-\end_layout
-
-\begin_layout Subsubsection
-Calificación final
-\end_layout
-
-\begin_layout Standard
-Para superar el módulo mediante evaluación continua será necesario obtener
- una calificación mínima en cada evaluación parcial, según se establece
- en el siguiente algoritmo, donde se determina cómo se calcula la calificación
- final del módulo:
-\begin_inset VSpace -2.5em
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "80col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=PHP,startinline,escapeinside={||},mathescape=true,framesep=5mm,frame=topline"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-if (min(|
-\backslash
-EV1|, |
-\backslash
-EV2|) |$
-\backslash
-geq$| 4) {
-\end_layout
-
-\begin_layout Plain Layout
-
-    |
-\backslash
-NOTA| = |
-\backslash
-EV1| * 0.5 + |
-\backslash
-EV2| * 0.5;
-\end_layout
-
-\begin_layout Plain Layout
-
-} else {
-\end_layout
-
-\begin_layout Plain Layout
-
-    |
-\backslash
-NOTA| = min(|
-\backslash
-EV1|, |
-\backslash
-EV2|);
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "alg:calificacion-final"
-
-\end_inset
-
-(Cálculo de la calificación final)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Donde:
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "80col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begingroup
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlist[description]{style=multiline,labelwidth=1.2cm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EV1
-\end_layout
-
-\end_inset
-
-: Calificación de la primera evaluación.
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EV2
-\end_layout
-
-\end_inset
-
-: Calificación de la segunda evaluación.
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-NOTA
-\end_layout
-
-\end_inset
-
-: Calificación final, valorada del 0 al 10.
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-endgroup
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El módulo se considera aprobado si 
-\begin_inset Formula $\NOTA\geq4.5$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Medidas de recuperación y mejora de las calificaciones
-\end_layout
-
-\begin_layout Subsubsection
-Recuperación del apartado 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TR
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-A lo largo del curso se abrirán nuevas ventanas temporales para que el alumnado
- entregue las correcciones necesarias en aquellas actividades que estén
- pendientes de evaluación positiva.
- La evaluación de tales correcciones podrá requerir, a criterio y discreción
- del profesor del módulo, la defensa de las mismas en una entrevista individual
- con el alumno para garantizar la autoría y la adquisición adecuada de las
- competencias correspondientes.
-\end_layout
-
-\begin_layout Subsubsection
-Recuperación del apartado 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EX
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Para los alumnos que tengan contenidos pendientes de evaluación positiva
- en la primera evaluación, se llevará a cabo una prueba de recuperación
- a comienzos de la segunda evaluación.
- Asimismo, para los alumnos que tengan contenidos pendientes de evaluación
- positiva en la segunda evaluación, se llevará a cabo una prueba de recuperación
- a finales de la misma.
- La evaluación de tales pruebas de recuperación podrá requerir, a criterio
- y discreción del profesor del módulo, la defensa de las mismas en una entrevist
-a individual con el alumno para garantizar la autoría y la adquisición adecuada
- de las competencias correspondientes.
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Prueba-final"
-
-\end_inset
-
-Prueba final
-\end_layout
-
-\begin_layout Standard
-La normativa vigente establece la existencia de un examen o prueba a final
- de curso (usualmente en junio) para aquellos alumnos que no hayan podido
- superar el módulo mediante el procedimiento habitual de evaluación continua
- ni siquiera mediante los instrumentos de recuperación indicados anteriormente.
- Por tanto, todo alumno que tenga pendiente la superación del módulo deberá
- presentarse a la prueba final.
- Asimismo, todo alumno que ya haya superado el módulo mediante evaluación
- continua, también podrá, si así lo desea, presentarse a la prueba final
- para intentar mejorar su calificación, corriendo el riesgo de acabar con
- menor calificación que antes.
-\end_layout
-
-\begin_layout Standard
-Asimismo, y según establece la misma normativa, esta prueba final permite
- al alumnado la superación del módulo incluso en el caso de no haber asistido
- con regularidad a clase a lo largo del curso.
- Es, por tanto, el único instrumento que posibilita el que un alumno que
- cuente con un número de faltas de asistencia superior al permitido (y que,
- por consiguiente, haya perdido el derecho a la evaluación continua) pueda
- demostrar la consecución de los objetivos del módulo y, en consecuencia,
- su superación.
-\end_layout
-
-\begin_layout Standard
-La prueba final podrá versar sobre cualesquiera de los contenidos del módulo
- y abarcará, por tanto, todo el curso.
-\end_layout
-
-\begin_layout Standard
-La calificación final del módulo para un alumno que se presente a la prueba
- final (estando obligado o no a hacerlo), será directamente la calificación
- obtenida en la prueba final.
-\end_layout
-
-\begin_layout Standard
-El alumno que, debiendo presentarse a la prueba final, no lo haga, será
- calificado como «No evaluado» (NE).
-\end_layout
-
-\begin_layout Subsubsection
-Mejora de las calificaciones
-\begin_inset CommandInset label
-LatexCommand label
-name "par:Mejora-de-las-calificaciones"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El alumno con contenido superado que quieran mejorar sus calificaciones
- («subir nota») podrá, si así lo desea, someterse al protocolo de recuperación
- y realizar de nuevo las actividades del apartado 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TR
-\backslash
-
-\end_layout
-
-\end_inset
-
- que desee, o bien las pruebas de recuperación del apartado 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EX
-\backslash
-
-\end_layout
-
-\end_inset
-
- que desee (o bien ambas cosas) pero, en tal caso, 
-\series bold
-es consciente, entiende, asume y acepta que la calificación que finalmente
- constará en dicha actividad o prueba será la alcanzada en ese último intento,
- por lo que 
-\bar under
-corre el riesgo de acabar con menos nota que antes
-\series default
-\bar default
-.
-\end_layout
-
-\begin_layout Section
 Contenidos y temporalización
 \end_layout
 
@@ -2919,6 +1683,7 @@ El título de cada unidad va etiquetado con los resultados de aprendizaje
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
+preview true
 filename "esquema.tex"
 
 \end_inset
@@ -2940,8 +1705,6 @@ je pero no es el elemento fundamental de evaluación.
 \end_layout
 
 \begin_layout Standard
-
-\size scriptsize
 \begin_inset CommandInset include
 LatexCommand input
 filename "race.tex"
@@ -2949,6 +1712,742 @@ filename "race.tex"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Evaluación y calificación
+\end_layout
+
+\begin_layout Standard
+La evaluación tendrá como finalidad determinar el nivel de competencia de
+ los alumnos y la consecución de los objetivos del módulo.
+ Se desarrollará de forma continua, y atenderá a los siguientes aspectos:
+\end_layout
+
+\begin_layout Itemize
+Aprendizaje autónomo, viendo la capacidad del alumno para interiorizar,
+ gestionar y participar en los procesos de aprendizaje propios.
+\end_layout
+
+\begin_layout Itemize
+Comprensión del lenguaje común.
+\end_layout
+
+\begin_layout Itemize
+Adquisición de conceptos básicos del módulo profesional que permiten al
+ alumno incluirlos como un elemento más de su realidad profesional.
+\end_layout
+
+\begin_layout Itemize
+Participación y trabajo en grupo, viendo la capacidad que tiene este de
+ escuchar y debatir las diferentes soluciones de un problema.
+\end_layout
+
+\begin_layout Itemize
+Nivel de abstracción alcanzado.
+\end_layout
+
+\begin_layout Standard
+Durante el desarrollo del curso existirán, al menos, una evaluación inicial,
+ dos evaluaciones parciales (al final de cada trimestre) y una evaluación
+ final.
+\end_layout
+
+\begin_layout Standard
+La evaluación se realizará atendiendo a los criterios de evaluación asociados
+ a cada resultado de aprendizaje del módulo.
+ Para ello, se usarán instrumentos de evaluación que medirán si el alumnado
+ cumple con los criterios de evaluación y en qué grado.
+\end_layout
+
+\begin_layout Itemize
+En cada evaluación parcial se medirá el grado de cumplimiento de los criterios
+ de evaluación trabajados y evaluados en el trimestre correspondiente.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Se entenderá que un alumno cumple un determinado criterio de evaluación
+ si supera al menos un instrumento de evaluación que mida el grado de cumplimien
+to de dicho criterio de evaluación.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+En la evaluación final se determinará si el alumnado alcanza, y en qué medida,
+ los resultados de aprendizaje del módulo a partir de los criterios de evaluació
+n asociados a cada resultado de aprendizaje y en función de la ponderación
+ que tiene cada criterio de evaluación en su correspondiente resultado de
+ aprendizaje, según se establece en el apartado 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Ponderación-de-los-criterios"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Para la superación del módulo se requerirá que el alumnado alcance todos
+ los resultados de aprendizaje del módulo.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Para que el seguimiento de dicha evaluación sea factible, el alumno deberá
+ asistir con regularidad a las clases y participar activamente en las mismas,
+ de forma que una sistemática y frecuente falta de asistencia a clase supondrá
+ para el alumno la 
+\series bold
+pérdida de la evaluación continua
+\series default
+ y sólo tendrá derecho a una prueba final.
+ Asimismo, se requiere que el alumno 
+\series bold
+acceda al menos diariamente a las plataformas iPasen y Moodle Centros
+\series default
+ y que 
+\series bold
+revise diariamente su correo en el dominio 
+\family typewriter
+@iesdonana.org
+\family default
+\series default
+ para informarse puntualmente de las novedades que pudieran darse en el
+ módulo, quedando claro que 
+\series bold
+es responsabilidad del alumno informarse activamente sobre las mismas
+\series default
+.
+\end_layout
+
+\begin_layout Subsection
+Valoración general de los instrumentos de evaluación y calificación
+\end_layout
+
+\begin_layout Standard
+Los instrumentos de evaluación y calificación usados durante el curso para
+ medir el grado de cumplimiento de los criterios de evaluación se clasifican
+ en dos grandes tipos:
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Trabajos, actividades y ejercicios (casa, clase, grupo) (tipo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TR
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Pruebas evaluativas (tipo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+EX
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+La evaluación de cualquiera de los trabajos, actividades, ejercicios y pruebas
+ evaluativas podrá requerir, a criterio y discreción del profesor del módulo,
+ la defensa de los mismos en una entrevista individual con el alumno para
+ garantizar la autoría y la adquisición adecuada de las competencias correspondi
+entes.
+\end_layout
+
+\begin_layout Standard
+Los trabajos, actividades y/o ejercicios (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TR
+\end_layout
+
+\end_inset
+
+) versarán sobre los contenidos trabajados en una unidad didáctica o bloque
+ de unidades didácticas conceptualmente relacionadas.
+ (Esto significa, en consecuencia, que no es obligatoria la realización
+ de trabajos, actividades y/o ejercicios en cada unidad didáctica, sino
+ que a tales efectos se pueden agrupar varias unidades didácticas.)
+\end_layout
+
+\begin_layout Standard
+Dentro de este grupo podrá incluirse alguna prueba (tipo test o de respuestas
+ cortas) a responder de forma individual sobre conocimientos teóricos de
+ determinados aspectos básicos asociados a unidades (o conjunto de unidades)
+ didácticas concretas.
+\end_layout
+
+\begin_layout Standard
+Asimismo, se realizará un examen al final de cada evaluación parcial (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+EX
+\end_layout
+
+\end_inset
+
+), coincidiendo aproximadamente con el final del trimestre correspondiente.
+ Debido al carácter de evaluación continua del módulo, así como del hecho
+ de que cada contenido trabajado se asienta sobre los anteriores, es posible
+ que el alumno requiera, para la evaluación positiva de un trimestre, el
+ conocimiento necesario de contenidos de trimestres anteriores.
+\end_layout
+
+\begin_layout Subsection
+Calificación
+\end_layout
+
+\begin_layout Subsubsection
+De un criterio de evaluación
+\end_layout
+
+\begin_layout Standard
+La calificación de cada criterio de evaluación, una vez trabajado y evaluado,
+ se calculará en función del grado de cumplimiento del mismo a partir de
+ la calificación obtenida en el instrumento de evaluación y calificación
+ usado para medir el grado de cumplimiento de ese criterio de evaluación.
+\end_layout
+
+\begin_layout Standard
+Un criterio de evaluación se considerará cumplido si su calificación es
+ igual o superior a 5,0.
+\end_layout
+
+\begin_layout Standard
+Si, a lo largo del curso, se usaran varios instrumentos para evaluar y calificar
+ el mismo criterio de evaluación, la calificación de dicho criterio de evaluació
+n se calcularía de la siguiente forma:
+\end_layout
+
+\begin_layout Enumerate
+Se agrupan las calificaciones obtenidas en los diferentes instrumentos que
+ hayan medido ese criterio de evaluación en función del tipo de instrumento
+ usado para evaluarlo (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TR
+\backslash
+
+\end_layout
+
+\end_inset
+
+ o 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+EX
+\end_layout
+
+\end_inset
+
+).
+ Se obtendrán así dos grupos de calificaciones, uno por cada tipo de instrumento.
+\end_layout
+
+\begin_layout Enumerate
+En cada grupo, se seleccionará la calificación máxima dentro de ese grupo.
+\end_layout
+
+\begin_layout Enumerate
+Se calculará la media ponderada de las dos calificaciones resultantes del
+ punto anterior, atendiendo a las siguientes ponderaciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TR
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+EX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si, por algún motivo, no se usaran instrumentos de uno de los dos tipos
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TR
+\backslash
+
+\end_layout
+
+\end_inset
+
+ o 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+EX
+\end_layout
+
+\end_inset
+
+) durante la evaluación, el otro apartado soportaría el 100% de la carga
+ evaluativa, de forma que la evaluación y calificación resultaría únicamente
+ de dicho apartado.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Esa media ponderada será la calificación de ese criterio de evaluación.
+\end_layout
+
+\begin_layout Standard
+En consecuencia, la calificación de un determinado criterio de evaluación
+ podría ir cambiando a lo largo del curso en función de los instrumentos
+ de evaluación y calificación realizados por el alumno para evaluar, recuperar,
+ mejorar su calificación, etcétera.
+\end_layout
+
+\begin_layout Subsubsection
+De un resultado de aprendizaje
+\end_layout
+
+\begin_layout Standard
+La calificación de cada resultado de aprendizaje se calculará como la media
+ ponderada de los criterios de evaluación correspondientes a ese resultado
+ de aprendizaje, en función de:
+\end_layout
+
+\begin_layout Itemize
+La calificación obtenida en cada criterio de evaluación.
+\end_layout
+
+\begin_layout Itemize
+La ponderación de cada criterio de evaluación en su correspondiente resultado
+ de aprendizaje, según se determina en el apartado 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Ponderación-de-los-criterios"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se considera que un alumno ha alcanzado un resultado de aprendizaje si su
+ calificación es igual o superior a 5,0.
+\end_layout
+
+\begin_layout Subsubsection
+Calificaciones parciales
+\end_layout
+
+\begin_layout Standard
+La calificación del módulo en cada evaluación parcial (primer y segundo
+ trimestres por separado) se calculará como la media ponderada de las calificaci
+ones de los criterios de evaluación trabajados y evaluados durante el trimestre
+ correspondiente, en función de las ponderaciones relativas indicadas en
+ el apartado 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Ponderación-de-los-criterios"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La calificación introducida en el sistema Séneca será la calificación parcial
+ redondeada al entero más cercano, y no podrá ser inferior a 1.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Calificación-final"
+
+\end_inset
+
+Calificación final
+\end_layout
+
+\begin_layout Standard
+La calificación del módulo en la evaluación final se calculará como la media
+ aritmética de las calificaciones de los diferentes resultados de aprendizaje.
+\end_layout
+
+\begin_layout Standard
+La calificación introducida en el sistema Séneca será la calificación final
+ redondeada al entero más cercano, y no podrá ser inferior a 1.
+\end_layout
+
+\begin_layout Standard
+Si el alumno no ha alcanzado todos los resultados de aprendizaje, la calificació
+n final del módulo no podrá ser superior a 4,0.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Ponderación-de-los-criterios"
+
+\end_inset
+
+Ponderación de los criterios de evaluación
+\end_layout
+
+\begin_layout Standard
+Los criterios de evaluación de cada resultado de aprendizaje se ponderan
+ con los siguientes pesos relativos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "racepor.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Medidas de recuperación y mejora de las calificaciones
+\end_layout
+
+\begin_layout Standard
+A lo largo del curso (idealmente, a comienzos del trimestre) se establecerán
+ instrumentos de recuperación destinados a que el alumnado cumpla los criterios
+ de evaluación trabajados y evaluados en trimestres anteriores que no hayan
+ podido cumplir hasta ahora al no haber podido superar los instrumentos
+ de evaluación correspondientes.
+\end_layout
+
+\begin_layout Standard
+Los criterios de evaluación que se trabajen en unidades didácticas temporalizada
+s en varios trimestres podrían no necesitar de instrumentos de recuperación,
+ ya que el alumno tendría varias oportunidades para cumplir el mismo criterio
+ de evaluación a lo largo de varios trimestres con los instrumentos de evaluació
+n propios de las unidades didácticas programadas para esos trimestres.
+\end_layout
+
+\begin_layout Standard
+Los instrumentos de recuperación utilizados para que el alumnado pueda cumplir
+ los criterios de evaluación que aún no ha cumplido, podrán coincidir o
+ no con los utilizados anteriormente para evaluar el cumplimiento de tales
+ criterios, a discreción del profesor.
+ En particular, se podrán usar pruebas evaluativas (instrumentos del tipo
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+EX
+\end_layout
+
+\end_inset
+
+) como instrumentos de recuperación para que el alumnado pueda cumplir criterios
+ de evaluación que aún no haya cumplido y que previamente se habían medido
+ con instrumentos del tipo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TR
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los alumnos que tengan criterios de evaluación pendientes de cumplir en
+ la tercera evaluación, deberán presentarse directamente a la prueba final
+ tal como se establece en el apartado 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Prueba-final"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ No hay, por tanto, pruebas de recuperación específicas para los contenidos
+ de la tercera evaluación.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Prueba-final"
+
+\end_inset
+
+Prueba final
+\end_layout
+
+\begin_layout Standard
+La normativa vigente establece la existencia de un examen o prueba a final
+ de curso (usualmente en junio) para aquellos alumnos que no hayan podido
+ superar el módulo mediante el procedimiento habitual de evaluación continua
+ y que, por tanto, tengan pendiente alcanzar algún resultado de aprendizaje
+ que no se haya podido alcanzar ni siquiera mediante los instrumentos de
+ recuperación indicados anteriormente.
+\end_layout
+
+\begin_layout Standard
+Asimismo, y según establece la misma normativa, esta prueba final permite
+ al alumnado la superación del módulo incluso en el caso de no haber asistido
+ con regularidad a clase a lo largo del curso.
+ Es, por tanto, el único instrumento que posibilita el que un alumno que
+ cuente con un número de faltas de asistencia superior al permitido (y que,
+ por consiguiente, haya perdido el derecho a la evaluación continua) pueda
+ demostrar la consecución de los objetivos del módulo y, en consecuencia,
+ su superación.
+\end_layout
+
+\begin_layout Standard
+Dicha prueba o examen final constará de varias partes separadas.
+ De ellas, las partes que el alumno deberá realizar y superar dependerán
+ de las calificaciones que el alumno haya obtenido en los diferentes resultados
+ de aprendizaje.
+ El alumno está obligado a realizar, como mínimo, las partes correspondientes
+ a los criterios de evaluación que no haya cumplido.
+ Un alumno podrá presentarse, si así lo desea, a las partes correspondientes
+ a los criterios de evaluación que sí haya cumplido a lo largo del curso
+ para intentar mejorar su calificación, 
+\series bold
+\bar under
+corriendo el riesgo de acabar con menor calificación que antes
+\series default
+\bar default
+.
+\end_layout
+
+\begin_layout Standard
+En consecuencia, en la prueba final se obtendrá una calificación por cada
+ una de las partes que compongan la prueba.
+ Dichas calificaciones se entenderá que 
+\emph on
+sustituyen
+\emph default
+ a las calificaciones de cada uno de los criterios de evaluación que, en
+ caso de haberlas, se obtuvieron previamente en sus correspondientes evaluacione
+s.
+ Finalmente, se calculará la la 
+\series bold
+calificación final del módulo
+\series default
+ según se establece en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Calificación-final"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El alumno que, debiendo presentarse a la prueba final, no lo haga, será
+ calificado como «No evaluado» (NE).
+\end_layout
+
+\begin_layout Subsubsection
+Mejora de las calificaciones
+\end_layout
+
+\begin_layout Standard
+El alumno que quiera mejorar sus calificaciones («subir nota») podrá, si
+ así lo desea, someterse al protocolo de recuperación y realizar los instrumento
+s de recuperación que desee pero, en tal caso, 
+\series bold
+es consciente, entiende, asume y acepta que la calificación que finalmente
+ constará en los criterios de evaluación correspondientes a ese instrumento
+ de recuperación será la alcanzada en ese último intento, por lo que 
+\bar under
+corre el riesgo de acabar con menor calificación que antes
+\series default
+\bar default
+.
+\end_layout
+
+\begin_layout Standard
+Lo anterior también es de aplicación a la prueba final a realizar en junio
+ y de la que se habla en el apartado 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Prueba-final"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section

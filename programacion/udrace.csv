@@ -1,685 +1,256 @@
-\begin{udrace}
-    \item \textbf{\textsc{Introducción a la tecnología web}} \ce{1a}\ \ce{1b}\ \ce{1c}\ \ce{1d}\ \ce{1e}\ \ce{1g}\ \ev1\ \ra1\ (est: 2021\==09\==20)
-    \begin{udrace}
-        \item Introducción al desarrollo web
-        \begin{udrace}
-            \item Conceptos básicos
-            \begin{udrace}
-                \item Navegadores y servidores web
-                \item Agentes de usuario
-                \item Web estática vs. dinámica
-                \item Estructura vs. contenido
-                \item Arquitectura multinivel
-            \end{udrace}
-            \item Ejemplos de aplicaciones web
-            \begin{udrace}
-                \item Redes sociales: Facebook, Twitter…
-                \item Comercio electrónico: Amazon, eBay…
-                \item Administración electrónica…
-                \item Portales
-                \item ERP, CRM
-            \end{udrace}
-        \end{udrace}
-        \item Arquitectura cliente/servidor
-        \item HTML 5 básico (recordatorio de primer curso)
-        \item Protocolo HTTP
-        \begin{udrace}
-            \item URIs
-            \begin{udrace}
-                \item URL encoding
-            \end{udrace}
-            \item Peticiones (\textit{HTTP requests}) y respuestas (\textit{HTTP responses})
-            \item Métodos: GET, POST
-            \item Versiones
-            \begin{udrace}
-                \item HTTP/1.0
-                \item HTTP/1.1
-            \end{udrace}
-            \item Cabeceras HTTP
-            \item Códigos de estado
-            \item Experimentos
-            \begin{udrace}
-                \item \texttt{telnet} (a un servidor)
-                \item \texttt{netcat} (desde un navegador)
-                \item \texttt{curl -i -XPOST “http://…” | pygmentize -l http}
-                \item \texttt{http}
-                \item Google Chrome Developer Tools
-            \end{udrace}
-            \item Envío de datos al servidor
-            \begin{udrace}
-                \item Mediante GET
-                \item Mediante POST
-                \item Formularios HTML
-            \end{udrace}
-            \item Cookies
-        \end{udrace}
-    \end{udrace}
-    \item \textbf{\textsc{Conceptos básicos de PHP (I)}} \ce{2d}\ \ce{2e}\ \ce{2f}\ \ce{2g}\ \ce{4g}\ \ev1\ \ra2\ \ra3\ \ra4\ (est: 2021\==09\==27)
-    \begin{udrace}
-        \item Introducción a PHP
-        \begin{udrace}
-            \item Página web de PHP
-            \item Instalación de PHP
-            \item Configuración básica con \texttt{php.ini}
-            \begin{udrace}
-                \item \texttt{error\_reporting = E\_ALL}
-                \item \texttt{display\_errors = On}
-                \item \texttt{display\_startup\_errors = On}
-                \item \texttt{date.timezone = 'UTC'}
-            \end{udrace}
-            \item Módulos de extensión
-            \item Documentación y búsqueda de información
-            \item Modos de ejecución
-            \begin{udrace}
-                \item Por lotes
-                \item Interactiva
-                \begin{udrace}
-                    \item \texttt{php -a}
-                    \item PsySH
-                \end{udrace}
-            \end{udrace}
-        \end{udrace}
-        \item Sintaxis básica
-        \begin{udrace}
-            \item Datos e instrucciones
-            \item Sentencias y comandos
-            \begin{udrace}
-                \item Comando \texttt{echo}
-            \end{udrace}
-            \item Expresiones, operadores y funciones
-        \end{udrace}
-        \item Funcionamiento del intérprete
-        \begin{udrace}
-            \item Etiquetas \texttt{<?php} y \texttt{?>}
-            \item Modo dual de operación
-            \item Comentarios
-        \end{udrace}
-        \item Variables
-        \begin{udrace}
-            \item Conceptos básicos
-            \item Destrucción de variables
-            \item Asignación compuesta
-            \item Operadores de asignación por valor y por referencia
-            \item Variables predefinidas
-        \end{udrace}
-        \item Tipos básicos de datos
-        \begin{udrace}
-            \item Lógicos (\texttt{bool})
-            \begin{udrace}
-                \item Operadores lógicos
-            \end{udrace}
-            \item Numéricos
-            \begin{udrace}
-                \item Enteros (\texttt{int})
-                \item Números en coma flotante (\texttt{float})
-                \item Operadores
-                \begin{udrace}
-                    \item Operadores aritméticos
-                    \item Operadores de incremento/decremento
-                \end{udrace}
-            \end{udrace}
-            \item Cadenas (\texttt{string})
-            \begin{udrace}
-                \item Operadores de cadenas
-                \begin{udrace}
-                    \item Concatenación
-                    \item Acceso y modificación por caracteres
-                    \item Operador de incremento \opcional\
-                \end{udrace}
-                \item Funciones de manejo de cadenas
-                \item Extensión \textit{mbstring}
-            \end{udrace}
-            \item Nulo (\texttt{null})
-        \end{udrace}
-        \item Manipulación de datos
-        \begin{udrace}
-            \item Precedencia de operadores
-            \item Operadores de asignación compuesta
-            \item Comprobaciones
-            \begin{udrace}
-                \item De tipos
-                \begin{udrace}
-                    \item \texttt{gettype()}
-                    \item \texttt{is\_*()}
-                \end{udrace}
-                \item De valores
-                \begin{udrace}
-                    \item \texttt{is\_numeric()}
-                    \item \texttt{ctype\_*()}
-                \end{udrace}
-            \end{udrace}
-            \item Conversiones de tipos
-            \begin{udrace}
-                \item Conversión explícita (\textit{casting}) vs. implícita (automática)
-                \item Conversión a \texttt{bool}
-                \item Conversión a \texttt{int}
-                \item Conversión a \texttt{float}
-                \item Conversión de \texttt{string} a número
-                \item Conversión a \texttt{string}
-                \item Funciones de obtención de valores
-                \begin{udrace}
-                    \item \texttt{intval()}
-                    \item \texttt{floatval()}
-                    \item \texttt{strval()}
-                    \item \texttt{boolval()}
-                \end{udrace}
-            \end{udrace}
-            \item Comparaciones
-            \begin{udrace}
-                \item Operadores de comparación
-                \item \texttt{==} vs. \texttt{===}
-                \item Ternario (\texttt{?:})
-                \item Fusión de \texttt{null} (\texttt{??})
-                \item Reglas de comparación de tipos
-            \end{udrace}
-        \end{udrace}
-        \item Constantes
-        \begin{udrace}
-            \item \texttt{define()} y \texttt{const}
-            \item Constantes predefinidas
-            \item \texttt{defined()}
-        \end{udrace}
-    \end{udrace}
-    \item \textbf{\textsc{Conceptos básicos de PHP (II)}} \ce{2d}\ \ce{2e}\ \ce{2g}\ \ce{2h}\ \ce{3a}\ \ce{3b}\ \ce{3c}\ \ce{3d}\ \ce{3g}\ \ce{4g}\ \ev1\ \ra2\ \ra3\ \ra4\ (est: 2021\==10\==04)
-    \begin{udrace}
-        \item Flujo de control
-        \begin{udrace}
-            \item Estructuras de control
-            \begin{udrace}
-                \item Secuencia
-                \item Selección
-                \item Iteración
-                \item Sintaxis alternativa
-            \end{udrace}
-            \item Inclusión de scripts
-            \begin{udrace}
-                \item \texttt{include}, \texttt{require}
-                \item \texttt{include\_once}, \texttt{require\_once}
-            \end{udrace}
-        \end{udrace}
-        \item Funciones predefinidas destacadas
-        \begin{udrace}
-            \item \texttt{isset()}
-            \item \texttt{empty()}
-            \item \texttt{var\_dump()}
-        \end{udrace}
-        \item Arrays
-        \begin{udrace}
-            \item Operadores para arrays
-            \begin{udrace}
-                \item Acceso, modificación y agregación
-            \end{udrace}
-            \item Funciones de manejo de arrays
-            \begin{udrace}
-                \item Ordenación de arrays
-                \item \texttt{print\_r()}
-                \item \texttt{'+'} vs. \texttt{array\_merge()}
-                \item \texttt{isset()} vs. \texttt{array\_key\_exists()}
-            \end{udrace}
-            \item \texttt{foreach}
-        \end{udrace}
-        \item Funciones definidas por el usuario
-        \begin{udrace}
-            \item Argumentos
-            \begin{udrace}
-                \item Paso de argumentos por valor y por referencia
-                \item Argumentos por defecto
-            \end{udrace}
-            \item Ámbito de variables
-            \begin{udrace}
-                \item Ámbito simple al archivo
-                \item Variables locales
-                \item Uso de \texttt{global}
-                \item Variables superglobales
-            \end{udrace}
-            \item Declaraciones de tipos
-            \begin{udrace}
-                \item Declaraciones de tipo de argumento
-                \item Declaraciones de tipo de devolución
-                \item Tipos \textit{nullable} (\texttt{?}) y \texttt{void}
-                \item Tipificación estricta
-            \end{udrace}
-        \end{udrace}
-        \item Comentarios y documentación del código
-    \end{udrace}
-    \item \textbf{\textsc{Desarrollo de aplicaciones con PHP (I)}} \ce{1a}\ \ce{1b}\ \ce{1d}\ \ce{1f}\ \ce{2a}\ \ce{2b}\ \ce{2c}\ \ce{2d}\ \ce{2e}\ \ce{2f}\ \ce{2g}\ \ce{2h}\ \ce{3a}\ \ce{3b}\ \ce{3c}\ \ce{3d}\ \ce{3e}\ \ce{3f}\ \ce{3g}\ \ce{4g}\ \ce{5a}\ \ce{5d}\ \ce{5g}\ \ce{5h}\ \ev1\ \ra1\ \ra2\ \ra3\ \ra4\ \ra5\ (est: 2021\==10\==11)
-    \begin{udrace}
-        \item Código embebido
-        \begin{udrace}
-            \item Etiqueta \texttt{<?=}
-            \item Servidor web  interno
-        \end{udrace}
-        \item Manejo de datos de entrada: \texttt{\$\_GET} y \texttt{\$\_POST}
-        \item Aspectos básicos de la orientación a objetos
-        \begin{udrace}
-            \item Objetos
-            \begin{udrace}
-                \item \texttt{new}
-                \item \texttt{instanceof}
-            \end{udrace}
-            \item Referencias
-            \begin{udrace}
-                \item Asignación por referencia (\texttt{=\&})
-            \end{udrace}
-            \item Clonación de objetos
-            \item Comparación de objetos
-            \item Propiedades
-            \begin{udrace}
-                \item Predeterminadas
-                \item Dinámicas
-            \end{udrace}
-            \item Métodos
-            \item Constantes
-            \begin{udrace}
-                \item Operador de resolución de ámbito (\texttt{::})
-            \end{udrace}
-            \item \textit{Ejemplo}: manejo de fechas, horas, instantes e intervalos
-        \end{udrace}
-        \item Excepciones
-        \begin{udrace}
-            \item Manejo de errores clásico en PHP
-            \item Errores vs. excepciones
-            \item La clase \texttt{Exception}
-            \item La clase \texttt{Error}
-            \item La clase \texttt{ErrorException}
-            \item Estructura de control \texttt{try ... catch}
-        \end{udrace}
-        \item Depuración
-        \begin{udrace}
-            \item \texttt{var\_dump()}, \texttt{print\_r()}, \texttt{die()}
-            \item Depuración con PsySH
-        \end{udrace}
-    \end{udrace}
-    \item \textbf{\textsc{Persistencia de datos con PHP}} \ce{4a}\ \ce{4b}\ \ce{4c}\ \ce{4g}\ \ce{5f}\ \ce{5g}\ \ce{5h}\ \ce{6a}\ \ce{6b}\ \ce{6c}\ \ce{6e}\ \ce{6g}\ \ev1\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ (est: 2021\==10\==18)
-    \begin{udrace}
-        \item PDO (PHP Data Objects)
-        \begin{udrace}
-            \item Clase \texttt{PDO}
-            \begin{udrace}
-                \item \texttt{\_\_construct()}
-                \item \texttt{query()}
-                \item \texttt{exec()}
-                \item \texttt{prepare()}
-            \end{udrace}
-            \item Clase \texttt{PDOStatement}
-            \begin{udrace}
-                \item \texttt{fetch()}
-                \item \texttt{fetchAll()}
-                \item \texttt{fetchColumn()}
-                \item \texttt{execute()}
-                \item \texttt{rowCount()}
-            \end{udrace}
-            \item Correspondencias de tipos entre SQL y PHP
-            \item Manejo de errores en PDO
-            \begin{udrace}
-                \item \texttt{PDO::errorInfo()}
-            \end{udrace}
-            \item Transacciones 
-            \begin{udrace}
-                \item \texttt{\$pdo->beginTransaction();}
-                \item \texttt{\$pdo->commit();}
-                \item \texttt{\$pdo->rollBack();}
-            \end{udrace}
-        \end{udrace}
-        \item Programación de \textit{CRUD} básico
-        \begin{udrace}
-            \item Ejemplo de aplicación: \textit{Muéveme}
-            \item Ejemplo de aplicación: \textit{FilmAffinity}
-        \end{udrace}
-        \item Post/Redirect/Get
-        \item \texttt{header()}
-        \begin{udrace}
-            \item \texttt{output\_buffering}
-        \end{udrace}
-        \item Cookies
-        \begin{udrace}
-            \item \texttt{setcookie()}
-            \item Ejemplos de uso
-        \end{udrace}
-    \end{udrace}
-    \item \textbf{\textsc{Desarrollo de aplicaciones con PHP (II)}} \ce{1a}\ \ce{4a}\ \ce{4b}\ \ce{4c}\ \ce{4d}\ \ce{4e}\ \ce{4f}\ \ce{4g}\ \ce{5a}\ \ce{5b}\ \ce{5d}\ \ce{5f}\ \ce{5g}\ \ce{5h}\ \ev1\ \ra1\ \ra4\ \ra5\ (est: 2021\==10\==25)
-    \begin{udrace}
-        \item Filtrado de la entrada
-        \begin{udrace}
-            \item Cómo \textit{NO} se debe hacer
-            \item Extensión Filter
-            \begin{udrace}
-                \item \texttt{filter\_input()}, \texttt{filter\_has\_var()}, \texttt{filter\_var()}
-                \item Filtros de validación y saneado
-            \end{udrace}
-            \item Expresiones regulares (PCRE)
-        \end{udrace}
-        \item Formateado de datos
-        \begin{udrace}
-            \item Números y cantidades monetarias
-            \item Fechas
-        \end{udrace}
-        \item Sesiones
-        \begin{udrace}
-            \item Iniciar una sesión
-            \begin{udrace}
-                \item \texttt{session\_start()}
-            \end{udrace}
-            \item Usar una sesión
-            \begin{udrace}
-                \item \texttt{\$\_SESSION}
-                \item Ejemplos de uso
-            \end{udrace}
-            \item Terminar una sesión
-            \begin{udrace}
-                \item \texttt{session\_destroy()}
-                \item \texttt{session\_name()}
-                \item \texttt{session\_id()}
-                \item \texttt{session\_get\_cookie\_params()}
-            \end{udrace}
-        \end{udrace}
-        \item Seguridad básica
-        \begin{udrace}
-            \item Filtrar la entrada, escapar la salida
-            \item Cross-Site Scripting (XSS)
-            \begin{udrace}
-                \item No persistente
-                \item Persistente
-                \item Escapado de la salida
-                \begin{udrace}
-                    \item \texttt{htmlspecialchars()}
-                    \item HTML Purifier
-                \end{udrace}
-            \end{udrace}
-        \end{udrace}
-        \item Seguridad y persistencia
-        \begin{udrace}
-            \item Contraseñas
-            \begin{udrace}
-                \item https://www.md5online.org/
-                \item https://www.sha1online.org/
-                \item \texttt{password\_hash()}
-                \item \texttt{password\_verify()}
-            \end{udrace}
-            \item Inyección de código SQL
-            \item Cross-Site Request Forgery (CSRF)
-        \end{udrace}
-    \end{udrace}
-    \item \textbf{\textsc{Programación avanzada en PHP}} \ce{4g}\ \ce{5g}\ \ce{5h}\ \ev1\ \ra2\ \ra3\ \ra4\ \ra5\ (est: 2021\==11\==01)
-    \begin{udrace}
-        \item Diseño de aplicaciones orientadas a objetos
-        \begin{udrace}
-            \item Clases
-            \item Propiedades
-            \begin{udrace}
-                \item Predeterminadas
-                \item Dinámicas
-            \end{udrace}
-            \item Métodos
-            \begin{udrace}
-                \item Referencia \texttt{\$this}
-                \item Constructores y destructores
-            \end{udrace}
-            \item Constantes
-            \begin{udrace}
-                \item \texttt{self}
-            \end{udrace}
-            \item Herencia
-            \begin{udrace}
-                \item \texttt{parent}
-                \item Sobreescritura de métodos
-            \end{udrace}
-            \item Miembros estáticos
-            \begin{udrace}
-                \item Constantes
-                \item Métodos estáticos
-                \item Propiedades estáticas
-                \item Enlace estático en tiempo de ejecución
-            \end{udrace}
-            \item Interfaces
-            \item Traits
-            \item La clase \texttt{stdClass}
-            \begin{udrace}
-                \item Conversión de \texttt{array} a \texttt{object}
-            \end{udrace}
-        \end{udrace}
-        \item Espacios de nombres
-        \item Funciones anónimas
-        \begin{udrace}
-            \item Clausuras
-        \end{udrace}
-        \item Callables
-        \begin{udrace}
-            \item \texttt{call\_user\_func()}
-            \item \texttt{array\_map()} y \texttt{array\_reduce()}
-        \end{udrace}
-    \end{udrace}
-    \item \textbf{\textsc{Interoperabilidad}} \ce{1e}\ \ce{1g}\ \ce{4g}\ \ce{5g}\ \ce{5h}\ \ev1\ \ra1\ \ra4\ \ra5\ (est: 2021\==11\==08)
-    \begin{udrace}
-        \item Versionado semántico
-        \item Composer
-        \begin{udrace}
-            \item Paquetes
-            \item Packagist
-            \item Dependencias
-            \begin{udrace}
-                \item \texttt{composer.json} y \texttt{composer.lock}
-            \end{udrace}
-            \item Versiones y restricciones
-            \begin{udrace}
-                \item Versión exacta
-                \item Rango (\texttt{>}, \texttt{>=}, \texttt{<}, \texttt{<=}, \texttt{!=}, \texttt{ }, \texttt{,}, \texttt{||})
-                \item Guión (\texttt{-})
-                \item Asterisco (\texttt{*})
-                \item Tilde (\texttt{~})
-                \item Circunflejo (\texttt{\^})
-                \item Nombres de rama
-                \begin{udrace}
-                    \item \texttt{dev-master}
-                    \item \texttt{5.1.x-dev}
-                \end{udrace}
-                \item Estabilidad mínima
-                \item Comprobador online de restricciones
-            \end{udrace}
-            \item Comandos básicos
-            \begin{udrace}
-                \item \texttt{require}
-                \item \texttt{install}
-                \item \texttt{update}
-            \end{udrace}
-            \item Entornos de desarrollo y producción
-        \end{udrace}
-        \item Autocarga de clases
-        \begin{udrace}
-            \item \texttt{spl\_autoload\_register()}
-            \item PSR-4
-            \item Autoloader de Composer
-        \end{udrace}
-        \item Ejemplos
-        \begin{udrace}
-            \item \texttt{mpdf/mpdf}
-            \item \texttt{ramsey/uuid}
-            \item \texttt{doctrine/inflector}
-        \end{udrace}
-        \item Recomendaciones PSR del PHP-FIG (Framework Interop Group)
-        \begin{udrace}
-            \item PSR-1: Basic Coding Standard
-            \item PSR-2: Coding Style Guide
-            \item PSR-4: Autoloading Standard
-            \item PSR-5: PHPDoc Standard (borrador)
-            \item PSR-11: Extended Coding Style Guide (borrador)
-            \item PSR-19: PHPDoc tags (borrador)
-        \end{udrace}
-        \item Paquetes de Atom y herramientas externas \opcional\
-        \begin{udrace}
-            \item PHP\_CodeSniffer
-            \item PHP-CS-Fixer
-            \item Yii2-Shell
-        \end{udrace}
-    \end{udrace}
-    \item \textbf{\textsc{Introducción a Laravel}} \ce{1d}\ \ce{1e}\ \ce{1g}\ \ce{4g}\ \ev1\ \ra1\ \ra4\ (est: 2021\==11\==15)
-    \begin{udrace}
-        \item Frameworks, microframeworks y librerías
-        \item Patrón Modelo-Vista-Controlador (MVC)
-        \begin{udrace}
-            \item Modelos
-            \item Vistas
-            \item Controladores
-            \item Rutas
-        \end{udrace}
-        \item Laravel
-        \begin{udrace}
-            \item ¿Qué es Laravel
-            \item ¿Cómo es Laravel comparado con otros frameworks?
-            \item Versiones de Laravel
-        \end{udrace}
-        \item Instalación, requisitos y puesta en marcha
-        \begin{udrace}
-            \item Requisitos previos
-            \item Instalación de Laravel
-        \end{udrace}
-        \item ¡Hola, mundo!
-        \item Herramientas de desarrollo
-        \begin{udrace}
-            \item Clockwork
-            \item Trazas de depuración
-        \end{udrace}
-        \item Estilo del código
-    \end{udrace}
-    \item \textbf{\textsc{Arquitectura de Laravel}} \ce{1d}\ \ce{1e}\ \ce{1g}\ \ce{4g}\ \ce{5e}\ \ev1\ \ra1\ \ra4\ \ra5\ (est: 2021\==11\==22)
-    \begin{udrace}
-        \item El ciclo de vida de una petición
-        \item El contenedor de servicios
-        \item Proveedores de servicios
-        \item Fachadas
-    \end{udrace}
-    \item \textbf{\textsc{Gestión de peticiones en Laravel}} \ce{4g}\ \ce{5f}\ \ce{5g}\ \ce{5h}\ \ev1\ \ra4\ \ra5\ (est: 2021\==11\==29)
-    \begin{udrace}
-        \item Enrutado
-        \item Middlewares
-        \item Peticiones
-        \item Respuestas
-        \item Controladores
-        \item Sesiones y cookies
-        \item Gestión de errores
-    \end{udrace}
-    \item \textbf{\textsc{Visualización de datos en Laravel}} \ce{4g}\ \ce{5a}\ \ce{5b}\ \ce{5c}\ \ce{5d}\ \ce{5h}\ \ce{8a}\ \ce{8b}\ \ce{8c}\ \ce{8d}\ \ce{8e}\ \ce{8f}\ \ce{8g}\ \ev2\ \ra2\ \ra3\ \ra4\ \ra5\ \ra8\ (est: 2022\==01\==10)
-    \begin{udrace}
-        \item Vistas
-        \item Plantillas Blade
-        \item Compilación de assets
-        \item Generación de URLs
-    \end{udrace}
-    \item \textbf{\textsc{Bases de datos en Laravel}} \ce{4g}\ \ce{5f}\ \ce{5g}\ \ce{5h}\ \ce{6a}\ \ce{6b}\ \ce{6c}\ \ce{6d}\ \ce{6e}\ \ce{6f}\ \ce{6g}\ \ce{6h}\ \ev2\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ (est: 2022\==01\==17)
-    \begin{udrace}
-        \item Conceptos básicos
-        \item Query Builder
-        \item Migraciones
-        \item Paginación
-        \item Semillas
-    \end{udrace}
-    \item \textbf{\textsc{Mapeado objeto-relacional con Eloquent}} \ce{4g}\ \ce{5f}\ \ce{5g}\ \ce{5h}\ \ce{6a}\ \ce{6b}\ \ce{6c}\ \ce{6d}\ \ce{6e}\ \ce{6f}\ \ce{6g}\ \ce{6h}\ \ev2\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ (est: 2022\==01\==24)
-    \begin{udrace}
-        \item Conceptos básicos
-        \item Relaciones
-        \item Colecciones
-        \item Mutadores y castings
-    \end{udrace}
-    \item \textbf{\textsc{Creación y validación de formularios en Laravel}} \ce{3e}\ \ce{3f}\ \ce{4g}\ \ce{5b}\ \ce{5d}\ \ce{5h}\ \ce{6f}\ \ce{6h}\ \ce{8a}\ \ce{8b}\ \ce{8c}\ \ce{8d}\ \ce{8e}\ \ce{8f}\ \ce{8g}\ \ev2\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ \ra8\ (est: 2022\==01\==31)
-    \begin{udrace}
-        \item Creación de formularios
-        \item Protección contra CSRF
-        \item Validación de la entrada
-        \item Subida de archivos
-    \end{udrace}
-    \item \textbf{\textsc{Seguridad y cacheado en Laravel}} \ce{4d}\ \ce{4e}\ \ce{4g}\ \ce{5g}\ \ce{5h}\ \ce{6h}\ \ev2\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ \ra8\ (est: 2022\==02\==07)
-    \begin{udrace}
-        \item Autenticación
-        \item Autorización
-        \item Verificación de email
-        \item Cifrado
-        \item Hashing
-        \item Reinicio de contraseñas
-    \end{udrace}
-    \item \textbf{\textsc{Características adicionales de Laravel}} \ce{4g}\ \ce{5d}\ \ce{5g}\ \ce{5h}\ \ce{6h}\ \ce{8a}\ \ce{8b}\ \ce{8c}\ \ce{8d}\ \ce{8e}\ \ce{8f}\ \ce{8g}\ \ev2\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ \ra8\ (est: 2022\==02\==14)
-    \begin{udrace}
-        \item Correo electrónico
-        \item Helpers
-        \item Eventos
-        \item Contratos
-        \item Colecciones
-        \item Colas
-        \item Planificación de tareas
-        \item Almacenamiento de archivos
-    \end{udrace}
-    \item \textbf{\textsc{Calidad}} \ce{3g}\ \ce{4g}\ \ce{5g}\ \ce{5h}\ \ce{6e}\ \ce{6h}\ \ev2\ \ra3\ \ra4\ \ra5\ \ra6\ (est: 2022\==02\==21)
-    \begin{udrace}
-        \item Pruebas
-        \begin{udrace}
-            \item Pruebas HTTP
-            \item Pruebas en consola
-            \item Pruebas en navegador
-            \item Bases de datos
-            \item Mocking
-        \end{udrace}
-        \item Depuración
-        \begin{udrace}
-            \item dd()
-            \item ddd()
-            \item Clockwork
-        \end{udrace}
-        \item Documentación
-        \begin{udrace}
-            \item API documentation generator for Yii2
-            \item GitHub Pages
-        \end{udrace}
-        \item Mantenimiento y calidad del código
-        \begin{udrace}
-            \item CodeSniffer
-            \item CS\_Fixer
-            \item Code Climate
-        \end{udrace}
-    \end{udrace}
-    \item \textbf{\textsc{Computación en la nube}} \ce{1d}\ \ce{4g}\ \ce{5e}\ \ev2\ \ra1\ \ra4\ \ra5\ (est: 2022\==02\==28)
-    \begin{udrace}
-        \item Entornos de ejecución
-        \begin{udrace}
-            \item Desarrollo
-            \item Producción
-            \item Pruebas
-            \item Preproducción
-        \end{udrace}
-        \item Cloud computing vs hosting
-        \item Cloud computing vs VPS
-        \item Servicios por capas
-        \begin{udrace}
-            \item IaaS
-            \item PaaS
-            \item SaaS
-        \end{udrace}
-        \item 12 Factores
-        \item Heroku
-        \begin{udrace}
-            \item Heroku CLI
-            \item Creación y despliegue de aplicaciones
-            \item Heroku Postgres
-            \item Variables de entorno
-            \item Releases
-        \end{udrace}
-    \end{udrace}
-    \item \textbf{\textsc{Servicios web con Laravel}} \ce{1a}\ \ce{1b}\ \ce{7a}\ \ce{7b}\ \ce{7c}\ \ce{7d}\ \ce{7e}\ \ce{7f}\ \ce{7g}\ \ev2\ \ra1\ \ra2\ \ra3\ \ra7\ (est: 2022\==03\==07)
-    \begin{udrace}
-        \item Recursos API
-        \item Serialización
-        \item Limitación de frecuencia de peticiones
-    \end{udrace}
-    \item \textbf{\textsc{Aplicaciones web híbridas}} \ce{9a}\ \ce{9b}\ \ce{9c}\ \ce{9d}\ \ce{9e}\ \ce{9f}\ \ce{9g}\ \ev2\ \ra9\ (est: 2022\==03\==14)
-    \begin{udrace}
-        \item Reutilización de código e información
-        \item Utilización de información proveniente de repositorios
-        \begin{udrace}
-            \item UDDI
-        \end{udrace}
-        \item Incorporación de funcionalidades específicas
-        \item Sindicación y formatos de redifusión
-        \begin{udrace}
-            \item RSS
-            \item ATOM
-        \end{udrace}
-    \end{udrace}
-\end{udrace}
+ud,ra,ce
+1,1,a
+1,1,b
+1,1,c
+1,1,d
+1,1,e
+1,1,g
+2,2,d
+2,2,e
+2,2,f
+2,2,g
+2,3
+2,4,g
+3,2,d
+3,2,e
+3,2,g
+3,2,h
+3,3,a
+3,3,b
+3,3,c
+3,3,d
+3,3,g
+3,4,g
+4,1,a
+4,1,b
+4,1,d
+4,1,f
+4,2,a
+4,2,b
+4,2,c
+4,2,d
+4,2,e
+4,2,f
+4,2,g
+4,2,h
+4,3,a
+4,3,b
+4,3,c
+4,3,d
+4,3,e
+4,3,f
+4,3,g
+4,4,g
+4,5,a
+4,5,d
+4,5,g
+4,5,h
+5,2
+5,3
+5,4,a
+5,4,b
+5,4,c
+5,4,g
+5,5,f
+5,5,g
+5,5,h
+5,6,a
+5,6,b
+5,6,c
+5,6,e
+5,6,g
+6,1,a
+6,4,a
+6,4,b
+6,4,c
+6,4,d
+6,4,e
+6,4,f
+6,4,g
+6,5,a
+6,5,b
+6,5,d
+6,5,f
+6,5,g
+6,5,h
+7,2
+7,3
+7,4,g
+7,5,g
+7,5,h
+8,1,e
+8,1,g
+8,4,g
+8,5,g
+8,5,h
+9,1,d
+9,1,e
+9,1,g
+9,4,g
+10,1,d
+10,1,e
+10,1,g
+10,4,g
+10,5,e
+11,4,g
+11,5,f
+11,5,g
+11,5,h
+12,2,a
+12,2,b
+12,2,c
+12,2,d
+12,2,e
+12,2,g
+12,2,h
+12,3
+12,4,g
+12,5,a
+12,5,b
+12,5,c
+12,5,d
+12,5,h
+12,8,a
+12,8,b
+12,8,c
+12,8,d
+12,8,e
+12,8,f
+12,8,g
+13,2,a
+13,2,b
+13,2,c
+13,2,d
+13,2,e
+13,2,g
+13,2,h
+13,3
+13,4,g
+13,5,f
+13,5,g
+13,5,h
+13,6,a
+13,6,b
+13,6,c
+13,6,d
+13,6,e
+13,6,f
+13,6,g
+13,6,h
+14,2,a
+14,2,b
+14,2,c
+14,2,d
+14,2,e
+14,2,g
+14,2,h
+14,3
+14,4,g
+14,5,f
+14,5,g
+14,5,h
+14,6,a
+14,6,b
+14,6,c
+14,6,d
+14,6,e
+14,6,f
+14,6,g
+14,6,h
+15,2,a
+15,2,b
+15,2,c
+15,2,d
+15,2,e
+15,2,g
+15,2,h
+15,3,e
+15,3,f
+15,4,g
+15,5,b
+15,5,d
+15,5,h
+15,6,f
+15,6,h
+15,8,a
+15,8,b
+15,8,c
+15,8,d
+15,8,e
+15,8,f
+15,8,g
+16,2,a
+16,2,b
+16,2,c
+16,2,d
+16,2,e
+16,2,g
+16,2,h
+16,3
+16,4,d
+16,4,e
+16,4,g
+16,5,g
+16,5,h
+16,6,h
+16,8
+17,2,a
+17,2,b
+17,2,c
+17,2,d
+17,2,e
+17,2,g
+17,2,h
+17,3
+17,4,g
+17,5,d
+17,5,g
+17,5,h
+17,6,h
+17,8,a
+17,8,b
+17,8,c
+17,8,d
+17,8,e
+17,8,f
+17,8,g
+18,3,g
+18,4,g
+18,5,g
+18,5,h
+18,6,e
+18,6,h
+19,1,d
+19,4,g
+19,5,e
+20,1,a
+20,1,b
+20,2,a
+20,2,b
+20,2,c
+20,2,d
+20,2,e
+20,2,g
+20,2,h
+20,3
+20,7,a
+20,7,b
+20,7,c
+20,7,d
+20,7,e
+20,7,f
+20,7,g
+21,2,a
+21,2,b
+21,2,c
+21,2,d
+21,2,e
+21,2,g
+21,2,h
+21,9,a
+21,9,b
+21,9,c
+21,9,d
+21,9,e
+21,9,f
+21,9,g

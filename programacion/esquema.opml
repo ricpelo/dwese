@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Sat, 16 Oct 2021 19:56:26 +0200</dateModified>
+    <dateModified>Sat, 16 Oct 2021 21:08:09 +0200</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
@@ -519,32 +519,32 @@
         <outline text="Gestión de errores" status="open" _status="indeterminate"/>
       </outline>
       <outline text="---" status="open" _status="indeterminate"/>
-      <outline text="**Visualización de datos en Laravel**" status="open" _status="indeterminate" due="2022-01-10" due_user_ids="139389" tags="ce4g,ce5a,ce5b,ce5c,ce5d,ce5h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra8" progress_counter="true">
+      <outline text="**Visualización de datos en Laravel**" status="open" _status="indeterminate" due="2022-01-10" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5a,ce5b,ce5c,ce5d,ce5h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra8" progress_counter="true">
         <outline text="Vistas" status="open" _status="indeterminate"/>
         <outline text="Plantillas Blade" status="open" _status="indeterminate"/>
         <outline text="Compilación de assets" status="open" _status="indeterminate"/>
         <outline text="Generación de URLs" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Bases de datos en Laravel**" status="open" _status="indeterminate" due="2022-01-17" due_user_ids="139389" tags="ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev2,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
+      <outline text="**Bases de datos en Laravel**" status="open" _status="indeterminate" due="2022-01-17" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev2,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
         <outline text="Conceptos básicos" status="open" _status="indeterminate"/>
         <outline text="Query Builder" status="open" _status="indeterminate" progress_counter="true"/>
         <outline text="Migraciones" status="open" _status="indeterminate"/>
         <outline text="Paginación" status="open" _status="indeterminate" progress_counter="true"/>
         <outline text="Semillas" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Mapeado objeto-relacional con Eloquent**" status="open" _status="indeterminate" due="2022-01-24" due_user_ids="139389" tags="ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev2,ra2,ra3,ra4,ra5,ra6">
+      <outline text="**Mapeado objeto-relacional con Eloquent**" status="open" _status="indeterminate" due="2022-01-24" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev2,ra2,ra3,ra4,ra5,ra6">
         <outline text="Conceptos básicos" status="open" _status="indeterminate"/>
         <outline text="Relaciones" status="open" _status="indeterminate"/>
         <outline text="Colecciones" status="open" _status="indeterminate"/>
         <outline text="Mutadores y castings" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Creación y validación de formularios en Laravel**" status="open" _status="indeterminate" due="2022-01-31" due_user_ids="139389" tags="ce3e,ce3f,ce4g,ce5b,ce5d,ce5h,ce6f,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
+      <outline text="**Creación y validación de formularios en Laravel**" status="open" _status="indeterminate" due="2022-01-31" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce3e,ce3f,ce4g,ce5b,ce5d,ce5h,ce6f,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
         <outline text="Creación de formularios" status="open" _status="indeterminate" progress_counter="true"/>
         <outline text="Protección contra CSRF" status="open" _status="indeterminate"/>
         <outline text="Validación de la entrada" status="open" _status="indeterminate" progress_counter="true"/>
         <outline text="Subida de archivos" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Seguridad y cacheado en Laravel**" status="open" _status="indeterminate" due="2022-02-07" due_user_ids="139389" tags="ce4d,ce4e,ce4g,ce5g,ce5h,ce6h,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
+      <outline text="**Seguridad y cacheado en Laravel**" status="open" _status="indeterminate" due="2022-02-07" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4d,ce4e,ce4g,ce5g,ce5h,ce6h,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
         <outline text="Autenticación" status="open" _status="indeterminate"/>
         <outline text="Autorización" status="open" _status="indeterminate"/>
         <outline text="Verificación de email" status="open" _status="indeterminate"/>
@@ -552,7 +552,7 @@
         <outline text="Hashing" status="open" _status="indeterminate"/>
         <outline text="Reinicio de contraseñas" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Características adicionales de Laravel**" status="open" _status="indeterminate" due="2022-02-14" due_user_ids="139389" tags="ce4g,ce5d,ce5g,ce5h,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
+      <outline text="**Características adicionales de Laravel**" status="open" _status="indeterminate" due="2022-02-14" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5d,ce5g,ce5h,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
         <outline text="[Correo electrónico](http://stackoverflow.com/questions/24995620/how-to-use-the-swiftmailer-in-yii2)" status="open" _status="indeterminate"/>
         <outline text="Helpers" status="open" _status="indeterminate"/>
         <outline text="Eventos" status="open" _status="indeterminate"/>
@@ -608,12 +608,12 @@
           <outline text="Releases" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Servicios web con Laravel**" status="open" _status="indeterminate" due="2022-03-07" due_user_ids="139389" tags="ce1a,ce1b,ce7a,ce7b,ce7c,ce7d,ce7e,ce7f,ce7g,ev2,ra1,ra2,ra3,ra7" progress_counter="true">
+      <outline text="**Servicios web con Laravel**" status="open" _status="indeterminate" due="2022-03-07" due_user_ids="139389" tags="ce1a,ce1b,ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce7a,ce7b,ce7c,ce7d,ce7e,ce7f,ce7g,ev2,ra1,ra2,ra3,ra7" progress_counter="true">
         <outline text="Recursos API" status="open" _status="indeterminate"/>
         <outline text="Serialización" status="open" _status="indeterminate"/>
         <outline text="Limitación de frecuencia de peticiones" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Aplicaciones web híbridas**" status="open" _status="indeterminate" due="2022-03-14" due_user_ids="139389" tags="ce9a,ce9b,ce9c,ce9d,ce9e,ce9f,ce9g,ev2,ra9">
+      <outline text="**Aplicaciones web híbridas**" status="open" _status="indeterminate" due="2022-03-14" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce9a,ce9b,ce9c,ce9d,ce9e,ce9f,ce9g,ev2,ra2,ra9">
         <outline text="Reutilización de código e información" status="open" _status="indeterminate"/>
         <outline text="Utilización de información proveniente de repositorios" status="open" _status="indeterminate" progress_counter="true">
           <outline text="UDDI" status="open" _status="indeterminate"/>

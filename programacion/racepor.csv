@@ -1,67 +1,67 @@
-RA,CE,Porcentaje,Descripción,Acumulado
-1,a,"0,1",Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente Web.,"0,1"
-1,b,"0,1",Se han reconocido las ventajas que proporciona la generación dinámica de páginas Web y sus diferencias con la inclusión de sentencias de guiones en el interior de las páginas Web.,"0,2"
-1,c,"0,2",Se han identificado los mecanismos de ejecución de código en los servidores Web.,"0,4"
-1,d,"0,1",Se han reconocido las funcionalidades que aportan los servidores de aplicaciones y su integración con los servidores Web.,"0,5"
-1,e,"0,2",Se han identificado y caracterizado los principales lenguajes y tecnologías relacionados con la programación Web en entorno servidor.,"0,7"
-1,f,"0,2",Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación en entorno servidor.,"0,9"
-1,g,"0,1",Se han reconocido y evaluado las herramientas de programación en entorno servidor.,1
-2,a,"0,12",Se han reconocido los mecanismos de generación de páginas Web a partir de lenguajes de marcas con código embebido.,"0,12"
-2,b,"0,12",Se han identificado las principales tecnologías asociadas.,"0,24"
-2,c,"0,12",Se han utilizado etiquetas para la inclusión de código en el lenguaje de marcas.,"0,36"
-2,d,"0,14",Se ha reconocido la sintaxis del lenguaje de programación que se ha de utilizar.,"0,5"
-2,e,"0,14",Se han escrito sentencias simples y se han comprobado sus efectos en el documento resultante.,"0,64"
-2,f,"0,12",Se han utilizado directivas para modificar el comportamiento predeterminado.,"0,76"
-2,g,"0,12",Se han utilizado los distintos tipos de variables y operadores disponibles en el lenguaje.,"0,88"
-2,h,"0,12",Se han identificado los ámbitos de utilización de las variables.,1
-3,a,"0,12",Se han utilizado mecanismos de decisión en la creación de bloques de sentencias.,"0,12"
-3,b,"0,12",Se han utilizado bucles y se ha verificado su funcionamiento.,"0,24"
-3,c,"0,12",Se han utilizado «arrays» para almacenar y recuperar conjuntos de datos.,"0,36"
-3,d,"0,12",Se han creado y utilizado funciones.,"0,48"
-3,e,"0,12",Se han utilizado formularios Web para interactuar con el usuario del navegador Web.,"0,6"
-3,f,"0,12",Se han empleado métodos para recuperar la información introducida en el formulario.,"0,72"
-3,g,"0,12",Se han añadido comentarios al código.,"0,84"
-4,a,"0,1",Se han identificado los mecanismos disponibles para el mantenimiento de la información que concierne a un cliente Web concreto y se han señalado sus ventajas.,"0,1"
-4,b,"0,15",Se han utilizado sesiones para mantener el estado de las aplicaciones Web.,"0,25"
-4,c,"0,15",Se han utilizado «cookies» para almacenar información en el cliente Web y para recuperar su contenido.,"0,4"
-4,d,"0,15",Se han identificado y caracterizado los mecanismos disponibles para la autentificación de usuarios.,"0,55"
-4,e,"0,15",Se han escrito aplicaciones que integren mecanismos de autentificación de usuarios.,"0,7"
-4,f,"0,1",Se han realizado adaptaciones a aplicaciones Web existentes como gestores de contenidos u otras.,"0,8"
-4,g,"0,15","Se han utilizado herramientas y entornos para facilitar la programación, prueba y depuración del código.","0,95"
-5,a,"0,12",Se han identificado las ventajas de separar la lógica de negocio de los aspectos de presentación de la aplicación.,"0,12"
-5,b,"0,12",Se han analizado tecnologías y mecanismos que permiten realizar esta separación y sus características principales.,"0,24"
-5,c,"0,12",Se han utilizado objetos y controles en el servidor para generar el aspecto visual de la aplicación Web en el cliente.,"0,36"
-5,d,"0,14",Se han utilizado formularios generados de forma dinámica para responder a los eventos de la aplicación Web.,"0,5"
-5,e,"0,12",Se han identificado y aplicado los parámetros relativos a la configuración de la aplicación Web.,"0,62"
-5,f,"0,14",Se han escrito aplicaciones Web con mantenimiento de estado y separación de la lógica de negocio.,"0,76"
-5,g,"0,12",Se han aplicado los principios de la programación orientada a objetos.,"0,88"
-5,h,"0,12",Se ha probado y documentado el código.,1
-6,a,"0,12",Se han analizado las tecnologías que permiten el acceso mediante programación a la información disponible en almacenes de datos.,"0,12"
-6,b,"0,13",Se han creado aplicaciones que establezcan conexiones con bases de datos.,"0,25"
-6,c,"0,13",Se ha recuperado información almacenada en bases de datos.,"0,38"
-6,d,"0,13",Se ha publicado en aplicaciones Web la información recuperada.,"0,51"
-6,e,"0,13",Se han utilizado conjuntos de datos para almacenar la información.,"0,64"
-6,f,"0,14",Se han creado aplicaciones Web que permitan la actualización y la eliminación de información disponible en una base de datos.,"0,78"
-6,g,"0,12",Se han utilizado transacciones para mantener la consistencia de la información.,"0,9"
-6,h,"0,1",Se han probado y documentado las aplicaciones.,1
-7,a,"0,18",Se han reconocido las características propias y el ámbito de aplicación de los servicios Web.,"0,18"
-7,b,"0,18",Se han reconocido las ventajas de utilizar servicios Web para proporcionar acceso a funcionalidades incorporadas a la lógica de negocio de una aplicación.,"0,36"
-7,c,"0,18",Se han identificado las tecnologías y los protocolos implicados en la publicación y utilización de servicios Web.,"0,54"
-7,d,"0,12",Se ha programado un servicio Web.,"0,66"
-7,e,"0,1",Se ha creado el documento de descripción del servicio Web.,"0,76"
-7,f,"0,12",Se ha verificado el funcionamiento del servicio Web.,"0,88"
-7,g,"0,12",Se ha consumido el servicio Web.,1
-8,a,"0,15",Se han identificado las diferencias entre la ejecución de código en el servidor y en el cliente Web.,"0,15"
-8,b,"0,1",Se han reconocido las ventajas de unir ambas tecnologías en el proceso de desarrollo de programas.,"0,25"
-8,c,"0,15",Se han identificado las librerías y las tecnologías relacionadas con la generación por parte del servidor de páginas Web con guiones embebidos.,"0,4"
-8,d,"0,15",Se han utilizado estas tecnologías para generar páginas Web que incluyan interacción con el usuario en forma de advertencias y peticiones de confirmación.,"0,55"
-8,e,"0,15","Se han utilizado estas tecnologías, para generar páginas Web que incluyan verificación de formularios.","0,7"
-8,f,"0,15",Se han utilizado estas tecnologías para generar páginas Web que incluyan modificación dinámica de su contenido y su estructura.,"0,85"
-8,g,"0,15",Se han aplicado estas tecnologías en la programación de aplicaciones Web.,1
-9,a,"0,18",Se han reconocido las ventajas que proporciona la reutilización de código y el aprovechamiento de información ya existente.,"0,18"
-9,b,"0,18",Se han identificado librerías de código y tecnologías aplicables en la creación de aplicaciones Web híbridas.,"0,36"
-9,c,"0,16",Se ha creado una aplicación Web que recupere y procese repositorios de información ya existentes.,"0,52"
-9,d,"0,1",Se han creado repositorios específicos a partir de información existente en Internet y en almacenes de información.,"0,62"
-9,e,"0,12",Se han utilizado librerías de código para incorporar funcionalidades específicas a una aplicación Web.,"0,74"
-9,f,"0,12",Se han programado servicios y aplicaciones Web utilizando como base información y código generados por terceros.,"0,86"
-9,g,"0,14","Se han probado, depurado y documentado las aplicaciones generadas.",1
+RA,CE,Porcentaje,Descripción
+1,a,"0.1",Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente Web.
+1,b,"0.1",Se han reconocido las ventajas que proporciona la generación dinámica de páginas Web y sus diferencias con la inclusión de sentencias de guiones en el interior de las páginas Web.
+1,c,"0.2",Se han identificado los mecanismos de ejecución de código en los servidores Web.
+1,d,"0.1",Se han reconocido las funcionalidades que aportan los servidores de aplicaciones y su integración con los servidores Web.
+1,e,"0.2",Se han identificado y caracterizado los principales lenguajes y tecnologías relacionados con la programación Web en entorno servidor.
+1,f,"0.2",Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación en entorno servidor.
+1,g,"0.1",Se han reconocido y evaluado las herramientas de programación en entorno servidor.
+2,a,"0.12",Se han reconocido los mecanismos de generación de páginas Web a partir de lenguajes de marcas con código embebido.
+2,b,"0.12",Se han identificado las principales tecnologías asociadas.
+2,c,"0.12",Se han utilizado etiquetas para la inclusión de código en el lenguaje de marcas.
+2,d,"0.14",Se ha reconocido la sintaxis del lenguaje de programación que se ha de utilizar.
+2,e,"0.14",Se han escrito sentencias simples y se han comprobado sus efectos en el documento resultante.
+2,f,"0.12",Se han utilizado directivas para modificar el comportamiento predeterminado.
+2,g,"0.12",Se han utilizado los distintos tipos de variables y operadores disponibles en el lenguaje.
+2,h,"0.12",Se han identificado los ámbitos de utilización de las variables.
+3,a,"0.12",Se han utilizado mecanismos de decisión en la creación de bloques de sentencias.
+3,b,"0.12",Se han utilizado bucles y se ha verificado su funcionamiento.
+3,c,"0.12",Se han utilizado «arrays» para almacenar y recuperar conjuntos de datos.
+3,d,"0.12",Se han creado y utilizado funciones.
+3,e,"0.12",Se han utilizado formularios Web para interactuar con el usuario del navegador Web.
+3,f,"0.12",Se han empleado métodos para recuperar la información introducida en el formulario.
+3,g,"0.12",Se han añadido comentarios al código.
+4,a,"0.1",Se han identificado los mecanismos disponibles para el mantenimiento de la información que concierne a un cliente Web concreto y se han señalado sus ventajas.
+4,b,"0.15",Se han utilizado sesiones para mantener el estado de las aplicaciones Web.
+4,c,"0.15",Se han utilizado «cookies» para almacenar información en el cliente Web y para recuperar su contenido.
+4,d,"0.15",Se han identificado y caracterizado los mecanismos disponibles para la autentificación de usuarios.
+4,e,"0.15",Se han escrito aplicaciones que integren mecanismos de autentificación de usuarios.
+4,f,"0.1",Se han realizado adaptaciones a aplicaciones Web existentes como gestores de contenidos u otras.
+4,g,"0.15","Se han utilizado herramientas y entornos para facilitar la programación, prueba y depuración del código."
+5,a,"0.12",Se han identificado las ventajas de separar la lógica de negocio de los aspectos de presentación de la aplicación.
+5,b,"0.12",Se han analizado tecnologías y mecanismos que permiten realizar esta separación y sus características principales.
+5,c,"0.12",Se han utilizado objetos y controles en el servidor para generar el aspecto visual de la aplicación Web en el cliente.
+5,d,"0.14",Se han utilizado formularios generados de forma dinámica para responder a los eventos de la aplicación Web.
+5,e,"0.12",Se han identificado y aplicado los parámetros relativos a la configuración de la aplicación Web.
+5,f,"0.14",Se han escrito aplicaciones Web con mantenimiento de estado y separación de la lógica de negocio.
+5,g,"0.12",Se han aplicado los principios de la programación orientada a objetos.
+5,h,"0.12",Se ha probado y documentado el código.
+6,a,"0.12",Se han analizado las tecnologías que permiten el acceso mediante programación a la información disponible en almacenes de datos.
+6,b,"0.13",Se han creado aplicaciones que establezcan conexiones con bases de datos.
+6,c,"0.13",Se ha recuperado información almacenada en bases de datos.
+6,d,"0.13",Se ha publicado en aplicaciones Web la información recuperada.
+6,e,"0.13",Se han utilizado conjuntos de datos para almacenar la información.
+6,f,"0.14",Se han creado aplicaciones Web que permitan la actualización y la eliminación de información disponible en una base de datos.
+6,g,"0.12",Se han utilizado transacciones para mantener la consistencia de la información.
+6,h,"0.1",Se han probado y documentado las aplicaciones.
+7,a,"0.18",Se han reconocido las características propias y el ámbito de aplicación de los servicios Web.
+7,b,"0.18",Se han reconocido las ventajas de utilizar servicios Web para proporcionar acceso a funcionalidades incorporadas a la lógica de negocio de una aplicación.
+7,c,"0.18",Se han identificado las tecnologías y los protocolos implicados en la publicación y utilización de servicios Web.
+7,d,"0.12",Se ha programado un servicio Web.
+7,e,"0.1",Se ha creado el documento de descripción del servicio Web.
+7,f,"0.12",Se ha verificado el funcionamiento del servicio Web.
+7,g,"0.12",Se ha consumido el servicio Web.
+8,a,"0.15",Se han identificado las diferencias entre la ejecución de código en el servidor y en el cliente Web.
+8,b,"0.1",Se han reconocido las ventajas de unir ambas tecnologías en el proceso de desarrollo de programas.
+8,c,"0.15",Se han identificado las librerías y las tecnologías relacionadas con la generación por parte del servidor de páginas Web con guiones embebidos.
+8,d,"0.15",Se han utilizado estas tecnologías para generar páginas Web que incluyan interacción con el usuario en forma de advertencias y peticiones de confirmación.
+8,e,"0.15","Se han utilizado estas tecnologías, para generar páginas Web que incluyan verificación de formularios."
+8,f,"0.15",Se han utilizado estas tecnologías para generar páginas Web que incluyan modificación dinámica de su contenido y su estructura.
+8,g,"0.15",Se han aplicado estas tecnologías en la programación de aplicaciones Web.
+9,a,"0.18",Se han reconocido las ventajas que proporciona la reutilización de código y el aprovechamiento de información ya existente.
+9,b,"0.18",Se han identificado librerías de código y tecnologías aplicables en la creación de aplicaciones Web híbridas.
+9,c,"0.16",Se ha creado una aplicación Web que recupere y procese repositorios de información ya existentes.
+9,d,"0.1",Se han creado repositorios específicos a partir de información existente en Internet y en almacenes de información.
+9,e,"0.12",Se han utilizado librerías de código para incorporar funcionalidades específicas a una aplicación Web.
+9,f,"0.12",Se han programado servicios y aplicaciones Web utilizando como base información y código generados por terceros.
+9,g,"0.14","Se han probado, depurado y documentado las aplicaciones generadas."
