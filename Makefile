@@ -1,6 +1,6 @@
 .PHONY: all html pdf prog clean limpiar serve touch markdown sobrantes $(ITHACA)
 
-CURSO=2020/2021
+CURSO=2021/2022
 
 # Directorios
 
@@ -23,6 +23,7 @@ PP=./pp
 PANDOC=/usr/bin/pandoc
 DIAPOSITIVAS_SH=$(SCRIPTS)/diapositivas.sh
 OPML=$(SCRIPTS)/opml.php
+RACEPOR=$(SCRIPTS)/racepor.sh
 
 # Archivos
 
@@ -33,6 +34,9 @@ ESQUEMA_OPML=$(PROGDIR)/esquema.opml
 ESQUEMA_TEX=$(PROGDIR)/esquema.tex
 RESUMEN_TEX=$(PROGDIR)/resumen.tex
 RACE_TEX=$(PROGDIR)/race.tex
+RACEPOR_CSV=$(PROGDIR)/racepor.csv
+RACEPOR_TEX=$(PROGDIR)/racepor.tex
+UDRACE_CSV=$(PROGDIR)/udrace.csv
 INDEX_LEO=index.leo
 DIAPOS=$(BUILDDIR)/diapositivas.md
 REVEAL=$(BUILDDIR_HTML)/reveal.js/js/reveal.js
@@ -59,7 +63,7 @@ APUNTES_PDF  := $(patsubst $(SRCDIR)/%,$(BUILDDIR_APUNTES)/%,$(SOURCES:.md=-apun
 
 # Objetivos generales
 
-all: $(DIAPOS) html pdf apuntes prog limpiar
+all: $(DIAPOS) $(UDRACE_CSV) html pdf apuntes prog limpiar
 
 $(DIAPOS): $(SOURCES) $(DIAPOSITIVAS_SH) $(INDEX_LEO)
 	$(DIAPOSITIVAS_SH) > $(DIAPOS)
@@ -79,7 +83,7 @@ limpiar:
 
 # Programación
 
-$(PROG_PDF): $(ESQUEMA_TEX) $(RESUMEN_TEX) $(RACE_TEX) $(PROG_LYX)
+$(PROG_PDF): $(ESQUEMA_TEX) $(RESUMEN_TEX) $(RACE_TEX) $(RACEPOR_TEX) $(PROG_LYX)
 	@echo "Generando $(PROG_PDF)..."
 	@lyx -E pdf2 $(PROGDIR)/$(PROG).pdf $(PROG_LYX) >/dev/null || true
 	@[ -f "$(PROGDIR)/$(PROG).pdf" ] && mv -f $(PROGDIR)/$(PROG).pdf $(PROG_PDF)
@@ -92,6 +96,14 @@ $(RESUMEN_TEX): $(ESQUEMA_OPML) $(OPML)
 
 $(RACE_TEX): $(ESQUEMA_OPML) $(OPML)
 	$(OPML) -u$(ESQUEMA_OPML) -erace > $(RACE_TEX)
+
+$(RACEPOR_TEX): $(RACEPOR_CSV) $(RACEPOR)
+	$(RACEPOR) $(RACEPOR_CSV) > $(RACEPOR_TEX)
+
+# Resultados de aprendizaje y criterios de evaluación asociados a cada UD
+
+$(UDRACE_CSV): $(ESQUEMA_OPML) $(OPML)
+	$(OPML) -u$(ESQUEMA_OPML) -eudrace > $(UDRACE_CSV)
 
 # Diapositivas en formato HTML
 
