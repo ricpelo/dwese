@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Sat, 16 Oct 2021 21:08:09 +0200</dateModified>
+    <dateModified>Sat, 16 Oct 2021 21:17:32 +0200</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
@@ -470,13 +470,12 @@
         <outline text="Paquetes de Atom y herramientas externas" status="open" _status="indeterminate" tags="opcional" progress_counter="true">
           <outline text="PHP_CodeSniffer" status="open" _status="indeterminate"/>
           <outline text="PHP-CS-Fixer" status="open" _status="indeterminate"/>
-          <outline text="Yii2-Shell" status="open" _status="indeterminate"/>
         </outline>
-        <outline text="Ejercicios" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="De versionado semántico" status="open" _status="indeterminate"/>
-          <outline text="De versiones y restricciones" status="open" _status="indeterminate"/>
-          <outline text="De uso básico de Composer" status="open" _status="indeterminate"/>
-          <outline text="De buscar paquetes en Packagist que tengan una funcionalidad concreta y usarlos en un ejemplo" status="open" _status="indeterminate"/>
+        <outline text="Ejercicios" status="invalid" _status="none" progress_counter="true">
+          <outline text="De versionado semántico" status="invalid" _status="none"/>
+          <outline text="De versiones y restricciones" status="invalid" _status="none"/>
+          <outline text="De uso básico de Composer" status="invalid" _status="none"/>
+          <outline text="De buscar paquetes en Packagist que tengan una funcionalidad concreta y usarlos en un ejemplo" status="invalid" _status="none"/>
         </outline>
       </outline>
       <outline text="**Introducción a Laravel**" status="open" _status="indeterminate" due="2021-11-15" due_user_ids="139389" tags="ce1d,ce1e,ce1g,ce4g,ev1,ra1,ra4">
