@@ -19,6 +19,21 @@
                 \item Portales
                 \item ERP, CRM
             \end{longenum}
+            \item Tecnologías de desarrollo de aplicaciones web
+            \begin{longenum}
+                \item .NET
+                \item Java
+                \item Ruby/Rails
+                \item Python/Django
+                \item PHP
+                \item El Kung-Fu de la Programación
+                \begin{longenum}
+                    \item Odoo
+                    \item PrestaShop
+                    \item Drupal
+                    \item WordPress
+                \end{longenum}
+            \end{longenum}
         \end{longenum}
         \item Arquitectura cliente/servidor
         \item HTML 5 básico (recordatorio de primer curso)
@@ -163,6 +178,15 @@
                     \item \texttt{strval()}
                     \item \texttt{boolval()}
                 \end{longenum}
+                \item Funciones de formateado numérico
+                \begin{longenum}
+                    \item \texttt{number\_format()}
+                    \item \texttt{money\_format()}
+                    \begin{longenum}
+                        \item \texttt{setlocale()}
+                    \end{longenum}
+                    \item \texttt{NumberFormatter}
+                \end{longenum}
             \end{longenum}
             \item Comparaciones
             \begin{longenum}
@@ -217,6 +241,8 @@
                 \item \texttt{isset()} vs. \texttt{array\_key\_exists()}
             \end{longenum}
             \item \texttt{foreach}
+            \item Conversión a \texttt{array} 
+            \item \textit{Ejemplo}: \texttt{\$argv} en CLI
         \end{longenum}
         \item Funciones definidas por el usuario
         \begin{longenum}
@@ -244,12 +270,31 @@
     \end{longenum}
     \item \textbf{\textsc{Desarrollo de aplicaciones con PHP (I)}} \ce{1a}\ \ce{1b}\ \ce{1d}\ \ce{1f}\ \ce{2a}\ \ce{2b}\ \ce{2c}\ \ce{2d}\ \ce{2e}\ \ce{2f}\ \ce{2g}\ \ce{2h}\ \ce{3a}\ \ce{3b}\ \ce{3c}\ \ce{3d}\ \ce{3e}\ \ce{3f}\ \ce{3g}\ \ce{4g}\ \ce{5a}\ \ce{5d}\ \ce{5g}\ \ce{5h}\ \ev1\ \ra1\ \ra2\ \ra3\ \ra4\ \ra5\ (est: 2021\==10\==11)
     \begin{longenum}
+        \item SAPIs
+        \begin{longenum}
+            \item CLI: Uso en línea de comandos
+            \begin{longenum}
+                \item \texttt{\$argc} y \texttt{\$argv}
+                \item Flujos de entrada/salida \opcional\
+            \end{longenum}
+            \item Apache \opcional\
+            \begin{longenum}
+                \item Integración de PHP con Apache
+                \item PHP como lenguaje embebido
+            \end{longenum}
+            \item CGI: PHP-FPM (FastCGI Process Manager) \opcional\
+        \end{longenum}
         \item Código embebido
         \begin{longenum}
             \item Etiqueta \texttt{<?=}
             \item Servidor web  interno
         \end{longenum}
         \item Manejo de datos de entrada: \texttt{\$\_GET} y \texttt{\$\_POST}
+        \item Funciones auxiliares de interés
+        \begin{longenum}
+            \item \texttt{extract()}
+            \item \texttt{compact()}
+        \end{longenum}
         \item Aspectos básicos de la orientación a objetos
         \begin{longenum}
             \item Objetos
@@ -288,6 +333,13 @@
         \begin{longenum}
             \item \texttt{var\_dump()}, \texttt{print\_r()}, \texttt{die()}
             \item Depuración con PsySH
+            \item Xdebug \opcional\
+            \begin{longenum}
+                \item Módulo Xdebug
+                \item Aplicación Xdebug para Chrome
+                \item Extensión Xdebug Helper para Chrome
+                \item Paquete \texttt{php-debug} para Atom
+            \end{longenum}
         \end{longenum}
     \end{longenum}
     \item \textbf{\textsc{Persistencia de datos con PHP}} \ce{4a}\ \ce{4b}\ \ce{4c}\ \ce{4g}\ \ce{5f}\ \ce{5g}\ \ce{5h}\ \ce{6a}\ \ce{6b}\ \ce{6c}\ \ce{6e}\ \ce{6g}\ \ev1\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ (est: 2021\==10\==18)
@@ -314,7 +366,7 @@
             \begin{longenum}
                 \item \texttt{PDO::errorInfo()}
             \end{longenum}
-            \item Transacciones 
+            \item Transacciones
             \begin{longenum}
                 \item \texttt{\$pdo->beginTransaction();}
                 \item \texttt{\$pdo->commit();}
