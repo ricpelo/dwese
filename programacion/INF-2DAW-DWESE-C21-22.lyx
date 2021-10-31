@@ -2224,90 +2224,18 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Python,escapeinside={||},mathescape=true,framesep=5mm,frame=topline"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-|$N_i$| = |${
-\backslash
-displaystyle
-\backslash
-sum
-\backslash
-limits_{j 
-\backslash
-in C_i}} p_{ij}$|
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-mínimo = |$
-\backslash
-frac{
-\backslash
-min
-\backslash
-limits_{j 
-\backslash
-in C_i} 
-\backslash
-CE{$i$}{$j$}}{N_i}$|
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-if mínimo |$
-\backslash
-geq$| 5:
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-    |$
-\backslash
-RA{$i$}$| = |$
-\backslash
-frac{{
-\backslash
-displaystyle
-\backslash
-sum
-\backslash
-limits_{j 
-\backslash
-in C_i}} 
-\backslash
-CE{$i$}{$j$} 
-\backslash
-cdot p_{ij}}{N_i}$|
-\end_layout
-
-\begin_layout Plain Layout
-
-else:
-\end_layout
-
-\begin_layout Plain Layout
-
-    |$
-\backslash
-RA{$i$}$| = mínimo
-\end_layout
+\begin_inset Formula 
+\begin{align*}
+N_{i} & ={\displaystyle \sum\limits _{j\in C_{i}}}p_{ij}\\
+\\
+mínimo & =\frac{\min\limits _{j\in C_{i}}\CE{\ensuremath{i}}{\ensuremath{j}}}{N_{i}}\\
+\\
+\RA{\ensuremath{i}} & =\begin{cases}
+\frac{{\displaystyle \sum\limits _{j\in C_{i}}}\CE{\ensuremath{i}}{\ensuremath{j}}\cdot p_{ij}}{N_{i}} & \textrm{si }mínimo\geq5\\
+\\
+mínimo & \textrm{e.o.c.}
+\end{cases}
+\end{align*}
 
 \end_inset
 
