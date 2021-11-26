@@ -2233,7 +2233,7 @@ N_{i} & ={\displaystyle \sum\limits _{j\in C_{i}}}p_{ij}\\
 mínimo & =\min\limits _{j\in C_{i}}\CE{\ensuremath{i}}{\ensuremath{j}}\\
 \\
 \RA{\ensuremath{i}} & =\left\{ \begin{array}{lcl}
-\frac{{\displaystyle \sum\limits _{j\in C_{i}}}\CE{\ensuremath{i}}{\ensuremath{j}}\cdot p_{ij}}{N_{i}} &  & \textrm{si }mínimo\geq5\\
+\frac{{\displaystyle \sum\limits _{j\in C_{i}}}\CE{\ensuremath{i}}{\ensuremath{j}}\cdot p_{ij}}{N_{i}} &  & \textrm{si }mínimo\geq5,0\\
 \\
 mínimo &  & \textrm{e.o.c.}
 \end{array}\right.
