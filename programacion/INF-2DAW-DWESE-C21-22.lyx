@@ -537,6 +537,22 @@ Jefe de Departamento: Ricardo Pérez López
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -2198,27 +2214,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-\noindent
-\align center
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "80col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
 \begin_inset Float algorithm
 placement H
 wide false
@@ -2226,25 +2221,22 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
 \begin_inset Formula 
-\begin{align*}
-N_{i} & ={\displaystyle \sum\limits _{j\in C_{i}}}p_{ij}\\
+\[
+\RA{\ensuremath{i}}=\left\{ \begin{array}{lcl}
+\frac{{\displaystyle \sum\limits _{j\in C_{i}}}\CE{\ensuremath{i}}{\ensuremath{j}}\cdot p_{ij}}{{\displaystyle \sum\limits _{j\in C_{i}}}p_{ij}} &  & \textrm{si }\min\limits _{j\in C_{i}}\CE{\ensuremath{i}}{\ensuremath{j}}\geq5,0\\
 \\
-mínimo & =\min\limits _{j\in C_{i}}\CE{\ensuremath{i}}{\ensuremath{j}}\\
-\\
-\RA{\ensuremath{i}} & =\left\{ \begin{array}{lcl}
-\frac{{\displaystyle \sum\limits _{j\in C_{i}}}\CE{\ensuremath{i}}{\ensuremath{j}}\cdot p_{ij}}{N_{i}} &  & \textrm{si }mínimo\geq5,0\\
-\\
-mínimo &  & \textrm{e.o.c.}
+\min\limits _{j\in C_{i}}\CE{\ensuremath{i}}{\ensuremath{j}} &  & \textrm{e. o. c.}
 \end{array}\right.
-\end{align*}
+\]
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2267,13 +2259,20 @@ name "alg:Cálculo-calificación-resultado-aprendizaje"
 
 \end_layout
 
-\end_inset
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
 
 
+\backslash
+noindent{}
 \end_layout
 
-\begin_layout Standard
-Donde: 
+\end_inset
+
+Donde:
 \begin_inset Box Frameless
 position "t"
 hor_pos "c"
@@ -2281,7 +2280,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 1
 use_makebox 0
-width "80col%"
+width "90col%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -2307,7 +2306,7 @@ begingroup
 
 
 \backslash
-setlist[description]{style=multiline,align=right,labelwidth=1.2cm}
+setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
 \end_layout
 
 \end_inset
@@ -2379,8 +2378,21 @@ CE{$i$}{$j$}
 \begin_inset Formula $C_{i}=$
 \end_inset
 
- Conjunto de los criterios de evaluación trabajados y evaluados, asociados
- al resultado de aprendizaje 
+ Conjunto de los índices (letras 
+\family sans
+\series bold
+a
+\family default
+\series default
+, 
+\family sans
+\series bold
+b
+\family default
+\series default
+, \SpecialChar ldots
+) de los criterios de evaluación trabajados y evaluados, asociados al
+ resultado de aprendizaje 
 \begin_inset Formula $i$
 \end_inset
 
@@ -2457,7 +2469,219 @@ noprefix "false"
 
 \end_inset
 
+ y según se recoge en el algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Cálculo-calificación-parcial"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P_{i}=\frac{{\displaystyle \sum\limits _{\CE{\ensuremath{x}}{\ensuremath{y}}\in C_{i}}\textbf{\CE{\ensuremath{x}}{\ensuremath{y}}}}\cdot p_{xy}}{{\displaystyle \sum\limits _{\CE{\ensuremath{x}}{\ensuremath{y}}\in C_{i}}}p_{xy}}
+\]
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Cálculo-calificación-parcial"
+
+\end_inset
+
+(Cálculo de una calificación parcial)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent{}
+\end_layout
+
+\end_inset
+
+Donde: 
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begingroup
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $P_{i}=$
+\end_inset
+
+ Calificación parcial del trimestre 
+\begin_inset Formula $i$
+\end_inset
+
+ (
+\begin_inset Formula $1\leq i\leq2).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+CE{$x$}{$y$}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $=$
+\end_inset
+
+ Calificación del criterio de evaluación 
+\begin_inset Formula $y$
+\end_inset
+
+ asociado al resultado de aprendizaje 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $C_{i}=$
+\end_inset
+
+ Conjunto de los criterios de evaluación trabajados y evaluados en el trimestre
+ 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $p_{xy}=$
+\end_inset
+
+ Ponderación del criterio de evaluación 
+\begin_inset Formula $y$
+\end_inset
+
+ en el resultado de aprendizaje 
+\begin_inset Formula $x$
+\end_inset
+
+, según se determina en el apartado 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Ponderación-de-los-criterios"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+endgroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2477,17 +2701,186 @@ Calificación final
 
 \begin_layout Standard
 La calificación del módulo en la evaluación final se calculará como la media
- aritmética de las calificaciones de los diferentes resultados de aprendizaje.
+ aritmética de las calificaciones de los diferentes resultados de aprendizaje,
+ según se recoge en el algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Cálculo-calificación-final"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F=\frac{{\displaystyle \sum\limits _{i\in R}}\textbf{\RA{\ensuremath{i}}}}{\lvert R\rvert}
+\]
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Cálculo-calificación-final"
+
+\end_inset
+
+(Cálculo de la calificación final)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent{}
+\end_layout
+
+\end_inset
+
+Donde: 
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 1
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begingroup
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $F=$
+\end_inset
+
+ Calificación final.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+RA{$i$}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $=$
+\end_inset
+
+ Calificación del resultado de aprendizaje 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $R=$
+\end_inset
+
+ Conjunto de los índices (1, 2, \SpecialChar ldots
+) de los resultados de aprendizaje del módulo.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+endgroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 La calificación introducida en el sistema Séneca será la calificación final
  redondeada al entero más cercano, y no podrá ser inferior a 1,0.
-\end_layout
-
-\begin_layout Standard
-Si el alumno no ha alcanzado todos los resultados de aprendizaje, la calificació
-n final del módulo no podrá ser superior a 4,0.
+ Asimismo, si el alumno no ha alcanzado todos los resultados de aprendizaje,
+ la calificación final del módulo no podrá ser superior a 4,0.
 \end_layout
 
 \begin_layout Subsection
@@ -2572,24 +2965,6 @@ TR
 .
 \end_layout
 
-\begin_layout Standard
-Los alumnos que tengan criterios de evaluación pendientes de cumplir en
- la tercera evaluación, deberán presentarse directamente a la prueba final
- tal como se establece en el apartado 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Prueba-final"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- No hay, por tanto, pruebas de recuperación específicas para los contenidos
- de la tercera evaluación.
-\end_layout
-
 \begin_layout Subsubsection
 \begin_inset CommandInset label
 LatexCommand label
@@ -2625,7 +3000,7 @@ Dicha prueba o examen final constará de varias partes separadas.
  De ellas, las partes que el alumno deberá realizar y superar dependerán
  de las calificaciones que haya obtenido en los diferentes resultados de
  aprendizaje, de manera que el alumno deberá realizar las partes correspondiente
-s a los criterios de evaluación que no haya cumplido.
+s a los resultados de aprendizaje que no haya alcanzado.
 \end_layout
 
 \begin_layout Standard
@@ -2635,9 +3010,9 @@ En consecuencia, en la prueba final se obtendrá una calificación por cada
 \emph on
 sustituyen
 \emph default
- a las calificaciones de cada uno de los criterios de evaluación que, en
- caso de haberlas, se obtuvieron previamente en sus correspondientes evaluacione
-s.
+ a las calificaciones de cada uno de los resultados de aprendizaje que,
+ en caso de haberlas, se obtuvieron previamente en sus correspondientes
+ evaluaciones parciales.
  Finalmente, se calculará la la 
 \series bold
 calificación final del módulo
