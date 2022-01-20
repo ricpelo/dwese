@@ -14,15 +14,15 @@ RA,CE,Porcentaje,Descripción
 2,f,"0.12",Se han utilizado directivas para modificar el comportamiento predeterminado.
 2,g,"0.12",Se han utilizado los distintos tipos de variables y operadores disponibles en el lenguaje.
 2,h,"0.12",Se han identificado los ámbitos de utilización de las variables.
-3,a,"0.12",Se han utilizado mecanismos de decisión en la creación de bloques de sentencias.
-3,b,"0.12",Se han utilizado bucles y se ha verificado su funcionamiento.
-3,c,"0.12",Se han utilizado «arrays» para almacenar y recuperar conjuntos de datos.
-3,d,"0.12",Se han creado y utilizado funciones.
-3,e,"0.12",Se han utilizado formularios Web para interactuar con el usuario del navegador Web.
-3,f,"0.12",Se han empleado métodos para recuperar la información introducida en el formulario.
-3,g,"0.12",Se han añadido comentarios al código.
+3,a,"0.14",Se han utilizado mecanismos de decisión en la creación de bloques de sentencias.
+3,b,"0.14",Se han utilizado bucles y se ha verificado su funcionamiento.
+3,c,"0.16",Se han utilizado «arrays» para almacenar y recuperar conjuntos de datos.
+3,d,"0.14",Se han creado y utilizado funciones.
+3,e,"0.14",Se han utilizado formularios Web para interactuar con el usuario del navegador Web.
+3,f,"0.14",Se han empleado métodos para recuperar la información introducida en el formulario.
+3,g,"0.14",Se han añadido comentarios al código.
 4,a,"0.1",Se han identificado los mecanismos disponibles para el mantenimiento de la información que concierne a un cliente Web concreto y se han señalado sus ventajas.
-4,b,"0.15",Se han utilizado sesiones para mantener el estado de las aplicaciones Web.
+4,b,"0.20",Se han utilizado sesiones para mantener el estado de las aplicaciones Web.
 4,c,"0.15",Se han utilizado «cookies» para almacenar información en el cliente Web y para recuperar su contenido.
 4,d,"0.15",Se han identificado y caracterizado los mecanismos disponibles para la autentificación de usuarios.
 4,e,"0.15",Se han escrito aplicaciones que integren mecanismos de autentificación de usuarios.
