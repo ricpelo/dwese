@@ -301,6 +301,7 @@
             \begin{longenum}
                 \item \texttt{new}
                 \item \texttt{instanceof}
+                \item \texttt{get\_class}
             \end{longenum}
             \item Referencias
             \begin{longenum}
@@ -366,17 +367,6 @@
             \begin{longenum}
                 \item \texttt{PDO::errorInfo()}
             \end{longenum}
-            \item Transacciones
-            \begin{longenum}
-                \item \texttt{\$pdo->beginTransaction();}
-                \item \texttt{\$pdo->commit();}
-                \item \texttt{\$pdo->rollBack();}
-            \end{longenum}
-        \end{longenum}
-        \item Programación de \textit{CRUD} básico
-        \begin{longenum}
-            \item Ejemplo de aplicación: \textit{Muéveme}
-            \item Ejemplo de aplicación: \textit{FilmAffinity}
         \end{longenum}
         \item Post/Redirect/Get
         \item \texttt{header()}
@@ -434,10 +424,10 @@
                 \item Persistente
                 \item Escapado de la salida
                 \begin{longenum}
-                    \item \texttt{htmlspecialchars()}
                     \item HTML Purifier
                 \end{longenum}
             \end{longenum}
+            \item \texttt{htmlspecialchars()}
         \end{longenum}
         \item Seguridad y persistencia
         \begin{longenum}
@@ -485,9 +475,10 @@
             \end{longenum}
             \item Interfaces
             \item Traits
+            \item Contravarianza y covarianza
             \item La clase \texttt{stdClass}
             \begin{longenum}
-                \item Conversión de \texttt{array} a \texttt{object}
+                \item Conversión de \texttt{array} a \texttt{object} y viceversa.
             \end{longenum}
         \end{longenum}
         \item Espacios de nombres
@@ -547,6 +538,7 @@
             \item \texttt{mpdf/mpdf}
             \item \texttt{ramsey/uuid}
             \item \texttt{doctrine/inflector}
+            \item \texttt{nesbot/carbon}
         \end{longenum}
         \item Recomendaciones PSR del PHP-FIG (Framework Interop Group)
         \begin{longenum}
@@ -628,6 +620,16 @@
     \begin{longenum}
         \item Conceptos básicos
         \item Relaciones
+        \begin{longenum}
+            \item Uno a uno
+            \item Uno a muchos
+            \item Muchos a muchos
+            \item Relaciones polimórficas
+            \item Carga ansiosa
+            \begin{longenum}
+                \item El problema del \_N + 1\_
+            \end{longenum}
+        \end{longenum}
         \item Colecciones
         \item Mutadores y castings
     \end{longenum}

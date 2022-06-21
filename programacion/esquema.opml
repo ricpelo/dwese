@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Tue, 26 Oct 2021 16:36:57 +0200</dateModified>
+    <dateModified>Tue, 21 Jun 2022 11:30:58 +0200</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
@@ -258,6 +258,7 @@
           <outline text="Objetos" status="closed" _status="checked" progress_counter="true">
             <outline text="`new`" status="closed" _status="checked"/>
             <outline text="`instanceof`" status="closed" _status="checked"/>
+            <outline text="`get_class`" status="closed" _status="checked"/>
           </outline>
           <outline text="[link: Referencias|http://php.net/manual/es/language.references.php]" status="closed" _status="checked" progress_counter="true">
             <outline text="Asignación por referencia (`=&amp;`)" status="closed" _status="checked"/>
@@ -293,183 +294,185 @@
           </outline>
         </outline>
       </outline>
-      <outline text="**Persistencia de datos con PHP**" status="open" _status="indeterminate" due="2021-10-18" due_user_ids="139389" tags="ce4a,ce4b,ce4c,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6e,ce6g,ev1,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
-        <outline text="[link: PDO (PHP Data Objects)|http://php.net/manual/es/book.pdo.php]" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: Clase `PDO`|http://php.net/manual/es/class.pdo.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: `__construct()`|http://php.net/manual/es/pdo.construct.php]" status="open" _status="indeterminate"/>
-            <outline text="[link: `query()`|http://php.net/manual/es/pdo.query.php]" status="open" _status="indeterminate"/>
-            <outline text="[link: `exec()`|http://php.net/manual/es/pdo.exec.php]" status="open" _status="indeterminate"/>
-            <outline text="[link: `prepare()`|http://php.net/manual/es/pdo.prepare.php]" status="open" _status="indeterminate"/>
+      <outline text="**Persistencia de datos con PHP**" status="closed" _status="checked" due="2021-10-18" due_user_ids="139389" tags="ce4a,ce4b,ce4c,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6e,ce6g,ev1,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
+        <outline text="[link: PDO (PHP Data Objects)|http://php.net/manual/es/book.pdo.php]" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: Clase `PDO`|http://php.net/manual/es/class.pdo.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: `__construct()`|http://php.net/manual/es/pdo.construct.php]" status="closed" _status="checked"/>
+            <outline text="[link: `query()`|http://php.net/manual/es/pdo.query.php]" status="closed" _status="checked"/>
+            <outline text="[link: `exec()`|http://php.net/manual/es/pdo.exec.php]" status="closed" _status="checked"/>
+            <outline text="[link: `prepare()`|http://php.net/manual/es/pdo.prepare.php]" status="closed" _status="checked"/>
           </outline>
-          <outline text="[link: Clase `PDOStatement`|http://php.net/manual/es/class.pdostatement.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: `fetch()`|http://php.net/manual/es/pdostatement.fetch.php]" status="open" _status="indeterminate"/>
-            <outline text="[link: `fetchAll()`|http://php.net/manual/es/pdostatement.fetchall.php]" status="open" _status="indeterminate"/>
-            <outline text="[link: `fetchColumn()`|http://php.net/manual/es/pdostatement.fetchcolumn.php]" status="open" _status="indeterminate"/>
-            <outline text="[link: `execute()`|http://php.net/manual/es/pdostatement.execute.php]" status="open" _status="indeterminate"/>
-            <outline text="[link: `rowCount()`|http://php.net/manual/es/pdostatement.rowcount.php]" status="open" _status="indeterminate"/>
+          <outline text="[link: Clase `PDOStatement`|http://php.net/manual/es/class.pdostatement.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: `fetch()`|http://php.net/manual/es/pdostatement.fetch.php]" status="closed" _status="checked"/>
+            <outline text="[link: `fetchAll()`|http://php.net/manual/es/pdostatement.fetchall.php]" status="closed" _status="checked"/>
+            <outline text="[link: `fetchColumn()`|http://php.net/manual/es/pdostatement.fetchcolumn.php]" status="closed" _status="checked"/>
+            <outline text="[link: `execute()`|http://php.net/manual/es/pdostatement.execute.php]" status="closed" _status="checked"/>
+            <outline text="[link: `rowCount()`|http://php.net/manual/es/pdostatement.rowcount.php]" status="closed" _status="checked"/>
           </outline>
-          <outline text="Correspondencias de tipos entre SQL y PHP" status="open" _status="indeterminate"/>
-          <outline text="Manejo de errores en PDO" status="open" _status="indeterminate">
-            <outline text="[`PDO::errorInfo()`](https://www.php.net/manual/es/pdo.errorinfo.php)" status="open" _status="indeterminate"/>
+          <outline text="Correspondencias de tipos entre SQL y PHP" status="closed" _status="checked"/>
+          <outline text="Manejo de errores en PDO" status="closed" _status="checked">
+            <outline text="[`PDO::errorInfo()`](https://www.php.net/manual/es/pdo.errorinfo.php)" status="closed" _status="checked"/>
           </outline>
-          <outline text="Transacciones" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="`$pdo-&gt;beginTransaction();`" status="open" _status="indeterminate"/>
-            <outline text="`$pdo-&gt;commit();`" status="open" _status="indeterminate"/>
-            <outline text="`$pdo-&gt;rollBack();`" status="open" _status="indeterminate"/>
+          <outline text="Transacciones" status="invalid" _status="none" tags="no_impartido" progress_counter="true">
+            <outline text="`$pdo-&gt;beginTransaction();`" status="closed" _status="checked"/>
+            <outline text="`$pdo-&gt;commit();`" status="closed" _status="checked"/>
+            <outline text="`$pdo-&gt;rollBack();`" status="closed" _status="checked"/>
           </outline>
         </outline>
-        <outline text="Programación de *CRUD* básico" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Ejemplo de aplicación: *Muéveme*" status="open" _status="indeterminate"/>
-          <outline text="Ejemplo de aplicación: *FilmAffinity*" status="open" _status="indeterminate"/>
+        <outline text="Programación de *CRUD* básico" status="invalid" _status="none" progress_counter="true">
+          <outline text="Ejemplo de aplicación: *Muéveme*" status="invalid" _status="none" tags="no_impartido"/>
+          <outline text="Ejemplo de aplicación: *FilmAffinity*" status="invalid" _status="none" tags="no_impartido"/>
         </outline>
-        <outline text="[Post/Redirect/Get](https://en.wikipedia.org/wiki/Post/Redirect/Get)" status="open" _status="indeterminate"/>
-        <outline text="[link: `header()`|http://php.net/manual/es/function.header.php]" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: `output_buffering`|http://php.net/manual/es/outcontrol.configuration.php#ini.output-buffering]" status="open" _status="indeterminate"/>
+        <outline text="[Post/Redirect/Get](https://en.wikipedia.org/wiki/Post/Redirect/Get)" status="closed" _status="checked"/>
+        <outline text="[link: `header()`|http://php.net/manual/es/function.header.php]" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: `output_buffering`|http://php.net/manual/es/outcontrol.configuration.php#ini.output-buffering]" status="closed" _status="checked"/>
         </outline>
-        <outline text="[link: Cookies|http://php.net/manual/es/features.cookies.php]" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: `setcookie()`|http://php.net/manual/es/function.setcookie.php]" status="open" _status="indeterminate"/>
-          <outline text="Ejemplos de uso" status="open" _status="indeterminate"/>
+        <outline text="[link: Cookies|http://php.net/manual/es/features.cookies.php]" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: `setcookie()`|http://php.net/manual/es/function.setcookie.php]" status="closed" _status="checked"/>
+          <outline text="Ejemplos de uso" status="closed" _status="checked"/>
         </outline>
       </outline>
-      <outline text="**Desarrollo de aplicaciones con PHP (II)**" status="open" _status="indeterminate" due="2021-10-25" due_user_ids="139389" tags="ce1a,ce4a,ce4b,ce4c,ce4d,ce4e,ce4f,ce4g,ce5a,ce5b,ce5d,ce5f,ce5g,ce5h,ev1,ra1,ra4,ra5" progress_counter="true">
-        <outline text="[link: Filtrado de la entrada|http://www.phptherightway.com/#data_filtering]" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Cómo *NO* se debe hacer" status="open" _status="indeterminate"/>
-          <outline text="[Extensión Filter](http://php.net/manual/es/book.filter.php)" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="`filter_input()`, `filter_has_var()`, `filter_var()`" status="open" _status="indeterminate"/>
-            <outline text="Filtros de [validación](http://php.net/manual/es/filter.filters.validate.php) y [saneado](http://php.net/manual/es/filter.filters.sanitize.php)" status="open" _status="indeterminate"/>
+      <outline text="**Desarrollo de aplicaciones con PHP (II)**" status="closed" _status="checked" due="2021-10-25" due_user_ids="139389" tags="ce1a,ce4a,ce4b,ce4c,ce4d,ce4e,ce4f,ce4g,ce5a,ce5b,ce5d,ce5f,ce5g,ce5h,ev1,ra1,ra4,ra5" progress_counter="true">
+        <outline text="[link: Filtrado de la entrada|http://www.phptherightway.com/#data_filtering]" status="closed" _status="checked" progress_counter="true">
+          <outline text="Cómo *NO* se debe hacer" status="closed" _status="checked"/>
+          <outline text="[Extensión Filter](http://php.net/manual/es/book.filter.php)" status="closed" _status="checked" progress_counter="true">
+            <outline text="`filter_input()`, `filter_has_var()`, `filter_var()`" status="closed" _status="checked"/>
+            <outline text="Filtros de [validación](http://php.net/manual/es/filter.filters.validate.php) y [saneado](http://php.net/manual/es/filter.filters.sanitize.php)" status="closed" _status="checked"/>
           </outline>
-          <outline text="[Expresiones regulares (PCRE)](http://php.net/manual/es/book.pcre.php)" status="open" _status="indeterminate"/>
+          <outline text="[Expresiones regulares (PCRE)](http://php.net/manual/es/book.pcre.php)" status="closed" _status="checked"/>
         </outline>
-        <outline text="[Formateado de datos](https://www.php.net/manual/es/book.intl.php)" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[Números y cantidades monetarias](https://www.php.net/manual/es/class.numberformatter.php)" status="open" _status="indeterminate"/>
-          <outline text="[Fechas](https://www.php.net/manual/es/class.intldateformatter.php)" status="open" _status="indeterminate"/>
+        <outline text="[Formateado de datos](https://www.php.net/manual/es/book.intl.php)" status="closed" _status="checked" progress_counter="true">
+          <outline text="[Números y cantidades monetarias](https://www.php.net/manual/es/class.numberformatter.php)" status="closed" _status="checked"/>
+          <outline text="[Fechas](https://www.php.net/manual/es/class.intldateformatter.php)" status="closed" _status="checked"/>
         </outline>
-        <outline text="[link: Sesiones|http://php.net/manual/es/book.session.php]" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Iniciar una sesión" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: `session_start()`|http://php.net/manual/es/function.session-start.php]" status="open" _status="indeterminate"/>
+        <outline text="[link: Sesiones|http://php.net/manual/es/book.session.php]" status="closed" _status="checked" progress_counter="true">
+          <outline text="Iniciar una sesión" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: `session_start()`|http://php.net/manual/es/function.session-start.php]" status="closed" _status="checked"/>
           </outline>
-          <outline text="Usar una sesión" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: `$_SESSION`|http://php.net/manual/es/reserved.variables.session.php]" status="open" _status="indeterminate"/>
-            <outline text="Ejemplos de uso" status="open" _status="indeterminate"/>
+          <outline text="Usar una sesión" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: `$_SESSION`|http://php.net/manual/es/reserved.variables.session.php]" status="closed" _status="checked"/>
+            <outline text="Ejemplos de uso" status="closed" _status="checked"/>
           </outline>
-          <outline text="Terminar una sesión" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: `session_destroy()`|http://php.net/manual/es/function.session-destroy.php]" status="open" _status="indeterminate"/>
-            <outline text="`session_name()`" status="open" _status="indeterminate"/>
-            <outline text="`session_id()`" status="open" _status="indeterminate"/>
-            <outline text="`session_get_cookie_params()`" status="open" _status="indeterminate"/>
+          <outline text="Terminar una sesión" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: `session_destroy()`|http://php.net/manual/es/function.session-destroy.php]" status="closed" _status="checked"/>
+            <outline text="`session_name()`" status="closed" _status="checked"/>
+            <outline text="`session_id()`" status="closed" _status="checked"/>
+            <outline text="`session_get_cookie_params()`" status="closed" _status="checked"/>
           </outline>
         </outline>
-        <outline text="Seguridad básica" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Filtrar la entrada, escapar la salida" status="open" _status="indeterminate"/>
-          <outline text="[link: Cross-Site Scripting (XSS)|https://diego.com.es/ataques-xss-cross-site-scripting-en-php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="No persistente" status="open" _status="indeterminate"/>
-            <outline text="Persistente" status="open" _status="indeterminate"/>
-            <outline text="[Escapado de la salida](https://phpbestpractices.org/#sanitizing-html)" status="open" _status="indeterminate" progress_counter="true">
-              <outline text="`htmlspecialchars()`" status="open" _status="indeterminate"/>
-              <outline text="[HTML Purifier](http://htmlpurifier.org/)" status="open" _status="indeterminate"/>
+        <outline text="Seguridad básica" status="closed" _status="checked" progress_counter="true">
+          <outline text="Filtrar la entrada, escapar la salida" status="closed" _status="checked"/>
+          <outline text="[link: Cross-Site Scripting (XSS)|https://diego.com.es/ataques-xss-cross-site-scripting-en-php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="No persistente" status="closed" _status="checked"/>
+            <outline text="Persistente" status="closed" _status="checked"/>
+            <outline text="[Escapado de la salida](https://phpbestpractices.org/#sanitizing-html)" status="closed" _status="checked" progress_counter="true">
+              <outline text="[HTML Purifier](http://htmlpurifier.org/)" status="closed" _status="checked"/>
             </outline>
           </outline>
+          <outline text="`htmlspecialchars()`" status="closed" _status="checked"/>
         </outline>
-        <outline text="Seguridad y persistencia" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[Contraseñas](https://phpbestpractices.org/#passwords)" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="https://www.md5online.org/" status="open" _status="indeterminate"/>
-            <outline text="https://www.sha1online.org/" status="open" _status="indeterminate"/>
-            <outline text="[link: `password_hash()`|http://php.net/manual/es/function.password-hash.php]" status="open" _status="indeterminate"/>
-            <outline text="[link: `password_verify()`|http://php.net/manual/es/function.password-verify.php]" status="open" _status="indeterminate"/>
+        <outline text="Seguridad y persistencia" status="closed" _status="checked" progress_counter="true">
+          <outline text="[Contraseñas](https://phpbestpractices.org/#passwords)" status="closed" _status="checked" progress_counter="true">
+            <outline text="https://www.md5online.org/" status="closed" _status="checked"/>
+            <outline text="https://www.sha1online.org/" status="closed" _status="checked"/>
+            <outline text="[link: `password_hash()`|http://php.net/manual/es/function.password-hash.php]" status="closed" _status="checked"/>
+            <outline text="[link: `password_verify()`|http://php.net/manual/es/function.password-verify.php]" status="closed" _status="checked"/>
           </outline>
-          <outline text="Inyección de código SQL" status="open" _status="indeterminate"/>
-          <outline text="[link: Cross-Site Request Forgery (CSRF)|https://diego.com.es/ataques-csrf-cross-site-request-forgery-en-php]" status="open" _status="indeterminate"/>
-        </outline>
-      </outline>
-      <outline text="**Programación avanzada en PHP**" status="open" _status="indeterminate" due="2021-11-01" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ev1,ra2,ra3,ra4,ra5" progress_counter="true">
-        <outline text="[link: Diseño de aplicaciones orientadas a objetos|http://php.net/manual/es/language.oop5.php]" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: Clases|http://php.net/manual/es/language.oop5.basic.php]" status="open" _status="indeterminate"/>
-          <outline text="[link: Propiedades|http://php.net/manual/es/language.oop5.properties.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="Predeterminadas" status="open" _status="indeterminate"/>
-            <outline text="Dinámicas" status="open" _status="indeterminate"/>
-          </outline>
-          <outline text="Métodos" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="Referencia `$this`" status="open" _status="indeterminate"/>
-            <outline text="[link: Constructores y destructores|http://php.net/manual/es/language.oop5.decon.php]" status="open" _status="indeterminate"/>
-          </outline>
-          <outline text="[link: Constantes|http://php.net/manual/es/language.oop5.constants.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="`self`" status="open" _status="indeterminate"/>
-          </outline>
-          <outline text="Herencia" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="`parent`" status="open" _status="indeterminate"/>
-            <outline text="Sobreescritura de métodos" status="open" _status="indeterminate"/>
-          </outline>
-          <outline text="[link: Miembros estáticos|http://php.net/manual/es/language.oop5.static.php]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="Constantes" status="open" _status="indeterminate"/>
-            <outline text="Métodos estáticos" status="open" _status="indeterminate"/>
-            <outline text="Propiedades estáticas" status="open" _status="indeterminate"/>
-            <outline text="[link: Enlace estático en tiempo de ejecución|http://php.net/manual/es/language.oop5.late-static-bindings.php]" status="open" _status="indeterminate"/>
-          </outline>
-          <outline text="[link: Interfaces|http://php.net/manual/es/language.oop5.interfaces.php]" status="open" _status="indeterminate"/>
-          <outline text="[link: Traits|http://php.net/manual/es/language.oop5.traits.php]" status="open" _status="indeterminate"/>
-          <outline text="La clase `stdClass`" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="Conversión de `array` a `object`" status="open" _status="indeterminate"/>
-          </outline>
-        </outline>
-        <outline text="[link: Espacios de nombres|http://php.net/manual/es/language.namespaces.php]" status="open" _status="indeterminate"/>
-        <outline text="[link: Funciones anónimas|http://php.net/manual/es/functions.anonymous.php]" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Clausuras" status="open" _status="indeterminate"/>
-        </outline>
-        <outline text="[link: Callables|http://php.net/manual/es/language.types.callable.php]" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: `call_user_func()`|http://php.net/manual/es/function.call-user-func.php]" status="open" _status="indeterminate"/>
-          <outline text="`array_map()` y `array_reduce()`" status="open" _status="indeterminate"/>
+          <outline text="Inyección de código SQL" status="closed" _status="checked"/>
+          <outline text="[link: Cross-Site Request Forgery (CSRF)|https://diego.com.es/ataques-csrf-cross-site-request-forgery-en-php]" status="closed" _status="checked"/>
         </outline>
       </outline>
-      <outline text="**Interoperabilidad**" status="open" _status="indeterminate" due="2021-11-08" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5g,ce5h,ev1,ra1,ra4,ra5" progress_counter="true">
-        <outline text="[link: Versionado semántico|https://semver.org/lang/es/]" status="open" _status="indeterminate"/>
-        <outline text="[link: Composer|https://getcomposer.org/]" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Paquetes" status="open" _status="indeterminate"/>
-          <outline text="[Packagist](https://packagist.org/)" status="open" _status="indeterminate"/>
-          <outline text="[link: Dependencias|https://getcomposer.org/doc/01-basic-usage.md#composer-json-project-setup]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="`composer.json` y `composer.lock`" status="open" _status="indeterminate"/>
+      <outline text="**Programación avanzada en PHP**" status="closed" _status="checked" due="2021-11-01" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ev1,ra2,ra3,ra4,ra5" progress_counter="true">
+        <outline text="[link: Diseño de aplicaciones orientadas a objetos|http://php.net/manual/es/language.oop5.php]" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: Clases|http://php.net/manual/es/language.oop5.basic.php]" status="closed" _status="checked"/>
+          <outline text="[link: Propiedades|http://php.net/manual/es/language.oop5.properties.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="Predeterminadas" status="closed" _status="checked"/>
+            <outline text="Dinámicas" status="closed" _status="checked"/>
           </outline>
-          <outline text="[link: Versiones y restricciones|https://getcomposer.org/doc/articles/versions.md]" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="Versión exacta" status="open" _status="indeterminate"/>
-            <outline text="Rango (`&gt;`, `&gt;=`, `&lt;`, `&lt;=`, `!=`, ` `, `,`, `||`)" status="open" _status="indeterminate"/>
-            <outline text="Guión (`-`)" status="open" _status="indeterminate"/>
-            <outline text="Asterisco (`*`)" status="open" _status="indeterminate"/>
-            <outline text="Tilde (`~`)" status="open" _status="indeterminate"/>
-            <outline text="Circunflejo (`^`)" status="open" _status="indeterminate"/>
-            <outline text="Nombres de rama" status="open" _status="indeterminate" progress_counter="true">
-              <outline text="`dev-master`" status="open" _status="indeterminate"/>
-              <outline text="`5.1.x-dev`" status="open" _status="indeterminate"/>
+          <outline text="Métodos" status="closed" _status="checked" progress_counter="true">
+            <outline text="Referencia `$this`" status="closed" _status="checked"/>
+            <outline text="[link: Constructores y destructores|http://php.net/manual/es/language.oop5.decon.php]" status="closed" _status="checked"/>
+          </outline>
+          <outline text="[link: Constantes|http://php.net/manual/es/language.oop5.constants.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="`self`" status="closed" _status="checked"/>
+          </outline>
+          <outline text="Herencia" status="closed" _status="checked" progress_counter="true">
+            <outline text="`parent`" status="closed" _status="checked"/>
+            <outline text="Sobreescritura de métodos" status="closed" _status="checked"/>
+          </outline>
+          <outline text="[link: Miembros estáticos|http://php.net/manual/es/language.oop5.static.php]" status="closed" _status="checked" progress_counter="true">
+            <outline text="Constantes" status="closed" _status="checked"/>
+            <outline text="Métodos estáticos" status="closed" _status="checked"/>
+            <outline text="Propiedades estáticas" status="closed" _status="checked"/>
+            <outline text="[link: Enlace estático en tiempo de ejecución|http://php.net/manual/es/language.oop5.late-static-bindings.php]" status="closed" _status="checked"/>
+          </outline>
+          <outline text="[link: Interfaces|http://php.net/manual/es/language.oop5.interfaces.php]" status="closed" _status="checked"/>
+          <outline text="[link: Traits|http://php.net/manual/es/language.oop5.traits.php]" status="closed" _status="checked"/>
+          <outline text="[Contravarianza y covarianza](https://www.php.net/manual/es/language.oop5.variance.php)" status="closed" _status="checked"/>
+          <outline text="La clase `stdClass`" status="closed" _status="checked" progress_counter="true">
+            <outline text="Conversión de `array` a `object` y viceversa." status="closed" _status="checked"/>
+          </outline>
+        </outline>
+        <outline text="[link: Espacios de nombres|http://php.net/manual/es/language.namespaces.php]" status="closed" _status="checked"/>
+        <outline text="[link: Funciones anónimas|http://php.net/manual/es/functions.anonymous.php]" status="closed" _status="checked" progress_counter="true">
+          <outline text="Clausuras" status="closed" _status="checked"/>
+        </outline>
+        <outline text="[link: Callables|http://php.net/manual/es/language.types.callable.php]" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: `call_user_func()`|http://php.net/manual/es/function.call-user-func.php]" status="closed" _status="checked"/>
+          <outline text="`array_map()` y `array_reduce()`" status="closed" _status="checked"/>
+        </outline>
+      </outline>
+      <outline text="**Interoperabilidad**" status="closed" _status="checked" due="2021-11-08" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5g,ce5h,ev1,ra1,ra4,ra5" progress_counter="true">
+        <outline text="[link: Versionado semántico|https://semver.org/lang/es/]" status="closed" _status="checked"/>
+        <outline text="[link: Composer|https://getcomposer.org/]" status="closed" _status="checked" progress_counter="true">
+          <outline text="Paquetes" status="closed" _status="checked"/>
+          <outline text="[Packagist](https://packagist.org/)" status="closed" _status="checked"/>
+          <outline text="[link: Dependencias|https://getcomposer.org/doc/01-basic-usage.md#composer-json-project-setup]" status="closed" _status="checked" progress_counter="true">
+            <outline text="`composer.json` y `composer.lock`" status="closed" _status="checked"/>
+          </outline>
+          <outline text="[link: Versiones y restricciones|https://getcomposer.org/doc/articles/versions.md]" status="closed" _status="checked" progress_counter="true">
+            <outline text="Versión exacta" status="closed" _status="checked"/>
+            <outline text="Rango (`&gt;`, `&gt;=`, `&lt;`, `&lt;=`, `!=`, ` `, `,`, `||`)" status="closed" _status="checked"/>
+            <outline text="Guión (`-`)" status="closed" _status="checked"/>
+            <outline text="Asterisco (`*`)" status="closed" _status="checked"/>
+            <outline text="Tilde (`~`)" status="closed" _status="checked"/>
+            <outline text="Circunflejo (`^`)" status="closed" _status="checked"/>
+            <outline text="Nombres de rama" status="closed" _status="checked" progress_counter="true">
+              <outline text="`dev-master`" status="closed" _status="checked"/>
+              <outline text="`5.1.x-dev`" status="closed" _status="checked"/>
             </outline>
-            <outline text="[link: Estabilidad mínima|https://getcomposer.org/doc/articles/versions.md#minimum-stability]" status="open" _status="indeterminate"/>
-            <outline text="[link: Comprobador online de restricciones|https://semver.mwl.be]" status="open" _status="indeterminate"/>
+            <outline text="[link: Estabilidad mínima|https://getcomposer.org/doc/articles/versions.md#minimum-stability]" status="closed" _status="checked"/>
+            <outline text="[link: Comprobador online de restricciones|https://semver.mwl.be]" status="closed" _status="checked"/>
           </outline>
-          <outline text="Comandos básicos" status="open" _status="indeterminate" progress_counter="true">
-            <outline text="[link: `require`|https://getcomposer.org/doc/03-cli.md#require]" status="open" _status="indeterminate"/>
-            <outline text="[link: `install`|https://getcomposer.org/doc/03-cli.md#install]" status="open" _status="indeterminate"/>
-            <outline text="[link: `update`|https://getcomposer.org/doc/03-cli.md#update]" status="open" _status="indeterminate"/>
+          <outline text="Comandos básicos" status="closed" _status="checked" progress_counter="true">
+            <outline text="[link: `require`|https://getcomposer.org/doc/03-cli.md#require]" status="closed" _status="checked"/>
+            <outline text="[link: `install`|https://getcomposer.org/doc/03-cli.md#install]" status="closed" _status="checked"/>
+            <outline text="[link: `update`|https://getcomposer.org/doc/03-cli.md#update]" status="closed" _status="checked"/>
           </outline>
-          <outline text="Entornos de desarrollo y producción" status="open" _status="indeterminate"/>
+          <outline text="Entornos de desarrollo y producción" status="closed" _status="checked"/>
         </outline>
-        <outline text="[Autocarga de clases](http://php.net/manual/es/language.oop5.autoload.php)" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: `spl_autoload_register()`|http://php.net/manual/es/function.spl-autoload-register.php]" status="open" _status="indeterminate"/>
-          <outline text="[link: PSR-4|http://www.php-fig.org/psr/psr-4/]" status="open" _status="indeterminate"/>
-          <outline text="[link: Autoloader de Composer|https://getcomposer.org/doc/01-basic-usage.md#autoloading]" status="open" _status="indeterminate"/>
+        <outline text="[Autocarga de clases](http://php.net/manual/es/language.oop5.autoload.php)" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: `spl_autoload_register()`|http://php.net/manual/es/function.spl-autoload-register.php]" status="closed" _status="checked"/>
+          <outline text="[link: PSR-4|http://www.php-fig.org/psr/psr-4/]" status="closed" _status="checked"/>
+          <outline text="[link: Autoloader de Composer|https://getcomposer.org/doc/01-basic-usage.md#autoloading]" status="closed" _status="checked"/>
         </outline>
-        <outline text="Ejemplos" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="`mpdf/mpdf`" status="open" _status="indeterminate"/>
-          <outline text="`ramsey/uuid`" status="open" _status="indeterminate"/>
-          <outline text="`doctrine/inflector`" status="open" _status="indeterminate"/>
+        <outline text="Ejemplos" status="closed" _status="checked" progress_counter="true">
+          <outline text="`mpdf/mpdf`" status="closed" _status="checked"/>
+          <outline text="`ramsey/uuid`" status="closed" _status="checked"/>
+          <outline text="`doctrine/inflector`" status="closed" _status="checked"/>
+          <outline text="`nesbot/carbon`" status="closed" _status="checked"/>
         </outline>
-        <outline text="Recomendaciones PSR del [PHP-FIG](http://www.php-fig.org/) (Framework Interop Group)" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="[link: PSR-1: Basic Coding Standard|http://www.php-fig.org/psr/psr-1/]" status="open" _status="indeterminate"/>
-          <outline text="[link: PSR-2: Coding Style Guide|http://www.php-fig.org/psr/psr-2/]" status="open" _status="indeterminate"/>
-          <outline text="[link: PSR-4: Autoloading Standard|http://www.php-fig.org/psr/psr-4/]" status="open" _status="indeterminate"/>
-          <outline text="[link: PSR-5: PHPDoc Standard (borrador)|https://github.com/phpDocumentor/fig-standards/blob/master/proposed/phpdoc.md]" status="open" _status="indeterminate"/>
-          <outline text="[link: PSR-11: Extended Coding Style Guide (borrador)|https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md]" status="open" _status="indeterminate"/>
-          <outline text="[link: PSR-19: PHPDoc tags (borrador)|https://github.com/php-fig/fig-standards/blob/master/proposed/phpdoc-tags.md]" status="open" _status="indeterminate"/>
+        <outline text="Recomendaciones PSR del [PHP-FIG](http://www.php-fig.org/) (Framework Interop Group)" status="closed" _status="checked" progress_counter="true">
+          <outline text="[link: PSR-1: Basic Coding Standard|http://www.php-fig.org/psr/psr-1/]" status="closed" _status="checked"/>
+          <outline text="[link: PSR-2: Coding Style Guide|http://www.php-fig.org/psr/psr-2/]" status="closed" _status="checked"/>
+          <outline text="[link: PSR-4: Autoloading Standard|http://www.php-fig.org/psr/psr-4/]" status="closed" _status="checked"/>
+          <outline text="[link: PSR-5: PHPDoc Standard (borrador)|https://github.com/phpDocumentor/fig-standards/blob/master/proposed/phpdoc.md]" status="closed" _status="checked"/>
+          <outline text="[link: PSR-11: Extended Coding Style Guide (borrador)|https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md]" status="closed" _status="checked"/>
+          <outline text="[link: PSR-19: PHPDoc tags (borrador)|https://github.com/php-fig/fig-standards/blob/master/proposed/phpdoc-tags.md]" status="closed" _status="checked"/>
         </outline>
-        <outline text="Paquetes de Atom y herramientas externas" status="open" _status="indeterminate" tags="opcional" progress_counter="true">
-          <outline text="PHP_CodeSniffer" status="open" _status="indeterminate"/>
-          <outline text="PHP-CS-Fixer" status="open" _status="indeterminate"/>
+        <outline text="Paquetes de Atom y herramientas externas" status="closed" _status="checked" tags="opcional" progress_counter="true">
+          <outline text="PHP_CodeSniffer" status="closed" _status="checked"/>
+          <outline text="PHP-CS-Fixer" status="closed" _status="checked"/>
         </outline>
         <outline text="Ejercicios" status="invalid" _status="none" progress_counter="true">
           <outline text="De versionado semántico" status="invalid" _status="none"/>
@@ -478,88 +481,96 @@
           <outline text="De buscar paquetes en Packagist que tengan una funcionalidad concreta y usarlos en un ejemplo" status="invalid" _status="none"/>
         </outline>
       </outline>
-      <outline text="**Introducción a Laravel**" status="open" _status="indeterminate" due="2021-11-15" due_user_ids="139389" tags="ce1d,ce1e,ce1g,ce4g,ev1,ra1,ra4">
-        <outline text="[link: Frameworks, microframeworks y librerías|https://en.wikipedia.org/wiki/Software_framework]" status="open" _status="indeterminate"/>
-        <outline text="Patrón Modelo-Vista-Controlador (MVC)" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Modelos" status="open" _status="indeterminate"/>
-          <outline text="Vistas" status="open" _status="indeterminate"/>
-          <outline text="Controladores" status="open" _status="indeterminate"/>
-          <outline text="Rutas" status="open" _status="indeterminate"/>
+      <outline text="**Introducción a Laravel**" status="closed" _status="checked" due="2021-11-15" due_user_ids="139389" tags="ce1d,ce1e,ce1g,ce4g,ev1,ra1,ra4">
+        <outline text="[link: Frameworks, microframeworks y librerías|https://en.wikipedia.org/wiki/Software_framework]" status="closed" _status="checked"/>
+        <outline text="Patrón Modelo-Vista-Controlador (MVC)" status="closed" _status="checked" progress_counter="true">
+          <outline text="Modelos" status="closed" _status="checked"/>
+          <outline text="Vistas" status="closed" _status="checked"/>
+          <outline text="Controladores" status="closed" _status="checked"/>
+          <outline text="Rutas" status="closed" _status="checked"/>
         </outline>
-        <outline text="Laravel" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="¿Qué es Laravel" status="open" _status="indeterminate"/>
-          <outline text="¿Cómo es Laravel comparado con otros frameworks?" status="open" _status="indeterminate"/>
-          <outline text="Versiones de Laravel" status="open" _status="indeterminate"/>
+        <outline text="Laravel" status="closed" _status="checked" progress_counter="true">
+          <outline text="¿Qué es Laravel" status="closed" _status="checked"/>
+          <outline text="¿Cómo es Laravel comparado con otros frameworks?" status="closed" _status="checked"/>
+          <outline text="Versiones de Laravel" status="closed" _status="checked"/>
         </outline>
-        <outline text="Instalación, requisitos y puesta en marcha" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Requisitos previos" status="open" _status="indeterminate"/>
-          <outline text="Instalación de Laravel" status="open" _status="indeterminate"/>
+        <outline text="Instalación, requisitos y puesta en marcha" status="closed" _status="checked" progress_counter="true">
+          <outline text="Requisitos previos" status="closed" _status="checked"/>
+          <outline text="Instalación de Laravel" status="closed" _status="checked"/>
         </outline>
-        <outline text="¡Hola, mundo!" status="open" _status="indeterminate"/>
-        <outline text="Herramientas de desarrollo" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Clockwork" status="open" _status="indeterminate"/>
-          <outline text="Trazas de depuración" status="open" _status="indeterminate"/>
+        <outline text="¡Hola, mundo!" status="closed" _status="checked"/>
+        <outline text="Herramientas de desarrollo" status="closed" _status="checked" progress_counter="true">
+          <outline text="Clockwork" status="closed" _status="checked"/>
+          <outline text="Trazas de depuración" status="closed" _status="checked"/>
         </outline>
-        <outline text="Estilo del código" status="open" _status="indeterminate"/>
+        <outline text="Estilo del código" status="closed" _status="checked"/>
       </outline>
-      <outline text="**Arquitectura de Laravel**" status="open" _status="indeterminate" due="2021-11-22" due_user_ids="139389" tags="ce1d,ce1e,ce1g,ce4g,ce5e,ev1,ra1,ra4,ra5">
-        <outline text="El ciclo de vida de una petición" status="open" _status="indeterminate"/>
-        <outline text="El contenedor de servicios" status="open" _status="indeterminate"/>
-        <outline text="Proveedores de servicios" status="open" _status="indeterminate"/>
-        <outline text="Fachadas" status="open" _status="indeterminate"/>
+      <outline text="**Arquitectura de Laravel**" status="closed" _status="checked" due="2021-11-22" due_user_ids="139389" tags="ce1d,ce1e,ce1g,ce4g,ce5e,ev1,ra1,ra4,ra5">
+        <outline text="El ciclo de vida de una petición" status="closed" _status="checked"/>
+        <outline text="El contenedor de servicios" status="closed" _status="checked"/>
+        <outline text="Proveedores de servicios" status="closed" _status="checked"/>
+        <outline text="Fachadas" status="closed" _status="checked"/>
       </outline>
-      <outline text="**Gestión de peticiones en Laravel**" status="open" _status="indeterminate" due="2021-11-29" due_user_ids="139389" tags="ce4g,ce5f,ce5g,ce5h,ev1,ra4,ra5" progress_counter="true">
-        <outline text="Enrutado" status="open" _status="indeterminate"/>
-        <outline text="Middlewares" status="open" _status="indeterminate"/>
-        <outline text="Peticiones" status="open" _status="indeterminate"/>
-        <outline text="Respuestas" status="open" _status="indeterminate"/>
-        <outline text="Controladores" status="open" _status="indeterminate"/>
-        <outline text="Sesiones y cookies" status="open" _status="indeterminate"/>
-        <outline text="Gestión de errores" status="open" _status="indeterminate"/>
+      <outline text="**Gestión de peticiones en Laravel**" status="closed" _status="checked" due="2021-11-29" due_user_ids="139389" tags="ce4g,ce5f,ce5g,ce5h,ev1,ra4,ra5" progress_counter="true">
+        <outline text="Enrutado" status="closed" _status="checked"/>
+        <outline text="Middlewares" status="closed" _status="checked"/>
+        <outline text="Peticiones" status="closed" _status="checked"/>
+        <outline text="Respuestas" status="closed" _status="checked"/>
+        <outline text="Controladores" status="closed" _status="checked"/>
+        <outline text="Sesiones y cookies" status="closed" _status="checked"/>
+        <outline text="Gestión de errores" status="closed" _status="checked"/>
       </outline>
       <outline text="---" status="open" _status="indeterminate"/>
-      <outline text="**Visualización de datos en Laravel**" status="open" _status="indeterminate" due="2022-01-10" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5a,ce5b,ce5c,ce5d,ce5h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra8" progress_counter="true">
-        <outline text="Vistas" status="open" _status="indeterminate"/>
-        <outline text="Plantillas Blade" status="open" _status="indeterminate"/>
-        <outline text="Compilación de assets" status="open" _status="indeterminate"/>
-        <outline text="Generación de URLs" status="open" _status="indeterminate"/>
+      <outline text="**Visualización de datos en Laravel**" status="closed" _status="checked" due="2022-01-10" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5a,ce5b,ce5c,ce5d,ce5h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra8" progress_counter="true">
+        <outline text="Vistas" status="closed" _status="checked"/>
+        <outline text="Plantillas Blade" status="closed" _status="checked"/>
+        <outline text="Compilación de assets" status="closed" _status="checked"/>
+        <outline text="Generación de URLs" status="closed" _status="checked"/>
       </outline>
       <outline text="**Bases de datos en Laravel**" status="open" _status="indeterminate" due="2022-01-17" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev2,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
-        <outline text="Conceptos básicos" status="open" _status="indeterminate"/>
-        <outline text="Query Builder" status="open" _status="indeterminate" progress_counter="true"/>
-        <outline text="Migraciones" status="open" _status="indeterminate"/>
-        <outline text="Paginación" status="open" _status="indeterminate" progress_counter="true"/>
+        <outline text="Conceptos básicos" status="closed" _status="checked"/>
+        <outline text="Query Builder" status="closed" _status="checked" progress_counter="true"/>
+        <outline text="Migraciones" status="closed" _status="checked"/>
+        <outline text="Paginación" status="closed" _status="checked" progress_counter="true"/>
         <outline text="Semillas" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Mapeado objeto-relacional con Eloquent**" status="open" _status="indeterminate" due="2022-01-24" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev2,ra2,ra3,ra4,ra5,ra6">
-        <outline text="Conceptos básicos" status="open" _status="indeterminate"/>
-        <outline text="Relaciones" status="open" _status="indeterminate"/>
-        <outline text="Colecciones" status="open" _status="indeterminate"/>
-        <outline text="Mutadores y castings" status="open" _status="indeterminate"/>
+      <outline text="**Mapeado objeto-relacional con Eloquent**" status="closed" _status="checked" due="2022-01-24" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev2,ra2,ra3,ra4,ra5,ra6">
+        <outline text="Conceptos básicos" status="closed" _status="checked"/>
+        <outline text="Relaciones" status="closed" _status="checked" progress_counter="true">
+          <outline text="Uno a uno" status="closed" _status="checked"/>
+          <outline text="Uno a muchos" status="closed" _status="checked"/>
+          <outline text="Muchos a muchos" status="closed" _status="checked"/>
+          <outline text="Relaciones polimórficas" status="closed" _status="checked"/>
+          <outline text="Carga ansiosa" status="closed" _status="checked" progress_counter="true">
+            <outline text="El problema del _N + 1_" status="closed" _status="checked"/>
+          </outline>
+        </outline>
+        <outline text="Colecciones" status="closed" _status="checked"/>
+        <outline text="Mutadores y castings" status="closed" _status="checked"/>
       </outline>
-      <outline text="**Creación y validación de formularios en Laravel**" status="open" _status="indeterminate" due="2022-01-31" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce3e,ce3f,ce4g,ce5b,ce5d,ce5h,ce6f,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
-        <outline text="Creación de formularios" status="open" _status="indeterminate" progress_counter="true"/>
-        <outline text="Protección contra CSRF" status="open" _status="indeterminate"/>
-        <outline text="Validación de la entrada" status="open" _status="indeterminate" progress_counter="true"/>
-        <outline text="Subida de archivos" status="open" _status="indeterminate"/>
+      <outline text="**Creación y validación de formularios en Laravel**" status="closed" _status="checked" due="2022-01-31" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce3e,ce3f,ce4g,ce5b,ce5d,ce5h,ce6f,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
+        <outline text="Creación de formularios" status="closed" _status="checked" progress_counter="true"/>
+        <outline text="Protección contra CSRF" status="closed" _status="checked"/>
+        <outline text="Validación de la entrada" status="closed" _status="checked" progress_counter="true"/>
+        <outline text="Subida de archivos" status="closed" _status="checked"/>
       </outline>
       <outline text="**Seguridad y cacheado en Laravel**" status="open" _status="indeterminate" due="2022-02-07" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4d,ce4e,ce4g,ce5g,ce5h,ce6h,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
-        <outline text="Autenticación" status="open" _status="indeterminate"/>
-        <outline text="Autorización" status="open" _status="indeterminate"/>
+        <outline text="Autenticación" status="closed" _status="checked"/>
+        <outline text="Autorización" status="closed" _status="checked"/>
         <outline text="Verificación de email" status="open" _status="indeterminate"/>
         <outline text="Cifrado" status="open" _status="indeterminate"/>
         <outline text="Hashing" status="open" _status="indeterminate"/>
         <outline text="Reinicio de contraseñas" status="open" _status="indeterminate"/>
       </outline>
       <outline text="**Características adicionales de Laravel**" status="open" _status="indeterminate" due="2022-02-14" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5d,ce5g,ce5h,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
-        <outline text="[Correo electrónico](http://stackoverflow.com/questions/24995620/how-to-use-the-swiftmailer-in-yii2)" status="open" _status="indeterminate"/>
-        <outline text="Helpers" status="open" _status="indeterminate"/>
+        <outline text="[Correo electrónico](http://stackoverflow.com/questions/24995620/how-to-use-the-swiftmailer-in-yii2)" status="closed" _status="checked"/>
+        <outline text="Helpers" status="closed" _status="checked"/>
         <outline text="Eventos" status="open" _status="indeterminate"/>
         <outline text="Contratos" status="open" _status="indeterminate"/>
-        <outline text="Colecciones" status="open" _status="indeterminate"/>
+        <outline text="Colecciones" status="closed" _status="checked"/>
         <outline text="Colas" status="open" _status="indeterminate"/>
         <outline text="Planificación de tareas" status="open" _status="indeterminate"/>
-        <outline text="Almacenamiento de archivos" status="open" _status="indeterminate"/>
+        <outline text="Almacenamiento de archivos" status="closed" _status="checked"/>
       </outline>
       <outline text="**Calidad**" status="open" _status="indeterminate" due="2022-02-21" due_user_ids="139389" tags="ce3g,ce4g,ce5g,ce5h,ce6e,ce6h,ev2,ra3,ra4,ra5,ra6" progress_counter="true">
         <outline text="[Pruebas](https://www.gitbook.com/book/jose/testing-book/)" status="open" _status="indeterminate" progress_counter="true">
@@ -584,31 +595,31 @@
           <outline text="[Code Climate](https://codeclimate.com/)" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Computación en la nube**" status="open" _status="indeterminate" due="2022-02-28" due_user_ids="139389" tags="ce1d,ce4g,ce5e,ev2,ra1,ra4,ra5" progress_counter="true">
-        <outline text="Entornos de ejecución" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="Desarrollo" status="open" _status="indeterminate" progress_counter="true"/>
-          <outline text="Producción" status="open" _status="indeterminate" progress_counter="true"/>
-          <outline text="Pruebas" status="open" _status="indeterminate" progress_counter="true"/>
-          <outline text="Preproducción" status="open" _status="indeterminate" progress_counter="true"/>
+      <outline text="**Computación en la nube**" status="closed" _status="checked" due="2022-02-28" due_user_ids="139389" tags="ce1d,ce4g,ce5e,ev2,ra1,ra4,ra5" progress_counter="true">
+        <outline text="Entornos de ejecución" status="closed" _status="checked" progress_counter="true">
+          <outline text="Desarrollo" status="closed" _status="checked" progress_counter="true"/>
+          <outline text="Producción" status="closed" _status="checked" progress_counter="true"/>
+          <outline text="Pruebas" status="closed" _status="checked" progress_counter="true"/>
+          <outline text="Preproducción" status="closed" _status="checked" progress_counter="true"/>
         </outline>
-        <outline text="Cloud computing vs hosting" status="open" _status="indeterminate"/>
-        <outline text="Cloud computing vs VPS" status="open" _status="indeterminate"/>
-        <outline text="Servicios por capas" status="open" _status="indeterminate" progress_counter="true">
-          <outline text="IaaS" status="open" _status="indeterminate"/>
-          <outline text="PaaS" status="open" _status="indeterminate"/>
-          <outline text="SaaS" status="open" _status="indeterminate"/>
+        <outline text="Cloud computing vs hosting" status="closed" _status="checked"/>
+        <outline text="Cloud computing vs VPS" status="closed" _status="checked"/>
+        <outline text="Servicios por capas" status="closed" _status="checked" progress_counter="true">
+          <outline text="IaaS" status="closed" _status="checked"/>
+          <outline text="PaaS" status="closed" _status="checked"/>
+          <outline text="SaaS" status="closed" _status="checked"/>
         </outline>
-        <outline text="[12 Factores](https://12factor.net/es/)" status="open" _status="indeterminate"/>
-        <outline text="Heroku" status="open" _status="indeterminate">
-          <outline text="[link: Heroku CLI|https://devcenter.heroku.com/articles/heroku-cli]" status="open" _status="indeterminate"/>
-          <outline text="Creación y despliegue de aplicaciones" status="open" _status="indeterminate"/>
-          <outline text="[link: Heroku Postgres|https://www.heroku.com/postgres]" status="open" _status="indeterminate"/>
-          <outline text="Variables de entorno" status="open" _status="indeterminate"/>
-          <outline text="Releases" status="open" _status="indeterminate"/>
+        <outline text="[12 Factores](https://12factor.net/es/)" status="closed" _status="checked"/>
+        <outline text="Heroku" status="closed" _status="checked">
+          <outline text="[link: Heroku CLI|https://devcenter.heroku.com/articles/heroku-cli]" status="closed" _status="checked"/>
+          <outline text="Creación y despliegue de aplicaciones" status="closed" _status="checked"/>
+          <outline text="[link: Heroku Postgres|https://www.heroku.com/postgres]" status="closed" _status="checked"/>
+          <outline text="Variables de entorno" status="closed" _status="checked"/>
+          <outline text="Releases" status="closed" _status="checked"/>
         </outline>
       </outline>
       <outline text="**Servicios web con Laravel**" status="open" _status="indeterminate" due="2022-03-07" due_user_ids="139389" tags="ce1a,ce1b,ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce7a,ce7b,ce7c,ce7d,ce7e,ce7f,ce7g,ev2,ra1,ra2,ra3,ra7" progress_counter="true">
-        <outline text="Recursos API" status="open" _status="indeterminate"/>
+        <outline text="Recursos API" status="closed" _status="checked"/>
         <outline text="Serialización" status="open" _status="indeterminate"/>
         <outline text="Limitación de frecuencia de peticiones" status="open" _status="indeterminate"/>
       </outline>
