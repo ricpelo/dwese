@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Tue, 21 Jun 2022 11:30:58 +0200</dateModified>
+    <dateModified>Sun, 17 Jul 2022 12:42:17 +0200</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
@@ -542,7 +542,7 @@
           <outline text="Muchos a muchos" status="closed" _status="checked"/>
           <outline text="Relaciones polimórficas" status="closed" _status="checked"/>
           <outline text="Carga ansiosa" status="closed" _status="checked" progress_counter="true">
-            <outline text="El problema del _N + 1_" status="closed" _status="checked"/>
+            <outline text="El problema del *N + 1*" status="closed" _status="checked"/>
           </outline>
         </outline>
         <outline text="Colecciones" status="closed" _status="checked"/>
