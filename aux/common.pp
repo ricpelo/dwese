@@ -39,6 +39,8 @@ Macros para hacer producciones en notación EBNF
 
 !define(NT)(!COLOR(teal)(!ifdef(HTML)(⟨*!1*⟩)(⟨\textit{!PYNT(!1)}⟩)))
 !define(T)(**`!1`**)
+!define(MAS)(!ifdef(HTML)($^+$)(\textsuperscript{+}))
+!define(POR)(*)
 
 !comment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -66,6 +68,16 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 !define(EJERCICIO)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##### Ejercicio {.unnumbered .unlisted}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(EJEMPLOS)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##### Ejemplos {.unnumbered .unlisted}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(EJEMPLO)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##### Ejemplo {.unnumbered .unlisted}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !define(FIN)
@@ -142,9 +154,12 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 ~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+!define(PYTHON)(`!1`{.python})
+!define(JAVA)(`!1`{.java})
+
 !define(QUIZ)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-!sh(!SCRIPTS/quiz.php !ifdef(HTML)(html)(!ifdef(LATEX)(latex)(beamer)) "!PY(!1)")
+!sh(!SCRIPTS/quiz.php !ifdef(HTML)(html)(!ifdef(LATEX)(latex)(beamer)) "!PYQUOTE(!1)")
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !define(RESPUESTAS)
@@ -182,6 +197,11 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 !IMG(!1)(!2)(!3 .plain)(!4)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+!define(EXT)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!ifdef(HTML)(svg)(pdf)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 !comment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !UML(archivo)[(texto)][(estilo Beamer)][(estilo Latex)](definición)
@@ -208,7 +228,36 @@ red, blue, teal, orange, brown, purple, magenta, cyan, yellow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+!comment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ESPECIFICACIONES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(ESPEC)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$$\left\{\begin{array}{ll}
+  !1\end{array}\right.$$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(ESPECINLINE)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$\left\{\begin{array}{ll}
+  !1\end{array}\right.$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(PRE)(\text{\textbf{Pre}}: & !1 \\!MASSEP)
+!define(POST)(\text{\textbf{Post}}: & !PYPOST(!1))
+!define(SIGNAT)(& !1 \\!MASSEP)
+!define(VAR)(\(!ifdef(HTML)(!1)(\textcolor{black}{!1})\))
+!define(OTRALINEA)(\\!MENOSSEP)
 !define(NEQ)(!ifdef(HTML)(\mathrel{\char`≠})(\neq))
+!define(DOM)(\textrm{dom}(!1))
+!define(RANG)(\textrm{rang}(!1))
+!define(ORIG)(\textrm{orig}(!1))
+!define(IMAG)(\textrm{imag}(!1))
+!define(SEP)(!MASSEP)
+!define(MASSEP)(!ifdef(HTML)([0.5em])())
+!define(MENOSSEP)(!ifndef(HTML)([-0.5em])([0.1em]))
 
 !comment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -223,9 +272,10 @@ LAS SIGUIENTES MACROS SON AUXILIARES, NO PARA USO GENERAL
   !1:::
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\Begin{center}
+\begingroup
+  \centering
   !1
-  \End{center}
+  \endgroup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -265,7 +315,7 @@ LAS SIGUIENTES MACROS SON AUXILIARES, NO PARA USO GENERAL
 ~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-!define(PY)
+!define(PYQUOTE)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !python3
 ~~~~~~~~~~~~~~~
@@ -285,6 +335,15 @@ x = r"""!1"""
 print(' | ' + x.replace("\n", "\n| "))
 ~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!define(PYPOST)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!python3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+x = r"""!1"""
+print((r'!OTRALINEA' + '\n').join(x.rstrip().split('\n')).rstrip())
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 !define(DOT2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -329,3 +388,10 @@ digraph {
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+!comment
+~~~~~~~~~~~~~~~~~~~~~~
+MACROS PARA EJERCICIOS
+~~~~~~~~~~~~~~~~~~~~~~
+
+!define(SOL)(_Solución_: !COLOR(white)(!1))

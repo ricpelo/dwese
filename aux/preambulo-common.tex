@@ -4,9 +4,11 @@
 \usepackage[xparse,skins,breakable]{tcolorbox}
 
 % El texto monoespaciado se muestra de otro color:
-\definecolor{ttcolor}{RGB}{64,112,161}
+\definecolor{ttcolor}{RGB}{38,139,210}
 \let\Oldtexttt\texttt
-\renewcommand\texttt[1]{{\ttfamily\textcolor{ttcolor}{#1}}}
+\renewcommand\texttt[1]{\textcolor{ttcolor}{\Oldtexttt{#1}}}
+\let\Oldmathtt\mathtt
+\renewcommand\mathtt[1]{\textcolor{ttcolor}{\Oldmathtt{#1}}}
 
 \ifdefined\Shaded
   \renewenvironment{Shaded}{\centering \begin{caja}}{\end{caja}}
@@ -38,9 +40,7 @@
 %\arrayrulewidth=0.01mm
 
 % Deja más espacio entre filas de tablas:
-%\renewcommand{\arraystretch}{2}
-\usepackage{array}
-\setlength{\extrarowheight}{0.5em}
+\renewcommand{\arraystretch}{1.5}
 
 % Apaño para que Pandoc traduzca lo que hay entre \begin{...} y \end{...}:
 \newcommand{\hideFromPandoc}[1]{#1}
@@ -113,4 +113,7 @@ Respuesta a la \ExerciseName\ \ExerciseHeaderNB}\smallskip\par}
 %    BoldFont=LinBiolinum_RB.otf]{LinBiolinum_R.otf}
 \setmathsfont(Greek){XITSMath-Regular.otf}
 \setmathsfont(Latin,Digits){Lato}
+\setallmonofonts[Extension=.otf,UprightFont=*-Regular,BoldFont=*-Bold,AutoFakeSlant,BoldItalicFeatures={FakeSlant},Scale=MatchLowercase,Contextuals={Alternate}]{FiraMono}
 %\setmathfont[range=\mathit]{Lato Italic}
+
+\usepackage[yyyymmdd,hhmmss]{datetime}
