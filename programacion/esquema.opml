@@ -2,12 +2,12 @@
 <opml version="2.0">
   <head>
     <title>DWESE #dwese #modulos</title>
-    <dateModified>Sun, 11 Sep 2022 12:15:01 +0200</dateModified>
+    <dateModified>Sun, 17 Sep 2023 16:48:18 +0200</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
     <outline text="[1] **CONTENIDOS**" status="open" _status="indeterminate" tags="contenidos" progress_counter="true">
-      <outline text="**Introducción a la tecnología web**" status="open" _status="indeterminate" due="2022-09-19" due_user_ids="139389" tags="ce1a,ce1b,ce1c,ce1d,ce1e,ce1g,ev1,ra1" progress_counter="true">
+      <outline text="**Introducción a la tecnología web**" status="open" _status="indeterminate" due="2023-09-18" due_user_ids="139389" tags="ce1a,ce1b,ce1c,ce1d,ce1e,ce1g,ev1,ra1" progress_counter="true">
         <outline text="Introducción al desarrollo web" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Conceptos básicos" status="open" _status="indeterminate" progress_counter="true">
             <outline text="Navegadores y servidores web" status="open" _status="indeterminate"/>
@@ -66,7 +66,7 @@
           <outline text="Cookies" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Conceptos básicos de PHP (I)**" status="open" _status="indeterminate" due="2022-09-26" due_user_ids="139389" tags="ce2d,ce2e,ce2f,ce2g,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
+      <outline text="**Conceptos básicos de PHP (I)**" status="open" _status="indeterminate" due="2023-09-25" due_user_ids="139389" tags="ce2d,ce2e,ce2f,ce2g,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
         <outline text="Introducción a PHP" status="open" _status="indeterminate" progress_counter="true">
           <outline text="[link: Página web de PHP|http://php.net]" status="open" _status="indeterminate"/>
           <outline text="Instalación de PHP" status="open" _status="indeterminate"/>
@@ -176,7 +176,7 @@
           <outline text="[link: `defined()`|http://php.net/manual/es/function.defined.php]" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Conceptos básicos de PHP (II)**" status="open" _status="indeterminate" due="2022-10-03" due_user_ids="139389" tags="ce2d,ce2e,ce2g,ce2h,ce3a,ce3b,ce3c,ce3d,ce3g,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
+      <outline text="**Conceptos básicos de PHP (II)**" status="open" _status="indeterminate" due="2023-10-02" due_user_ids="139389" tags="ce2d,ce2e,ce2g,ce2h,ce3a,ce3b,ce3c,ce3d,ce3g,ce4g,ev1,ra2,ra3,ra4" progress_counter="true">
         <outline text="Flujo de control" status="open" _status="indeterminate" progress_counter="true">
           <outline text="[link: Estructuras de control|http://php.net/manual/es/language.control-structures.php]" status="open" _status="indeterminate" progress_counter="true">
             <outline text="Secuencia" status="open" _status="indeterminate"/>
@@ -233,7 +233,7 @@
           <outline text="[link: Isograma|https://github.com/iesdonana/isograma]" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Desarrollo de aplicaciones con PHP (I)**" status="open" _status="indeterminate" due="2022-10-10" due_user_ids="139389" tags="ce1a,ce1b,ce1d,ce1f,ce2a,ce2b,ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce3a,ce3b,ce3c,ce3d,ce3e,ce3f,ce3g,ce4g,ce5a,ce5d,ce5g,ce5h,ev1,ra1,ra2,ra3,ra4,ra5" progress_counter="true">
+      <outline text="**Desarrollo de aplicaciones con PHP (I)**" status="open" _status="indeterminate" due="2023-10-09" due_user_ids="139389" tags="ce1a,ce1b,ce1d,ce1f,ce2a,ce2b,ce2c,ce2d,ce2e,ce2f,ce2g,ce2h,ce3a,ce3b,ce3c,ce3d,ce3e,ce3f,ce3g,ce4g,ce5a,ce5d,ce5g,ce5h,ev1,ra1,ra2,ra3,ra4,ra5" progress_counter="true">
         <outline text="[SAPIs](http://stackoverflow.com/questions/9948008/what-is-sapi-and-when-would-you-use-it)" status="open" _status="indeterminate" progress_counter="true">
           <outline text="[link: CLI: Uso en línea de comandos|http://php.net/manual/es/features.commandline.differences.php]" status="open" _status="indeterminate" progress_counter="true">
             <outline text="[link: `$argc` y `$argv`|http://php.net/manual/es/reserved.variables.argv.php]" status="open" _status="indeterminate"/>
@@ -258,7 +258,7 @@
           <outline text="Objetos" status="open" _status="indeterminate" progress_counter="true">
             <outline text="`new`" status="open" _status="indeterminate"/>
             <outline text="`instanceof`" status="open" _status="indeterminate"/>
-            <outline text="`get_class`" status="open" _status="indeterminate"/>
+            <outline text="[`get_class`](https://www.php.net/manual/es/function.get-class.php)" status="open" _status="indeterminate"/>
           </outline>
           <outline text="[link: Referencias|http://php.net/manual/es/language.references.php]" status="open" _status="indeterminate" progress_counter="true">
             <outline text="Asignación por referencia (`=&amp;`)" status="open" _status="indeterminate"/>
@@ -294,7 +294,7 @@
           </outline>
         </outline>
       </outline>
-      <outline text="**Persistencia de datos con PHP**" status="open" _status="indeterminate" due="2022-10-17" due_user_ids="139389" tags="ce4a,ce4b,ce4c,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6e,ce6g,ev1,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
+      <outline text="**Persistencia de datos con PHP**" status="open" _status="indeterminate" due="2023-10-16" due_user_ids="139389" tags="ce4a,ce4b,ce4c,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6e,ce6g,ev1,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
         <outline text="[link: PDO (PHP Data Objects)|http://php.net/manual/es/book.pdo.php]" status="open" _status="indeterminate" progress_counter="true">
           <outline text="[link: Clase `PDO`|http://php.net/manual/es/class.pdo.php]" status="open" _status="indeterminate" progress_counter="true">
             <outline text="[link: `__construct()`|http://php.net/manual/es/pdo.construct.php]" status="open" _status="indeterminate"/>
@@ -313,7 +313,7 @@
           <outline text="Manejo de errores en PDO" status="open" _status="indeterminate">
             <outline text="[`PDO::errorInfo()`](https://www.php.net/manual/es/pdo.errorinfo.php)" status="open" _status="indeterminate"/>
           </outline>
-          <outline text="Transacciones" status="open" _status="indeterminate" tags="no_impartido" progress_counter="true">
+          <outline text="Transacciones" status="open" _status="indeterminate" progress_counter="true">
             <outline text="`$pdo-&gt;beginTransaction();`" status="open" _status="indeterminate"/>
             <outline text="`$pdo-&gt;commit();`" status="open" _status="indeterminate"/>
             <outline text="`$pdo-&gt;rollBack();`" status="open" _status="indeterminate"/>
@@ -332,7 +332,7 @@
           <outline text="Ejemplos de uso" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Desarrollo de aplicaciones con PHP (II)**" status="open" _status="indeterminate" due="2022-10-24" due_user_ids="139389" tags="ce1a,ce4a,ce4b,ce4c,ce4d,ce4e,ce4f,ce4g,ce5a,ce5b,ce5d,ce5f,ce5g,ce5h,ev1,ra1,ra4,ra5" progress_counter="true">
+      <outline text="**Desarrollo de aplicaciones con PHP (II)**" status="open" _status="indeterminate" due="2023-10-23" due_user_ids="139389" tags="ce1a,ce4a,ce4b,ce4c,ce4d,ce4e,ce4f,ce4g,ce5a,ce5b,ce5d,ce5f,ce5g,ce5h,ev1,ra1,ra4,ra5" progress_counter="true">
         <outline text="[link: Filtrado de la entrada|http://www.phptherightway.com/#data_filtering]" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Cómo *NO* se debe hacer" status="open" _status="indeterminate"/>
           <outline text="[Extensión Filter](http://php.net/manual/es/book.filter.php)" status="open" _status="indeterminate" progress_counter="true">
@@ -382,7 +382,7 @@
           <outline text="[link: Cross-Site Request Forgery (CSRF)|https://diego.com.es/ataques-csrf-cross-site-request-forgery-en-php]" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Programación avanzada en PHP**" status="open" _status="indeterminate" due="2022-10-31" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ev1,ra2,ra3,ra4,ra5" progress_counter="true">
+      <outline text="**Programación avanzada en PHP**" status="open" _status="indeterminate" due="2023-10-30" due_user_ids="139389" tags="ce4g,ce5g,ce5h,ev1,ra2,ra3,ra4,ra5" progress_counter="true">
         <outline text="[link: Diseño de aplicaciones orientadas a objetos|http://php.net/manual/es/language.oop5.php]" status="open" _status="indeterminate" progress_counter="true">
           <outline text="[link: Clases|http://php.net/manual/es/language.oop5.basic.php]" status="open" _status="indeterminate"/>
           <outline text="[link: Propiedades|http://php.net/manual/es/language.oop5.properties.php]" status="open" _status="indeterminate" progress_counter="true">
@@ -422,7 +422,7 @@
           <outline text="`array_map()` y `array_reduce()`" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Interoperabilidad**" status="open" _status="indeterminate" due="2022-11-07" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5g,ce5h,ev1,ra1,ra4,ra5" progress_counter="true">
+      <outline text="**Interoperabilidad**" status="open" _status="indeterminate" due="2023-11-06" due_user_ids="139389" tags="ce1e,ce1g,ce4g,ce5g,ce5h,ev1,ra1,ra4,ra5" progress_counter="true">
         <outline text="[link: Versionado semántico|https://semver.org/lang/es/]" status="open" _status="indeterminate"/>
         <outline text="[link: Composer|https://getcomposer.org/]" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Paquetes" status="open" _status="indeterminate"/>
@@ -448,6 +448,7 @@
             <outline text="[link: `require`|https://getcomposer.org/doc/03-cli.md#require]" status="open" _status="indeterminate"/>
             <outline text="[link: `install`|https://getcomposer.org/doc/03-cli.md#install]" status="open" _status="indeterminate"/>
             <outline text="[link: `update`|https://getcomposer.org/doc/03-cli.md#update]" status="open" _status="indeterminate"/>
+            <outline text="`dump-autoload`" status="open" _status="indeterminate"/>
           </outline>
           <outline text="Entornos de desarrollo y producción" status="open" _status="indeterminate"/>
         </outline>
@@ -481,7 +482,7 @@
           <outline text="De buscar paquetes en Packagist que tengan una funcionalidad concreta y usarlos en un ejemplo" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Introducción a Laravel**" status="open" _status="indeterminate" due="2022-11-14" due_user_ids="139389" tags="ce1d,ce1e,ce1g,ce4g,ev1,ra1,ra4">
+      <outline text="**Introducción a Laravel**" status="open" _status="indeterminate" due="2023-11-13" due_user_ids="139389" tags="ce1d,ce1e,ce1g,ce4g,ev1,ra1,ra4">
         <outline text="[link: Frameworks, microframeworks y librerías|https://en.wikipedia.org/wiki/Software_framework]" status="open" _status="indeterminate"/>
         <outline text="Patrón Modelo-Vista-Controlador (MVC)" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Modelos" status="open" _status="indeterminate"/>
@@ -505,13 +506,13 @@
         </outline>
         <outline text="Estilo del código" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Arquitectura de Laravel**" status="open" _status="indeterminate" due="2022-11-21" due_user_ids="139389" tags="ce1d,ce1e,ce1g,ce4g,ce5e,ev1,ra1,ra4,ra5">
+      <outline text="**Arquitectura de Laravel**" status="open" _status="indeterminate" due="2023-11-20" due_user_ids="139389" tags="ce1d,ce1e,ce1g,ce4g,ce5e,ev1,ra1,ra4,ra5">
         <outline text="El ciclo de vida de una petición" status="open" _status="indeterminate"/>
         <outline text="El contenedor de servicios" status="open" _status="indeterminate"/>
         <outline text="Proveedores de servicios" status="open" _status="indeterminate"/>
         <outline text="Fachadas" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Gestión de peticiones en Laravel**" status="open" _status="indeterminate" due="2022-11-28" due_user_ids="139389" tags="ce4g,ce5f,ce5g,ce5h,ev1,ra4,ra5" progress_counter="true">
+      <outline text="**Gestión de peticiones en Laravel**" status="open" _status="indeterminate" due="2023-11-27" due_user_ids="139389" tags="ce4g,ce5f,ce5g,ce5h,ev1,ra4,ra5" progress_counter="true">
         <outline text="Enrutado" status="open" _status="indeterminate"/>
         <outline text="Middlewares" status="open" _status="indeterminate"/>
         <outline text="Peticiones" status="open" _status="indeterminate"/>
@@ -521,20 +522,20 @@
         <outline text="Gestión de errores" status="open" _status="indeterminate"/>
       </outline>
       <outline text="---" status="open" _status="indeterminate"/>
-      <outline text="**Visualización de datos en Laravel**" status="open" _status="indeterminate" due="2023-01-09" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5a,ce5b,ce5c,ce5d,ce5h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra8" progress_counter="true">
+      <outline text="**Visualización de datos en Laravel**" status="open" _status="indeterminate" due="2024-01-08" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5a,ce5b,ce5c,ce5d,ce5h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra8" progress_counter="true">
         <outline text="Vistas" status="open" _status="indeterminate"/>
         <outline text="Plantillas Blade" status="open" _status="indeterminate"/>
         <outline text="Compilación de assets" status="open" _status="indeterminate"/>
         <outline text="Generación de URLs" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Bases de datos en Laravel**" status="open" _status="indeterminate" due="2023-01-16" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev2,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
+      <outline text="**Bases de datos en Laravel**" status="open" _status="indeterminate" due="2024-01-15" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev2,ra2,ra3,ra4,ra5,ra6" progress_counter="true">
         <outline text="Conceptos básicos" status="open" _status="indeterminate"/>
         <outline text="Query Builder" status="open" _status="indeterminate" progress_counter="true"/>
         <outline text="Migraciones" status="open" _status="indeterminate"/>
         <outline text="Paginación" status="open" _status="indeterminate" progress_counter="true"/>
         <outline text="Semillas" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Mapeado objeto-relacional con Eloquent**" status="open" _status="indeterminate" due="2023-01-23" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev2,ra2,ra3,ra4,ra5,ra6">
+      <outline text="**Mapeado objeto-relacional con Eloquent**" status="open" _status="indeterminate" due="2024-01-22" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5f,ce5g,ce5h,ce6a,ce6b,ce6c,ce6d,ce6e,ce6f,ce6g,ce6h,ev2,ra2,ra3,ra4,ra5,ra6">
         <outline text="Conceptos básicos" status="open" _status="indeterminate"/>
         <outline text="Relaciones" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Uno a uno" status="open" _status="indeterminate"/>
@@ -548,13 +549,13 @@
         <outline text="Colecciones" status="open" _status="indeterminate"/>
         <outline text="Mutadores y castings" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Creación y validación de formularios en Laravel**" status="open" _status="indeterminate" due="2023-01-30" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce3e,ce3f,ce4g,ce5b,ce5d,ce5h,ce6f,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
+      <outline text="**Creación y validación de formularios en Laravel**" status="open" _status="indeterminate" due="2024-01-29" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce3e,ce3f,ce4g,ce5b,ce5d,ce5h,ce6f,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
         <outline text="Creación de formularios" status="open" _status="indeterminate" progress_counter="true"/>
         <outline text="Protección contra CSRF" status="open" _status="indeterminate"/>
         <outline text="Validación de la entrada" status="open" _status="indeterminate" progress_counter="true"/>
         <outline text="Subida de archivos" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Seguridad y cacheado en Laravel**" status="open" _status="indeterminate" due="2023-02-06" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4d,ce4e,ce4g,ce5g,ce5h,ce6h,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
+      <outline text="**Seguridad y cacheado en Laravel**" status="open" _status="indeterminate" due="2024-02-05" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4d,ce4e,ce4g,ce5g,ce5h,ce6h,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
         <outline text="Autenticación" status="open" _status="indeterminate"/>
         <outline text="Autorización" status="open" _status="indeterminate"/>
         <outline text="Verificación de email" status="open" _status="indeterminate"/>
@@ -562,7 +563,7 @@
         <outline text="Hashing" status="open" _status="indeterminate"/>
         <outline text="Reinicio de contraseñas" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Características adicionales de Laravel**" status="open" _status="indeterminate" due="2023-02-13" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5d,ce5g,ce5h,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
+      <outline text="**Características adicionales de Laravel**" status="open" _status="indeterminate" due="2024-02-12" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce4g,ce5d,ce5g,ce5h,ce6h,ce8a,ce8b,ce8c,ce8d,ce8e,ce8f,ce8g,ev2,ra2,ra3,ra4,ra5,ra6,ra8" progress_counter="true">
         <outline text="[Correo electrónico](http://stackoverflow.com/questions/24995620/how-to-use-the-swiftmailer-in-yii2)" status="open" _status="indeterminate"/>
         <outline text="Helpers" status="open" _status="indeterminate"/>
         <outline text="Eventos" status="open" _status="indeterminate"/>
@@ -572,7 +573,7 @@
         <outline text="Planificación de tareas" status="open" _status="indeterminate"/>
         <outline text="Almacenamiento de archivos" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Calidad**" status="open" _status="indeterminate" due="2023-02-20" due_user_ids="139389" tags="ce3g,ce4g,ce5g,ce5h,ce6e,ce6h,ev2,ra3,ra4,ra5,ra6" progress_counter="true">
+      <outline text="**Calidad**" status="open" _status="indeterminate" due="2024-02-19" due_user_ids="139389" tags="ce3g,ce4g,ce5g,ce5h,ce6e,ce6h,ev2,ra3,ra4,ra5,ra6" progress_counter="true">
         <outline text="[Pruebas](https://www.gitbook.com/book/jose/testing-book/)" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Pruebas HTTP" status="open" _status="indeterminate"/>
           <outline text="Pruebas en consola" status="open" _status="indeterminate"/>
@@ -595,7 +596,7 @@
           <outline text="[Code Climate](https://codeclimate.com/)" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Computación en la nube**" status="open" _status="indeterminate" due="2023-03-06" due_user_ids="139389" tags="ce1d,ce4g,ce5e,ev2,ra1,ra4,ra5" progress_counter="true">
+      <outline text="**Computación en la nube**" status="open" _status="indeterminate" due="2024-02-26" due_user_ids="139389" tags="ce1d,ce4g,ce5e,ev2,ra1,ra4,ra5" progress_counter="true">
         <outline text="Entornos de ejecución" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Desarrollo" status="open" _status="indeterminate" progress_counter="true"/>
           <outline text="Producción" status="open" _status="indeterminate" progress_counter="true"/>
@@ -618,12 +619,12 @@
           <outline text="Despliegues" status="open" _status="indeterminate"/>
         </outline>
       </outline>
-      <outline text="**Servicios web con Laravel**" status="open" _status="indeterminate" due="2023-03-13" due_user_ids="139389" tags="ce1a,ce1b,ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce7a,ce7b,ce7c,ce7d,ce7e,ce7f,ce7g,ev2,ra1,ra2,ra3,ra7" progress_counter="true">
+      <outline text="**Servicios web con Laravel**" status="open" _status="indeterminate" due="2024-03-04" due_user_ids="139389" tags="ce1a,ce1b,ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce7a,ce7b,ce7c,ce7d,ce7e,ce7f,ce7g,ev2,ra1,ra2,ra3,ra7" progress_counter="true">
         <outline text="Recursos API" status="open" _status="indeterminate"/>
         <outline text="Serialización" status="open" _status="indeterminate"/>
         <outline text="Limitación de frecuencia de peticiones" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Aplicaciones web híbridas**" status="open" _status="indeterminate" due="2023-03-20" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce9a,ce9b,ce9c,ce9d,ce9e,ce9f,ce9g,ev2,ra2,ra9">
+      <outline text="**Aplicaciones web híbridas**" status="open" _status="indeterminate" due="2024-03-11" due_user_ids="139389" tags="ce2a,ce2b,ce2c,ce2d,ce2e,ce2g,ce2h,ce9a,ce9b,ce9c,ce9d,ce9e,ce9f,ce9g,ev2,ra2,ra9">
         <outline text="Reutilización de código e información" status="open" _status="indeterminate"/>
         <outline text="Utilización de información proveniente de repositorios" status="open" _status="indeterminate" progress_counter="true">
           <outline text="UDDI" status="open" _status="indeterminate"/>
