@@ -1,6 +1,6 @@
 .PHONY: all html pdf prog clean limpiar serve touch markdown sobrantes $(ITHACA)
 
-CURSO=2024/2025
+CURSO=2025/2026
 
 # Directorios
 
@@ -27,7 +27,7 @@ RACEPOR=$(SCRIPTS)/racepor.sh
 
 # Archivos
 
-PROG=INF-2DAW-DWESE-C24-25
+PROG=INF-2DAW-DWESE-C25-26
 PROG_LYX=$(PROGDIR)/$(PROG).lyx
 PROG_PDF=$(BUILDDIR)/assets/$(PROG).pdf
 ESQUEMA_OPML=$(PROGDIR)/esquema.opml

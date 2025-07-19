@@ -2,13 +2,12 @@
 title: Información general
 ---
 
-- [Programación de la asignatura](assets/INF-2DAW-DWESE-C24-25.pdf){:target="_blank"}
+- [Programación de la asignatura](assets/INF-2DAW-DWESE-C25-26.pdf){:target="_blank"}
 - **Normativa de aplicación**: [Orden de 16 de junio de
   2011](http://www.juntadeandalucia.es/boja/2011/149/23), por la que se
   desarrolla el currículo correspondiente al título de Técnico Superior en
   Desarrollo de Aplicaciones Web.
-- **Equivalencia en créditos ECTS**: 12.
+- **Equivalencia en créditos ECTS**: 13.
 - **Código**: 0613.
-- **Duración total**: 168 horas / 21 semanas
-- **Carga lectiva semanal**: 8 horas
-- [Planificación y seguimiento](https://checkvist.com/checklists/844345){:target="_blank"}
+- **Duración total**: 245 horas.
+- **Carga lectiva semanal**: 7 horas.

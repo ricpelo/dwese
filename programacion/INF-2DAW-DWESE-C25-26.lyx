@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -44,7 +44,6 @@
 \setlist[enumerate]{beginpenalty=10000}
 %\usepackage{libertine}
 %\usepackage[default]{lato}
-\usepackage[scale=0.80,lf]{FiraMono}
 %\usepackage{newtxsf}
 \usepackage{xcolor}
 \widowpenalty10000
@@ -52,51 +51,45 @@
 \usepackage{longtable}
 \usepackage[shortcuts]{extdash}
 \usepackage{icomma}
+% Added by lyx2lyx
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
 \end_preamble
 \options titlepage,numbers=endperiod
 \use_default_options false
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \begin_local_layout
 Format 66
-
 Counter longenum
         LabelString          "-"
 End
-
 Counter longenumi
         LabelString          "\arabic{longenumi}."
 End
-
 Counter longenumii
         Within               longenumi
         LabelString          "\arabic{longenumi}.\arabic{longenumii}."
 End
-
 Counter longenumiii
         Within               longenumii
         LabelString          "\arabic{longenumi}.\arabic{longenumii}.\arabic{longenumiii}."
 End
-
 Counter longenumiv
         Within               longenumiii
         LabelString          "\Alph{longenumiv}."
 End
-
 Counter longenumv
         Within               longenumiv
         LabelString          "\arabic{longenumv}."
 End
-
 Counter longenumvi
         Within               longenumv
         LabelString          "(\alph{longenumvi})"
 End
-
 Counter longenumvii
         Within               longenumvi
         LabelString          "\roman{longenumvii}."
 End
-
 Counter longenumviii
         Within               longenumvii
         LabelString          "\Alph{longenumviii}."
@@ -105,7 +98,6 @@ Counter longenumix
         Within               longenumviii
         LabelString          "\Alph{longenumix}."
 End
-
 Style Longenum
         Category              List
         Margin                Static
@@ -148,7 +140,6 @@ Style Longenum
                 \setlist[longenum,9]{label=\textendash}
         EndPreamble
 End
-
 InsetLayout Flex:Enlace
         LyxType               custom
         LabelString           enlace
@@ -168,15 +159,17 @@ End
 \language spanish
 \language_package default
 \inputencoding utf8
-\fontencoding global
+\fontencoding auto
 \font_roman "libertine" "default"
 \font_sans "biolinum" "default"
-\font_typewriter "default" "default"
+\font_typewriter "FiraMono" "default"
 \font_math "libertine-ntxm" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 80 100
 \use_microtype false
@@ -200,7 +193,7 @@ End
 \pdf_backref false
 \pdf_pdfusetitle true
 \pdf_quoted_options "allcolors=teal"
-\papersize a4paper
+\papersize a4
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -221,7 +214,9 @@ End
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 1
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -233,8 +228,8 @@ End
 \headsep 1cm
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation skip
-\defskip medskip
+\paragraph_separation indent
+\paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style swiss
@@ -242,14 +237,19 @@ End
 \papercolumns 1
 \papersides 1
 \paperpagestyle fancy
+\tablestyle default
 \bullet 1 0 9 -1
 \bullet 2 2 35 -1
 \bullet 3 2 7 -1
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -525,7 +525,7 @@ Ricardo Pérez López
 \end_layout
 
 \begin_layout Date
-Curso 2023/2024
+Curso 2025/2026
 \end_layout
 
 \begin_layout Publishers
@@ -537,7 +537,8 @@ Doñana
 \begin_inset Quotes crd
 \end_inset
 
-, Sanlúcar de Bda.
+,
+ Sanlúcar de Bda.
 \begin_inset Newline newline
 \end_inset
 
@@ -553,7 +554,8 @@ Departamento de Informática y Comunicaciones
 \begin_inset Newline newline
 \end_inset
 
-Jefe de Departamento: Ricardo Pérez López
+Jefe de Departamento:
+ Ricardo Pérez López
 \end_layout
 
 \begin_layout Standard
@@ -650,6 +652,7 @@ pagestyle{empty}
 
 \series bold
 Normativa de aplicación:
+
 \series default
  
 \begin_inset CommandInset citation
@@ -659,7 +662,8 @@ literal "false"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "real-decreto-686-2010"
@@ -667,7 +671,8 @@ literal "false"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "orden-16-06-2011"
@@ -675,10 +680,38 @@ literal "false"
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "orden-29-09-2010"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ley-organica-3-2022"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "real-decreto-405-2023"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "real-decreto-659-2023"
 literal "false"
 
 \end_inset
@@ -690,14 +723,16 @@ literal "false"
 
 \series bold
 Equivalencia en créditos ECTS:
+
 \series default
- 12.
+ 13.
 \end_layout
 
 \begin_layout Itemize
 
 \series bold
 Código:
+
 \series default
  0613.
 \end_layout
@@ -706,16 +741,18 @@ Código:
 
 \series bold
 Duración total:
+
 \series default
- 168 (21 semanas)
+ 245 horas.
 \end_layout
 
 \begin_layout Itemize
 
 \series bold
 Carga lectiva semanal:
+
 \series default
- 8 horas
+ 7 horas.
 \end_layout
 
 \begin_layout Section
@@ -751,8 +788,7 @@ c)
 
 \end_inset
 
-Instalar módulos analizando su estructura y funcionalidad para gestionar
- servidores de aplicaciones.
+Instalar módulos analizando su estructura y funcionalidad para gestionar servidores en distintos ámbitos de implantación.
 \end_layout
 
 \begin_layout Enumerate
@@ -767,8 +803,7 @@ d)
 
 \end_inset
 
-Ajustar parámetros analizando la configuración para gestionar servidores
- de aplicaciones.
+Ajustar parámetros analizando la configuración para gestionar servidores en distintos ámbitos de implantación.
 \end_layout
 
 \begin_layout Enumerate
@@ -783,8 +818,9 @@ f)
 
 \end_inset
 
-Seleccionar lenguajes, objetos y herramientas, interpretando las especificacione
-s para desarrollar aplicaciones web con acceso a bases de datos.
+Seleccionar lenguajes,
+ objetos y herramientas,
+ interpretando las especificaciones para desarrollar aplicaciones web con acceso a bases de datos.
 \end_layout
 
 \begin_layout Enumerate
@@ -799,8 +835,9 @@ g)
 
 \end_inset
 
-Utilizar lenguajes, objetos y herramientas, interpretando las especificaciones
- para desarrollar aplicaciones web con acceso a bases de datos.
+Utilizar lenguajes,
+ objetos y herramientas,
+ interpretando las especificaciones para desarrollar aplicaciones web con acceso a bases de datos.
 \end_layout
 
 \begin_layout Enumerate
@@ -815,8 +852,43 @@ h)
 
 \end_inset
 
-Generar componentes de acceso a datos, cumpliendo las especificaciones,
- para integrar contenidos en la lógica de una aplicación Web.
+Generar componentes de acceso a datos,
+ cumpliendo las especificaciones,
+ para integrar contenidos en la lógica de una aplicación web.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+i)
+\end_layout
+
+\end_inset
+
+Utilizar lenguajes de marcas y estándares web,
+ asumiendo el manual de estilo,
+ para desarrollar interfaces en aplicaciones web.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+j)
+\end_layout
+
+\end_inset
+
+Emplear herramientas y lenguajes específicos,
+ siguiendo las especificaciones,
+ para desarrollar componentes multimedia.
 \end_layout
 
 \begin_layout Enumerate
@@ -831,9 +903,9 @@ l)
 
 \end_inset
 
-Utilizar herramientas y lenguajes específicos, cumpliendo las especificaciones,
- para desarrollar e integrar componentes software en el entorno del servidor
- Web.
+Utilizar herramientas y lenguajes específicos,
+ cumpliendo las especificaciones,
+ para desarrollar e integrar componentes software en el entorno del servidor web.
 \end_layout
 
 \begin_layout Enumerate
@@ -848,8 +920,9 @@ m)
 
 \end_inset
 
-Emplear herramientas específicas, integrando la funcionalidad entre aplicaciones
-, para desarrollar servicios empleados en aplicaciones Web.
+Emplear herramientas específicas,
+ integrando la funcionalidad entre aplicaciones,
+ para desarrollar servicios empleables en aplicaciones web.
 \end_layout
 
 \begin_layout Enumerate
@@ -864,9 +937,9 @@ n)
 
 \end_inset
 
-Evaluar servicios distribuidos ya desarrollados, verificando sus prestaciones
- y funcionalidad, para integrar servicios distribuidos en una aplicación
- Web.
+Evaluar servicios distribuidos ya desarrollados,
+ verificando sus prestaciones y funcionalidad,
+ para integrar servicios distribuidos en una aplicación web.
 \end_layout
 
 \begin_layout Enumerate
@@ -881,8 +954,9 @@ status open
 
 \end_inset
 
-Verificar los componentes de software desarrollados, analizando las especificaci
-ones, para completar el plan de pruebas.
+Verificar los componentes de software desarrollados,
+ analizando las especificaciones,
+ para completar el plan de pruebas.
 \end_layout
 
 \begin_layout Enumerate
@@ -897,8 +971,7 @@ q)
 
 \end_inset
 
-Programar y realizar actividades para gestionar el mantenimiento de los
- recursos informáticos.
+Programar y realizar actividades para gestionar el mantenimiento de los recursos informáticos.
 \end_layout
 
 \begin_layout Enumerate
@@ -913,9 +986,7 @@ s)
 
 \end_inset
 
-Desarrollar la creatividad y el espíritu de innovación para responder a
- los retos que se presentan en los procesos y organización de trabajo y
- de la vida personal.
+Desarrollar la creatividad y el espíritu de innovación para responder a los retos que se presentan en los procesos y organización de trabajo y de la vida personal.
 \end_layout
 
 \begin_layout Enumerate
@@ -931,8 +1002,8 @@ t)
 \end_inset
 
 Tomar decisiones de forma fundamentada analizando las variables implicadas,
- integrando saberes de distinto ámbito y aceptando los riesgos y la posibilidad
- de equivocación en las mismas, para afrontar y resolver distintas situaciones,
+ integrando saberes de distinto ámbito y aceptando los riesgos y la posibilidad de equivocación en las mismas,
+ para afrontar y resolver distintas situaciones,
  problemas o contingencias.
 \end_layout
 
@@ -940,7 +1011,8 @@ Tomar decisiones de forma fundamentada analizando las variables implicadas,
 \begin_layout Enumerate
 La formación del módulo contribuye a alcanzar las 
 \series bold
-competencias profesionales, personales y sociales
+competencias profesionales,
+ personales y sociales
 \series default
  de este título que se relacionan a continuación 
 \begin_inset CommandInset citation
@@ -966,8 +1038,7 @@ c)
 
 \end_inset
 
-Gestionar servidores de aplicaciones adaptando su configuración en cada
- caso para permitir el despliegue de aplicaciones Web.
+Gestionar servidores en distintos ámbitos de implantación adaptando su configuración en cada caso para permitir el despliegue de aplicaciones web.
 \end_layout
 
 \begin_layout Enumerate
@@ -982,8 +1053,10 @@ d)
 
 \end_inset
 
-Gestionar bases de datos, interpretando su diseño lógico y verificando integrida
-d, consistencia, seguridad y accesibilidad de los datos.
+Gestionar bases de datos,
+ interpretando su diseño lógico y verificando integridad,
+ consistencia,
+ seguridad y accesibilidad de los datos.
 \end_layout
 
 \begin_layout Enumerate
@@ -998,8 +1071,8 @@ f)
 
 \end_inset
 
-Integrar contenidos en la lógica de una aplicación web, desarrollando componente
-s de acceso a datos adecuados a las especificaciones.
+Integrar contenidos en la lógica de una aplicación web,
+ desarrollando componentes de acceso a datos adecuados a las especificaciones.
 \end_layout
 
 \begin_layout Enumerate
@@ -1015,7 +1088,7 @@ g)
 \end_inset
 
 Desarrollar interfaces en aplicaciones web de acuerdo con un manual de estilo,
- utilizando lenguajes de marcas y estándares Web.
+ utilizando lenguajes de marcas y estándares web.
 \end_layout
 
 \begin_layout Enumerate
@@ -1031,8 +1104,7 @@ h)
 \end_inset
 
 Desarrollar componentes multimedia para su integración en aplicaciones web,
- empleando herramientas específicas y siguiendo las especificaciones establecida
-s.
+ empleando herramientas específicas y siguiendo las especificaciones establecidas.
 \end_layout
 
 \begin_layout Enumerate
@@ -1047,8 +1119,8 @@ k)
 
 \end_inset
 
-Desarrollar servicios para integrar sus funciones en otras aplicaciones
- web, asegurando su funcionalidad.
+Desarrollar servicios para integrar sus funciones en otras aplicaciones web,
+ asegurando su funcionalidad.
 \end_layout
 
 \begin_layout Enumerate
@@ -1063,8 +1135,8 @@ l)
 
 \end_inset
 
-Integrar servicios y contenidos distribuidos en aplicaciones web, asegurando
- su funcionalidad.
+Integrar servicios y contenidos distribuidos en aplicaciones web,
+ asegurando su funcionalidad.
 \end_layout
 
 \begin_layout Enumerate
@@ -1079,8 +1151,8 @@ m)
 
 \end_inset
 
-Completar planes de pruebas verificando el funcionamiento de los componentes
- software desarrollados, según las especificaciones.
+Completar planes de pruebas verificando el funcionamiento de los componentes software desarrollados,
+ según las especificaciones.
 \end_layout
 
 \begin_layout Enumerate
@@ -1095,8 +1167,8 @@ n)
 
 \end_inset
 
-Elaborar y mantener la documentación de los procesos de desarrollo, utilizando
- herramientas de generación de documentación y control de versiones.
+Elaborar y mantener la documentación de los procesos de desarrollo,
+ utilizando herramientas de generación de documentación y control de versiones.
 \end_layout
 
 \begin_layout Enumerate
@@ -1127,27 +1199,91 @@ q)
 
 \end_inset
 
-Resolver situaciones, problemas o contingencias con iniciativa y autonomía
- en el ámbito de su competencia, con creatividad, innovación y espíritu
- de mejora en el trabajo personal y en el de los miembros del equipo.
+Resolver situaciones,
+ problemas o contingencias con iniciativa y autonomía en el ámbito de su competencia,
+ con creatividad,
+ innovación y espíritu de mejora en el trabajo personal y en el de los miembros del equipo.
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+Las líneas de actuación en el proceso de enseñanza-aprendizaje que permiten alcanzar los objetivos del módulo,
+ versarán sobre:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El análisis de los métodos de generación dinámica de documentos web.
+\end_layout
+
+\begin_layout Itemize
+La integración del lenguaje de marcas con el código ejecutable en el servidor web.
+\end_layout
+
+\begin_layout Itemize
+El análisis,
+ diferenciación y clasificación de las características y funcionalidades incorporadas en los entornos y lenguajes de programación de los servidores web más difundidos.
+\end_layout
+
+\begin_layout Itemize
+La utilización de características y funcionalidades específicas de los lenguajes de programación seleccionados.
+\end_layout
+
+\begin_layout Itemize
+La modificación del código existente,
+ así como el análisis de datos,
+ en soluciones web heterogéneas para su adaptación a entornos específicos.
+\end_layout
+
+\begin_layout Itemize
+El análisis y la utilización de funcionalidades aportadas por frameworks de programación web en entorno servidor.
+\end_layout
+
+\begin_layout Itemize
+La utilización de frameworks para incorporar interactividad a los documentos web generados de forma dinámica.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Este módulo profesional contiene la formación necesaria para desempeñar la función de desarrollo de aplicaciones y servicios destinados a su ejecución por servidores en entornos web.
+\end_layout
+
+\begin_layout Standard
+La función de desarrollo de aplicaciones para servidores web incluye aspectos como:
+\end_layout
+
+\begin_layout Itemize
+La creación de aplicaciones de servidor que generan interfaces web como resultado de su ejecución.
+\end_layout
+
+\begin_layout Itemize
+La programación de métodos para almacenar,
+ recuperar y gestionar mediante documentos web información disponible en almacenes de datos.
+\end_layout
+
+\begin_layout Itemize
+La generación,
+ prueba y documentación de servicios web reutilizables y accesibles mediante protocolos web.
+\end_layout
+
+\begin_layout Itemize
+El desarrollo de aplicaciones basadas en información y funcionalidades distribuidas.
+\end_layout
+
+\begin_layout Standard
+Las actividades profesionales asociadas a esta función se aplican en:
+\end_layout
+
+\begin_layout Itemize
+El desarrollo y la adaptación de servicios y aplicaciones para servidores de aplicaciones y servidores web.
+\end_layout
+
 \begin_layout Section
 Resultados de aprendizaje y criterios de evaluación
 \end_layout
 
 \begin_layout Standard
-Según se establece en 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "orden-16-06-2011"
-literal "false"
-
-\end_inset
-
-, los resultados de aprendizaje del módulo y sus criterios de evaluación
- asociados son los que se describen a continuación:
+Los resultados de aprendizaje del módulo y sus criterios de evaluación asociados son los que se describen a continuación:
 \end_layout
 
 \begin_layout Standard
@@ -1171,7 +1307,9 @@ textbf{[
 \backslash
 RA{
 \backslash
-arabic*}]}, leftmargin=*, format=
+arabic*}]},
+ leftmargin=*,
+ format=
 \backslash
 hypertarget{ra
 \backslash
@@ -1190,7 +1328,9 @@ CE{
 \backslash
 arabic{enumi}}{
 \backslash
-alph*})}, leftmargin=*, format=
+alph*})},
+ leftmargin=*,
+ format=
 \backslash
 hypertarget{ce
 \backslash
@@ -1207,8 +1347,8 @@ alph{enumii}}{}}
 \begin_layout Enumerate
 
 \series bold
-Selecciona las arquitecturas y tecnologías de programación Web en entorno
- servidor, analizando sus capacidades y características propias.
+Selecciona las arquitecturas y tecnologías de programación web en entorno servidor,
+ analizando sus capacidades y características propias.
 \series default
 
 \begin_inset Newline newline
@@ -1219,47 +1359,38 @@ Criterios de evaluación:
 
 \begin_deeper
 \begin_layout Enumerate
-Se han caracterizado y diferenciado los modelos de ejecución de código en
- el servidor y en el cliente Web.
+Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente web.
 \end_layout
 
 \begin_layout Enumerate
-Se han reconocido las ventajas que proporciona la generación dinámica de
- páginas Web y sus diferencias con la inclusión de sentencias de guiones
- en el interior de las páginas Web.
+Se han reconocido las ventajas que proporciona la generación dinámica de páginas web.
 \end_layout
 
 \begin_layout Enumerate
-Se han identificado los mecanismos de ejecución de código en los servidores
- Web.
+Se han identificado los mecanismos de ejecución de código en los servidores web.
 \end_layout
 
 \begin_layout Enumerate
-Se han reconocido las funcionalidades que aportan los servidores de aplicaciones
- y su integración con los servidores Web.
+Se han reconocido las funcionalidades que aportan los servidores de aplicaciones y su integración con los servidores web.
 \end_layout
 
 \begin_layout Enumerate
-Se han identificado y caracterizado los principales lenguajes y tecnologías
- relacionados con la programación Web en entorno servidor.
+Se han identificado y caracterizado los principales lenguajes y tecnologías relacionados con la programación web en entorno servidor.
 \end_layout
 
 \begin_layout Enumerate
-Se han verificado los mecanismos de integración de los lenguajes de marcas
- con los lenguajes de programación en entorno servidor.
+Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación en entorno servidor.
 \end_layout
 
 \begin_layout Enumerate
-Se han reconocido y evaluado las herramientas de programación en entorno
- servidor.
+Se han reconocido y evaluado las herramientas y frameworks de programación en entorno servidor.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 
 \series bold
-Escribe sentencias ejecutables por un servidor Web reconociendo y aplicando
- procedimientos de integración del código en lenguajes de marcas.
+Escribe sentencias ejecutables por un servidor web reconociendo y aplicando procedimientos de integración del código en lenguajes de marcas.
 \series default
 
 \begin_inset Newline newline
@@ -1270,8 +1401,7 @@ Criterios de evaluación:
 
 \begin_deeper
 \begin_layout Enumerate
-Se han reconocido los mecanismos de generación de páginas Web a partir de
- lenguajes de marcas con código embebido.
+Se han reconocido los mecanismos de generación de páginas web a partir de lenguajes de marcas con código embebido.
 \end_layout
 
 \begin_layout Enumerate
@@ -1279,8 +1409,7 @@ Se han identificado las principales tecnologías asociadas.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado etiquetas para la inclusión de código en el lenguaje de
- marcas.
+Se han utilizado etiquetas para la inclusión de código en el lenguaje de marcas.
 \end_layout
 
 \begin_layout Enumerate
@@ -1288,8 +1417,7 @@ Se ha reconocido la sintaxis del lenguaje de programación que se ha de utilizar
 \end_layout
 
 \begin_layout Enumerate
-Se han escrito sentencias simples y se han comprobado sus efectos en el
- documento resultante.
+Se han escrito sentencias simples y se han comprobado sus efectos en el documento resultante.
 \end_layout
 
 \begin_layout Enumerate
@@ -1297,8 +1425,7 @@ Se han utilizado directivas para modificar el comportamiento predeterminado.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado los distintos tipos de variables y operadores disponibles
- en el lenguaje.
+Se han utilizado los distintos tipos de variables y operadores disponibles en el lenguaje.
 \end_layout
 
 \begin_layout Enumerate
@@ -1309,8 +1436,8 @@ Se han identificado los ámbitos de utilización de las variables.
 \begin_layout Enumerate
 
 \series bold
-Escribe bloques de sentencias embebidos en lenguajes de marcas, seleccionando
- y utilizando las estructuras de programación.
+Escribe bloques de sentencias embebidos en lenguajes de marcas,
+ seleccionando y utilizando las estructuras de programación.
 \series default
 
 \begin_inset Newline newline
@@ -1329,7 +1456,7 @@ Se han utilizado bucles y se ha verificado su funcionamiento.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado «arrays» para almacenar y recuperar conjuntos de datos.
+Se han utilizado matrices (arrays) para almacenar y recuperar conjuntos de datos.
 \end_layout
 
 \begin_layout Enumerate
@@ -1337,13 +1464,11 @@ Se han creado y utilizado funciones.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado formularios Web para interactuar con el usuario del navegador
- Web.
+Se han utilizado formularios web para interactuar con el usuario del navegador web.
 \end_layout
 
 \begin_layout Enumerate
-Se han empleado métodos para recuperar la información introducida en el
- formulario.
+Se han empleado métodos para recuperar la información introducida en el formulario.
 \end_layout
 
 \begin_layout Enumerate
@@ -1354,8 +1479,7 @@ Se han añadido comentarios al código.
 \begin_layout Enumerate
 
 \series bold
-Desarrolla aplicaciones Web embebidas en lenguajes de marcas analizando
- e incorporando funcionalidades según especificaciones.
+Desarrolla aplicaciones web embebidas en lenguajes de marcas analizando e incorporando funcionalidades según especificaciones.
 \series default
 
 \begin_inset Newline newline
@@ -1366,33 +1490,23 @@ Criterios de evaluación:
 
 \begin_deeper
 \begin_layout Enumerate
-Se han identificado los mecanismos disponibles para el mantenimiento de
- la información que concierne a un cliente Web concreto y se han señalado
- sus ventajas.
+Se han identificado los mecanismos disponibles para el mantenimiento de la información que concierne a un cliente web concreto y se han señalado sus ventajas.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado sesiones para mantener el estado de las aplicaciones Web.
+Se han utilizado mecanismos para mantener el estado de las aplicaciones web.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado «cookies» para almacenar información en el cliente Web
- y para recuperar su contenido.
+Se han utilizado mecanismos para almacenar información en el cliente web y para recuperar su contenido.
 \end_layout
 
 \begin_layout Enumerate
-Se han identificado y caracterizado los mecanismos disponibles para la autentifi
-cación de usuarios.
+Se han identificado y caracterizado los mecanismos disponibles para la autentificación de usuarios.
 \end_layout
 
 \begin_layout Enumerate
-Se han escrito aplicaciones que integren mecanismos de autentificación de
- usuarios.
-\end_layout
-
-\begin_layout Enumerate
-Se han realizado adaptaciones a aplicaciones Web existentes como gestores
- de contenidos u otras.
+Se han escrito aplicaciones que integren mecanismos de autentificación de usuarios.
 \end_layout
 
 \begin_layout Enumerate
@@ -1404,8 +1518,7 @@ Se han utilizado herramientas y entornos para facilitar la programación,
 \begin_layout Enumerate
 
 \series bold
-Desarrolla aplicaciones Web identificando y aplicando mecanismos para separar
- el código de presentación de la lógica de negocio.
+Desarrolla aplicaciones web identificando y aplicando mecanismos para separar el código de presentación de la lógica de negocio.
 \series default
 
 \begin_inset Newline newline
@@ -1416,37 +1529,31 @@ Criterios de evaluación:
 
 \begin_deeper
 \begin_layout Enumerate
-Se han identificado las ventajas de separar la lógica de negocio de los
- aspectos de presentación de la aplicación.
+Se han identificado las ventajas de separar la lógica de negocio de los aspectos de presentación de la aplicación.
 \end_layout
 
 \begin_layout Enumerate
-Se han analizado tecnologías y mecanismos que permiten realizar esta separación
- y sus características principales.
+Se han analizado y utilizado mecanismos y frameworks que permiten realizar esta separación y sus características principales.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado objetos y controles en el servidor para generar el aspecto
- visual de la aplicación Web en el cliente.
+Se han utilizado objetos y controles en el servidor para generar el aspecto visual de la aplicación web en el cliente.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado formularios generados de forma dinámica para responder
- a los eventos de la aplicación Web.
+Se han utilizado formularios generados de forma dinámica para responder a los eventos de la aplicación web.
 \end_layout
 
 \begin_layout Enumerate
-Se han identificado y aplicado los parámetros relativos a la configuración
- de la aplicación Web.
+Se han identificado y aplicado los parámetros relativos a la configuración de la aplicación web.
 \end_layout
 
 \begin_layout Enumerate
-Se han escrito aplicaciones Web con mantenimiento de estado y separación
- de la lógica de negocio.
+Se han escrito aplicaciones web con mantenimiento de estado y separación de la lógica de negocio.
 \end_layout
 
 \begin_layout Enumerate
-Se han aplicado los principios de la programación orientada a objetos.
+Se han aplicado los principios y patrones de diseño de la programación orientada a objetos.
 \end_layout
 
 \begin_layout Enumerate
@@ -1457,8 +1564,8 @@ Se ha probado y documentado el código.
 \begin_layout Enumerate
 
 \series bold
-Desarrolla aplicaciones de acceso a almacenes de datos, aplicando medidas
- para mantener la seguridad y la integridad de la información.
+Desarrolla aplicaciones de acceso a almacenes de datos,
+ aplicando medidas para mantener la seguridad y la integridad de la información.
 \series default
 
 \begin_inset Newline newline
@@ -1469,8 +1576,7 @@ Criterios de evaluación:
 
 \begin_deeper
 \begin_layout Enumerate
-Se han analizado las tecnologías que permiten el acceso mediante programación
- a la información disponible en almacenes de datos.
+Se han analizado las tecnologías que permiten el acceso mediante programación a la información disponible en almacenes de datos.
 \end_layout
 
 \begin_layout Enumerate
@@ -1482,7 +1588,7 @@ Se ha recuperado información almacenada en bases de datos.
 \end_layout
 
 \begin_layout Enumerate
-Se ha publicado en aplicaciones Web la información recuperada.
+Se ha publicado en aplicaciones web la información recuperada.
 \end_layout
 
 \begin_layout Enumerate
@@ -1490,24 +1596,19 @@ Se han utilizado conjuntos de datos para almacenar la información.
 \end_layout
 
 \begin_layout Enumerate
-Se han creado aplicaciones Web que permitan la actualización y la eliminación
- de información disponible en una base de datos.
+Se han creado aplicaciones web que permitan la actualización y la eliminación de información disponible en una base de datos.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado transacciones para mantener la consistencia de la información.
-\end_layout
-
-\begin_layout Enumerate
-Se han probado y documentado las aplicaciones.
+Se han probado y documentado las aplicaciones web.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 
 \series bold
-Desarrolla servicios Web analizando su funcionamiento e implantando la estructur
-a de sus componentes.
+Desarrolla servicios web reutilizables y accesibles mediante protocolos web,
+ verificando su funcionamiento.
 \series default
 
 \begin_inset Newline newline
@@ -1518,42 +1619,42 @@ Criterios de evaluación:
 
 \begin_deeper
 \begin_layout Enumerate
-Se han reconocido las características propias y el ámbito de aplicación
- de los servicios Web.
+Se han reconocido las características propias y el ámbito de aplicación de los servicios web.
 \end_layout
 
 \begin_layout Enumerate
-Se han reconocido las ventajas de utilizar servicios Web para proporcionar
- acceso a funcionalidades incorporadas a la lógica de negocio de una aplicación.
+Se han reconocido las ventajas de utilizar servicios web para proporcionar acceso a funcionalidades incorporadas a la lógica de negocio de una aplicación.
 \end_layout
 
 \begin_layout Enumerate
-Se han identificado las tecnologías y los protocolos implicados en la publicació
-n y utilización de servicios Web.
+Se han identificado las tecnologías y los protocolos implicados en el consumo de servicios web.
 \end_layout
 
 \begin_layout Enumerate
-Se ha programado un servicio Web.
+Se han utilizado los estándares y arquitecturas más difundidos e implicados en el desarrollo de servicios web.
 \end_layout
 
 \begin_layout Enumerate
-Se ha creado el documento de descripción del servicio Web.
+Se ha programado un servicio web.
 \end_layout
 
 \begin_layout Enumerate
-Se ha verificado el funcionamiento del servicio Web.
+Se ha verificado el funcionamiento del servicio web.
 \end_layout
 
 \begin_layout Enumerate
-Se ha consumido el servicio Web.
+Se ha consumido el servicio web.
+\end_layout
+
+\begin_layout Enumerate
+Se ha documentado un servicio web.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 
 \series bold
-Genera páginas Web dinámicas analizando y utilizando tecnologías del servidor
- Web que añadan código al lenguaje de marcas.
+Genera páginas web dinámicas analizando y utilizando tecnologías y frameworks del servidor web que añadan código al lenguaje de marcas.
 \series default
 
 \begin_inset Newline newline
@@ -1564,46 +1665,39 @@ Criterios de evaluación:
 
 \begin_deeper
 \begin_layout Enumerate
-Se han identificado las diferencias entre la ejecución de código en el servidor
- y en el cliente Web.
+Se han identificado las diferencias entre la ejecución de código en el servidor y en el cliente web.
 \end_layout
 
 \begin_layout Enumerate
-Se han reconocido las ventajas de unir ambas tecnologías en el proceso de
- desarrollo de programas.
+Se han reconocido las ventajas de unir ambas tecnologías en el proceso de desarrollo de programas.
 \end_layout
 
 \begin_layout Enumerate
-Se han identificado las librerías y las tecnologías relacionadas con la
- generación por parte del servidor de páginas Web con guiones embebidos.
+Se han identificado las tecnologías y frameworks relacionadas con la generación por parte del servidor de páginas web con guiones embebidos.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado estas tecnologías para generar páginas Web que incluyan
- interacción con el usuario en forma de advertencias y peticiones de confirmació
-n.
+Se han utilizado estas tecnologías y frameworks para generar páginas web que incluyan interacción con el usuario.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado estas tecnologías, para generar páginas Web que incluyan
- verificación de formularios.
+Se han utilizado estas tecnologías y frameworks para generar páginas web que incluyan verificación de formularios.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado estas tecnologías para generar páginas Web que incluyan
- modificación dinámica de su contenido y su estructura.
+Se han utilizado estas tecnologías y frameworks para generar páginas web que incluyan modificación dinámica de su contenido y su estructura.
 \end_layout
 
 \begin_layout Enumerate
-Se han aplicado estas tecnologías en la programación de aplicaciones Web.
+Se han aplicado estas tecnologías y frameworks en la programación de aplicaciones web.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 
 \series bold
-Desarrolla aplicaciones Web híbridas seleccionando y utilizando librerías
- de código y repositorios heterogéneos de información.
+Desarrollar aplicaciones web híbridas seleccionando y utilizando tecnologías,
+ frameworks servidor y repositorios heterogéneos de información.
 \series default
 
 \begin_inset Newline newline
@@ -1614,37 +1708,37 @@ Criterios de evaluación:
 
 \begin_deeper
 \begin_layout Enumerate
-Se han reconocido las ventajas que proporciona la reutilización de código
- y el aprovechamiento de información ya existente.
+Se han reconocido las ventajas que proporciona la reutilización de código y el aprovechamiento de información ya existente.
 \end_layout
 
 \begin_layout Enumerate
-Se han identificado librerías de código y tecnologías aplicables en la creación
- de aplicaciones Web híbridas.
+Se han identificado tecnologías y frameworks aplicables en la creación de aplicaciones web híbridas.
 \end_layout
 
 \begin_layout Enumerate
-Se ha creado una aplicación Web que recupere y procese repositorios de informaci
-ón ya existentes.
+Se ha creado una aplicación web que recupere y procese repositorios de información ya existentes.
 \end_layout
 
 \begin_layout Enumerate
-Se han creado repositorios específicos a partir de información existente
- en Internet y en almacenes de información.
+Se han creado repositorios específicos a partir de información existente en almacenes de información.
 \end_layout
 
 \begin_layout Enumerate
-Se han utilizado librerías de código para incorporar funcionalidades específicas
- a una aplicación Web.
+Se han utilizado librerías de código y frameworks para incorporar funcionalidades específicas a una aplicación web.
 \end_layout
 
 \begin_layout Enumerate
-Se han programado servicios y aplicaciones Web utilizando como base información
- y código generados por terceros.
+Se han programado servicios y aplicaciones web utilizando como base información y código generados por terceros.
 \end_layout
 
 \begin_layout Enumerate
-Se han probado, depurado y documentado las aplicaciones generadas.
+Se han analizado y utilizado librerías de código relacionadas con Big Data e inteligencia de negocios (Business Intelligence),
+ para incorporar análisis e inteligencia de datos proveniente de repositorios.
+\end_layout
+
+\begin_layout Enumerate
+Se han probado,
+ depurado y documentado las aplicaciones generadas.
 \end_layout
 
 \end_deeper
@@ -1673,9 +1767,10 @@ Cada unidad didáctica tiene una duración temporal de
 \series bold
 una semana
 \series default
-, que podrá ampliarse o reducirse en función de las circunstancias cuando
- el profesor lo estime conveniente (por ejemplo, para la realización de
- actividades, ejercicios y prácticas en clase).
+,
+ que podrá ampliarse o reducirse en función de las circunstancias cuando el profesor lo estime conveniente (por ejemplo,
+ para la realización de actividades,
+ ejercicios y prácticas en clase).
 \end_layout
 
 \begin_layout Standard
@@ -1694,11 +1789,8 @@ opcional
 
 \end_inset
 
- son contenidos complementarios que sólo se impartirán si hay tiempo suficiente
- para ello y nunca a costa de otros contenidos no opcionales.
- También podrán ser usados como elementos a desarrollar para el alumnado
- con altas capacidades o que manifieste un ritmo de aprendizaje superior
- al del resto del grupo/clase.
+ son contenidos complementarios que sólo se impartirán si hay tiempo suficiente para ello y nunca a costa de otros contenidos no opcionales.
+ También podrán ser usados como elementos a desarrollar para el alumnado con altas capacidades o que manifieste un ritmo de aprendizaje superior al del resto del grupo/clase.
 \end_layout
 
 \begin_layout Standard
@@ -1717,6 +1809,7 @@ Cuadro resumen
 \begin_inset CommandInset include
 LatexCommand input
 filename "resumen.tex"
+literal "true"
 
 \end_inset
 
@@ -1728,11 +1821,9 @@ Esquema detalle
 \end_layout
 
 \begin_layout Standard
-El título de cada unidad va etiquetado con los resultados de aprendizaje
- y los criterios de evaluación relacionados con dicha unidad.
- Cuando un resultado de aprendizaje no lleva asociado ningún criterio de
- evaluación, significa que dicho resultado de aprendizaje se trabaja en
- la unidad didáctica pero no es el elemento fundamental de evaluación.
+El título de cada unidad va etiquetado con los resultados de aprendizaje y los criterios de evaluación relacionados con dicha unidad.
+ Cuando un resultado de aprendizaje no lleva asociado ningún criterio de evaluación,
+ significa que dicho resultado de aprendizaje se trabaja en la unidad didáctica pero no es el elemento fundamental de evaluación.
 \begin_inset VSpace defskip
 \end_inset
 
@@ -1744,6 +1835,7 @@ El título de cada unidad va etiquetado con los resultados de aprendizaje
 LatexCommand input
 preview true
 filename "esquema.tex"
+literal "true"
 
 \end_inset
 
@@ -1759,14 +1851,14 @@ El símbolo «
 \begin_inset Formula $\times$
 \end_inset
 
-» representa que en esa unidad didáctica se trabaja dicho resultado de aprendiza
-je pero no es el elemento fundamental de evaluación.
+» representa que en esa unidad didáctica se trabaja dicho resultado de aprendizaje pero no es el elemento fundamental de evaluación.
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
 filename "race.tex"
+literal "true"
 
 \end_inset
 
@@ -1778,13 +1870,14 @@ Evaluación y calificación
 \end_layout
 
 \begin_layout Standard
-La evaluación tendrá como finalidad determinar el nivel de competencia de
- los alumnos y la consecución de los objetivos del módulo.
- Se desarrollará de forma continua, y atenderá a los siguientes aspectos:
+La evaluación tendrá como finalidad determinar el nivel de competencia de los alumnos y la consecución de los objetivos del módulo.
+ Se desarrollará de forma continua,
+ y atenderá a los siguientes aspectos:
 \end_layout
 
 \begin_layout Itemize
-Aprendizaje autónomo, viendo la capacidad del alumno para interiorizar,
+Aprendizaje autónomo,
+ viendo la capacidad del alumno para interiorizar,
  gestionar y participar en los procesos de aprendizaje propios.
 \end_layout
 
@@ -1793,13 +1886,12 @@ Comprensión del lenguaje común.
 \end_layout
 
 \begin_layout Itemize
-Adquisición de conceptos básicos del módulo profesional que permiten al
- alumno incluirlos como un elemento más de su realidad profesional.
+Adquisición de conceptos básicos del módulo profesional que permiten al alumno incluirlos como un elemento más de su realidad profesional.
 \end_layout
 
 \begin_layout Itemize
-Participación y trabajo en grupo, viendo la capacidad que tiene este de
- escuchar y debatir las diferentes soluciones de un problema.
+Participación y trabajo en grupo,
+ viendo la capacidad que tiene este de escuchar y debatir las diferentes soluciones de un problema.
 \end_layout
 
 \begin_layout Itemize
@@ -1807,16 +1899,16 @@ Nivel de abstracción alcanzado.
 \end_layout
 
 \begin_layout Standard
-Durante el desarrollo del curso existirán, al menos, una evaluación inicial,
- dos evaluaciones parciales (al final de cada trimestre) y una evaluación
- final.
+Durante el desarrollo del curso existirán,
+ al menos,
+ una evaluación inicial,
+ dos evaluaciones parciales (al final de cada trimestre) y una evaluación final.
 \end_layout
 
 \begin_layout Standard
-La evaluación se realizará atendiendo a los criterios de evaluación asociados
- a cada resultado de aprendizaje del módulo.
- Para ello, se usarán instrumentos de evaluación que medirán si el alumnado
- cumple con los criterios de evaluación y en qué grado.
+La evaluación se realizará atendiendo a los criterios de evaluación asociados a cada resultado de aprendizaje del módulo.
+ Para ello,
+ se usarán instrumentos de evaluación que medirán si el alumnado cumple con los criterios de evaluación y en qué grado.
 \end_layout
 
 \begin_layout Itemize
@@ -1845,8 +1937,7 @@ cumple
 \series bold
 criterio de evaluación
 \series default
- si supera al menos un instrumento de evaluación que mida el grado de cumplimien
-to de dicho criterio de evaluación.
+ si supera al menos un instrumento de evaluación que mida el grado de cumplimiento de dicho criterio de evaluación.
 \end_layout
 
 \end_deeper
@@ -1859,20 +1950,21 @@ evaluación final
 \emph on
 alcanza
 \emph default
-, y en qué medida, los 
+,
+ y en qué medida,
+ los 
 \emph on
 resultados de aprendizaje
 \emph default
- del módulo a partir de los criterios de evaluación trabajados y evaluados
- que estén asociados a cada resultado de aprendizaje y en función de la
- ponderación que tenga cada criterio de evaluación en su correspondiente
- resultado de aprendizaje, según se establece en el apartado 
+ del módulo a partir de los criterios de evaluación trabajados y evaluados que estén asociados a cada resultado de aprendizaje y en función de la ponderación que tenga cada criterio de evaluación en su correspondiente resultado de aprendizaje,
+ según se establece en el apartado 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Ponderación-de-los-criterios"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -1894,15 +1986,15 @@ resultados de aprendizaje
 
 \end_deeper
 \begin_layout Standard
-Para que el seguimiento de dicha evaluación sea factible, el alumno deberá
- asistir con regularidad a las clases y participar activamente en las mismas,
- de forma que una sistemática y frecuente falta de asistencia a clase supondrá
- para el alumno la 
+Para que el seguimiento de dicha evaluación sea factible,
+ el alumno deberá asistir con regularidad a las clases y participar activamente en las mismas,
+ de forma que una sistemática y frecuente falta de asistencia a clase supondrá para el alumno la 
 \series bold
 pérdida de la evaluación continua
 \series default
  y sólo tendrá derecho a una prueba final.
- Asimismo, se requiere que el alumno 
+ Asimismo,
+ se requiere que el alumno 
 \series bold
 acceda al menos diariamente a las plataformas iPasen y Moodle Centros
 \series default
@@ -1913,8 +2005,8 @@ revise diariamente su correo en el dominio
 @iesdonana.org
 \family default
 \series default
- para informarse puntualmente de las novedades que pudieran darse en el
- módulo, quedando claro que 
+ para informarse puntualmente de las novedades que pudieran darse en el módulo,
+ quedando claro que 
 \series bold
 es responsabilidad del alumno informarse activamente sobre las mismas
 \series default
@@ -1926,9 +2018,7 @@ Valoración general de los instrumentos de evaluación y calificación
 \end_layout
 
 \begin_layout Standard
-Los instrumentos de evaluación y calificación usados durante el curso para
- medir el grado de cumplimiento de los criterios de evaluación se clasifican
- en dos grandes tipos:
+Los instrumentos de evaluación y calificación usados durante el curso para medir el grado de cumplimiento de los criterios de evaluación se clasifican en dos grandes tipos:
 \end_layout
 
 \begin_layout Itemize
@@ -1945,7 +2035,10 @@ Los instrumentos de evaluación y calificación usados durante el curso para
 \uwave off
 \noun off
 \color none
-Trabajos, actividades y ejercicios (casa, clase, grupo) (tipo 
+Trabajos,
+ actividades y ejercicios (casa,
+ clase,
+ grupo) (tipo 
 \begin_inset ERT
 status open
 
@@ -1992,15 +2085,16 @@ EX
 \end_layout
 
 \begin_layout Standard
-La evaluación de cualquiera de los trabajos, actividades, ejercicios y pruebas
- evaluativas podrá requerir, a criterio y discreción del profesor del módulo,
- la defensa de los mismos en una entrevista individual con el alumno para
- garantizar la autoría y la adquisición adecuada de las competencias correspondi
-entes.
+La evaluación de cualquiera de los trabajos,
+ actividades,
+ ejercicios y pruebas evaluativas podrá requerir,
+ a criterio y discreción del profesor del módulo,
+ la defensa de los mismos en una entrevista individual con el alumno para garantizar la autoría y la adquisición adecuada de las competencias correspondientes.
 \end_layout
 
 \begin_layout Standard
-Los trabajos, actividades y/o ejercicios (
+Los trabajos,
+ actividades y/o ejercicios (
 \begin_inset ERT
 status open
 
@@ -2013,22 +2107,21 @@ TR
 
 \end_inset
 
-) versarán sobre los contenidos trabajados en una unidad didáctica o bloque
- de unidades didácticas conceptualmente relacionadas.
- (Esto significa, en consecuencia, que no es obligatoria la realización
- de trabajos, actividades y/o ejercicios en cada unidad didáctica, sino
- que a tales efectos se pueden agrupar varias unidades didácticas.)
+) versarán sobre los contenidos trabajados en una unidad didáctica o bloque de unidades didácticas conceptualmente relacionadas.
+ (Esto significa,
+ en consecuencia,
+ que no es obligatoria la realización de trabajos,
+ actividades y/o ejercicios en cada unidad didáctica,
+ sino que a tales efectos se pueden agrupar varias unidades didácticas.)
 \end_layout
 
 \begin_layout Standard
-Dentro de este grupo podrá incluirse alguna prueba (tipo test o de respuestas
- cortas) a responder de forma individual sobre conocimientos teóricos de
- determinados aspectos básicos asociados a unidades (o conjunto de unidades)
- didácticas concretas.
+Dentro de este grupo podrá incluirse alguna prueba (tipo test o de respuestas cortas) a responder de forma individual sobre conocimientos teóricos de determinados aspectos básicos asociados a unidades (o conjunto de unidades) didácticas concretas.
 \end_layout
 
 \begin_layout Standard
-Asimismo, se realizará un examen al final de cada evaluación parcial (
+Asimismo,
+ se realizará un examen al final de cada evaluación parcial (
 \begin_inset ERT
 status open
 
@@ -2041,11 +2134,13 @@ EX
 
 \end_inset
 
-), coincidiendo aproximadamente con el final del trimestre correspondiente.
- Debido al carácter de evaluación continua del módulo, así como del hecho
- de que cada contenido trabajado se asienta sobre los anteriores, es posible
- que el alumno requiera, para la evaluación positiva de un trimestre, el
- conocimiento necesario de contenidos de trimestres anteriores.
+),
+ coincidiendo aproximadamente con el final del trimestre correspondiente.
+ Debido al carácter de evaluación continua del módulo,
+ así como del hecho de que cada contenido trabajado se asienta sobre los anteriores,
+ es posible que el alumno requiera,
+ para la evaluación positiva de un trimestre,
+ el conocimiento necesario de contenidos de trimestres anteriores.
 \end_layout
 
 \begin_layout Subsection
@@ -2057,10 +2152,9 @@ De un criterio de evaluación
 \end_layout
 
 \begin_layout Standard
-La calificación de cada criterio de evaluación, una vez trabajado y evaluado,
- se valorará de 0,0 a 10,0 y se calculará como la calificación obtenida
- en el instrumento de evaluación y calificación usado para medir el grado
- de cumplimiento de ese criterio de evaluación.
+La calificación de cada criterio de evaluación,
+ una vez trabajado y evaluado,
+ se valorará de 0,0 a 10,0 y se calculará como la calificación obtenida en el instrumento de evaluación y calificación usado para medir el grado de cumplimiento de ese criterio de evaluación.
 \end_layout
 
 \begin_layout Standard
@@ -2076,15 +2170,14 @@ criterio de evaluación
 \end_layout
 
 \begin_layout Standard
-Si, a lo largo del curso, se usaran varios instrumentos para evaluar y calificar
- el mismo criterio de evaluación, la calificación de dicho criterio de evaluació
-n se calcularía de la siguiente forma:
+Si,
+ a lo largo del curso,
+ se usaran varios instrumentos para evaluar y calificar el mismo criterio de evaluación,
+ la calificación de dicho criterio de evaluación se calcularía de la siguiente forma:
 \end_layout
 
 \begin_layout Enumerate
-Se agruparán las calificaciones obtenidas en los diferentes instrumentos
- que hayan medido ese criterio de evaluación en función del tipo de instrumento
- usado para evaluarlo (
+Se agruparán las calificaciones obtenidas en los diferentes instrumentos que hayan medido ese criterio de evaluación en función del tipo de instrumento usado para evaluarlo (
 \begin_inset ERT
 status open
 
@@ -2113,11 +2206,13 @@ EX
 \end_inset
 
 ).
- Se obtendrán así dos grupos de calificaciones, uno por cada tipo de instrumento.
+ Se obtendrán así dos grupos de calificaciones,
+ uno por cada tipo de instrumento.
 \end_layout
 
 \begin_layout Enumerate
-En cada grupo, se seleccionará la calificación máxima dentro de ese grupo.
+En cada grupo,
+ se seleccionará la calificación máxima dentro de ese grupo.
 \end_layout
 
 \begin_layout Enumerate
@@ -2131,8 +2226,8 @@ Se calculará la media ponderada (
 \begin_inset Formula $M$
 \end_inset
 
-) de las dos calificaciones resultantes del punto anterior, atendiendo a
- las siguientes ponderaciones:
+) de las dos calificaciones resultantes del punto anterior,
+ atendiendo a las siguientes ponderaciones:
 \end_layout
 
 \begin_deeper
@@ -2170,7 +2265,7 @@ TR
 \begin_inset Text
 
 \begin_layout Plain Layout
-30%
+50%
 \end_layout
 
 \end_inset
@@ -2202,7 +2297,7 @@ EX
 \begin_inset Text
 
 \begin_layout Plain Layout
-70%
+50%
 \end_layout
 
 \end_inset
@@ -2216,8 +2311,9 @@ EX
 \end_layout
 
 \begin_layout Standard
-Si, por algún motivo, no se usaran instrumentos de uno de los dos tipos
- (
+Si,
+ por algún motivo,
+ no se usaran instrumentos de uno de los dos tipos (
 \begin_inset ERT
 status open
 
@@ -2245,17 +2341,15 @@ EX
 
 \end_inset
 
-) durante la evaluación, el otro apartado soportaría el 100% de la carga
- evaluativa, de forma que la evaluación y calificación resultaría únicamente
- de dicho apartado.
+) durante la evaluación,
+ el otro apartado soportaría el 100% de la carga evaluativa,
+ de forma que la evaluación y calificación resultaría únicamente de dicho apartado.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 Se calcula la calificación del criterio de evaluación de la siguiente forma,
- que garantiza que un criterio de evaluación califique como cumplido cuando
- haya al menos un instrumento con una calificación mayor o igual a 4,5 que
- mida ese criterio de evaluación:
+ que garantiza que un criterio de evaluación califique como cumplido cuando haya al menos un instrumento con una calificación mayor o igual a 4,5 que mida ese criterio de evaluación:
 \end_layout
 
 \begin_deeper
@@ -2263,7 +2357,7 @@ Se calcula la calificación del criterio de evaluación de la siguiente forma,
 \begin_inset Formula 
 \[
 \CE{\ensuremath{i}}{\ensuremath{j}}=\left\{ \begin{array}{ll}
-\max\{M_{ij},\;4,5\} & \textrm{si }\max I_{ij}\geq4,5\\
+\max(M_{ij};\;4,5) & \textrm{si }\max I_{ij}\geq4,5\\
 M_{ij} & \textrm{e. o. c.}
 \end{array}\right.
 \]
@@ -2320,8 +2414,7 @@ begingroup
 
 
 \backslash
-setlist[description]{style=multiline,align=right,labelwidth=1.5cm,topsep=2ex,item
-sep=1ex}
+setlist[description]{style=multiline,align=right,labelwidth=1.5cm,topsep=2ex,itemsep=1ex}
 \end_layout
 
 \end_inset
@@ -2372,6 +2465,7 @@ reference "enu:Se-calculará-la"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2390,9 +2484,7 @@ noprefix "false"
 \begin_inset Formula $I_{ij}=$
 \end_inset
 
- Conjunto de todas las calificaciones obtenidas por el alumno en todos los
- instrumentos de evaluación y calificación que miden el criterio de evaluación
- 
+ Conjunto de todas las calificaciones obtenidas por el alumno en todos los instrumentos de evaluación y calificación que miden el criterio de evaluación 
 \begin_inset Formula $j$
 \end_inset
 
@@ -2430,17 +2522,14 @@ En consecuencia:
 \end_layout
 
 \begin_layout Itemize
-La calificación de un determinado criterio de evaluación podría ir cambiando
- a lo largo del curso en función de los instrumentos de evaluación y calificació
-n realizados por el alumno para evaluar, recuperar, mejorar su calificación,
+La calificación de un determinado criterio de evaluación podría ir cambiando a lo largo del curso en función de los instrumentos de evaluación y calificación realizados por el alumno para evaluar,
+ recuperar,
+ mejorar su calificación,
  etcétera.
 \end_layout
 
 \begin_layout Itemize
-La calificación de un criterio de evaluación no podrá ser inferior a 4,5
- si el alumno ha obtenido una calificación igual o superior a 4,5 en algún
- instrumento de evaluación y calificación que haya medido ese criterio de
- evaluación.
+La calificación de un criterio de evaluación no podrá ser inferior a 4,5 si el alumno ha obtenido una calificación igual o superior a 4,5 en algún instrumento de evaluación y calificación que haya medido ese criterio de evaluación.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2448,44 +2537,42 @@ De un resultado de aprendizaje
 \end_layout
 
 \begin_layout Standard
-La calificación de cada resultado de aprendizaje se valorará de 0,0 a 10,0
- y se calculará como una media ponderada de los criterios de evaluación
- trabajados y evaluados que estén asociados a ese resultado de aprendizaje,
- siendo requisito imprescindible para alcanzar un resultado de aprendizaje
- el cumplir todos los criterios de evaluación trabajados y evaluados, según
- se recoge en el algoritmo 
+La calificación de cada resultado de aprendizaje,
+ según se recoge en el algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "alg:Cálculo-calificación-resultado-aprendizaje"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-.
+,
+ se valorará de 0,0 a 10,0 y se calculará como una media ponderada de los criterios de evaluación trabajados y evaluados que estén asociados a ese resultado de aprendizaje,
+ siendo requisito imprescindible para alcanzar un resultado de aprendizaje el cumplir todos los criterios de evaluación trabajados y evaluados;
+ en caso contrario,
+ la calificación del resultado de aprendizaje no podrá ser superior a 4,0.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float algorithm
 placement H
+alignment document
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset VSpace defskip
-\end_inset
-
-
 \begin_inset Formula 
-\[
-\RA{\ensuremath{i}}=\left\{ \begin{array}{lcl}
-\dfrac{{\displaystyle \sum\limits _{j\in C_{i}}}\CE{\ensuremath{i}}{\ensuremath{j}}\cdot p_{ij}}{{\displaystyle \sum\limits _{j\in C_{i}}}p_{ij}} &  & \textrm{si }\min\limits _{j\in C_{i}}\CE{\ensuremath{i}}{\ensuremath{j}}\geq4,5\\
-\\
-\min\limits _{j\in C_{i}}\CE{\ensuremath{i}}{\ensuremath{j}} &  & \textrm{e. o. c.}
+\begin{align*}
+M_{i} & =\dfrac{{\displaystyle \sum\limits_{j\in C_{i}}}\CE{\ensuremath{i}}{\ensuremath{j}}\cdot p_{ij}}{{\displaystyle \sum\limits_{j\in C_{i}}}p_{ij}}\\
+\\\RA{\ensuremath{i}} & =\left\{ \begin{array}{lcl}
+M_{i} &  & \textrm{si }\min\limits_{c\in C_{i}}\{c\}\geq4,5\\
+\\\min(M_{i};\,4,0) &  & \textrm{e. o. c.}
 \end{array}\right.
-\]
+\end{align*}
 
 \end_inset
 
@@ -2568,6 +2655,25 @@ setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
 \end_layout
 
 \begin_layout Description
+\begin_inset Formula $M_{i}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $=$
+\end_inset
+
+ Media ponderada de los criterios de evaluación asociados al resultado de aprendizaje 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
 \begin_inset ERT
 status open
 
@@ -2631,21 +2737,8 @@ CE{$i$}{$j$}
 \begin_inset Formula $C_{i}=$
 \end_inset
 
- Conjunto de los índices (letras 
-\family sans
-\series bold
-a
-\family default
-\series default
-, 
-\family sans
-\series bold
-b
-\family default
-\series default
-, \SpecialChar ldots
-) de los criterios de evaluación trabajados y evaluados, asociados al
- resultado de aprendizaje 
+ Conjunto de las calificaciones de los criterios de evaluación trabajados y evaluados,
+ asociados al resultado de aprendizaje 
 \begin_inset Formula $i$
 \end_inset
 
@@ -2664,13 +2757,15 @@ b
 \begin_inset Formula $i$
 \end_inset
 
-, según se determina en el apartado 
+,
+ según se determina en el apartado 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "subsec:Ponderación-de-los-criterios"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2715,36 +2810,29 @@ Calificaciones parciales
 \end_layout
 
 \begin_layout Standard
-La calificación del módulo en cada evaluación parcial (primer y segundo
- trimestres por separado) se calculará como la media ponderada de las calificaci
-ones de los criterios de evaluación trabajados y evaluados durante el trimestre
- correspondiente, en función de las ponderaciones relativas indicadas en
- el apartado 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Ponderación-de-los-criterios"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- y según se recoge en el algoritmo 
+La calificación del módulo en cada evaluación parcial (primer y segundo trimestres por separado),
+ según se recoge en el algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "alg:Cálculo-calificación-parcial"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
-.
+,
+ se valorará de 0,0 a 10,0 y se calculará como la media aritmética de las calificaciones de los criterios de evaluación trabajados y evaluados durante el trimestre correspondiente,
+ siendo requisito imprescindible para aprobar una evaluación parcial el cumplir todos los criterios de evaluación trabajados y evaluados;
+ en caso contrario,
+ la calificación de la evaluación parcial no podrá ser superior a 4,0.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float algorithm
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -2754,10 +2842,17 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Formula 
-\[
-P_{i}=\dfrac{{\displaystyle \sum\limits _{\CE{\ensuremath{x}}{\ensuremath{y}}\in C_{i}}\textbf{\CE{\ensuremath{x}}{\ensuremath{y}}}}\cdot p_{xy}}{{\displaystyle \sum\limits _{\CE{\ensuremath{x}}{\ensuremath{y}}\in C_{i}}}p_{xy}}
-\]
+\begin{align*}
+M_{i} & =\dfrac{{\displaystyle \sum\limits_{c\in C_{i}}}c}{\lvert C_{i}\rvert}\\
+\\P_{i} & =\left\{ \begin{array}{lcl}
+M_{i} &  & \textrm{si }\min\limits_{c\in C_{i}}\{c\}\geq4,5\\
+\\\min(M_{i};\,4,0) &  & \textrm{e. o. c.}
+\end{array}\right.
+\end{align*}
 
 \end_inset
 
@@ -2797,7 +2892,8 @@ noindent{}
 
 \end_inset
 
-Donde: 
+Donde:
+ 
 \begin_inset Box Frameless
 position "t"
 hor_pos "c"
@@ -2840,27 +2936,7 @@ setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
 \end_layout
 
 \begin_layout Description
-\begin_inset Formula $P_{i}=$
-\end_inset
-
- Calificación parcial del trimestre 
-\begin_inset Formula $i\in\{1,2\}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-CE{$x$}{$y$}
-\end_layout
-
+\begin_inset Formula $M_{i}$
 \end_inset
 
 
@@ -2871,12 +2947,8 @@ CE{$x$}{$y$}
 \begin_inset Formula $=$
 \end_inset
 
- Calificación del criterio de evaluación 
-\begin_inset Formula $y$
-\end_inset
-
- asociado al resultado de aprendizaje 
-\begin_inset Formula $x$
+ Media aritmética de las calificaciones de los criterios de evaluación trabajados en el trimestre 
+\begin_inset Formula $i\in\{1,2\}$
 \end_inset
 
 .
@@ -2886,34 +2958,19 @@ CE{$x$}{$y$}
 \begin_inset Formula $C_{i}=$
 \end_inset
 
- Conjunto de los criterios de evaluación trabajados y evaluados en el trimestre
- 
-\begin_inset Formula $i$
+ Conjunto de las calificaciones de los criterios de evaluación trabajados y evaluados en el trimestre 
+\begin_inset Formula $i\in\{1,2\}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Description
-\begin_inset Formula $p_{xy}=$
+\begin_inset Formula $P_{i}=$
 \end_inset
 
- Ponderación del criterio de evaluación 
-\begin_inset Formula $y$
-\end_inset
-
- en el resultado de aprendizaje 
-\begin_inset Formula $x$
-\end_inset
-
-, según se determina en el apartado 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Ponderación-de-los-criterios"
-plural "false"
-caps "false"
-noprefix "false"
-
+ Calificación parcial del trimestre 
+\begin_inset Formula $i\in\{1,2\}$
 \end_inset
 
 .
@@ -2941,8 +2998,17 @@ endgroup
 \end_layout
 
 \begin_layout Standard
-La calificación introducida en el sistema Séneca será la calificación parcial
- redondeada al entero más cercano, y no podrá ser inferior a 1,0.
+Se entenderá que el alumno ha 
+\series bold
+aprobado
+\series default
+ una 
+\series bold
+evaluación parcial
+\series default
+ si la calificación que ha obtenido en la misma es igual o superior a 4,5.
+ La calificación introducida en el sistema Séneca será la calificación parcial redondeada al entero más cercano,
+ y no podrá ser inferior a 1,0.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2956,8 +3022,7 @@ Calificación final
 \end_layout
 
 \begin_layout Standard
-La calificación del módulo en la evaluación final se calculará como la media
- aritmética de las calificaciones de los diferentes resultados de aprendizaje,
+La calificación del módulo en la evaluación final se calculará como la media aritmética de las calificaciones de los diferentes resultados de aprendizaje,
  según se recoge en el algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2965,6 +3030,7 @@ reference "alg:Cálculo-calificación-final"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -2974,19 +3040,20 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Float algorithm
 placement H
+alignment document
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset VSpace defskip
-\end_inset
-
-
 \begin_inset Formula 
-\[
-F=\dfrac{{\displaystyle \sum\limits _{i\in R}}\textbf{\RA{\ensuremath{i}}}}{\lvert R\rvert}
-\]
+\begin{align*}
+M & =\dfrac{{\displaystyle \sum\limits_{r\in R}}r}{\lvert R\rvert}\\
+\\F & =\left\{ \begin{array}{lcl}
+M &  & \textrm{si }\min\limits_{r\in R}\{r\}\geq4,5\\
+\\\min(M;\,4,0) &  & \textrm{e. o. c.}
+\end{array}\right.
+\end{align*}
 
 \end_inset
 
@@ -3026,7 +3093,8 @@ noindent{}
 
 \end_inset
 
-Donde: 
+Donde:
+ 
 \begin_inset Box Frameless
 position "t"
 hor_pos "c"
@@ -3069,46 +3137,24 @@ setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
 \end_layout
 
 \begin_layout Description
-\begin_inset Formula $F=$
+\begin_inset Formula $M=$
 \end_inset
 
- Calificación final.
-\end_layout
-
-\begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-RA{$i$}
-\end_layout
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Formula $=$
-\end_inset
-
- Calificación del resultado de aprendizaje 
-\begin_inset Formula $i$
-\end_inset
-
-.
+ Media aritmética de las calificaciones de los resultados de aprendizaje del módulo.
 \end_layout
 
 \begin_layout Description
 \begin_inset Formula $R=$
 \end_inset
 
- Conjunto de los índices (1, 2, \SpecialChar ldots
-) de los resultados de aprendizaje del módulo.
+ Conjunto de las calificaciones de los resultados de aprendizaje del módulo.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $F=$
+\end_inset
+
+ Calificación final del módulo.
 \end_layout
 
 \begin_layout Plain Layout
@@ -3133,9 +3179,10 @@ endgroup
 \end_layout
 
 \begin_layout Standard
-La calificación introducida en el sistema Séneca será la calificación final
- redondeada al entero más cercano, y no podrá ser inferior a 1,0.
- Asimismo, si el alumno no ha alcanzado todos los resultados de aprendizaje,
+La calificación introducida en el sistema Séneca será la calificación final redondeada al entero más cercano,
+ y no podrá ser inferior a 1,0.
+ Asimismo,
+ si el alumno no ha alcanzado todos los resultados de aprendizaje,
  la calificación final del módulo no podrá ser superior a 4,0.
 \end_layout
 
@@ -3150,14 +3197,14 @@ Ponderación de los criterios de evaluación
 \end_layout
 
 \begin_layout Standard
-Los criterios de evaluación de cada resultado de aprendizaje se ponderan
- con los siguientes pesos relativos:
+Los criterios de evaluación de cada resultado de aprendizaje se ponderan con los siguientes pesos relativos:
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
 filename "racepor.tex"
+literal "true"
 
 \end_inset
 
@@ -3165,32 +3212,25 @@ filename "racepor.tex"
 \end_layout
 
 \begin_layout Subsection
-Medidas de recuperación y mejora de la calificación
+Medidas de recuperación y mejora de la calificación final
 \end_layout
 
 \begin_layout Standard
-A lo largo del curso (idealmente, a comienzos del trimestre) se establecerán
- instrumentos de recuperación destinados a que el alumnado cumpla los criterios
- de evaluación trabajados y evaluados en trimestres anteriores que no hayan
- podido cumplir hasta ahora al no haber podido superar los instrumentos
- de evaluación correspondientes.
+A lo largo del curso (idealmente,
+ a comienzos del trimestre) se establecerán instrumentos de recuperación destinados a que el alumnado cumpla los criterios de evaluación trabajados y evaluados en trimestres anteriores que no hayan podido cumplir hasta ahora al no haber podido superar los instrumentos de evaluación correspondientes.
 \end_layout
 
 \begin_layout Standard
-Los criterios de evaluación que se trabajen en unidades didácticas temporalizada
-s en varios trimestres podrían no necesitar de instrumentos de recuperación,
- ya que el alumno tendría varias oportunidades para cumplir el mismo criterio
- de evaluación a lo largo de varios trimestres con los instrumentos de evaluació
-n propios de las unidades didácticas programadas para esos trimestres.
+Los criterios de evaluación que se trabajen en unidades didácticas temporalizadas en varios trimestres podrían no necesitar de instrumentos de recuperación,
+ ya que el alumno tendría varias oportunidades para cumplir el mismo criterio de evaluación a lo largo de varios trimestres con los instrumentos de evaluación propios de las unidades didácticas programadas para esos trimestres.
 \end_layout
 
 \begin_layout Standard
-Los instrumentos de recuperación utilizados para que el alumnado pueda cumplir
- los criterios de evaluación que aún no ha cumplido, podrán coincidir o
- no con los utilizados anteriormente para evaluar el cumplimiento de tales
- criterios, a discreción del profesor.
- En particular, se podrán usar pruebas evaluativas (instrumentos del tipo
- 
+Los instrumentos de recuperación utilizados para que el alumnado pueda cumplir los criterios de evaluación que aún no ha cumplido,
+ podrán coincidir o no con los utilizados anteriormente para evaluar el cumplimiento de tales criterios,
+ a discreción del profesor.
+ En particular,
+ se podrán usar pruebas evaluativas (instrumentos del tipo 
 \begin_inset ERT
 status open
 
@@ -3203,9 +3243,7 @@ EX
 
 \end_inset
 
-) como instrumentos de recuperación para que el alumnado pueda cumplir criterios
- de evaluación que aún no haya cumplido y que previamente se habían medido
- con instrumentos del tipo 
+) como instrumentos de recuperación para que el alumnado pueda cumplir criterios de evaluación que aún no haya cumplido y que previamente se habían medido con instrumentos del tipo 
 \begin_inset ERT
 status open
 
@@ -3221,6 +3259,25 @@ TR
 .
 \end_layout
 
+\begin_layout Standard
+Los alumnos que tengan criterios de evaluación pendientes de cumplir en la tercera evaluación,
+ deberán presentarse directamente a la prueba final tal como se establece en el apartado 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Prueba-final"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.
+ No hay,
+ por tanto,
+ pruebas de recuperación específicas para los contenidos de la tercera evaluación.
+\end_layout
+
 \begin_layout Subsubsection
 \begin_inset CommandInset label
 LatexCommand label
@@ -3232,37 +3289,34 @@ Prueba final
 \end_layout
 
 \begin_layout Standard
-La normativa vigente establece la existencia de un examen o prueba a final
- de curso (usualmente en junio) para aquellos alumnos que no hayan podido
- superar el módulo mediante el procedimiento habitual de evaluación continua
- y que, por tanto, tengan pendiente alcanzar algún resultado de aprendizaje
- que no se haya podido alcanzar ni siquiera mediante los instrumentos de
- recuperación indicados anteriormente.
+La normativa vigente establece la existencia de un examen o prueba a final de curso (usualmente en junio) para aquellos alumnos que no hayan podido superar el módulo mediante el procedimiento habitual de evaluación continua y que,
+ por tanto,
+ tengan pendiente alcanzar algún resultado de aprendizaje que no se haya podido alcanzar ni siquiera mediante los instrumentos de recuperación indicados anteriormente.
 \end_layout
 
 \begin_layout Standard
-Asimismo, y según establece la misma normativa, esta prueba final permite
- al alumnado la superación del módulo incluso en el caso de no haber asistido
- con regularidad a clase a lo largo del curso.
- Es, por tanto, el único instrumento que posibilita el que un alumno que
- cuente con un número de faltas de asistencia superior al permitido (y que,
- por consiguiente, haya perdido el derecho a la evaluación continua) pueda
- demostrar la consecución de los objetivos del módulo y, en consecuencia,
+Asimismo,
+ y según establece la misma normativa,
+ esta prueba final permite al alumnado la superación del módulo incluso en el caso de no haber asistido con regularidad a clase a lo largo del curso.
+ Es,
+ por tanto,
+ el único instrumento que posibilita el que un alumno que cuente con un número de faltas de asistencia superior al permitido (y que,
+ por consiguiente,
+ haya perdido el derecho a la evaluación continua) pueda demostrar la consecución de los objetivos del módulo y,
+ en consecuencia,
  su superación.
 \end_layout
 
 \begin_layout Standard
 Dicha prueba o examen final constará de varias partes separadas.
- De ellas, las partes que el alumno deberá realizar y superar dependerán
- de las calificaciones que haya obtenido en los diferentes resultados de
- aprendizaje a lo largo del curso, de manera que el alumno deberá realizar
- las partes correspondientes a los resultados de aprendizaje que aún no
- haya alcanzado.
+ De ellas,
+ las partes que el alumno deberá realizar y superar dependerán de las calificaciones que haya obtenido en los diferentes resultados de aprendizaje a lo largo del curso,
+ de manera que el alumno deberá realizar las partes correspondientes a los resultados de aprendizaje que aún no haya alcanzado.
 \end_layout
 
 \begin_layout Standard
-Finalmente, la calificación obtenida en la prueba final se tendrá en cuenta
- para calcular la 
+Finalmente,
+ la calificación obtenida en la prueba final se tendrá en cuenta para calcular la 
 \series bold
 calificación final del módulo
 \series default
@@ -3273,6 +3327,7 @@ reference "subsec:Calificación-final"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -3280,8 +3335,10 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-El alumno que, debiendo presentarse a la prueba final, no lo haga, será
- calificado como «No evaluado» (NE).
+El alumno que,
+ debiendo presentarse a la prueba final,
+ no lo haga,
+ será calificado como «No evaluado» (NE).
 \end_layout
 
 \begin_layout Subsubsection
@@ -3289,13 +3346,13 @@ Mejora de la calificación final
 \end_layout
 
 \begin_layout Standard
-El alumno que, habiendo superado el módulo mediante el procedimiento habitual
- de evaluación continua, desee mejorar su calificación final («subir nota»),
- podrá hacerlo en la prueba final, manteniéndose la calificación final más
- alta de entre las obtenidas antes y después de presentarse a subir nota
- en dicha prueba final.
- A tal efecto, se indicará en la prueba final qué partes deberá realizar
- el alumnado que se haya presentado a subir nota.
+El alumno que,
+ habiendo superado el módulo mediante el procedimiento habitual de evaluación continua,
+ desee mejorar su calificación final («subir nota»),
+ podrá hacerlo en la prueba final,
+ manteniéndose la calificación final más alta de entre las obtenidas antes y después de presentarse a subir nota en dicha prueba final.
+ A tal efecto,
+ se indicará en la prueba final qué partes deberá realizar el alumnado que se haya presentado a subir nota.
 \end_layout
 
 \begin_layout Section
@@ -3303,15 +3360,14 @@ Evaluación de la práctica docente
 \end_layout
 
 \begin_layout Standard
-Se realizarán entre el alumnado dos encuestas de valoración trimestrales
- y anónimas, al final de cada trimestre, formadas por preguntas cuantitativas
- y cualitativas relacionadas con aspectos que afecten al módulo, su organización
-, su evaluación, los materiales empleados, el día a día de su práctica docente
- y el profesorado encargado de su docencia.
- A lo largo del curso se analizará la evolución de los resultados obtenidos
- globalmente y por cada pregunta para observar su progresión positiva o
- negativa y así poder tomar las acciones que se estime oportunas llegado
- el caso.
+Se realizarán entre el alumnado dos encuestas de valoración trimestrales y anónimas,
+ al final de cada trimestre,
+ formadas por preguntas cuantitativas y cualitativas relacionadas con aspectos que afecten al módulo,
+ su organización,
+ su evaluación,
+ los materiales empleados,
+ el día a día de su práctica docente y el profesorado encargado de su docencia.
+ A lo largo del curso se analizará la evolución de los resultados obtenidos globalmente y por cada pregunta para observar su progresión positiva o negativa y así poder tomar las acciones que se estime oportunas llegado el caso.
 \end_layout
 
 \begin_layout Section
@@ -3327,11 +3383,10 @@ literal "false"
 
 \end_inset
 
-, este módulo profesional contiene la formación necesaria para desempeñar
- la función de 
+,
+ este módulo profesional contiene la formación necesaria para desempeñar la función de 
 \series bold
-desarrollo de aplicaciones y servicios destinados a su ejecución por servidores
- en entornos Web
+desarrollo de aplicaciones y servicios destinados a su ejecución por servidores en entornos Web
 \series default
 .
 \end_layout
@@ -3345,23 +3400,20 @@ función
 \end_layout
 
 \begin_layout Itemize
-La creación de aplicaciones de servidor que generan interfaces Web como
- resultado de su ejecución.
+La creación de aplicaciones de servidor que generan interfaces Web como resultado de su ejecución.
 \end_layout
 
 \begin_layout Itemize
-La programación de métodos para almacenar, recuperar y gestionar mediante
- documentos Web información disponible en almacenes de datos.
+La programación de métodos para almacenar,
+ recuperar y gestionar mediante documentos Web información disponible en almacenes de datos.
 \end_layout
 
 \begin_layout Itemize
-La generación de servicios reutilizables y accesibles mediante protocolos
- Web.
+La generación de servicios reutilizables y accesibles mediante protocolos Web.
 \end_layout
 
 \begin_layout Itemize
-El desarrollo de aplicaciones basadas en información y funcionalidades distribui
-das.
+El desarrollo de aplicaciones basadas en información y funcionalidades distribuidas.
 \end_layout
 
 \begin_layout Standard
@@ -3369,8 +3421,7 @@ Las
 \series bold
 actividades profesionales
 \series default
- asociadas a esta función se aplican en el desarrollo y la adaptación de
- servicios y aplicaciones para servidores de aplicaciones y servidores web.
+ asociadas a esta función se aplican en el desarrollo y la adaptación de servicios y aplicaciones para servidores de aplicaciones y servidores web.
 \end_layout
 
 \begin_layout Standard
@@ -3378,8 +3429,7 @@ Las
 \series bold
 líneas de actuación
 \series default
- en el proceso de enseñanza-aprendizaje que permiten alcanzar los objetivos
- del módulo profesional versarán sobre:
+ en el proceso de enseñanza-aprendizaje que permiten alcanzar los objetivos del módulo profesional versarán sobre:
 \end_layout
 
 \begin_layout Itemize
@@ -3387,34 +3437,28 @@ El análisis de los métodos de generación dinámica de documentos Web.
 \end_layout
 
 \begin_layout Itemize
-La integración del lenguaje de marcas con el código ejecutable en el servidor
- Web.
+La integración del lenguaje de marcas con el código ejecutable en el servidor Web.
 \end_layout
 
 \begin_layout Itemize
-El análisis, diferenciación y clasificación de las características y funcionalid
-ades incorporadas en los entornos y lenguajes de programación de los servidores
- Web más difundidos.
+El análisis,
+ diferenciación y clasificación de las características y funcionalidades incorporadas en los entornos y lenguajes de programación de los servidores Web más difundidos.
 \end_layout
 
 \begin_layout Itemize
-La utilización de características y funcionalidades específicas de los lenguajes
- de programación seleccionados.
+La utilización de características y funcionalidades específicas de los lenguajes de programación seleccionados.
 \end_layout
 
 \begin_layout Itemize
-La modificación del código existente en soluciones Web heterogéneas para
- su adaptación a entornos específicos.
+La modificación del código existente en soluciones Web heterogéneas para su adaptación a entornos específicos.
 \end_layout
 
 \begin_layout Itemize
-El análisis y la utilización de funcionalidades aportadas por librerías
- generales y específicas de programación web en entorno servidor.
+El análisis y la utilización de funcionalidades aportadas por librerías generales y específicas de programación web en entorno servidor.
 \end_layout
 
 \begin_layout Itemize
-La utilización de librerías para incorporar interactividad a los documentos
- Web generados de forma dinámica.
+La utilización de librerías para incorporar interactividad a los documentos Web generados de forma dinámica.
 \end_layout
 
 \begin_layout Section
@@ -3422,26 +3466,23 @@ Orientaciones metodológicas
 \end_layout
 
 \begin_layout Standard
-El módulo es totalmente práctico, y el proceso de enseñanza-aprendizaje
- se fundamenta en la interacción continua y total de los alumnos con las
- herramientas software utilizadas y estudiadas a lo largo del curso.
+El módulo es totalmente práctico,
+ y el proceso de enseñanza-aprendizaje se fundamenta en la interacción continua y total de los alumnos con las herramientas software utilizadas y estudiadas a lo largo del curso.
 \end_layout
 
 \begin_layout Standard
-El módulo construye el aprendizaje de forma progresiva, comenzando con el
- estudio de la tecnología web, separando el entorno cliente del servidor,
- seguido de la profundización en el desarrollo de aplicaciones web con lenguajes
- de script embebidos tanto directamente como mediante el uso de un framework
- apropiado para tal fin, finalizando con una introducción a las nuevas tendencia
-s en el despliegue de aplicaciones web desde la perspectiva del entorno
- servidor.
+El módulo construye el aprendizaje de forma progresiva,
+ comenzando con el estudio de la tecnología web,
+ separando el entorno cliente del servidor,
+ seguido de la profundización en el desarrollo de aplicaciones web con lenguajes de script embebidos tanto directamente como mediante el uso de un framework apropiado para tal fin,
+ finalizando con una introducción a las nuevas tendencias en el despliegue de aplicaciones web desde la perspectiva del entorno servidor.
 \end_layout
 
 \begin_layout Standard
-De forma transversal, se hará hincapié continuamente en el aseguramento
- de la calidad del producto resultante, así como del proceso de desarrollo
- y el código fuente desarrollado, poniendo especial interés en la metodología
- 
+De forma transversal,
+ se hará hincapié continuamente en el aseguramento de la calidad del producto resultante,
+ así como del proceso de desarrollo y el código fuente desarrollado,
+ poniendo especial interés en la metodología 
 \emph on
 TDD (Test-Driven Development)
 \emph default
@@ -3449,14 +3490,13 @@ TDD (Test-Driven Development)
 \end_layout
 
 \begin_layout Standard
-La enseñanza se basará casi por completo en la realización de ejercicios
- y supuestos de aplicación, que obliguen al alumno a enfrentarse con las
- herramientas software necesarias para solucionarlos.
+La enseñanza se basará casi por completo en la realización de ejercicios y supuestos de aplicación,
+ que obliguen al alumno a enfrentarse con las herramientas software necesarias para solucionarlos.
 \end_layout
 
 \begin_layout Standard
-Las actividades propuestas podrán ser individuales o grupales, aplicando
- donde corresponda el concepto de 
+Las actividades propuestas podrán ser individuales o grupales,
+ aplicando donde corresponda el concepto de 
 \emph on
 programación en pareja
 \emph default
@@ -3474,8 +3514,8 @@ https://es.wikipedia.org/wiki/Programaci%C3%B3n_en_pareja
 \end_layout
 
 \begin_layout Standard
-Finalmente, se incentivará al alumno para que mejore su comprensión mediante
- el autoaprendizaje y la elaboración propia de ejercicios y desarrollos.
+Finalmente,
+ se incentivará al alumno para que mejore su comprensión mediante el autoaprendizaje y la elaboración propia de ejercicios y desarrollos.
 \end_layout
 
 \begin_layout Section
@@ -3487,8 +3527,10 @@ Hardware
 \end_layout
 
 \begin_layout Itemize
-Un ordenador para cada alumno, conectado a la red local del aula y esta,
- a su vez, a la troncal del Centro.
+Un ordenador para cada alumno,
+ conectado a la red local del aula y esta,
+ a su vez,
+ a la troncal del Centro.
 \end_layout
 
 \begin_layout Itemize
@@ -3504,12 +3546,12 @@ Software
 \end_layout
 
 \begin_layout Itemize
-Sistema operativo GNU/Linux (Ubuntu o Debian GNU/Linux, preferentemente).
+Sistema operativo GNU/Linux (Ubuntu o Debian GNU/Linux,
+ preferentemente).
 \end_layout
 
 \begin_layout Itemize
-El resto de herramientas y aplicaciones necesarias se instalarán a través
- de Internet a lo largo del curso.
+El resto de herramientas y aplicaciones necesarias se instalarán a través de Internet a lo largo del curso.
 \end_layout
 
 \begin_layout Subsection
@@ -3531,8 +3573,8 @@ https://educacionadistancia.juntadeandalucia.es/centros/cadiz
 
 \end_inset
 
- de la Junta de Andalucía para el seguimiento general del módulo, incluyendo
- distribución de material y entrega de ejercicios y exámenes.
+ de la Junta de Andalucía para el seguimiento general del módulo,
+ incluyendo distribución de material y entrega de ejercicios y exámenes.
 \end_layout
 
 \begin_layout Itemize
@@ -3550,9 +3592,10 @@ https://github.com
 
 \end_inset
 
- como herramienta centralizada para compartir código y para la gestión integral
- de todo elemento satélite del mismo (control de versiones, desarrollo colaborat
-ivo, incidencias, etcétera).
+ como herramienta centralizada para compartir código y para la gestión integral de todo elemento satélite del mismo (control de versiones,
+ desarrollo colaborativo,
+ incidencias,
+ etcétera).
 \end_layout
 
 \begin_layout Subsection
@@ -3652,7 +3695,8 @@ Complementaria
 \end_layout
 
 \begin_layout Itemize
-López Sanz, M.
+López Sanz,
+ M.
  y otros (2012).
  
 \emph on
@@ -3667,18 +3711,16 @@ Atención a la diversidad
 \end_layout
 
 \begin_layout Standard
-Se llevarán a cabo actividades de refuerzo o ampliación para aquellos alumnos
- que así lo requieran en función de las necesidades detectadas:
+Se llevarán a cabo actividades de refuerzo o ampliación para aquellos alumnos que así lo requieran en función de las necesidades detectadas:
 \end_layout
 
 \begin_layout Itemize
-Para los alumnos que muestren dificultades de aprendizaje, se propondrán
- 
+Para los alumnos que muestren dificultades de aprendizaje,
+ se propondrán 
 \series bold
 actividades de refuerzo
 \series default
- destinadas a afianzar los aspectos conceptuales y procedimentales en los
- que el alumnado presente carencias.
+ destinadas a afianzar los aspectos conceptuales y procedimentales en los que el alumnado presente carencias.
 \end_layout
 
 \begin_layout Itemize
@@ -3687,8 +3729,7 @@ Para los alumnos que muestren un mayor grado de adquisición de competencias,
 \series bold
 actividades de ampliación
 \series default
- que supongan la investigación autónoma de contenidos opcionales (aquellos
- marcados con la etiqueta 
+ que supongan la investigación autónoma de contenidos opcionales (aquellos marcados con la etiqueta 
 \begin_inset ERT
 status open
 
@@ -3709,58 +3750,66 @@ Temas transversales
 \end_layout
 
 \begin_layout Standard
-Con el objeto de fomentar entre los alumnos el hábito de la lectura, se
- plantearán actividades individuales y en grupo en las que, para su resolución,
- se necesite leer información de distintas fuentes escritas, como artículos,
- blogs, páginas web, tutoriales, etc.
+Con el objeto de fomentar entre los alumnos el hábito de la lectura,
+ se plantearán actividades individuales y en grupo en las que,
+ para su resolución,
+ se necesite leer información de distintas fuentes escritas,
+ como artículos,
+ blogs,
+ páginas web,
+ tutoriales,
+ etc.
 \end_layout
 
 \begin_layout Standard
-La evolución experimentada por la informática en los últimos años tiene
- como consecuencia su influencia inevitable en todos los aspectos de las
- relaciones entre las personas y entre éstas y el entorno.
- Además ha demostrado ser un medio valiosísimo para la educación cualquiera
- que sea el ámbito en el que se use.
- En concreto, en cuanto a los temas transversales propuestos:
+La evolución experimentada por la informática en los últimos años tiene como consecuencia su influencia inevitable en todos los aspectos de las relaciones entre las personas y entre éstas y el entorno.
+ Además ha demostrado ser un medio valiosísimo para la educación cualquiera que sea el ámbito en el que se use.
+ En concreto,
+ en cuanto a los temas transversales propuestos:
 \end_layout
 
 \begin_layout Itemize
 
 \series bold
 Educación ambiental:
+
 \series default
- La utilización de la informática, en general, y sobre todo en los negocios,
- hace que grandes volúmenes de información puedan ser almacenados en soportes
- informáticos, discos, CD, \SpecialChar ldots
- y enviados de unos lugares a otros a través
- de las redes informáticas, evitándose de esta manera el consumo de grandes
- cantidades de papel y, por consiguiente, la destrucción de bosques, contribuyen
-do de alguna manera a la preservación de los medios naturales y medioambientales.
+ La utilización de la informática,
+ en general,
+ y sobre todo en los negocios,
+ hace que grandes volúmenes de información puedan ser almacenados en soportes informáticos,
+ discos,
+ CD,
+ \SpecialChar ldots
+ y enviados de unos lugares a otros a través de las redes informáticas,
+ evitándose de esta manera el consumo de grandes cantidades de papel y,
+ por consiguiente,
+ la destrucción de bosques,
+ contribuyendo de alguna manera a la preservación de los medios naturales y medioambientales.
 \end_layout
 
 \begin_layout Itemize
 
 \series bold
 Educación del consumidor:
+
 \series default
- El análisis y la utilización de diferentes herramientas informáticas favorecen
- la capacidad del alumnado para decidir sobre los productos informáticos
- que debe adquirir y utilizar de manera ventajosa.
+ El análisis y la utilización de diferentes herramientas informáticas favorecen la capacidad del alumnado para decidir sobre los productos informáticos que debe adquirir y utilizar de manera ventajosa.
 \end_layout
 
 \begin_layout Itemize
 
 \series bold
 Educación para la salud:
+
 \series default
- Cuando se utilizan equipos informáticos se procura que el alumnado conozcan
- una serie de normas de higiene y seguridad en el trabajo, así como sobre
- las precauciones necesarias en el empleo de los equipos.
- De esta manera, se intenta que el alumnado conozca los principios de la
- ergonomía del puesto de trabajo, para que cualquier trabajo frente al ordenador
- resulte lo más agradable posible y no le cause ningún problema.
- En este sentido, resultan de interés las instrucciones elaboradas por el
- Instituto Nacional de Seguridad e Higiene en el Trabajo 
+ Cuando se utilizan equipos informáticos se procura que el alumnado conozcan una serie de normas de higiene y seguridad en el trabajo,
+ así como sobre las precauciones necesarias en el empleo de los equipos.
+ De esta manera,
+ se intenta que el alumnado conozca los principios de la ergonomía del puesto de trabajo,
+ para que cualquier trabajo frente al ordenador resulte lo más agradable posible y no le cause ningún problema.
+ En este sentido,
+ resultan de interés las instrucciones elaboradas por el Instituto Nacional de Seguridad e Higiene en el Trabajo 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "insht"
@@ -3775,9 +3824,9 @@ literal "false"
 
 \series bold
 Educación para la igualdad de oportunidades entre ambos sexos:
+
 \series default
- Desde este módulo contamos con elementos para concienciar al alumnado sobre
- la igualdad de oportunidades para alumnos y alumnas:
+ Desde este módulo contamos con elementos para concienciar al alumnado sobre la igualdad de oportunidades para alumnos y alumnas:
 \end_layout
 
 \begin_deeper
@@ -3786,8 +3835,7 @@ Formando grupos mixtos de trabajo.
 \end_layout
 
 \begin_layout Itemize
-Distribuyendo las tareas a realizar en la misma medida entre el alumnado
- de ambos sexos.
+Distribuyendo las tareas a realizar en la misma medida entre el alumnado de ambos sexos.
 \end_layout
 
 \begin_layout Itemize
@@ -3795,7 +3843,8 @@ Haciendo que todos utilicen los mismos o equivalentes equipos.
 \end_layout
 
 \begin_layout Itemize
-Fomentando la participación de todos, sin distinciones de sexo.
+Fomentando la participación de todos,
+ sin distinciones de sexo.
 \end_layout
 
 \end_deeper
@@ -3803,13 +3852,15 @@ Fomentando la participación de todos, sin distinciones de sexo.
 
 \series bold
 Educación para el trabajo:
+
 \series default
  Respecto a este módulo encontramos los siguientes elementos:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Técnicas de trabajo en grupo: sujeción a unas reglas corporativas.
+Técnicas de trabajo en grupo:
+ sujeción a unas reglas corporativas.
 \end_layout
 
 \begin_layout Itemize
@@ -3821,14 +3872,14 @@ Colaboración de varias personas para la realización de un único trabajo.
 
 \series bold
 Educación para la paz y la convivencia:
+
 \series default
  Se trabajan los elementos siguientes:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Acuerdos para la utilización de los mismos estándares en toda la comunidad
- internacional.
+Acuerdos para la utilización de los mismos estándares en toda la comunidad internacional.
 \end_layout
 
 \begin_layout Itemize
@@ -3845,29 +3896,23 @@ Actuaciones para desarrollar la perspectiva de género
 \end_layout
 
 \begin_layout Standard
-El conocimiento de la realidad existente es el primer paso a realizar para
- incorporar la perspectiva de género.
- De esta manera, se descubrirá la existencia de situaciones de desequilibrio
- entre mujeres y hombres en el desempeño de la actividad docente.
+El conocimiento de la realidad existente es el primer paso a realizar para incorporar la perspectiva de género.
+ De esta manera,
+ se descubrirá la existencia de situaciones de desequilibrio entre mujeres y hombres en el desempeño de la actividad docente.
 \end_layout
 
 \begin_layout Standard
-La perspectiva de género es trabajada de manera transversal y permanente
- en todas las Unidades Didácticas que componen esta programación.
+La perspectiva de género es trabajada de manera transversal y permanente en todas las Unidades Didácticas que componen esta programación.
  El IES Doñana como organización social en aplicación de esta óptica favorece,
- entre otros aspectos, la detección de estereotipos y la asignación de roles
- y responsabilidades, la evaluación del uso y control de los recursos puestos
- a disposición de hombres y mujeres con la finalidad última de introducir
- las modificaciones y medidas correctoras necesarias para eliminar las desiguald
-ades detectadas en cualquier ámbito de la vida del centro y particularmente
- dentro del aula.
+ entre otros aspectos,
+ la detección de estereotipos y la asignación de roles y responsabilidades,
+ la evaluación del uso y control de los recursos puestos a disposición de hombres y mujeres con la finalidad última de introducir las modificaciones y medidas correctoras necesarias para eliminar las desigualdades detectadas en cualquier ámbito de la vida del centro y particularmente dentro del aula.
 \end_layout
 
 \begin_layout Standard
-En el marco de esta programación, el análisis de estas circunstancias permite
- identificar las diferentes necesidades, intereses y perspectivas de mujeres
- y hombres sobre las que diseñar estrategias que equiparen las oportunidades
- de ambas partes en las distintas actuaciones que lo integran.
+En el marco de esta programación,
+ el análisis de estas circunstancias permite identificar las diferentes necesidades,
+ intereses y perspectivas de mujeres y hombres sobre las que diseñar estrategias que equiparen las oportunidades de ambas partes en las distintas actuaciones que lo integran.
  Fundamentalmente en los siguientes círculos se realizan las actuaciones:
 \end_layout
 
@@ -3892,13 +3937,11 @@ Valorar la situación de partida de hombres y mujeres.
 \end_layout
 
 \begin_layout Enumerate
-Analizar las necesidades y obligaciones relacionadas con la actividad cotidiana
- en el centro y la posición social de hombres y mujeres en el centro.
+Analizar las necesidades y obligaciones relacionadas con la actividad cotidiana en el centro y la posición social de hombres y mujeres en el centro.
 \end_layout
 
 \begin_layout Enumerate
-Velar por el cumplimiento de la condición de igualdad de género en todos
- los ámbitos de actuación como cuestión de justicia y responsabilidad social.
+Velar por el cumplimiento de la condición de igualdad de género en todos los ámbitos de actuación como cuestión de justicia y responsabilidad social.
 \end_layout
 
 \begin_layout Subsection
@@ -3906,52 +3949,48 @@ Actuaciones generales permanentes
 \end_layout
 
 \begin_layout Enumerate
-Revisión del material curricular para la eliminación de la transmisión de
- estereotipos o modelos de conductas determinados por el género, tipo identifica
-ción cultural de funciones realizadas tradicionalmente por hombres o mujeres.
+Revisión del material curricular para la eliminación de la transmisión de estereotipos o modelos de conductas determinados por el género,
+ tipo identificación cultural de funciones realizadas tradicionalmente por hombres o mujeres.
 \end_layout
 
 \begin_layout Enumerate
-Detectar las desigualdades y discriminaciones de género existentes en el
- centro para su tratamiento/denuncia pertinente.
+Detectar las desigualdades y discriminaciones de género existentes en el centro para su tratamiento/denuncia pertinente.
 \end_layout
 
 \begin_layout Enumerate
-Garantizar la participación equilibrada de hombres y mujeres en las distintas
- actividades en el aula y en el centro.
+Garantizar la participación equilibrada de hombres y mujeres en las distintas actividades en el aula y en el centro.
 \end_layout
 
 \begin_layout Enumerate
-Velar porque el contenido gráfico y lingüístico de las acciones, materiales
- y dispositivos de formación y difusión carezca de cualquier carácter o
- pretensión discriminatoria.
+Velar porque el contenido gráfico y lingüístico de las acciones,
+ materiales y dispositivos de formación y difusión carezca de cualquier carácter o pretensión discriminatoria.
 \end_layout
 
 \begin_layout Enumerate
-Participación en las actividades propuestas por el Plan de Igualdad del
- centro articulado a través de actuaciones propias o la acción tutorial:
+Participación en las actividades propuestas por el Plan de Igualdad del centro articulado a través de actuaciones propias o la acción tutorial:
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-25 de noviembre: Día Internacional de la Eliminación de la Violencia contra
- la Mujer.
+25 de noviembre:
+ Día Internacional de la Eliminación de la Violencia contra la Mujer.
 \end_layout
 
 \begin_layout Enumerate
-30 de enero: Resolución de conflictos de forma pacífica.
+30 de enero:
+ Resolución de conflictos de forma pacífica.
  Día de la Paz.
 \end_layout
 
 \begin_layout Enumerate
-8 de marzo: Día Internacional de la Mujer.
+8 de marzo:
+ Día Internacional de la Mujer.
 \end_layout
 
 \end_deeper
 \begin_layout Standard
-Desde el primer momento se advertirá al alumnado que el uso del vocabulario
- y expresiones propias del lenguaje hablado y escrito se llevará a cabo
- de forma extensiva a ambos géneros, de manera que cuando hablamos del 
+Desde el primer momento se advertirá al alumnado que el uso del vocabulario y expresiones propias del lenguaje hablado y escrito se llevará a cabo de forma extensiva a ambos géneros,
+ de manera que cuando hablamos del 
 \begin_inset Quotes cld
 \end_inset
 
@@ -3967,10 +4006,11 @@ programador
 \begin_inset Quotes crd
 \end_inset
 
- lo hacemos siempre considerando que dichos roles son de aplicación a hombres
- y mujeres por igual.
- Así pues, resultará innecesario y, por tanto, se evitará el uso de fórmulas
- tales como 
+ lo hacemos siempre considerando que dichos roles son de aplicación a hombres y mujeres por igual.
+ Así pues,
+ resultará innecesario y,
+ por tanto,
+ se evitará el uso de fórmulas tales como 
 \begin_inset Quotes cld
 \end_inset
 
@@ -3978,7 +4018,8 @@ administrador o administradora
 \begin_inset Quotes crd
 \end_inset
 
-, que recargan el lenguaje sin aportar información adicional.
+,
+ que recargan el lenguaje sin aportar información adicional.
  Ello además va en consonancia con lo manifestado por la Real Academia Española,
  al afirmar que:
 \end_layout
@@ -3989,9 +4030,12 @@ administrador o administradora
 
 
 \emph on
-El español dispone de un mecanismo inclusivo: el masculino gramatical, que,
- como término no marcado de la oposición de género, puede referirse a grupos
- formados de hombres y mujeres y, en contextos genéricos o inespecíficos,
+El español dispone de un mecanismo inclusivo:
+ el masculino gramatical,
+ que,
+ como término no marcado de la oposición de género,
+ puede referirse a grupos formados de hombres y mujeres y,
+ en contextos genéricos o inespecíficos,
  a personas de uno u otro sexo
 \emph default
 
@@ -4012,100 +4056,9 @@ https://twitter.com/RAEinforma/status/1111565711653113856
 \end_layout
 
 \begin_layout Standard
-Por otra parte, en el planteamiento y realización de tareas y ejercicios,
+Por otra parte,
+ en el planteamiento y realización de tareas y ejercicios,
  se procurará el equilibrio en cuanto a presencia de actores de ambos géneros.
-\end_layout
-
-\begin_layout Section
-Medidas a adoptar en caso de incremento del nivel de alerta por COVID-19
-\end_layout
-
-\begin_layout Standard
-Como consecuencia de las medidas excepcionales aplicadas en función de las
- distintas resoluciones e instrucciones emitidas por la Consejería de Educación
- para dar respuesta a la crisis sanitaria ocasionada por la COVID-19, se
- aplicarán las medidas de flexibilización curricular y organizativas para
- el curso escolar 2021/2022 que se concretan en las instrucciones de 13
- de julio de 2021, de la Viceconsejería de Educación y Deporte, relativas
- a la organización de los centros docentes y a la flexibilización curricular
- para el curso escolar 2021/22.
-\end_layout
-
-\begin_layout Standard
-En virtud de dichas instrucciones, si las circunstancias así lo permiten,
- en caso de incremento del nivel de alerta por COVID-19 que imposibilite
- la enseñanza 100% presencial, se procederá a trabajar, con carácter excepcional
-, en régimen de docencia sincrónica (presencial y telemática) o en régimen
- de docencia en modalidad semipresencial.
- 
-\end_layout
-
-\begin_layout Standard
-En caso de tener que suspender las clases presenciales por decretarse confinamie
-nto en el marco de la pandemia del COVID-19, y mientras dure dicho confinamiento
-, se adoptarán las siguientes medidas:
-\end_layout
-
-\begin_layout Itemize
-Los trabajos, actividades y ejercicios del apartado 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-TR
-\backslash
-
-\end_layout
-
-\end_inset
-
- se seguirán entregando a través de Internet, usando la plataforma Moodle
- Centros.
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-El profesor podrá requerir del alumno las pruebas que estime oportunas para
- garantizar la autoría del trabajo, actividad o ejercicio, incluyendo (pero
- no limitándose a) una entrevista personal.
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Las pruebas evaluativas del apartado 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-EX
-\backslash
-
-\end_layout
-
-\end_inset
-
- se realizarán de forma telemática en tiempo real mediante videoconferencia,
- o bien presencialmente cuando las circunstancias así lo permitan.
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-El profesor podrá requerir del alumno las pruebas que estime oportunas para
- garantizar la autoría de la prueba durante y después del desarrollo de
- la misma, incluyendo (pero no limitándose a) el uso de webcams, micrófono,
- compartición de su pantalla, entrevista personal, etcétera.
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-La comunicación con el alumnado y resto de la comunidad educativa se llevará
- a cabo mediante las vías oficiales de Moodle Centros e iPasen.
 \end_layout
 
 \begin_layout Bibliography
@@ -4116,9 +4069,8 @@ literal "false"
 
 \end_inset
 
-Real Decreto 1147/2011, de 29 de julio (BOE nº 182 de 30 de julio) por el
- que se establece la ordenación general de la formación profesional del
- sistema educativo.
+Real Decreto 1147/2011,
+ de 29 de julio (BOE nº 182 de 30 de julio) por el que se establece la ordenación general de la formación profesional del sistema educativo.
 \end_layout
 
 \begin_layout Bibliography
@@ -4129,9 +4081,9 @@ literal "false"
 
 \end_inset
 
-Real Decreto 686/2010, de 20 de mayo (BOE nº 143 de 12 de junio), por el
- que se establece el título de Técnico Superior en Desarrollo de Aplicaciones
- Web.
+Real Decreto 686/2010,
+ de 20 de mayo (BOE nº 143 de 12 de junio),
+ por el que se establece el título de Técnico Superior en Desarrollo de Aplicaciones Web.
 \end_layout
 
 \begin_layout Bibliography
@@ -4146,8 +4098,8 @@ literal "false"
 \emph on
 Orden de 16 de junio de 2011
 \emph default
-, por la que se desarrolla el currículo correspondiente al título de Técnico
- Superior en Desarrollo de Aplicaciones Web (págs.
+,
+ por la que se desarrolla el currículo correspondiente al título de Técnico Superior en Desarrollo de Aplicaciones Web (págs.
  130 a 133 del BOJA nº 149 del 1 de agosto)
 \begin_inset Flex Enlace
 status collapsed
@@ -4175,23 +4127,51 @@ literal "false"
 \emph on
 Orden de 29 de septiembre de 2010
 \emph default
-, por la que se regula la evaluación, certificación, acreditación y titulación
- académica del alumnado que cursa enseñanzas de formación profesional inicial
- que forma parte del sistema educativo en la Comunidad Autónoma de Andalucía
- (BOJA nº 202 del 15 de octubre).
+,
+ por la que se regula la evaluación,
+ certificación,
+ acreditación y titulación académica del alumnado que cursa enseñanzas de formación profesional inicial que forma parte del sistema educativo en la Comunidad Autónoma de Andalucía (BOJA nº 202 del 15 de octubre).
 \end_layout
 
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "instrucciones-13-07-2021"
+key "ley-organica-3-2022"
 literal "false"
 
 \end_inset
 
-Instrucciones de 13 de julio de 2021, de la Viceconsejería de Educación
- y Deporte, relativas a la organización de los centros docentes y a la flexibili
-zación curricular para el curso escolar 2021/22.
+Ley Orgánica 3/2022,
+ de 31 de marzo (BOE n.º 78 de 1 de abril),
+ de ordenación e integración de la Formación Profesional.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "real-decreto-405-2023"
+literal "false"
+
+\end_inset
+
+Real Decreto 405/2023,
+ de 29 de mayo (BOE n.º 132 de 3 de junio),
+ por el que se actualizan los títulos de la formación profesional del sistema educativo de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y Técnico Superior en Desarrollo de Aplicaciones Web,
+ de la familia profesional Informática y Comunicaciones,
+ y se fijan sus enseñanzas mínimas.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "real-decreto-659-2023"
+literal "false"
+
+\end_inset
+
+Real Decreto 659/2023,
+ de 18 de julio (BOE n.º 174 de 22 de julio),
+ por el que se desarrolla la ordenación del Sistema de Formación Profesional.
 \end_layout
 
 \begin_layout Bibliography
@@ -4205,14 +4185,12 @@ literal "false"
 Instituto Nacional de Seguridad e Higiene en el Trabajo.
  
 \emph on
-Instrucción básica para el trabajador usuario de pantallas de visualización
- de datos.
+Instrucción básica para el trabajador usuario de pantallas de visualización de datos.
 \begin_inset Flex Enlace
 status collapsed
 
 \begin_layout Plain Layout
-http://www.insht.es/InshtWeb/Contenidos/Documentacion/TextosOnline/Guias_Ev_Riesgo
-s/Instruccion_Pantallas/Instruccion_basica.pdf
+http://www.insht.es/InshtWeb/Contenidos/Documentacion/TextosOnline/Guias_Ev_Riesgos/Instruccion_Pantallas/Instruccion_basica.pdf
 \end_layout
 
 \end_inset
