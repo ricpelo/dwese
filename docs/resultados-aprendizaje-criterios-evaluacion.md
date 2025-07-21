@@ -46,7 +46,7 @@ correspondientes criterios de evaluación, tal y como se definen en la
     disponibles en el lenguaje.
   - [CE2.h] Se han identificado los ámbitos de utilización de las variables.
 
-- **[RA- Escribe bloques de sentencias embebidos en lenguajes de marcas,
+- **[RA3] Escribe bloques de sentencias embebidos en lenguajes de marcas,
   seleccionando y utilizando las estructuras de programación.**
 
   *Criterios de evaluación:*
@@ -63,7 +63,7 @@ correspondientes criterios de evaluación, tal y como se definen en la
     en el formulario.
   - [CE3.g] Se han añadido comentarios al código.
 
-- **[RA- Desarrolla aplicaciones web embebidas en lenguajes de marcas
+- **[RA4] Desarrolla aplicaciones web embebidas en lenguajes de marcas
   analizando e incorporando funcionalidades según especificaciones.**
 
   *Criterios de evaluación:*
@@ -82,7 +82,7 @@ correspondientes criterios de evaluación, tal y como se definen en la
   - [CE4.f] Se han utilizado herramientas y entornos para facilitar la
     programación, prueba y depuración del código.
 
-- **[RA- Desarrolla aplicaciones web identificando y aplicando mecanismos para
+- **[RA5] Desarrolla aplicaciones web identificando y aplicando mecanismos para
   separar el código de presentación de la lógica de negocio.**
 
   *Criterios de evaluación:*
@@ -103,7 +103,7 @@ correspondientes criterios de evaluación, tal y como se definen en la
     programación orientada a objetos.
   - [CE5.h] Se ha probado y documentado el código.
 
-- **[RA- Desarrolla aplicaciones de acceso a almacenes de datos, aplicando
+- **[RA6] Desarrolla aplicaciones de acceso a almacenes de datos, aplicando
   medidas para mantener la seguridad y la integridad de la información.**
 
   *Criterios de evaluación:*
@@ -119,7 +119,7 @@ correspondientes criterios de evaluación, tal y como se definen en la
     eliminación de información disponible en una base de datos.
   - [CE6.h] Se han probado y documentado las aplicaciones web.
 
-- **[RA- Desarrolla servicios web reutilizables y accesibles mediante
+- **[RA7] Desarrolla servicios web reutilizables y accesibles mediante
   protocolos web, verificando su funcionamiento.**
 
   *Criterios de evaluación:*
@@ -138,7 +138,7 @@ correspondientes criterios de evaluación, tal y como se definen en la
   - [CE7.g] Se ha consumido el servicio web.
   - [CE7.h] Se ha documentado un servicio web.
 
-- **[RA- Genera páginas web dinámicas analizando y utilizando tecnologías y
+- **[RA8] Genera páginas web dinámicas analizando y utilizando tecnologías y
   frameworks del servidor web que añadan código al lenguaje de marcas.**
 
   *Criterios de evaluación:*
@@ -159,7 +159,7 @@ correspondientes criterios de evaluación, tal y como se definen en la
   - [CE8.g] Se han aplicado estas tecnologías y frameworks en la programación
     de aplicaciones Web.
 
-- **[RA- Desarrolla aplicaciones web híbridas seleccionando y utilizando
+- **[RA9] Desarrolla aplicaciones web híbridas seleccionando y utilizando
   tecnologías, frameworks servidor y repositorios heterogéneos de
   información.**
 
