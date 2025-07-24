@@ -78,23 +78,17 @@ title: Objetivos generales
    alcanzar los objetivos del módulo, versarán sobre:
 
   - El análisis de los métodos de generación dinámica de documentos web.
-
   - La integración del lenguaje de marcas con el código ejecutable en el
     servidor web.
-
   - El análisis, diferenciación y clasificación de las características y
     funcionalidades incorporadas en los entornos y lenguajes de programación de
     los servidores web más difundidos.
-
   - La utilización de características y funcionalidades específicas de los
     lenguajes de programación seleccionados.
-
   - La modificación del código existente, así como el análisis de datos, en
     soluciones web heterogéneas para su adaptación a entornos específicos.
-
   - El análisis y la utilización de funcionalidades aportadas por frameworks de
     programación web en entorno servidor.
-
   - La utilización de frameworks para incorporar interactividad a los
     documentos web generados de forma dinámica.
 
@@ -107,13 +101,10 @@ como:
 
 - La creación de aplicaciones de servidor que generan interfaces web como
   resultado de su ejecución.
-
 - La programación de métodos para almacenar, recuperar y gestionar mediante
   documentos web información disponible en almacenes de datos.
-
 - La generación, prueba y documentación de servicios web reutilizables y
   accesibles mediante protocolos web.
-
 - El desarrollo de aplicaciones basadas en información y funcionalidades
   distribuidas.
 
