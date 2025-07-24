@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>Copy of DWESE para repartir temas</title>
-    <dateModified>Thu, 24 Jul 2025 16:52:07 +0200</dateModified>
+    <dateModified>Thu, 24 Jul 2025 23:13:36 +0200</dateModified>
     <ownerName>ricpelo</ownerName>
   </head>
   <body>
@@ -552,25 +552,28 @@
           <outline text="Mary UI" status="open" _status="indeterminate"/>
         </outline>
         <outline text="Filament PHP" status="open" _status="indeterminate"/>
-        <outline text="Inertia" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Servicios web con Laravel**" status="open" _status="indeterminate" due="2026-01-21" due_user_ids="139389" tags="dual,ev2,ra7" progress_counter="true">
+      <outline text="**Integración con tecnologías de entorno cliente**" status="open" _status="indeterminate" due="2026-02-04" due_user_ids="139389" tags="dual,ev2,ra8">
+        <outline text="Inertia" status="open" _status="indeterminate">
+          <outline text="Páginas" status="open" _status="indeterminate"/>
+          <outline text="Respuestas" status="open" _status="indeterminate"/>
+          <outline text="Redirecciones" status="open" _status="indeterminate"/>
+          <outline text="Enrutado" status="open" _status="indeterminate"/>
+          <outline text="Enlaces" status="open" _status="indeterminate"/>
+          <outline text="Formularios" status="open" _status="indeterminate"/>
+          <outline text="Subida de archivos" status="open" _status="indeterminate"/>
+          <outline text="Validación" status="open" _status="indeterminate"/>
+        </outline>
+        <outline text="Starter Kits" status="open" _status="indeterminate"/>
+      </outline>
+      <outline text="---" status="open" _status="indeterminate"/>
+      <outline text="**Servicios web con Laravel**" status="open" _status="indeterminate" due="2026-04-06" due_user_ids="139389" tags="dual,ev3,ra7" progress_counter="true">
         <outline text="Recursos API" status="open" _status="indeterminate"/>
         <outline text="Serialización" status="open" _status="indeterminate"/>
         <outline text="Limitación de frecuencia de peticiones" status="open" _status="indeterminate"/>
         <outline text="Documentación de la API" status="open" _status="indeterminate"/>
       </outline>
-      <outline text="**Características adicionales de Laravel**" status="open" _status="indeterminate" due="2026-05-04" due_user_ids="139389" tags="ev3,opcional" progress_counter="true">
-        <outline text="[Correo electrónico](http://stackoverflow.com/questions/24995620/how-to-use-the-swiftmailer-in-yii2)" status="open" _status="indeterminate"/>
-        <outline text="Helpers" status="open" _status="indeterminate"/>
-        <outline text="Eventos" status="open" _status="indeterminate"/>
-        <outline text="Contratos" status="open" _status="indeterminate"/>
-        <outline text="Colecciones" status="open" _status="indeterminate"/>
-        <outline text="Colas" status="open" _status="indeterminate"/>
-        <outline text="Planificación de tareas" status="open" _status="indeterminate"/>
-        <outline text="Almacenamiento de archivos" status="open" _status="indeterminate"/>
-      </outline>
-      <outline text="**Calidad**" status="open" _status="indeterminate" due="2026-05-11" due_user_ids="139389" tags="ev3,opcional" progress_counter="true">
+      <outline text="**Calidad**" status="open" _status="indeterminate" due="2026-05-04" due_user_ids="139389" tags="ce5h,ev3,ra5" progress_counter="true">
         <outline text="[Pruebas](https://laravel.com/docs/12.x/testing)" status="open" _status="indeterminate" progress_counter="true">
           <outline text="Pruebas de HTTP" status="open" _status="indeterminate"/>
           <outline text="Pruebas de consola" status="open" _status="indeterminate"/>
@@ -586,7 +589,7 @@
           <outline text="ddd()" status="open" _status="indeterminate"/>
           <outline text="Clockwork" status="open" _status="indeterminate"/>
         </outline>
-        <outline text="Documentación" status="open" _status="indeterminate" tags="opcional" progress_counter="true">
+        <outline text="Documentación" status="open" _status="indeterminate" progress_counter="true">
           <outline text="phpDocumentor" status="open" _status="indeterminate"/>
           <outline text="[GitHub Pages](https://pages.github.com/)" status="open" _status="indeterminate"/>
         </outline>
@@ -596,6 +599,16 @@
             <outline text="Laravel Pint" status="open" _status="indeterminate"/>
           </outline>
         </outline>
+      </outline>
+      <outline text="**Características adicionales de Laravel**" status="open" _status="indeterminate" due="2026-05-11" due_user_ids="139389" tags="ev3,opcional" progress_counter="true">
+        <outline text="[Correo electrónico](http://stackoverflow.com/questions/24995620/how-to-use-the-swiftmailer-in-yii2)" status="open" _status="indeterminate"/>
+        <outline text="Helpers" status="open" _status="indeterminate"/>
+        <outline text="Eventos" status="open" _status="indeterminate"/>
+        <outline text="Contratos" status="open" _status="indeterminate"/>
+        <outline text="Colecciones" status="open" _status="indeterminate"/>
+        <outline text="Colas" status="open" _status="indeterminate"/>
+        <outline text="Planificación de tareas" status="open" _status="indeterminate"/>
+        <outline text="Almacenamiento de archivos" status="open" _status="indeterminate"/>
       </outline>
       <outline text="---" status="open" _status="indeterminate"/>
       <outline text="[SAPIs](http://stackoverflow.com/questions/9948008/what-is-sapi-and-when-would-you-use-it)" status="invalid" _status="none" tags="opcional" progress_counter="true">
