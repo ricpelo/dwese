@@ -6,27 +6,22 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ricardo.20241027102223.1"><vh>@auto source/introduccion-a-la-tecnologia-web.md</vh></v>
-<v t="ricardo.20241027102223.2"><vh>@auto source/conceptos-basicos-de-php-i.md</vh></v>
-<v t="ricardo.20241027102223.3"><vh>@auto source/conceptos-basicos-de-php-ii.md</vh></v>
-<v t="ricardo.20241027102223.4"><vh>@auto source/desarrollo-de-aplicaciones-con-php-i.md</vh></v>
-<v t="ricardo.20241027102223.5"><vh>@auto source/persistencia-de-datos-con-php.md</vh></v>
-<v t="ricardo.20241027102223.6"><vh>@auto source/desarrollo-de-aplicaciones-con-php-ii.md</vh></v>
-<v t="ricardo.20241027102223.7"><vh>@auto source/programacion-avanzada-en-php.md</vh></v>
-<v t="ricardo.20241027102223.8"><vh>@auto source/interoperabilidad.md</vh></v>
-<v t="ricardo.20241027102223.9"><vh>@auto source/introduccion-a-laravel.md</vh></v>
-<v t="ricardo.20241027102223.10"><vh>@auto source/arquitectura-de-laravel.md</vh></v>
-<v t="ricardo.20241027102223.11"><vh>@auto source/gestion-de-peticiones-en-laravel.md</vh></v>
-<v t="ricardo.20241027102223.12"><vh>@auto source/visualizacion-de-datos-en-laravel.md</vh></v>
-<v t="ricardo.20241027102223.13"><vh>@auto source/bases-de-datos-en-laravel.md</vh></v>
-<v t="ricardo.20241027102223.14"><vh>@auto source/mapeado-objeto-relacional-con-eloquent.md</vh></v>
-<v t="ricardo.20241027102223.15"><vh>@auto source/creacion-y-validacion-de-formularios-en-laravel.md</vh></v>
-<v t="ricardo.20241027102223.16"><vh>@auto source/seguridad-y-cacheado-en-laravel.md</vh></v>
-<v t="ricardo.20241027102223.17"><vh>@auto source/caracteristicas-adicionales-de-laravel.md</vh></v>
-<v t="ricardo.20241027102223.18"><vh>@auto source/calidad.md</vh></v>
-<v t="ricardo.20241027102223.19"><vh>@auto source/computacion-en-la-nube.md</vh></v>
-<v t="ricardo.20241027102223.20"><vh>@auto source/servicios-web-con-laravel.md</vh></v>
-<v t="ricardo.20241027102223.21"><vh>@auto source/aplicaciones-web-hibridas.md</vh></v>
+<v t="ricardo.20250724145621.1"><vh>@auto source/introduccion-a-la-tecnologia-web.md</vh></v>
+<v t="ricardo.20250724145621.2"><vh>@auto source/conceptos-basicos-de-php-i.md</vh></v>
+<v t="ricardo.20250724145621.3"><vh>@auto source/conceptos-basicos-de-php-ii.md</vh></v>
+<v t="ricardo.20250724145621.4"><vh>@auto source/aspectos-basicos-de-orientacion-a-objetos.md</vh></v>
+<v t="ricardo.20250724145621.5"><vh>@auto source/persistencia-de-datos-con-php.md</vh></v>
+<v t="ricardo.20250724145621.6"><vh>@auto source/desarrollo-de-aplicaciones-con-php.md</vh></v>
+<v t="ricardo.20250724145621.7"><vh>@auto source/diseno-de-aplicaciones-orientadas-a-objetos.md</vh></v>
+<v t="ricardo.20250724145621.8"><vh>@auto source/interoperabilidad.md</vh></v>
+<v t="ricardo.20250724145621.9"><vh>@auto source/introduccion-a-laravel.md</vh></v>
+<v t="ricardo.20250724145621.10"><vh>@auto source/visualizacion-de-datos-en-laravel.md</vh></v>
+<v t="ricardo.20250724145621.11"><vh>@auto source/bases-de-datos-en-laravel.md</vh></v>
+<v t="ricardo.20250724145621.12"><vh>@auto source/seguridad-y-autenticacion-en-laravel.md</vh></v>
+<v t="ricardo.20250724145621.13"><vh>@auto source/tecnologias-asincronas-servidor-cliente.md</vh></v>
+<v t="ricardo.20250724145621.14"><vh>@auto source/servicios-web-con-laravel.md</vh></v>
+<v t="ricardo.20250724145621.15"><vh>@auto source/caracteristicas-adicionales-de-laravel.md</vh></v>
+<v t="ricardo.20250724145621.16"><vh>@auto source/calidad.md</vh></v>
 </vnodes>
 <tnodes>
 </tnodes>

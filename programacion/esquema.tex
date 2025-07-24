@@ -1,5 +1,5 @@
 \begin{longenum}
-    \item \textbf{\textsc{Introducción a la tecnología web}} \ce{1a}\ \ce{1b}\ \ce{1c}\ \ce{1d}\ \ce{1e}\ \ce{1g}\ \ev1\ \ra1\ (est: 2024\==09\==16)
+    \item \textbf{\textsc{Introducción a la tecnología web}} \ev1\ \ra1\ (est: 2025\==09\==16)
     \begin{longenum}
         \item Introducción al desarrollo web
         \begin{longenum}
@@ -66,10 +66,9 @@
                 \item Mediante POST
                 \item Formularios HTML
             \end{longenum}
-            \item Cookies
         \end{longenum}
     \end{longenum}
-    \item \textbf{\textsc{Conceptos básicos de PHP (I)}} \ce{2d}\ \ce{2e}\ \ce{2f}\ \ce{2g}\ \ce{4f}\ \ev1\ \ra2\ \ra3\ \ra4\ (est: 2024\==09\==23)
+    \item \textbf{\textsc{Conceptos básicos de PHP (I)}} \ev1\ \ra2\ (est: 2025\==09\==23)
     \begin{longenum}
         \item Introducción a PHP
         \begin{longenum}
@@ -84,7 +83,7 @@
             \end{longenum}
             \item Módulos de extensión
             \item Documentación y búsqueda de información
-            \item Modos de ejecución
+            \item Modos de ejecución \opcional\
             \begin{longenum}
                 \item Por lotes
                 \item Interactiva
@@ -105,7 +104,12 @@
         \end{longenum}
         \item Funcionamiento del intérprete
         \begin{longenum}
-            \item Etiquetas \texttt{<?php} y \texttt{?>}
+            \item Código embebido
+            \begin{longenum}
+                \item Etiquetas \texttt{<?php} y \texttt{?>}
+                \item Etiqueta \texttt{<?=}
+                \item Servidor web  interno
+            \end{longenum}
             \item Modo dual de operación
             \item Comentarios
         \end{longenum}
@@ -204,22 +208,14 @@
             \item \texttt{defined()}
         \end{longenum}
     \end{longenum}
-    \item \textbf{\textsc{Conceptos básicos de PHP (II)}} \ce{2d}\ \ce{2e}\ \ce{2g}\ \ce{2h}\ \ce{3a}\ \ce{3b}\ \ce{3c}\ \ce{3d}\ \ce{3g}\ \ce{4g}\ \ev1\ \ra2\ \ra3\ \ra4\ (est: 2024\==09\==30)
+    \item \textbf{\textsc{Conceptos básicos de PHP (II)}} \ev1\ \ra3\ (est: 2025\==09\==30)
     \begin{longenum}
-        \item Flujo de control
+        \item Estructuras de control
         \begin{longenum}
-            \item Estructuras de control
-            \begin{longenum}
-                \item Secuencia
-                \item Selección
-                \item Iteración
-                \item Sintaxis alternativa
-            \end{longenum}
-            \item Inclusión de scripts
-            \begin{longenum}
-                \item \texttt{include}, \texttt{require}
-                \item \texttt{include\_once}, \texttt{require\_once}
-            \end{longenum}
+            \item Secuencia
+            \item Selección
+            \item Iteración
+            \item Sintaxis alternativa
         \end{longenum}
         \item Funciones predefinidas destacadas
         \begin{longenum}
@@ -241,8 +237,18 @@
                 \item \texttt{isset()} vs. \texttt{array\_key\_exists()}
             \end{longenum}
             \item \texttt{foreach}
-            \item Conversión a \texttt{array} 
-            \item \textit{Ejemplo}: \texttt{\$argv} en CLI 
+            \item Conversión a \texttt{array}
+            \item \textit{Ejemplo}: \texttt{\$argv} en CLI
+            \item Funciones auxiliares de interés
+            \begin{longenum}
+                \item \texttt{extract()}
+                \item \texttt{compact()}
+            \end{longenum}
+        \end{longenum}
+        \item Formularios web
+        \begin{longenum}
+            \item Manejo de datos de entrada: \texttt{\$\_GET} y \texttt{\$\_POST}
+            \item Tailwind CSS
         \end{longenum}
         \item Funciones definidas por el usuario
         \begin{longenum}
@@ -265,62 +271,43 @@
                 \item Tipos \textit{nullable} (\texttt{?}) y \texttt{void}
                 \item Tipificación estricta
             \end{longenum}
+            \item Funciones anónimas
+            \begin{longenum}
+                \item Clausuras
+            \end{longenum}
+            \item Callables
+            \begin{longenum}
+                \item \texttt{call\_user\_func()}
+                \item \texttt{array\_map()} y \texttt{array\_reduce()}
+            \end{longenum}
         \end{longenum}
         \item Comentarios y documentación del código
     \end{longenum}
-    \item \textbf{\textsc{Desarrollo de aplicaciones con PHP (I)}} \ce{1a}\ \ce{1b}\ \ce{1d}\ \ce{1f}\ \ce{2a}\ \ce{2b}\ \ce{2c}\ \ce{2d}\ \ce{2e}\ \ce{2f}\ \ce{2g}\ \ce{2h}\ \ce{3a}\ \ce{3b}\ \ce{3c}\ \ce{3d}\ \ce{3e}\ \ce{3f}\ \ce{3g}\ \ce{4g}\ \ce{5a}\ \ce{5d}\ \ce{5g}\ \ce{5h}\ \ev1\ \ra1\ \ra2\ \ra3\ \ra4\ \ra5\ (est: 2024\==10\==07)
+    \item \textbf{\textsc{Aspectos básicos de orientación a objetos}} \ra5\ (est: 2025\==10\==07)
     \begin{longenum}
-        \item SAPIs
+        \item Objetos
         \begin{longenum}
-            \item CLI: Uso en línea de comandos
-            \begin{longenum}
-                \item \texttt{\$argc} y \texttt{\$argv}
-                \item Flujos de entrada/salida \opcional\
-            \end{longenum}
-            \item Apache \opcional\
-            \begin{longenum}
-                \item Integración de PHP con Apache
-                \item PHP como lenguaje embebido
-            \end{longenum}
-            \item CGI: PHP-FPM (FastCGI Process Manager) \opcional\
+            \item \texttt{new}
+            \item \texttt{instanceof}
+            \item \texttt{get\_class}
         \end{longenum}
-        \item Código embebido
+        \item Referencias
         \begin{longenum}
-            \item Etiqueta \texttt{<?=}
-            \item Servidor web  interno
+            \item Asignación por referencia (\texttt{=\&})
         \end{longenum}
-        \item Manejo de datos de entrada: \texttt{\$\_GET} y \texttt{\$\_POST}
-        \item Funciones auxiliares de interés
+        \item Clonación de objetos
+        \item Comparación de objetos
+        \item Propiedades
         \begin{longenum}
-            \item \texttt{extract()}
-            \item \texttt{compact()}
+            \item Predeterminadas
+            \item Dinámicas
         \end{longenum}
-        \item Aspectos básicos de la orientación a objetos
+        \item Métodos
+        \item Constantes
         \begin{longenum}
-            \item Objetos
-            \begin{longenum}
-                \item \texttt{new}
-                \item \texttt{instanceof}
-                \item \texttt{get\_class}
-            \end{longenum}
-            \item Referencias
-            \begin{longenum}
-                \item Asignación por referencia (\texttt{=\&})
-            \end{longenum}
-            \item Clonación de objetos
-            \item Comparación de objetos
-            \item Propiedades
-            \begin{longenum}
-                \item Predeterminadas
-                \item Dinámicas
-            \end{longenum}
-            \item Métodos
-            \item Constantes
-            \begin{longenum}
-                \item Operador de resolución de ámbito (\texttt{::})
-            \end{longenum}
-            \item \textit{Ejemplo}: manejo de fechas, horas, instantes e intervalos
+            \item Operador de resolución de ámbito (\texttt{::})
         \end{longenum}
+        \item \textit{Ejemplo}: manejo de fechas, horas, instantes e intervalos
         \item Excepciones
         \begin{longenum}
             \item Manejo de errores clásico en PHP
@@ -330,20 +317,8 @@
             \item La clase \texttt{ErrorException}
             \item Estructura de control \texttt{try ... catch}
         \end{longenum}
-        \item Depuración
-        \begin{longenum}
-            \item \texttt{var\_dump()}, \texttt{print\_r()}, \texttt{die()}
-            \item Depuración con PsySH
-            \item Xdebug \opcional\
-            \begin{longenum}
-                \item Módulo Xdebug
-                \item Aplicación Xdebug para Chrome
-                \item Extensión Xdebug Helper para Chrome
-                \item Paquete \texttt{php-debug} para Atom
-            \end{longenum}
-        \end{longenum}
     \end{longenum}
-    \item \textbf{\textsc{Persistencia de datos con PHP}} \ce{4a}\ \ce{4b}\ \ce{4c}\ \ce{4g}\ \ce{5f}\ \ce{5g}\ \ce{5h}\ \ce{6a}\ \ce{6b}\ \ce{6c}\ \ce{6e}\ \ev1\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ (est: 2024\==10\==14)
+    \item \textbf{\textsc{Persistencia de datos con PHP}} \ev1\ \ra6\ (est: 2025\==10\==14)
     \begin{longenum}
         \item PDO (PHP Data Objects)
         \begin{longenum}
@@ -384,28 +359,13 @@
         \begin{longenum}
             \item \texttt{output\_buffering}
         \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Desarrollo de aplicaciones con PHP}} \ev1\ \ra4\ (est: 2025\==10\==21)
+    \begin{longenum}
         \item Cookies
         \begin{longenum}
             \item \texttt{setcookie()}
             \item Ejemplos de uso
-        \end{longenum}
-    \end{longenum}
-    \item \textbf{\textsc{Desarrollo de aplicaciones con PHP (II)}} \ce{1a}\ \ce{4a}\ \ce{4b}\ \ce{4c}\ \ce{4d}\ \ce{4e}\ \ce{4f}\ \ce{5a}\ \ce{5b}\ \ce{5d}\ \ce{5f}\ \ce{5g}\ \ce{5h}\ \ev1\ \ra1\ \ra4\ \ra5\ (est: 2024\==10\==21)
-    \begin{longenum}
-        \item Filtrado de la entrada
-        \begin{longenum}
-            \item Cómo \textit{NO} se debe hacer
-            \item Extensión Filter
-            \begin{longenum}
-                \item \texttt{filter\_input()}, \texttt{filter\_has\_var()}, \texttt{filter\_var()}
-                \item Filtros de validación y saneado
-            \end{longenum}
-            \item Expresiones regulares (PCRE)
-        \end{longenum}
-        \item Formateado de datos
-        \begin{longenum}
-            \item Números y cantidades monetarias
-            \item Fechas
         \end{longenum}
         \item Sesiones
         \begin{longenum}
@@ -426,21 +386,7 @@
                 \item \texttt{session\_get\_cookie\_params()}
             \end{longenum}
         \end{longenum}
-        \item Seguridad básica
-        \begin{longenum}
-            \item Filtrar la entrada, escapar la salida
-            \item Cross-Site Scripting (XSS)
-            \begin{longenum}
-                \item No persistente
-                \item Persistente
-                \item Escapado de la salida
-                \begin{longenum}
-                    \item HTML Purifier
-                \end{longenum}
-            \end{longenum}
-            \item \texttt{htmlspecialchars()}
-        \end{longenum}
-        \item Seguridad y persistencia
+        \item Autenticación
         \begin{longenum}
             \item Contraseñas
             \begin{longenum}
@@ -449,65 +395,113 @@
                 \item \texttt{password\_hash()}
                 \item \texttt{password\_verify()}
             \end{longenum}
+        \end{longenum}
+        \item Seguridad
+        \begin{longenum}
+            \item Filtrado y formateado
+            \begin{longenum}
+                \item Filtrado de la entrada
+                \begin{longenum}
+                    \item Cómo \textit{NO} se debe hacer
+                    \item Extensión Filter
+                    \begin{longenum}
+                        \item \texttt{filter\_input()}, \texttt{filter\_has\_var()}, \texttt{filter\_var()}
+                        \item Filtros de validación y saneado
+                    \end{longenum}
+                    \item Expresiones regulares (PCRE)
+                \end{longenum}
+                \item Formateado de datos
+                \begin{longenum}
+                    \item Números y cantidades monetarias
+                    \item Fechas
+                \end{longenum}
+            \end{longenum}
+            \item Seguridad básica
+            \begin{longenum}
+                \item Filtrar la entrada, escapar la salida
+                \item Cross-Site Scripting (XSS)
+                \begin{longenum}
+                    \item No persistente
+                    \item Persistente
+                    \item Escapado de la salida
+                    \begin{longenum}
+                        \item HTML Purifier
+                    \end{longenum}
+                \end{longenum}
+                \item \texttt{htmlspecialchars()}
+            \end{longenum}
             \item Inyección de código SQL
             \item Cross-Site Request Forgery (CSRF)
         \end{longenum}
-    \end{longenum}
-    \item \textbf{\textsc{Programación avanzada en PHP}} \ce{4g}\ \ce{5g}\ \ce{5h}\ \ev1\ \ra2\ \ra3\ \ra4\ \ra5\ (est: 2024\==10\==28)
-    \begin{longenum}
-        \item Diseño de aplicaciones orientadas a objetos
+        \item Depuración
         \begin{longenum}
-            \item Clases
-            \item Propiedades
+            \item \texttt{var\_dump()}, \texttt{print\_r()}, \texttt{die()}
+            \item Depuración con PsySH
+            \item Xdebug \opcional\
             \begin{longenum}
-                \item Predeterminadas
-                \item Dinámicas
+                \item Módulo Xdebug
+                \item Aplicación Xdebug para Chrome
+                \item Extensión Xdebug Helper para Chrome
+                \item Paquete \texttt{php-debug} para Atom
             \end{longenum}
-            \item Métodos
-            \begin{longenum}
-                \item Referencia \texttt{\$this}
-                \item Constructores y destructores
-            \end{longenum}
+        \end{longenum}
+    \end{longenum}
+    \item \textbf{\textsc{Diseño de aplicaciones orientadas a objetos}} \ev1\ \ra5\ (est: 2025\==10\==28)
+    \begin{longenum}
+        \item Clases
+        \item Propiedades
+        \begin{longenum}
+            \item Predeterminadas
+            \item Dinámicas
+        \end{longenum}
+        \item Métodos
+        \begin{longenum}
+            \item Referencia \texttt{\$this}
+            \item Constructores y destructores
+        \end{longenum}
+        \item Constantes
+        \begin{longenum}
+            \item \texttt{self}
+        \end{longenum}
+        \item Herencia
+        \begin{longenum}
+            \item \texttt{parent}
+            \item Sobreescritura de métodos
+        \end{longenum}
+        \item Miembros estáticos
+        \begin{longenum}
             \item Constantes
-            \begin{longenum}
-                \item \texttt{self}
-            \end{longenum}
-            \item Herencia
-            \begin{longenum}
-                \item \texttt{parent}
-                \item Sobreescritura de métodos
-            \end{longenum}
-            \item Miembros estáticos
-            \begin{longenum}
-                \item Constantes
-                \item Métodos estáticos
-                \item Propiedades estáticas
-                \item Enlace estático en tiempo de ejecución
-            \end{longenum}
-            \item Interfaces
-            \item Traits
-            \item Contravarianza y covarianza
-            \item La clase \texttt{stdClass}
-            \begin{longenum}
-                \item Conversión de \texttt{array} a \texttt{object} y viceversa.
-            \end{longenum}
+            \item Métodos estáticos
+            \item Propiedades estáticas
+            \item Enlace estático en tiempo de ejecución
         \end{longenum}
-        \item Espacios de nombres
-        \item Funciones anónimas
+        \item Interfaces
+        \item Traits
+        \item Contravarianza y covarianza
+        \item La clase \texttt{stdClass}
         \begin{longenum}
-            \item Clausuras
-        \end{longenum}
-        \item Callables
-        \begin{longenum}
-            \item \texttt{call\_user\_func()}
-            \item \texttt{array\_map()} y \texttt{array\_reduce()}
+            \item Conversión de \texttt{array} a \texttt{object} y viceversa.
         \end{longenum}
     \end{longenum}
-    \item \textbf{\textsc{Interoperabilidad}} \ce{1e}\ \ce{1g}\ \ce{4g}\ \ce{5g}\ \ce{5h}\ \ev1\ \ra1\ \ra4\ \ra5\ (est: 2024\==11\==04)
+    \item \textbf{\textsc{Interoperabilidad}} \ev1\ \ra9\ (est: 2025\==11\==04)
     \begin{longenum}
-        \item Versionado semántico
+        \item Programación modular en PHP
+        \begin{longenum}
+            \item Inclusión de scripts
+            \begin{longenum}
+                \item \texttt{include}, \texttt{require}
+                \item \texttt{include\_once}, \texttt{require\_once}
+            \end{longenum}
+            \item Espacios de nombres
+            \item Autocarga de clases
+            \begin{longenum}
+                \item \texttt{spl\_autoload\_register()}
+                \item PSR-4
+            \end{longenum}
+        \end{longenum}
         \item Composer
         \begin{longenum}
+            \item Versionado semántico
             \item Paquetes
             \item Packagist
             \item Dependencias
@@ -538,21 +532,13 @@
                 \item \texttt{dump-autoload}
             \end{longenum}
             \item Entornos de desarrollo y producción
-        \end{longenum}
-        \item Autocarga de clases
-        \begin{longenum}
-            \item \texttt{spl\_autoload\_register()}
-            \item PSR-4
             \item Autoloader de Composer
         \end{longenum}
-        \item Ejemplos
+        \item Consumo de API de terceros
         \begin{longenum}
-            \item \texttt{mpdf/mpdf}
-            \item \texttt{ramsey/uuid}
-            \item \texttt{doctrine/inflector}
-            \item \texttt{nesbot/carbon}
+            \item \texttt{guzzlehttp/guzzle}
         \end{longenum}
-        \item Recomendaciones PSR del PHP-FIG (Framework Interop Group)
+        \item Recomendaciones PSR del PHP-FIG (Framework Interop Group) \opcional\
         \begin{longenum}
             \item PSR-1: Basic Coding Standard
             \item PSR-2: Coding Style Guide
@@ -560,14 +546,14 @@
             \item PSR-5: PHPDoc Standard (borrador)
             \item PSR-11: Extended Coding Style Guide (borrador)
             \item PSR-19: PHPDoc tags (borrador)
-        \end{longenum}
-        \item Herramientas externas \opcional\
-        \begin{longenum}
-            \item PHP\_CodeSniffer
-            \item PHP-CS-Fixer
+            \item Herramientas externas \opcional\
+            \begin{longenum}
+                \item PHP\_CodeSniffer
+                \item PHP-CS-Fixer
+            \end{longenum}
         \end{longenum}
     \end{longenum}
-    \item \textbf{\textsc{Introducción a Laravel}} \ce{1d}\ \ce{1e}\ \ce{1g}\ \ce{4g}\ \ev1\ \ra1\ \ra4\ (est: 2024\==11\==11)
+    \item \textbf{\textsc{Introducción a Laravel}} \ev1\ \ra5\ (est: 2025\==11\==11)
     \begin{longenum}
         \item Frameworks, microframeworks y librerías
         \item Patrón Modelo-Vista-Controlador (MVC)
@@ -595,73 +581,97 @@
             \item Trazas de depuración
         \end{longenum}
         \item Estilo del código
+        \item Arquitectura de Laravel
+        \begin{longenum}
+            \item El ciclo de vida de una petición
+            \item El contenedor de servicios
+            \item Proveedores de servicios
+            \item Fachadas
+        \end{longenum}
+        \item Gestión de peticiones en Laravel
+        \begin{longenum}
+            \item Enrutado
+            \item Middlewares
+            \item Peticiones
+            \item Respuestas
+            \item Controladores
+            \item Sesiones y cookies
+            \item Gestión de errores
+        \end{longenum}
     \end{longenum}
-    \item \textbf{\textsc{Arquitectura de Laravel}} \ce{1d}\ \ce{1e}\ \ce{1g}\ \ce{4g}\ \ce{5e}\ \ev1\ \ra1\ \ra4\ \ra5\ (est: 2024\==11\==18)
-    \begin{longenum}
-        \item El ciclo de vida de una petición
-        \item El contenedor de servicios
-        \item Proveedores de servicios
-        \item Fachadas
-    \end{longenum}
-    \item \textbf{\textsc{Gestión de peticiones en Laravel}} \ce{4g}\ \ce{5f}\ \ce{5g}\ \ce{5h}\ \ev1\ \ra4\ \ra5\ (est: 2024\==11\==25)
-    \begin{longenum}
-        \item Enrutado
-        \item Middlewares
-        \item Peticiones
-        \item Respuestas
-        \item Controladores
-        \item Sesiones y cookies
-        \item Gestión de errores
-    \end{longenum}
-    \item \textbf{\textsc{Visualización de datos en Laravel}} \ce{2a}\ \ce{2b}\ \ce{2c}\ \ce{2d}\ \ce{2e}\ \ce{2g}\ \ce{2h}\ \ce{4g}\ \ce{5a}\ \ce{5b}\ \ce{5c}\ \ce{5d}\ \ce{5h}\ \ce{8a}\ \ce{8b}\ \ce{8c}\ \ce{8d}\ \ce{8e}\ \ce{8f}\ \ce{8g}\ \ev2\ \ra2\ \ra3\ \ra4\ \ra5\ \ra8\ (est: 2025\==01\==08)
+    \item \textbf{\textsc{Visualización de datos en Laravel}} \ev1\ \ra5\ (est: 2025\==11\==18)
     \begin{longenum}
         \item Vistas
         \item Plantillas Blade
+        \item Daisy UI
         \item Compilación de assets
         \item Generación de URLs
+        \item Creación y validación de formularios en Laravel
+        \begin{longenum}
+            \item Creación de formularios
+            \item Protección contra CSRF
+            \item Validación de la entrada
+            \item Subida de archivos
+        \end{longenum}
     \end{longenum}
-    \item \textbf{\textsc{Bases de datos en Laravel}} \ce{2a}\ \ce{2b}\ \ce{2c}\ \ce{2d}\ \ce{2e}\ \ce{2g}\ \ce{2h}\ \ce{4g}\ \ce{5f}\ \ce{5g}\ \ce{5h}\ \ce{6a}\ \ce{6b}\ \ce{6c}\ \ce{6d}\ \ce{6e}\ \ce{6f}\ \ce{6g}\ \ev2\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ (est: 2025\==01\==15)
+    \item \textbf{\textsc{Bases de datos en Laravel}} \ev1\ \ra6\ (est: 2025\==11\==25)
     \begin{longenum}
         \item Conceptos básicos
         \item Query Builder
         \item Migraciones
         \item Paginación
         \item Semillas
-    \end{longenum}
-    \item \textbf{\textsc{Mapeado objeto-relacional con Eloquent}} \ce{2a}\ \ce{2b}\ \ce{2c}\ \ce{2d}\ \ce{2e}\ \ce{2g}\ \ce{2h}\ \ce{4g}\ \ce{5f}\ \ce{5g}\ \ce{5h}\ \ce{6a}\ \ce{6b}\ \ce{6c}\ \ce{6d}\ \ce{6e}\ \ce{6f}\ \ce{6g}\ \ev2\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ (est: 2025\==01\==22)
-    \begin{longenum}
-        \item Conceptos básicos
-        \item Relaciones
+        \item Mapeado objeto-relacional con Eloquent
         \begin{longenum}
-            \item Uno a uno
-            \item Uno a muchos
-            \item Muchos a muchos
-            \item Relaciones polimórficas
-            \item Carga ansiosa
+            \item Conceptos básicos
+            \item Relaciones
             \begin{longenum}
-                \item El problema del \textit{N + 1}
+                \item Uno a uno
+                \item Uno a muchos
+                \item Muchos a muchos
+                \item Relaciones polimórficas
+                \item Carga ansiosa
+                \begin{longenum}
+                    \item El problema del \textit{N + 1}
+                \end{longenum}
             \end{longenum}
+            \item Colecciones
+            \item Mutadores y castings
         \end{longenum}
-        \item Colecciones
-        \item Mutadores y castings
     \end{longenum}
-    \item \textbf{\textsc{Creación y validación de formularios en Laravel}} \ce{2a}\ \ce{2b}\ \ce{2c}\ \ce{2d}\ \ce{2e}\ \ce{2g}\ \ce{2h}\ \ce{3e}\ \ce{3f}\ \ce{4g}\ \ce{5b}\ \ce{5d}\ \ce{5h}\ \ce{6f}\ \ce{6g}\ \ce{8a}\ \ce{8b}\ \ce{8c}\ \ce{8d}\ \ce{8e}\ \ce{8f}\ \ce{8g}\ \ev2\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ \ra8\ (est: 2025\==01\==29)
+    \item \textbf{\textsc{Seguridad y autenticación en Laravel}} \ev2\ \ra4\ (est: 2026\==01\==07)
     \begin{longenum}
-        \item Creación de formularios
-        \item Protección contra CSRF
-        \item Validación de la entrada
-        \item Subida de archivos
-    \end{longenum}
-    \item \textbf{\textsc{Seguridad y cacheado en Laravel}} \ce{2a}\ \ce{2b}\ \ce{2c}\ \ce{2d}\ \ce{2e}\ \ce{2g}\ \ce{2h}\ \ce{4d}\ \ce{4e}\ \ce{4g}\ \ce{5g}\ \ce{5h}\ \ce{6g}\ \ev2\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ \ra8\ (est: 2025\==02\==05)
-    \begin{longenum}
+        \item Cookies
+        \item Sesiones
         \item Autenticación
+        \begin{longenum}
+            \item Starter Kits
+            \item Laravel Breeze
+        \end{longenum}
         \item Autorización
         \item Verificación de email
         \item Cifrado
         \item Hashing
         \item Reinicio de contraseñas
     \end{longenum}
-    \item \textbf{\textsc{Características adicionales de Laravel}} \ce{2a}\ \ce{2b}\ \ce{2c}\ \ce{2d}\ \ce{2e}\ \ce{2g}\ \ce{2h}\ \ce{4g}\ \ce{5d}\ \ce{5g}\ \ce{5h}\ \ce{6g}\ \ce{8a}\ \ce{8b}\ \ce{8c}\ \ce{8d}\ \ce{8e}\ \ce{8f}\ \ce{8g}\ \ev2\ \ra2\ \ra3\ \ra4\ \ra5\ \ra6\ \ra8\ (est: 2025\==02\==12)
+    \item \textbf{\textsc{Tecnologías asíncronas servidor-cliente}} \ev2\ \ra8\ (est: 2026\==01\==14)
+    \begin{longenum}
+        \item Livewire
+        \begin{longenum}
+            \item Alpine.js
+            \item Mary UI
+        \end{longenum}
+        \item Filament PHP
+        \item Inertia
+    \end{longenum}
+    \item \textbf{\textsc{Servicios web con Laravel}} \ev2\ \ra7\ (est: 2026\==01\==21)
+    \begin{longenum}
+        \item Recursos API
+        \item Serialización
+        \item Limitación de frecuencia de peticiones
+        \item Documentación de la API
+    \end{longenum}
+    \item \textbf{\textsc{Características adicionales de Laravel}} \ev3\ \opcional\ (est: 2026\==05\==04)
     \begin{longenum}
         \item Correo electrónico
         \item Helpers
@@ -672,15 +682,19 @@
         \item Planificación de tareas
         \item Almacenamiento de archivos
     \end{longenum}
-    \item \textbf{\textsc{Calidad}} \ce{3g}\ \ce{4g}\ \ce{5g}\ \ce{5h}\ \ce{6e}\ \ce{6g}\ \ev2\ \ra3\ \ra4\ \ra5\ \ra6\ (est: 2025\==02\==19)
+    \item \textbf{\textsc{Calidad}} \ev3\ \opcional\ (est: 2026\==05\==11)
     \begin{longenum}
         \item Pruebas
         \begin{longenum}
-            \item Pruebas HTTP
-            \item Pruebas en consola
-            \item Pruebas en navegador
+            \item Pruebas de HTTP
+            \item Pruebas de consola
+            \item Pruebas de navegador
             \item Bases de datos
             \item Mocking
+        \end{longenum}
+        \item Análisis estático
+        \begin{longenum}
+            \item Larastan
         \end{longenum}
         \item Depuración
         \begin{longenum}
@@ -688,63 +702,18 @@
             \item ddd()
             \item Clockwork
         \end{longenum}
-        \item Documentación
+        \item Documentación \opcional\
         \begin{longenum}
-            \item API documentation generator for Yii2
+            \item phpDocumentor
             \item GitHub Pages
         \end{longenum}
         \item Mantenimiento y calidad del código
         \begin{longenum}
             \item CodeSniffer
             \item CS\_Fixer
-            \item Code Climate
-        \end{longenum}
-    \end{longenum}
-    \item \textbf{\textsc{Computación en la nube}} \ce{1d}\ \ce{4g}\ \ce{5e}\ \ev2\ \ra1\ \ra4\ \ra5\ (est: 2025\==02\==26)
-    \begin{longenum}
-        \item Entornos de ejecución
-        \begin{longenum}
-            \item Desarrollo
-            \item Producción
-            \item Pruebas
-            \item Preproducción
-        \end{longenum}
-        \item Cloud computing vs hosting
-        \item Cloud computing vs VPS
-        \item Servicios por capas
-        \begin{longenum}
-            \item IaaS
-            \item PaaS
-            \item SaaS
-        \end{longenum}
-        \item 12 Factores
-        \item Railway
-        \begin{longenum}
-            \item Railway CLI
-            \item Creación y despliegue de aplicaciones
-            \item Railway PostgreSQL
-            \item Variables de entorno
-            \item Despliegues
-        \end{longenum}
-    \end{longenum}
-    \item \textbf{\textsc{Servicios web con Laravel}} \ce{1a}\ \ce{1b}\ \ce{2a}\ \ce{2b}\ \ce{2c}\ \ce{2d}\ \ce{2e}\ \ce{2g}\ \ce{2h}\ \ce{7a}\ \ce{7b}\ \ce{7c}\ \ce{7d}\ \ce{7e}\ \ce{7f}\ \ce{7g}\ \ce{7h}\ \ev2\ \ra1\ \ra2\ \ra3\ \ra7\ (est: 2025\==03\==05)
-    \begin{longenum}
-        \item Recursos API
-        \item Serialización
-        \item Limitación de frecuencia de peticiones
-    \end{longenum}
-    \item \textbf{\textsc{Aplicaciones web híbridas}} \ce{2a}\ \ce{2b}\ \ce{2c}\ \ce{2d}\ \ce{2e}\ \ce{2g}\ \ce{2h}\ \ce{9a}\ \ce{9b}\ \ce{9c}\ \ce{9d}\ \ce{9e}\ \ce{9f}\ \ce{9g}\ \ce{9h}\ \ev2\ \ra2\ \ra9\ (est: 2025\==03\==12)
-    \begin{longenum}
-        \item Reutilización de código e información
-        \item Utilización de información proveniente de repositorios
-        \begin{longenum}
-            \item UDDI
-        \end{longenum}
-        \item Incorporación de funcionalidades específicas
-        \item Sindicación y formatos de redifusión
-        \begin{longenum}
-            \item RSS
-            \item ATOM
+            \begin{longenum}
+                \item Laravel Pint
+            \end{longenum}
         \end{longenum}
     \end{longenum}
 \end{longenum}
