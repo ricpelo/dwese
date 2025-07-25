@@ -1924,7 +1924,7 @@ Nivel de abstracción alcanzado.
 Durante el desarrollo del curso existirán,
  al menos,
  una evaluación inicial,
- dos evaluaciones parciales (al final de cada trimestre) y una evaluación final.
+ tres evaluaciones parciales (al final de cada trimestre) y una evaluación final.
 \end_layout
 
 \begin_layout Standard
@@ -2832,7 +2832,8 @@ Calificaciones parciales
 \end_layout
 
 \begin_layout Standard
-La calificación del módulo en cada evaluación parcial (primer y segundo trimestres por separado),
+La calificación del módulo en cada evaluación parcial (primer,
+ segundo y tercer trimestres por separado),
  según se recoge en el algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2970,7 +2971,7 @@ setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
 \end_inset
 
  Media aritmética de las calificaciones de los criterios de evaluación trabajados en el trimestre 
-\begin_inset Formula $i\in\{1,2\}$
+\begin_inset Formula $i\in\{1,2,3\}$
 \end_inset
 
 .
@@ -2981,7 +2982,7 @@ setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
 \end_inset
 
  Conjunto de las calificaciones de los criterios de evaluación trabajados y evaluados en el trimestre 
-\begin_inset Formula $i\in\{1,2\}$
+\begin_inset Formula $i\in\{1,2,3\}$
 \end_inset
 
 .
@@ -2992,7 +2993,7 @@ setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
 \end_inset
 
  Calificación parcial del trimestre 
-\begin_inset Formula $i\in\{1,2\}$
+\begin_inset Formula $i\in\{1,2,3\}$
 \end_inset
 
 .
@@ -3382,7 +3383,7 @@ Evaluación de la práctica docente
 \end_layout
 
 \begin_layout Standard
-Se realizarán entre el alumnado dos encuestas de valoración trimestrales y anónimas,
+Se realizarán entre el alumnado tres encuestas de valoración trimestrales y anónimas,
  al final de cada trimestre,
  formadas por preguntas cuantitativas y cualitativas relacionadas con aspectos que afecten al módulo,
  su organización,
@@ -3397,18 +3398,9 @@ Orientaciones pedagógicas
 \end_layout
 
 \begin_layout Standard
-Según queda recogido en 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "orden-16-06-2011"
-literal "false"
-
-\end_inset
-
-,
- este módulo profesional contiene la formación necesaria para desempeñar la función de 
+Este módulo profesional contiene la formación necesaria para desempeñar la función de 
 \series bold
-desarrollo de aplicaciones y servicios destinados a su ejecución por servidores en entornos Web
+desarrollo de aplicaciones y servicios destinados a su ejecución por servidores en entornos web
 \series default
 .
 \end_layout
@@ -3418,20 +3410,20 @@ La
 \series bold
 función
 \series default
- de desarrollo de aplicaciones para servidores Web incluye aspectos como:
+ de desarrollo de aplicaciones para servidores web incluye aspectos como:
 \end_layout
 
 \begin_layout Itemize
-La creación de aplicaciones de servidor que generan interfaces Web como resultado de su ejecución.
+La creación de aplicaciones de servidor que generan interfaces web como resultado de su ejecución.
 \end_layout
 
 \begin_layout Itemize
 La programación de métodos para almacenar,
- recuperar y gestionar mediante documentos Web información disponible en almacenes de datos.
+ recuperar y gestionar mediante documentos web información disponible en almacenes de datos.
 \end_layout
 
 \begin_layout Itemize
-La generación de servicios reutilizables y accesibles mediante protocolos Web.
+La generación de servicios reutilizables y accesibles mediante protocolos web.
 \end_layout
 
 \begin_layout Itemize
@@ -3455,16 +3447,16 @@ líneas de actuación
 \end_layout
 
 \begin_layout Itemize
-El análisis de los métodos de generación dinámica de documentos Web.
+El análisis de los métodos de generación dinámica de documentos web.
 \end_layout
 
 \begin_layout Itemize
-La integración del lenguaje de marcas con el código ejecutable en el servidor Web.
+La integración del lenguaje de marcas con el código ejecutable en el servidor web.
 \end_layout
 
 \begin_layout Itemize
 El análisis,
- diferenciación y clasificación de las características y funcionalidades incorporadas en los entornos y lenguajes de programación de los servidores Web más difundidos.
+ diferenciación y clasificación de las características y funcionalidades incorporadas en los entornos y lenguajes de programación de los servidores web más difundidos.
 \end_layout
 
 \begin_layout Itemize
@@ -3472,15 +3464,17 @@ La utilización de características y funcionalidades específicas de los lengua
 \end_layout
 
 \begin_layout Itemize
-La modificación del código existente en soluciones Web heterogéneas para su adaptación a entornos específicos.
+La modificación del código existente,
+ así como el análisis de datos,
+ en soluciones web heterogéneas para su adaptación a entornos específicos.
 \end_layout
 
 \begin_layout Itemize
-El análisis y la utilización de funcionalidades aportadas por librerías generales y específicas de programación web en entorno servidor.
+El análisis y la utilización de funcionalidades aportadas por frameworks de programación web en entorno servidor.
 \end_layout
 
 \begin_layout Itemize
-La utilización de librerías para incorporar interactividad a los documentos Web generados de forma dinámica.
+La utilización de frameworks para incorporar interactividad a los documentos web generados de forma dinámica.
 \end_layout
 
 \begin_layout Section
@@ -3647,30 +3641,6 @@ https://dwese.iesdonana.org
 \end_layout
 
 \begin_layout Itemize
-Documentación de Git
-\begin_inset Flex Enlace
-status open
-
-\begin_layout Plain Layout
-https://git-scm.com/book/en/v2
-\end_layout
-
-\end_inset
-
- y GitHub
-\begin_inset Flex Enlace
-status open
-
-\begin_layout Plain Layout
-https://help.github.com
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
 Documentación de PHP
 \begin_inset Flex Enlace
 status open
@@ -3717,9 +3687,13 @@ Complementaria
 \end_layout
 
 \begin_layout Itemize
+
+\shape smallcaps
 López Sanz,
  M.
- y otros (2012).
+ y otros
+\shape default
+ (2012).
  
 \emph on
 Desarrollo web en entorno servidor
