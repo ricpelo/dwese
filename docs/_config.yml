@@ -36,12 +36,7 @@ defaults:
       menu: true
       order: 3
   - scope:
-      path: diapositivas.md
-    values:
-      menu: true
-      order: 4
-  - scope:
       path: about.md
     values:
       menu: true
-      order: 5
+      order: 4
