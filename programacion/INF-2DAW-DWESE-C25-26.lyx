@@ -660,6 +660,24 @@ Normativa de aplicación:
  
 \begin_inset CommandInset citation
 LatexCommand cite
+key "orden-18-09-2025"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "orden-25-09-2025"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
 key "real-decreto-1147-2011"
 literal "false"
 
@@ -679,15 +697,6 @@ literal "false"
 \begin_inset CommandInset citation
 LatexCommand cite
 key "orden-16-06-2011"
-literal "false"
-
-\end_inset
-
-,
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "orden-29-09-2010"
 literal "false"
 
 \end_inset
@@ -746,7 +755,7 @@ Código:
 Duración total:
 
 \series default
- 245 horas.
+ 245 horas (35 semanas).
 \end_layout
 
 \begin_layout Itemize
@@ -767,15 +776,7 @@ La formación del módulo contribuye a alcanzar los
 \series bold
 objetivos generales
 \series default
- de este ciclo formativo que se relacionan a continuación 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "orden-16-06-2011"
-literal "false"
-
-\end_inset
-
-:
+ de este ciclo formativo que se relacionan a continuación:
 \end_layout
 
 \begin_deeper
@@ -1209,78 +1210,6 @@ Resolver situaciones,
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
-Las líneas de actuación en el proceso de enseñanza-aprendizaje que permiten alcanzar los objetivos del módulo,
- versarán sobre:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-El análisis de los métodos de generación dinámica de documentos web.
-\end_layout
-
-\begin_layout Itemize
-La integración del lenguaje de marcas con el código ejecutable en el servidor web.
-\end_layout
-
-\begin_layout Itemize
-El análisis,
- diferenciación y clasificación de las características y funcionalidades incorporadas en los entornos y lenguajes de programación de los servidores web más difundidos.
-\end_layout
-
-\begin_layout Itemize
-La utilización de características y funcionalidades específicas de los lenguajes de programación seleccionados.
-\end_layout
-
-\begin_layout Itemize
-La modificación del código existente,
- así como el análisis de datos,
- en soluciones web heterogéneas para su adaptación a entornos específicos.
-\end_layout
-
-\begin_layout Itemize
-El análisis y la utilización de funcionalidades aportadas por frameworks de programación web en entorno servidor.
-\end_layout
-
-\begin_layout Itemize
-La utilización de frameworks para incorporar interactividad a los documentos web generados de forma dinámica.
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-Este módulo profesional contiene la formación necesaria para desempeñar la función de desarrollo de aplicaciones y servicios destinados a su ejecución por servidores en entornos web.
-\end_layout
-
-\begin_layout Standard
-La función de desarrollo de aplicaciones para servidores web incluye aspectos como:
-\end_layout
-
-\begin_layout Itemize
-La creación de aplicaciones de servidor que generan interfaces web como resultado de su ejecución.
-\end_layout
-
-\begin_layout Itemize
-La programación de métodos para almacenar,
- recuperar y gestionar mediante documentos web información disponible en almacenes de datos.
-\end_layout
-
-\begin_layout Itemize
-La generación,
- prueba y documentación de servicios web reutilizables y accesibles mediante protocolos web.
-\end_layout
-
-\begin_layout Itemize
-El desarrollo de aplicaciones basadas en información y funcionalidades distribuidas.
-\end_layout
-
-\begin_layout Standard
-Las actividades profesionales asociadas a esta función se aplican en:
-\end_layout
-
-\begin_layout Itemize
-El desarrollo y la adaptación de servicios y aplicaciones para servidores de aplicaciones y servidores web.
-\end_layout
-
 \begin_layout Section
 Resultados de aprendizaje y criterios de evaluación
 \end_layout
@@ -1893,7 +1822,9 @@ Evaluación y calificación
 
 \begin_layout Standard
 La evaluación tendrá como finalidad determinar el nivel de competencia de los alumnos y la consecución de los objetivos del módulo.
- Se desarrollará de forma continua,
+ Se desarrollará de forma objetiva,
+ continua,
+ formativa e integradora de las competencias adquiridas en el centro y en la empresa u organismo equiparado,
  y atenderá a los siguientes aspectos:
 \end_layout
 
@@ -1924,7 +1855,7 @@ Nivel de abstracción alcanzado.
 Durante el desarrollo del curso existirán,
  al menos,
  una evaluación inicial,
- tres evaluaciones parciales (al final de cada trimestre) y una evaluación final.
+ dos evaluaciones parciales y dos evaluaciones finales.
 \end_layout
 
 \begin_layout Standard
@@ -1964,7 +1895,7 @@ criterio de evaluación
 
 \end_deeper
 \begin_layout Itemize
-En la 
+En cada 
 \series bold
 evaluación final
 \series default
@@ -2009,7 +1940,8 @@ resultados de aprendizaje
 \end_deeper
 \begin_layout Standard
 Para que el seguimiento de dicha evaluación sea factible,
- el alumno deberá asistir con regularidad a las clases y participar activamente en las mismas.
+ el alumno deberá asistir con regularidad a las clases y participar activamente en las mismas,
+ de forma que una sistemática y frecuente falta de asistencia a clase supondrá para el alumno la pérdida de la evaluación continua y sólo tendrá derecho a una prueba final.
  Asimismo,
  se requiere que el alumno 
 \series bold
@@ -2138,7 +2070,7 @@ Dentro de este grupo podrá incluirse alguna prueba (tipo test o de respuestas c
 
 \begin_layout Standard
 Asimismo,
- se realizará un examen al final de cada evaluación parcial (
+ se realizará un examen (
 \begin_inset ERT
 status open
 
@@ -2151,7 +2083,7 @@ EX
 
 \end_inset
 
-),
+) al final de las evaluaciones parciales primera y segunda,
  coincidiendo aproximadamente con el final del trimestre correspondiente.
  Debido al carácter de evaluación continua del módulo,
  así como del hecho de que cada contenido trabajado se asienta sobre los anteriores,
@@ -2827,8 +2759,7 @@ Calificaciones parciales
 \end_layout
 
 \begin_layout Standard
-La calificación del módulo en cada evaluación parcial (primer,
- segundo y tercer trimestres por separado),
+La calificación del módulo en cada evaluación parcial (primer y segundo trimestres por separado),
  según se recoge en el algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3029,6 +2960,10 @@ evaluación parcial
  y no podrá ser inferior a 1,0.
 \end_layout
 
+\begin_layout Standard
+Los criterios de evaluación relativos al tercer trimestre serán evaluados en la primera sesión de evaluación final.
+\end_layout
+
 \begin_layout Subsubsection
 \begin_inset CommandInset label
 LatexCommand label
@@ -3040,7 +2975,7 @@ Calificación final
 \end_layout
 
 \begin_layout Standard
-La calificación del módulo en la evaluación final se calculará como la media aritmética de las calificaciones de los diferentes resultados de aprendizaje,
+La calificación del módulo en cualquiera de las dos evaluaciones finales se calculará como la media aritmética de las calificaciones de los diferentes resultados de aprendizaje,
  según se recoge en el algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3235,7 +3170,7 @@ Medidas de recuperación y mejora de la calificación final
 
 \begin_layout Standard
 A lo largo del curso (idealmente,
- a comienzos del trimestre) se establecerán instrumentos de recuperación destinados a que el alumnado cumpla los criterios de evaluación trabajados y evaluados en trimestres anteriores que no hayan podido cumplir hasta ahora al no haber podido superar los instrumentos de evaluación correspondientes.
+ a comienzos del segundo y tercer trimestres) se establecerán instrumentos de recuperación destinados a que el alumnado cumpla los criterios de evaluación trabajados y evaluados en trimestres anteriores que no hayan podido cumplir hasta ahora al no haber podido superar los instrumentos de evaluación correspondientes.
 \end_layout
 
 \begin_layout Standard
@@ -3277,25 +3212,6 @@ TR
 .
 \end_layout
 
-\begin_layout Standard
-Los alumnos que tengan criterios de evaluación pendientes de cumplir en la tercera evaluación,
- deberán presentarse directamente a la prueba final tal como se establece en el apartado 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Prueba-final"
-plural "false"
-caps "false"
-noprefix "false"
-nolink "false"
-
-\end_inset
-
-.
- No hay,
- por tanto,
- pruebas de recuperación específicas para los contenidos de la tercera evaluación.
-\end_layout
-
 \begin_layout Subsubsection
 \begin_inset CommandInset label
 LatexCommand label
@@ -3307,9 +3223,20 @@ Prueba final
 \end_layout
 
 \begin_layout Standard
-La normativa vigente establece la existencia de un examen o prueba a final de curso (usualmente en junio) para aquellos alumnos que no hayan podido superar el módulo mediante el procedimiento habitual de evaluación continua y que,
+Se establece la existencia de un examen o prueba a final de curso para aquellos alumnos que no hayan podido superar el módulo mediante el procedimiento habitual de evaluación continua y que,
  por tanto,
  tengan pendiente alcanzar algún resultado de aprendizaje que no se haya podido alcanzar ni siquiera mediante los instrumentos de recuperación indicados anteriormente.
+\end_layout
+
+\begin_layout Standard
+Esta prueba final permite al alumnado la superación del módulo incluso en el caso de no haber asistido con regularidad a clase a lo largo del curso.
+ Es,
+ por tanto,
+ el único instrumento que posibilita el que un alumno que cuente con un número de faltas de asistencia superior al permitido (y que,
+ por consiguiente,
+ haya perdido el derecho a la evaluación continua) pueda demostrar la consecución de los objetivos del módulo y,
+ en consecuencia,
+ su superación.
 \end_layout
 
 \begin_layout Standard
@@ -3346,6 +3273,16 @@ El alumno que,
  será calificado como «No evaluado» (NE).
 \end_layout
 
+\begin_layout Standard
+Existirá una prueba final por cada una de las dos evaluaciones finales del curso,
+ de forma que el alumno deberá presentarse,
+ al menos,
+ a la primera de ellas para evaluar,
+ al menos,
+ los criterios de evaluación relativos al tercer trimestre,
+ así como todos los demás criterios de evaluación que no hubiera cumplido a lo largo del curso.
+\end_layout
+
 \begin_layout Subsubsection
 Mejora de la calificación final
 \end_layout
@@ -3354,7 +3291,7 @@ Mejora de la calificación final
 El alumno que,
  habiendo superado el módulo mediante el procedimiento habitual de evaluación continua,
  desee mejorar su calificación final («subir nota»),
- podrá hacerlo en la prueba final,
+ podrá hacerlo en la primera prueba final,
  manteniéndose la calificación final más alta de entre las obtenidas antes y después de presentarse a subir nota en dicha prueba final.
  A tal efecto,
  se indicará en la prueba final qué partes deberá realizar el alumnado que se haya presentado a subir nota.
@@ -4042,13 +3979,39 @@ Por otra parte,
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+key "orden-18-09-2025"
+literal "false"
+
+\end_inset
+
+Orden de 18 de septiembre de 2025,
+ por el que se regula la evaluación,
+ certificación,
+ acreditación y titulación académica del alumnado que cursa enseñanzas de los grados D y E del sistema de Formación Profesional en la Comunidad Autónoma de Andalucía (BOJA 180 complementario n.º 1 de 18 de septiembre).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "orden-25-09-2025"
+literal "false"
+
+\end_inset
+
+Orden de 25 de septiembre de 2025,
+ por la que se regula la fase de formación en empresa u organismo equiparado de los grados D y E del Sistema de Formación Profesional de la Comunidad Autónoma de Andalucía.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "real-decreto-1147-2011"
 literal "false"
 
 \end_inset
 
 Real Decreto 1147/2011,
- de 29 de julio (BOE nº 182 de 30 de julio) por el que se establece la ordenación general de la formación profesional del sistema educativo.
+ de 29 de julio (BOE n.º 182 de 30 de julio) por el que se establece la ordenación general de la formación profesional del sistema educativo.
 \end_layout
 
 \begin_layout Bibliography
@@ -4060,7 +4023,7 @@ literal "false"
 \end_inset
 
 Real Decreto 686/2010,
- de 20 de mayo (BOE nº 143 de 12 de junio),
+ de 20 de mayo (BOE n.º 143 de 12 de junio),
  por el que se establece el título de Técnico Superior en Desarrollo de Aplicaciones Web.
 \end_layout
 
@@ -4072,11 +4035,7 @@ literal "false"
 
 \end_inset
 
-
-\emph on
-Orden de 16 de junio de 2011
-\emph default
-,
+Orden de 16 de junio de 2011,
  por la que se desarrolla el currículo correspondiente al título de Técnico Superior en Desarrollo de Aplicaciones Web (págs.
  130 a 133 del BOJA nº 149 del 1 de agosto)
 \begin_inset Flex Enlace
@@ -4091,24 +4050,6 @@ http://www.juntadeandalucia.es/boja/boletines/2011/149/d/updf/d23.pdf
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "orden-29-09-2010"
-literal "false"
-
-\end_inset
-
-
-\emph on
-Orden de 29 de septiembre de 2010
-\emph default
-,
- por la que se regula la evaluación,
- certificación,
- acreditación y titulación académica del alumnado que cursa enseñanzas de formación profesional inicial que forma parte del sistema educativo en la Comunidad Autónoma de Andalucía (BOJA nº 202 del 15 de octubre).
 \end_layout
 
 \begin_layout Bibliography
@@ -4164,6 +4105,8 @@ Instituto Nacional de Seguridad e Higiene en el Trabajo.
  
 \emph on
 Instrucción básica para el trabajador usuario de pantallas de visualización de datos.
+\emph default
+
 \begin_inset Flex Enlace
 status collapsed
 
