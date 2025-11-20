@@ -625,6 +625,10 @@ parindent}{2em}
 \end_layout
 
 \begin_layout Section
+Contextualización
+\end_layout
+
+\begin_layout Subsection
 Información general
 \end_layout
 
@@ -649,95 +653,6 @@ pagestyle{empty}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Normativa de aplicación:
-
-\series default
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "decreto-147-2025"
-literal "false"
-
-\end_inset
-
-,
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "orden-18-09-2025"
-literal "false"
-
-\end_inset
-
-,
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "orden-26-09-2025"
-literal "false"
-
-\end_inset
-
-,
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "real-decreto-1147-2011"
-literal "false"
-
-\end_inset
-
-,
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "real-decreto-686-2010"
-literal "false"
-
-\end_inset
-
-,
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "orden-16-06-2011"
-literal "false"
-
-\end_inset
-
-,
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ley-organica-3-2022"
-literal "false"
-
-\end_inset
-
-,
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "real-decreto-405-2023"
-literal "false"
-
-\end_inset
-
-,
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "real-decreto-659-2023"
-literal "false"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Itemize
@@ -774,6 +689,340 @@ Carga lectiva semanal:
 
 \series default
  7 horas.
+\end_layout
+
+\begin_layout Subsection
+Marco normativo
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Normativa de aplicación:
+
+\series default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "orden-26-09-2025"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "orden-18-09-2025"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "decreto-147-2025"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "real-decreto-659-2023"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ley-organica-3-2022"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "real-decreto-1147-2011"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "real-decreto-500-2024"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "real-decreto-405-2023"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "orden-16-06-2011"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "orden-edu-2887-2010"
+literal "false"
+
+\end_inset
+
+,
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "real-decreto-686-2010"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Perfil profesional
+\end_layout
+
+\begin_layout Standard
+La formación del módulo contribuye a alcanzar las 
+\series bold
+competencias profesionales,
+ personales y sociales
+\series default
+ de este título que se relacionan a continuación:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+c)
+\end_layout
+
+\end_inset
+
+Gestionar servidores en distintos ámbitos de implantación adaptando su configuración en cada caso para permitir el despliegue de aplicaciones web.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+d)
+\end_layout
+
+\end_inset
+
+Gestionar bases de datos,
+ interpretando su diseño lógico y verificando integridad,
+ consistencia,
+ seguridad y accesibilidad de los datos.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+f)
+\end_layout
+
+\end_inset
+
+Integrar contenidos en la lógica de una aplicación web,
+ desarrollando componentes de acceso a datos adecuados a las especificaciones.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+g)
+\end_layout
+
+\end_inset
+
+Desarrollar interfaces en aplicaciones web de acuerdo con un manual de estilo,
+ utilizando lenguajes de marcas y estándares web.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+h)
+\end_layout
+
+\end_inset
+
+Desarrollar componentes multimedia para su integración en aplicaciones web,
+ empleando herramientas específicas y siguiendo las especificaciones establecidas.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+k)
+\end_layout
+
+\end_inset
+
+Desarrollar servicios para integrar sus funciones en otras aplicaciones web,
+ asegurando su funcionalidad.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+l)
+\end_layout
+
+\end_inset
+
+Integrar servicios y contenidos distribuidos en aplicaciones web,
+ asegurando su funcionalidad.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+m)
+\end_layout
+
+\end_inset
+
+Completar planes de pruebas verificando el funcionamiento de los componentes software desarrollados,
+ según las especificaciones.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+n)
+\end_layout
+
+\end_inset
+
+Elaborar y mantener la documentación de los procesos de desarrollo,
+ utilizando herramientas de generación de documentación y control de versiones.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+ñ)
+\end_layout
+
+\end_inset
+
+Desplegar y distribuir aplicaciones web en distintos ámbitos de implantación,
+ verificando su comportamiento y realizando modificaciones.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+q)
+\end_layout
+
+\end_inset
+
+Resolver situaciones,
+ problemas o contingencias con iniciativa y autonomía en el ámbito de su competencia,
+ con creatividad,
+ innovación y espíritu de mejora en el trabajo personal y en el de los miembros del equipo.
+\end_layout
+
+\begin_layout Subsection
+Análisis de las pruebas iniciales y adecuación de los contenidos por grupos
+\end_layout
+
+\begin_layout Standard
+En las primeras semanas del curso se realizará una prueba inicial diagnóstica con el fin de conocer el nivel de competencias y conocimientos previos del alumnado en relación con los contenidos del módulo.
+ Con el análisis individual de esta prueba se conseguirá detectar diferencias de nivel entre el alumnado e identificar posibles carencias en conocimientos previos requeridos.
+\end_layout
+
+\begin_layout Standard
+Con los resultados de la evaluación inicial se podrán ajustar la secuenciación y profundización de los contenidos a impartir,
+ adaptando las primeras unidades a las necesidades reales del grupo,
+ de manera que aquellos estudiantes que presenten mayores carencias se puedan acomodar al desarrollo del curso.
+ En caso de detectarse dificultades significativas o ritmos de aprendizaje diferentes,
+ se podrán aplicar,
+ a discreción del profesor,
+ medidas tales como:
+\end_layout
+
+\begin_layout Itemize
+Realización de tutorías individualizadas o en grupo para afianzar conocimientos.
+\end_layout
+
+\begin_layout Itemize
+Refuerzo inicial mediante actividades prácticas guiadas.
+\end_layout
+
+\begin_layout Itemize
+Materiales adaptados con ejercicios de nivel progresivo.
 \end_layout
 
 \begin_layout Section
@@ -1018,204 +1267,6 @@ Tomar decisiones de forma fundamentada analizando las variables implicadas,
  integrando saberes de distinto ámbito y aceptando los riesgos y la posibilidad de equivocación en las mismas,
  para afrontar y resolver distintas situaciones,
  problemas o contingencias.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-La formación del módulo contribuye a alcanzar las 
-\series bold
-competencias profesionales,
- personales y sociales
-\series default
- de este título que se relacionan a continuación 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "orden-16-06-2011"
-literal "false"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-c)
-\end_layout
-
-\end_inset
-
-Gestionar servidores en distintos ámbitos de implantación adaptando su configuración en cada caso para permitir el despliegue de aplicaciones web.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-d)
-\end_layout
-
-\end_inset
-
-Gestionar bases de datos,
- interpretando su diseño lógico y verificando integridad,
- consistencia,
- seguridad y accesibilidad de los datos.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-f)
-\end_layout
-
-\end_inset
-
-Integrar contenidos en la lógica de una aplicación web,
- desarrollando componentes de acceso a datos adecuados a las especificaciones.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-g)
-\end_layout
-
-\end_inset
-
-Desarrollar interfaces en aplicaciones web de acuerdo con un manual de estilo,
- utilizando lenguajes de marcas y estándares web.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-h)
-\end_layout
-
-\end_inset
-
-Desarrollar componentes multimedia para su integración en aplicaciones web,
- empleando herramientas específicas y siguiendo las especificaciones establecidas.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-k)
-\end_layout
-
-\end_inset
-
-Desarrollar servicios para integrar sus funciones en otras aplicaciones web,
- asegurando su funcionalidad.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-l)
-\end_layout
-
-\end_inset
-
-Integrar servicios y contenidos distribuidos en aplicaciones web,
- asegurando su funcionalidad.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-m)
-\end_layout
-
-\end_inset
-
-Completar planes de pruebas verificando el funcionamiento de los componentes software desarrollados,
- según las especificaciones.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-n)
-\end_layout
-
-\end_inset
-
-Elaborar y mantener la documentación de los procesos de desarrollo,
- utilizando herramientas de generación de documentación y control de versiones.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-ñ)
-\end_layout
-
-\end_inset
-
-Desplegar y distribuir aplicaciones web en distintos ámbitos de implantación,
- verificando su comportamiento y realizando modificaciones.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-q)
-\end_layout
-
-\end_inset
-
-Resolver situaciones,
- problemas o contingencias con iniciativa y autonomía en el ámbito de su competencia,
- con creatividad,
- innovación y espíritu de mejora en el trabajo personal y en el de los miembros del equipo.
 \end_layout
 
 \end_deeper
@@ -4036,14 +4087,13 @@ Por otra parte,
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "decreto-147-2025"
+key "orden-26-09-2025"
 literal "false"
 
 \end_inset
 
-Decreto 147/2025,
- de 17 de septiembre de 2025,
- por el que se establece la ordenación de las enseñanzas de los Grados D y E del Sistema de Formación Profesional en la Comunidad Autónoma de Andalucía (BOJA n.º 179 C1 de 17 de septiembre).
+Orden de 26 de septiembre de 2025,
+ por la que se regula la fase de formación en empresa u organismo equiparado de los grados D y E del Sistema de Formación Profesional de la Comunidad Autónoma de Andalucía (BOJA n.º 187 C1 de 29 de septiembre).
 \end_layout
 
 \begin_layout Bibliography
@@ -4063,13 +4113,40 @@ Orden de 18 de septiembre de 2025,
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "orden-26-09-2025"
+key "decreto-147-2025"
 literal "false"
 
 \end_inset
 
-Orden de 26 de septiembre de 2025,
- por la que se regula la fase de formación en empresa u organismo equiparado de los grados D y E del Sistema de Formación Profesional de la Comunidad Autónoma de Andalucía (BOJA n.º 187 C1 de 29 de septiembre).
+Decreto 147/2025,
+ de 17 de septiembre de 2025,
+ por el que se establece la ordenación de las enseñanzas de los Grados D y E del Sistema de Formación Profesional en la Comunidad Autónoma de Andalucía (BOJA n.º 179 C1 de 17 de septiembre).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "real-decreto-659-2023"
+literal "false"
+
+\end_inset
+
+Real Decreto 659/2023,
+ de 18 de julio (BOE n.º 174 de 22 de julio),
+ por el que se desarrolla la ordenación del Sistema de Formación Profesional.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "ley-organica-3-2022"
+literal "false"
+
+\end_inset
+
+Ley Orgánica 3/2022,
+ de 31 de marzo (BOE n.º 78 de 1 de abril),
+ de ordenación e integración de la Formación Profesional.
 \end_layout
 
 \begin_layout Bibliography
@@ -4087,52 +4164,14 @@ Real Decreto 1147/2011,
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "real-decreto-686-2010"
+key "real-decreto-500-2024"
 literal "false"
 
 \end_inset
 
-Real Decreto 686/2010,
- de 20 de mayo (BOE n.º 143 de 12 de junio),
- por el que se establece el título de Técnico Superior en Desarrollo de Aplicaciones Web.
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "orden-16-06-2011"
-literal "false"
-
-\end_inset
-
-Orden de 16 de junio de 2011,
- por la que se desarrolla el currículo correspondiente al título de Técnico Superior en Desarrollo de Aplicaciones Web (págs.
- 130 a 133 del BOJA nº 149 del 1 de agosto)
-\begin_inset Flex Enlace
-status collapsed
-
-\begin_layout Plain Layout
-http://www.juntadeandalucia.es/boja/boletines/2011/149/d/updf/d23.pdf
-\backslash
-#page=17
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "ley-organica-3-2022"
-literal "false"
-
-\end_inset
-
-Ley Orgánica 3/2022,
- de 31 de marzo (BOE n.º 78 de 1 de abril),
- de ordenación e integración de la Formación Profesional.
+Real Decreto 500/2024,
+ de 21 de mayo (BOE n.º 129 de 28 de mayo),
+ por el que se modifican determinados reales decretos por los que se establecen títulos de Formación Profesional de grado superior y se fijan sus enseñanzas mínimas.
 \end_layout
 
 \begin_layout Bibliography
@@ -4153,14 +4192,39 @@ Real Decreto 405/2023,
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-key "real-decreto-659-2023"
+key "orden-16-06-2011"
 literal "false"
 
 \end_inset
 
-Real Decreto 659/2023,
- de 18 de julio (BOE n.º 174 de 22 de julio),
- por el que se desarrolla la ordenación del Sistema de Formación Profesional.
+Orden de 16 de junio de 2011,
+ por la que se desarrolla el currículo correspondiente al título de Técnico Superior en Desarrollo de Aplicaciones Web (BOJA nº 149 del 1 de agosto).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "orden-edu-2887-2010"
+literal "false"
+
+\end_inset
+
+Orden EDU/2887/2010,
+ de 2 de noviembre (BOE n.º 273 de de 11 de noviembre),
+ por la que se establece el currículo del ciclo formativo de Grado Superior correspondiente al título de Técnico Superior en Desarrollo de Aplicaciones Web.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "real-decreto-686-2010"
+literal "false"
+
+\end_inset
+
+Real Decreto 686/2010,
+ de 20 de mayo (BOE n.º 143 de 12 de junio),
+ por el que se establece el título de Técnico Superior en Desarrollo de Aplicaciones Web.
 \end_layout
 
 \begin_layout Bibliography
