@@ -117,7 +117,7 @@ correspondientes criterios de evaluación, tal y como se definen en la
   - [CE6.e] Se han utilizado conjuntos de datos para almacenar la información.
   - [CE6.f] Se han creado aplicaciones web que permitan la actualización y la
     eliminación de información disponible en una base de datos.
-  - [CE6.h] Se han probado y documentado las aplicaciones web.
+  - [CE6.g] Se han probado y documentado las aplicaciones web.
 
 - **[RA7] Desarrolla servicios web reutilizables y accesibles mediante
   protocolos web, verificando su funcionamiento.**
