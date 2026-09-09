@@ -1,5 +1,5 @@
-#LyX 2.4 created this file. For more info see https://www.lyx.org/
-\lyxformat 620
+#LyX 2.5 created this file. For more info see https://www.lyx.org/
+\lyxformat 643
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -47,7 +47,9 @@
 %\usepackage[default]{lato}
 %\usepackage{newtxsf}
 \usepackage{xcolor}
-\widowpenalty10000
+\widowpenalty=10000
+\clubpenalty=10000
+\nopagebreak[4]
 \usepackage{watermark}
 \usepackage{longtable}
 \usepackage[shortcuts]{extdash}
@@ -55,6 +57,7 @@
 % Added by lyx2lyx
 \setlength{\parskip}{\medskipamount}
 \setlength{\parindent}{0pt}
+\usepackage{needspace}
 \end_preamble
 \options titlepage,numbers=endperiod
 \use_default_options false
@@ -215,11 +218,19 @@ End
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification true
-\use_refstyle 0
+\justification default
+\crossref_package prettyref
 \use_formatted_ref 0
 \use_minted 1
 \use_lineno 0
+\backgroundcolor none
+\fontcolor none
+\notefontcolor lightgray
+\boxbgcolor red
+\table_border_color default
+\table_odd_row_color default
+\table_even_row_color default
+\table_alt_row_colors_start 1
 \index Index
 \shortcut idx
 \color #008000
@@ -253,6 +264,7 @@ End
 \html_be_strict false
 \docbook_table_output 0
 \docbook_mathml_prefix 1
+\docbook_mathml_version 0
 \end_header
 
 \begin_body
@@ -263,27 +275,23 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 fancypagestyle{empty}{%
 \end_layout
 
 \begin_layout Plain Layout
-
   
 \backslash
 fancyhead{}%
 \end_layout
 
 \begin_layout Plain Layout
-
   
 \backslash
 fancyfoot{}%
 \end_layout
 
 \begin_layout Plain Layout
-
   
 \backslash
 renewcommand{
@@ -292,7 +300,6 @@ headrulewidth}{0pt}% Line at the header invisible
 \end_layout
 
 \begin_layout Plain Layout
-
   
 \backslash
 renewcommand{
@@ -311,13 +318,11 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 chead{
 \end_layout
 
 \begin_layout Plain Layout
-
 
 \backslash
 renewcommand{
@@ -364,7 +369,6 @@ MODELO DE
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 
@@ -441,7 +445,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 thepage{}
 \end_layout
@@ -453,7 +456,6 @@ thepage{}
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 pageref{LastPage}
@@ -476,7 +478,6 @@ pageref{LastPage}
 status open
 
 \begin_layout Plain Layout
-
 }}
 \end_layout
 
@@ -490,7 +491,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 thiswatermark{
@@ -528,7 +528,7 @@ Ricardo Pérez López
 \end_layout
 
 \begin_layout Date
-Curso 2025/2026
+Curso 2026/2027
 \end_layout
 
 \begin_layout Publishers
@@ -567,7 +567,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 thispagestyle{empty}
 \end_layout
@@ -592,7 +591,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 thispagestyle{empty}
 \end_layout
@@ -611,7 +609,6 @@ thispagestyle{empty}
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 setlength{
@@ -638,13 +635,11 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 thispagestyle{empty}
 \end_layout
 
 \begin_layout Plain Layout
-
 
 \backslash
 pagestyle{empty}
@@ -1282,7 +1277,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 dual
 \backslash
@@ -1300,13 +1294,11 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 begingroup
 \end_layout
 
 \begin_layout Plain Layout
-
 
 \backslash
 setlist[enumerate,1]{label=
@@ -1325,7 +1317,6 @@ arabic{enumi}}{}}
 \end_layout
 
 \begin_layout Plain Layout
-
 
 \backslash
 setlist[enumerate,2]{label=
@@ -1625,7 +1616,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 dual
 \backslash
@@ -1686,7 +1676,6 @@ Genera páginas web dinámicas analizando y utilizando tecnologías y frameworks
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 dual
@@ -1788,7 +1777,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 endgroup
 \end_layout
@@ -1818,7 +1806,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 dual
 \backslash
@@ -1836,7 +1823,6 @@ Los contenidos marcados con la etiqueta
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 opcional
@@ -2099,7 +2085,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 TR
 \end_layout
@@ -2129,7 +2114,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 EX
 \end_layout
@@ -2154,7 +2138,6 @@ Los trabajos,
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 TR
@@ -2181,7 +2164,6 @@ Asimismo,
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 EX
@@ -2238,7 +2220,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 TR
 \backslash
@@ -2252,7 +2233,6 @@ TR
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 EX
@@ -2304,7 +2284,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 TR
 \end_layout
@@ -2335,7 +2314,6 @@ TR
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 EX
@@ -2374,7 +2352,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 TR
 \backslash
@@ -2388,7 +2365,6 @@ TR
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 EX
@@ -2428,7 +2404,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 noindent{}
 \end_layout
@@ -2460,13 +2435,11 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 begingroup
 \end_layout
 
 \begin_layout Plain Layout
-
 
 \backslash
 setlist[description]{style=multiline,align=right,labelwidth=1.5cm,topsep=2ex,itemsep=1ex}
@@ -2482,7 +2455,6 @@ setlist[description]{style=multiline,align=right,labelwidth=1.5cm,topsep=2ex,ite
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 CE{$i$}{$j$}
@@ -2555,7 +2527,6 @@ nolink "false"
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 endgroup
@@ -2660,7 +2631,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 noindent{}
 \end_layout
@@ -2692,13 +2662,11 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 begingroup
 \end_layout
 
 \begin_layout Plain Layout
-
 
 \backslash
 setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
@@ -2734,7 +2702,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 RA{$i$}
 \end_layout
@@ -2761,7 +2728,6 @@ RA{$i$}
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 CE{$i$}{$j$}
@@ -2832,7 +2798,6 @@ nolink "false"
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 endgroup
@@ -2940,7 +2905,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 noindent{}
 \end_layout
@@ -2973,13 +2937,11 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 begingroup
 \end_layout
 
 \begin_layout Plain Layout
-
 
 \backslash
 setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
@@ -3036,7 +2998,6 @@ setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 endgroup
@@ -3145,7 +3106,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 noindent{}
 \end_layout
@@ -3178,13 +3138,11 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 begingroup
 \end_layout
 
 \begin_layout Plain Layout
-
 
 \backslash
 setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
@@ -3221,7 +3179,6 @@ setlist[description]{style=multiline,align=right,labelwidth=1.5cm}
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 endgroup
@@ -3295,7 +3252,6 @@ status open
 
 \begin_layout Plain Layout
 
-
 \backslash
 EX
 \end_layout
@@ -3307,7 +3263,6 @@ EX
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 TR
@@ -3755,7 +3710,6 @@ actividades de ampliación
 status open
 
 \begin_layout Plain Layout
-
 
 \backslash
 opcional
